@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-page {
+
+    header {
+      background: linear-gradient(to right, #1D1E20, #6D6D6D);
+      min-height: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 1rem 0;
+
+      h1 {
+        font-size: 3.25rem;
+        color: color.$white;
+
+        @include desk {
+          font-size: 5.25rem;
+        }
+
+      }
+
+      @include desk {
+        min-height: 30rem;
+        padding: 3rem 0;
+
+      }
+    }
+  }
+}

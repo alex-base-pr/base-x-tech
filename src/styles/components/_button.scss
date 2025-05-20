@@ -1,0 +1,241 @@
+@use '../abstracts/mixins' as *;
+@use '../base/fonts' as fonts;
+@use '../abstracts/colors' as color;
+
+$transition-duration: 0.3s;
+@mixin transition($property) {
+  transition: $property $transition-duration ease;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  font-family: fonts.$heading-font;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  padding: 0 1rem;
+
+
+
+  @include desk {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+
+
+  i {
+    @include box(2rem, 2rem);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      transition: background-color .2s;
+
+    &[arrow-right] {
+      span {
+        display: block;
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+        &::before {
+          @include pseudo(.75rem, .75rem);
+          left: -12px;
+          background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%23FFFFFF"/></svg>');
+        }
+        &::after {
+          @include pseudo(.75rem, .75rem);
+          left: 0;
+          background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%231D1E20"/></svg>');
+        }
+      }
+
+    }
+  }
+
+  &--primary {
+
+    color: color.$white;
+    min-width: 12rem;
+    position: relative;
+    background-color: color.$primary;
+    overflow: hidden;
+
+    span, i {
+      position: relative;
+      z-index: 2;
+      transition: color .15s ease;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: color.$primary;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateY(100%);
+      @include transition(transform);
+    }
+
+    i {
+      &[arrow-right] {
+        span {
+          &::before {
+            background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%23FFFFFF"/></svg>');
+            transform: initial;
+            transition: transform .3s ease;
+          }
+          &::after {
+            background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%231D1E20"/></svg>');
+            transform: initial;
+            transition: transform .3s ease;
+          }
+        }
+      }
+    }
+
+    &.hover {
+      cursor: pointer;
+      border-color: color.$white;
+
+      &::before {
+        background-color: color.$white;
+        transform: translateY(0);
+      }
+
+      i {
+        background-color: alpha(color.$primary, 2);
+        &[arrow-right] {
+          span {
+            &::before {
+              transform: translateX(12px);
+             }
+            &::after {
+              transform: translateX(12px);
+             }
+          }
+        }
+      }
+
+      span {
+        color: color.$black;
+      }
+    }
+
+    &.leave {
+      &::before {
+        transform: translateY(100%);
+        @include transition(transform);
+      }
+    }
+
+    &.dark {
+      &::before {
+        background-color: color.$black;
+      }
+
+      span {
+        color: color.$white;
+      }
+    }
+  }
+
+  &--dark {
+
+    color: color.$white;
+    min-width: 12rem;
+    position: relative;
+    background-color: color.$primary;
+    overflow: hidden;
+
+    span, i {
+      position: relative;
+      z-index: 2;
+      transition: color .15s ease;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: color.$primary;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateY(100%);
+      @include transition(transform);
+    }
+
+    i {
+      background-color: color.$white;
+      &[arrow-right] {
+        span {
+          &::before {
+            background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%23FFFFFF"/></svg>');
+            transform: initial;
+            transition: transform .3s ease;
+          }
+          &::after {
+            background-image:url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.40393 6.93745H0V5.06256H8.40393L4.66193 1.32038L6 0L12 6L6 12L4.66193 10.6796L8.40393 6.93745Z" fill="%231D1E20"/></svg>');
+            transform: initial;
+            transition: transform .3s ease;
+          }
+        }
+      }
+    }
+
+    &.hover {
+      cursor: pointer;
+      border-color: color.$black;
+
+      &::before {
+        background-color: color.$black;
+        transform: translateY(0);
+      }
+
+      i {
+        background-color: alpha(color.$primary, 2);
+        &[arrow-right] {
+          span {
+            &::before {
+              transform: translateX(12px);
+            }
+            &::after {
+              transform: translateX(12px);
+            }
+          }
+        }
+      }
+
+      span {
+        color: color.$white;
+      }
+    }
+
+    &.leave {
+      &::before {
+        transform: translateY(100%);
+        @include transition(transform);
+      }
+    }
+  }
+}
+
+@keyframes move-arrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(12px);
+  }
+}

@@ -1,0 +1,148 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-reviews {
+    padding: 5rem 0 1rem;
+    @include desk {
+      padding: 0;
+    }
+
+    &--badge {
+      &.goodfirm-widget {
+        width: 170px;
+      }
+    }
+
+    &--badges {
+      margin-top: 2rem;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: .75rem;
+
+        .goodfirms-badge-wr,
+        .sortlist-badge-wr {
+          transform: scale(0.6);
+          margin: 0 -2.5rem;
+        }
+      }
+
+      img {
+        max-height: 4rem;
+        width: auto;
+      }
+    }
+
+    .inner {
+      @include desk {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    .section-header {
+      position: relative;
+
+      &::after {
+        @include pseudo(100%, 1px);
+        background-color: alpha(color.$black, 0.3);
+        width: calc(100% + 2rem);
+        transform: translate(-1rem, 0);
+
+        @include desk {
+          width: 1px;
+          height: 100%;
+          right: -2rem;
+          top: 0
+        }
+      }
+    }
+
+    .section-subtitle {
+      @include desk {
+        margin: 0;
+      }
+    }
+
+    .section {
+      &-header {
+        @include desk {
+          padding: 14.125rem 0 26rem;
+        }
+      }
+
+      &-content {
+        padding: 5rem 0 0;
+        @include desk {
+          grid-column: 2 / span 2;
+          padding-left: 29%;
+          padding-top: 14.125rem;
+          row-gap: 3rem;
+        }
+      }
+    }
+
+    blockquote {
+      @include desk {
+        display: grid;
+        grid-template-columns: 4.25rem 8fr;
+        row-gap: 4rem;
+      }
+
+      main {
+        p {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+
+      .subtitle {
+        color: alpha(color.$black, 0.5);
+      }
+
+      footer {
+        > * {
+          line-height: 1;
+        }
+        @include desk {
+          grid-column: 2 / span 1;
+        }
+      }
+    }
+
+    .slider {
+      &-nav {
+        @include desk {
+          position: relative;
+          left: 5.8rem;
+        }
+
+        &-btn {
+          all: unset;
+          @include box(3rem, 3rem);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid alpha(color.$black, 0.3);
+          border-radius: 50%;
+          cursor: pointer;
+          background-color: transparent;
+          transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+          &:hover {
+            opacity: 0.7;
+            background-color: alpha(color.$black, 0.1);
+          }
+        }
+
+      }
+    }
+
+
+
+  }
+}

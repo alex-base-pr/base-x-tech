@@ -1,0 +1,72 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-approach {
+    padding: 1rem 0;
+    color: color.$white;
+
+    @include desk {
+      padding: 2rem 0;
+    }
+
+    .section-subtitle {
+      @include desk {
+       margin-bottom: 8.37rem;
+      }
+    }
+
+    .inner-back {
+      padding: 1rem;
+      background-image: url('/images/sections/approach/section-backgroud-mob.png');
+      background-size: cover;
+      background-position: center;
+      @include desk {
+        padding: 2rem;
+        background-image: url('/images/sections/approach/section-backgroud.png');
+      }
+    }
+
+    .section-content {
+      @include desk {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        row-gap: 4.62rem;
+      }
+    }
+
+    blockquote {
+      padding: 0 0 1rem;
+      border-bottom: 1px solid alpha(color.$white2, 0.3);
+
+      > .block-stack {
+        @include desk {
+          gap: 1.25rem;
+        }
+      }
+
+      @include desk {
+        padding: 0 0 0 2rem;
+        border-bottom: none;
+        border-left: 1px solid alpha(color.$white2, 0.3);
+        grid-row-gap: 6rem;
+      }
+
+      main {
+        .title {
+          color: alpha(color.$white, 0.5);
+        }
+
+        .description {
+          font-size: 1.25rem;
+        }
+      }
+
+      .user-info {
+        .subtitle {
+          color: alpha(color.$white, 0.5);
+        }
+      }
+    }
+  }
+}

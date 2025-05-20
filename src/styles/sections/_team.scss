@@ -1,0 +1,140 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-team {
+    padding: 5rem 0 0;
+    overflow-x: hidden;
+    @include desk {
+      padding: 0;
+    }
+
+    .inner {
+      @include desk {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        gap: 2rem;
+      }
+    };
+
+    .section-header {
+      position: relative;
+
+      @include desk {
+        height: 100%;
+        padding: 17.5rem 0;
+      }
+
+      &::after {
+        @include pseudo(100%, 1px);
+        background-color: alpha(color.$black, 0.3);
+        transform: translate(-1rem, 0);
+
+        @include desk {
+          width: 1px;
+          height: 100%;
+          right: -2rem;
+          top: 0;
+        }
+      }
+    }
+
+    .section-subtitle {
+      @include desk {
+        margin: 0;
+      }
+    }
+
+    blockquote {
+      padding: 5rem 0 10rem;
+      display: grid;
+      gap: 2rem;
+
+      @include desk {
+        grid-column: 2 / span 2;
+        padding: 6.6rem 0 0 29%;
+      }
+
+      .title {
+        font-size: 7.5rem;
+        line-height: 1;
+        color: alpha(color.$black, 0.3);
+        @include desk {
+          font-size: 10rem;
+        }
+      }
+
+      .description {
+        max-width: 320px;
+      }
+    }
+
+    .article {
+
+      &-1 {
+        main {
+          .cards {
+            margin:0 -1rem;
+            @include desk {
+              display: none;
+            }
+
+            .card {
+              color: color.$white;
+
+              &-content {
+                padding: 1rem 1rem;
+              }
+
+              &-title {
+                strong {
+                  display: block;
+                  background: linear-gradient(to bottom, #FAFAFA, #949494);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                  opacity: .5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .slider {
+      &-nav {
+
+        ul {
+          li {
+            position: relative;
+
+            // &:first-child::before {
+            //   @include pseudo(.5rem, .5rem, inline-block, absolute);
+            //   background-color: color.$black;
+            //   border-radius: 50%;
+            //   left: 50%;
+            //   transform: translate(-50%, -1rem);
+            // }
+          }
+        }
+
+        &-btn {
+          all: unset;
+        }
+
+        $avatar-count: 6;
+        $avatar-shift: .5rem;
+
+        @for $i from 1 through $avatar-count {
+          .inline-stack li:nth-child(#{$i}) .avatar {
+            z-index: $avatar-count - ($i - 1);
+            transform: translateX(-($i - 1) * $avatar-shift);
+          }
+        }
+
+      }
+    }
+  }
+}

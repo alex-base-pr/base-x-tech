@@ -1,0 +1,13 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as vars;
+
+.container {
+  width: 100%;
+  max-width: vars.$container-max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include desk {
+    padding: 0 2rem;
+  }
+}

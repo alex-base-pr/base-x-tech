@@ -1,0 +1,45 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.custom-widget {
+  background-color: #3D3D3D;
+  border-radius: 6rem;
+  padding: .5rem;
+  color: color.$white;
+  cursor: pointer;
+
+  .user-info {
+    .subtitle {
+      line-height: 1;
+      color: alpha(color.$white, 0.5);
+    }
+  }
+
+  .icon {
+    display: flex;
+    @include box(3rem);
+    align-items: center;
+    justify-content: center;
+    background-color: color.$white;
+    border-radius: 50%;
+    transition: background-color .3s;
+
+    svg {
+      path {
+        transition: color .3s;
+      }
+    }
+  }
+
+  &:hover {
+    .icon {
+      background-color: color.$primary;
+      svg {
+        path {
+          fill: color.$white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@use '../abstracts/mixins' as *;
+@use '../base/fonts' as font;
+@use '../abstracts/colors' as color;
+
+.site-footer {
+  position: relative;
+  margin-top: -3.3rem;
+  z-index: 1;
+  padding: 1rem 0 0;
+  background: linear-gradient(to right, #6D6D6D, #1D1E20);
+  @include desk {
+    padding: 2rem 0 0;
+    margin-top: -8.5rem;
+  }
+
+  &--logo {
+    margin-bottom: 6.625rem;
+    display: flex;
+    gap: 1rem;
+
+    @include desk {
+      gap: 2.37rem;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      white-space: nowrap;
+
+      h5 {
+        font-size: 4.5rem;
+        line-height: 3.3rem;
+        color: alpha(color.$white, 0.3);
+        @include desk {
+          font-size: 6.56rem;
+          line-height: 5rem;
+        }
+      }
+
+      small {
+        font-size: .75rem;
+        color: alpha(color.$white, 0.3);
+        line-height: 1;
+        @include desk {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    img {
+      width: 10.25rem;
+      @include desk {
+        width: 15.31rem;
+      }
+    }
+  }
+
+  &--section-list {
+    font-family: font.$heading-font;
+    color: color.$white;
+    font-size: 3rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 4.5rem;
+    @include desk {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      gap: .5rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &--copyright {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 4rem 0 1.5rem 0;
+    color: alpha(color.$white, 0.5);
+    @include desk {
+      padding: 4rem 0 2rem 0;
+    }
+
+    .inner {
+      display: grid;
+      gap: 1rem;
+      @include desk {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      > * {
+        line-height: 1;
+      }
+    }
+
+    &-privacy ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    &::before {
+      @include pseudo(100%, 1px, block, relative);
+      background-color: alpha(color.$white2, 0.3);
+      margin:0 0 1rem;
+      @include desk {
+        margin:0 0 2rem;
+      }
+    }
+  }
+
+  .social-list {
+    @include desk {
+      display: flex;
+      gap: 1rem;
+
+      .item {
+        @include box(3.75rem, 3.75rem)
+      }
+    }
+  }
+
+  .grid {
+    @include desk {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+
+      > * {
+        align-self: start;
+      }
+    }
+  }
+}

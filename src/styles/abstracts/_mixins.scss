@@ -1,0 +1,51 @@
+@use 'sass:color';
+
+$desktop-breakpoint: 1024px;
+$wide-breakpoint: 1439px;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin pseudo(
+  $width: 100%,
+  $height: 100%,
+  $display: inline-block,
+  $pos: absolute,
+  $content: ""
+) {
+  content: $content;
+  display: $display;
+  position: $pos;
+  @include box($width, $height);
+}
+
+@function alpha($hex, $a: 1) {
+  $red: color.channel($hex, "red", $space: rgb);
+  $green: color.channel($hex, "green", $space: rgb);
+  $blue: color.channel($hex, "blue", $space: rgb);
+
+  @return rgba($red, $green, $blue, $a);
+}
+
+
+@mixin desk {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $wide-breakpoint) {
+    @content;
+  }
+}
+
+

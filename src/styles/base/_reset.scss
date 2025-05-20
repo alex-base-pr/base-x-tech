@@ -1,0 +1,45 @@
+@use '../abstracts/mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+.block-scroll {
+  overflow-y: hidden;
+}
+
+br[mob] {
+  @include desk {
+    display: none;
+  }
+}
+
+br[desk] {
+  display: none;
+  @include desk {
+    display: block;
+  }
+}

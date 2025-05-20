@@ -1,0 +1,20 @@
+.block-stack {
+  display: grid;
+  justify-items: start;
+  align-items: start;
+  height: fit-content;
+  gap: var(--gap, 0);
+
+  > * {
+    align-self: unset;
+  }
+
+  &.one-half {
+    grid-row-gap: 1.5rem;
+  }
+
+  &.two {
+    grid-row-gap: 2rem;
+  }
+
+}

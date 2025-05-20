@@ -1,0 +1,18 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.tag-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  min-width: 300px;
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem .5rem;
+    font-size: 0.75rem;
+    border: 1px solid alpha(color.$grey, 0.3);
+    border-radius: 3rem;
+    color: color.$grey;
+  }
+}

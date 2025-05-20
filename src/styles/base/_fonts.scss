@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'PPEditorialNew';
+  src: url('/fonts/PPEditorialNew-Ultralight.woff2') format('woff2'),
+        url('/fonts/PPEditorialNew-Ultralight.woff') format('woff');
+  font-weight: 200; // Ultralight
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Thunder';
+  src: url('/fonts/Thunder-BoldLC.woff2') format('woff2'),
+        url('/fonts/Thunder-BoldLC.woff') format('woff');
+  font-weight: 700; // Bold
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TWKEverett';
+  src: url('/fonts/TWKEverett-Medium.woff2') format('woff2'),
+        url('/fonts/TWKEverett-Medium.woff') format('woff');
+  font-weight: 600; // Medium
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TWKEverett';
+  src: url('/fonts/TWKEverett-Regular.woff2') format('woff2'),
+        url('/fonts/TWKEverett-Regular.woff') format('woff');
+  font-weight: 500; // Regular
+  font-style: normal;
+  font-display: swap;
+}
+
+$body-font: 'TWKEverett', sans-serif;
+$heading-font: 'Thunder', sans-serif;
+$ultra-light-font: 'PPEditorialNew', sans-serif;

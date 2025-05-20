@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.social-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid alpha(color.$white, 0.3);
+    @include box(100%, 3.75rem);
+    border-radius: 6rem;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      background-color: color.$primary;
+      border-color: color.$primary;
+    }
+  }
+
+}

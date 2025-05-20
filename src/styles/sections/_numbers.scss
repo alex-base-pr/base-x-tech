@@ -1,0 +1,124 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.section {
+  &-numbers {
+    padding: 5rem 0 1rem;
+    background: linear-gradient(to right, #6D6D6D, #1D1E20);
+    color: color.$white;
+    @include desk {
+      padding: 0 0 2rem;
+    }
+
+    .section {
+      &-title {
+        margin-bottom: 5rem;
+        @include desk {
+          margin-top: 2rem;
+        }
+      }
+
+      &-header {
+        position: relative;
+        &::after {
+          @include pseudo(100%, 1px);
+          background-color: alpha(color.$white2, 0.3);
+          transform: translate(-1rem, 0);
+          @include desk {
+            width: 1px;
+            height: 100%;
+            right: -2rem;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .inner {
+      @include desk {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+    }
+
+    blockquote {
+      padding: 5rem 0 0;
+      @include desk {
+        gap: 2.5rem;
+        padding: 2rem 1rem 11.25rem 29%;
+        grid-column: 2 / span 2;
+      }
+
+      .title {
+        font-size: 2rem;
+        line-height: 2rem;
+        @include desk {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+      }
+
+      &::after {
+        @include pseudo(100%, 1px, block, relative);
+        background-color: alpha(color.$white2, 0.3);
+        margin: 4rem -1rem 0;
+        width: calc(100% + 2rem);
+        @include desk {
+          content: none;
+        }
+      }
+    }
+
+    .cards {
+      padding-top: 1rem;
+
+      @include desk {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-right: 0;
+        border-top: 1px solid alpha(color.$white2, 0.3);
+      }
+
+      .card {
+        width: 100%;
+        height: 243px;
+        background-color: var(--bg-color, color.$white);
+        color: var(--color);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+
+        &:hover {
+          .card-title {
+            &::after {
+              content: none;
+            }
+          }
+        }
+
+        @include desk {
+          height: 227px;
+        }
+
+        &-title {
+          font-size: 1rem;
+        }
+
+        .number {
+          font-size: 8.75rem;
+          line-height: 7.5rem;
+          font-family: font.$heading-font;
+          @include desk {
+
+            line-height: 5.7rem;
+          }
+        }
+      }
+    }
+  }
+}

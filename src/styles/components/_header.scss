@@ -1,0 +1,284 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+$border-color: rgb(250 250 250 / 30%);
+
+header {
+  &.site-header {
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    border-bottom: 1px solid $border-color;
+    background-color: rgb(255 255 255 / 0%);
+    transition: background-color 0.2s ease-in-out;
+    z-index: 100;
+
+    @include desk {
+      height: 10rem;
+    }
+
+    .inner {
+      @include desk {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      &-logo {
+        position: relative;
+
+        @include desk {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 1rem 0 .75rem;
+
+          &::after {
+            @include pseudo(1px, 100%, block, absolute);
+            background-color: alpha(color.$white2, 0.3);
+            top: 0;
+            right: -1rem;
+          }
+        }
+      }
+
+      &-nav-item {
+        position: relative;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem 0 .5rem;
+
+        @include desk {
+          display: flex;
+          padding: 1.5rem 0 .75rem;
+        }
+
+        ul {
+          display: flex;
+          gap: 1rem;
+          a {
+            font-family: font.$heading-font;
+            color: color.$white;
+            font-size: 1.5rem;
+            line-height: .7rem;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+              color: color.$primary;
+            }
+          }
+        };
+
+        &.contact {
+          &::before {
+            @include pseudo(1px, 100%, block, absolute);
+            background-color: alpha(color.$white2, 0.3);
+            top: 0;
+            left: -1rem;
+          }
+
+          ul {
+            justify-content: space-between ;
+          }
+        }
+      }
+    }
+
+    small {
+      display: none;
+      @include desk {
+        display: block;
+        font-size: .75rem;
+        color: alpha(color.$white, 0.5);
+      }
+    }
+
+    &.in-scroll {
+      background-color: rgb(255 255 255 / 100%);
+      border-bottom-color: alpha(color.$black, .5);
+      position: fixed;
+
+      .inner-logo {
+        &::after {
+          background-color: alpha(color.$black, .3);
+        }
+      }
+      .inner-nav-item {
+        &::before {
+          background-color: alpha(color.$black, .3);
+        }
+
+        ul {
+          a {
+            color: alpha(color.$black);
+          }
+        }
+        small {
+          color: alpha(color.$black, .5);
+        }
+      }
+
+      .logo {
+        + small {
+          color: alpha(color.$black, .5);
+        }
+
+        .logo-text {
+          color: color.$black;
+        }
+
+        svg {
+          path {
+            fill: color.$black;
+          }
+        }
+      }
+
+      .nav-triger {
+        span {
+          background-color: color.$black;
+        }
+      }
+
+    }
+
+    .container,
+    .grid-mob-custom  {
+      height: 100%;
+    }
+
+    .grid-mob-custom {
+      display: grid;
+      grid-template-columns: 1fr minmax(128px, 128px);
+      align-items: center;
+      @include desk {
+        grid-template-columns: unset;
+      }
+    }
+
+    .inner {
+      &.nav {
+        display: flex;
+        height: 100%;
+        @include desk {
+          display: none;
+        }
+      }
+
+      .nav-triger {
+        @include desk {
+          display: none;
+        }
+      }
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @include desk {
+        align-items: start;
+      }
+
+      svg {
+        max-width: 70px;
+        @include desk {
+          max-width: 112px;
+        }
+        path {
+          transition: fill 0.2s ease-in-out;
+        }
+      }
+
+      .logo-text {
+        font-family: font.$heading-font;
+        color: color.$white;
+        font-size: 2rem;
+        transition: color 0.2s ease-in-out;
+        @include desk {
+          line-height: .8;
+        }
+      }
+    }
+
+    .support {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 72px;
+      border-left: 1px solid $border-color;
+    }
+
+    .nav-triger {
+      display: flex;
+      height: 100%;
+      align-items: end;
+      justify-content: center;
+      min-width: 56px;
+      border-left: 1px solid $border-color;
+    }
+
+    .contact-ico {
+      img, svg {
+        @include desk {
+          width: 3rem;
+          height: 3rem;
+        }
+        rect, path {
+          transition: all 0.2s ease-in-out;
+        }
+
+      }
+
+      &:hover {
+        svg {
+          rect {
+            fill: color.$white;
+          }
+          path {
+            fill: color.$primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+header.in-scroll .contact-ico:hover{
+  svg {
+    rect {
+      fill: color.$black;
+    }
+    path {
+      fill: color.$white;
+    }
+  }
+}
+
+.nav-active {
+  header.site-header.in-scroll {
+    background-color: initial;
+
+      .logo {
+        .logo-text {
+          color: color.$white;
+        }
+
+        svg {
+          path {
+            fill: color.$white;
+          }
+        }
+      }
+
+      .nav-triger span {
+        background-color: color.$white;
+      }
+  }
+}

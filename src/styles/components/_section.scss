@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as *;
+.section {
+
+  &-title {
+    margin-bottom: 1.5rem;
+  }
+
+  &-subtitle {
+    font-size: 4rem;
+    line-height: 3.625rem;
+    margin-bottom: 5rem;
+    @include desk {
+      font-size: 5.25rem;
+      line-height: 4.375rem;
+      margin-bottom: 7.5rem;
+    }
+  }
+
+  .gradient {
+    color: transparent;
+    background: linear-gradient(90deg, #666666, #1D1E20);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}

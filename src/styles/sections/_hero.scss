@@ -1,0 +1,72 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &--hero {
+    background-image: url('/images/sections/hero/bg-mob.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+
+    @include desk {
+      background-image: url('/images/sections/hero/bg.jpg');
+    }
+
+    .container {
+      height: 100vh;
+      max-height: 100%;
+      display: grid;
+      padding-bottom: 2rem;
+
+      .inner_content {
+        align-self: end;
+        row-gap: 4.5rem;
+          @include desk {
+            row-gap: 2rem;
+          }
+
+        @include desk {
+          align-items: end;
+        }
+
+        .block-stack {
+          @include desk {
+            margin-bottom: .5rem;
+          }
+        }
+      }
+    }
+
+    &-title {
+      font-size: 5.25rem;
+      line-height: 4.625rem;
+      color: #FAFAFA;
+
+      @include desk {
+        font-size: 10.25rem;
+        line-height: 7.75rem;
+      }
+
+      .inner {
+        display: inline-block;
+        transform: translateY(5px);
+        @include desk {
+          display: inline-block;
+          transform: translateY(5px);
+        }
+      }
+
+      .highlight {
+        opacity: .5;
+      }
+    }
+
+    &-description {
+      color: color.$white;
+      @include desk {
+        max-width: 464px;
+      }
+    }
+
+  }
+}
