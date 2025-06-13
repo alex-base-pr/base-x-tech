@@ -19,6 +19,7 @@
 @use 'components/tagset' as tagset;
 @use 'components/iconset' as iconset;
 @use 'components/cards' as cards;
+@use 'components/info-card' as infocard;
 @use 'components/avatar' as avatar;
 @use 'components/custom-widget' as custom-widget;
 @use 'components/social-list' as social-list;
@@ -26,6 +27,9 @@
 @use 'components/form' as form;
 @use 'components/scroller' as scroller;
 @use 'components/flickity' as flickity;
+@use 'components/carousel' as carousel;
+
+@use 'components/pricing-grid' as pricing-grid;
 
 // Layouts
 @use 'layouts/grid' as grid;
@@ -46,5 +50,9 @@
 @use 'sections/page' as section-page;
 @use 'sections/content' as section-content;
 
+
+@use 'sections/timeline' as section-timeline;
+
 // Pages
 @use 'pages/home' as page-home;
+@use 'pages/shopify-development' as shopify-development;

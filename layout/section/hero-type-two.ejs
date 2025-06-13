@@ -1,0 +1,20 @@
+<section
+  id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
+	class="section section--hero <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>"
+
+	<% if (typeof background_image !== 'undefined' && background_image) { %>
+    style="background-image: url('<%= background_image %>');"
+  <% } %>
+	>
+	<div class="container">
+		<div class="inner_content grid-desk-2">
+			<div>
+				<p class="section--hero-subtitle"><%= subtitle %></p>
+				<h1 class="section--hero-title up"><span class="inner"><%= title %></h1>
+			</div>
+			<div class="block-stack one-half">
+				<a class="btn btn--primary" data-form-trigger><span><%= button_text %></span><i arrow-right><span></span></i></a>
+			</div>
+		</div>
+	</div>
+</section>

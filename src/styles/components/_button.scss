@@ -20,6 +20,14 @@ $transition-duration: 0.3s;
   padding: 0 1rem;
 
 
+  &--light {
+    border: 1px solid color.$primary;
+    color: color.$black;
+    text-align: center;
+    background-color: transparent;
+  }
+
+
 
   @include desk {
     font-size: 1.5rem;

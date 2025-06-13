@@ -1,0 +1,34 @@
+<section
+  id="<%= typeof id !== 'undefined' ? id : 'timeline' %>"
+  class="section section-timeline<%= (typeof theme !== 'undefined' && theme) ? ' theme-' + theme : '' %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>"
+  style="<%= (typeof background_image !== 'undefined' && background_image) ? '--background-image: url(' + background_image + ');' : '' %> <%= (typeof background_image_mobile !== 'undefined' && background_image_mobile) ? '--background-image-mob: url(' + background_image_mobile + ');' : '' %>"
+>
+  <div class="container">
+    <header class="section-header">
+      <% if (subtitle) { %>
+        <p class="section-subtitle"><%= subtitle %></p>
+      <% } %>
+      <% if (title) { %>
+        <h2 class="section-title"><%- title %></h2>
+      <% } %>
+      </header>
+
+    <% if (Array.isArray(items) && items.length > 0) { %>
+      <div class="timeline-grid">
+        <% items.forEach((item, index) => { %>
+          <% if (item && item.number && item.title && item.text) { %>
+            <div class="timeline-item">
+              <header>
+                <div class="timeline-item--number"><%= item.number %></div>
+                <h3 class="timeline-item--title"><%= item.title %></h3>
+              </header>
+              <footer>
+                <div class="timeline-item--text"><%- item.text %></div>
+              </footer>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</section>

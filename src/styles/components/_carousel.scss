@@ -1,0 +1,71 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.slider {
+  &-nav {
+    @include desk {
+      position: relative;
+      left: 5.8rem;
+    }
+
+    &-btn {
+      all: unset;
+      @include box(3rem, 3rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid alpha(color.$black, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: transparent;
+      transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+        background-color: alpha(color.$black, 0.1);
+      }
+    }
+
+  }
+}
+
+.theme-dark {
+  .slider {
+    &-nav {
+      &-btn {
+        border-color: alpha(color.$white, .3);
+
+        svg {
+          path {
+            fill: color.$white;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.carousel {
+  &.type-2 {
+
+    .info-card {
+      width: 90%;
+      height: 380px;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      header {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .title {
+        font-family: font.$body-font-cyr;
+      }
+    }
+  }
+}

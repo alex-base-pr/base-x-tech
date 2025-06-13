@@ -1,10 +1,18 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
 
 .section {
   &-works {
     padding: 5rem 0 1rem;
     background: linear-gradient(to right, #6D6D6D, #1D1E20);
+
+    &.has-back {
+      background-image: var(--background-image-mob, var(--background-image));
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
     @include desk {
       padding: 0 0 2rem;
     }
@@ -37,6 +45,7 @@
 
     .section-header {
       position: relative;
+      height: 100%;
 
       @include desk {
         padding: 14.25rem 0;
@@ -150,6 +159,19 @@
                     }
                   }
                 }
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                  grid-column: 1;
+                  min-height: 100%;
+                  max-height: 470px;
+                }
+
+                &:nth-child(6) {
+                  grid-column: 2;
+                  grid-row: 3 / span 2;
+                  height: 100%;
+                }
               }
 
               @include wide {
@@ -184,6 +206,66 @@
           }
         }
       }
+    }
+
+    &.theme-light {
+      background: white;
+      .section {
+
+        &-header {
+          &:after {
+            background-color: alpha(color.$black, 0.3);
+          }
+        }
+
+        &-title {
+          color: color.$black;
+        }
+
+        &-subtitle {
+          color: color.$black;
+        }
+      }
+
+      blockquote {
+        .title {
+          color: alpha(color.$black, 0.3);
+        }
+
+        p {
+          color: color.$black;
+        }
+      }
+
+      .article {
+        &-1 {
+          &::before {
+            background-color: alpha(color.$black, 0.3);
+            margin: 5.125rem 0 1rem;
+            @include desk {
+              margin: 0 0 2rem;
+              width: calc(100% + 100rem);
+            }
+          }
+
+          .article-header {
+            &::after {
+              background-color: alpha(color.$black, 0.3);
+            }
+          }
+        }
+      }
+
+      .marker-list {
+        li {
+          color: color.$black;
+          font-size: 3rem;
+          font-weight: bold;
+          font-family: font.$heading-font;
+          text-transform: uppercase;
+        }
+      }
+
     }
   }
 

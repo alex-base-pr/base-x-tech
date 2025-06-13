@@ -209,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = document.querySelector('.slider-nav-btn.prev');
     const nextBtn = document.querySelector('.slider-nav-btn.next');
 
-
     const flkty = new Flickity(carouselElem, {
         cellAlign: 'left',
         contain: true,
@@ -227,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
         flkty.next();
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('task-form');

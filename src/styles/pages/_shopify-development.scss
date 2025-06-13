@@ -1,0 +1,264 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#hero {
+  .section--hero-subtitle {
+    font-family: font.$body-font-cyr;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: .5rem;
+  }
+
+  .section--hero-title {
+    font-size: 5.25rem;
+  }
+
+  .container .inner_content {
+    gap: 2rem;
+  }
+
+  @include desk {
+    .container {
+      padding-bottom: 3.75rem;
+    }
+
+    .section--hero-title {
+      line-height: 1;
+    }
+
+    .container .inner_content .block-stack {
+      justify-content: end;
+    }
+  }
+}
+
+#services {
+  padding-top: 7.5rem;
+
+  .marker-list {
+    display: grid;
+    gap: 2rem;
+    @include desk {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .container {
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px solid alpha(color.$black, .3);
+      margin-top: 4rem;
+    }
+
+    @include desk {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  blockquote {
+    padding-top: 4rem;
+    @include desk {
+      margin-left: 2rem;
+      max-width: none;
+      padding-top: 14rem;
+    }
+  }
+
+  .section-header::after {
+    content: none;
+    @include desk {
+      content: '';
+    }
+  }
+
+  .section-title {
+    font-family: font.$body-font-cyr;
+    font-weight: 300;
+  }
+
+  .section-subtitle {
+    margin-bottom: 0;
+    @include desk {
+      line-height: 5.25rem;
+    }
+  }
+
+  .custom-card {
+    text-align: center;
+    background: linear-gradient(
+      to top right,
+      #1D1E20 0%,
+      #454545 73%,
+    );
+    padding: 2rem;
+    border-bottom-left-radius: 12rem;
+    border-bottom-right-radius: 12rem;
+    max-width: 385px;
+
+    @include desk {
+      max-width: none;
+      border-bottom-left-radius: 14rem;
+      border-bottom-right-radius: 14rem;
+    }
+
+
+    &--image {
+      border-radius: 50%;
+      background-color: color.$primary;
+
+      img {
+        border-radius: 50%;
+        max-width: 100%;
+        position: relative;
+        top: -.5rem;
+      }
+    }
+
+    &--title {
+      font-size: 2.5rem;
+      color: color.$white;
+      margin-bottom: .75rem;
+    }
+
+    &--subtitle {
+      font-size: 1.25rem;
+      color: alpha(color.$white, .5);
+      margin-bottom: 4rem;
+    }
+  }
+
+  @include desk {
+    padding: 0;
+  }
+}
+
+#additional {
+
+  .section-header::after {
+    content: none;
+
+    @include desk {
+      content: '';
+    }
+  }
+
+  .section-title {
+    font-family: font.$body-font-cyr;
+    font-weight: 300;
+  }
+
+  .section-subtitle {
+    margin: 0;
+    @include desk {
+      line-height: 5.25rem;
+    }
+  }
+
+  blockquote {
+    padding-top: 3rem;
+  }
+
+  .marker-list li {
+    font-family: font.$heading-font-cyr;
+    font-size: 2rem;
+    border-bottom: 1px solid alpha(color.$black, .3);
+    line-height: 1;
+    padding: 1.469rem 0;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    &::before {
+      content: "";
+      display: flex;
+      @include box(1rem, 1rem);
+      background-color: color.$black;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include desk {
+    padding: 0;
+  }
+}
+
+#reviews {
+  padding-bottom: 5rem;
+
+  .inner {
+
+    > blockquote {
+      margin-right: -1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .section-header::after {
+      transform: none;
+    }
+  }
+}
+
+#portfolio {
+  .section-title {
+    font-family: font.$body-font-cyr;
+    font-weight: 300;
+  }
+
+  .section-subtitle {
+    @include desk {
+      line-height: 5.25rem;
+    }
+  }
+
+  blockquote {
+    .title {
+      font-family: font.$heading-font;
+    }
+
+    @include desk {
+      max-width: 350px;
+    }
+  }
+
+  padding-bottom: 2rem;
+
+  .article-1 main .cards {
+    margin: 0;
+  }
+
+  .article-1 main {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+
+  .article-1::before {
+    width: calc(100% + 2rem);
+    margin: 5.125rem 0 1rem -1rem;
+    @include desk {
+      margin: 0 0 1rem 0;
+      width: 100%;
+    }
+
+  }
+
+  .section-header::after {
+     width: calc(100% + 2rem);
+     margin: 2rem -1rem 0 0;
+
+     @include desk {
+      width: 1px;
+      margin: 0;
+    }
+  }
+}

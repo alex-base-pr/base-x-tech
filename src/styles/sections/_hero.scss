@@ -61,6 +61,10 @@
       }
     }
 
+    &-subtitle {
+      color: color.$white;
+    }
+
     &-description {
       color: color.$white;
       @include desk {

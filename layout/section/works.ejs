@@ -1,0 +1,59 @@
+<section
+  id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
+  class="section section-works <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
+  <div class="container">
+    <% if (typeof title !== 'undefined' && title) { %>
+      <div class="inner">
+        <header class="section-header">
+          <% if (typeof title !== 'undefined' && title) { %>
+            <h2 class="section-title alt up"><%= title %></h2>
+          <% } %>
+          <% if (typeof subtitle !== 'undefined' && subtitle) { %>
+            <h3 class="section-subtitle up"><%- subtitle %></h3>
+          <% } %>
+        </header>
+        <blockquote>
+          <h2 class="title up">40+</h2>
+          <% if (typeof description !== 'undefined' && description) { %>
+            <p><%= description %></p>
+          <% } %>
+        </blockquote>
+      </div>
+    <% } %>
+
+    <article class="article-1">
+      <main>
+        <ul class="cards">
+          <% items.forEach(item => { %>
+            <li class="card">
+              <% if (typeof item.link !== 'undefined' && item.link) { %>
+                <a href="<%= item.link %>" target="_blank">
+              <% } %>
+                  <% if (typeof item.background_image !== 'undefined' && item.background_image) { %>
+                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="Naya Tech" class="card-background">
+                  <% } %>
+                  <div class="card-content">
+                    <header>
+                      <% if (typeof item.title !== 'undefined' && item.title) { %>
+                        <h4 class="card-title up"><%= item.title %></h4>
+                      <% } %>
+                      <% if (typeof item.icons !== 'undefined' && item.icons) { %>
+                        <ul class="icon-set">
+                          <% item.icons.forEach(icon => { %>
+                            <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-<%= icon %>.svg" alt="Shopify"></li>
+                          <% }) %>
+                        </ul>
+                      <% } %>
+                    </header>
+                    <footer>
+                      <p><%= item.text %></p>
+                    </footer>
+                  </div>
+              </a>
+            </li>
+          <% }) %>
+        </ul>
+      </main>
+    </article>
+  </div>
+</section>
