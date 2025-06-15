@@ -16,12 +16,12 @@ function moveOutputPlugin() {
     enforce: 'post',
     apply: 'build',
     async generateBundle(_, bundle) {
-      for (const fileName in bundle) {
-        if (fileName.startsWith('pages/')) {
-          const newName = fileName.slice('pages/'.length);
-          bundle[fileName].fileName = newName;
-        }
-      }
+      // for (const fileName in bundle) {
+      //   if (fileName.startsWith('pages/')) {
+      //     const newName = fileName.slice('pages/'.length);
+      //     bundle[fileName].fileName = newName;
+      //   }
+      // }
     },
   };
 }

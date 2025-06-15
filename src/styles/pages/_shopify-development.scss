@@ -103,8 +103,8 @@
 
     @include desk {
       max-width: none;
-      border-bottom-left-radius: 14rem;
-      border-bottom-right-radius: 14rem;
+      border-bottom-left-radius: 18rem;
+      border-bottom-right-radius: 18rem;
     }
 
 
@@ -117,6 +117,7 @@
         max-width: 100%;
         position: relative;
         top: -.5rem;
+        width: 100%;
       }
     }
 
@@ -190,6 +191,9 @@
 
 #reviews {
   padding-bottom: 5rem;
+  @include desk {
+    padding-bottom: 0;
+  }
 
   .inner {
 
@@ -197,15 +201,46 @@
       margin-right: -1rem;
       display: grid;
       gap: 2rem;
+
+      @include desk {
+        max-width: none;
+        margin-right: 0;
+        margin-top: 14rem;
+        margin-bottom: 13rem;
+      }
     }
 
     .section-header::after {
       transform: none;
     }
+
+    .slider-nav {
+      @include desk {
+        left: 0;
+      }
+    }
+
   }
+
+  .section-title {
+    font-family: font.$body-font-cyr;
+    font-weight: 300;
+  }
+
+  .section-subtitle {
+    @include desk {
+      line-height: 5.25rem;
+    }
+  }
+
+
+
+
 }
 
 #portfolio {
+  padding-bottom: 2rem;
+
   .section-title {
     font-family: font.$body-font-cyr;
     font-weight: 300;
@@ -226,8 +261,6 @@
       max-width: 350px;
     }
   }
-
-  padding-bottom: 2rem;
 
   .article-1 main .cards {
     margin: 0;
@@ -261,4 +294,8 @@
       margin: 0;
     }
   }
+}
+
+#price-brief {
+
 }

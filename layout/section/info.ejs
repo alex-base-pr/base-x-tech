@@ -27,8 +27,8 @@
             <ul class="marker-list">
               <% cards.forEach(item => { %>
                 <li class="custom-card">
-                  <h3 class="custom-card--title"><%= item.title %></h3>
-                  <h4 class="custom-card--subtitle"><%= item.subtitle %></h4>
+                  <h3 class="custom-card--title"><%- item.title %></h3>
+                  <h4 class="custom-card--subtitle"><%- item.subtitle %></h4>
                   <% if (typeof item.background_image !== 'undefined' && item.background_image) { %>
                     <div class="custom-card--image">
                       <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="Naya Tech" class="card-background">

@@ -11,6 +11,9 @@
 
     @include desk {
       background-image: var(--background-image);
+      background-size: cover;
+      background-position: top center;
+      padding-bottom: 16rem;
     }
 
     .section {
@@ -38,6 +41,26 @@
     .timeline {
       &-grid {
         padding-bottom: 7.5rem;
+        position: relative;
+
+        @include desk {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          max-width: 672px;
+          margin: 0 auto;
+          padding-bottom: 0;
+
+          &::before {
+            content: '';
+            display: block;
+            height: calc(100% + 110px);
+            width: 1px;
+            background-color:color.$primary;
+            position: absolute;
+            top: 0;
+            left: 50%;
+          }
+        }
       }
 
       &-item {
@@ -45,8 +68,43 @@
         gap: 2rem;
         border-left: 1px color.$primary solid;
         padding-left: 1rem;
-        padding: bottom;
         padding-bottom: 4.563rem;
+
+        @include desk {
+          border-left: none;
+          padding: unset;
+          padding-bottom: 1.5rem;
+          border-bottom: 1px dashed color.$primary;
+          justify-self: start;
+          align-self: start;
+          position: relative;
+
+          &:nth-child(odd) {
+            padding: 0 2rem 2rem 0;
+            &::after {
+              content: '';
+              @include box(.5rem, .5rem);
+              background-color: color.$primary;
+              position: absolute;
+              bottom: -.25rem;
+              right: -.25rem;
+            }
+          }
+
+          &:nth-child(even) {
+            margin-top: 140px;
+            margin-bottom: -110px;
+            padding: 0 2rem 2rem;
+            &::after {
+              content: '';
+              @include box(.5rem, .5rem);
+              background-color: color.$primary;
+              position: absolute;
+              bottom: -.25rem;
+              left: -.25rem;
+            }
+          }
+        }
 
         header {
           display: grid;
@@ -55,6 +113,7 @@
 
         &--title {
           font-size: 1.875rem;
+          text-transform: uppercase;
         }
 
         &--text {

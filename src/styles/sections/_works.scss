@@ -11,6 +11,9 @@
       background-image: var(--background-image-mob, var(--background-image));
       background-repeat: no-repeat;
       background-size: cover;
+      @include desk {
+        background-image: var(--background-image);
+      }
     }
 
     @include desk {
