@@ -16,9 +16,16 @@
 	>
 	<div class="container">
 		<div class="inner_content grid-desk-2">
+      <% if (typeof cards !== 'undefined' && cards) { %>
+        <ul class="widgets">
+          <% cards.forEach(card => { %>
+            <li class="widget"><img loading="eager" fetchpriority="low" src="<%= card.image %>" ></li>
+          <% }) %>
+        </ul>
+        <% } %>
 			<div>
 				<p class="section--hero-subtitle"><%= subtitle %></p>
-				<h1 class="section--hero-title up"><span class="inner"><%= title %></h1>
+				<h1 class="section--hero-title up"><span class="inner"><%- title %></h1>
 			</div>
 			<div class="block-stack one-half">
         <% if (typeof button_text !== 'undefined' && button_text) { %>

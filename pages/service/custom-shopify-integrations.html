@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ua">
+<%- include('layout/head.ejs'), { locale: 'cyr'} %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="custom-shopify-integrations">
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "service-hero",
+        title: "Custom Shopify Integrations",
+        subtitle: "shopify automation and growth",
+        description: "We build seamless integrations between Shopify and your business tools, including ERP systems, accounting software, and marketplaces, to streamline operations and support growth.",
+        icons: [
+          "shopify"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "SERVICES AND TECHNOLOGIES",
+        subtitle: "Connect Your Shopify<br class='br-desk'> Store to the <span class='accent'>Tools That<br class='br-desk'> Power Your Business</span>",
+        cards: [
+          {
+            title: "Third-Party Platforms",
+            description: "Link Shopify to marketing automation tools, CRMs, customer service platforms, project management software, or accounting platforms. From QuickBooks and HubSpot to Mailchimp and Zendesk, we streamline your processes and eliminate manual data entry. If you use it, we can connect it.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Marketplaces and Sales Channels",
+            description: "Sell where your customers are. We integrate Shopify with leading marketplaces, including Amazon, enabling you to manage inventory, products, pricing, and orders from one centralized location.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Payment Gateways",
+            description: "Offer customers multiple secure payment options. We integrate both global and local payment providers into your Shopify store for a seamless, frictionless checkout experience that improves conversion rates and customer loyalty.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Shipping and Fulfillment",
+            description: "Simplify your logistics by connecting Shopify to shipping carriers, 3PL services, and warehouse management systems. Automate label generation, real-time tracking, and order updates to deliver faster and more accurately.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "ERP and Inventory Systems",
+            description: "We connect your Shopify store to your ERP or inventory management system so orders, stock levels, customer details, and product information are perfectly synchronized. Whether you use SAP, NetSuite, or a custom system, we ensure smooth communication between platforms.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Custom APIs and Middleware",
+            description: "When off-the-shelf apps aren’t enough, we build custom APIs or middleware that let Shopify integrate with any software you need. We remove data silos and enable even the most complex multi-system workflows to operate flawlessly.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ADVANTAGES",
+        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Built for Business Results",
+            description: "Every integration we build is designed to reduce manual processes, improve operational efficiency, and deliver better customer experiences."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "No Outsourcing, Ever",
+            description: "Your project stays 100% in-house with our dedicated team. You get direct communication, faster results, and full accountability."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Agile and Transparent Process",
+            description: "We move fast and keep you informed at every step. You’ll have clear timelines, regular updates, and flexibility for mid-project adjustments."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Specialists in Shopify",
+            description: "We live and breathe Shopify. Our deep knowledge of the platform, APIs, and architecture allows us to deliver faster, smoother custom Shopify integrations with fewer delays and roadblocks."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "No Nonsense Partnership",
+            description: "We don’t overpromise. You’ll get realistic delivery dates, straightforward pricing, and a partner who exceeds expectations."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "PORTFOLIO",
+      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
+      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Brand identity & redesign of self-care ecommerce",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-expertise",
+        title: "EXPERTISE",
+        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
+        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
+        media_cards: [
+          {
+            title: "fashion",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "beauty",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "automotive",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Food & Drinks",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Jewelry & Luxury",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Furniture & Decor",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Health & Supplements",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Bags & Accessories",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Tech & Gadgets",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Sports & Lifestyle",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'en',
+        id: 'service-faq',
+        title: 'WORKFLOW',
+        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
+        button: {
+          text: "Discuss a project"
+        },
+        faq: [
+          {
+            title: "Discovery Call",
+            description: "We start with a conversation. You tell us what you want to connect and why. We listen carefully, gather all details, and offer advice to ensure alignment. This foundation leads to a successful, smooth project."
+          },
+          {
+            title: "Scope & Planning",
+            description: "We map out the integration architecture, define data flows, document technical needs, and set clear milestones. You’ll always know what’s next and how we are progressing."
+          },
+          {
+            title: "Development & Testing",
+            description: "Our team builds your integration using best practices and industry-leading security standards. We conduct extensive testing to guarantee stable performance and error-free data flow before launch."
+          },
+          {
+            title: "Training & Support",
+            description: "After launch, we provide full documentation and personalized training so your team feels confident managing the integration. We also offer ongoing support and future upgrades to meet your evolving business needs."
+          }
+        ]
+      })
+    %>
+
+    <section id="section-approach" class="section section-approach">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Approach</h2>
+              <h3 class="section-subtitle up">we work <br>within your <br>budget</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Immersion</h4>
+                  <p class="description">We’re dedicated to crafting new solutions that push the boundaries of what’s possible, ensuring your business stays ahead of the curve.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Nastya Hudyma</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Transparence</h4>
+                  <p class="description">We believe in keeping you fully informed throughout every step of the project, giving you the clarity and confidence to make decisions.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadim Hula</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Quality</h4>
+                  <p class="description">Excellence is woven into everything we do, from the initial concept to the final execution, ensuring your vision is brought to life with precision and care.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadym Yarmak</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

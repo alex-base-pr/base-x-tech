@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ua">
+<%- include('layout/head.ejs'), { locale: 'cyr'} %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="shopify-app-design-services" >
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "service-hero",
+        title: "Shopify App Design Services",
+        subtitle: "minimum viable product design",
+        description: "We design intuitive, responsive, and visually engaging interfaces for Shopify apps, ensuring a seamless user experience and alignment with your brand identity.",
+        icons: [
+          "shopify",
+          "figma"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/hero-image.ejs', {
+        locale: 'en',
+        id: "hero-banner",
+        background_image: "/images/pages/service/index/hero/bg.png",
+        background_image_mob: "/images/pages/service/index/hero/bg-mob.png"
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "SERVICES AND TECHNOLOGIES",
+        subtitle: "What You Get with <br class='br-desk'>Our<br class='br-mob'> <span class='accent'>Shopify App<br class='br-mob'> Design Services</span>",
+        cards: [
+          {
+            title: "User-Centric App Interfaces",
+            description: "We design intuitive, accessible, and attractive app interfaces that focus on what matters most — your users. From simple navigation to smooth micro-interactions, we help customers engage, convert, and return.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Custom UI and UX Development",
+            description: "Our team designs tailored user journeys that work seamlessly within the Shopify ecosystem. We combine creativity and usability to build apps that are clear, fast, and help users complete tasks with minimal effort.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "App Branding and Visual Identity",
+            description: "We create a cohesive visual identity for your app, including icons, colors, fonts, button styles, and overall aesthetics. We ensure your app reflects your brand image and feels fully integrated into your store experience.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Responsive and Mobile-Optimized Design",
+            description: "We design apps for mobile-first, yet fully responsive across desktops, tablets, and smartphones. We test across devices and screen sizes to guarantee your app looks great and performs smoothly everywhere.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Wireframing, Prototyping, and Testing",
+            description: "We create logical user flows and detailed wireframes before producing interactive prototypes. You can test every aspect of your custom design app shopify before development begins, saving time and avoiding costly revisions later.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Post-Launch Design Support",
+            description: "Design doesn’t end at launch. We stay with you to provide updates, add new features, or improve usability as your app grows. Our ongoing design partnership helps you keep your app competitive and aligned with customer expectations.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          }
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ADVANTAGES",
+        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Design That Drives Growth",
+            description: "We go beyond beautiful visuals. Every screen, icon, and user journey we design has a clear business goal: boost conversions, increase retention, and simplify customer interactions."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Dedicated In-House Team",
+            description: "Your project never leaves our team. As Shopify experts, we offer direct access to your designers, continuous collaboration, and faster turnarounds with full accountability."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Flexible and Collaborative Process",
+            description: "We adjust our workflow to your needs. Our agile process includes frequent feedback loops, design iterations, and updates at every milestone to ensure alignment."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Deep Shopify Expertise",
+            description: "We design apps that function perfectly within the Shopify environment. We understand platform rules, constraints, and best practices, so your app works reliably and scales with your business."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Honest and Transparent",
+            description: "We provide clear timelines, fixed pricing models, and honest communication. You know what to expect at every step — no surprises, just consistent results."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "PORTFOLIO",
+      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
+      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Brand identity & redesign of self-care ecommerce",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-expertise",
+        title: "EXPERTISE",
+        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
+        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
+        media_cards: [
+          {
+            title: "fashion",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "beauty",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "automotive",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Food & Drinks",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Jewelry & Luxury",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Furniture & Decor",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Health & Supplements",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Bags & Accessories",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Tech & Gadgets",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Sports & Lifestyle",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'en',
+        id: 'service-faq',
+        title: 'WORKFLOW',
+        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
+        button: {
+          text: "Discuss a project"
+        },
+        faq: [
+          {
+            title: "App Discovery and Strategy",
+            description: "We explore your goals, business logic, and target audience. We define app features, functionality, and the design approach needed to meet your business objectives."
+          },
+          {
+            title: "Wireframing and Flow Planning",
+            description: "Our team builds structured wireframes and detailed user flows. We design every screen and interaction to be logical, intuitive, and aligned with your core app features."
+          },
+          {
+            title: "Visual Design and Prototyping",
+            description: "We create fully branded, high-fidelity mockups and clickable prototypes. You review, test, and approve designs before any code is written, ensuring full alignment with your vision."
+          },
+          {
+            title: "Handoff and Ongoing Design Support",
+            description: "After approval, we deliver complete design files, specifications, and design systems for development. We remain available to support your development team and help enhance your app post-launch."
+          }
+        ]
+      })
+    %>
+
+    <section id="section-approach" class="section section-approach">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Approach</h2>
+              <h3 class="section-subtitle up">we work <br>within your <br>budget</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Immersion</h4>
+                  <p class="description">We’re dedicated to crafting new solutions that push the boundaries of what’s possible, ensuring your business stays ahead of the curve.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Nastya Hudyma</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Transparence</h4>
+                  <p class="description">We believe in keeping you fully informed throughout every step of the project, giving you the clarity and confidence to make decisions.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadim Hula</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Quality</h4>
+                  <p class="description">Excellence is woven into everything we do, from the initial concept to the final execution, ensuring your vision is brought to life with precision and care.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadym Yarmak</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

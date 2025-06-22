@@ -60,6 +60,9 @@
 @use 'pages/home' as page-home;
 @use 'pages/shopify-development' as shopify-development;
 @use 'pages/service' as page-service;
+@use 'pages/service-conversion-rate-optimization' as page-service-conversion-rate-optimization;
+@use 'pages/service-custom-shopify-integrations' as page-service-custom-shopify-integrations;
+@use 'pages/service-shopify-theme-customization' as page-service-shopify-theme-customization;
 
 // Modifficators
 @use 'mod/gap' as mod-gap;

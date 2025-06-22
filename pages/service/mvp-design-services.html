@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ua">
+<%- include('layout/head.ejs'), { locale: 'cyr'} %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="sevice-custom-web-design-services" >
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "service-hero",
+        title: "MVP Design Services",
+        subtitle: "minimum viable product design",
+        description: "Our MVP design process includes user research, wireframing, interface design, and prototyping to help you launch faster and validate your product with real users.",
+        icons: [
+          "figma"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/hero-image.ejs', {
+        locale: 'en',
+        id: "hero-banner",
+        background_image: "/images/pages/service/mvp-design-service/hero-image/bg.png",
+        background_image_mob: "/images/pages/service/mvp-design-service/hero-image/bg-mob.png"
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "SERVICES AND TECHNOLOGIES",
+        subtitle: "What You Get with Our<br class='br-desk'> <span class='accent'>MVP Design Services</span>",
+        cards: [
+          {
+            title: "Product Discovery and Ideation",
+            description: "We start by understanding your business objectives, audience, and market positioning. Together, we explore concepts, define the core product vision, and prioritize essential features for the MVP.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "User Research and Persona Creation",
+            description: "Our design team conducts research to uncover real user needs and behaviors. We build user personas and customer journey maps to guide every design decision for maximum relevance and usability.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "UX Wireframes and Flow Design",
+            description: "We design clear, logical user flows and wireframes that structure your MVP around its essential functions. This phase ensures your product delivers the simplest path to solving user problems.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "UI Design and Visual Prototyping",
+            description: "We craft modern, intuitive interfaces that elevate the MVP experience. You’ll receive interactive prototypes that simulate the final product, making it easy to test, validate, and refine before development.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Design System and Brand Alignment",
+            description: "We build reusable design components and style guides for consistency across your MVP. Fonts, colors, buttons, icons—all are aligned with your brand to ensure a professional and polished look.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Usability Testing and Iteration",
+            description: "Before handoff, we conduct usability testing with real users or stakeholders. Feedback is rapidly implemented to remove friction points and ensure your MVP meets customer expectations from day one.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          }
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ADVANTAGES",
+        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Focused on Launch-Ready MVPs",
+            description: "We specialize in lean, purpose-driven design for MVPs. Our goal is to get you to market faster with a product that works and delights users."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "All In-House Designers",
+            description: "Every design task is handled by our experienced in-house team. No freelancers, no delays. You work directly with experts who understand your business."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Iterative and Agile Process",
+            description: "Our flexible design process allows for quick revisions and continuous feedback. We adapt easily as your project evolves."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Deep Industry Knowledge",
+            description: "We have designed MVPs across fintech, SaaS, ecommerce, healthcare, and more. Our insights help you avoid common pitfalls and design smarter from day one."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Transparent Collaboration",
+            description: "You’ll always know where your project stands. We provide clear timelines, milestones, and communication from start to finish."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "PORTFOLIO",
+      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
+      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Brand identity & redesign of self-care ecommerce",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-expertise",
+        title: "EXPERTISE",
+        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
+        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
+        media_cards: [
+          {
+            title: "fashion",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "beauty",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "automotive",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Food & Drinks",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Jewelry & Luxury",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Furniture & Decor",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Health & Supplements",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Bags & Accessories",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Tech & Gadgets",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Sports & Lifestyle",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'en',
+        id: 'service-faq',
+        title: 'WORKFLOW',
+        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
+        button: {
+          text: "Discuss a project"
+        },
+        faq: [
+          {
+            title: "Discovery and Goal Setting",
+            description: "We take time to understand your business, audience, and competitive landscape. Together, we define design goals, review inspiration, and plan the creative direction."
+          },
+          {
+            title: "Research and Wireframing",
+            description: "Our team creates detailed user flows and wireframes that define structure and interactions for each feature of the MVP."
+          },
+          {
+            title: "UI Design and Prototyping",
+            description: "We transform wireframes into high-fidelity designs and interactive prototypes, allowing for early validation and feedback."
+          },
+          {
+            title: "Testing and Final Handoff",
+            description: "We conduct usability tests to refine the design, then prepare all final design assets and documentation for development handoff."
+          }
+        ]
+      })
+    %>
+
+    <section id="section-approach" class="section section-approach">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Approach</h2>
+              <h3 class="section-subtitle up">we work <br>within your <br>budget</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Immersion</h4>
+                  <p class="description">We’re dedicated to crafting new solutions that push the boundaries of what’s possible, ensuring your business stays ahead of the curve.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Nastya Hudyma</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Transparence</h4>
+                  <p class="description">We believe in keeping you fully informed throughout every step of the project, giving you the clarity and confidence to make decisions.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadim Hula</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Quality</h4>
+                  <p class="description">Excellence is woven into everything we do, from the initial concept to the final execution, ensuring your vision is brought to life with precision and care.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadym Yarmak</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

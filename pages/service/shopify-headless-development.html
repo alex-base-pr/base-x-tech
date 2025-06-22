@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ua">
+<%- include('layout/head.ejs'), { locale: 'cyr'} %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="custom-shopify-integrations">
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "service-hero",
+        title: "Shopify Headless Development",
+        subtitle: "minimum viable product design",
+        description: "We implement headless architecture for Shopify, allowing for fully customized front ends that deliver lightning-fast performance and exceptional user experiences.",
+        icons: [
+          "shopify"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "SERVICES AND TECHNOLOGIES",
+        subtitle: "<span class='accent'>Unlock<br class='br-mob'>  Limitless<br> Flexibility and Speed</span><br class='br-desk'>  for Your Shopify Store",
+        cards: [
+          {
+            empty: true
+          },
+          {
+            title: "Maximum Design Freedom",
+            description: "Traditional Shopify themes can limit your creativity. Headless development lets us design fully customized user experiences with modern frameworks like React, Next.js, Vue.js, and more — giving your store a truly unique look and feel.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Lightning-Fast Performance",
+            description: "By separating your front end from Shopify’s back end, your store loads faster and responds instantly. This keeps your customers engaged and reduces bounce rates, which translates to higher conversion rates and better SEO rankings.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Seamless Multi-Channel Integration",
+            description: "A headless architecture allows you to connect your store to apps, marketplaces, and third-party services with ease. Sell on web, mobile apps, social platforms, kiosks, or anywhere else — all powered by a single back-end system.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Scalable and Future-Proof",
+            description: "Your business grows, and your technology should too. Headless setups are easier to scale, customize, and adapt to new trends without the limitations of rigid templates. It also helps you control long-term development and maintenance cost more effectively.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Superior SEO and Accessibility",
+            description: "Headless Shopify stores offer full control over structure, metadata, and content delivery. We optimize every element to improve your search engine visibility and make your store accessible to every user. Shopify remains your secure and reliable CMS, while your customer experience is fully customized on the front end.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ADVANTAGES",
+        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "We speak business, not just code",
+            description: "Our focus is on helping you grow. We understand how to use technology to drive sales, increase customer engagement, and create long-term brand loyalty."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "End-to-end solutions — no outsourcing",
+            description: "Your project stays entirely within our experienced internal team. This ensures better communication, faster delivery, and complete accountability."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Agile, transparent workflow",
+            description: "We work quickly, adapt easily, and communicate openly. You’re always in the loop with clear timelines and regular progress updates."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Shopify and Headless Experts",
+            description: "We specialize in Shopify. Our developers know the platform, APIs, and best practices inside and out, allowing us to build headless solutions that work flawlessly from day one."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Straightforward and honest collaboration",
+            description: "No hidden fees, no empty promises. We set realistic expectations, stick to our commitments, and deliver what we say — every time."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "PORTFOLIO",
+      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
+      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Brand identity & redesign of self-care ecommerce",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-expertise",
+        title: "EXPERTISE",
+        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
+        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
+        media_cards: [
+          {
+            title: "fashion",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "beauty",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "automotive",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Food & Drinks",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Jewelry & Luxury",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Furniture & Decor",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Health & Supplements",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Bags & Accessories",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Tech & Gadgets",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Sports & Lifestyle",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'en',
+        id: 'service-faq',
+        title: 'WORKFLOW',
+        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
+        button: {
+          text: "Discuss a project"
+        },
+        faq: [
+          {
+            title: "Discovery Call",
+            description: "We start by understanding your brand’s goals, challenges, and vision for the customer experience."
+          },
+          {
+            title: "Solution Design",
+            description: "We map out your architecture, design wireframes, and define integration requirements. Every step is planned for efficiency and scalability."
+          },
+          {
+            title: "Headless Development",
+            description: "Our team builds your custom front end and connects it to Shopify’s back end using modern APIs. We follow best practices for speed, security, and maintainability."
+          },
+          {
+            title: "Testing and Handover",
+            description: "We rigorously test the new experience on all devices and browsers. Once everything works perfectly, we provide training and documentation to help you manage your store with confidence."
+          }
+        ]
+      })
+    %>
+
+    <section id="section-approach" class="section section-approach">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Approach</h2>
+              <h3 class="section-subtitle up">we work <br>within your <br>budget</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Immersion</h4>
+                  <p class="description">We’re dedicated to crafting new solutions that push the boundaries of what’s possible, ensuring your business stays ahead of the curve.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Nastya Hudyma</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Transparence</h4>
+                  <p class="description">We believe in keeping you fully informed throughout every step of the project, giving you the clarity and confidence to make decisions.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadim Hula</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Quality</h4>
+                  <p class="description">Excellence is woven into everything we do, from the initial concept to the final execution, ensuring your vision is brought to life with precision and care.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadym Yarmak</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>
