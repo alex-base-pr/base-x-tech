@@ -29,8 +29,11 @@
               <% if (typeof item.link !== 'undefined' && item.link) { %>
                 <a href="<%= item.link %>" target="_blank">
               <% } %>
+                  <% if (typeof item.background_image_mob !== 'undefined' && item.background_image_mob) { %>
+                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image_mob %>" alt="<%= item.title %>" class="card-background mobile--alt-image">
+                  <% } %>
                   <% if (typeof item.background_image !== 'undefined' && item.background_image) { %>
-                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="Naya Tech" class="card-background">
+                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="<%= item.title %><" class="card-background">
                   <% } %>
                   <div class="card-content">
                     <header>

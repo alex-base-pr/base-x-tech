@@ -1,0 +1,16 @@
+<section
+  id="<%= typeof id !== 'undefined' ? id : 'timeline' %>"
+  class="section section--hero-image <% if (
+      (typeof background_image === 'undefined' || !background_image) ||
+      (typeof background_image_mob === 'undefined' || !background_image_mob)
+    ) { %>fall-back-gradient<% } %>"
+  style="
+    <% if (typeof background_image !== 'undefined' && background_image) { %>
+      --background-image: url('<%= background_image %>');
+    <% } %>
+    <% if (typeof background_image_mob !== 'undefined' && background_image_mob) { %>
+      --background-image-mob: url('<%= background_image_mob %>');
+    <% } %>
+  "
+  >
+</section>

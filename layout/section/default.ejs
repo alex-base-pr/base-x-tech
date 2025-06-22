@@ -13,51 +13,54 @@
       <% } %>
     </div>
 
-    <% if (Array.isArray(cards) && cards.length > 0) { %>
-      <div class="pricing-grid">
-        <% cards.forEach(card => { %>
-          <div class="pricing-card <%= card.class || '' %>">
+    <% if (typeof cards !== 'undefined') { %>
+      <% if (Array.isArray(cards) && cards.length > 0) { %>
+        <div class="pricing-grid">
+          <% cards.forEach(card => { %>
+            <div class="pricing-card <%= card.class || '' %>">
+              <div>
+                <div class="pricing-card--header">
+                  <% if (card.number) { %>
+                    <div class="pricing-card--number"><%= card.number %></div>
+                  <% } %>
 
-            <div class="pricing-card--header">
-              <% if (card.number) { %>
-                <div class="pricing-card--number"><%= card.number %></div>
-              <% } %>
+                  <% if (card.title) { %>
+                    <h3 class="pricing-card--title"><%= card.title %></h3>
+                  <% } %>
 
-              <% if (card.title) { %>
-                <h3 class="pricing-card--title"><%= card.title %></h3>
-              <% } %>
+                  <% if (card.subtitle) { %>
+                    <div class="pricing-card--duration"><%= card.subtitle %></div>
+                  <% } %>
 
-              <% if (card.subtitle) { %>
-                <div class="pricing-card--duration"><%= card.subtitle %></div>
-              <% } %>
+                  <% if (card.description) { %>
+                    <p class="pricing-card--description"><%= card.description %></p>
+                  <% } %>
+                </div>
 
-              <% if (card.description) { %>
-                <p class="pricing-card--description"><%= card.description %></p>
-              <% } %>
+                <div class="pricing-card--body">
+                  <% if (card.listTitle) { %>
+                    <p class="pricing-card--list-title"><%= card.listTitle %></p>
+                  <% } %>
+
+                  <% if (Array.isArray(card.listItems) && card.listItems.length > 0) { %>
+                    <ul class="pricing-card--list">
+                      <% card.listItems.forEach(item => { %>
+                        <% if (item) { %>
+                          <li><span class="checkmark-icon"></span> <%= item %></li>
+                        <% } %>
+                      <% }) %>
+                    </ul>
+                  <% } %>
+                </div>
+              </div>
+
+              <div class="pricing-card--footer">
+                <a data-form-trigger class="btn <% if (typeof card.button.style !== 'undefined' && card.button.style){ %><%= card.button.style %><% } %>"><span>Отримати прорахунок</span></a>
+              </div>
             </div>
-
-            <div class="pricing-card--body">
-              <% if (card.listTitle) { %>
-                <p class="pricing-card--list-title"><%= card.listTitle %></p>
-              <% } %>
-
-              <% if (Array.isArray(card.listItems) && card.listItems.length > 0) { %>
-                <ul class="pricing-card--list">
-                  <% card.listItems.forEach(item => { %>
-                    <% if (item) { %>
-                      <li><span class="checkmark-icon"></span> <%= item %></li>
-                    <% } %>
-                  <% }) %>
-                </ul>
-              <% } %>
-            </div>
-
-            <div class="pricing-card--footer">
-              <a data-form-trigger class="btn <% if (typeof card.button.style !== 'undefined' && card.button.style){ %><%= card.button.style %><% } %>"><span>Отримати прорахунок</span></a>
-            </div>
-          </div>
-        <% }) %>
-      </div>
+          <% }) %>
+        </div>
+      <% } %>
     <% } %>
   </div>
 </section>

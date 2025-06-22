@@ -1,0 +1,79 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-split {
+    padding-bottom: 3rem;
+    border-bottom:1px solid alpha(color.$black, .3);
+
+    @include desk {
+      padding-bottom: 2rem;
+
+      .container > .inner {
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 33%;
+            background-color:alpha(color.$black, .3);
+            z-index: -1;
+          };
+      }
+    }
+
+    .section {
+      &-header {
+        margin-top: 7.5rem;
+        @include desk {
+          margin: 0;
+          padding: 12rem 0;
+          position: relative;
+          border: none !important;
+
+
+        }
+      }
+    }
+
+    .container {
+      .column-1 {
+        @include desk {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          align-items: center;
+          border-bottom: 1px solid alpha(color.$black, .3);
+        }
+      }
+    }
+
+
+    blockquote {
+      padding: 5rem 0;
+
+      @include desk {
+        border: none;
+        max-width: 320px;
+        margin-left: 29%;
+      }
+
+      .title {
+        font-size: 7.5rem;
+        color: alpha(color.$black, .3);
+        @include desk {
+          font-size: 10rem;
+        }
+      }
+    }
+
+    component-accordion {
+      .faq-header {
+        cursor: pointer;
+      }
+    }
+  }
+}

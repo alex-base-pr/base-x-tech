@@ -1,0 +1,352 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#service-hero {
+
+
+   min-height: 90vh;
+   @include desk {
+    min-height: auto;
+   }
+
+    .container {
+      height: 90vh;
+    }
+
+  .container {
+    @include desk {
+      height: 580px;
+    }
+  }
+
+  .section--hero-title {
+    @include desk {
+      font-size: 7.5rem;
+      line-height: 6.6rem;
+    }
+  }
+
+
+
+  .container .inner_content {
+    row-gap: 2.5rem;
+  }
+
+  .section--hero-subtitle {
+    font-family: font.$ultra-light-font;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon-set img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+#hero-banner {
+  min-height: 480px;
+  @include desk {
+    min-height: 810px;
+  }
+}
+
+#service-type-of-apps {
+  .card-title {
+    font-size: 1.5rem;
+    justify-self: baseline;
+  }
+
+  .cards .card-content header {
+    gap: 1.5rem;
+  }
+
+  .icon-set img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+  @include desk {
+    border-bottom: none;
+    padding-bottom: 0;
+
+
+    .inner {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+
+      > div {
+        grid-column: 1 / span 3;
+        padding-bottom: 2rem;
+      }
+    }
+
+    .section-header {
+      margin: unset;
+      padding: unset;
+      grid-column: 2 / span 2;
+      padding: 11.25rem 0 0rem 27%;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .cards-default {
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      .card {
+        position: relative;
+        margin: 0;
+        min-height: 331px;
+        width: 100%;
+
+
+        &-content {
+          padding: 1.5rem;
+          gap: 7rem;
+
+          p {
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+#service-advantages {
+  padding-bottom: 8rem;
+
+  @include desk {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .column-1 {
+    @include desk {
+      > div {
+        padding: 10rem 0 10rem 29%;
+      }
+
+      > header {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .cards {
+        .card {
+          cursor: pointer;
+
+          transition: opacity 0.2s ease-in-out;
+          opacity: 0.46;
+
+          &:hover {
+            opacity: 1;
+
+            .card-title {
+              &::after {
+               display: none;
+              }
+            }
+          }
+
+          header {
+            display: flex;
+            gap: 3rem;
+
+            .fig-rhombus {
+              position: relative;
+              top: 3px;
+            }
+          }
+
+          footer {
+            padding-left: 4rem;
+          }
+
+
+        }
+      }
+    }
+  }
+}
+
+#service-portfolio {
+  .section-works .section-header::after {
+    display: none;
+  }
+
+  &.section-works .article-1 main .cards {
+    margin: 0;
+  }
+
+  .cards .card-title {
+    justify-self: start;;
+  }
+
+  @include desk {
+    .section-header::after {
+      display: none;
+    }
+
+    .inner {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 33%;
+        background-color: rgba(250, 250, 250, 0.3);
+      }
+    }
+  }
+}
+
+#service-expertise {
+  .cards {
+    background-color: white;
+  }
+  .section {
+
+    &-subtitle {
+       @include desk {
+        margin: 0;
+       }
+    }
+
+    &-header {
+      @include desk {
+        &:after {
+          height: calc(100% + 2rem);
+        }
+      }
+    }
+  }
+
+  blockquote {
+    padding: 5rem 0;
+    border-top: 1px solid alpha(color.$black, .3);
+    border-bottom: 1px solid alpha(color.$black, .3);
+
+    @include desk {
+      border: none;
+      max-width: 320px;
+      margin-left: 29%;
+    }
+
+    .title {
+      font-size: 7.5rem;
+      color: alpha(color.$black, .3);
+      @include desk {
+        font-size: 10rem;
+      }
+    }
+  }
+}
+
+#service-faq {
+  .column-1 {
+    > div {
+      @include desk {
+        padding: 10rem 0 10rem 29%;
+      }
+    }
+  }
+  .stage {
+    display: inline-block;
+    font-family: font.$ultra-light-font;
+    text-transform: uppercase;
+    font-size: .75rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    @include desk {
+      font-size: 4rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  .section-subtitle {
+    margin-bottom: 2rem;
+  }
+
+  component-accordion {
+    [data-accordion-item] {
+      @include desk {
+        padding: 2rem 0 1.5rem;
+      }
+    }
+    .inner-content {
+      @include desk {
+        display: block;;
+      }
+    }
+
+    .toggle-button {
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem;
+
+        &::before {
+          width: 16px;
+          height: 2.5px;
+        }
+
+        &::after {
+          height: 16px;
+          width: 2.5px;
+        }
+
+      @include desk {
+        display: block;
+        width: 3rem;
+        height: 3rem;
+
+        &::before {
+          width: 15px;
+          height: 3px;
+        }
+
+        &::after {
+          height: 15px;
+          width: 3px;
+        }
+      }
+    }
+  }
+
+  .section-header {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid alpha(color.$black, .3);
+
+    @include desk {
+      height: 100%;
+      padding: 16.8rem 0;
+    }
+  }
+
+   .inner-content .inner {
+    padding-top: 1rem;
+   }
+
+    border-bottom: none;
+    padding-bottom: 2rem;
+}

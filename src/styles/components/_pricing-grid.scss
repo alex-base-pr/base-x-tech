@@ -39,18 +39,31 @@
         padding: 2rem 1rem;
         position: relative;
 
+        &:hover {
+          @include desk {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
         @include desk {
           padding: 4rem 6rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2rem;
 
-          &:first-child::before {
+          &::before {
             content: '';
             display: block;
             height: .5rem;
             background-color: color.$primary;
-            width: 100%;
+            width: 0%;
             position: absolute;
             top: 0;
             left: 0;
+            transition: width .2s;
           }
         }
 
@@ -98,6 +111,7 @@
           li {
             display: flex;
             column-gap: 1.313rem;
+            font-weight: 700;
           }
 
           .checkmark-icon {

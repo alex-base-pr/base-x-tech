@@ -2,25 +2,26 @@
 <html lang="en">
 <%- include('layout/head.ejs') %>
 <body>
+  <%- include('layout/noscript.ejs') %>
   <%- include('layout/header.ejs') %>
 
   <%- include('layout/drawer/nav.ejs') %>
   <%- include('layout/drawer/form.ejs') %>
 
+
+
     <main>
-      <section class="section section--hero" >
-        <div class="container">
-          <div class="inner_content grid-desk-2">
-            <div>
-              <h1 class="section--hero-title up"><span class="inner"><span class="highlight">Essential</span> design & development</span></h1>
-            </div>
-            <div class="block-stack one-half">
-              <p class="section--hero-description">We help eCommerce brands scale with automation, smart workflows, and cutting-edge design—reshaping fashion, lifestyle, and digital retail.</p>
-              <a class="btn btn--primary" data-form-trigger><span>Discuss a project</span><i arrow-right><span></span></i></a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <%-
+        include('layout/section/hero.ejs', {
+          locale: 'en',
+          id: "hero",
+          title: "<span class='highlight'>Essential</span>  design & development",
+          description: "We help eCommerce brands scale with automation, smart workflows, and cutting-edge design—reshaping fashion, lifestyle, and digital retail.",
+          button_text: "Discuss a project",
+          background_image: "/images/sections/hero/bg.jpg",
+          background_image_mob: "/images/sections/hero/bg-mob.jpg"
+        })
+      %>
 
       <section id="section-service" class="section section-service">
         <div class="container">

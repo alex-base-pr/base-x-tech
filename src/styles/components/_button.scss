@@ -170,6 +170,26 @@ $transition-duration: 0.3s;
       transition: color .15s ease;
     }
 
+    &.light-hover {
+      border: 1px solid color.$primary;
+      background-color: #fff;
+      &::before {
+        transform: translateY(50%) scaleY(2);
+      }
+
+      &.hover {
+        border: 1px solid color.$primary;
+        background-color: #fff;
+        &::before {
+          background-color: color.$primary;
+          transform: translateY(-100%)
+        }
+        span {
+          color: color.$black;
+        }
+      }
+    }
+
     &::before {
       content: '';
       position: absolute;

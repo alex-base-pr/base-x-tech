@@ -28,6 +28,7 @@
 @use 'components/scroller' as scroller;
 @use 'components/flickity' as flickity;
 @use 'components/carousel' as carousel;
+@use 'components/figures' as figures;
 
 @use 'components/pricing-grid' as pricing-grid;
 
@@ -49,6 +50,8 @@
 @use 'sections/cta' as section-cta;
 @use 'sections/page' as section-page;
 @use 'sections/content' as section-content;
+@use 'sections/hero-image' as section-hero-image;
+@use 'sections/split' as section-split;
 
 
 @use 'sections/timeline' as section-timeline;
@@ -56,3 +59,7 @@
 // Pages
 @use 'pages/home' as page-home;
 @use 'pages/shopify-development' as shopify-development;
+@use 'pages/service' as page-service;
+
+// Modifficators
+@use 'mod/gap' as mod-gap;

@@ -168,64 +168,64 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
 document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("toggle-button")) {
-      event.target.classList.toggle("active");
-      event.target.closest("article").classList.toggle("active");
+  const header = event.target.closest(".faq-header");
+  if (!header) return;
+
+  const article = header.closest("article");
+  if (!article) return;
+
+  const toggleButton = article.querySelector(".toggle-button");
+
+  article.classList.toggle("active");
+  article.dataset.accordionItem =
+    article.dataset.accordionItem === "visible" ? "hidden" : "visible";
+
+  if (toggleButton) {
+    toggleButton.classList.toggle("active");
+
   }
 });
 
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("faq-header")) {
-    let article = event.target.closest('article');
-    article.classList.toggle("active");
-    article.dataset.accordionItem = article.dataset.accordionItem === "visible" ? "hidden" : "visible";
-    article.querySelector(".toggle-button").classList.toggle("active");
-  }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', (e) => {
-      const toggleButton = e.target.closest('.toggle-button');
+  const carouselElem = document.querySelector('#reviews-carousel');
+  const prevBtn = document.querySelector('.slider-nav-btn.prev');
+  const nextBtn = document.querySelector('.slider-nav-btn.next');
 
-      if (toggleButton) {
-          const accordionItem = toggleButton.closest('article');
+  if(!carouselElem && !prevBtn && !nextBtn) return
 
-          if (accordionItem) {
-              const currentState = accordionItem.getAttribute('data-accordion-item');
+  const flkty = new Flickity(carouselElem, {
+    cellAlign: 'left',
+    contain: false,
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: false,
+    adaptiveHeight: true
+  });
 
-              if (currentState === 'visible') {
-                  accordionItem.setAttribute('data-accordion-item', 'hidden');
-              } else {
-                  accordionItem.setAttribute('data-accordion-item', 'visible');
-              }
-          }
-      }
+  const updateNavButtons = () => {
+    const selectedIndex = flkty.selectedIndex;
+    const lastIndex = flkty.slides.length - 1;
+
+    prevBtn.classList.toggle('disabled', selectedIndex === 0);
+    nextBtn.classList.toggle('disabled', selectedIndex === lastIndex);
+  };
+
+  updateNavButtons();
+
+  flkty.on('change', updateNavButtons);
+
+  prevBtn.addEventListener('click', () => {
+    flkty.previous();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    flkty.next();
   });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselElem = document.querySelector('#reviews-carousel');
-    const prevBtn = document.querySelector('.slider-nav-btn.prev');
-    const nextBtn = document.querySelector('.slider-nav-btn.next');
-
-    const flkty = new Flickity(carouselElem, {
-        cellAlign: 'left',
-        contain: true,
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true,
-        adaptiveHeight: true
-    });
-
-    prevBtn.addEventListener('click', () => {
-        flkty.previous();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        flkty.next();
-    });
-});
 
 
 document.addEventListener('DOMContentLoaded', () => {

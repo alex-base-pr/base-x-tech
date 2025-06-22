@@ -2,7 +2,9 @@
 <html lang="ua">
 <%- include('layout/head.ejs'), { locale: 'cyr'} %>
 <body class="locale-ua">
-  <%- include('layout/header.ejs') %>
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
   <%- include('layout/drawer/nav.ejs') %>
   <%- include('layout/drawer/form.ejs') %>
 
@@ -14,7 +16,8 @@
         title: "Розробка магазину на Shopify",
         subtitle: "Готові та кастомні рішення для вашого бізнесу",
         button_text: "обговорити проєкт",
-        background_image: "/images/pages/shopify-development/back.png"
+        background_image: "/images/pages/shopify-development/back.png",
+        background_image_mob: "/images/pages/shopify-development/back-mob.png"
       })
     %>
 
@@ -23,17 +26,17 @@
       id: "services",
       theme: "light",
       title: "Сервіс та технології",
-      subtitle: "основний спектр <span class='accent'>послуг</span>",
+      subtitle: "основний<br> спектр <br><span class='accent'>послуг</span>",
       cards: [
         {
           title: "Розробка на основі<br> готових тем Shopify",
           subtitle: "швидкий старт",
-          background_image: "/images/pages/shopify-development/section/info-1/card-1.png"
+          background_image: "/images/pages/shopify-development/section/info-1/card-2.png"
         },
         {
           title: "Розробка<br> індивідуальних тем",
           subtitle: "shopify під ключ",
-          background_image: "/images/pages/shopify-development/section/info-1/card-2.png"
+          background_image: "/images/pages/shopify-development/section/info-1/card-1.png"
         }
       ]
     }) %>
@@ -83,6 +86,7 @@
           text: "Website & app development",
           link: "https://getmo.us/",
           background_image: "/images/pages/shopify-development/section/works/mo-back.png",
+          background_image_mob: "/images/pages/shopify-development/section/works/mo-back-mob.png",
           icons: ['figma', 'shopify']
         },
         {
@@ -139,10 +143,16 @@
           avatar: "/images/pages/shopify-development/section/reviews/avatar-2.png"
         },
         {
-          text: "Base X Tech's approach was never one-size-fits-all—every part of the process felt personalized.",
-          name: "Hanna Korovianska",
-          post: "Business Assistant, Komanda",
-          avatar: "/images/pages/shopify-development/section/reviews/avatar-2.png"
+          text: "Base X Tech was structured, professional, and highly responsive.",
+          name: "Mike Yemchura",
+          post: "Founder, Figmatica",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-3.png"
+        },
+        {
+          text: "Base X's project management was efficient and professional.",
+          name: "Julia Yakusha",
+          post: "CMO, Codeska",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-4.png"
         }
       ]
     }) %>
@@ -206,7 +216,7 @@
       locale: "ua",
       theme: "dark",
       id: "timeline",
-      title: "<span class='accent'>Як</span> ми працюємо",
+      title: "<span class='accent'>Як</span> ми<br class='br-mob'> працюємо",
       subtitle: "Етапи",
       background_image: "/images/pages/shopify-development/section/timeline/back.png",
       background_image_mobile: "/images/pages/shopify-development/section/timeline/back-mob.png",
@@ -214,32 +224,32 @@
         {
           number: "1",
           title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          text: "<p>A. Визначаємо ваші потреби, розробляємо ідею рішення та презентуємо вам пропозицію.</p><p>B. Узгоджуємо з вами всі умови та укладаємо договір, щоб офіційно розпочати співпрацю.</p>"
         },
         {
           number: "2",
-          title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          title: "Ініціювання та планування проекту:",
+          text: "<p>A. Визначаємо детальний обсяг проекту, цілі, результатита критерії успіху.</p><p>B. Розробляємо комплексний план проекту, включаючи графік, ресурси, бюджет і ризики.</p>"
         },
         {
           number: "3",
-          title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          title: "ДИЗАЙН ТА РОЗРОБКА /ВПРОВАДЖЕННЯ",
+          text: "<p>A. Проектуємо та реалізуємо основне рішення відповідно до затвердженого плану.</p><p>B. Виконуємо завдання, керуючи прогресом, комунікацією та ресурсами.</p>"
         },
         {
           number: "4",
-          title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          title: "ЗАБЕЗПЕЧЕННЯ ЯКОСТІТА ТЕСТУВАННЯ",
+          text: "<p>A. Проводимо ретельне тестування для виявлення, відстеження та усунення дефектів.</p><p>B. Переконуємось, що результати відповідають узгодженим стандартам якості та вимогам.</p>"
         },
         {
           number: "5",
-          title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          title: "Передача проекту",
+          text: "<p>A. Готуємо, запускаємо рішеннята отримуємо ваше фінальне схвалення.</p><p>B. Формально передаємо всі результати, документацію та проводимо необхідне навчання.</p>"
         },
         {
           number: "6",
-          title: "Виявлення та пропозиція можливостей",
-          text: "<p>A. Визначити потреби клієнта, розробити концепцію рішеннята представити пропозицію.</p><p>B. Negotiate terms and secure the project contract/agreement.</p>"
+          title: "Супровід(ПІДТРИМКА ТА ЗАКРИТТЯ)",
+          text: "<p>A. Надаємо початкову підтримку після запуску та збираємо відгуки клієнта/команди.</p><p>B. Завершуємо фінальну документацію, звітність та офіційно закриваємо проєкт.</p>"
         }
       ]
     }) %>
@@ -247,7 +257,7 @@
     <%- include('layout/section/cta.ejs') %>
   </main>
 
-  <%- include('layout/footer.ejs') %>
+  <%- include('layout/footer-alt.ejs') %>
 
 
 

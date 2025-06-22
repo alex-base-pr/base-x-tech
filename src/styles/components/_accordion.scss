@@ -1,0 +1,161 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+component-accordion {
+  [data-accordion-item] {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid alpha(color.$grey, 0.3);
+    @include desk {
+      padding: 2rem 0;
+    }
+
+    .inner-content {
+      @include desk {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+
+      .inner {
+        padding-top: 2rem;
+        @include desk {
+          grid-column: 3 / span 1;
+        }
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+
+      .header-inner {
+        @include desk {
+          display: flex;
+          align-items: end;
+          gap: 1.5rem
+        }
+      }
+
+      .title {
+        margin: 0;
+        @include desk {
+          margin: 0;
+          font-size: 7.5rem;
+          line-height: 6rem;
+        }
+      }
+
+      .icon-set {
+        order: 2;
+        @include desk {
+          padding-bottom: .5rem;
+        }
+      }
+    }
+
+    .toggle-button {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid alpha(color.$black, 0.3);
+      border-radius: 50%;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+      top: -.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      @include desk {
+        height: 5.25rem;
+        width: 5.25rem;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #222;
+        transition: transform 0.3s ease;
+      }
+
+      &::before {
+        width: .75rem;
+        height: .125rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include desk {
+          width: 1.875rem;
+          height: .33rem;
+        }
+      }
+
+      &::after {
+        width: .125rem;
+        height: .75rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        transform-origin: center;
+        @include desk {
+          height: 1.875rem;
+          width: .33rem;
+        }
+      }
+
+      &.active::after {
+        transform: translate(-50%, -50%) rotate(90deg) scaleX(0);
+      }
+    }
+  }
+
+  // [data-accordion-item="hidden"]{
+  //   .inner-content {
+  //     display: none;
+  //   }
+  // }
+
+  .inner-content {
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  article[data-accordion-item="visible"] {
+      .inner-content {
+          height: auto;
+          opacity: 1;
+      }
+  }
+
+  article[data-accordion-item="hidden"] {
+      position: relative;
+      overflow: hidden;
+      .inner-content {
+          height: 0;
+          opacity: 0;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: calc(100% + 1.6rem);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        background-color: color.$black;
+        z-index: -1;
+        transform: translateY(100%);
+      }
+
+      &:hover {
+        cursor: pointer;
+
+      }
+  }
+}

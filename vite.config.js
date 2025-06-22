@@ -32,9 +32,9 @@ export default defineConfig({
     ViteEjsPlugin(jsonData),
     moveOutputPlugin(),
     ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 80 },
-      webp: { quality: 80 },
+      png: { quality: 90 },
+      jpeg: { quality: 90 },
+      webp: { quality: 90 },
     }),
   ],
   server: {

@@ -1,0 +1,26 @@
+<section
+  class="section section--hero <% if (
+      (typeof background_image === 'undefined' || !background_image) ||
+      (typeof background_image_mob === 'undefined' || !background_image_mob)
+    ) { %>fall-back-gradient<% } %>"
+  style="
+    <% if (typeof background_image !== 'undefined' && background_image) { %>
+      --background-image: url('<%= background_image %>');
+    <% } %>
+    <% if (typeof background_image_mob !== 'undefined' && background_image_mob) { %>
+      --background-image-mob: url('<%= background_image_mob %>');
+    <% } %>
+  "
+  >
+  <div class="container">
+    <div class="inner_content grid-desk-2">
+      <div>
+        <h1 class="section--hero-title up"><span class="inner"><span class="highlight">Essential</span> design & development</span></h1>
+      </div>
+      <div class="block-stack one-half">
+        <p class="section--hero-description">We help eCommerce brands scale with automation, smart workflows, and cutting-edge design—reshaping fashion, lifestyle, and digital retail.</p>
+        <a class="btn btn--primary" data-form-trigger><span>Discuss a project</span><i arrow-right><span></span></i></a>
+      </div>
+    </div>
+  </div>
+</section>

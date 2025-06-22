@@ -1,10 +1,18 @@
 <section
   id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
-	class="section section--hero <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>"
+	class="section section--hero <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %> <% if (
+      (typeof background_image === 'undefined' || !background_image) ||
+      (typeof background_image_mob === 'undefined' || !background_image_mob)
+    ) { %>fall-back-gradient<% } %>"
 
-	<% if (typeof background_image !== 'undefined' && background_image) { %>
-    style="background-image: url('<%= background_image %>');"
-  <% } %>
+	style="
+  <% if (typeof background_image !== 'undefined' && background_image) { %>
+      --background-image: url('<%= background_image %>');
+    <% } %>
+    <% if (typeof background_image_mob !== 'undefined' && background_image_mob) { %>
+      --background-image-mob: url('<%= background_image_mob %>');
+    <% } %>
+  "
 	>
 	<div class="container">
 		<div class="inner_content grid-desk-2">
@@ -13,7 +21,21 @@
 				<h1 class="section--hero-title up"><span class="inner"><%= title %></h1>
 			</div>
 			<div class="block-stack one-half">
-				<a class="btn btn--primary" data-form-trigger><span><%= button_text %></span><i arrow-right><span></span></i></a>
+        <% if (typeof button_text !== 'undefined' && button_text) { %>
+				  <a class="btn btn--primary" data-form-trigger><span><%= button_text %></span><i arrow-right><span></span></i></a>
+        <% } %>
+
+        <% if (typeof icons !== 'undefined' && icons) { %>
+          <ul class="icon-set gap-12">
+            <% icons.forEach(icon => { %>
+              <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-<%= icon %>.svg" alt="Shopify"></li>
+            <% }) %>
+          </ul>
+         <% } %>
+
+        <% if (typeof description !== 'undefined' && description) { %>
+				  <p class="section--hero-description"><%= description %></p>
+        <% } %>
 			</div>
 		</div>
 	</div>
