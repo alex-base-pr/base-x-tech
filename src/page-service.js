@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prevNextButtons: false,
         pageDots: true,
         wrapAround: false,
-        adaptiveHeight: true
+        adaptiveHeight: false
       },
       instance: null,
       responsive: true

@@ -87,24 +87,51 @@ document.body.addEventListener('click', (event) => {
 
 document.addEventListener('DOMContentLoaded', () => new DrawerManager(drawerConfig));
 
+
 // document.addEventListener('DOMContentLoaded', () => {
 //   const header = document.querySelector('.site-header');
-//   const scrollThreshold = 40;
+//   let lastScrollY = window.scrollY;
+//   let scrollUpDistance = 0;
+//   const scrollThreshold = 50;
+//   const offsetThreshold = 10;
+//   const throttleDelay = 25;
 
-//   function handleScroll() {
-//     if (window.scrollY >= scrollThreshold) {
-//       header.classList.add('in-scroll');
-//     } else {
+//   function checkTopPosition() {
+//     if (window.scrollY <= offsetThreshold && header.classList.contains('in-scroll')) {
 //       header.classList.remove('in-scroll');
+//       scrollUpDistance = 0;
 //     }
 //   }
 
-//   window.addEventListener('scroll', handleScroll);
+//   function handleScroll() {
+//     const currentScrollY = window.scrollY;
+
+//     if (currentScrollY > lastScrollY) {
+//       header.classList.remove('in-scroll');
+//       scrollUpDistance = 0;
+//     } else if (currentScrollY < lastScrollY) {
+//       scrollUpDistance += lastScrollY - currentScrollY;
+//       if (scrollUpDistance >= scrollThreshold) {
+//         header.classList.add('in-scroll');
+//       }
+//     }
+
+//     lastScrollY = currentScrollY;
+//   }
+
+//   const throttledHandleScroll = throttle(handleScroll, throttleDelay);
+
+//   window.addEventListener('scroll', throttledHandleScroll);
+//   window.addEventListener('scroll', checkTopPosition);
+
+//   checkTopPosition();
 //   handleScroll();
 // });
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
+  const trigger = document.querySelector('.trigger-submenu-1');
   let lastScrollY = window.scrollY;
   let scrollUpDistance = 0;
   const scrollThreshold = 50;
@@ -123,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (currentScrollY > lastScrollY) {
       header.classList.remove('in-scroll');
+      header.classList.remove('submenu-opened');
       scrollUpDistance = 0;
     } else if (currentScrollY < lastScrollY) {
       scrollUpDistance += lastScrollY - currentScrollY;
@@ -134,6 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScrollY = currentScrollY;
   }
 
+  function throttle(func, delay) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = new Date().getTime();
+      if (now - lastCall >= delay) {
+        lastCall = now;
+        func.apply(this, args);
+      }
+    };
+  }
+
   const throttledHandleScroll = throttle(handleScroll, throttleDelay);
 
   window.addEventListener('scroll', throttledHandleScroll);
@@ -141,7 +180,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   checkTopPosition();
   handleScroll();
+
+  if (trigger) {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      header.classList.add('in-scroll');
+      header.classList.add('submenu-opened');
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const isClickInside = header.contains(e.target);
+    const isOpened = header.classList.contains('submenu-opened');
+
+    if (!isClickInside && isOpened) {
+      header.classList.remove('submenu-opened');
+    }
+  });
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.btn--primary, .btn--dark');
