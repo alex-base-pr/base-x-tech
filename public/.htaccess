@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.base-xtech\.com [NC]
+RewriteRule ^(.*)$ https://base-xtech.com/$1 [L,R=301]
+
+RewriteCond %{THE_REQUEST} \s/index\.html [NC]
+RewriteRule ^index\.html$ https://base-xtech.com/ [L,R=301]
