@@ -38,10 +38,16 @@
 							</a>
 						</li>
 					</ul>
-					<small>UTC: +2</small>
+					<small class="lang-switcher-wrapper">
+            <span>UTC: +2</span>
+            <%- include('layout/component/lang-switcher.ejs') %>
+          </small>
 				</div>
 			</div>
 			<div class="inner nav">
+        <div class="lang-switcher-mobile">
+          <%- include('layout/component/lang-switcher-mobile.ejs') %>
+        </div>
 				<a href="#" class="support" data-form-trigger>
 					<img loading="lazy" fetchpriority="low" src="/images/header-support-icon.svg" alt="help">
 				</a>
@@ -57,9 +63,9 @@
     <div class="container">
       <div class="wr">
         <div class="desk-nav-menu--column">
-          <strong>Ecommerce</strong>
           <ul>
-            <li><a href="/pages/service/index.html">shopify custom app development</a></li>
+            <li><a href="/pages/shopify-development.html"><strong>Ecommerce</strong></a></li>
+            <li><a href="/pages/service/custom-shopify-app-development.html">shopify custom app development</a></li>
             <li><a href="/pages/service/shopify-headless-development.html">Headless shopify development</a></li>
             <li><a href="/pages/service/custom-shopify-integrations.html">Shopify integration</a></li>
             <li><a href="/pages/service/shopify-migration-service.html">Shopify Migration Service</a></li>
@@ -67,8 +73,8 @@
           </ul>
         </div>
         <div class="desk-nav-menu--column">
-          <strong class="up">Design</strong>
           <ul>
+            <li><strong class="up">Design</strong></li>
             <li><a href="/pages/service/custom-web-design-services.html">Web design</a></li>
             <li><a href="/pages/service/shopify-app-design-services.html">shopify app design</a></li>
             <li><a href="/pages/service/conversion-rate-optimization.html">conversion rate optimization</a></li>

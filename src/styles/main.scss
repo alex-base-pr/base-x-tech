@@ -10,6 +10,7 @@
 // Components
 @use 'components/link' as link;
 @use 'components/header' as header;
+@use 'components/lang-switcher' as lang-switcher;
 @use 'components/navburger' as navburger;
 @use 'components/navdrawer' as navdrawer;
 @use 'components/footer' as footer;
@@ -54,7 +55,7 @@
 @use 'sections/split' as section-split;
 
 
-@use 'sections/timeline' as section-timeline;
+
 
 // Pages
 @use 'pages/home' as page-home;
@@ -63,6 +64,8 @@
 @use 'pages/service-conversion-rate-optimization' as page-service-conversion-rate-optimization;
 @use 'pages/service-custom-shopify-integrations' as page-service-custom-shopify-integrations;
 @use 'pages/service-shopify-theme-customization' as page-service-shopify-theme-customization;
+
+@use 'sections/timeline' as section-timeline;
 
 // Modifficators
 @use 'mod/gap' as mod-gap;

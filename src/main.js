@@ -1,5 +1,6 @@
 import './component-accordion.js';
 import Flickity from 'flickity';
+import { LanguageSwitcher } from './language-switcher.js';
 
 function throttle(fn, delay) {
   let lastCall = 0;
@@ -11,6 +12,11 @@ function throttle(fn, delay) {
     }
   };
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  new LanguageSwitcher();
+});
 
 const drawerState = new Proxy({}, {
   set(target, prop, value) {
@@ -506,11 +512,50 @@ document.querySelectorAll('[data-collapse-trigger]').forEach(trigger => {
   });
 });
 
+(function () {
+  const langSwitcherLinks = document.querySelectorAll('.language-switcher [data-lang]');
+  const currentPath = window.location.pathname;
+  const savedLang = localStorage.getItem('preferredLang');
 
+  if (savedLang && !currentPath.startsWith('/uk') && savedLang === 'uk') {
+    const newPath = '/uk' + currentPath;
+    window.location.href = newPath;
+    return;
+  }
 
+  langSwitcherLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
 
+      const selectedLang = link.getAttribute('data-lang');
+      localStorage.setItem('preferredLang', selectedLang);
 
+      let targetPath = currentPath;
 
+      if (selectedLang === 'uk') {
+        if (!currentPath.startsWith('/uk')) {
+          targetPath = '/uk' + currentPath;
+        }
+      } else {
+        if (currentPath.startsWith('/uk')) {
+          targetPath = currentPath.replace(/^\/uk/, '') || '/';
+        }
+      }
 
+      targetPath = targetPath.replace(/\/{2,}/g, '/');
 
+      window.location.href = targetPath;
+    });
+  });
+})();
 
+document.addEventListener("DOMContentLoaded", function () {
+  var currentPath = window.location.pathname;
+  var menuLinks = document.querySelectorAll('.desk-nav-menu a, .drawer-nav--wrapper a');
+
+  menuLinks.forEach(function(link) {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+});

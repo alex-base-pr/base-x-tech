@@ -1,7 +1,7 @@
 import Flickity from 'flickity';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const breakpoint = 768;
+  const breakpoint = 1024;
 
   const carousels = [
     {
@@ -32,6 +32,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
+  function equalizeCardHeights(container) {
+    const cards = container.querySelectorAll('.card');
+    let maxHeight = 0;
+
+
+    cards.forEach(card => {
+      card.style.minHeight = 'initial';
+      const content = card.querySelector('.card-content');
+      if (content) {
+        content.style.height = 'auto';
+      }
+    });
+
+    cards.forEach(card => {
+      const content = card.querySelector('.card-content');
+      if (content) {
+        const height = content.getBoundingClientRect().height;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      }
+    });
+
+    cards.forEach(card => {
+      card.style.minHeight = `${maxHeight}px`;
+      const content = card.querySelector('.card-content');
+      if (content) {
+        content.style.height = '100%';
+      }
+    });
+  }
+
   function updateCarousels() {
     const isMobile = window.innerWidth < breakpoint;
 
@@ -44,17 +76,38 @@ document.addEventListener('DOMContentLoaded', () => {
       if (shouldInit && !carousel.instance) {
         if (carousel.selector === '#service-type-of-apps .cards' && isMobile) {
           const firstSlide = el.querySelector('.card');
-          console.log(firstSlide.parentElement)
-          firstSlide.parentElement.removeChild(firstSlide);
+          if (firstSlide) {
+            firstSlide.parentElement.removeChild(firstSlide);
+          }
         }
 
         carousel.instance = new Flickity(el, carousel.options);
 
+        requestAnimationFrame(() => {
+          equalizeCardHeights(el);
+          carousel.instance.resize();
+        });
       }
 
       if (!shouldInit && carousel.instance) {
         carousel.instance.destroy();
         carousel.instance = null;
+
+        const cards = el.querySelectorAll('.card');
+        cards.forEach(card => {
+          card.style.minHeight = 'initial';
+          const content = card.querySelector('.card-content');
+          if (content) {
+            content.style.height = 'auto';
+          }
+        });
+      }
+
+      if (shouldInit && carousel.instance) {
+        requestAnimationFrame(() => {
+          equalizeCardHeights(el);
+          carousel.instance.resize();
+        });
       }
     });
   }

@@ -9,6 +9,8 @@
     font-size: 4rem;
     line-height: 3.625rem;
     margin-bottom: 5rem;
+    overflow-wrap: break-word;
+
     @include desk {
       font-size: 5.25rem;
       line-height: 4.375rem;

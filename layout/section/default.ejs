@@ -5,11 +5,11 @@
   <div class="container">
     <div class="section-header">
       <% if (typeof subtitle !== 'undefined') { %>
-        <p class="section-subtitle"><%= subtitle %></p>
+        <h2 class="section-title"><%- title %></h2>
       <% } %>
 
       <% if (typeof title !== 'undefined') { %>
-        <h2 class="section-title"><%- title %></h2>
+        <h3 class="section-subtitle"><%- subtitle %></h3>
       <% } %>
     </div>
 
@@ -55,7 +55,10 @@
               </div>
 
               <div class="pricing-card--footer">
-                <a data-form-trigger class="btn <% if (typeof card.button.style !== 'undefined' && card.button.style){ %><%= card.button.style %><% } %>"><span>Отримати прорахунок</span></a>
+                <% if (card.button.text) { %>
+
+                <a data-form-trigger style="justify-content: center;" class="btn <% if (typeof card.button.style !== 'undefined' && card.button.style){ %><%= card.button.style %><% } %>"><span><%= card.button.text %></span></a>
+                <% } %>
               </div>
             </div>
           <% }) %>

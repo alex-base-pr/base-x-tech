@@ -348,12 +348,6 @@
 #timeline {
   background-size: cover;
 
-  .section-title {
-    @include desk {
-      font-size: 5.25rem;
-    }
-  }
-
   .section-subtitle {
     @include desk {
       line-height: 0;

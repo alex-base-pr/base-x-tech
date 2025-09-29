@@ -154,7 +154,7 @@ header {
 
     .grid-mob-custom {
       display: grid;
-      grid-template-columns: 1fr minmax(128px, 128px);
+      grid-template-columns: 1fr minmax(200px, 200px);
       align-items: center;
       @include desk {
         grid-template-columns: unset;
@@ -313,10 +313,29 @@ header.in-scroll .contact-ico:hover{
     font-size: 1.5rem;
     position: relative;
 
+    ul {
+      display: grid;
+      gap: .8rem;
+    }
+
+    strong {
+      display: block;
+      line-height: 1;
+    }
+
     a {
+      display: block;
+      line-height: 1;
       color: alpha(color.$black, 0.3);
       transition: color 0.2s ease-in-out;
+      strong {
+        color: color.$black;
+      }
       &:hover {
+        color: color.$primary;
+      }
+
+      &.active {
         color: color.$primary;
       }
     }
@@ -358,5 +377,15 @@ header.in-scroll .contact-ico:hover{
         background-color: color.$primary !important;
       }
     }
+  }
+}
+
+.drawer-nav--wrapper a.active {
+  color: color.$primary !important;
+}
+
+@media (max-width: 390px) {
+  header.site-header .inner-logo .logo-text{
+    display: none;
   }
 }
