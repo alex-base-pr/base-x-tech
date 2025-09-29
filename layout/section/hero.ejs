@@ -1,0 +1,32 @@
+<section
+  class="section section--hero <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %> <% if (
+      (typeof background_image === 'undefined' || !background_image) ||
+      (typeof background_image_mob === 'undefined' || !background_image_mob)
+    ) { %>fall-back-gradient<% } %>"
+  style="
+    <% if (typeof background_image !== 'undefined' && background_image) { %>
+      --background-image: url('<%= background_image %>');
+    <% } %>
+    <% if (typeof background_image_mob !== 'undefined' && background_image_mob) { %>
+      --background-image-mob: url('<%= background_image_mob %>');
+    <% } %>
+  "
+  >
+  <div class="container">
+    <div class="inner_content grid-desk-2">
+      <div>
+        <% if (typeof title !== 'undefined' && title) { %>
+          <h1 class="section--hero-title up"><span class="inner"><%- title %></h1>
+        <% } %>
+      </div>
+      <div class="block-stack one-half">
+        <% if (typeof description !== 'undefined' && description) { %>
+				  <p class="section--hero-description"><%= description %></p>
+        <% } %>
+        <% if (typeof button_text !== 'undefined' && button_text) { %>
+				  <a class="btn btn--primary" data-form-trigger><span><%= button_text %></span><i arrow-right><span></span></i></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>

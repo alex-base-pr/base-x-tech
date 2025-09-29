@@ -17,6 +17,7 @@
       [data-accordion-item] {
         padding: 1.5rem 0;
         border-bottom: 1px solid alpha(color.$grey, 0.3);
+
         @include desk {
           padding: 2rem 0;
         }
@@ -190,22 +191,24 @@
 
           &:hover {
             cursor: pointer;
-            &::after {
-              transform: translateY(0);
-            }
+            @include desk {
+              &::after {
+                transform: translateY(0);
+              }
 
-            header {
-              transform: scale(.95);
-            }
+              header {
+                transform: scale(.95);
+              }
 
-            .title {
-              color: color.$white;
-            }
+              .title {
+                color: color.$white;
+              }
 
-            .toggle-button {
-              border-color: color.$white;
-              &::before, &::after {
-                background-color: color.$white;
+              .toggle-button {
+                border-color: color.$white;
+                &::before, &::after {
+                  background-color: color.$white;
+                }
               }
             }
           }

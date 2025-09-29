@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ua">
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Дизайн | Розробка | Маркетинг",
+  description: "Веб-дизайн та розробка ➤ BaseX-Tech ⭐️ Ми створюємо рішення, які поєднують інновації, ефективність і реальний вплив на зростання бізнесу.",
+  hrefLangCode: "en",
+  hrefLangLink: "https://base-xtech.com/pages/service/shopify-app-design-services.html",
+  hreflangDefault: "https://base-xtech.com/uk/pages/service/shopify-app-design-services.html"
+}) %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt-ua.ejs') %>
+  <%- include('layout/drawer/nav-ua.ejs') %>
+  <%- include('layout/drawer/form-ua.ejs') %>
+
+  <main id="shopify-app-design-services" >
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'ua',
+        id: "service-hero",
+        title: "Дизайн Shopify аплікацій",
+        subtitle: "Дизайн, що резонує з вашим брендом",
+        description: "Ми створюємо інтуїтивні, адаптивні та візуально привабливі інтерфейси для Shopify аплікацій, забезпечуючи безперебійний користувацький досвід і відповідність вашій айдентиці.",
+        icons: [
+          "shopify",
+          "figma"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/hero-image.ejs', {
+        locale: 'en',
+        id: "hero-banner",
+        background_image: "/images/pages/service/index/hero/bg.png",
+        background_image_mob: "/images/pages/service/index/hero/bg-mob.png"
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "Послуги та технології",
+        subtitle: "Як ми створюємо <br><span class='accent'>дизайн <br>Shopify <br>аплікацій</span>",
+        cards: [
+          {
+            title: "Орієнтований на користувача інтерфейс",
+            description: "Розробляємо зручні та доступні інтерфейси, які ставлять користувача в центр уваги. Забезпечуємо просту навігацію і плавні взаємодії для залучення, конверсії та утримання клієнтів.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Персоналізована розробка UI і UX",
+            description: "Наша команда розробляє індивідуальні користувацькі сценарії, які бездоганно інтегруються в екосистему Shopify. Ми поєднуємо креативність і зручність, створюючи застосунки, що працюють швидко, зрозуміло і допомагають користувачам виконувати завдання з мінімальними зусиллями.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Візуальна айдентика та брендінг аплікацій",
+            description: "Ми створюємо цілісну візуальну айдентику для вашого додатку, включно з іконками, кольорами, шрифтами, стилями кнопок та загальною естетикою. Забезпечуємо, щоб ваш додаток відображав образ бренду та був органічно інтегрований у ваш магазин.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Адаптивний та оптимізований під мобільні пристрої дизайн",
+            description: "Створюємо мобільно-орієнтовані, але повністю адаптивні додатки для десктопів, планшетів і смартфонів. Перевіряємо роботу на різних пристроях, щоб забезпечити якість і стабільність.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Проектування, прототипування, тестування",
+            description: "Ми створюємо логічний користувацький флоу та детальні вайрфрейми перед розробкою інтерактивних прототипів. Ви маєте змогу протестувати кожен аспект індивідуального дизайну додатку Shopify до початку розробки, що дозволяє заощадити час і уникнути дорогих правок у подальшому.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Супровід дизайну після запуску",
+            description: "Запуск — це лише початок. Ми підтримуємо ваш додаток, додаємо нові можливості і покращуємо UX, щоб він залишався привабливим і зручним для користувачів.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          }
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-advantages",
+        title: "Переваги",
+        subtitle: "<span class='accent'>Чому обирають</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Дизайн, який сприяє розвитку бізнесу",
+            description: "Ми виходимо за межі просто гарної картинки. Кожен екран, іконка та користувацький флоу, які ми створюємо, мають чітку бізнес-мету: підвищення конверсій, збільшення утримання клієнтів і спрощення взаємодії з покупцями."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Ніяких посередників",
+            description: "Ваш проєкт завжди залишається у наших руках. Ми гарантуємо прямий контакт з дизайнерами, безперервну співпрацю та швидке виконання завдань з повною відповідальністю."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Гнучкий підхід із тісною взаємодією",
+            description: "Ми підлаштовуємо процес роботи під ваші вимоги. Гнучкий процес включає часті перевірки, повторні ітерації дизайну та оновлення на кожному ключовому етапі, щоб підтримувати повне порозуміння."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Shopify Експерти",
+            description: "Ми проєктуємо додатки, які бездоганно інтегруються у Shopify. Знаємо всі особливості платформи, що гарантує надійну роботу та можливість масштабування вашого додатку."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Чесність і прозорість",
+            description: "Прозорі терміни, фіксована вартість і чесна комунікація. Ви отримуєте передбачувані результати без сюрпризів на кожному етапі."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'ua',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "Портфоліо",
+      subtitle: "<span class='hide-desk'>Наші проекти</span><span class='hide-mob'>Фундамент<br> ефективного <br>цифрового <br>досвіду</span>",
+      description: "Портфоліо брендів, яким ми допомогли зростати завдяки стратегії, дизайну та технологіям. Кожен проєкт — це доказ нашої відданості у створенні стійкого цифрового досвіду.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Дизайн та розробка на Shopify для технологічного стартапу",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Айдентика бренду та редизайн e-commerce у сфері здоров'я",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Налаштування та кастомізація Shopify магазину для fashion-бренду",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-expertise",
+        title: "Досвід",
+        subtitle: "Досвід роботи <br><span class='accent'>в ключових <br class='br-mob'>галузях</span>",
+        description: "<h2 class='title up'>10</h2><p>Ми працювали в 10 галузях та досягли кращих результатів для клієнтів</p>",
+        media_cards: [
+          {
+            title: "Фешн",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "Краса",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "авто",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Їжа та напої",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Ювелірні вироби та розкіш",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Меблі та декор",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Здоров'я та харчові добавки",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Сумки та аксесуари",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Технології та гаджети",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Спорт та стиль життя",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'ua',
+        id: 'service-faq',
+        title: 'етапи роботи',
+        subtitle: '<span class="accent">Як працює</span><br> at Base-X-Tech',
+        button: {
+          text: "Обговорити проект"
+        },
+        faq: [
+          {
+            title: "Оцінка і стратегічне планування додатку",
+            description: "Вивчаємо ваші цілі, бізнес-процеси і цільову аудиторію. Формуємо технічні та дизайнерські вимоги для успішної реалізації вашого додатку."
+          },
+          {
+            title: "Створення вайрфреймів і планування користувацького флоу",
+            description: "Команда формує структуровані вайрфрейми та детальні сценарії користувача. Кожен екран і взаємодія розроблені логічно, інтуїтивно та з урахуванням основних функцій додатку."
+          },
+          {
+            title: "Дизайн інтерфейсу та прототипування",
+            description: "Створюємо деталізовані брендовані макети і інтерактивні прототипи. Ви маєте змогу протестувати і затвердити дизайн ще до написання коду, щоб гарантувати відповідність вашим очікуванням."
+          },
+          {
+            title: "Підтримка після передачі проєкту",
+            description: "Після погодження надаємо всі дизайн-матеріали, технічні вимоги та дизайн-системи для розробки. Продовжуємо підтримувати вашу команду розробників і сприяємо покращенню додатку після запуску."
+          }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/approach-ua.ejs') -%>
+
+    <%- include('layout/section/cta-uk.ejs') %>
+  </main>
+
+  <%- include('layout/footer-ua.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#services-shopify-theme-customization-and-development {
+  .section--hero-title {
+    font-size: 4.5rem;
+    line-height: 4.125rem;
+    @include desk {
+      font-size: 7.5rem;
+      line-height: 6.6rem;
+    }
+  }
+}

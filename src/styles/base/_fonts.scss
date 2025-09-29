@@ -34,6 +34,49 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Druk';
+  src: url('/fonts/Druk.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderustic';
+  src: url('/fonts/Moderustic-Regular.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderustic';
+  src: url('/fonts/Moderustic-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderustic';
+  src: url('/fonts/Moderustic-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk';
+  src: url('/fonts/Druk.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 $body-font: 'TWKEverett', sans-serif;
 $heading-font: 'Thunder', sans-serif;
 $ultra-light-font: 'PPEditorialNew', sans-serif;
+
+$body-font-cyr: 'Moderustic', sans-serif;
+$heading-font-cyr: 'Druk', sans-serif;

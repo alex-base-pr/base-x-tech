@@ -1,0 +1,47 @@
+<section
+  id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
+  class="section section-split <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
+  <div class="container">
+    <% if (typeof title !== 'undefined' && title) { %>
+      <div class="inner column-1">
+        <header class="section-header">
+          <% if (typeof title !== 'undefined' && title) { %>
+            <h2 class="section-title alt up"><%= title %></h2>
+          <% } %>
+          <% if (typeof subtitle !== 'undefined' && subtitle) { %>
+            <h3 class="section-subtitle up"><%- subtitle %></h3>
+          <% } %>
+          <% if (typeof button !== 'undefined' && button) { %>
+            <a class="btn btn--dark" data-form-trigger=""><span><%- button.text %></span><i arrow-right=""><span></span></i></a>
+          <% } %>
+        </header>
+        <div>
+          <% if (typeof faq !== 'undefined' && Array.isArray(faq) && faq.length > 0) { %>
+            <component-accordion>
+              <% faq.forEach((item, index) => { %>
+                <article data-accordion-item="<% if (index === 0) { %>visible<% } else { %>hidden<% } %>">
+                  <header class="faq-header">
+                    <div class="header-inner">
+                      <div>
+                        <span class="stage">Stage <%= index + 1 %></span>
+                        <h3 class="title up"><%- item.title %></h3>
+                      </div>
+                    </div>
+                    <button class="toggle-button <% if (index === 0) { %>active<% } %>"></button>
+                  </header>
+                  <div class="inner-content">
+                    <div class="inner">
+                      <main class="description">
+                        <p><%- item.description %></p>
+                      </main>
+                    </div>
+                  </div>
+                </article>
+              <% }) %>
+            </component-accordion>
+          <% } %>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>

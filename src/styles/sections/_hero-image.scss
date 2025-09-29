@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &--hero-image {
+    background-image: var(--background-image-mob, var(--background-image));
+    background-size: cover;
+    background-position: top center;
+
+    @include desk {
+      background-image: var(--background-image, var(--background-image-mob));
+    }
+  }
+}

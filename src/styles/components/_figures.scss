@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.fig {
+  &-rhombus {
+    display: flex;
+     @include box(1rem, 1rem);
+     background-color: color.$black;
+     transform: rotate(45deg);
+  }
+}

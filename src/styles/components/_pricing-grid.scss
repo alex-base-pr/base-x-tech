@@ -1,0 +1,131 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+.section {
+  &-default {
+    padding-top: 7.375rem;
+    padding-bottom: 4rem;
+
+    .section {
+      &-header {
+        text-align: center;
+        margin-bottom: 5rem;
+      }
+
+      &-title {
+        font-size: .75rem;
+        text-transform: uppercase;
+      }
+
+      &-subtitle {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin:0;
+      }
+    }
+
+    .pricing {
+      &-grid {
+        display: grid;
+        gap: 2rem;
+
+        @include desk {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      &-card {
+        border: 1px solid alpha(color.$black, 0.3);
+        padding: 2rem 1rem;
+        position: relative;
+
+        &:hover {
+          @include desk {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+
+        @include desk {
+          padding: 4rem 6rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2rem;
+
+          &::before {
+            content: '';
+            display: block;
+            height: .5rem;
+            background-color: color.$primary;
+            width: 0%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width .2s;
+          }
+        }
+
+        &--number {
+          @include box(3rem, 3rem);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: color.$black;
+          color: color.$white;
+          border-radius: 50%;
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 2rem;
+        }
+
+        &--title {
+          text-transform: uppercase;
+          font-size: 2rem;
+          margin-bottom: 3.75rem;
+        }
+
+        &--duration {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 1.75rem;
+        }
+
+        &--description {
+          margin-bottom: 3.75rem;
+        }
+
+        &--list {
+          display: grid;
+          row-gap: .75rem;
+          margin-bottom: 2rem;
+
+          &-title {
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+          }
+
+          li {
+            display: flex;
+            column-gap: 1.313rem;
+            font-weight: 700;
+          }
+
+          .checkmark-icon {
+            display: flex;
+            @include box(.75rem, .75rem);
+            min-width: .75rem;
+            background-color: color.$primary;
+            transform: rotate(45deg);
+            position: relative;
+            top: .1em;
+          }
+        }
+      }
+    }
+
+  }
+}
