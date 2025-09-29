@@ -1,0 +1,21 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#custom-shopify-integrations {
+  #service-hero {
+    height: 100vh;
+
+    @include desk {
+      max-height: 810px;
+    }
+
+    .container {
+      height: 100vh;
+      max-height: 810px;
+      @include desk {
+        min-height: 810px;
+      }
+    }
+  }
+}

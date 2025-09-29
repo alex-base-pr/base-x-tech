@@ -1,0 +1,99 @@
+<section
+  id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
+  class="section section-split <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
+  <div class="container">
+    <% if (typeof title !== 'undefined' && title) { %>
+      <div class="inner column-1">
+        <header class="section-header">
+          <% if (typeof title !== 'undefined' && title) { %>
+            <h2 class="section-title alt up"><%= title %></h2>
+          <% } %>
+          <% if (typeof subtitle !== 'undefined' && subtitle) { %>
+            <h3 class="section-subtitle up"><%- subtitle %></h3>
+          <% } %>
+        </header>
+        <div>
+          <% if (typeof description !== 'undefined' && description) { %>
+            <blockquote>
+               <%- description %>
+            </blockquote>
+          <% } %>
+          <% if (typeof cards !== 'undefined' && Array.isArray(cards) && cards.length > 0) { %>
+            <div class="cards cards-default">
+              <% cards.forEach(card => { %>
+                <div class="card">
+                  <% if (typeof card.background_image !== 'undefined' && card.background_image) { %>
+                    <img loading="lazy" fetchpriority="low" src="<%- card.background_image %>" alt="" class="card-background">
+                  <% } %>
+                  <div class="card-content">
+                    <header>
+                      <% if (typeof card.title !== 'undefined' && card.title) { %>
+                        <ul class="icon-set">
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-shopify.svg" alt="Shopify"></li>
+                        </ul>
+                      <% } %>
+                      <% if (typeof card.title !== 'undefined' && card.title) { %>
+                        <h4 class="card-title up"><%- card.title %></h4>
+                      <% } %>
+                    </header>
+                    <footer>
+                      <% if (typeof card.description !== 'undefined' && card.description) { %>
+                        <p><%- card.description %></p>
+                      <% } %>
+                    </footer>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+
+          <% if (typeof content_cards !== 'undefined' && Array.isArray(content_cards) && content_cards.length > 0) { %>
+            <div class="cards cards-content">
+              <% content_cards.forEach(card => { %>
+                <div class="card">
+                  <div class="card-content">
+                    <header>
+                      <% if (typeof card.title !== 'undefined' && card.title) { %>
+                        <%- card.subtitle %>
+                      <% } %>
+                      <% if (typeof card.title !== 'undefined' && card.title) { %>
+                        <h4 class="card-title up"><%- card.title %></h4>
+                      <% } %>
+                    </header>
+                    <footer>
+                      <% if (typeof card.description !== 'undefined' && card.description) { %>
+                        <p><%- card.description %></p>
+                      <% } %>
+                    </footer>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+          </div>
+      </div>
+      <div class="inner column-2">
+        <% if (typeof media_cards !== 'undefined' && Array.isArray(media_cards) && media_cards.length > 0) { %>
+            <div class="cards cards-media">
+              <% media_cards.forEach(card => { %>
+                <div class="card">
+                  <div class="card-content">
+                    <header>
+                      <% if (typeof card.image !== 'undefined' && card.image) { %>
+                        <img loading="lazy" width="359" height="431" fetchpriority="low" src="<%- card.image %>" alt="" class="card-image">
+                      <% } %>
+                    </header>
+                    <footer>
+                      <% if (typeof card.title !== 'undefined' && card.title) { %>
+                        <h4 class="card-title"><%- card.title %></h4>
+                      <% } %>
+                    </footer>
+                  </div>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+      </div>
+    <% } %>
+  </div>
+</section>

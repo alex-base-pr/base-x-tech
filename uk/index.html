@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="uk">
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Дизайн | Розробка | Маркетинг",
+  description: "Веб-дизайн та розробка ➤ BaseX-Tech ⭐️ Ми створюємо рішення, які поєднують інновації, ефективність і реальний вплив на зростання бізнесу.",
+  hrefLangCode: "en",
+  hrefLangLink: "https://base-xtech.com/index.html",
+  hreflangDefault: "https://base-xtech.com/uk/index.html"
+}) %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+  <%- include('layout/header-alt-ua.ejs') %>
+
+  <%- include('layout/drawer/nav-ua.ejs') %>
+  <%- include('layout/drawer/form-ua.ejs') %>
+
+
+
+    <main>
+      <%-
+        include('layout/section/hero.ejs', {
+          locale: 'ua',
+          id: "hero",
+          title: "<span class='highlight'>Базовий дизайн</span>  та розробка",
+          description: "Ми допомагаємо eCommerce-брендам масштабуватися завдяки автоматизації, розумним процесам і сучасному дизайну — переосмислюючи моду, стиль життя та цифровий ритейл.",
+          button_text: "Обговорити проект",
+          background_image: "/images/sections/hero/bg.jpg",
+          background_image_mob: "/images/sections/hero/bg-mob.jpg"
+        })
+      %>
+
+      <section id="section-service" class="section section-service locale-ua">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-title alt up">Сервіси</h2>
+          </header>
+          <component-accordion>
+            <article data-accordion-item="visible">
+              <header class="faq-header">
+                <div class="header-inner">
+                  <ul class="icon-set">
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-shopify.svg" alt="Shopify"></li>
+                  </ul>
+                  <div>
+                    <h3 class="title up">ecommerce</h3>
+                  </div>
+                </div>
+                <button class="toggle-button active"></button>
+              </header>
+              <div class="inner-content">
+                <div class="inner">
+                  <main class="description">
+                    <p>Ми створюємо бездоганні, високопродуктивні онлайн-магазини, де стратегія, дизайн і технології сприяють зростанню.</p>
+                  </main>
+                  <footer>
+                    <ul class="tag-set">
+                      <li class="tag">Shopify</li>
+                      <li class="tag">Headless</li>
+                      <li class="tag">Customization</li>
+                      <li class="tag">API</li>
+                      <li class="tag">Theme Store</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </article>
+            <article data-accordion-item="hidden">
+              <header class="faq-header">
+                <div class="header-inner">
+                  <ul class="icon-set">
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-figma.svg" alt="Figrm"></li>
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-ai.svg" alt="Adobe Illustrator"></li>
+                  </ul>
+                  <div>
+                    <h3 class="title up">веб дизайн та айдентика</h3>
+                  </div>
+                </div>
+                <button class="toggle-button"></button>
+              </header>
+              <div class="inner-content">
+                <div class="inner">
+                  <main class="description">
+                    <p>Ми створюємо бездоганні, високопродуктивні онлайн-магазини, де стратегія, дизайн і технології сприяють зростанню.</p>
+                  </main>
+                  <footer>
+                    <ul class="tag-set">
+                      <li class="tag">UI/UX</li>
+                      <li class="tag">Branding</li>
+                      <li class="tag">Landing Page</li>
+                      <li class="tag">Web Design</li>
+                      <li class="tag">Logo</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </article>
+            <article data-accordion-item="hidden">
+              <header class="faq-header">
+                <div class="header-inner">
+                  <ul class="icon-set">
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-git.svg" alt="Github"></li>
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-js.svg" alt="JS"></li>
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-react.svg" alt="React"></li>
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-next.svg" alt="NexJs"></li>
+                    <li><img loading="lazy" fetchpriority="low" src="/images/sections/service/icon-graph.svg" alt="GraphQl"></li>
+                  </ul>
+                  <div>
+                    <h3 class="title up">Розробка</h3>
+                  </div>
+                </div>
+                <button class="toggle-button"></button>
+              </header>
+              <div class="inner-content">
+                <div class="inner">
+                  <main class="description">
+                    <p>Ми створюємо надійні, високопродуктивні веб-рішення, де технології, функціональність та інновації рухають прогрес уперед.</p>
+                  </main>
+                  <footer>
+                    <ul class="tag-set">
+                      <li class="tag">React</li>
+                      <li class="tag">Next.js</li>
+                      <li class="tag">Node.js</li>
+                      <li class="tag">SQL</li>
+                      <li class="tag">GraphQL</li>
+                      <li class="tag">Javascript</li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </article>
+          </component-accordion>
+        </div>
+      </section>
+
+      <section id="section-works" class="section section-works locale-ua">
+        <div class="container">
+          <div class="inner">
+            <header class="section-header">
+              <h2 class="section-title alt up">Портфоліо</h2>
+              <h3 class="section-subtitle up">Основи<br desk> ефективного <br desk>Цифрового <br desk>Досвіду</h3>
+            </header>
+            <blockquote>
+              <h2 class="title up">40+</h2>
+              <p>Портфоліо брендів, яким ми допомогли зростати завдяки стратегії, дизайну та технологіям. Кожен проєкт — це доказ нашої відданості у створенні стійкого цифрового досвіду.</p>
+            </blockquote>
+          </div>
+
+          <article class="article-1">
+            <main>
+              <ul class="cards">
+                <li class="card">
+                  <a href="https://naya.tech/" target="_blank">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/works/card-1-bg.png" alt="Naya Tech" class="card-background">
+                    <div class="card-content">
+                      <header>
+                        <h4 class="card-title up">Naya Tech</h4>
+                        <ul class="icon-set">
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-shopify.svg" alt="Shopify"></li>
+                        </ul>
+                      </header>
+                      <footer>
+                        <p>Розробка магазину на Shopify для технологічного стартапу</p>
+                      </footer>
+                    </div>
+                  </a>
+                </li>
+                <li class="card">
+                  <a href="https://bonkind.com/" target="_blank">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/works/card-2-bg.png" alt="bonkind" class="card-background">
+                    <div class="card-content">
+                      <header>
+                        <h4 class="card-title up">bonkind</h4>
+                        <ul class="icon-set">
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-figma.svg" alt="Shopify"></li>
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-ai.svg" alt="Shopify"></li>
+                        </ul>
+                      </header>
+                      <footer>
+                        <p>Айдентика бренду та редизайн eCommerce-платформи у сфері самодогляду</p>
+                      </footer>
+                    </div>
+                  </a>
+                </li>
+                <li class="card">
+                  <a href="https://ua.klottclothes.com/" target="_blank">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/works/card-3-bg.png" alt="acronym gmbh" class="card-background">
+                    <div class="card-content">
+                      <header>
+                        <h4 class="card-title up">klott</h4>
+                        <ul class="icon-set">
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-git.svg" alt="Shopify"></li>
+                          <li><img loading="lazy" fetchpriority="low" src="/images/sections/works/icon-shopify.svg" alt="Shopify"></li>
+                        </ul>
+                      </header>
+                      <footer>
+                        <p>Дизайн і розробка на Shopify для fashion-бренду</p>
+                      </footer>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </main>
+          </article>
+        </div>
+      </section>
+
+      <section id="section-team" class="section section-team locale-ua" >
+        <div class="container">
+          <div class="inner">
+            <header class="section-header">
+              <h2 class="section-title alt up">Команда</h2>
+              <h3 class="section-subtitle up gradient">Фахівці, <br>що втілюють <br>ваше бачення</h3>
+            </header>
+            <blockquote>
+              <header>
+                <h2 class="title up">20+</h2>
+                <p class="description">Дизайнери, розробники та стратеги, які допомагають брендам зростати через продумані цифрові рішення.</p>
+              </header>
+              <main>
+                <nav class="slider-nav">
+                  <ul class="inline-stack">
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png">
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png">
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-3.png">
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-4.png">
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-5.png">
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button class="slider-nav-btn">
+                        <div class="avatar" style="--avatar-size: 64px;">
+                          <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-6.png">
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
+              </main>
+            </blockquote>
+          </div>
+          <main style="display: none;">
+            <article class="article-1">
+              <main>
+                <ul class="cards">
+                  <li class="card">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/card-1-bg.png" alt="Vadym Yarmak" class="card-background">
+                    <div class="card-content">
+                      <header>
+                        <h4 class="card-title up">Вадим Ярмак <strong>Провідний дизайнер</strong></h4>
+                      </header>
+                      <footer>
+                        <p>Кожне дизайнерське рішення має не лише добре виглядати, а й вирішувати конкретні проблеми користувача. Я створюю зрозумілі інтерфейси, де естетика працює на зручність.</p>
+                      </footer>
+                    </div>
+                  </li>
+                </ul>
+              </main>
+            </article>
+          </main>
+        </div>
+      </section>
+
+      <section id="section-numbers" class="section section-numbers locale-ua">
+        <div class="container">
+          <div class="inner">
+            <header class="section-header">
+              <h2 class="section-title alt up">BaseX в цифрах</h2>
+            </header>
+            <blockquote class="block-stack" style="--gap:1.5rem">
+              <h3 class="title up">Ми — BASE X TECH, агенція з вебдизайну та розробки, що базується в Києві, Україна. Ми проєктуємо, розробляємо та впроваджуємо інновації, ефективність, розвиток і вплив.</h3>
+              <a class="btn btn--primary" data-form-trigger><span>обговорити проєкт</span><i arrow-right><span></span></i></a>
+            </blockquote>
+          </div>
+
+          <main>
+            <ul class="cards block-stack" style="--gap: 1rem">
+              <li class="card" style="--bg-color: #81A13F">
+                <h4 class="card-title def">Відгуки на Upwork</h4>
+                <p class="number">4.8*</p>
+              </li>
+              <li class="card" style="--bg-color: #676767">
+                <h4 class="card-title def">Счастливих Клієнтів</h4>
+                <p class="number">60+</p>
+              </li>
+              <li class="card" style="--bg-color: #FFF; --color: #1D1E20">
+                <h4 class="card-title def">Успішних Кейсів</h4>
+                <p class="number">100+</p>
+              </li>
+            </ul>
+          </main>
+        </div>
+      </section>
+
+      <section id="section-reviews" class="section section-reviews locale-ua">
+        <div class="container">
+          <div class="inner">
+          <header class="section-header">
+            <h2 class="section-title alt up">Відгуки</h2>
+            <h3 class="section-subtitle up gradient">З довірою <br>від наших партнерів</h3>
+            <div class="section-reviews--badges">
+              <ul>
+                <li>
+                  <div class="section-reviews--badge">
+                    <a href="https://www.upwork.com/agencies/base/" target="_blank">
+                      <img src="/images/sections/reviews/badge-upwork.png" alt="Upwork">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="section-reviews--badge">
+                    <a href="https://clutch.co/profile/base-x-tech " target="_blank">
+                      <img src="/images/sections/reviews/badge-clutch.png" alt="Clutch">
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div class="section-reviews--badge">
+                    <a href="#" target="_blank">
+                      <img src="/images/sections/reviews/badge-design-rush.png" alt="Designrush">
+                    </a>
+                  </div>
+                </li>
+                <li class="goodfirms-badge-wr">
+                  <div class="section-reviews--badge goodfirm-widget" data-widget-type="goodfirms-widget-t6" data-widget-pattern="star-no-review" data-height="100" data-company-id="171088"></div>
+                </li>
+                <li class="sortlist-badge-wr">
+                  <div class="section-reviews--badge sortlist-badge"></div>
+                </li>
+
+
+              </ul>
+            </div>
+          </header>
+          <main class="section-content block-stack" style="--gap:2.125rem">
+            <div class="carousel" id="reviews-carousel">
+              <blockquote class="block-stack" style="--gap:2rem">
+                <header>
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/reviews/avatar-1.png" alt="Stealth Startup US">
+                  </div>
+                </header>
+                <main>
+                  <p>"Їхня команда створила Shopify-магазин без помилок, що призвів до зростання конверсій. Base X ефективно комунікувала та чітко дотримувалася погоджених термінів упродовж усього проєкту. Крім того, команда оперативно реагувала на наші запити та продемонструвала відмінну увагу до деталей."</p>
+                </main>
+                <footer class="block-stack" style="--gap: .3rem;">
+                  <h4 class="title def">Stealth Startup US</h4>
+                  <p class="subtitle">-</p>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap:2rem">
+                <header>
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/reviews/avatar-2.png" alt="Stealth Startup US">
+                  </div>
+                </header>
+                <main>
+                  <p>"Ми отримали позитивні відгуки від клієнтів про новий сайт,
+який був повністю функціональним і повністю відповідав нашим очікуванням та унікальним потребам.
+Команда Base X продемонструвала чудову увагу до деталей, швидко реагувала на наші запити та оперативно вносила зміни до проєкту.
+"</p>
+                </main>
+                <footer class="block-stack" style="--gap: .3rem;">
+                  <h4 class="title def">Stealth Startup EU</h4>
+                  <p class="subtitle">-</p>
+                </footer>
+              </blockquote>
+
+            </div>
+            <nav class="slider-nav inline-stack" style="--gap:.75rem">
+              <button class="slider-nav-btn prev">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.60222 10.325H17.4805V7.67503H5.60222L10.8912 2.38578L8.99997 0.519531L0.519472 9.00003L8.99997 17.4805L10.8912 15.6143L5.60222 10.325Z" fill="black"/>
+                </svg>
+              </button>
+              <button class="slider-nav-btn next">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.3978 10.325H0.519531V7.67503H12.3978L7.10878 2.38578L9.00003 0.519531L17.4805 9.00003L9.00003 17.4805L7.10878 15.6143L12.3978 10.325Z" fill="black"/>
+                </svg>
+              </button>
+            </nav>
+          </main>
+          </div>
+        </div>
+      </section>
+
+      <section id="section-approach" class="section section-approach locale-ua">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Підхід</h2>
+              <h3 class="section-subtitle up">ми працюємо <br>в межах вашого <br>бюджету</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Занурення</h4>
+                  <p class="description">Ми прагнемо створювати нові рішення, що розширюють межі можливого, допомагаючи вашому бізнесу залишатися на крок попереду.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Анастасія Гудима</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Прозорість</h4>
+                  <p class="description">Ми віримо в повну прозорість на кожному етапі проєкту, забезпечуючи вам чіткість і впевненість для прийняття рішень.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Вадим Гула</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Якість</h4>
+                  <p class="description">Досконалість пронизує все, що ми робимо — від початкової ідеї до фінальної реалізації, щоб втілити ваше бачення з точністю та турботою.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Вадим Ярмак</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Запис на дзвінок</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+      <%- include('layout/section/cta-uk.ejs') %>
+
+    </main>
+
+    <%- include('layout/footer-ua.ejs') %>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BaseX-Tech Landing Page</title>
-    <link rel="stylesheet" href="src/styles/main.scss" />
-    <link rel="preload" href="images/sections/bg-mob.jpg" as="image" fetchpriority="high">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-</head>
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Design | Development | Marketing",
+  description: "Web design and development agency ➤ BaseX-Tech ⭐️ We create solutions that combine innovation, efficiency, and real impact on business growth.",
+  hrefLangCode: "uk",
+  hrefLangLink: "https://base-xtech.com/uk/privacy-policy.html",
+  hreflangDefault: "https://base-xtech.com/privacy-policy.html"
+}) %>
 <body>
+    <%- include('layout/noscript.ejs') %>
+    <%- include('layout/header-alt.ejs') %>
     <header class="site-header">
       <div class="container">
         <div class="grid-mob-custom grid-desk-4">
@@ -58,7 +55,7 @@
           </div>
           <div class="inner nav">
             <a href="#" class="support" data-form-trigger>
-              <img loading="lazy" fetchpriority="low" src="images/header-support-icon.svg" alt="help">
+              <img loading="lazy" fetchpriority="low" src="/images/header-support-icon.svg" alt="help">
             </a>
             <a href="#" class="nav-triger" data-nav-trigger>
               <span></span>
@@ -97,7 +94,7 @@
               <div class="inline-stack space-between">
                 <div class="inline-stack v-mid" style="--gap:1rem">
                   <div class="avatar" style="--avatar-size: 48px;">
-                    <img loading="lazy" fetchpriority="low" src="images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
                   </div>
                   <div class="user-info block-stack" style="--gap: .5rem">
                     <h4 class="title def">Discuss Your Project</h4>
@@ -113,9 +110,9 @@
             </a>
           </div>
           <ul class="social-list">
-            <li><a href="https://www.upwork.com/agencies/base/" target="_blank" class="link up"><img loading="lazy" fetchpriority="low" src="images/icons/social-upwork.svg" alt="Upwork"></a></li>
-            <li><a href="https://www.linkedin.com/company/base-x-tech/" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="images/icons/social-linkedin.svg" alt="linkedin"></a></li>
-            <li><a href="https://www.behance.net/base-xtech" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="images/icons/social-behance.svg" alt="behance"></a></li>
+            <li><a href="https://www.upwork.com/agencies/base/" target="_blank" class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-upwork.svg" alt="Upwork"></a></li>
+            <li><a href="https://www.linkedin.com/company/base-x-tech/" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-linkedin.svg" alt="linkedin"></a></li>
+            <li><a href="https://www.behance.net/base-xtech" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-behance.svg" alt="behance"></a></li>
           </ul>
         </footer>
       </div>
@@ -132,7 +129,7 @@
             <span class="logo-text up">Base X</span>
           </a>
           <span class="btn--rounded-close" data-form-close>
-            <img loading="lazy" fetchpriority="low" src="images/icons/close.svg" alt="close">
+            <img loading="lazy" fetchpriority="low" src="/images/icons/close.svg" alt="close">
           </span>
         </header>
         <div class="scroller">
@@ -363,76 +360,14 @@
               <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
             </header>
             <div class="masked-image">
-              <img loading="lazy" fetchpriority="low" src="images/sections/cta/bg.png" alt="background">
+              <img loading="lazy" fetchpriority="low" src="/images/sections/cta/bg.png" alt="background">
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" >
-      <div class="container">
-        <div class="grid">
-          <div class="site-footer--logo">
-            <img loading="lazy" fetchpriority="low" src="images/logo.svg" alt="Base X">
-            <div class="site-footer--logo-text">
-              <h5 class="up">Base X</h5>
-              <small>2021-2025</small>
-            </div>
-          </div>
-          <nav class="site-footer--nav">
-            <ul class="site-footer--section-list">
-              <li><a href="#section-service" class="link up">Service</a></li>
-              <li><a href="#section-works" class="link up">Portfolio</a></li>
-              <li><a href="#section-team" class="link up">Team</a></li>
-              <li><a href="#section-reviews" class="link up">Clients</a></li>
-            </ul>
-            <ul class="social-list">
-              <li><a href="https://www.upwork.com/agencies/base/" target="_blank"  class="item up"><img loading="lazy" fetchpriority="low" src="images/icons/social-upwork.svg" alt="Upwork"></a></li>
-              <li><a href="https://www.linkedin.com/company/base-x-tech/" target="_blank" class="item up"><img loading="lazy" fetchpriority="low" src="images/icons/social-linkedin.svg" alt="linkedin"></a></li>
-              <li><a href="https://www.behance.net/base-xtech" target="_blank" class="item up"><img loading="lazy" fetchpriority="low" src="images/icons/social-behance.svg" alt="behance"></a></li>
-            </ul>
-          </nav>
-
-          <div class="custom-widget">
-            <a data-form-trigger class="custom-widget--link">
-              <div class="inline-stack space-between">
-                <div class="inline-stack v-mid" style="--gap:1rem">
-                  <div class="avatar" style="--avatar-size: 48px;">
-                    <img loading="lazy" fetchpriority="low" src="images/sections/team/avatar-3.png" alt="Sofia Zabrodska">
-                  </div>
-                  <div class="user-info block-stack" style="--gap: .5rem">
-                    <h4 class="title def">Discuss Your Project</h4>
-                    <p class="subtitle">Sofia Zabrodska</p>
-                  </div>
-                </div>
-                <i class="icon">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.01562 13.6511V2.34375H14.9896V13.6511H1.01562ZM8.00263 9.06925L2.78229 5.73592V11.8844H13.223V5.73592L8.00263 9.06925ZM8.00263 7.44375L13.223 4.11042H2.78229L8.00263 7.44375ZM2.78229 5.73592V4.11042V11.8844V5.73592Z" fill="#81A13F"/>
-                  </svg>
-                </i>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-        <div class="site-footer--copyright">
-          <div class="container">
-            <div class="inner">
-              <p class="site-footer--copyright-text">
-                © 2024 Base X All right reserved
-              </p>
-              <nav class="site-footer--copyright-privacy">
-                <ul>
-                  <li><a href="/terms-and-conditions.html" class="link-def">Terms & Conditions</a></li>
-                  <li><a href="/privacy-policy.html" class="link-def">Privacy</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-    </footer>
+    <%- include('layout/footer-alt.ejs') %>
 
     <script type="module" src="/src/main.js"></script>
 </body>

@@ -1,0 +1,107 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.slider {
+  &-nav {
+    @include desk {
+      position: relative;
+    }
+
+    &-btn {
+      all: unset;
+      @include box(3rem, 3rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid alpha(color.$black, 0.3);
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: transparent;
+      transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+        background-color: alpha(color.$black, 0.1);
+      }
+
+      &.disabled {
+        opacity: .8;
+        pointer-events: none;
+      }
+    }
+
+  }
+}
+
+.theme-dark {
+  .slider {
+    &-nav {
+      &-btn {
+        border-color: alpha(color.$white, .3);
+
+        svg {
+          path {
+            fill: color.$white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  &.type-2 {
+
+    .info-card {
+      width: 90%;
+      height: 380px;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include desk {
+        width: 50%;
+      }
+
+      header {
+        display: grid;
+        gap: 2rem;
+      }
+
+      .title {
+        font-family: font.$body-font-cyr;
+      }
+
+    }
+  }
+}
+
+.flickity-page-dots {
+  justify-content: start;
+  align-items: center;
+  gap: .5rem;
+  position: relative;
+
+  .flickity-page-dot {
+    margin: 0;
+    width: 12px;
+    height: 16px;
+    background-color: #D9D9D9;
+    border-radius: 0;
+
+    &.is-selected {
+      height: 24px;
+      background-color: color.$black;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
