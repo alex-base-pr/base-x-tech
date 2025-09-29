@@ -11,3 +11,28 @@
     padding: 0 2rem;
   }
 }
+
+.mobile--alt-image {
+  &+ img {
+    display: none;
+    @include desk {
+      display: block;
+    }
+  }
+  @include desk {
+    display: none;
+  }
+}
+
+.br-mob {
+  @include desk {
+    display: none;
+  }
+}
+
+.br-desk {
+  display: none;
+  @include desk {
+    display: block;
+  }
+}

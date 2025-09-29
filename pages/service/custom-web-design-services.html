@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Design | Development | Marketing",
+  description: "Web design and development agency ➤ BaseX-Tech ⭐️ We create solutions that combine innovation, efficiency, and real impact on business growth.",
+  hrefLangCode: "uk",
+  hrefLangLink: "https://base-xtech.com/uk/pages/service/custom-web-design-services.html",
+  hreflangDefault: "https://base-xtech.com/uk/pages/service/custom-web-design-services.html"
+}) %>
+<body class="locale-en">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="sevice-custom-web-design-services" >
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "service-hero",
+        title: "Custom Web Design Services",
+        subtitle: "shopify automation and growth",
+        description: "We design custom websites with responsive layouts, clear user experience, and a strong visual identity. Every project is built to support your business objectives, engage your audience, and deliver measurable results.",
+        icons: [
+          "shopify",
+          "figma"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/hero-image.ejs', {
+        locale: 'en',
+        id: "hero-banner",
+        background_image: "/images/pages/service/custom-web-design-services/hero-image/bg.png",
+        background_image_mob: "/images/pages/service/custom-web-design-services/hero-image/bg-mob.png"
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "SERVICES AND TECHNOLOGIES",
+        subtitle: "What You Get with <br class='br-desk'>Our <span class='accent'>Custom Web Design Services</span>",
+        cards: [
+          {
+            title: "Unique Website Concepts",
+            description: "We design websites tailored to your brand, market, and customer expectations. Our creative team focuses on visual storytelling, intuitive navigation, and building design systems that scale with your business. Every project is structured for long-term growth and easy updates.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Responsive and Mobile-First Design",
+            description: "Every website we create is fully responsive, adapting seamlessly across desktops, tablets, and smartphones. We deliver smooth performance, fast load times, and pixel-perfect visuals on every device.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Custom UI and UX Strategy",
+            description: "We develop intuitive, engaging user experiences that guide visitors and increase conversions. From detailed wireframes to interactive prototypes, we carefully plan every step to maximize usability and satisfaction.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Ecommerce Store Design",
+            description: "Our team crafts powerful ecommerce websites that are both visually compelling and optimized for sales. Whether you’re building a Shopify store or a custom ecommerce platform, we design product pages, checkout flows, and customer journeys that convert.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Website Redesign and Optimization",
+            description: "We refresh underperforming websites with modern layouts, faster load speeds, and improved functionality. Our redesigns are aimed at boosting user engagement, retention, and measurable business results.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Branding and Visual Consistency",
+            description: "We create cohesive brand experiences by unifying fonts, colors, icons, and imagery. Our professional design standards guarantee a polished, distinctive online presence that resonates with your audience.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          }
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ADVANTAGES",
+        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Business-Driven Design",
+            description: "We focus on measurable outcomes — more leads, higher conversions, and smoother customer experiences. Every design decision supports your core business goals."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Full In-House Team",
+            description: "All work is completed by our in-house team. No freelancers, no delays, and direct collaboration with the designers working on your project."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Agile and Efficient Process",
+            description: "We move fast and adapt as your needs evolve. Regular check-ins and updates keep you fully informed throughout the project lifecycle."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Cross-Platform Expertise",
+            description: "From corporate websites to interactive landing pages to full Shopify ecommerce stores, we design for any platform and any customer journey."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Honest and Transparent",
+            description: "We deliver on what we promise. Expect clear timelines, fair pricing, and a stress-free process from start to finish."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "PORTFOLIO",
+      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
+      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Brand identity & redesign of self-care ecommerce",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'en',
+        theme: 'light',
+        id: "service-expertise",
+        title: "EXPERTISE",
+        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
+        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
+        media_cards: [
+          {
+            title: "fashion",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "beauty",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "automotive",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Food & Drinks",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Jewelry & Luxury",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Furniture & Decor",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Health & Supplements",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Bags & Accessories",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Tech & Gadgets",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Sports & Lifestyle",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'en',
+        id: 'service-faq',
+        title: 'WORKFLOW',
+        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
+        button: {
+          text: "Discuss a project"
+        },
+        faq: [
+          {
+            title: "Discovery and Research",
+            description: "We take time to understand your business, audience, and competitive landscape. Together, we define design goals, review inspiration, and plan the creative direction."
+          },
+          {
+            title: "Wireframes and Planning",
+            description: "We outline your site structure and create wireframes for all major pages. You get a clear understanding of the user journey before design work begins."
+          },
+          {
+            title: "Visual Designand Prototyping",
+            description: "We translate ideas into detailed, high-fidelity mockups and clickable prototypes. You provide feedback at every stage before development starts."
+          },
+          {
+            title: "Handoff and Launch Support",
+            description: "Once approved, we prepare all design assets, style guides, and provide full support to ensure smooth implementation and perfect delivery."
+          }
+        ]
+      })
+    %>
+
+    <section id="section-approach" class="section section-approach">
+        <div class="container">
+          <div class="inner-back">
+            <header class="section-header">
+              <h2 class="section-title alt up">Approach</h2>
+              <h3 class="section-subtitle up">we work <br>within your <br>budget</h3>
+            </header>
+            <main class="section-content block-stack" style="--gap:2.125rem">
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Immersion</h4>
+                  <p class="description">We’re dedicated to crafting new solutions that push the boundaries of what’s possible, ensuring your business stays ahead of the curve.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Nastya Hudyma</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Transparence</h4>
+                  <p class="description">We believe in keeping you fully informed throughout every step of the project, giving you the clarity and confidence to make decisions.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-2.png" alt="Vadim Hula">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadim Hula</h4>
+                    <p class="subtitle">Project Manager</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <blockquote class="block-stack" style="--gap: 2rem;">
+                <main class="block-stack" style="--gap: 1rem;">
+                  <h4 class="title def">Quality</h4>
+                  <p class="description">Excellence is woven into everything we do, from the initial concept to the final execution, ensuring your vision is brought to life with precision and care.</p>
+                </main>
+                <footer class="inline-stack v-mid" style="--gap: 1rem;">
+                  <div class="avatar" style="--avatar-size: 64px;">
+                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-1.png" alt="Vadym Yarmak">
+                  </div>
+                  <div class="user-info block-stack" style="--gap: 0">
+                    <h4 class="title def">Vadym Yarmak</h4>
+                    <p class="subtitle">Lead Designer</p>
+                  </div>
+                </footer>
+              </blockquote>
+              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
+            </main>
+          </div>
+        </div>
+      </section>
+
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
 // Components
 @use 'components/link' as link;
 @use 'components/header' as header;
+@use 'components/lang-switcher' as lang-switcher;
 @use 'components/navburger' as navburger;
 @use 'components/navdrawer' as navdrawer;
 @use 'components/footer' as footer;
@@ -19,6 +20,7 @@
 @use 'components/tagset' as tagset;
 @use 'components/iconset' as iconset;
 @use 'components/cards' as cards;
+@use 'components/info-card' as infocard;
 @use 'components/avatar' as avatar;
 @use 'components/custom-widget' as custom-widget;
 @use 'components/social-list' as social-list;
@@ -26,6 +28,10 @@
 @use 'components/form' as form;
 @use 'components/scroller' as scroller;
 @use 'components/flickity' as flickity;
+@use 'components/carousel' as carousel;
+@use 'components/figures' as figures;
+
+@use 'components/pricing-grid' as pricing-grid;
 
 // Layouts
 @use 'layouts/grid' as grid;
@@ -45,6 +51,21 @@
 @use 'sections/cta' as section-cta;
 @use 'sections/page' as section-page;
 @use 'sections/content' as section-content;
+@use 'sections/hero-image' as section-hero-image;
+@use 'sections/split' as section-split;
+
+
+
 
 // Pages
 @use 'pages/home' as page-home;
+@use 'pages/shopify-development' as shopify-development;
+@use 'pages/service' as page-service;
+@use 'pages/service-conversion-rate-optimization' as page-service-conversion-rate-optimization;
+@use 'pages/service-custom-shopify-integrations' as page-service-custom-shopify-integrations;
+@use 'pages/service-shopify-theme-customization' as page-service-shopify-theme-customization;
+
+@use 'sections/timeline' as section-timeline;
+
+// Modifficators
+@use 'mod/gap' as mod-gap;

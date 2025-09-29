@@ -154,7 +154,7 @@ header {
 
     .grid-mob-custom {
       display: grid;
-      grid-template-columns: 1fr minmax(128px, 128px);
+      grid-template-columns: 1fr minmax(200px, 200px);
       align-items: center;
       @include desk {
         grid-template-columns: unset;
@@ -280,5 +280,112 @@ header.in-scroll .contact-ico:hover{
       .nav-triger span {
         background-color: color.$white;
       }
+  }
+}
+
+.site-header.in-scroll > .container{
+  z-index: 2;
+  position: relative;
+  background-color: color.$white;
+}
+
+.desk-nav-menu {
+  display: none;
+  position: relative;
+  @include desk {
+    display: block;
+    background-color: color.$white;
+    transform: translateY(-200%);
+    opacity: 0;
+    z-index: -1;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  border-top: 1px solid alpha(color.$black, 0.3);
+  border-bottom: 1px solid alpha(color.$black, 0.3);
+
+  .wr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    font-family: font.$heading-font;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    position: relative;
+
+    ul {
+      display: grid;
+      gap: .8rem;
+    }
+
+    strong {
+      display: block;
+      line-height: 1;
+    }
+
+    a {
+      display: block;
+      line-height: 1;
+      color: alpha(color.$black, 0.3);
+      transition: color 0.2s ease-in-out;
+      strong {
+        color: color.$black;
+      }
+      &:hover {
+        color: color.$primary;
+      }
+
+      &.active {
+        color: color.$primary;
+      }
+    }
+
+
+
+    .desk-nav-menu--column {
+      padding: 1.5rem 0;
+
+      &:first-child {
+        grid-column: 2;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: calc(-1rem - 1px);
+          width: 1px;
+          height: 100%;
+          background-color: alpha(color.$black, 0.3);
+        }
+      }
+    }
+  }
+}
+
+.site-header {
+  &.submenu-opened {
+    .desk-nav-menu {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .trigger-submenu-1 {
+      color: color.$primary !important;
+      &::after {
+        width: 100%;
+        background-color: color.$primary !important;
+      }
+    }
+  }
+}
+
+.drawer-nav--wrapper a.active {
+  color: color.$primary !important;
+}
+
+@media (max-width: 390px) {
+  header.site-header .inner-logo .logo-text{
+    display: none;
   }
 }

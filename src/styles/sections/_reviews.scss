@@ -114,35 +114,5 @@
       }
     }
 
-    .slider {
-      &-nav {
-        @include desk {
-          position: relative;
-          left: 5.8rem;
-        }
-
-        &-btn {
-          all: unset;
-          @include box(3rem, 3rem);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid alpha(color.$black, 0.3);
-          border-radius: 50%;
-          cursor: pointer;
-          background-color: transparent;
-          transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-          &:hover {
-            opacity: 0.7;
-            background-color: alpha(color.$black, 0.1);
-          }
-        }
-
-      }
-    }
-
-
-
   }
 }

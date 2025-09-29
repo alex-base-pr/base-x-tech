@@ -1,0 +1,77 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#service-conversion-rate-optimization {
+  #service-hero {
+    min-height: 100vh;
+
+    @include desk {
+      min-height: 810px;
+    }
+
+    .container {
+      height: auto;
+      @include desk {
+        min-height: 810px;
+      }
+    }
+
+    .widgets {
+      margin-top: 7rem;
+      margin-bottom: 1rem;
+      justify-self: center;
+      position: relative;
+
+      @include desk {
+        grid-column: 2;
+      }
+
+      img {
+        max-width: 121px;
+        @include desk {
+          max-width: 222px;
+          transition: transform 0.3s ease-in-out;
+            transform: scale(1);
+            &:hover {
+              transform: scale(1.1);
+              cursor: pointer;
+            }
+
+        }
+      }
+
+      .widget{
+        position: relative;
+
+
+        &:first-child {
+          transform: rotate(-4.11deg);
+          left: -4.8rem;
+          @include desk {
+            left: -7rem;
+            top: 4.3rem;
+          }
+        }
+
+        &:last-child {
+          transform: rotate(6.91deg);
+          position: absolute;
+          top: 2.1rem;
+          left: 3.8rem;
+          @include desk {
+            top: 7.7rem;
+            left: 9.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  #service-type-of-apps {
+    .cards-default .card {
+      min-height: 443px;
+    }
+  }
+
+}

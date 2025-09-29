@@ -51,11 +51,9 @@ import { animate, press, scroll, stagger } from 'motion';
     );
   });
 
-
-  animate(
-    ".section-numbers .card",
-    { opacity: 1 },
-    { delay: stagger(0.1) }
-  )
+  const numberCards = document.querySelectorAll(".section-numbers .card");
+  if (numberCards.length) {
+    animate(numberCards, { opacity: 1 }, { delay: stagger(0.1) });
+  }
 
 })();

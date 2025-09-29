@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Design | Development | Marketing",
+  description: "Web design and development agency ➤ BaseX-Tech ⭐️ We create solutions that combine innovation, efficiency, and real impact on business growth.",
+  hrefLangCode: "en",
+  hrefLangLink: "https://base-xtech.com/en/terms-and-conditions.html",
+  hreflangDefault: "https://base-xtech.com/terms-and-conditions.html"
+}) %>
+<body class="locale-en">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main>
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'en',
+        id: "hero",
+        title: "Shopify Store Development",
+        subtitle: "Ready-made and custom solutions for your business",
+        button_text: "Discuss Project",
+        background_image: "/images/pages/shopify-development/back.png",
+        background_image_mob: "/images/pages/shopify-development/back-mob.png"
+      })
+    %>`
+
+    <%- include('layout/section/info.ejs', {
+      locale: 'en',
+      id: "services",
+      theme: "light",
+      title: "Services and Technologies",
+      subtitle: "main<br> range of <br><span class='accent'>services</span>",
+      cards: [
+        {
+          title: "Development based on<br> ready-made Shopify themes",
+          subtitle: "quick start",
+          background_image: "/images/pages/shopify-development/section/info-1/card-2.png"
+        },
+        {
+          title: "Development of<br> custom themes",
+          subtitle: "turnkey shopify",
+          background_image: "/images/pages/shopify-development/section/info-1/card-1.png"
+        }
+      ]
+    }) %>
+
+    <%- include('layout/section/info.ejs', {
+      locale: 'en',
+      id: "additional",
+      theme: "light",
+      title: "Services and Technologies",
+      subtitle: "Additional <span class='accent'>Services</span>",
+      list: [
+        {
+          title: "Shopify app development"
+        },
+        {
+          title: "Migration"
+        },
+        {
+          title: "Shopify integrations"
+        },
+        {
+          title: "Headless"
+        },
+        {
+          title: "Optimization"
+        }
+      ]
+    }) %>
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'en',
+      id: "portfolio",
+      theme: "light",
+      title: "Portfolio",
+      subtitle: "Our <span class='accent'><br>Cases</span>",
+      description: "Showcasing brands we've helped grow through strategy, design, and technology. Each project is a testament to our commitment to creating lasting digital experiences.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Design & Shopify development for technology startup",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "MO",
+          text: "Website & app development",
+          link: "https://getmo.us/",
+          background_image: "/images/pages/shopify-development/section/works/mo-back.png",
+          background_image_mob: "/images/pages/shopify-development/section/works/mo-back-mob.png",
+          icons: ['figma', 'shopify']
+        },
+        {
+          title: "Prime Eva",
+          text: "Custom website & ERP development",
+          link: "https://primeeva.com/",
+          background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
+          icons: ['figma', 'shopify']
+        },
+        {
+          title: "Wood and Hearts",
+          text: "Custom store development & additional functionality for kids furniture",
+          link: "https://woodandhearts.com/",
+          background_image: "/images/pages/shopify-development/section/works/w&h-back.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Komo Diamands",
+          text: "Store setup & customizations for jewelry brand",
+          link: "https://komodiamonds.com/",
+          background_image: "/images/pages/shopify-development/section/works/komo-diamands-back.png",
+          icons: ['shopify']
+        },
+        {
+          title: "KLOTT",
+          text: "Store setup & customizations for fashion brand",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/pages/shopify-development/section/works/klott-back.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%- include('layout/section/info.ejs', {
+      locale: "en",
+      id: "reviews",
+      theme: "dark",
+      class: "reviews",
+      title: "Reviews",
+      subtitle: "<span class='accent'>With trust</span><br> from our partners",
+      background_image: "/images/pages/shopify-development/section/reviews/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
+      reviews: [
+        {
+          text: "Base X Tech was just fantastic throughout the entire design process.",
+          name: "Alexey Cherevuta",
+          post: "COO, DevIT Group",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-1.png"
+        },
+        {
+          text: "Base X Tech's approach was never one-size-fits-all—every part of the process felt personalized.",
+          name: "Hanna Korovianska",
+          post: "Business Assistant, Komanda",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-2.png"
+        },
+        {
+          text: "Base X Tech was structured, professional, and highly responsive.",
+          name: "Mike Yemchura",
+          post: "Founder, Figmatica",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-3.png"
+        },
+        {
+          text: "Base X's project management was efficient and professional.",
+          name: "Julia Yakusha",
+          post: "CMO, Codeska",
+          avatar: "/images/pages/shopify-development/section/reviews/avatar-4.png"
+        }
+      ]
+    }) %>
+
+    <%- include('layout/section/default.ejs', {
+      locale: "en",
+      theme: "light",
+      class: "default",
+      id: "price-brief",
+      title: "<span class='accent'>Shopify Development</span> Pricing",
+      subtitle: "Pricing Plans",
+      cards: [
+        {
+          number: "1",
+          title: "Quick Start",
+          subtitle: "from $2200 / 3-5 weeks",
+          description: "Fast launch of a Shopify store with professional design to start sales. Everything needed to attract customers and maintain perfect brand appearance across all devices.",
+          listTitle: "what you will get:",
+          listItems: [
+            "Strategic session: optimal structure and launch plan.",
+            "Responsive design (premium template) customized to your brand.",
+            "Complete technical Shopify setup, ready to work.",
+            "Basic catalog content (for example, up to 25-50 products).",
+            "Payment and shipping setup for Ukraine.",
+            "Integration of basic marketing apps (analytics).",
+            "Practical online training for store management.",
+            "30 days of warranty support after launch."
+          ],
+          button: {
+            text: "Get Quote",
+            style: "btn btn--dark"
+          }
+        },
+        {
+          number: "2",
+          title: "Shopify Turnkey",
+          subtitle: "from $4500 / 4-8 weeks",
+          description: "Unique Shopify store that will leave competitors behind. Exclusive design, intuitive UX and custom functionality for maximum sales, customer loyalty and scaling.",
+          listTitle: "what you will get:",
+          listItems: [
+            "Deep business analysis and e-commerce strategy development.",
+            "Exclusive UI/UX design \"from scratch\" (with mobile adaptation).",
+            "Development of custom Shopify theme for your tasks.",
+            "Programming individual functionality (automation, benefits).",
+            "Professional optimization of catalog and product cards.",
+            "Seamless integration with business systems (CRM, ERP, etc.).",
+            "Basic SEO optimization and conversion rate optimization (CRO) setup.",
+            "Comprehensive training of your team for effective management.",
+            "Extended premium support – 60 days."
+          ],
+          button: {
+            text: "Get Quote",
+            style: "btn btn--dark"
+          }
+        }
+      ]
+
+    }) %>
+
+    <%- include('layout/section/timeline.ejs', {
+      locale: "en",
+      theme: "dark",
+      id: "timeline",
+      title: "<span class='accent'>How</span> we<br class='br-mob'> work",
+      subtitle: "Stages",
+      background_image: "/images/pages/shopify-development/section/timeline/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/timeline/back-mob.png",
+      items: [
+        {
+          number: "1",
+          title: "Opportunity Discovery and Proposal",
+          text: "<p>A. We identify your needs, develop solution ideas and present you with a proposal.</p><p>B. We agree on all terms with you and sign a contract to officially start cooperation.</p>"
+        },
+        {
+          number: "2",
+          title: "Project Initiation and Planning:",
+          text: "<p>A. We define detailed project scope, goals, results and success criteria.</p><p>B. We develop a comprehensive project plan, including schedule, resources, budget and risks.</p>"
+        },
+        {
+          number: "3",
+          title: "DESIGN AND DEVELOPMENT / IMPLEMENTATION",
+          text: "<p>A. We design and implement the core solution according to the approved plan.</p><p>B. We execute tasks, managing progress, communication and resources.</p>"
+        },
+        {
+          number: "4",
+          title: "QUALITY ASSURANCE AND TESTING",
+          text: "<p>A. We conduct thorough testing to identify, track and eliminate defects.</p><p>B. We ensure that results meet agreed quality standards and requirements.</p>"
+        },
+        {
+          number: "5",
+          title: "Project Handover",
+          text: "<p>A. We prepare, launch the solution and receive your final approval.</p><p>B. We formally transfer all results, documentation and conduct necessary training.</p>"
+        },
+        {
+          number: "6",
+          title: "Support (MAINTENANCE AND CLOSURE)",
+          text: "<p>A. We provide initial post-launch support and collect client/team feedback.</p><p>B. We complete final documentation, reporting and officially close the project.</p>"
+        }
+      ]
+    }) %>
+
+    <%- include('layout/section/cta.ejs') %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/shopify-development.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+@use '../abstracts/mixins' as *;
 @use '../base/fonts' as font;
 @use '../abstracts/colors' as color;
 
@@ -6,7 +7,80 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-size: 16px;
-  color: color.$black
+  color: color.$black;
+
+  #service-hero .section--hero-subtitle {
+    font-family: font.$body-font-cyr;
+  }
+
+  &.locale-ua {
+    .site-header {
+      .link {
+        font-family: font.$heading-font-cyr;
+        font-weight: 500;
+      }
+
+      .desk-nav-menu--column {
+        a, strong {
+          font-family: font.$heading-font-cyr;
+          font-weight: 500;
+        }
+      }
+    }
+
+
+    .btn,
+    .drawer-form--title,
+    .drawer-nav--block  .link,
+    .site-footer .link {
+      font-family: font.$heading-font-cyr;
+      font-weight: 500;
+    }
+
+    .drawer-form--title {
+      font-size: 4.5rem;
+    }
+
+    section {
+      &.locale-ua {
+        font-family: font.$body-font-cyr;
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: font.$heading-font-cyr;
+          font-weight: 500;
+
+          &.def {
+            font-family: font.$body-font-cyr;
+          }
+        }
+
+
+
+        .btn {
+          font-family: font.$heading-font-cyr;
+        }
+
+        .section-title {
+          font-family: font.$body-font-cyr;
+        }
+
+        .section-subtitle {
+          @include desk {
+            font-size: 4.8rem;
+          }
+        }
+
+        .section--hero-title {
+          word-break: break-word;
+          @include desk {
+            font-size: 8.25rem;
+          }
+        }
+
+      }
+    }
+  }
+
 }
 
 h1, h2, h3, h4, h5, h6 {

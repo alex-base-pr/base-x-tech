@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layout/head-alt.ejs', {
+  title: "BaseX-Tech ▶️  Дизайн | Розробка | Маркетинг",
+  description: "Веб-дизайн та розробка ➤ BaseX-Tech ⭐️ Ми створюємо рішення, які поєднують інновації, ефективність і реальний вплив на зростання бізнесу.",
+  hrefLangCode: "en",
+  hrefLangLink: "https://base-xtech.com/pages/service/mvp-design-services.html",
+  hreflangDefault: "https://base-xtech.com/uk/pages/service/mvp-design-services.html"
+}) %>
+<body class="locale-ua">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt-ua.ejs') %>
+  <%- include('layout/drawer/nav-ua.ejs') %>
+  <%- include('layout/drawer/form-ua.ejs') %>
+
+  <main id="sevice-custom-web-design-services" >
+    <%-
+      include('layout/section/hero-type-two.ejs', {
+        locale: 'ua',
+        id: "service-hero",
+        title: "Послуги MVP дизайну",
+        subtitle: "Дизайн мінімально життєздатного продукту",
+        description: "Процес розробки дизайну мінімального життєздатного продукту охоплює вивчення користувачів, вайрфрейми, дизайн інтерфейсу та створення прототипів для швидкого запуску та валідації продукту.",
+        icons: [
+          "figma"
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/hero-image.ejs', {
+        locale: 'en',
+        id: "hero-banner",
+        background_image: "/images/pages/service/mvp-design-service/hero-image/bg.png",
+        background_image_mob: "/images/pages/service/mvp-design-service/hero-image/bg-mob.png"
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "Послуги та технології",
+        subtitle: "Що входить у склад послуг<br class='br-desk'> <span class='accent'> MVP-дизайну</span>",
+        cards: [
+          {
+            title: "Дослідження та розробка концепції продукту",
+            description: "Спершу ми вивчаємо ваші бізнес-цілі, цільову аудиторію та ринкове позиціонування. Разом розробляємо концепції, формуємо головне бачення продукту і визначаємо пріоритетні функції для MVP.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Вивчення аудиторії та розробка користувацького профілю",
+            description: "Команда дизайнерів проводить дослідження, щоб зрозуміти справжні потреби і поведінку користувачів. Ми профілі користувачів та карти їхнього флоу, що допомагають приймати обґрунтовані дизайнерські рішення.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "UX Вайрфрейми та дизайн користувацьких сценаріїв",
+            description: "Проєктуємо зрозумілі та логічні користувацькі шляхи й вайрфрейми, що формують MVP із фокусом на основні функції. Цей етап забезпечує найпростіше рішення для потреб користувачів.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Розробка Інтерфейсу та створення візуальних прототипів",
+            description: "Ми створюємо сучасні та інтуїтивні інтерфейси, які покращують досвід користування MVP. Ви отримаєте інтерактивні прототипи, що імітують фінальний продукт, що дозволяє легко тестувати, валідувати та вдосконалювати дизайн до початку розробки.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Дизайн Система і відповідність бренду",
+            description: "Ми створюємо повторно використовувані дизайн-компоненти та стилістичні гіди для забезпечення єдності вашого MVP. Шрифти, кольори, кнопки, іконки — усе відповідає вашому бренду, гарантуючи професійний і витончений вигляд.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          },
+          {
+            title: "Тестування зручності і подальше вдосконалення",
+            description: "Перед передачею ми проводимо тестування зручності використання за участю реальних користувачів або зацікавлених сторін. Отриманий зворотний зв’язок швидко впроваджується для усунення проблемних моментів і забезпечення відповідності MVP очікуванням клієнтів з першого дня.",
+            background_image: "/images/pages/service/index/app-types/card-1.png",
+            icons: [
+              "shopify"
+            ]
+          }
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-advantages",
+        title: "ПЕРЕВАГИ",
+        subtitle: "<span class='accent'>Чому обирають</span><br> Base-X-Tech",
+        content_cards: [
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Сфокусовані на MVP, що готові до ринку",
+            description: "Ми спеціалізуємося на лаконічному, цілеспрямованому дизайні для MVP. Наша мета — допомогти вам швидше вийти на ринок з продуктом, який працює та приносить задоволення користувачам."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Штатна команда дизайнерів",
+            description: "Кожне дизайнерське завдання виконує наша досвідчена внутрішня команда. Без фрілансерів, без затримок. Ви працюєте безпосередньо з експертами, які розуміють ваш бізнес."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Гнучкий та поступовий цикл розробки",
+            description: "Адаптивний процес розробки дизайну дозволяє оперативно вносити зміни та постійно враховувати відгуки. Легко підлаштовуємося під змінні потреби вашого проєкту."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Глибоке розуміння галузі",
+            description: "Ми розробляли MVP для фінансових технологій, SaaS, електронної комерції, охорони здоров’я та інших галузей. Наші знання допомагають уникати поширених помилок і розробляти більш розумні рішення з першого дня."
+          },
+          {
+            subtitle: "<span class='fig-rhombus black'></span>",
+            title: "Прозора співпраця",
+            description: "Ви завжди будете знати, на якому етапі ваш проєкт. Ми надаємо чіткі терміни, етапи та комунікацію від початку до кінця."
+          },
+        ]
+      })
+    %>
+
+
+    <%- include('layout/section/works.ejs', {
+      locale: 'ua',
+      id: "service-portfolio",
+      theme: "dark",
+      title: "Портфоліо",
+      subtitle: "<span class='hide-desk'>Наші проекти</span><span class='hide-mob'>Фундамент<br> ефективного <br>цифрового <br>досвіду</span>",
+      description: "Портфоліо брендів, яким ми допомогли зростати завдяки стратегії, дизайну та технологіям. Кожен проєкт — це доказ нашої відданості у створенні стійкого цифрового досвіду.",
+      items: [
+        {
+          title: "Naya Tech",
+          text: "Дизайн та розробка на Shopify для технологічного стартапу",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-1-bg.png",
+          icons: ['shopify']
+        },
+        {
+          title: "Bonkind",
+          text: "Айдентика бренду та редизайн e-commerce у сфері здоров'я",
+          link: "https://naya.tech/",
+          background_image: "/images/sections/works/card-2-bg.png",
+          icons: ['figma', 'ai']
+        },
+        {
+          title: "KLOTT",
+          text: "Налаштування та кастомізація Shopify магазину для fashion-бренду",
+          link: "https://ua.klottclothes.com/",
+          background_image: "/images/sections/works/card-3-bg.png",
+          icons: ['git', 'shopify']
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/split.ejs', {
+        locale: 'ua',
+        theme: 'light',
+        id: "service-expertise",
+        title: "Досвід",
+        subtitle: "Досвід роботи <br><span class='accent'>в ключових <br class='br-mob'>галузях</span>",
+        description: "<h2 class='title up'>10</h2><p>Ми працювали в 10 галузях та досягли кращих результатів для клієнтів</p>",
+        media_cards: [
+          {
+            title: "Фешн",
+            image: "/images/pages/service/index/industries/card-1.png"
+          },
+          {
+            title: "Краса",
+            image: "/images/pages/service/index/industries/card-2.png"
+          },
+          {
+            title: "авто",
+            image: "/images/pages/service/index/industries/card-3.png"
+          },
+          {
+            title: "Їжа та напої",
+            image: "/images/pages/service/index/industries/card-4.png"
+          },
+          {
+            title: "Ювелірні вироби та розкіш",
+            image: "/images/pages/service/index/industries/card-5.png"
+          },
+          {
+            title: "Меблі та декор",
+            image: "/images/pages/service/index/industries/card-6.png"
+          },
+          {
+            title: "Здоров'я та харчові добавки",
+            image: "/images/pages/service/index/industries/card-7.png"
+          },
+          {
+            title: "Сумки та аксесуари",
+            image: "/images/pages/service/index/industries/card-8.png"
+          },
+          {
+            title: "Технології та гаджети",
+            image: "/images/pages/service/index/industries/card-9.png"
+          },
+          {
+            title: "Спорт та стиль життя",
+            image: "/images/pages/service/index/industries/card-10.png"
+          },
+        ]
+      })
+    %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        locale: 'ua',
+        id: 'service-faq',
+        title: 'Етапи роботи',
+        subtitle: '<span class="accent">Як працює</span><br> Base-X-Tech',
+        button: {
+          text: "Обговорити проект"
+        },
+        faq: [
+          {
+            title: "Дослідження та постановка цілей",
+            description: "Ми вивчаємо ваш бізнес, цільову аудиторію і конкурентне середовище. Спільно формуємо дизайн-цілі, розглядаємо джерела натхнення та плануємо творчий напрямок."
+          },
+          {
+            title: "Аналіз та розробка вайрфреймів",
+            description: "Ми створюємо детальні користувацькі сценарії і вайрфрейми, що визначають структуру і взаємодії кожної функції продукту MVP."
+          },
+          {
+            title: "UI Дизайн та Прототипування",
+            description: "Ми перетворюємо вайрфрейми на високоякісні дизайни та інтерактивні прототипи, що дозволяє рано отримати валідацію та зворотний зв'язок."
+          },
+          {
+            title: "Тестування та передача",
+            description: "Ми проводимо тести на зручність використання, щоб уточнити дизайн, а потім готуємо всі фінальні дизайнерські активи та документацію для передачі розробникам."
+          }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/approach-ua.ejs') -%>
+
+    <%- include('layout/section/cta-uk.ejs') %>
+  </main>
+
+  <%- include('layout/footer-ua.ejs') %>
+
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>
+</html>

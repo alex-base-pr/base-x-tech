@@ -2,6 +2,85 @@
 @use '../abstracts/colors' as color;
 @use '../base/fonts' as font;
 
+.drawer-nav--block {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+
+.drawer-nav--block.is-sliding-out {
+  transform: translateX(-100%) translateY(0);
+  opacity: 0;
+}
+
+
+.drawer-nav--block.is-sliding-in {
+  transform: translateX(-100%) translateY(0);
+  opacity: 0;
+}
+.drawer-nav--block.is-sliding-in.is-visible {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+}
+
+
+.drawer-nav--block.is-hidden {
+  display: none;
+}
+
+.drawer-nav--block[data-level="submenu"] {
+  transform: translateX(100%) translateY(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.drawer-nav--block[data-level="submenu"].is-active {
+  transform: translateX(0) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.drawer-nav--block[data-level="submenu"].is-leaving {
+  transform: translateX(100%) translateY(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+
+.has-collapse.is-open .collapse-content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.drawer-nav--block .collapse-content ul {
+  gap: .75rem;
+  margin-top: 1rem;
+}
+
+.drawer-nav--block .collapse-content a {
+  font-family: font.$heading-font;
+  color: alpha(color.$white, 0.3);
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+[data-level="submenu"] > ul li  {
+  line-height: 1;
+}
+
 .nav-active {
   overflow-y: hidden;
 
