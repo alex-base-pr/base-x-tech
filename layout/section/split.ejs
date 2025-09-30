@@ -23,7 +23,7 @@
               <% cards.forEach(card => { %>
                 <div class="card">
                   <% if (typeof card.background_image !== 'undefined' && card.background_image) { %>
-                    <img loading="lazy" fetchpriority="low" src="<%- card.background_image %>" alt="" class="card-background">
+                    <img loading="lazy" fetchpriority="low" src="<%- card.background_image %>" alt="<%- card.title %>" class="card-background">
                   <% } %>
                   <div class="card-content">
                     <header>
@@ -80,7 +80,7 @@
                   <div class="card-content">
                     <header>
                       <% if (typeof card.image !== 'undefined' && card.image) { %>
-                        <img loading="lazy" width="359" height="431" fetchpriority="low" src="<%- card.image %>" alt="" class="card-image">
+                        <img loading="lazy" width="359" height="431" fetchpriority="low" src="<%- card.image %>" alt="<%- card.title %>" class="card-image">
                       <% } %>
                     </header>
                     <footer>

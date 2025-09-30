@@ -45,7 +45,8 @@ body {
       &.locale-ua {
         font-family: font.$body-font-cyr;
 
-        h1, h2, h3, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6,
+        .h1, .h2, .h3, .h4, .h5, .h6 {
           font-family: font.$heading-font-cyr;
           font-weight: 500;
 
@@ -83,7 +84,8 @@ body {
 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5{
   font-family: font.$heading-font;
   line-height: 1;
   letter-spacing: 0.01em;
