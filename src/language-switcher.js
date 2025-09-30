@@ -35,12 +35,30 @@ export class LanguageSwitcher {
       this.highlightActiveMobileLink();
       this.bindMobileEvents();
     }
-
-    this.handleRedirect();
+    this.showLanguageSuggestion();
   }
 
   detectCurrentLang() {
     return this.currentPath.startsWith(this.altLangPrefix) ? 'uk' : this.defaultLang;
+  }
+
+  showLanguageSuggestion() {
+    if (!this.savedLang || this.savedLang === this.currentLang) return;
+
+    if (!window.localStorage) return;
+
+    if (document.readyState !== 'complete') {
+      window.addEventListener('load', () => this.showLanguageSuggestion());
+      return;
+    }
+
+    const message = this.savedLang === 'uk'
+      ? 'Перейти до української версії?'
+      : 'Switch to English version?';
+
+    if (confirm(message)) {
+      this.switchLanguage(this.savedLang);
+    }
   }
 
   highlightActiveLink() {
@@ -109,20 +127,19 @@ export class LanguageSwitcher {
     window.location.href = targetPath;
   }
 
-  handleRedirect() {
-    const navType = performance.getEntriesByType('navigation')[0]?.type;
-    const isFromHistory = navType === 'back_forward';
-
-    if (isFromHistory) return;
-
-    if (!this.savedLang || this.savedLang === this.currentLang) return;
-
-    if (this.savedLang === 'uk' && this.currentLang !== 'uk') {
-      window.location.assign(this.altLangPrefix + this.currentPath);
-    } else if (this.savedLang === 'en' && this.currentLang !== 'en') {
-      const path = this.currentPath.replace(this.altLangPrefix, '') || '/';
-      window.location.assign(path);
-    }
-  }
+  // handleRedirect() {
+  //   const navType = performance.getEntriesByType('navigation')[0]?.type;
+  //   const isFromHistory = navType === 'back_forward';
+  //
+  //   if (isFromHistory) return;
+  //
+  //   if (!this.savedLang || this.savedLang === this.currentLang) return;
+  //
+  //   if (this.savedLang === 'uk' && this.currentLang !== 'uk') {
+  //     window.location.assign(this.altLangPrefix + this.currentPath);
+  //   } else if (this.savedLang === 'en' && this.currentLang !== 'en') {
+  //     const path = this.currentPath.replace(this.altLangPrefix, '') || '/';
+  //     window.location.assign(path);
+  //   }
+  // }
 }
-
