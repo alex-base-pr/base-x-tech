@@ -5,3 +5,14 @@ RewriteRule ^(.*)$ https://base-xtech.com/$1 [L,R=301]
 
 RewriteCond %{THE_REQUEST} \s/index\.html [NC]
 RewriteRule ^index\.html$ https://base-xtech.com/ [L,R=301]
+
+<If "%{HTTP_HOST} == 'staging.base-xtech.com'">
+  AuthType Basic
+  AuthName "Basic Auth"
+  AuthUserFile "/home/aleksanz/base-xtech.com/staging/.htpasswd"
+  Require valid-user
+</If>
+
+<Files ".htpasswd">
+  Require all denied
+</Files>
