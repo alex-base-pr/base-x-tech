@@ -18,46 +18,17 @@
     <link rel="alternate" href="<%- hreflangDefault %>" hreflang="x-default">
   <% } %>
 
-   <!-- Canonical URL -->
-  <%
-  const baseUrl = 'https://base-xtech.com';
+  <script>
+    (function() {
+      const baseUrl = 'https://base-xtech.com';
+      const currentPath = window.location.pathname;
 
-  // Отримуємо поточний шлях з EJS контексту або з filename
-  let currentPath = '/';
-  if (typeof filename !== 'undefined') {
-    // Визначаємо шлях на основі filename
-    const path = require('path');
-    const relativePath = path.relative(process.cwd(), filename);
-
-    if (relativePath.includes('uk/pages/')) {
-      currentPath = '/uk/' + path.basename(filename).replace('.html', '.html');
-    } else if (relativePath.includes('uk/index.html')) {
-      currentPath = '/uk/';
-    } else if (relativePath.includes('pages/')) {
-      currentPath = '/' + path.basename(filename).replace('.html', '.html');
-    } else if (relativePath.includes('index.html')) {
-      currentPath = '/';
-    }
-  }
-
-  // Canonical URL
-  let canonicalUrl = baseUrl + currentPath;
-
-  // Визначаємо альтернативні мовні версії
-  let isUkrainian = currentPath.startsWith('/uk/');
-  let enPath, ukPath;
-
-  if (isUkrainian) {
-    enPath = currentPath.replace('/uk/', '/').replace('/uk', '/');
-    ukPath = currentPath;
-  } else {
-    enPath = currentPath;
-    ukPath = currentPath === '/' ? '/uk/' : '/uk' + currentPath;
-  }
-  %>
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href="<%= canonicalUrl %>">
+      const canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = baseUrl + currentPath;
+      document.head.appendChild(canonical);
+    })();
+  </script>
 
   <link rel="stylesheet" href="/src/styles/main.scss" />
   <link rel="preload" href="/images/sections/bg-mob.jpg" as="image" fetchpriority="high">
@@ -65,7 +36,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <link rel="manifest" href="/favicon/site.webmanifest">
-  <script type="text/javascript" src="https://assets.goodfirms.co/assets/js/widget.min.js"></script>
+  <script type="text/javascript" src="https://assets.goodfirms.co/assets/js/widget.min.js" defer></script>
   <script src="https://www.sortlist.co.uk/api/badge-embed?agencySlug=base-x-tech&color=primary&hue=500&type=certified&country=GB&locale=en" defer></script>
 
   <meta name='impact-site-verification' value='b5776188-36e9-4e02-af40-b83a2a76dbdc' />
