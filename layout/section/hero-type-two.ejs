@@ -19,7 +19,7 @@
       <% if (typeof cards !== 'undefined' && cards) { %>
         <ul class="widgets">
           <% cards.forEach(card => { %>
-            <li class="widget"><img loading="eager" fetchpriority="low" src="<%= card.image %>" ></li>
+            <li class="widget"><img loading="eager" fetchpriority="low" src="<%= card.image %>" alt="<%= card.title %>"></li>
           <% }) %>
         </ul>
         <% } %>
