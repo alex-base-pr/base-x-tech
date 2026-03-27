@@ -1,7 +1,5 @@
 RewriteEngine On
 
-ErrorDocument 404 /404.html
-
 RewriteCond %{HTTP_HOST} ^www\.base-xtech\.com [NC]
 RewriteRule ^(.*)$ https://base-xtech.com/$1 [L,R=301]
 
