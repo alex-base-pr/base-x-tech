@@ -1,6 +1,7 @@
 import './component-accordion.js';
 import Flickity from 'flickity';
 import { LanguageSwitcher } from './language-switcher.js';
+import { initializeTimezone } from './utils/timezone.js';
 
 function throttle(fn, delay) {
   let lastCall = 0;
@@ -13,9 +14,9 @@ function throttle(fn, delay) {
   };
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
   new LanguageSwitcher();
+  initializeTimezone();
 });
 
 const drawerState = new Proxy({}, {

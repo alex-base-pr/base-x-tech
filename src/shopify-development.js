@@ -1,4 +1,8 @@
+import { initializeTimezone } from './utils/timezone.js';
+
 document.addEventListener('DOMContentLoaded', function () {
+  initializeTimezone();
+  
   const cardsContainer = document.querySelector('.cards');
   if (!cardsContainer) return;
 
