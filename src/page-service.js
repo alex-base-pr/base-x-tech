@@ -1,6 +1,9 @@
 import Flickity from 'flickity';
+import { initializeTimezone } from './utils/timezone.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initializeTimezone();
+  
   const breakpoint = 1024;
 
   const carousels = [

@@ -5,7 +5,7 @@
         <img loading="lazy" fetchpriority="low" src="/images/logo.svg" alt="Base X">
         <div class="site-footer--logo-text">
           <h5 class="up">Base X</h5>
-          <small>2021-2025</small>
+          <small>2021-<%= new Date().getFullYear() %></small>
         </div>
       </div>
       <nav class="site-footer--nav">
@@ -49,7 +49,7 @@
       <div class="container">
         <div class="inner">
           <p class="site-footer--copyright-text">
-            © 2025 Base X Всі права захищені
+            © <%= new Date().getFullYear() %> Base X Всі права захищені
           </p>
           <nav class="site-footer--copyright-privacy">
             <ul>

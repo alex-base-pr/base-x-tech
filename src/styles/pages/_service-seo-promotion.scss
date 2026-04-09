@@ -1,0 +1,133 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+#seo-promotion {
+  #service-hero {
+    min-height: 100vh;
+
+    @include desk {
+      min-height: 810px;
+    }
+
+    .container {
+      @include desk {
+        height: auto;
+        min-height: 810px;
+      }
+    }
+
+    .inner_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      gap: 1.5rem;
+
+      @include desk {
+        display: grid;
+        height: auto;
+      }
+    }
+
+    .widgets {
+      width: 100%;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      margin-bottom: 60px;
+      padding: 0;
+
+      @include desk {
+        margin-top: 1rem;
+        margin-bottom: 7rem;
+        justify-self: center;
+        position: relative;
+        width: auto;
+        display: block;
+        grid-column: 2;
+      }
+
+      img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+
+        @include desk {
+          max-width: 222px;
+          width: auto;
+          transition: transform 0.3s ease-in-out;
+          transform: scale(1);
+          &:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .widget {
+        flex: 1;
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+
+        @include desk {
+          flex: none;
+
+          &:first-child {
+            transform: rotate(-4.11deg);
+            left: -7rem;
+            top: 4.3rem;
+          }
+
+          &:last-child {
+            transform: rotate(6.91deg);
+            position: absolute;
+            top: 7.7rem;
+            left: 9.3rem;
+          }
+        }
+      }
+    }
+
+    .section--hero-subtitle {
+      font-family: font.$ultra-light-font;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+    }
+
+    .section--hero-title {
+      font-size: 4.5rem;
+      line-height: 4.125rem;
+      letter-spacing: 0.01em;
+
+      @include desk {
+        font-size: 7.5rem;
+        line-height: 6.6rem;
+      }
+    }
+
+    .section--hero-description {
+      width: 100%;
+      max-width: none;
+
+      @include desk {
+        max-width: 464px;
+      }
+    }
+
+    .block-stack {
+      width: 100%;
+    }
+  }
+
+  #service-type-of-apps {
+    .cards-default .card {
+      min-height: 443px;
+    }
+  }
+
+}

@@ -64,7 +64,9 @@
 @use 'pages/service-conversion-rate-optimization' as page-service-conversion-rate-optimization;
 @use 'pages/service-custom-shopify-integrations' as page-service-custom-shopify-integrations;
 @use 'pages/service-shopify-theme-customization' as page-service-shopify-theme-customization;
+@use 'pages/service-seo-promotion' as page-service-seo-promotion;
 
+@use 'pages/404' as page-404;
 @use 'sections/timeline' as section-timeline;
 
 // Modifficators
