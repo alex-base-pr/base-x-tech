@@ -1,10 +1,22 @@
 RewriteEngine On
 
+# www → non-www
 RewriteCond %{HTTP_HOST} ^www\.base-xtech\.com [NC]
 RewriteRule ^(.*)$ https://base-xtech.com/$1 [L,R=301]
 
-RewriteCond %{THE_REQUEST} \s/index\.html [NC]
-RewriteRule ^index\.html$ https://base-xtech.com/ [L,R=301]
+# /index.html (root and subdirs) → folder
+RewriteCond %{THE_REQUEST} \s/+((?:[^\s?]+/)?)index\.html[\s?] [NC]
+RewriteRule ^(?:.+/)?index\.html$ /%1 [L,R=301]
+
+# /path/file.html → /path/file
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# Internally serve /path/file from /path/file.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
 
 <If "%{HTTP_HOST} == 'staging.base-xtech.com'">
   AuthType Basic

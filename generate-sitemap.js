@@ -28,12 +28,12 @@ const pages = [
   { url: '/uk/', priority: 1.0 },
 
   ...getHtmlFiles(path.join(__dirname, 'pages')).map(page => ({
-    url: '/' + page.replace(/\\/g, '/'),
+    url: '/pages/' + page.replace(/\\/g, '/').replace(/\.html$/, ''),
     priority: 0.8
   })),
 
   ...getHtmlFiles(path.join(__dirname, 'uk/pages')).map(page => ({
-    url: '/uk/' + page.replace('pages/', '').replace(/\\/g, '/'),
+    url: '/uk/pages/' + page.replace(/\\/g, '/').replace(/\.html$/, ''),
     priority: 0.8
   }))
 ];
