@@ -96,7 +96,9 @@ function moveOutputPlugin() {
 const getInputFiles = () => {
   const inputFiles = {
     index: path.resolve(__dirname, 'index.html'),
+    '404': path.resolve(__dirname, '404.html'),
     'uk/index': path.resolve(__dirname, 'uk/index.html'),
+    'uk/404': path.resolve(__dirname, 'uk/404.html'),
   };
 
   const pageFiles = glob.sync('pages/**/*.html').reduce((acc, file) => {
@@ -116,7 +118,7 @@ const getInputFiles = () => {
 
 export default defineConfig({
   plugins: [
-    liveReload(['./layout/**/*.ejs', './index.html', './pages/**/*.html', './uk/**/*.html']),
+    liveReload(['./layout/**/*.ejs', './index.html', './404.html', './pages/**/*.html', './uk/**/*.html']),
     ViteEjsPlugin(jsonData),
     moveOutputPlugin(),
     ViteImageOptimizer({
