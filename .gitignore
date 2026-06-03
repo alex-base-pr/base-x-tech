@@ -1,3 +1,5 @@
 dist
 node_modules
 .htpasswd
+.DS_Store
+config.bat
