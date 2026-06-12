@@ -92,7 +92,7 @@
 .drawer-nav {
 
   &--wrapper {
-    transform: translateY(-120%);
+    transform: translateY(-320%);
     transition: transform 0.2s ease-in-out;
 
     height: 100vh;
@@ -190,3 +190,4 @@
     z-index: 100;
   }
 }
+
