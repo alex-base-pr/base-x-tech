@@ -1,0 +1,17 @@
+User-agent: ClaudeBot
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: Amazonbot
+User-agent: CCBot
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+Allow: /
+
+Sitemap: https://base-xtech.com/sitemap.xml
+Sitemap: https://base-xtech.com/blog/sitemap.xml
