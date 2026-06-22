@@ -72,28 +72,35 @@
 }
 
 @media (max-width: 1805px) {
-  .section-approach main p {
-      min-height: 9.62rem;
-  }
-
   .section-approach blockquote {
-    grid-row-gap: 3rem;
-  }
-
-  .section-approach .v-mid {
-    align-items: flex-start;
-    height: 4.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 19.87rem;
   }
 }
 
-@media (max-width: 1252px) {
-  .section-approach main p {
-          min-height: 11rem;
+@media (max-width: 1420px) {
+  .section-approach blockquote {
+    height: 21.87rem;
   }
 }
 
-@media (max-width: 1130px) {
-  .section-approach main p {
-          min-height: 13rem;
+@media (max-width: 1255px) {
+  .section-approach blockquote {
+    height: 23.87rem;
+  }
+}
+
+@media (max-width: 1083px) {
+  .section-approach blockquote {
+    height: 24.87rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .section-approach blockquote {
+    height: 17.8em;
   }
 }
