@@ -101,6 +101,8 @@
 
 @media (max-width: 1024px) {
   .section-approach blockquote {
-    height: 17.8em;
+    justify-content: flex-start;
+    height: auto;
+    gap: 2rem;
   }
 }
