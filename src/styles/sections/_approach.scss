@@ -70,3 +70,39 @@
     }
   }
 }
+
+@media (max-width: 1805px) {
+  .section-approach blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 19.87rem;
+  }
+}
+
+@media (max-width: 1420px) {
+  .section-approach blockquote {
+    height: 21.87rem;
+  }
+}
+
+@media (max-width: 1255px) {
+  .section-approach blockquote {
+    height: 23.87rem;
+  }
+}
+
+@media (max-width: 1083px) {
+  .section-approach blockquote {
+    height: 24.87rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .section-approach blockquote {
+    justify-content: flex-start;
+    height: auto;
+    gap: 2rem;
+  }
+}

@@ -145,3 +145,15 @@
     }
   }
 }
+
+@media (max-width: 740px) {
+  .drawer-form {
+    &--wrapper {
+      height: 88vh;
+      overflow: hidden;
+    }
+  }
+  .drawer-form--wrapper .container {
+    height: 78vh;
+  }
+}
