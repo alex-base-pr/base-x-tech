@@ -41,7 +41,12 @@
   <script src="https://www.sortlist.co.uk/api/badge-embed?agencySlug=base-x-tech&color=primary&hue=500&type=certified&country=GB&locale=en" defer></script>
 
   <meta name='impact-site-verification' value='b5776188-36e9-4e02-af40-b83a2a76dbdc' />
-  <script src="/src/analytics-optout.js"></script>
+  <script>
+    window.allowTracking =
+      ["base-xtech.com", "www.base-xtech.com", "staging.base-xtech.com"].includes(
+        window.location.hostname,
+      ) && localStorage.getItem("analytics_optout") !== "1";
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPQXHBD6WH"></script>
   <script>
