@@ -12,6 +12,7 @@ Disallow: /
 User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
+Disallow: /analytics-optout/
 
 Sitemap: https://base-xtech.com/sitemap.xml
 Sitemap: https://base-xtech.com/blog/sitemap.xml

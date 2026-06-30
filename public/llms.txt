@@ -1,0 +1,19 @@
+# Base X Tech
+
+> Shopify development and AI tooling agency for e-commerce brands.
+
+## Services
+
+- Shopify store development: https://base-xtech.com/pages/shopify-development
+
+- Custom Shopify app development: https://base-xtech.com/pages/service/custom-shopify-app-development
+
+- Headless Shopify development: https://base-xtech.com/pages/service/shopify-headless-development
+
+## Content
+
+- Blog and case studies: https://base-xtech.com/blog
+
+## Contact
+
+- https://base-xtech.com (contact form)

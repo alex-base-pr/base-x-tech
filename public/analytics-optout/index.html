@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Utility — base-xtech.com</title>
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 40px 48px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      text-align: center;
+    }
+
+    .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 28px;
+      transition: background .2s, color .2s;
+    }
+
+    .status-badge.off {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .status-badge.on {
+      background: #fce4ec;
+      color: #c62828;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .status-badge.off .dot { background: #43a047; }
+    .status-badge.on  .dot { background: #e53935; }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 12px 28px;
+      transition: opacity .15s, transform .1s;
+    }
+
+    button:hover  { opacity: .85; }
+    button:active { transform: scale(.97); }
+
+    #btn-optout {
+      background: #1d1d1f;
+      color: #fff;
+    }
+
+    #btn-optin {
+      background: #f0f0f0;
+      color: #1d1d1f;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <span class="icon" id="icon">🛠</span>
+  <h1 id="title">Analytics Utility</h1>
+  <p id="desc">Службова сторінка для команди. Дозволяє виключити цей браузер зі збору аналітичних даних (MS Clarity, GA4 та інші пікселі) — щоб внутрішній трафік не спотворював статистику.</p>
+
+  <div class="status-badge off" id="status-badge">
+    <span class="dot"></span>
+    <span id="status-text">Завантаження…</span>
+  </div>
+
+  <div>
+    <button id="btn-optout" style="display:none">Вимкнути трекінг для мене</button>
+    <button id="btn-optin"  style="display:none">Увімкнути трекінг знову</button>
+  </div>
+
+  <p class="hint">Прапор зберігається в <code>localStorage</code> цього браузера.<br>Діє лише тут — інші браузери та пристрої не зачіпаються.</p>
+</div>
+
+<script>
+  var OPTOUT_KEY = 'analytics_optout';
+
+  var badge   = document.getElementById('status-badge');
+  var statusT = document.getElementById('status-text');
+  var icon    = document.getElementById('icon');
+  var btnOut  = document.getElementById('btn-optout');
+  var btnIn   = document.getElementById('btn-optin');
+
+  function isOptedOut() {
+    return localStorage.getItem(OPTOUT_KEY) === '1';
+  }
+
+  function render() {
+    if (isOptedOut()) {
+      icon.textContent   = '🚫';
+      statusT.textContent = 'КЛЮЧ ВСТАНОВЛЕНО, ТРЕКІНГ ВИМКНЕНО!';
+      badge.className    = 'status-badge off';
+      btnOut.style.display = 'none';
+      btnIn.style.display  = 'inline-block';
+    } else {
+      icon.textContent   = '📊';
+      statusT.textContent = 'КЛЮЧ ВИДАЛЕНО, ТРЕКІНГ УВІМКНЕНО!';
+      badge.className    = 'status-badge on';
+      btnOut.style.display = 'inline-block';
+      btnIn.style.display  = 'none';
+    }
+  }
+
+  btnOut.addEventListener('click', function () {
+    localStorage.setItem(OPTOUT_KEY, '1');
+    render();
+  });
+
+  btnIn.addEventListener('click', function () {
+    localStorage.removeItem(OPTOUT_KEY);
+    render();
+  });
+
+  // Автоматично встановити ключ при відкритті сторінки
+  if (!isOptedOut()) {
+    localStorage.setItem(OPTOUT_KEY, '1');
+  }
+
+  render();
+</script>
+</body>
+</html>
