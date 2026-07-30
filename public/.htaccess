@@ -10,6 +10,10 @@ RewriteRule ^(.*)$ https://base-xtech.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} \s/+((?:[^\s?]+/)?)index\.html[\s?] [NC]
 RewriteRule ^(?:.+/)?index\.html$ /%1 [L,R=301]
 
+# /index -> / 301 redirect
+RewriteCond %{THE_REQUEST} \s/+((?:[^\s?]+/)?)index/?[\s?] [NC]
+RewriteRule ^(?:.+/)?index/?$ /%1 [L,R=301]
+
 # /path/file.html → /path/file
 RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [L,R=301]
@@ -30,3 +34,13 @@ RewriteRule ^(.+?)/?$ $1.html [L]
 <Files ".htpasswd">
   Require all denied
 </Files>
+
+# /path/file → /path/file/ (enforce trailing slash)
+RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*[^/\s?][\s?] [NC]
+RewriteRule ^(.+?)\.html$ /$1/ [L,R=301]
+
+# /path/file//// → /path/file/ (collapse duplicate slashes)
+RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
+RewriteCond %{THE_REQUEST} \s/+([^\s?]*?)/{2,}([^\s?]*)[\s?] [NC]
+RewriteRule ^ /%1/%2 [L,R=301]
