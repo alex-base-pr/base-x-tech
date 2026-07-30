@@ -1,3 +1,11 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /analytics-optout/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /analytics-optout/
+
 User-agent: ClaudeBot
 User-agent: GPTBot
 User-agent: Google-Extended
