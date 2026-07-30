@@ -40,7 +40,12 @@ RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
 RewriteCond %{THE_REQUEST} \s/+[^\s?]*[^/\s?][\s?] [NC]
 RewriteRule ^(.+?)\.html$ /$1/ [L,R=301]
 
-# /path/file//// → /path/file/ (collapse duplicate slashes)
+# //path → /path  (leading duplicate slashes; also //// → /)
 RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
-RewriteCond %{THE_REQUEST} \s/+([^\s?]*?)/{2,}([^\s?]*)[\s?] [NC]
+RewriteCond %{THE_REQUEST} \s/{2,}([^\s?]*)[\s?] [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# /path/file//// → /path/file/  (duplicate slashes elsewhere)
+RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
+RewriteCond %{THE_REQUEST} \s/+([^/\s?][^\s?]*?)/{2,}([^\s?]*)[\s?] [NC]
 RewriteRule ^ /%1/%2 [L,R=301]
