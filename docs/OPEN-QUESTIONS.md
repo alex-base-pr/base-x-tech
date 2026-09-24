@@ -14,3 +14,5 @@ None of these block the work that is in progress. Default in brackets is what we
 | Q-8 | Prod deploy path after dev sign-off (PR into base-xtech/base-xtech `staging` → `live`) | Alex | decided after dev | 2026-09-24 |
 | Q-9 | Cloudflare: allow GPTBot (AI Crawl Control) | Alex | — | 2026-09-24 |
 | Q-10 | Team photos for About/site | Alex | placeholders only; do not use Drive "content" photos | 2026-09-24 |
+| Q-11 | Contact form shows success even when the ClickUp request fails (`src/main.js`, `finally` block) — leads can be lost silently. Fix in this release? | Alex | unchanged (out of scope) | 2026-09-24 |
+| Q-12 | Accessibility: colour contrast (#bbb, accent) and slider dot size fail WCAG AA — treated as design-owned, not blocking in this bridge release. OK? | Alex | reported, not fixed | 2026-09-24 |

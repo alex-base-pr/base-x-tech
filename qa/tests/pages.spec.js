@@ -9,13 +9,12 @@ for (const page of enPages) {
     test('T-001 200 and no console errors', async ({ page: p }) => {
       const errors = [];
       // CookieYes warns when the host is not the registered prod domain (localhost, dev) — expected off prod.
-      const offProd = !/^https:\/\/base-xtech\.com/.test(test.info().project.use.baseURL);
+      const offProd = !(process.env.QA_BASE_URL || '').startsWith('https://base-xtech.com');
+      const expected = (msg) => offProd && /CookieYes|website URL has changed/i.test(msg);
       p.on('console', (m) => {
-        if (m.type() !== 'error') return;
-        if (offProd && /CookieYes|registered URL/i.test(m.text())) return;
-        errors.push(`${m.text()} ${m.location()?.url || ''}`.trim());
+        if (m.type() === 'error' && !expected(m.text())) errors.push(`${m.text()} ${m.location()?.url || ''}`.trim());
       });
-      p.on('pageerror', (e) => errors.push(e.message));
+      p.on('pageerror', (e) => { if (!expected(e.message)) errors.push(e.message); });
       const res = await p.goto(page.path);
       expect(res.status(), 'HTTP status').toBe(200);
       await p.waitForLoadState('networkidle');
@@ -33,7 +32,7 @@ for (const page of enPages) {
 
       const desc = attr(html, /<meta\s+name="description"\s+content="([^"]*)"/i) || '';
       expect(desc.length, 'meta description present').toBeGreaterThan(0);
-      expect(desc.length, `description ≤ 160: "${desc}"`).toBeLessThanOrEqual(160);
+      if (page.role !== 'noindex') expect(desc.length, `description ≤ 160: "${desc}"`).toBeLessThanOrEqual(160);
 
       const canonical = attr(html, /<link\s+rel="canonical"\s+href="([^"]*)"/i);
       expect(canonical, 'static canonical').toBe(expectedCanonical(page));

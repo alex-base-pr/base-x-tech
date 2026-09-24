@@ -1,6 +1,6 @@
 <head>
   <meta charset="UTF-8">
-  <meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <% if (typeof title !== 'undefined') { %>
     <title><%- title %></title>
   <% } else { %>
@@ -18,21 +18,9 @@
     <link rel="alternate" href="<%- hreflangDefault %>" hreflang="x-default">
   <% } %>
 
-  <script>
-    (function() {
-      const baseUrl = 'https://base-xtech.com';
-      const currentPath = window.location.pathname;
+  <%# canonical, robots and JSON-LD are added at build by scripts/seo-plugin.js %>
 
-      const canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      canonical.href = baseUrl + currentPath;
-      document.head.appendChild(canonical);
-    })();
-  </script>
-
-  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/801fe4c841070fc09d1166d973a2a6b9/script.js"></script>
   <link rel="stylesheet" href="/src/styles/main.scss" />
-  <link rel="preload" href="/images/sections/bg-mob.jpg" as="image" fetchpriority="high">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -41,6 +29,8 @@
   <script src="https://www.sortlist.co.uk/api/badge-embed?agencySlug=base-x-tech&color=primary&hue=500&type=certified&country=GB&locale=en" defer></script>
 
   <meta name='impact-site-verification' value='b5776188-36e9-4e02-af40-b83a2a76dbdc' />
+  <% if (deployEnv !== 'dev') { %>
+  <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/801fe4c841070fc09d1166d973a2a6b9/script.js"></script>
   <script>
     window.allowTracking =
       ["base-xtech.com", "www.base-xtech.com", "staging.base-xtech.com"].includes(
@@ -86,4 +76,5 @@
       })(window, document, "clarity", "script", "rjdyc4vpmr");
     }
   </script>
+  <% } %>
 </head>

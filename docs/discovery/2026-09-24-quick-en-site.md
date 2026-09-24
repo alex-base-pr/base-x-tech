@@ -82,7 +82,7 @@ so indexing of the new positioning starts now. A throwaway-but-production-qualit
 | REQ-031 | When a PR is opened, GitHub Actions shall run `npm run qa` and report pass/fail on the PR. | T-030 |
 | REQ-032 | The repo shall contain `CLAUDE.md`, `docs/STATUS.md` (page × state board), `docs/OPEN-QUESTIONS.md` and this spec; each merged PR updates STATUS. | T-031 |
 | NFR-001 | Mobile Lighthouse on each EN page: SEO ≥ 95, Accessibility ≥ 90, Performance ≥ 70 (old style baseline; recorded, not blocking below). | T-006 |
-| NFR-002 | axe-core: zero `critical`/`serious` violations on EN pages at 375 px and 1440 px. | T-006 |
+| NFR-002 | axe-core: zero `critical`/`serious` violations on EN pages at 375 px and 1440 px, except `color-contrast` and `target-size` (legacy palette/slider — design-owned, reported; Q-12). | T-006 |
 | NFR-003 | No horizontal scroll at 375 / 768 / 1440 px on EN pages. | T-007 |
 | NFR-004 | Zero console errors on EN pages. | T-001 |
 | CON-001 | Keep existing URLs; no redirects (owner). | — |

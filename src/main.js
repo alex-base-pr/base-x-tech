@@ -388,6 +388,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
+          // Dev/preview builds never send real leads (spec REQ-025); the success state still shows.
+          if (__DEPLOY_ENV__ === 'dev') {
+              console.info('[dev] contact form not sent', taskData);
+              form.reset();
+              return;
+          }
           const response = await fetch('https://clickup.base-xtech.com', {
               method: 'POST',
               headers: {
@@ -562,4 +568,16 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add('active');
     }
   });
+});
+
+// The Sortlist badge is injected by a third-party script without alt text or a link name (axe image-alt / link-name).
+document.addEventListener('DOMContentLoaded', () => {
+  const label = () => {
+    document.querySelectorAll('a[href*="sortlist."]').forEach((a) => {
+      if (!a.getAttribute('aria-label')) a.setAttribute('aria-label', 'Base X Tech on Sortlist: certified agency');
+      a.querySelectorAll('img:not([alt])').forEach((img) => img.setAttribute('alt', 'Sortlist certified agency badge'));
+    });
+  };
+  label();
+  new MutationObserver(label).observe(document.body, { childList: true, subtree: true });
 });
