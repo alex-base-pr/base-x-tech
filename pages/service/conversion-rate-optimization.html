@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<%# Copy: content/source/06-conversion-rate-optimization.txt (Marko, v2 final). Slot order: spec §5 D8. %>
 <%- include('layout/head-alt.ejs', {
   title: "Shopify Conversion Rate Optimization (CRO) | Base X Tech",
-  description: "CRO for Shopify stores: site audits, heatmaps, user behavior analysis, and A/B testing, so you convert more of the traffic you already have.",
+  description: "We audit your Shopify store, score every fix on impact and effort, then build the changes: product pages, checkout, mobile, speed and the tracking.",
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/pages/service/conversion-rate-optimization/",
   hreflangDefault: "https://base-xtech.com/pages/service/conversion-rate-optimization/"
@@ -19,233 +20,209 @@
       include('layout/section/hero-type-two.ejs', {
         locale: 'en',
         id: "service-hero",
-        title: "Conversion Rate Optimization",
-        subtitle: "cro for shopify service",
-        description: "Our CRO services focus on increasing your store’s revenue through data-driven testing, user behavior analysis, and optimized conversion funnels.",
+        subtitle: "CRO",
+        title: "Conversion work for<br> stores where the fix<br> is in the build",
+        description: "We audit, prioritise and then actually build the changes. Not a slide deck of recommendations you have to find someone to implement.",
+        title_size: "long",
+        button_text: "Discuss Your Project",
         icons: [
           "shopify"
-        ],
-        cards: [
-          {
-            image:"/images/pages/service/conversion-rate-optimization/hero/card-2.png",
-            title: "Boost Sales"
-          },
-          {
-            image:"/images/pages/service/conversion-rate-optimization/hero/card-1.png",
-            title: "Improve UX"
-          },
         ]
       })
     %>
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
         id: "service-type-of-apps",
-        title: "SERVICES AND TECHNOLOGIES",
-        subtitle: "What types <br class='br-desk'>of apps <span class='accent'>we can build <br class='br-desk'>for your</span> Shopify store",
+        title: "Our Capabilities",
+        subtitle: "Findings you can act<br class='br-desk'> on, then <span class='accent'>acted on.</span>",
         cards: [
           {
-            title: "Comprehensive Website and Store Audit",
-            description: "We conduct a full assessment of your website or ecommerce store—structure, navigation, calls to action, checkout flow, page speed, and mobile performance. Our audits uncover hidden conversion blockers and create a clear plan to fix them.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Audit & Backlog",
+            description: "Problems grouped by area and scored on impact, effort and confidence.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "User Behavior and Data Analysis",
-            description: "Using heatmaps, session recordings, analytics, and user journey reports, we analyze visitor behavior to pinpoint pain points and opportunities. These insights power our data-driven CRO strategies that improve customer engagement and conversions.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Product Page CRO",
+            description: "The page that decides most purchases, rebuilt around the questions buyers ask.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "A/B Testing and Experimentation",
-            description: "We create and manage A/B and multivariate tests for headlines, layouts, copy, buttons, forms, and images. Our structured testing approach delivers measurable wins and supports long-term growth.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Cart & Checkout",
+            description: "Fewer steps and fewer reasons to leave between cart and payment.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Landing Page and Funnel Optimization",
-            description: "We refine landing pages and conversion funnels to reduce bounce rates and guide users toward completing their goals. Whether you want more leads, signups, or purchases, our optimization methods boost results at every stage.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Mobile CRO",
+            description: "The layout most of your traffic sees, treated as the primary one.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Shopify Conversion Rate Optimization",
-            description: "As Shopify specialists, we deliver customized shopify conversion rate optimization strategies for stores of all sizes. We help you maximize your existing traffic, improve user flow, and increase revenue without inflating ad spend.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Speed & Core Web Vitals",
+            description: "Images, scripts and unused apps cleaned up until the store loads properly.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Reporting and Continuous Improvement",
-            description: "Conversion optimization is an ongoing process. We provide detailed reporting, monitor test performance, and continuously experiment to push your conversion rates higher over time.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
-          },
-        ]
-      })
-    %>
-
-    <%-
-      include('layout/section/split.ejs', {
-        locale: 'en',
-        theme: 'light',
-        id: "service-advantages",
-        title: "ADVANTAGES",
-        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
-        content_cards: [
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Data-Driven Focus",
-            description: "Every recommendation and test is based on real customer data, analytics, and proven behavior patterns. We focus on actionable results, not assumptions."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "In-House Expertise",
-            description: "All work is performed by our experienced internal team. You’ll collaborate directly with CRO experts who deliver fast execution and full accountability."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Transparent and Flexible Pricing",
-            description: "Our pricing is clear, predictable, and scalable to fit your business size and objectives. We customize packages so you always know the value of your investment."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Proven Ecommerce and Shopify Expertise",
-            description: "We’ve partnered with countless ecommerce and Shopify brands to solve conversion bottlenecks, optimize UX, and increase online revenue efficiently."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Reliable Partnership",
-            description: "We meet deadlines, communicate openly, and commit to delivering what we promise. We become an extension of your team, working toward shared business growth.`"
+            title: "Analytics & Reporting",
+            description: "GA4 events, funnels and Clarity set up so you can see what the change did.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           }
         ]
       })
     %>
 
-
     <%- include('layout/section/works.ejs', {
+      semantic: true,
       locale: 'en',
       id: "service-portfolio",
       theme: "dark",
-      title: "PORTFOLIO",
-      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
-      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      title: "Recent Projects",
+      stat: "50-200",
+      description: "% conversion uplift range. 100+ projects delivered, with a 4.8 rating on Upwork. Changes we can point to afterwards.",
       items: [
         {
-          title: "Naya Tech",
-          text: "Design & Shopify development for technology startup",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-1-bg.png",
+          title: "Innan Jewellery",
+          text: "Enquiry flow built for pieces sold on request rather than in stock.",
+          tags: "UX/UI Design / Jewellery",
           icons: ['shopify']
         },
         {
-          title: "Bonkind",
-          text: "Brand identity & redesign of self-care ecommerce",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-2-bg.png",
-          icons: ['figma', 'ai']
+          title: "UK gifting brand",
+          text: "Configurator and checkout path for made-to-order products.",
+          tags: "Configurator / Gifting",
+          icons: ['shopify']
         },
         {
-          title: "KLOTT",
-          text: "Store setup & customizations for fashion brand",
-          link: "https://ua.klottclothes.com/",
-          background_image: "/images/sections/works/card-3-bg.png",
-          icons: ['git', 'shopify']
+          title: "Prime EVA",
+          text: "Product pages rebuilt around a catalogue that keeps growing.",
+          tags: "UX/UI Design / Product Pages",
+          link: "https://primeeva.com/",
+          background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
+          icons: ['shopify']
         }
       ]
     }) %>
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
-        id: "service-expertise",
-        title: "EXPERTISE",
-        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
-        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
-        media_cards: [
+        id: "service-advantages",
+        title: "When We Can Help",
+        subtitle: "Traffic arrives.<br class='br-desk'> Very little <span class='accent'>converts.</span>",
+        content_cards: [
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "You get traffic but not orders" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Checkout loses more than it should" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Nobody can tell what a change achieved" }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/info.ejs', {
+      semantic: true,
+      locale: "en",
+      id: "reviews",
+      theme: "dark",
+      class: "reviews",
+      title: "What clients say",
+      background_image: "/images/pages/shopify-development/section/reviews/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
+      reviews: [
+        {
+          text: "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+          name: "VT Advantec",
+          post: "Shopify Development"
+        },
+        {
+          text: "We received positive feedback from customers about the new site, which was fully functional and met all our needs.",
+          name: "Lili Mager",
+          post: "Store Build"
+        },
+        {
+          text: "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+          name: "Gunia",
+          post: "Website Redesign"
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        locale: 'en',
+        id: 'service-faq',
+        title: 'How We Run CRO',
+        subtitle: 'From audit to shipped<br> change to <span class="accent">measured.</span>',
+        button: {
+          text: "Discuss Your Project"
+        },
+        faq: [
           {
-            title: "fashion",
-            image: "/images/pages/service/index/industries/card-1.png"
+            title: "Audit & Prioritise",
+            description: "We go through the funnel and score every problem on impact, effort and confidence, so the order of work is not a guess."
           },
           {
-            title: "beauty",
-            image: "/images/pages/service/index/industries/card-2.png"
+            title: "Agree the Scope",
+            description: "We pick the quick wins and the bigger bets with you, and set what success looks like before starting."
           },
           {
-            title: "automotive",
-            image: "/images/pages/service/index/industries/card-3.png"
+            title: "Build & Test",
+            description: "We implement the changes, and A/B test them where you have the traffic to make the result mean something."
           },
           {
-            title: "Food & Drinks",
-            image: "/images/pages/service/index/industries/card-4.png"
-          },
-          {
-            title: "Jewelry & Luxury",
-            image: "/images/pages/service/index/industries/card-5.png"
-          },
-          {
-            title: "Furniture & Decor",
-            image: "/images/pages/service/index/industries/card-6.png"
-          },
-          {
-            title: "Health & Supplements",
-            image: "/images/pages/service/index/industries/card-7.png"
-          },
-          {
-            title: "Bags & Accessories",
-            image: "/images/pages/service/index/industries/card-8.png"
-          },
-          {
-            title: "Tech & Gadgets",
-            image: "/images/pages/service/index/industries/card-9.png"
-          },
-          {
-            title: "Sports & Lifestyle",
-            image: "/images/pages/service/index/industries/card-10.png"
-          },
+            title: "Measure & Repeat",
+            description: "We report what each change did and update the backlog, because CRO is a cycle rather than a one-off project."
+          }
         ]
       })
     %>
 
     <%-
       include('layout/section/faq.ejs', {
+        semantic: true,
+        schema: true,
+        numbered: false,
+        extra_class: 'faq-list',
         locale: 'en',
-        id: 'service-faq',
-        title: 'WORKFLOW',
-        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
-        button: {
-          text: "Discuss a project"
-        },
+        id: 'service-questions',
+        title: 'FAQ',
+        subtitle: 'Questions we <span class="accent">get asked</span>',
         faq: [
           {
-            title: "Discovery and Goal Setting",
-            description: "We align with your business goals, analyze your website or store, and define key conversion objectives together."
+            title: "What does a CRO audit include?",
+            description: "We go through the whole funnel: homepage, listing and product pages, cart, checkout, mobile, speed, and whatever your analytics is or is not recording. Every problem comes back grouped by area and scored on impact, effort and confidence, so you get an ordered list rather than observations."
           },
           {
-            title: "Audit and Research",
-            description: "We perform a deep audit of your site structure and customer journeys, backed by analytics and behavior insights, to identify clear areas for improvement."
+            title: "Do you implement the changes or just recommend them?",
+            description: "We implement them. That is the difference between this and an audit you then have to find a developer for. The same team that finds the problem builds the fix, which is also why we can tell you honestly which fixes are cheap and which are not."
           },
           {
-            title: "Strategy and Testing",
-            description: "We create a customized CRO roadmap and launch structured tests to uncover the highest-converting versions of your key pages and elements."
+            title: "How do you decide what to fix first?",
+            description: "Every hypothesis gets scored on impact, effort and confidence, then ordered. Quick wins go first because they fund the argument for the bigger work. You approve the scope before anything gets built, so the order of work is agreed rather than assumed."
           },
           {
-            title: "Reporting and Iteration",
-            description: "We track results, provide clear reports, and continuously refine your site through ongoing optimization cycles to meet or exceed your conversion goals."
+            title: "Do we need enough traffic for A/B testing?",
+            description: "For testing, yes. Below a certain volume a test cannot reach significance, and running one anyway just delays the fix. On lower-traffic stores we implement the changes we are confident about and measure the funnel rather than the variant."
+          },
+          {
+            title: "How long before we see results?",
+            description: "Quick wins show inside the first reporting cycle. Structural work on product pages or checkout takes longer to read, because you need enough sessions to separate the change from normal variation. We set what success looks like before starting."
+          },
+          {
+            title: "Can you fix site speed as part of this?",
+            description: "Yes, and it is usually on the list. Images, third-party scripts, unused apps and theme code all slow a store down, and speed affects mobile conversion most. It is development work, which is why it sits with us rather than a separate specialist."
+          },
+          {
+            title: "What analytics do we need in place?",
+            description: "Working GA4 ecommerce events at minimum, and a session recording tool if you want to see behaviour rather than infer it. If tracking is broken or missing we fix that first, because measuring an improvement against bad data tells you nothing."
+          },
+          {
+            title: "Is this a one-off project or ongoing?",
+            description: "Both work, and ongoing works better. A single round finds and fixes the obvious problems. After that CRO is a cycle: implement, measure, update the backlog, pick the next thing. Stores that treat it as a project stop improving the moment it ends."
           }
         ]
       })
@@ -253,7 +230,14 @@
 
     <%- include('layout/section/approach.ejs') -%>
 
-    <%- include('layout/section/cta.ejs') %>
+    <%- include('layout/section/cta.ejs', {
+      cta: {
+        label: "Let’s talk",
+        title: "Getting traffic but<br> not the orders?",
+        body: "Tell us where buyers drop off and we'll tell you what we would change first.",
+        button: "Let's Talk"
+      }
+    }) %>
   </main>
 
   <%- include('layout/footer-alt.ejs') %>
