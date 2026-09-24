@@ -83,8 +83,8 @@
         "author": "Stealth Startup US"
       },
       {
-        "quote": "Their team delivered a bug-free Shopify store that resulted in higher conversion rates.",
-        "author": "Stealth Startup US"
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "author": "VT Advantec"
       },
       {
         "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs.",
@@ -126,8 +126,7 @@
           "10M+ possible configurations"
         ],
         "image": "/images/v2/home-project-primeeva.webp",
-        "link": "https://primeeva.com/",
-        "linkLabel": "Visit the Prime EVA store",
+        "link": null,
         "imageAlt": "Prime EVA custom car mat configurator on Shopify, shown on a desktop monitor"
       },
       {

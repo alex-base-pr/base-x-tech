@@ -60,7 +60,8 @@
         ],
         "link": "/blog/innan-jewellery-shopify-case-study/",
         "linkLabel": "Read the Innan Jewellery case study",
-        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Automotive",
@@ -71,8 +72,7 @@
           "Shopify",
           "Product Pages"
         ],
-        "link": "https://primeeva.com/",
-        "linkLabel": "Visit the Prime EVA store",
+        "link": null,
         "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
         "badge": "10M+ possible configurations"
       },
@@ -115,12 +115,12 @@
       },
       {
         "client": "Lili Mager",
-        "context": "Website Redesign",
+        "context": "Store Build",
         "quote": "We received positive feedback from customers about the new site, which met all of our expectations and unique needs."
       },
       {
         "client": "Gunia",
-        "context": "Theme Customization",
+        "context": "Theme Development",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       }
     ]
@@ -201,6 +201,19 @@
       {
         "q": "What does Shopify store design cost?",
         "a": "It depends on the number of page types and whether we are building it as well as designing it. We scope every project before quoting, and we will tell you if what you need is smaller than the work we take on."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Shopify Development",
+        "href": "/pages/shopify-development/"
+      },
+      {
+        "name": "Conversion Rate Optimization",
+        "href": "/pages/service/conversion-rate-optimization/"
       }
     ]
   },

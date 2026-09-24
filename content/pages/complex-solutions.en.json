@@ -7,7 +7,7 @@
     "eyebrow": "Complex Solutions",
     "title": "Complex systems,<br> connected around how<br> your business works.",
     "lead": "We connect e-commerce, ERP, POS, inventory and custom systems — building the integrations, apps and automation that keep your operations in sync.",
-    "button": "Book a call"
+    "button": "Discuss your project"
   },
   "strip": {
     "label": "Built around the systems you already use:",
@@ -81,7 +81,7 @@
       "A reliable integration is more than connecting two systems. It means defining field mapping and data ownership, handling webhooks and API limits, and building in retries, reconciliation and monitoring so critical data keeps moving reliably across Shopify, ERP, POS and the rest of your infrastructure.",
       "When an existing connector fits the process, we use it. When the business logic is more complex, we build the integration layer around it — based on the systems involved, data volume, operational risk and how the business actually works."
     ],
-    "button": "Book a call"
+    "button": "Discuss your project"
   },
   "architecture": {
     "label": "System architecture",
@@ -195,7 +195,7 @@
   "process": {
     "label": "Our Process",
     "title": "From mapping the complexity<br> to a system <span class=\"accent\">that works.</span>",
-    "button": "Book a call",
+    "button": "Discuss your project",
     "stagePrefix": "Stage",
     "steps": [
       {
@@ -254,10 +254,17 @@
       }
     ]
   },
+  "related": {
+    "label": "Related services",
+    "items": [
+      { "name": "Shopify Integrations", "href": "/pages/service/custom-shopify-integrations/" },
+      { "name": "Shopify Migration", "href": "/pages/service/shopify-migration-service/" }
+    ]
+  },
   "cta": {
     "label": "Let’s talk",
     "title": "Have a complex system<br> to connect?",
     "body": "Talk to our team about your systems, workflows and what needs to work better. We’ll take it from there.",
-    "button": "Book a call"
+    "button": "Discuss your project"
   }
 }

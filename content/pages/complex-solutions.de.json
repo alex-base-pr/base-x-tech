@@ -7,7 +7,7 @@
     "eyebrow": "Komplexe Lösungen",
     "title": "Komplexe Systeme,<br> so verbunden, wie<br> Ihr Unternehmen arbeitet.",
     "lead": "Wir verbinden E-Commerce, ERP, POS, Lagerverwaltung und individuelle Systeme – mit den Integrationen, Apps und Automatisierungen, die Ihre Abläufe synchron halten.",
-    "button": "Gespräch vereinbaren"
+    "button": "Projekt besprechen"
   },
   "strip": {
     "label": "Abgestimmt auf die Systeme, die Sie bereits nutzen:",
@@ -81,7 +81,7 @@
       "Eine zuverlässige Integration ist mehr als die Verbindung zweier Systeme. Dazu gehört, Feldzuordnung und Datenhoheit festzulegen, Webhooks und API-Limits sauber zu handhaben und automatische Wiederholungsversuche, Datenabgleich und Monitoring einzubauen – damit kritische Daten zuverlässig zwischen Shopify, ERP, POS und dem Rest Ihrer Infrastruktur fließen.",
       "Wenn ein vorhandener Konnektor zum Prozess passt, nutzen wir ihn. Ist die Geschäftslogik komplexer, entwickeln wir die Integrationsschicht passend dazu – ausgerichtet auf die beteiligten Systeme, das Datenvolumen, das betriebliche Risiko und darauf, wie das Unternehmen tatsächlich arbeitet."
     ],
-    "button": "Gespräch vereinbaren"
+    "button": "Projekt besprechen"
   },
   "architecture": {
     "label": "Systemarchitektur",
@@ -195,7 +195,7 @@
   "process": {
     "label": "Unser Vorgehen",
     "title": "Von der Analyse der Komplexität<br> zu einem System, <span class=\"accent\">das funktioniert.</span>",
-    "button": "Gespräch vereinbaren",
+    "button": "Projekt besprechen",
     "stagePrefix": "Phase",
     "steps": [
       {
@@ -254,10 +254,17 @@
       }
     ]
   },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/" },
+      { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/" }
+    ]
+  },
   "cta": {
     "label": "Sprechen wir",
     "title": "Sie möchten ein komplexes<br> System anbinden?",
     "body": "Sprechen Sie mit unserem Team über Ihre Systeme, Abläufe und das, was besser funktionieren soll. Um die nächsten Schritte kümmern wir uns.",
-    "button": "Gespräch vereinbaren"
+    "button": "Projekt besprechen"
   }
 }

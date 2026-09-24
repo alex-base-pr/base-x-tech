@@ -65,7 +65,8 @@
         ],
         "link": "/blog/custom-shopify-integrations-gifting-brand/",
         "linkLabel": "Read the UK gifting brand case study",
-        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Automotive",
@@ -75,7 +76,7 @@
           "Migration",
           "ERP"
         ],
-        "link": "https://primeeva.com/",
+        "link": null,
         "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
         "badge": "10M+ possible configurations"
       },
@@ -114,7 +115,7 @@
     "items": [
       {
         "client": "Gunia",
-        "context": "Store Migration",
+        "context": "Theme Development",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       },
       {
@@ -205,6 +206,19 @@
       {
         "q": "What happens after we launch on Shopify?",
         "a": "We watch it. Redirects get verified against live responses, sitemaps get submitted, and Search Console gets checked for weeks rather than days. Migrations rarely fail on launch day. They fail three weeks later, when nobody is looking at the coverage report."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Shopify Integrations",
+        "href": "/pages/service/custom-shopify-integrations/"
+      },
+      {
+        "name": "Shopify Development",
+        "href": "/pages/shopify-development/"
       }
     ]
   },

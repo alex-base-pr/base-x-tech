@@ -65,7 +65,8 @@
         ],
         "link": "/blog/innan-jewellery-shopify-case-study/",
         "linkLabel": "Read the Innan Jewellery case study",
-        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Gifting",
@@ -77,7 +78,8 @@
         ],
         "link": "/blog/custom-shopify-integrations-gifting-brand/",
         "linkLabel": "Read the UK gifting brand case study",
-        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Automotive",
@@ -88,7 +90,7 @@
           "UI Design",
           "Product Pages"
         ],
-        "link": "https://primeeva.com/",
+        "link": null,
         "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
         "badge": "10M+ possible configurations"
       }
@@ -126,7 +128,7 @@
       },
       {
         "client": "Gunia",
-        "context": "Website Redesign",
+        "context": "Theme Development",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       }
     ]
@@ -207,6 +209,19 @@
       {
         "q": "Is this a one-off project or ongoing?",
         "a": "Both work, and ongoing works better. A single round finds and fixes the obvious problems. After that CRO is a cycle: implement, measure, update the backlog, pick the next thing. Stores that treat it as a project stop improving the moment it ends."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Shopify Development",
+        "href": "/pages/shopify-development/"
+      },
+      {
+        "name": "Web Design",
+        "href": "/pages/service/custom-web-design-services/"
       }
     ]
   },

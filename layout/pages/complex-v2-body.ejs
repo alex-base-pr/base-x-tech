@@ -13,7 +13,7 @@
 
   <nav class="v2-rail" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span></nav>
 
-  <main id="complex-solutions" class="v2-main cx">
+  <main id="complex-solutions" class="v2-main cx" data-service="Complex Solutions (ERP, POS, middleware)">
 
     <%# Hero + systems strip (REQ-015, Q-23/Q-25) %>
     <section class="cx-hero" data-v2-section>
@@ -259,6 +259,15 @@
         <% }) %>
       </div>
     </section>
+
+    <% if (c.related && c.related.items.length) { %>
+    <nav class="v2-related cx-related" aria-label="<%= c.related.label %>">
+      <p class="v2-related__label"><%= c.related.label %></p>
+      <ul class="v2-related__list">
+        <% c.related.items.forEach(r => { %><li><a href="<%= r.href %>"><%= r.name %><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></li><% }) %>
+      </ul>
+    </nav>
+    <% } %>
 
     <%# Closing CTA %>
     <section class="cx-cta" id="contact" data-v2-section>

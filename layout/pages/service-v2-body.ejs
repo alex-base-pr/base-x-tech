@@ -8,7 +8,7 @@
 
   <nav class="v2-rail" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span></nav>
 
-  <main id="<%= mainId %>" class="v2-main">
+  <main id="<%= mainId %>" class="v2-main"<% if (typeof service !== 'undefined' && service) { %> data-service="<%= service %>"<% } %>>
     <section class="v2-hero" data-v2-section>
       <div class="v2-hero__grid" aria-hidden="true"></div>
       <p class="v2-tag v2-hero__tag"><%= c.hero.tag %></p>
@@ -57,7 +57,7 @@
         <% c.projects.items.forEach(item => { %>
           <article class="v2-project">
             <p class="v2-project__cat"><span class="v2-dot"></span><%= item.category %></p>
-            <div class="v2-project__media">
+            <div class="v2-project__media<%= item.imageFit === 'contain' ? ' v2-project__media--contain' : '' %>">
               <% if (item.badge) { %><span class="v2-project__badge"><%= item.badge %></span><% } %>
               <% if (item.image) { %><img loading="lazy" src="<%= item.image %>" alt="<%= item.title %> — Shopify store"><% } else { %><div class="v2-project__placeholder"><span><%= item.title %></span></div><% } %>
             </div>
@@ -78,7 +78,7 @@
         <p class="v2-tag"><%= c.help.label %></p>
         <h2 class="v2-h-m"><%= c.help.title %> <span class="v2-muted"><%= c.help.titleMuted %></span></h2>
       </div>
-      <ol class="v2-help__grid">
+      <ol class="v2-help__grid<%= c.help.items.some(item => item.description) ? '' : ' v2-help__grid--titles' %>">
         <% c.help.items.forEach((item, i) => { %>
           <li class="v2-help__item<%= i === 1 ? ' is-active' : '' %>" tabindex="0">
             <span class="v2-help__num">/<%= String(i + 1).padStart(2, '0') %></span>
@@ -147,6 +147,15 @@
         <% }) %>
       </div>
     </section>
+
+    <% if (c.related && c.related.items.length) { %>
+    <nav class="v2-related v2-light" aria-label="<%= c.related.label %>">
+      <p class="v2-related__label"><%= c.related.label %></p>
+      <ul class="v2-related__list">
+        <% c.related.items.forEach(r => { %><li><a href="<%= r.href %>"><%= r.name %><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></li><% }) %>
+      </ul>
+    </nav>
+    <% } %>
 
     <section class="v2-cta" data-v2-section>
       <% if (c.cta.images && c.cta.images.length) { %><div class="v2-cta__collage" aria-hidden="true"><% c.cta.images.slice(0, 3).forEach(src => { %><img loading="lazy" src="<%= src %>" alt=""><% }) %></div><% } %>

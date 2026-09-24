@@ -77,7 +77,8 @@
         ],
         "link": "/blog/custom-shopify-integrations-gifting-brand/",
         "linkLabel": "Read the UK gifting brand case study",
-        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Shopify App",
@@ -88,7 +89,8 @@
           "Storefront UX"
         ],
         "link": null,
-        "image": "/images/v2/shopify-apps-projects-4-image-5955.webp"
+        "image": "/images/v2/shopify-apps-projects-4-image-5955.webp",
+        "imageFit": "contain"
       }
     ]
   },
@@ -114,7 +116,7 @@
     "items": [
       {
         "client": "VT Advantec",
-        "context": "Custom APIs",
+        "context": "Shopify Development",
         "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
       },
       {
@@ -205,6 +207,19 @@
       {
         "q": "Can you take over an app someone else built?",
         "a": "Sometimes, and we audit it before saying yes. Taking on a codebase without knowing what is in it is how you inherit someone else's problem. If it is maintainable we will say so. If rebuilding costs less than untangling it, we will say that instead."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Shopify Integrations",
+        "href": "/pages/service/custom-shopify-integrations/"
+      },
+      {
+        "name": "Shopify Development",
+        "href": "/pages/shopify-development/"
       }
     ]
   },

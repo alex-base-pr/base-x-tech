@@ -62,7 +62,7 @@
           "Configurator",
           "ERP"
         ],
-        "link": "https://primeeva.com/",
+        "link": null,
         "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
         "badge": "10M+ possible configurations"
       },
@@ -76,7 +76,8 @@
         ],
         "link": "/blog/innan-jewellery-shopify-case-study/",
         "linkLabel": "Read the Innan Jewellery case study",
-        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Homeware",
@@ -204,6 +205,19 @@
       {
         "q": "What happens after launch?",
         "a": "We stay on it. We watch the store under real traffic, fix what surfaces in the first weeks, and keep it working through Shopify's API version changes. Handing over a login and disappearing is where most of the problems we get called in to fix started."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Web Design",
+        "href": "/pages/service/custom-web-design-services/"
+      },
+      {
+        "name": "Shopify Integrations",
+        "href": "/pages/service/custom-shopify-integrations/"
       }
     ]
   },

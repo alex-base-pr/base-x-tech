@@ -65,7 +65,8 @@
         ],
         "link": "/blog/custom-shopify-integrations-gifting-brand/",
         "linkLabel": "Read the UK gifting brand case study",
-        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
       },
       {
         "category": "Automotive",
@@ -75,7 +76,7 @@
           "ERP",
           "Automation"
         ],
-        "link": "https://primeeva.com/",
+        "link": null,
         "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
         "badge": "10M+ possible configurations"
       },
@@ -114,7 +115,7 @@
     "items": [
       {
         "client": "VT Advantec",
-        "context": "Platform Integration",
+        "context": "Shopify Development",
         "quote": "They deliver top-tier expertise across web development and platform integration, always providing strategic, practical advice, and expertly navigating tight timelines to ensure our success."
       },
       {
@@ -124,7 +125,7 @@
       },
       {
         "client": "Gunia",
-        "context": "Migration",
+        "context": "Theme Development",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       }
     ]
@@ -205,6 +206,19 @@
       {
         "q": "Can you integrate with our warehouse or 3PL?",
         "a": "Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store."
+      }
+    ]
+  },
+  "related": {
+    "label": "Related services",
+    "items": [
+      {
+        "name": "Complex Solutions (DACH)",
+        "href": "/pages/complex-solutions/"
+      },
+      {
+        "name": "Custom Shopify Apps",
+        "href": "/pages/service/custom-shopify-app-development/"
       }
     ]
   },
