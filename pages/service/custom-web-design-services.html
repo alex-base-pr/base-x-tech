@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<%# Copy: content/source/01-web-design.txt (Marko, final). Slot order: spec §5 D8. %>
 <%- include('layout/head-alt.ejs', {
-  title: "Custom Web Design Services for Ecommerce | Base X Tech",
-  description: "We design custom websites and Shopify stores with responsive layouts, clear navigation, and a visual identity built around your brand and audience.",
+  title: "Shopify Web Design & UX/UI Services | Base X Tech",
+  description: "We design Shopify storefronts for products people compare and configure: UX/UI, design systems, prototypes and creative direction, built by the same team.",
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/pages/service/custom-web-design-services/",
   hreflangDefault: "https://base-xtech.com/pages/service/custom-web-design-services/"
@@ -19,9 +20,11 @@
       include('layout/section/hero-type-two.ejs', {
         locale: 'en',
         id: "service-hero",
-        title: "Custom Web Design Services",
-        subtitle: "shopify automation and growth",
-        description: "We design custom websites with responsive layouts, clear user experience, and a strong visual identity. Every project is built to support your business objectives, engage your audience, and deliver measurable results.",
+        subtitle: "Web Design",
+        title: "Shopify design for<br> products that take<br> more than one click",
+        description: "You sell products people compare, configure and come back to. We design the storefront that carries that decision, then build it ourselves.",
+        title_size: "long",
+        button_text: "Discuss Your Project",
         icons: [
           "shopify",
           "figma"
@@ -30,222 +33,197 @@
     %>
 
     <%-
-      include('layout/section/hero-image.ejs', {
-        locale: 'en',
-        id: "hero-banner",
-        background_image: "/images/pages/service/custom-web-design-services/hero-image/bg.png",
-        background_image_mob: "/images/pages/service/custom-web-design-services/hero-image/bg-mob.png"
-      })
-    %>
-
-    <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
         id: "service-type-of-apps",
-        title: "SERVICES AND TECHNOLOGIES",
-        subtitle: "What You Get with <br class='br-desk'>Our <span class='accent'>Custom Web Design Services</span>",
+        title: "Our Capabilities",
+        subtitle: "Every surface a buyer<br class='br-desk'> <span class='accent'>actually touches.</span>",
         cards: [
           {
-            title: "Unique Website Concepts",
-            description: "We design websites tailored to your brand, market, and customer expectations. Our creative team focuses on visual storytelling, intuitive navigation, and building design systems that scale with your business. Every project is structured for long-term growth and easy updates.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "UX/UI Design",
+            description: "Interfaces built around how your buyers actually behave, not how we assume.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Responsive and Mobile-First Design",
-            description: "Every website we create is fully responsive, adapting seamlessly across desktops, tablets, and smartphones. We deliver smooth performance, fast load times, and pixel-perfect visuals on every device.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Design Systems",
+            description: "Components and rules your team can reuse without the store drifting apart.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Custom UI and UX Strategy",
-            description: "We develop intuitive, engaging user experiences that guide visitors and increase conversions. From detailed wireframes to interactive prototypes, we carefully plan every step to maximize usability and satisfaction.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Prototyping",
+            description: "Clickable prototypes and MVPs that test decisions before development starts.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Ecommerce Store Design",
-            description: "Our team crafts powerful ecommerce websites that are both visually compelling and optimized for sales. Whether you’re building a Shopify store or a custom ecommerce platform, we design product pages, checkout flows, and customer journeys that convert.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Creative Direction",
+            description: "Brand and art direction for stores where the product is the reason people came.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Website Redesign and Optimization",
-            description: "We refresh underperforming websites with modern layouts, faster load speeds, and improved functionality. Our redesigns are aimed at boosting user engagement, retention, and measurable business results.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Website Redesign",
+            description: "Rebuilding a store that grew past the structure it started with.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Branding and Visual Consistency",
-            description: "We create cohesive brand experiences by unifying fonts, colors, icons, and imagery. Our professional design standards guarantee a polished, distinctive online presence that resonates with your audience.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Build-Ready Design",
+            description: "Files handed to the developers who built the last one, nothing lost in between.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           }
         ]
       })
     %>
 
-    <%-
-      include('layout/section/split.ejs', {
-        locale: 'en',
-        theme: 'light',
-        id: "service-advantages",
-        title: "ADVANTAGES",
-        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
-        content_cards: [
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Business-Driven Design",
-            description: "We focus on measurable outcomes — more leads, higher conversions, and smoother customer experiences. Every design decision supports your core business goals."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Full In-House Team",
-            description: "All work is completed by our in-house team. No freelancers, no delays, and direct collaboration with the designers working on your project."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Agile and Efficient Process",
-            description: "We move fast and adapt as your needs evolve. Regular check-ins and updates keep you fully informed throughout the project lifecycle."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Cross-Platform Expertise",
-            description: "From corporate websites to interactive landing pages to full Shopify ecommerce stores, we design for any platform and any customer journey."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Honest and Transparent",
-            description: "We deliver on what we promise. Expect clear timelines, fair pricing, and a stress-free process from start to finish."
-          },
-        ]
-      })
-    %>
-
-
     <%- include('layout/section/works.ejs', {
+      semantic: true,
       locale: 'en',
       id: "service-portfolio",
       theme: "dark",
-      title: "PORTFOLIO",
-      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
-      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      title: "Recent Projects",
+      stat: "100+",
+      description: "Projects delivered, for 60+ clients, with a 4.8 rating on Upwork. Design decisions backed by real outcomes.",
       items: [
         {
-          title: "Naya Tech",
-          text: "Design & Shopify development for technology startup",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-1-bg.png",
+          title: "Innan Jewellery",
+          text: "Brand-led Shopify storefront for a jewellery label built around craft.",
+          tags: "Creative Direction / Shopify / Jewellery",
           icons: ['shopify']
         },
         {
-          title: "Bonkind",
-          text: "Brand identity & redesign of self-care ecommerce",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-2-bg.png",
-          icons: ['figma', 'ai']
+          title: "Gunia",
+          text: "Full redesign and replatform for a Ukrainian homeware brand.",
+          tags: "Website Redesign / Design Systems",
+          icons: ['shopify']
         },
         {
-          title: "KLOTT",
-          text: "Store setup & customizations for fashion brand",
-          link: "https://ua.klottclothes.com/",
-          background_image: "/images/sections/works/card-3-bg.png",
-          icons: ['git', 'shopify']
+          title: "Prime EVA",
+          text: "Storefront and product page design for a catalogue that keeps growing.",
+          tags: "UX/UI Design / Shopify / Product Pages",
+          link: "https://primeeva.com/",
+          background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
+          icons: ['shopify']
         }
       ]
     }) %>
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
-        id: "service-expertise",
-        title: "EXPERTISE",
-        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
-        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
-        media_cards: [
+        id: "service-advantages",
+        title: "When We Can Help",
+        subtitle: "Your product works.<br class='br-desk'> The <span class='accent'>experience doesn't.</span>",
+        content_cards: [
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Buyers can't tell your options apart" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Your store grew past its own structure" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Design keeps breaking in development" }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/info.ejs', {
+      semantic: true,
+      locale: "en",
+      id: "reviews",
+      theme: "dark",
+      class: "reviews",
+      title: "What clients say",
+      background_image: "/images/pages/shopify-development/section/reviews/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
+      reviews: [
+        {
+          text: "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+          name: "Gunia",
+          post: "Theme Customization"
+        },
+        {
+          text: "We received positive feedback from customers about the new site, which met all of our expectations and unique needs.",
+          name: "Lili Mager",
+          post: "Website Redesign"
+        },
+        {
+          text: "Their team delivered a bug-free Shopify store that resulted in higher conversion rates.",
+          name: "Stealth Startup US",
+          post: "UX/UI Design"
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        locale: 'en',
+        id: 'service-faq',
+        title: 'Our Design Process',
+        subtitle: 'From understanding the problem<br class="br-desk"> to a design that is <span class="accent">ready to build.</span>',
+        button: {
+          text: "Discuss Your Project"
+        },
+        faq: [
           {
-            title: "fashion",
-            image: "/images/pages/service/index/industries/card-1.png"
+            title: "Discover & Research",
+            description: "We go through your business, your buyers and who you compete with, then agree the design goals and the direction before anything is drawn."
           },
           {
-            title: "beauty",
-            image: "/images/pages/service/index/industries/card-2.png"
+            title: "Wireframes & Planning",
+            description: "We set out the site structure and wireframe every major page, so you can see the journey before any visual design starts."
           },
           {
-            title: "automotive",
-            image: "/images/pages/service/index/industries/card-3.png"
+            title: "Design & Prototyping",
+            description: "We turn that into finished mockups and clickable prototypes, with your feedback at each stage rather than only at the end."
           },
           {
-            title: "Food & Drinks",
-            image: "/images/pages/service/index/industries/card-4.png"
-          },
-          {
-            title: "Jewelry & Luxury",
-            image: "/images/pages/service/index/industries/card-5.png"
-          },
-          {
-            title: "Furniture & Decor",
-            image: "/images/pages/service/index/industries/card-6.png"
-          },
-          {
-            title: "Health & Supplements",
-            image: "/images/pages/service/index/industries/card-7.png"
-          },
-          {
-            title: "Bags & Accessories",
-            image: "/images/pages/service/index/industries/card-8.png"
-          },
-          {
-            title: "Tech & Gadgets",
-            image: "/images/pages/service/index/industries/card-9.png"
-          },
-          {
-            title: "Sports & Lifestyle",
-            image: "/images/pages/service/index/industries/card-10.png"
-          },
+            title: "Handoff & Support",
+            description: "Once approved, you get the assets and the style guide, and we stay on it through implementation because we are the ones building it."
+          }
         ]
       })
     %>
 
     <%-
       include('layout/section/faq.ejs', {
+        semantic: true,
+        schema: true,
+        numbered: false,
+        extra_class: 'faq-list',
         locale: 'en',
-        id: 'service-faq',
-        title: 'WORKFLOW',
-        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
-        button: {
-          text: "Discuss a project"
-        },
+        id: 'service-questions',
+        title: 'FAQ',
+        subtitle: 'Questions we <span class="accent">get asked</span>',
         faq: [
           {
-            title: "Discovery and Research",
-            description: "We take time to understand your business, audience, and competitive landscape. Together, we define design goals, review inspiration, and plan the creative direction."
+            title: "Do you design and build, or design only?",
+            description: "Both, and the same team does both. Your design goes to the developers who built the last one, so nothing is lost between the file and the store. We do take design-only work, and even then the design is made to be built: real components, real states, and no decisions that fall apart in code."
           },
           {
-            title: "Wireframes and Planning",
-            description: "We outline your site structure and create wireframes for all major pages. You get a clear understanding of the user journey before design work begins."
+            title: "Can you work with our existing Shopify theme?",
+            description: "Yes. Most of our design work starts from a theme that already exists rather than a blank file. We audit what the theme can carry, design inside those limits where that is sensible, and tell you which changes need theme development rather than a design adjustment."
           },
           {
-            title: "Visual Designand Prototyping",
-            description: "We translate ideas into detailed, high-fidelity mockups and clickable prototypes. You provide feedback at every stage before development starts."
+            title: "What do we get at the end?",
+            description: "Figma files with the components and states, a design system you can reuse, clickable prototypes for the flows that matter, and specifications the developers build from. If we are building it, you also get the store. If someone else is, the handoff is written for them rather than for us."
           },
           {
-            title: "Handoff and Launch Support",
-            description: "Once approved, we prepare all design assets, style guides, and provide full support to ensure smooth implementation and perfect delivery."
+            title: "Do you design for products people configure or compare?",
+            description: "That is most of what we do. <a href='/pages/shopify-development/'>Configurators</a>, variant-heavy catalogues, B2B ordering and multi-step selection all need design decisions that a single product page template cannot carry. We build these too, so the design accounts for what is actually possible on Shopify."
+          },
+          {
+            title: "Do you build design systems or just pages?",
+            description: "Both, and the system is usually the cheaper choice. A set of components and rules your team can reuse costs more up front than a handful of pages and stops the store drifting apart every time someone adds a section. For a growing catalogue it pays back quickly."
+          },
+          {
+            title: "Can you design for German or other EU markets?",
+            description: "Yes. We run a multi-language site ourselves and build multi-market Shopify setups, so the design accounts for what changes between languages: German text runs longer than English and breaks layouts that were only ever tested in one language. Copy in German is written by a native speaker, not translated by us."
+          },
+          {
+            title: "How long does a Shopify store design take?",
+            description: "A storefront design is usually a 3 to 8 week engagement, depending on how many page types you need and how many review rounds you want. We scope it before starting so the timeline is agreed rather than discovered."
+          },
+          {
+            title: "What does Shopify store design cost?",
+            description: "It depends on the number of page types and whether we are building it as well as designing it. We scope every project before quoting, and we will tell you if what you need is smaller than the work we take on."
           }
         ]
       })
@@ -253,7 +231,14 @@
 
     <%- include('layout/section/approach.ejs') -%>
 
-    <%- include('layout/section/cta.ejs') %>
+    <%- include('layout/section/cta.ejs', {
+      cta: {
+        label: "Let’s talk",
+        title: "Have a product that needs<br> a better experience?",
+        body: "Tell us what your buyers get stuck on and we'll tell you what we would change.",
+        button: "Let's Talk"
+      }
+    }) %>
   </main>
 
   <%- include('layout/footer-alt.ejs') %>
