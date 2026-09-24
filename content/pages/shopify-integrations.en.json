@@ -76,7 +76,8 @@
           "Automation"
         ],
         "link": "https://primeeva.com/",
-        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10M+ possible configurations"
       },
       {
         "category": "B2B",
@@ -87,7 +88,7 @@
           "Integrations"
         ],
         "link": null,
-        "image": null
+        "image": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
       }
     ]
   },

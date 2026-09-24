@@ -16,14 +16,13 @@ const PAGES = [
   { slug: 'conversion-rate-optimization', file: 'pages/service/conversion-rate-optimization.html', figma: 'conversion-rate-optimization' },
 ];
 
-// Project visuals and categories, reviewed by eye (2026-09-24). Figma's own mapping mixes placeholders:
-// AI-generated stock on VT Advantec and an unidentified fashion photo are deliberately NOT used.
+// Project visuals and categories as placed in Figma. Owner approved the VT Advantec and Gunia images and the Prime EVA badge (2026-09-24).
 const PROJECTS = {
-  'Prime EVA': { category: 'Automotive', image: '/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp' },
+  'Prime EVA': { category: 'Automotive', badge: '10M+ possible configurations', image: '/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp' },
   'Innan Jewellery': { category: 'Jewellery', image: '/images/v2/shopify-development-projects-3-image-5925.webp', link: '/blog/innan-jewellery-shopify-case-study/', linkLabel: 'Read the Innan Jewellery case study' },
-  'Gunia': { category: 'Homeware', image: '/images/v2/shopify-development-projects-5-07-464-13c7da4b-aaff-4c76-a284-153390654.webp', confirm: true },
+  'Gunia': { category: 'Homeware', image: '/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp' },
   'UK gifting brand': { category: 'Gifting', image: '/images/v2/shopify-integrations-projects-1-image-5953.webp', link: '/blog/custom-shopify-integrations-gifting-brand/', linkLabel: 'Read the UK gifting brand case study' },
-  'VT Advantec': { category: 'B2B', image: null },
+  'VT Advantec': { category: 'B2B', image: '/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp' },
   'Nova Poshta Connect': { category: 'Logistics', image: '/images/v2/shopify-apps-projects-2-image-5939.webp', link: '/blog/nova-poshta-shopify-integration-connect-app/', linkLabel: 'Read how we built Nova Poshta Connect' },
   'Innan Jewellery ': {},
   'Mo': { category: 'Shopify App', image: '/images/v2/shopify-apps-projects-4-image-5955.webp' },
@@ -92,7 +91,7 @@ for (const p of PAGES) {
     projects: { label: works.title, items: works.items.map((x, i) => ({
       category: project(plain(x.title)).category || '', title: plain(x.title), text: plain(x.text),
       tags: (x.tags || '').split('/').map((t) => t.trim()).filter(Boolean),
-      link: x.link || project(plain(x.title)).link || null, linkLabel: project(plain(x.title)).linkLabel, image: project(plain(x.title)).image || x.background_image || null })) },
+      badge: project(plain(x.title)).badge, link: x.link || project(plain(x.title)).link || null, linkLabel: project(plain(x.title)).linkLabel, image: project(plain(x.title)).image || x.background_image || null })) },
     help: { label: help.title, ...splitAccent(help.subtitle), items: help.content_cards.map((x) => ({ title: plain(x.title), description: plain(x.description || '') || undefined })) },
     stories: { label: 'Client Stories', title: 'What it’s like<br> to work with us.',
       items: (reviews?.reviews || []).map((r) => ({ client: r.name, context: r.post, quote: r.text })) },

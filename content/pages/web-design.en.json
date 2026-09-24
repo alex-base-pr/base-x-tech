@@ -59,7 +59,8 @@
           "Jewellery"
         ],
         "link": "/blog/innan-jewellery-shopify-case-study/",
-        "linkLabel": "Read the Innan Jewellery case study"
+        "linkLabel": "Read the Innan Jewellery case study",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
       },
       {
         "category": "Automotive",
@@ -72,7 +73,8 @@
         ],
         "link": "https://primeeva.com/",
         "linkLabel": "Visit the Prime EVA store",
-        "image": "/images/pages/shopify-development/section/works/prime-eva-back.png"
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10M+ possible configurations"
       },
       {
         "category": "Homeware",
@@ -81,7 +83,8 @@
         "tags": [
           "Website Redesign",
           "Design Systems"
-        ]
+        ],
+        "image": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
       }
     ]
   },
