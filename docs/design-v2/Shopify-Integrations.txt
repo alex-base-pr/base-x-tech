@@ -1,0 +1,470 @@
+FRAM Shopify Integrations [1443x10359] AL:V gap0 pad0,0,0,0
+ FRAM 1483 [1443x800] bg#040507
+  FRAM logo 1 [43x25]
+   VECT Vector [43x25] bg#ffffff
+  LINE Line 8 [1443x0] bg#ffffff/0.30
+  LINE Line 9 [0x1325] bg#ffffff/0.30
+  FRAM Frame 2087326927 [399x32] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 55 [82x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+    T «Services» TWK Everett 300 14.0/140% ls0.0 #ffffff [58x20]
+   FRAM Frame 2087326915 [81x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+    T «Portfolio» TWK Everett 300 14.0/140% ls0.0 #ffffff [57x20]
+   FRAM Frame 2087326916 [76x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+    T «Insights» TWK Everett 300 14.0/140% ls0.0 #ffffff [52x20]
+   FRAM Frame 2087326917 [66x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+    T «About» TWK Everett 300 14.0/140% ls0.0 #ffffff [42x20]
+   FRAM Frame 2087326918 [78x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+    T «Contact» TWK Everett 300 14.0/140% ls0.0 #ffffff [54x20]
+  FRAM Frame 2087326928 [127x32] AL:H gap6.0 pad0,0,0,0
+   FRAM Frame 2087326875 [32x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#27282a
+    INST globe [16x16]
+     VECT Vector [13x13]
+   FRAM Frame 2087326868 [89x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#81a13f
+    T «Let`s talk» TWK Everett 400 14.0/140% ls0.0 #ffffff [61x20]
+  FRAM Frame 2087326727 [240x42] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 21 [194x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+    T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #040507 [162x22]
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [20x20]
+     VECT Vector [8x8]
+     VECT Vector [8x8]
+  T «Shopify integrations for the systems your business runs on» TWK Everett 400 65.0/94% ls-1.95 #ffffff [646x183]
+  T «ERP, CRM, PIM, logistics, marketplaces. When your store has to agree with the systems behind it on every order, this is the work.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [370x63]
+  T «[ Scroll to Explore ]» TWK Everett 300 14.0/140% ls0.0 #ffffff [124x20]
+  LINE Line 17 [0x267]
+  LINE Line 19 [308x0]
+  LINE Line 20 [951x0]
+  LINE Line 18 [0x418]
+  FRAM Frame 2087326880 [104x31] AL:H gap10.0 pad6,8,6,8 r6.0
+   T «Integrations» TWK Everett 400 15.0/129% ls0.0 #dadada [88x19]
+  FRAM Frame 2087326933 [8x154] AL:V gap8.0 pad0,0,0,0
+   RECT Rectangle 34624327 [8x26] r100.0 bg#ffffff
+   ELLI Ellipse 2438 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2439 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2440 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2441 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2442 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2443 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2444 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2445 [8x8] bg#ffffff/0.11
+ FRAM 1500 [1443x1238] bg#ededed
+  LINE Line 9 [0x1730] bg#000000/0.30
+  T «One store, and everything  it has to agree with.» TWK Everett 400 40.0/104% ls-1.2 #2a2a2c [526x84]
+  FRAM Frame 2087326879 [133x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#e0e0e0
+   T «Our Capabilities» TWK Everett 400 15.0/129% ls0.0 #7d7e7f [117x19]
+  FRAM Frame 2087326918 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «ERP Integrations» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «Orders, stock and invoices moving between Shopify and your ERP without hands.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 1» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT image 5945 [341x256] bgIMG
+  FRAM Frame 2087326931 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «CRM Integrations» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «Customer and order data landing in your CRM the way your sales team needs it.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 2» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT image 5944 [530x485] bgIMG
+  FRAM Frame 2087326932 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «PIM & Product Data» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «One source for product data, pushed to Shopify instead of maintained twice.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 3» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT Rectangle 34624320 [192x226] r6.0 bgIMG
+  FRAM Frame 2087326933 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT image 5946 [256x256] bgIMG
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «Custom APIs» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «Connections built for systems with no app and no standard integration.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 4» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+  FRAM Frame 2087326934 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT image 5947 [192x254] bgIMG
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «Logistics & Fulfilment» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «Carriers, labels and tracking wired into the order flow rather than bolted on.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 5» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+  FRAM Frame 2087326935 [428x450] r10.0 bg#040507
+   FRAM Frame 2087327088 [192x226] r6.0 bg#1e2023
+    RECT image 56 [308x232] bgIMG
+   FRAM Frame 2087327087 [380x77] AL:V gap12.0 pad0,0,0,0
+    T «Marketplaces & Channels» TWK Everett 500 24.0/94% ls-0.72 #ffffff [380x23]
+    T «Listings, stock and orders kept in step across every channel you sell on.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x42]
+   T «0 - 6» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [380x18]
+  FRAM Frame 2087326936 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#e0e0e0
+   RECT Rectangle 34624327 [8x26] r100.0 bg#939393
+   ELLI Ellipse 2439 [8x8] bg#e0e0e0
+   ELLI Ellipse 2440 [8x8] bg#e0e0e0
+   ELLI Ellipse 2441 [8x8] bg#e0e0e0
+   ELLI Ellipse 2442 [8x8] bg#e0e0e0
+   ELLI Ellipse 2443 [8x8] bg#e0e0e0
+   ELLI Ellipse 2444 [8x8] bg#e0e0e0
+   ELLI Ellipse 2445 [8x8] bg#e0e0e0
+ FRAM 1451 [1443x2385] bg#040507
+  FRAM Frame 2087326727 [240x42] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 21 [194x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+    T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #040507 [162x22]
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [20x20]
+     VECT Vector [8x8]
+     VECT Vector [8x8]
+  LINE Line 9 [0x2800] bg#ffffff/0.30
+  FRAM Frame 2087326880 [132x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#282828
+   T «Recent Projects» TWK Everett 400 15.0/129% ls0.0 #dadada [116x19]
+  LINE Line 10 [1360x0] bg#ffffff/0.30
+  LINE Line 10 [1360x0] bg#ffffff/0.30
+  LINE Line 11 [1360x0] bg#ffffff/0.30
+  FRAM Frame 2087327059 [1305x602] AL:H gap110.0 pad0,0,0,0
+   FRAM Frame 2087326944 [101x20] AL:H gap7.0 pad0,0,0,0
+    ELLI Ellipse 2437 [8x8] bg#81a13f
+    T «Automotive» TWK Everett 300 15.397210121154785/129% ls0.0 #d1d1d1 [86x20]
+   FRAM Frame 2087327058 [1094x602] AL:H gap12.0 pad0,0,0,0
+    FRAM Frame 2087326940 [755x600] r12.0 bg#f0f0f0
+     RECT ChatGPT Image 9 лип. 2026 р., 16_02_01 1 [884x600] bgIMG
+     FRAM Frame 2087327001 [200x29] AL:H gap4.0 pad0,0,0,0
+      FRAM Frame 21 [200x29] AL:H gap0 pad6,12,6,12 r4.0 bg#ffffff
+       T «10M+ possible configurations» TWK Everett 500 12.0/140% ls0.0 #040507 [176x17]
+    FRAM Frame 2087326963 [327x602] r12.0 bg#101113
+     FRAM Frame 2087326960 [279x87] AL:V gap12.0 pad0,0,0,0
+      T «Prime EVA» TWK Everett 300 32.0/102% ls-0.96 #ffffff [279x33]
+      T «Product configurator built directly into the native store front end.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [279x42]
+     FRAM Frame 2087326961 [50x50] AL:H gap19.142642974853516 pad11,19,11,19 r96.2325668334961 bg#ffffff
+      FRAM Frame [20x20]
+       VECT Vector [8x8]
+       VECT Vector [8x8]
+     FRAM Frame 2087327002 [236x78] AL:V gap12.0 pad0,0,0,0
+      FRAM Frame 2087326999 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «custom shopify development» TWK Everett 300 13.0/140% ls0.0 #ffffff [187x18]
+      FRAM Frame 2087327000 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «custom configurator development» TWK Everett 300 13.0/140% ls0.0 #ffffff [217x18]
+      FRAM Frame 2087327001 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «ERP development and integration» TWK Everett 300 13.0/140% ls0.0 #ffffff [212x18]
+  FRAM Frame 2087327061 [1305x602] AL:H gap88.0 pad0,0,0,0
+   FRAM Frame 2087326966 [123x20] AL:H gap7.0 pad0,0,0,0
+    ELLI Ellipse 2437 [8x8] bg#81a13f
+    T «Lifestyle brand» TWK Everett 300 15.397210121154785/129% ls0.0 #d1d1d1 [108x20]
+   FRAM Frame 2087327060 [1094x602] AL:H gap12.0 pad0,0,0,0
+    FRAM Frame 2087326965 [755x600] r12.0 bg#f0f0f0
+     RECT ChatGPT Image 16 вер. 2026 р., 07_57_51  [886x600] bgIMG
+    FRAM Frame 2087326964 [327x602] r12.0 bg#101113
+     FRAM Frame 2087326960 [279x87] AL:V gap12.0 pad0,0,0,0
+      T «VT Advantec» TWK Everett 300 32.0/102% ls-0.96 #ffffff [279x33]
+      T «API integration built across a multi-year partnership.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [279x42]
+     FRAM Frame 2087326961 [50x50] AL:H gap19.142642974853516 pad11,19,11,19 r96.2325668334961 bg#ffffff
+      FRAM Frame [20x20]
+       VECT Vector [8x8]
+       VECT Vector [8x8]
+     FRAM Frame 2087327002 [236x48] AL:V gap12.0 pad0,0,0,0
+      FRAM Frame 2087326999 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «development and integration» TWK Everett 300 13.0/140% ls0.0 #ffffff [183x18]
+      FRAM Frame 2087327000 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «Custom APIs» TWK Everett 300 13.0/140% ls0.0 #ffffff [81x18]
+  FRAM Frame 2087327062 [1305x602] AL:H gap110.0 pad0,0,0,0
+   FRAM Frame 2087326944 [101x20] AL:H gap7.0 pad0,0,0,0
+    ELLI Ellipse 2437 [8x8] bg#81a13f
+    T «Gifting» TWK Everett 300 15.397210121154785/129% ls0.0 #d1d1d1 [86x20]
+   FRAM Frame 2087327058 [1094x602] AL:H gap12.0 pad0,0,0,0
+    FRAM Frame 2087326940 [755x600] r12.0 bg#1d1e20
+     RECT image 5953 [755x396] bgIMG
+    FRAM Frame 2087326963 [327x602] r12.0 bg#101113
+     FRAM Frame 2087326960 [279x87] AL:V gap12.0 pad0,0,0,0
+      T «UK gifting brand» TWK Everett 300 32.0/102% ls-0.96 #ffffff [279x33]
+      T «Gift configurator shipped as a private app with production logic.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [279x42]
+     FRAM Frame 2087326961 [50x50] AL:H gap19.142642974853516 pad11,19,11,19 r96.2325668334961 bg#ffffff
+      FRAM Frame [20x20]
+       VECT Vector [8x8]
+       VECT Vector [8x8]
+     FRAM Frame 2087327002 [236x48] AL:V gap12.0 pad0,0,0,0
+      FRAM Frame 2087326999 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «Private App» TWK Everett 300 13.0/140% ls0.0 #ffffff [73x18]
+      FRAM Frame 2087327000 [236x18] AL:H gap6.0 pad0,0,0,0
+       ELLI Ellipse 2437 [6x6] bg#383838
+       T «Automation» TWK Everett 300 13.0/140% ls0.0 #ffffff [73x18]
+  FRAM Frame 2087326933 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2439 [8x8] bg#ffffff/0.11
+   RECT Rectangle 34624327 [8x26] r100.0 bg#ffffff
+   ELLI Ellipse 2440 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2441 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2442 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2443 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2444 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2445 [8x8] bg#ffffff/0.11
+ FRAM 1484 [1443x846] bg#040507
+  RECT Rectangle 34624328 [452x499] bg#1e2022
+  LINE Line 9 [0x2800] bg#ffffff/0.30
+  LINE Line 13 [0x500] bg#ffffff/0.30
+  LINE Line 14 [0x500] bg#ffffff/0.30
+  FRAM Frame 2087326880 [160x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#282828
+   T «When We Can Help» TWK Everett 400 15.0/129% ls0.0 #dadada [144x19]
+  LINE Line 11 [1360x0] bg#ffffff/0.30
+  LINE Line 12 [1360x0] bg#ffffff/0.30
+  T «Two systems, two versions of the same order.» TWK Everett 400 40.0/104% ls-1.2 #ffffff [500x84]
+  T «Someone re-types orders by hand» TWK Everett 500 24.0/120% ls-0.72 #ffffff [283x58]
+  T «Stock is wrong by the time it syncs» TWK Everett 500 24.0/120% ls-0.72 #ffffff [283x58]
+  T «Your ERP  has no Shopify app» TWK Everett 500 24.0/120% ls-0.72 #ffffff [283x58]
+  T «New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [380x84]
+  T «/02» TWK Everett 400 24.0/94% ls-0.72 #3f4044 [60x23]
+  FRAM Frame 2087326933 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2439 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2440 [8x8] bg#ffffff/0.11
+   RECT Rectangle 34624327 [8x26] r100.0 bg#ffffff
+   ELLI Ellipse 2441 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2442 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2443 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2444 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2445 [8x8] bg#ffffff/0.11
+ FRAM 1490 [1443x742] bg#ededed
+  LINE Line 9 [0x1539] bg#000000/0.30
+  LINE Line 10 [1309x0] bg#000000/0.30
+  FRAM Frame 2087326879 [115x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#e0e0e0
+   T «Client Stories» TWK Everett 400 15.0/129% ls0.0 #7d7e7f [99x19]
+  T «What it’s like  to work with us.» Onest 400 40.0/110% ls-0.8 #2a2a2c [340x88]
+  FRAM Frame 2087327064 [515x227] AL:V gap32.0 pad0,0,0,0
+   T «Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web develop» Onest 400 26.0/110% ls-0.52 #2a2a2c [515x145]
+   FRAM Frame 2087327063 [214x50] AL:H gap12.0 pad0,0,0,0
+    FRAM Header [50x50] r32.0
+     FRAM Stealth Startup US [50x50] bgIMG
+    FRAM Frame 2087327062 [152x40] AL:V gap8.0 pad0,0,0,0
+     T «VT Advantec» TWK Everett 500 16.0/100% ls0.16 #1d1e20 [152x16]
+     T «Shopify Development» TWK Everett 400 14.0/114% ls0.16 #1d1e20 [152x16]
+  FRAM Frame 2087327066 [134x119] AL:V gap16.0 pad0,0,0,0
+   T «Stealth Startup» TWK Everett 400 14.0/120% ls0.16 #1d1e20 [134x17]
+   T «Lili Mager» TWK Everett 400 14.0/120% ls0.16 #1d1e20 [134x17]
+   T «Gunia» TWK Everett 400 14.0/120% ls0.16 #1d1e20 [134x17]
+   FRAM Frame 2087327065 [134x20] AL:H gap10.0 pad0,0,0,0
+    T «VT Advantec» TWK Everett 400 14.0/140% ls0.0 #1d1e20 [88x20]
+    FRAM Frame [20x20]
+     VECT Vector (Stroke) [12x12] bg#1d1e20
+     VECT Vector (Stroke) [12x12] bg#1d1e20
+  FRAM Frame 2087326727 [208x42] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 21 [162x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+    T «Become a Client» TWK Everett 500 16.0/140% ls0.0 #040507 [130x22]
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [20x20]
+     VECT Vector [8x8]
+     VECT Vector [8x8]
+  FRAM Frame 2087326936 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#e0e0e0
+   ELLI Ellipse 2439 [8x8] bg#e0e0e0
+   ELLI Ellipse 2440 [8x8] bg#e0e0e0
+   ELLI Ellipse 2441 [8x8] bg#e0e0e0
+   RECT Rectangle 34624327 [8x26] r100.0 bg#939393
+   ELLI Ellipse 2442 [8x8] bg#e0e0e0
+   ELLI Ellipse 2443 [8x8] bg#e0e0e0
+   ELLI Ellipse 2444 [8x8] bg#e0e0e0
+   ELLI Ellipse 2445 [8x8] bg#e0e0e0
+ FRAM 1491 [1443x898] bg#040507
+  LINE Line 9 [0x2800] bg#ffffff/0.30
+  LINE Line 14 [1363x0] bg#ffffff/0.30
+  FRAM Frame 2087326880 [149x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#282828
+   T «How We Integrate» TWK Everett 400 15.0/129% ls0.0 #dadada [133x19]
+  T «From mapping the systems to watching them run.» TWK Everett 400 40.0/104% ls-1.2 #ffffff [507x84]
+  FRAM Frame 2087326960 [649x312] AL:V gap120.0 pad24,24,24,24 r10.0 bg#1e2022
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    INST mouse-pointer-click [18x18]
+     VECT Vector [14x14]
+   FRAM Frame 2087326982 [434x81] AL:V gap16.0 pad0,0,0,0
+    T «Audit & Map» TWK Everett 500 24.0/94% ls-0.72 #ffffff [434x23]
+    T «We list every system, what data each one owns and where things break today before proposing anything.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [434x42]
+  FRAM Frame 2087326962 [649x312] AL:V gap120.0 pad24,24,24,24 r10.0 bg#1e2022
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    INST stretch-horizontal [18x18]
+     VECT Vector [15x12]
+   FRAM Frame 2087326982 [434x81] AL:V gap16.0 pad0,0,0,0
+    T «Build & Test» TWK Everett 500 24.0/94% ls-0.72 #ffffff [434x23]
+    T «We build it and run real orders through it, including the ones that go wrong, before it touches live data.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [434x42]
+  FRAM Frame 2087326961 [649x312] AL:V gap120.0 pad24,24,24,24 r10.0 bg#1e2022
+   FRAM Frame 2087326983 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [18x18]
+     VECT Vector [15x15]
+     VECT Vector [2x2]
+     VECT Vector [0x3]
+     VECT Vector [0x3]
+     VECT Vector [0x1]
+     VECT Vector [3x0]
+     VECT Vector [3x0]
+     VECT Vector [1x0]
+   FRAM Frame 2087326982 [434x81] AL:V gap16.0 pad0,0,0,0
+    T «Plan the Data Flow» TWK Everett 500 24.0/94% ls-0.72 #ffffff [434x23]
+    T «We decide direction, frequency and what wins when two systems disagree, which is where most integrations fail.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [434x42]
+  FRAM Frame 2087326963 [649x312] AL:V gap120.0 pad24,24,24,24 r10.0 bg#1e2022
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    INST square-dashed-mouse-pointer [18x18]
+     VECT Vector [14x14]
+   FRAM Frame 2087326982 [434x102] AL:V gap16.0 pad0,0,0,0
+    T «Launch & Monitor» TWK Everett 500 24.0/94% ls-0.72 #ffffff [434x23]
+    T «We watch it under real volume and keep alerting on it, because a silent integration failure costs more than a loud one.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [434x63]
+  FRAM Frame 2087326933 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2439 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2440 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2441 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2442 [8x8] bg#ffffff/0.11
+   RECT Rectangle 34624327 [8x26] r100.0 bg#ffffff
+   ELLI Ellipse 2443 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2444 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2445 [8x8] bg#ffffff/0.11
+ FRAM 1466 [1443x700] bg#ededed
+  LINE Line 9 [0x1539] bg#000000/0.30
+  T «Numbers that matter» TWK Everett 400 65.0/94% ls-1.95 #939393 [759x61]
+  T «What happens after launch matters more.» TWK Everett 400 65.0/94% ls-1.95 #2a2a2c [619x183]
+  FRAM Frame 2087326976 [552x124] AL:H gap6.0 pad0,0,0,0
+   FRAM Frame 2087326718 [180x124] AL:V gap12.0 pad24,24,24,24 r8.0 bg#81a13f
+    T «4.8*» TWK Everett 700 40.0/104% ls-1.2 #ffffff [132x42]
+    T «Upwork Reviews» TWK Everett 400 16.0/140% ls0.0 #ffffff [131x22]
+   FRAM Frame 2087326719 [180x124] AL:V gap12.0 pad24,24,24,24 r8.0 bg#81a13f
+    T «60+» TWK Everett 700 40.0/104% ls-1.2 #ffffff [132x42]
+    T «Happy Clients» TWK Everett 400 16.0/140% ls0.0 #ffffff [110x22]
+   FRAM Frame 2087326720 [180x124] AL:V gap12.0 pad24,24,24,24 r8.0 bg#81a13f
+    T «100+» TWK Everett 700 40.0/104% ls-1.2 #ffffff [132x42]
+    T «Projects Delivered» TWK Everett 400 16.0/140% ls0.0 #ffffff [143x22]
+  FRAM Frame 2087326936 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#e0e0e0
+   ELLI Ellipse 2439 [8x8] bg#e0e0e0
+   ELLI Ellipse 2440 [8x8] bg#e0e0e0
+   ELLI Ellipse 2441 [8x8] bg#e0e0e0
+   ELLI Ellipse 2442 [8x8] bg#e0e0e0
+   ELLI Ellipse 2443 [8x8] bg#e0e0e0
+   RECT Rectangle 34624327 [8x26] r100.0 bg#939393
+   ELLI Ellipse 2444 [8x8] bg#e0e0e0
+   ELLI Ellipse 2445 [8x8] bg#e0e0e0
+ FRAM 1492 [1443x1682] bg#ededed
+  LINE Line 9 [0x1682] bg#000000/0.30
+  LINE Line 10 [1363x0] bg#000000/0.30
+  T «Questions  we get asked» Onest 400 40.0/110% ls-0.8 #2a2a2c [457x88]
+  FRAM Frame 2087326879 [49x31] AL:H gap10.0 pad6,8,6,8 r6.0 bg#e0e0e0
+   T «faq» TWK Everett 400 15.0/129% ls0.0 #7d7e7f [33x19]
+  FRAM Frame 2087327068 [690x1542] AL:V gap8.0 pad0,0,0,0
+   FRAM Frame 2087326883 [690x185] AL:H gap16.0 pad32,24,32,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x121] AL:V gap12.0 pad0,0,0,0
+     T «Can you connect Shopify to our ERP?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [374x21]
+     T «Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it e» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x88]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0 bg#81a13f
+     FRAM plus [16x16]
+      VECT Vector [13x13]
+   FRAM Frame 2087326884 [690x169] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x121] AL:V gap12.0 pad0,0,0,0
+     T «What if our system has no Shopify app?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [396x21]
+     T «That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect t» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x88]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326885 [690x191] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x143] AL:V gap12.0 pad0,0,0,0
+     T «How do you stop stock going out of sync?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [416x21]
+     T «By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and freq» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x110]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326886 [690x195] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x147] AL:V gap12.0 pad0,0,0,0
+     T «Can you automate order routing and fulfilment?» TWK Everett 400 22.0/115% ls-0.66 #2a2a2c [521x25]
+     T «Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plu» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x110]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326887 [690x191] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x143] AL:V gap12.0 pad0,0,0,0
+     T «Which ERPs and CRMs have you worked with?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [521x21]
+     T «ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integr» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x110]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326888 [690x195] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x147] AL:V gap12.0 pad0,0,0,0
+     T «How long does an integration take?» TWK Everett 400 22.0/115% ls-0.66 #2a2a2c [521x25]
+     T «It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build,» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x110]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326889 [690x169] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x121] AL:V gap12.0 pad0,0,0,0
+     T «Who maintains it after launch?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [521x21]
+     T «We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and al» TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x88]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+   FRAM Frame 2087326890 [690x191] AL:H gap16.0 pad24,24,24,32 r8.0 bg#ffffff
+    FRAM Frame 2087327067 [521x143] AL:V gap12.0 pad0,0,0,0
+     T «Can you integrate with our warehouse or 3PL?» TWK Everett 400 22.0/94% ls-0.66 #2a2a2c [521x21]
+     T «Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store » TWK Everett 400 16.0/140% ls0.0 #5e5e5e [521x110]
+    FRAM Frame 2087324606 [40x40] AL:H gap19.89206314086914 pad12,20,12,20 r100.0
+     FRAM plus [22x22]
+      VECT Vector [9x9]
+  FRAM Frame 2087326936 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#e0e0e0
+   ELLI Ellipse 2439 [8x8] bg#e0e0e0
+   ELLI Ellipse 2440 [8x8] bg#e0e0e0
+   ELLI Ellipse 2441 [8x8] bg#e0e0e0
+   ELLI Ellipse 2442 [8x8] bg#e0e0e0
+   ELLI Ellipse 2443 [8x8] bg#e0e0e0
+   ELLI Ellipse 2444 [8x8] bg#e0e0e0
+   RECT Rectangle 34624327 [8x26] r100.0 bg#939393
+   ELLI Ellipse 2445 [8x8] bg#e0e0e0
+ FRAM 1493 [1443x1068] bg#040507
+  LINE Line 9 [0x2800] bg#ffffff/0.30
+  LINE Line 10 [0x330]
+  LINE Line 11 [0x746]
+  LINE Line 12 [0x330]
+  T «Need Shopify  to talk to something else?» TWK Everett 400 75.0/94% ls-2.25 #ffffff [673x210]
+  FRAM Frame 2087326984 [374x108] AL:V gap24.0 pad0,0,0,0
+   T «Tell us what the two systems are and we'll tell you what connecting them takes.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [374x42]
+   FRAM Frame 2087326727 [151x42] AL:H gap4.0 pad0,0,0,0
+    FRAM Frame 21 [105x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+     T «Let’s Talk» TWK Everett 500 16.0/140% ls0.0 #040507 [73x22]
+    FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+     FRAM Frame [20x20]
+      VECT Vector [8x8]
+      VECT Vector [8x8]
+  LINE Line 8 [1363x0] bg#ffffff/0.30
+  LINE Line 13 [1363x0] bg#ffffff/0.30
+  LINE Line 14 [1363x0] bg#ffffff/0.30
+  FRAM Frame 2087326985 [650x683]
+   RECT Opera Знімок_2026-06-22_144736_ua.klottc [289x245] bgIMG
+   RECT Знімок екрана 2026-06-22 о 21.30.43 1 [326x203] bgIMG
+   RECT image 5914 [282x261] bgIMG
+  FRAM Frame 2087327028 [255x17] AL:V gap12.0 pad0,0,0,0
+   T «© 2026 Base X All right reserved» TWK Everett 300 12.0/140% ls0.0 #ffffff [190x17]
+  FRAM Frame 2087326986 [1273x20] AL:H gap24.0 pad0,0,0,0
+   T «Terms & Conditions» TWK Everett 300 14.0/140% ls0.0 #ffffff [130x20]
+   T «Privacy policy» TWK Everett 300 14.0/140% ls0.0 #ffffff [93x20]
+  FRAM Frame 2087327029 [73x270] AL:V gap60.0 pad0,0,0,0
+   T «Navigation» TWK Everett 300 14.0/140% ls0.0 #ffffff [73x20]
+   FRAM Frame 2087327024 [73x190] AL:V gap20.0 pad0,0,0,0
+    T «Services» TWK Everett 300 16.0/140% ls0.0 #ffffff [66x22]
+    T «Portfolio» TWK Everett 300 16.0/140% ls0.0 #ffffff [65x22]
+    T «Insights» TWK Everett 300 16.0/140% ls0.0 #ffffff [60x22]
+    T «About» TWK Everett 300 16.0/140% ls0.0 #ffffff [47x22]
+    T «Contact» TWK Everett 300 16.0/140% ls0.0 #ffffff [62x22]
+  FRAM Frame 2087327030 [68x186] AL:V gap60.0 pad0,0,0,0
+   T «Connect» TWK Everett 300 14.0/140% ls0.0 #ffffff [68x20]
+   FRAM Frame 2087327026 [68x106] AL:V gap20.0 pad0,0,0,0
+    T «Upwork» TWK Everett 300 16.0/140% ls0.0 #ffffff [61x22]
+    T «LinkedIn» TWK Everett 300 16.0/140% ls0.0 #ffffff [64x22]
+    T «Behance» TWK Everett 300 16.0/140% ls0.0 #ffffff [68x22]
+  FRAM Frame 2087326724 [56x32] AL:H gap8.891229629516602 pad0,0,0,0
+   FRAM Base X [56x32]
+    FRAM logo.svg [56x32]
+     VECT Vector [56x32] bg#fafafa
+  FRAM Frame 2087326933 [8x154] AL:V gap8.0 pad0,0,0,0
+   ELLI Ellipse 2438 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2439 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2440 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2441 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2442 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2443 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2444 [8x8] bg#ffffff/0.11
+   ELLI Ellipse 2445 [8x8] bg#ffffff/0.11
+   RECT Rectangle 34624327 [8x26] r100.0 bg#ffffff

@@ -1,0 +1,175 @@
+SECT Mobile menu [1649x1271] bg#191919
+ FRAM Menu [393x852] bg#040507
+  LINE Line 8 [393x0] bg#ffffff/0.30
+  LINE Line 9 [0x56] bg#ffffff/0.30
+  FRAM logo 1 [43x25]
+   VECT Vector [43x25] bg#ffffff
+  FRAM Frame 2087326928 [127x32] AL:H gap6.0 pad0,0,0,0
+   FRAM Frame 2087326875 [32x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#27282a
+    INST globe [16x16]
+     VECT Vector [13x13]
+   FRAM Frame 2087326868 [89x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#81a13f
+    T «Let`s talk» TWK Everett 400 14.0/140% ls0.0 #ffffff [61x20]
+  FRAM Frame 2087326918 [104x36] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Menu» TWK Everett 300 14.0/140% ls0.0 #ffffff [40x20]
+   FRAM Menu Button [24x24] r2.0
+    VECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+  T «Building / the systems » TWK Everett 400 52.0/94% ls-1.56 #ffffff [369x98]
+  T «behind modern commerce» TWK Everett 400 52.0/94% ls-1.56 #ffffff/0.52 [369x98]
+  FRAM Frame 2087326990 [245x176] r4.0 bg#101113
+   RECT image 54 [229x160] r4.0 bgIMG
+   RECT image 55 [229x160] r4.0 bgIMG
+  FRAM Frame 2087326727 [369x42] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 21 [323x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+    T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #040507 [162x22]
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [20x20]
+     VECT Vector [8x8]
+     VECT Vector [8x8]
+  FRAM Frame 2087326912 [175x76] AL:V gap8.0 pad0,0,0,0
+   FRAM Frame 2087326909 [116x20] AL:H gap4.0 pad0,0,0,0
+    T «/01» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [22x20]
+    T «Shopify Apps» TWK Everett 300 14.0/140% ls0.0 #ffffff [90x20]
+   FRAM Frame 2087326910 [126x20] AL:H gap4.0 pad0,0,0,0
+    T «/02» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [26x20]
+    T «AI Automation» TWK Everett 300 14.0/140% ls0.0 #ffffff [96x20]
+   FRAM Frame 2087326911 [175x20] AL:H gap4.0 pad0,0,0,0
+    T «/03» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [26x20]
+    T «Shopify Development» TWK Everett 300 14.0/140% ls0.0 #ffffff [145x20]
+  FRAM Frame 2087327024 [389x795] AL:V gap10.0 pad24,10,24,10 bg#040507
+   FRAM Frame 2087326927 [369x216] AL:V gap4.0 pad0,0,0,0
+    FRAM Frame 55 [369x40] AL:H gap16.0 pad6,12,6,12 r4.0 bg#27282a
+     T «Services» TWK Everett 300 14.0/140% ls0.0 #ffffff [58x20]
+    FRAM Frame 2087326915 [369x40] AL:H gap16.0 pad6,12,6,12 r4.0 bg#27282a
+     T «Portfolio» TWK Everett 300 14.0/140% ls0.0 #ffffff [57x20]
+    FRAM Frame 2087326916 [369x40] AL:H gap16.0 pad6,12,6,12 r4.0 bg#27282a
+     T «Insights» TWK Everett 300 14.0/140% ls0.0 #ffffff [52x20]
+    FRAM Frame 2087326917 [369x40] AL:H gap16.0 pad6,12,6,12 r4.0 bg#27282a
+     T «About» TWK Everett 300 14.0/140% ls0.0 #ffffff [42x20]
+    FRAM Frame 2087326918 [369x40] AL:H gap16.0 pad6,12,6,12 r4.0 bg#27282a
+     T «Contact» TWK Everett 300 14.0/140% ls0.0 #ffffff [54x20]
+   FRAM Frame 2087326989 [369x120] AL:H gap3.6992483139038086 pad0,0,0,0
+    FRAM Frame 55 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM Upwork [37x25]
+      FRAM social-upwork.svg [37x25]
+       VECT Vector [35x25] bg#fafafa
+    FRAM Frame 2087326987 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM linkedin [30x33]
+      FRAM social-linkedin.svg [30x33]
+       VECT Vector [21x20] bg#ffffff
+       VECT Vector [21x20] bg#ffffff/0.20
+    FRAM Frame 2087326988 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM behance [25x27]
+      FRAM social-behance.svg [25x27]
+       GROU Clip path group [25x26]
+        GROU a [25x26]
+         VECT Vector [25x26] bg#000000
+        GROU Group [26x16]
+         VECT Vector [26x16] bg#fafafa
+ FRAM Menu [393x852] bg#040507
+  LINE Line 8 [393x0] bg#ffffff/0.30
+  LINE Line 9 [0x56] bg#ffffff/0.30
+  FRAM logo 1 [43x25]
+   VECT Vector [43x25] bg#ffffff
+  FRAM Frame 2087326928 [127x32] AL:H gap6.0 pad0,0,0,0
+   FRAM Frame 2087326875 [32x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#27282a
+    INST globe [16x16]
+     VECT Vector [13x13]
+   FRAM Frame 2087326868 [89x32] AL:H gap12.0 pad6,14,6,14 r4.0 bg#81a13f
+    T «Let`s talk» TWK Everett 400 14.0/140% ls0.0 #ffffff [61x20]
+  FRAM Frame 2087326918 [104x36] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Menu» TWK Everett 300 14.0/140% ls0.0 #ffffff [40x20]
+   FRAM Menu Button [24x24] r2.0
+    VECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+    RECT Rectangle [4x4] r4.0 bg#ffffff
+  T «Building / the systems » TWK Everett 400 52.0/94% ls-1.56 #ffffff [369x98]
+  T «behind modern commerce» TWK Everett 400 52.0/94% ls-1.56 #ffffff/0.52 [369x98]
+  FRAM Frame 2087326990 [245x176] r4.0 bg#101113
+   RECT image 54 [229x160] r4.0 bgIMG
+   RECT image 55 [229x160] r4.0 bgIMG
+  FRAM Frame 2087326727 [369x42] AL:H gap4.0 pad0,0,0,0
+   FRAM Frame 21 [323x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+    T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #040507 [162x22]
+   FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+    FRAM Frame [20x20]
+     VECT Vector [8x8]
+     VECT Vector [8x8]
+  FRAM Frame 2087326912 [175x76] AL:V gap8.0 pad0,0,0,0
+   FRAM Frame 2087326909 [116x20] AL:H gap4.0 pad0,0,0,0
+    T «/01» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [22x20]
+    T «Shopify Apps» TWK Everett 300 14.0/140% ls0.0 #ffffff [90x20]
+   FRAM Frame 2087326910 [126x20] AL:H gap4.0 pad0,0,0,0
+    T «/02» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [26x20]
+    T «AI Automation» TWK Everett 300 14.0/140% ls0.0 #ffffff [96x20]
+   FRAM Frame 2087326911 [175x20] AL:H gap4.0 pad0,0,0,0
+    T «/03» TWK Everett 300 14.0/140% ls0.0 #ffffff/0.33 [26x20]
+    T «Shopify Development» TWK Everett 300 14.0/140% ls0.0 #ffffff [145x20]
+  FRAM Frame 2087327024 [389x795] AL:V gap10.0 pad24,10,24,10 bg#040507
+   FRAM Frame 2087327104 [369x598] AL:V gap4.0 pad0,0,0,0
+    FRAM Frame 55 [369x40] AL:H gap8.0 pad6,12,6,12 r4.0 bg#27282a
+     VECT Polygon 1 [5x7] bg#ffffff
+     T «Back» TWK Everett 300 14.0/140% ls0.0 #ffffff [34x20]
+    FRAM Frame 2087326991 [369x554] AL:G gap0 pad0,0,0,0
+     FRAM Frame 55 [183x183] AL:H gap4.247889518737793 pad11,11,11,11 r2.8319265842437744 bg#27282a
+      FRAM Frame 2087327088 [84x84] r4.247889518737793 bg#1e2023
+       RECT Rectangle 34624320 [84x100] bgIMG
+      FRAM Frame 2087327103 [160x40] AL:H gap4.247889518737793 pad0,0,0,0
+       T «Shopify  Development» TWK Everett 300 14.0/140% ls0.0 #ffffff [91x40]
+       FRAM Frame [12x11]
+        VECT Vector [7x7]
+        VECT Vector [7x7]
+     FRAM Frame 2087326915 [183x183] AL:H gap11.327706336975098 pad11,11,11,11 r2.8319265842437744 bg#27282a
+      FRAM Frame 2087327088 [84x84] r4.247889518737793 bg#1e2023
+       RECT image 5944 [220x201] bgIMG
+      FRAM Frame 2087327103 [160x40] AL:H gap4.247889518737793 pad0,0,0,0
+       T «Shopify  Integrations» TWK Everett 300 14.0/140% ls0.0 #ffffff [79x40]
+       FRAM Frame [12x11]
+        VECT Vector [7x7]
+        VECT Vector [7x7]
+     FRAM Frame 2087326916 [183x183] AL:H gap11.327706336975098 pad11,11,11,11 r2.8319265842437744 bg#27282a
+      FRAM Frame 2087327088 [84x84] r4.247889518737793 bg#1e2023
+       RECT image 5949 [84x106] bgIMG
+      FRAM Frame 2087327103 [160x40] AL:H gap4.247889518737793 pad0,0,0,0
+       T «Shopify  Migration» TWK Everett 300 14.0/140% ls0.0 #ffffff [65x40]
+       FRAM Frame [12x11]
+        VECT Vector [7x7]
+        VECT Vector [7x7]
+     FRAM Frame 2087326917 [183x183] AL:H gap11.327706336975098 pad11,11,11,11 r2.8319265842437744 bg#27282a
+      FRAM Frame 2087327088 [84x84] r4.247889518737793 bg#1e2023
+       RECT image 5952 [104x116] bgIMG
+      FRAM Frame 2087327103 [160x20] AL:H gap4.247889518737793 pad0,0,0,0
+       T «Shopify Apps» TWK Everett 300 14.0/140% ls0.0 #ffffff [90x20]
+       FRAM Frame [12x11]
+        VECT Vector [7x7]
+        VECT Vector [7x7]
+     FRAM Frame 2087326918 [183x183] AL:H gap11.327706336975098 pad11,11,11,11 r2.8319265842437744 bg#27282a
+      FRAM Frame 2087327088 [84x84] r4.247889518737793 bg#1e2023
+       RECT image 56 [113x84] bgIMG
+      FRAM Frame 2087327103 [160x20] AL:H gap4.247889518737793 pad0,0,0,0
+       T «CRO» TWK Everett 300 14.0/140% ls0.0 #ffffff [33x20]
+       FRAM Frame [12x11]
+        VECT Vector [7x7]
+        VECT Vector [7x7]
+   FRAM Frame 2087326989 [369x120] AL:H gap3.6992483139038086 pad0,0,0,0
+    FRAM Frame 55 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM Upwork [37x25]
+      FRAM social-upwork.svg [37x25]
+       VECT Vector [35x25] bg#fafafa
+    FRAM Frame 2087326987 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM linkedin [30x33]
+      FRAM social-linkedin.svg [30x33]
+       VECT Vector [21x20] bg#ffffff
+       VECT Vector [21x20] bg#ffffff/0.20
+    FRAM Frame 2087326988 [120x120] AL:H gap14.796993255615234 pad5,11,5,11 r3.6992483139038086 bg#ffffff/0.14
+     FRAM behance [25x27]
+      FRAM social-behance.svg [25x27]
+       GROU Clip path group [25x26]
+        GROU a [25x26]
+         VECT Vector [25x26] bg#000000
+        GROU Group [26x16]
+         VECT Vector [26x16] bg#fafafa

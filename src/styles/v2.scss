@@ -1,6 +1,10 @@
 // Design v2 (Figma "Service Page" + Ui-kit). Everything is scoped to body.v2 so legacy pages are untouched.
 // Type scale from the Ui-kit: Heading L 75/94 -3%, M 40/104 -2%, S 32/104 -2%, XS 24 medium, Body XL 16/129, Body L 14/140.
 
+@use 'v2/home';
+@use 'v2/complex-v2';
+@use 'v2/modal';
+
 $bp: 1024px;
 @mixin desk { @media (min-width: $bp) { @content; } }
 @mixin mob { @media (max-width: $bp - 1) { @content; } }

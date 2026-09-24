@@ -1,0 +1,89 @@
+FRAM Modal-mobile [393x929] bg#040507
+ GROU Group 2085663268 [489x1524]
+  FRAM Frame 2087326985 [345x439]
+   RECT Opera Знімок_2026-06-22_144736_ua.klottc [153x130] bgIMG
+   RECT Знімок екрана 2026-06-22 о 21.30.43 1 [173x107] bgIMG
+   RECT image 5914 [150x138] bgIMG
+  LINE Line 8 [393x0] bg#ffffff/0.30
+  LINE Line 9 [369x0] bg#ffffff/0.30
+  LINE Line 12 [0x666] bg#ffffff/0.30
+  LINE Line 13 [0x666] bg#ffffff/0.30
+  LINE Line 10 [369x0] bg#ffffff/0.30
+  LINE Line 11 [393x0] bg#ffffff/0.30
+  FRAM Frame 2087326724 [92x52] AL:H gap14.6068696975708 pad0,0,0,0
+   FRAM Base X [92x52]
+    FRAM logo.svg [91x52]
+     VECT Vector [91x52] bg#fafafa
+  T «© 2026 Base X All right reserved» TWK Everett 300 12.0/140% ls0.0 #ffffff [190x17]
+  FRAM Frame 2087327029 [73x242] AL:V gap32.0 pad0,0,0,0
+   T «Navigation» TWK Everett 300 14.0/140% ls0.0 #ffffff [73x20]
+   FRAM Frame 2087327024 [73x190] AL:V gap20.0 pad0,0,0,0
+    T «Services» TWK Everett 300 16.0/140% ls0.0 #ffffff [66x22]
+    T «Portfolio» TWK Everett 300 16.0/140% ls0.0 #ffffff [65x22]
+    T «Insights» TWK Everett 300 16.0/140% ls0.0 #ffffff [60x22]
+    T «About» TWK Everett 300 16.0/140% ls0.0 #ffffff [47x22]
+    T «Contact» TWK Everett 300 16.0/140% ls0.0 #ffffff [62x22]
+  FRAM Frame 2087327030 [68x158] AL:V gap32.0 pad0,0,0,0
+   T «Connect» TWK Everett 300 14.0/140% ls0.0 #ffffff [58x20]
+   FRAM Frame 2087327026 [68x106] AL:V gap20.0 pad0,0,0,0
+    T «Upwork» TWK Everett 300 16.0/140% ls0.0 #ffffff [61x22]
+    T «LinkedIn» TWK Everett 300 16.0/140% ls0.0 #ffffff [64x22]
+    T «Behance» TWK Everett 300 16.0/140% ls0.0 #ffffff [68x22]
+  FRAM Frame 2087326986 [369x20] AL:H gap24.0 pad0,0,0,0
+   T «Terms & Conditions» TWK Everett 300 14.0/140% ls0.0 #ffffff [130x20]
+   T «Privacy policy» TWK Everett 300 14.0/140% ls0.0 #ffffff [93x20]
+  FRAM Frame 2087327020 [369x246] AL:V gap24.0 pad0,0,0,0
+   T «Have a product  that needs a better experience?» TWK Everett 400 40.0/94% ls-1.2 #ffffff [369x114]
+   FRAM Frame 2087326984 [369x108] AL:V gap24.0 pad0,0,0,0
+    T «Tell us what your buyers get stuck on  and we'll tell you what we would change.» TWK Everett 300 16.0/129% ls0.0 #d1d1d1 [369x42]
+    FRAM Frame 2087326727 [369x42] AL:H gap4.0 pad0,0,0,0
+     FRAM Frame 21 [323x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+      T «Let’s Talk» TWK Everett 500 16.0/140% ls0.0 #040507 [73x22]
+     FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+      FRAM Frame [20x20]
+       VECT Vector [8x8]
+       VECT Vector [8x8]
+ FRAM Frame 2087327090 [395x1070] bg#1e2022/0.70
+  FRAM Frame 2087326960 [369x849] AL:V gap32.0 pad40,24,40,24 bg#040507
+   T «Let’s talk  about your project» Onest 300 32.0/110% ls-0.64 #ffffff [321x70]
+   FRAM Frame 2087327098 [321x667] AL:V gap32.0 pad0,0,0,0
+    FRAM Frame 2087327094 [321x593] AL:V gap20.0 pad0,0,0,0
+     FRAM Frame 2087327099 [321x200] AL:V gap8.0 pad0,0,0,0
+      FRAM Frame 2087327092 [321x96] AL:V gap8.0 pad0,0,0,0
+       FRAM Frame 2087327090 [321x44] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «Your name*» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [76x18]
+       FRAM Frame 2087327091 [321x44] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «name@company.com*» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [151x18]
+      FRAM Frame 2087327093 [321x96] AL:V gap8.0 pad0,0,0,0
+       FRAM Frame 2087327090 [321x44] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «+1 234 567 890» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [107x18]
+       FRAM Frame 2087327091 [321x44] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «Company name*» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [112x18]
+     FRAM Frame 2087327095 [321x81] AL:V gap16.0 pad0,0,0,0
+      T «What do you need help with?» TWK Everett 300 16.0/129% ls0.0 #ffffff [223x21]
+      FRAM Frame 2087327092 [321x44] AL:H gap10.0 pad12,20,12,20 r4.0
+       T «Shopify Development» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [145x18]
+       VECT Polygon 1 [7x5] bg#ffffff
+     FRAM Frame 2087327096 [321x125] AL:V gap16.0 pad0,0,0,0
+      T «What’s your project budget?» TWK Everett 300 16.0/129% ls0.0 #ffffff [216x21]
+      FRAM Frame 2087327098 [321x88] AL:G gap0 pad0,0,0,0
+       FRAM Frame 2087327092 [158x42] AL:H gap10.0 pad12,20,12,20 r4.0 bg#81a13f
+        T «$2K–5K» TWK Everett 400 14.0/129% ls0.0 #ffffff [55x18]
+       FRAM Frame 2087327093 [158x42] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «$5K–10K» TWK Everett 400 14.0/129% ls0.0 #d1d1d1 [60x18]
+       FRAM Frame 2087327094 [158x42] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «$10K–25K» TWK Everett 400 14.0/129% ls0.0 #d1d1d1 [69x18]
+       FRAM Frame 2087327095 [158x42] AL:H gap10.0 pad12,20,12,20 r4.0
+        T «$25K+» TWK Everett 400 14.0/129% ls0.0 #d1d1d1 [46x18]
+     FRAM Frame 2087327097 [321x127] AL:V gap16.0 pad0,0,0,0
+      T «Tell us about the project» TWK Everett 300 16.0/129% ls0.0 #ffffff [182x21]
+      FRAM Frame 2087327092 [321x90] AL:H gap10.0 pad12,20,12,20 r4.0
+       T «What are you building, changing, or trying to solve?» TWK Everett 300 14.0/129% ls0.0 #d1d1d1 [279x36]
+    FRAM Frame 2087326727 [321x42] AL:H gap4.0 pad0,0,0,0
+     FRAM Frame 21 [275x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+      T «Send project details» TWK Everett 500 16.0/140% ls0.0 #040507 [159x22]
+     FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+      FRAM Frame [20x20]
+       VECT Vector [8x8]
+       VECT Vector [8x8]
+   VECT Vector [16x16] bg#ffffff

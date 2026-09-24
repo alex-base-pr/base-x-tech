@@ -1,0 +1,69 @@
+SECT Buttons/Links [1044x1049] bg#000000
+ FRAM Menu [399x32] AL:H gap4.0 pad0,0,0,0
+  FRAM Frame 55 [82x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Services» TWK Everett 300 14.0/140% ls0.0 #ffffff [58x20]
+  FRAM Frame 2087326915 [81x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Portfolio» TWK Everett 300 14.0/140% ls0.0 #ffffff [57x20]
+  FRAM Frame 2087326916 [76x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Insights» TWK Everett 300 14.0/140% ls0.0 #ffffff [52x20]
+  FRAM Frame 2087326917 [66x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «About» TWK Everett 300 14.0/140% ls0.0 #ffffff [42x20]
+  FRAM Frame 2087326918 [78x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.14
+   T «Contact» TWK Everett 300 14.0/140% ls0.0 #ffffff [54x20]
+ FRAM Menu-hover [399x32] AL:H gap4.0 pad0,0,0,0
+  FRAM Frame 55 [82x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.08
+   T «Services» TWK Everett 300 14.0/140% ls0.0 #ffffff [58x20]
+  FRAM Frame 2087326915 [81x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.20
+   T «Portfolio» TWK Everett 300 14.0/140% ls0.0 #ffffff [57x20]
+  FRAM Frame 2087326916 [76x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.08
+   T «Insights» TWK Everett 300 14.0/140% ls0.0 #ffffff [52x20]
+  FRAM Frame 2087326917 [66x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.08
+   T «About» TWK Everett 300 14.0/140% ls0.0 #ffffff [42x20]
+  FRAM Frame 2087326918 [78x32] AL:H gap16.0 pad6,12,6,12 r4.0 bg#ffffff/0.08
+   T «Contact» TWK Everett 300 14.0/140% ls0.0 #ffffff [54x20]
+ T «text-animation on hover» Switzer 400 18.0/140% ls-0.36 #ffffff [300x13]
+ T «text-animation on hover» Switzer 400 18.0/140% ls-0.36 #ffffff [300x13]
+ T «Menu-hover» Switzer 400 24.0/140% ls0.0 #ffffff [300x18]
+ T «Main-bttn» Switzer 400 24.0/140% ls0.0 #ffffff [300x18]
+ FRAM bttn [240x42] AL:H gap4.0 pad0,0,0,0
+  FRAM Frame 21 [194x42] AL:H gap19.89206314086914 pad10,16,10,16 r4.0 bg#ffffff
+   T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #040507 [162x22]
+  FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 r4.0 bg#81a13f
+   FRAM Frame [20x20]
+    VECT Vector [8x8]
+    VECT Vector [8x8]
+ FRAM bttn-hover [236x42] AL:H gap0 pad0,0,0,0
+  FRAM Frame 21 [194x42] AL:H gap19.89206314086914 pad10,16,10,16 bg#81a13f
+   T «Discuss Your Project» TWK Everett 500 16.0/140% ls0.0 #ffffff [162x22]
+  FRAM Frame 2087324606 [42x42] AL:H gap19.89206314086914 pad12,20,12,20 bg#81a13f
+   FRAM Frame [20x20]
+    VECT Vector [8x8]
+    VECT Vector [8x8]
+ FRAM bttn [142x24] AL:H gap12.0 pad0,0,0,0
+  T «More articles» TWK Everett 500 16.0/140% ls0.0 #ffffff [106x22]
+  FRAM Frame 2087324606 [24x24] AL:H gap19.89206314086914 pad12,20,12,20 r3.0 bg#81a13f
+   FRAM Frame [16x16]
+    VECT Vector [6x6]
+    VECT Vector [6x6]
+ FRAM bttn-hover [142x24] AL:H gap12.0 pad0,0,0,0
+  T «More articles» TWK Everett 500 16.0/140% ls0.0 #ffffff [106x22]
+  FRAM Frame 2087324606 [24x24] AL:H gap19.89206314086914 pad12,20,12,20 r3.0 bg#81a13f
+   FRAM Frame [16x16]
+    VECT Vector [6x6]
+    VECT Vector [6x6]
+ FRAM bttn [50x50] AL:H gap19.142642974853516 pad11,19,11,19 r96.2325668334961 bg#ffffff
+  FRAM Frame [20x20]
+   VECT Vector [8x8]
+   VECT Vector [8x8]
+ FRAM bttn-hover [60x60] AL:H gap19.142642974853516 pad11,19,11,19 r96.2325668334961 bg#ffffff
+  FRAM Frame [20x20]
+   VECT Vector [8x8]
+   VECT Vector [8x8]
+ FRAM bttn-hover [60x60] r1000.0 bg#ffffff
+  FRAM Frame [20x20]
+   GROU Group 2085663266 [8x8]
+    VECT Vector [8x8]
+    VECT Vector [8x8]
+   GROU Group 2085663267 [8x8]
+    VECT Vector [8x8]
+    VECT Vector [8x8]
