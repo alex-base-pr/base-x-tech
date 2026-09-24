@@ -56,3 +56,30 @@
   max-width: 30rem;
   margin: 0 0 1.5rem;
 }
+
+// Project cards without an image (anonymous clients, apps): compact text cards instead of empty photo frames.
+.section-works .article-1 main .cards .card:not(:has(.card-background)) {
+  height: auto;
+  min-height: 14rem;
+  max-height: none;
+  border: 1px solid alpha(color.$white2, .2);
+
+  .card-content {
+    position: relative;
+    inset: auto;
+    min-height: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  @include desk {
+    min-height: 15rem;
+
+    &:nth-child(1) {
+      grid-row: auto;
+    }
+  }
+}
