@@ -2,7 +2,7 @@
 import { spawn } from 'node:child_process';
 import { LinkChecker } from 'linkinator';
 
-const port = 4174;
+const port = Number(process.env.LINKS_PORT || 4174);
 const server = spawn('node', ['qa/serve.mjs', 'dist'], { env: { ...process.env, PORT: String(port) }, stdio: 'ignore' });
 await new Promise((r) => setTimeout(r, 800));
 const base = `http://localhost:${port}/`;

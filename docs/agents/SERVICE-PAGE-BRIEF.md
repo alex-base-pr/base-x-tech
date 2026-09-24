@@ -36,6 +36,9 @@ the same partials and the same parameters.
 
 ## Verify before you finish
 
+Other agents run in parallel: use the ports you were given in every command (`PORT` for the QA server and Playwright,
+`LINKS_PORT` for the link check), e.g. `export PORT=4181 LINKS_PORT=4191`.
+
 ```bash
 npm ci && npx playwright install chromium
 npm run build && npm run qa:build
