@@ -6,7 +6,7 @@
         <% if (typeof photo !== 'undefined' && photo) { %>
           <img loading="lazy" src="<%= photo %>" alt="<%= name %>, <%= role %>">
         <% } else { %>
-          <div class="person-quote--placeholder" role="img" aria-label="Photo of <%= name %> (placeholder)"></div>
+          <div class="person-quote--placeholder" role="img" aria-label="<%= photoPlaceholder %>"></div>
         <% } %>
       </figure>
       <div class="person-quote--body">

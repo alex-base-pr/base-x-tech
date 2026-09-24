@@ -6,18 +6,18 @@
       <div class="case--intro">
         <h2 class="case--client up"><%= client %></h2>
         <p class="case--tags"><%= tags.join(' · ') %></p>
-        <h3 class="case--h">The challenge</h3>
+        <h3 class="case--h"><%= challengeTitle %></h3>
         <% challenge.forEach(p => { %><p><%= p %></p><% }) %>
       </div>
       <figure class="case--image">
-        <% if (typeof image !== 'undefined' && image) { %><img loading="lazy" src="<%= image %>" alt="<%= client %>"><% } else { %><div class="case--placeholder" role="img" aria-label="Project image (placeholder)"></div><% } %>
+        <% if (typeof image !== 'undefined' && image) { %><img loading="lazy" src="<%= image %>" alt="<%= client %>"><% } else { %><div class="case--placeholder" role="img" aria-label="<%= imagePlaceholder %>"></div><% } %>
       </figure>
       <div class="case--built">
-        <h3 class="case--h">What we built</h3>
+        <h3 class="case--h"><%= builtTitle %></h3>
         <% built.forEach(p => { %><p><%= p %></p><% }) %>
       </div>
       <div class="case--outcomes">
-        <h3 class="case--h">Key outcomes</h3>
+        <h3 class="case--h"><%= outcomesTitle %></h3>
         <ul>
           <% outcomes.forEach(o => { %><li><strong><%= o.title %></strong><span><%= o.text %></span></li><% }) %>
         </ul>

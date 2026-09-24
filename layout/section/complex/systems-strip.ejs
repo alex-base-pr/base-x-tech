@@ -1,8 +1,14 @@
-<%# Systems we actually work with (REQ-015). Figma: dark band under the hero. %>
+<%# Systems strip (Figma #122: marquee). The list is in the HTML once; the moving copy is aria-hidden. %>
 <section class="section section-systems-strip">
-  <div class="container">
-    <p class="systems-strip"><span class="systems-strip--label"><%= label %></span>
-      <% items.forEach((item, i) => { %><span class="systems-strip--item"><%= item %></span><% if (i < items.length - 1) { %><span class="systems-strip--dot" aria-hidden="true">·</span><% } %><% }) %>
-    </p>
+  <div class="container systems-strip">
+    <p class="systems-strip--label"><%= label %></p>
+    <div class="systems-strip--viewport">
+      <ul class="systems-strip--track">
+        <% items.forEach(item => { %><li><%= item %></li><% }) %>
+      </ul>
+      <ul class="systems-strip--track" aria-hidden="true">
+        <% items.forEach(item => { %><li><%= item %></li><% }) %>
+      </ul>
+    </div>
   </div>
 </section>

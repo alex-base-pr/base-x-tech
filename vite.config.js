@@ -14,6 +14,12 @@ const require = createRequire(import.meta.url);
 const jsonData = JSON.parse(readFileSync('./json/data.json'));
 // DEPLOY_ENV=dev → noindex, no analytics, form stub (spec REQ-022…025). Anything else = prod.
 const deployEnv = process.env.DEPLOY_ENV === 'dev' ? 'dev' : 'prod';
+// Page copy kept as data so a translation is a file swap (REQ-019): content/pages/<page>.<lang>.json → content['<page>'].<lang>
+const content = glob.sync('content/pages/*.json').reduce((acc, file) => {
+  const [page, lang] = path.basename(file, '.json').split('.');
+  (acc[page] ||= {})[lang] = JSON.parse(readFileSync(file, 'utf8'));
+  return acc;
+}, {});
 
 function moveOutputPlugin() {
   return {
@@ -45,14 +51,21 @@ const getInputFiles = () => {
     return acc;
   }, {});
 
-  return { ...inputFiles, ...pageFiles, ...ukFiles };
+  // German pages (REQ-019): de/pages/<name>.html → /de/pages/<name>/
+  const deFiles = glob.sync('de/**/*.html').reduce((acc, file) => {
+    const name = path.relative('.', file.slice(0, file.length - path.extname(file).length));
+    acc[name] = path.resolve(__dirname, file);
+    return acc;
+  }, {});
+
+  return { ...inputFiles, ...pageFiles, ...ukFiles, ...deFiles };
 };
 
 export default defineConfig({
   define: { __DEPLOY_ENV__: JSON.stringify(deployEnv) },
   plugins: [
-    liveReload(['./layout/**/*.ejs', './index.html', './404.html', './pages/**/*.html', './uk/**/*.html']),
-    ViteEjsPlugin({ ...jsonData, deployEnv }),
+    liveReload(['./layout/**/*.ejs', './index.html', './404.html', './pages/**/*.html', './uk/**/*.html', './de/**/*.html', './content/pages/*.json']),
+    ViteEjsPlugin({ ...jsonData, deployEnv, content }),
     seoPlugin({ deployEnv }),
     moveOutputPlugin(),
     ViteImageOptimizer({

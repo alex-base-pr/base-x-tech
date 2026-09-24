@@ -6,12 +6,12 @@
       <p class="posts--text"><%= text %></p>
     </div>
     <ul class="posts--list">
-      <% posts.forEach(post => { %>
+      <% items.forEach(post => { %>
         <li class="post-card">
-          <p class="post-card--meta"><span>By <%= post.author %></span><time datetime="<%= post.datetime %>"><%= post.date %></time></p>
+          <p class="post-card--meta"><span><%= by %> <%= post.author %></span><time datetime="<%= post.datetime %>"><%= post.date %></time></p>
           <h3 class="post-card--title"><a href="<%= post.url %>"><%= post.title %></a></h3>
           <p class="post-card--excerpt"><%= post.excerpt %></p>
-          <a class="post-card--more" href="<%= post.url %>" aria-hidden="true" tabindex="-1">Read More</a>
+          <a class="post-card--more" href="<%= post.url %>" aria-hidden="true" tabindex="-1"><%= readMore %></a>
         </li>
       <% }) %>
     </ul>

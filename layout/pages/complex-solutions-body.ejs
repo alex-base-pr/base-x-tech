@@ -1,0 +1,59 @@
+<%# Complex Service / DACH page body. Copy: content/pages/complex-solutions.<lang>.json (REQ-019). %>
+<body class="locale-en" lang="<%= lang %>">
+  <%- include('layout/noscript.ejs') %>
+
+  <%- include('layout/header-alt.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <main id="complex-solutions">
+    <%- include('layout/section/hero-type-two.ejs', {
+      locale: 'en', id: "service-hero", subtitle: c.hero.eyebrow, title: c.hero.title, title_size: "long",
+      description: c.hero.lead, button_text: c.hero.button, icons: ["shopify"]
+    }) %>
+
+    <%- include('layout/section/complex/systems-strip.ejs', c.strip) %>
+
+    <%- include('layout/section/complex/person-quote.ejs', Object.assign({ id: "local-expertise" }, c.partner)) %>
+
+    <%- include('layout/section/split.ejs', {
+      semantic: true, locale: 'en', theme: 'light', id: "service-type-of-apps",
+      title: c.capabilities.label, subtitle: c.capabilities.title,
+      cards: c.capabilities.cards.map(card => Object.assign({ background_image: "/images/pages/service/index/app-types/card-1.png" }, card))
+    }) %>
+
+    <%- include('layout/section/complex/text-block.ejs', Object.assign({ id: "behind-the-integration" }, c.reliable)) %>
+
+    <%- include('layout/section/complex/text-block.ejs', Object.assign({ id: "system-architecture" }, c.architecture)) %>
+
+    <%- include('layout/section/split.ejs', {
+      semantic: true, locale: 'en', theme: 'light', id: "service-advantages",
+      title: c.help.label, subtitle: c.help.title,
+      content_cards: c.help.cards.map(card => Object.assign({ subtitle: "<span class='fig-rhombus black'></span>" }, card))
+    }) %>
+
+    <%- include('layout/section/complex/case.ejs', Object.assign({ id: "proven-in-practice" }, c.case)) %>
+
+    <%- include('layout/section/complex/posts.ejs', Object.assign({ id: "go-deeper" }, c.posts)) %>
+
+    <%- include('layout/section/faq.ejs', {
+      semantic: true, locale: 'en', id: 'service-faq', stage_label: c.process.stagePrefix,
+      title: c.process.label, subtitle: c.process.title, button: { text: c.process.button },
+      faq: c.process.steps
+    }) %>
+
+    <%# Same pairs as the Shopify Integrations page (Figma) — no FAQPage schema to avoid duplicates (Q-19). %>
+    <%- include('layout/section/faq.ejs', {
+      semantic: true, numbered: false, extra_class: 'faq-list', locale: 'en', id: 'service-questions',
+      title: c.faq.label, subtitle: c.faq.title,
+      faq: c.faq.items.map(i => ({ title: i.q, description: i.a }))
+    }) %>
+
+    <%- include('layout/section/cta.ejs', { cta: c.cta }) %>
+  </main>
+
+  <%- include('layout/footer-alt.ejs') %>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/page-service.js"></script>
+</body>

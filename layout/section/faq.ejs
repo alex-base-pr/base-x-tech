@@ -24,7 +24,7 @@
                   <header class="faq-header">
                     <div class="header-inner">
                       <div>
-                        <% if (typeof numbered === 'undefined' || numbered) { %><span class="stage">Stage <%= index + 1 %></span><% } %>
+                        <% if (typeof numbered === 'undefined' || numbered) { %><span class="stage"><%= (typeof stage_label !== 'undefined' && stage_label) ? stage_label : 'Stage' %> <%= index + 1 %></span><% } %>
                         <h3 class="title up"<% if (typeof schema !== 'undefined' && schema) { %> data-faq-q<% } %>><%- item.title %></h3>
                       </div>
                     </div>

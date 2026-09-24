@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Complex Shopify Systems: ERP, POS & Middleware | Base X Tech",
+    "description": "We connect e-commerce, ERP, POS, inventory and custom systems — building the integrations, apps and automation that keep your operations in sync."
+  },
+  "hero": {
+    "eyebrow": "Complex Solutions",
+    "title": "Complex systems,<br> connected around how<br> your business works.",
+    "lead": "We connect e-commerce, ERP, POS, inventory and custom systems — building the integrations, apps and automation that keep your operations in sync.",
+    "button": "Book a call"
+  },
+  "strip": {
+    "label": "Built around the systems you already use:",
+    "items": [
+      "Shopify POS",
+      "Xentral",
+      "JTL-Wawi",
+      "weclapp",
+      "SAP Business One",
+      "Microsoft Dynamics 365 Business Central",
+      "Odoo",
+      "DATEV",
+      "lexoffice",
+      "Akeneo",
+      "HubSpot",
+      "Salesforce",
+      "DHL",
+      "DPD",
+      "Sendcloud",
+      "Custom APIs",
+      "Middleware"
+    ]
+  },
+  "partner": {
+    "label": "Local Expertise",
+    "paragraphs": [
+      "ERP integration isn’t just about connecting APIs – it’s about understanding business processes and making systems work together seamlessly. Every setup is different, and the challenges usually hide in the details: in how orders, stock and invoices really move through the business.",
+      "The key is clear requirements, proper data ownership, and testing with real-world scenarios. Our approach ensures the integration becomes a reliable part of your daily operations, not a source of constant firefighting."
+    ],
+    "name": "Alexander Karl",
+    "role": "DACH Partner",
+    "photoPlaceholder": "Photo of Alexander Karl (placeholder)"
+  },
+  "capabilities": {
+    "label": "Our Capabilities",
+    "title": "What we integrate,<br class='br-desk'> build and <span class='accent'>automate.</span>",
+    "cards": [
+      {
+        "title": "ERP Integrations",
+        "description": "Orders, stock and invoices moving between Shopify and your ERP without hands."
+      },
+      {
+        "title": "CRM Integrations",
+        "description": "Customer and order data landing in your CRM the way your sales team needs it."
+      },
+      {
+        "title": "Custom APIs",
+        "description": "Connections built for systems with no app and no standard integration."
+      },
+      {
+        "title": "Private & Custom Apps",
+        "description": "Apps for one merchant, doing the thing no public app does properly."
+      },
+      {
+        "title": "Custom Automations",
+        "description": "Work that happens by itself: orders, stock, documents, notifications."
+      },
+      {
+        "title": "Logistics & Fulfilment",
+        "description": "Carriers, labels and tracking wired into the order flow rather than bolted on."
+      }
+    ]
+  },
+  "reliable": {
+    "label": "Behind the integration",
+    "title": "What makes an integration <span class='accent'>reliable</span>",
+    "paragraphs": [
+      "A reliable integration is more than connecting two systems. It means defining field mapping and data ownership, handling webhooks and API limits, and building in retries, reconciliation and monitoring so critical data keeps moving reliably across Shopify, ERP, POS and the rest of your infrastructure.",
+      "When an existing connector fits the process, we use it. When the business logic is more complex, we build the integration layer around it — based on the systems involved, data volume, operational risk and how the business actually works."
+    ],
+    "button": "Book a call"
+  },
+  "architecture": {
+    "label": "System architecture",
+    "title": "How your systems <span class='accent'>work together</span>",
+    "paragraphs": [
+      "Shopify, ERP and POS each have their own role. We build the integration layer between them so data moves reliably across the entire operation."
+    ],
+    "diagram": {
+      "svgTitle": "How the systems connect",
+      "svgDesc": "Shopify (commerce platform) connects to middleware (integration layer), which connects to the ERP (system of record) and the POS (in-store operations).",
+      "shopify": "Shopify",
+      "shopifyRole": "Commerce platform",
+      "middleware": "Middleware",
+      "middlewareRole": "Integration layer",
+      "erp": "ERP",
+      "erpRole": "System of record",
+      "pos": "POS",
+      "posRole": "In-store operations"
+    }
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "When standard solutions<br class='br-desk'> stop being <span class='accent'>enough.</span>",
+    "cards": [
+      {
+        "title": "Your systems don’t stay in sync",
+        "description": "Orders, inventory or customer data live across different systems, creating inconsistencies, delays and manual work."
+      },
+      {
+        "title": "Your workflow doesn’t fit an existing app",
+        "description": "The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly."
+      },
+      {
+        "title": "Manual work is becoming part of the system",
+        "description": "Your team is moving data, updating stock or handling routine processes by hand because the systems behind the business aren’t connected."
+      }
+    ]
+  },
+  "case": {
+    "label": "Proven in practice",
+    "client": "Fresh Market",
+    "tags": [
+      "Private App",
+      "Inventory Sync",
+      "POS Integration",
+      "Automation"
+    ],
+    "challengeTitle": "The challenge",
+    "challenge": [
+      "Fresh Market sells the same inventory through its Shopify store and physical locations. Without a shared inventory flow, an item sold in-store could remain available online — creating overselling, cancelled orders and manual stock corrections.",
+      "The challenge was to make both channels operate against the same inventory, so every sale is reflected across the business automatically."
+    ],
+    "builtTitle": "What we built",
+    "built": [
+      "We built a connected commerce system that keeps the online store, physical locations and inventory in sync through a custom integration layer. A private app handles the business-specific logic, while automated data flows keep stock availability updated across channels as sales happen.",
+      "Instead of managing online and offline inventory separately, the store operates around one connected flow — with Shopify, POS and inventory data working together behind the scenes."
+    ],
+    "outcomesTitle": "Key outcomes",
+    "outcomes": [
+      {
+        "title": "Private App",
+        "text": "Custom logic built around the store’s inventory and sales workflow, connecting systems where a standard integration wasn’t enough."
+      },
+      {
+        "title": "Inventory Sync",
+        "text": "Stock availability stays aligned between online and physical stores as products are sold across either channel."
+      },
+      {
+        "title": "POS Integration",
+        "text": "In-store sales feed back into the connected inventory flow, so offline transactions are reflected online automatically."
+      },
+      {
+        "title": "Automation",
+        "text": "Routine inventory updates happen automatically, reducing the need for manual stock adjustments between channels."
+      }
+    ],
+    "imagePlaceholder": "Project image (placeholder)"
+  },
+  "posts": {
+    "label": "Go deeper",
+    "text": "Explore technical breakdowns, integration stories and lessons from the systems we’ve built for real commerce businesses.",
+    "by": "By",
+    "readMore": "Read More",
+    "items": [
+      {
+        "url": "/blog/custom-shopify-integrations-gifting-brand/",
+        "title": "Custom Shopify Integrations: A UK Gifting Brand Case Study",
+        "excerpt": "A UK gifting brand with 13 years of history needed more than a new storefront.",
+        "author": "Vadym-Marko Hruden",
+        "date": "08 Jun 2026",
+        "datetime": "2026-06-08"
+      },
+      {
+        "url": "/blog/nova-poshta-shopify-integration-connect-app/",
+        "title": "Nova Poshta Shopify Integration — Nova Poshta Connect by Base X Tech",
+        "excerpt": "Ukrainian Shopify stores have always had to handle Nova Poshta TTNs manually — outside Shopify, one order at a time.",
+        "author": "Oleksandr Rudenko",
+        "date": "16 Jun 2026",
+        "datetime": "2026-06-16"
+      },
+      {
+        "url": "/blog/building-an-ai-analytics-agent-with-claude-api/",
+        "title": "Building an AI Analytics Agent with Claude API",
+        "excerpt": "We built an analytics agent that replaces 8+ hours of monthly manual reporting.",
+        "author": "Vadym-Marko Hruden",
+        "date": "21 May 2026",
+        "datetime": "2026-05-21"
+      }
+    ]
+  },
+  "process": {
+    "label": "Our Process",
+    "title": "From mapping the complexity<br> to a system <span class=\"accent\">that works.</span>",
+    "button": "Book a call",
+    "stagePrefix": "Stage",
+    "steps": [
+      {
+        "title": "Map the System",
+        "description": "We map every system, workflow and dependency, and define what data each one owns before deciding how they should connect."
+      },
+      {
+        "title": "Plan the Logic",
+        "description": "We define how data should move, what happens when systems disagree and where custom logic is needed before anything gets built."
+      },
+      {
+        "title": "Build & Test",
+        "description": "We build the integration layer, apps and automations, then run real scenarios through them — including the ones that fail."
+      },
+      {
+        "title": "Launch & Monitor",
+        "description": "We launch under real conditions and keep watching the critical flows, because integrations need to keep working after go-live."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions we <span class=\"accent\">get asked</span>",
+    "items": [
+      {
+        "q": "Can you connect Shopify to our ERP?",
+        "a": "Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it exposes nothing usable we build the connector ourselves rather than telling you it cannot be done."
+      },
+      {
+        "q": "What if our system has no Shopify app?",
+        "a": "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them."
+      },
+      {
+        "q": "How do you stop stock going out of sync?",
+        "a": "By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and frequency for every field, then run real orders through it, including the ones that fail, before it touches live data."
+      },
+      {
+        "q": "Can you automate order routing and fulfilment?",
+        "a": "Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plus a fulfilment layer that generates shipping codes, syncs couriers in real time and schedules pickups twice a day."
+      },
+      {
+        "q": "Which ERPs and CRMs have you worked with?",
+        "a": "ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integration at all, and for those we have built custom connectors for the specific use rather than moving the business onto a different tool."
+      },
+      {
+        "q": "How long does an integration take?",
+        "a": "It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build, covering configurator, production and fulfilment, took four to six months. We scope it before quoting."
+      },
+      {
+        "q": "Who maintains it after launch?",
+        "a": "We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and alert on the connections we build, because a silent integration failure costs more than a loud one."
+      },
+      {
+        "q": "Can you integrate with our warehouse or 3PL?",
+        "a": "Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Let’s talk",
+    "title": "Have a complex system<br> to connect?",
+    "body": "Talk to our team about your systems, workflows and what needs to work better. We’ll take it from there.",
+    "button": "Book a call"
+  }
+}

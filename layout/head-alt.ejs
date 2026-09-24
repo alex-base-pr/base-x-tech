@@ -11,6 +11,10 @@
   <% } else { %>
     <meta name="description" content="Web design and development agency ➤ BaseX-Tech ⭐️ We create solutions that combine innovation, efficiency, and real impact on business growth.">
   <% } %>
+  <% if (typeof hreflangs !== 'undefined' && hreflangs) { %>
+    <% hreflangs.forEach(h => { %><link rel="alternate" href="<%- h.href %>" hreflang="<%- h.lang %>">
+    <% }) %>
+  <% } %>
   <% if (typeof hrefLangCode !== 'undefined' && typeof hrefLangLink !== 'undefined') { %>
     <link rel="alternate" href="<%- hrefLangLink %>" hreflang="<%- hrefLangCode %>">
   <% } %>
