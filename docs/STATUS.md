@@ -33,3 +33,4 @@ States: `todo` · `in progress` · `review` (on dev, waiting for Alex) · `done`
 | GPTBot at Cloudflare | REQ-041 | done — not blocked | the 403 seen earlier was CF rejecting a spoofed GPTBot UA; real GPTBot is allowed (AI Crawl Control, all toggles off) |
 | Accessibility: names/alt on icon controls, Sortlist badge | NFR-002 | done | contrast + dot size = design-owned, reported only |
 | Bug: preload of missing bg-mob.jpg on every page | — | done | removed |
+| Round-2 review, no-input fixes (form, /de/ shell, testimonials, cards, related links, visual bugs, hreflang/OG/404, llms-full) | REQ-019/044 | review | [summary](review/2026-09-24-v2-summary.md) "Today, no input"; open: EUR bands, Mo App Store URL, 1200×630 OG card, UK-side hreflang is head-only |
