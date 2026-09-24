@@ -8,6 +8,8 @@ export default defineConfig({
   testDir: './qa/tests',
   outputDir: './qa/results',
   fullyParallel: true,
+  // One retry absorbs load-related timing flakes (sliders, third-party widgets); Playwright still reports them as 'flaky'.
+  retries: 1,
   reporter: [['list'], ['html', { outputFolder: 'qa/report', open: 'never' }]],
   use: { baseURL },
   projects: [

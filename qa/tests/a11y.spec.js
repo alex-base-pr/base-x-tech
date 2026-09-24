@@ -1,9 +1,9 @@
 // T-006 axe-core: zero critical/serious violations (NFR-002).
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { indexPages } from '../site-map.js';
+import { indexPages, dePages } from '../site-map.js';
 
-for (const page of indexPages) {
+for (const page of [...indexPages, ...dePages]) {
   for (const width of [375, 1440]) {
     test(`T-006 axe ${page.path} @${width}`, async ({ page: p }) => {
       test.setTimeout(90_000);

@@ -10,6 +10,7 @@
     { "path": "/pages/service/custom-web-design-services/", "file": "pages/service/custom-web-design-services.html", "lang": "en", "role": "index", "group": "service", "name": "Web Design", "faq": true },
     { "path": "/pages/service/conversion-rate-optimization/", "file": "pages/service/conversion-rate-optimization.html", "lang": "en", "role": "index", "group": "service", "name": "Conversion Rate Optimization", "faq": true },
     { "path": "/pages/complex-solutions/", "file": "pages/complex-solutions.html", "lang": "en", "role": "index", "group": "service-extra", "name": "Complex Systems (DACH)" },
+    { "path": "/de/pages/complex-solutions/", "file": "de/pages/complex-solutions.html", "lang": "de", "role": "index", "group": "service-extra", "name": "Komplexe Systeme (DACH)", "en": "/pages/complex-solutions/" },
     { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
     { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
 

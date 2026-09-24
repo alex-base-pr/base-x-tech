@@ -24,7 +24,7 @@ function getHtmlFiles(dir, prefix = '') {
 
 const pages = [
   ...siteMap.pages
-    .filter((p) => p.lang === 'en' && p.role === 'index')
+    .filter((p) => (p.lang === 'en' || p.lang === 'de') && p.role === 'index')
     .map((p) => ({ url: p.path, priority: p.path === '/' ? 1.0 : 0.8 })),
   { url: '/uk/', priority: 1.0 },
   ...getHtmlFiles(path.join(__dirname, 'uk/pages')).map((page) => ({

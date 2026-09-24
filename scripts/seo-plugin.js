@@ -43,7 +43,7 @@ function jsonLd(page, path, html) {
     graph.push({
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${host}/` },
+        { '@type': 'ListItem', position: 1, name: page.lang === 'de' ? 'Startseite' : 'Home', item: `${host}/` },
         { '@type': 'ListItem', position: 2, name: page.name, item: url },
       ],
     });
@@ -80,7 +80,7 @@ export function seoPlugin({ deployEnv }) {
         tags.push(`<link rel="canonical" href="${canonical}">`);
         if (deployEnv === 'dev') tags.push('<meta name="robots" content="noindex, nofollow">');
         else if (page.role === 'noindex') tags.push('<meta name="robots" content="noindex, follow">');
-        if (page.role === 'index' && page.lang === 'en') tags.push(jsonLd(page, path, html));
+        if (page.role === 'index' && (page.lang === 'en' || page.lang === 'de')) tags.push(jsonLd(page, path, html));
         let out = html.replace('</head>', `  ${tags.join('\n  ')}\n</head>`);
         if (deployEnv === 'dev') out = out.replace(/<html([^>]*)>/i, '<html$1 data-env="dev">');
         return out;

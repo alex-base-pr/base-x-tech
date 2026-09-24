@@ -16,7 +16,7 @@ States: `todo` · `in progress` · `review` (on dev, waiting for Alex) · `done`
 | 6 | Web Design | `/pages/service/custom-web-design-services` | 01 + FAQ | review | cards per 01 (Q-16); Lili Mager wording (Q-15) |
 | 7 | CRO | `/pages/service/conversion-rate-optimization` | 06 v2 | review | +43%/+65% hero widgets removed (not in copy); 50-200 range needs source on file |
 | 8 | About | `/pages/about` | Marko (pending) | blocked: copy | photos: placeholder only |
-| 9 | Complex Service / DACH (Alexander Karl) | `/pages/complex-solutions/` | Figma "Complex Service" (agreed 2026-09-24) → content/source/08 | review | built in legacy style; linked from header "Complex Solutions"; prod blocked by photo, Fresh Market case check, Swiss-market claim (Q-19…Q-23) |
+| 9 | Complex Service / DACH (Alexander Karl) | `/pages/complex-solutions/` + DE `/de/pages/complex-solutions/` | Figma "Complex Service" (agreed 2026-09-24) → content/source/08 | review | built in legacy style; linked from header "Complex Solutions"; DE: copywriter agent + independent proofread (content/source/08-*-de-*.md), must-fix applied; prod blocked by photo and systems-list check (Q-23) |
 | 10 | Privacy / Terms | unchanged | — | done | canonical only |
 
 ## Site-wide

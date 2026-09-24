@@ -22,7 +22,7 @@ test('T-004 services menu lists exactly the six service pages (REQ-007)', async 
 test('T-005 sitemap.xml = indexable EN set + all UA, canonical form', async () => {
   const xml = fs.readFileSync('dist/sitemap.xml', 'utf8');
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  const en = locs.filter((u) => !u.startsWith(host + '/uk/')).sort();
+  const en = locs.filter((u) => !u.startsWith(host + '/uk/') && !u.startsWith(host + '/de/')).sort();
   expect(en).toEqual(indexPages.map((p) => host + p.path).sort());
   const nonIndex = siteMap.pages.filter((p) => p.role !== 'index').map((p) => host + p.path);
   expect(locs.filter((u) => nonIndex.includes(u)), 'absorbed/noindex pages must not be in sitemap').toEqual([]);

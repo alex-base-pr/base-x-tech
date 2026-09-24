@@ -16,3 +16,4 @@ export async function rawHtml(request, path) {
   const res = await request.get(path);
   return { status: res.status(), html: await res.text() };
 }
+export const dePages = siteMap.pages.filter((p) => p.lang === 'de');

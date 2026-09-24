@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# German version of /pages/complex-solutions/ (REQ-019). Copy: content/pages/complex-solutions.de.json. %>
+<%
+  const c = content['complex-solutions'].de;
+  const en = 'https://base-xtech.com/pages/complex-solutions/';
+  const de = 'https://base-xtech.com/de/pages/complex-solutions/';
+%>
+<%- include('layout/head-alt.ejs', {
+  title: c.meta.title,
+  description: c.meta.description,
+  hreflangs: [{ lang: 'de', href: de }, { lang: 'en', href: en }, { lang: 'x-default', href: en }]
+}) %>
+<%- include('layout/pages/complex-solutions-body.ejs', { c, lang: 'de' }) %>
+</html>

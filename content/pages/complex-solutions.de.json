@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "title": "Shopify-ERP-Integration, POS & Middleware | Base X Tech",
+    "description": "Wir binden Shopify an ERP, POS, Lagerverwaltung und individuelle Systeme an – mit Integrationen, Apps und Automatisierungen für synchrone Abläufe."
+  },
+  "hero": {
+    "eyebrow": "Komplexe Lösungen",
+    "title": "Komplexe Systeme,<br> so verbunden, wie<br> Ihr Unternehmen arbeitet.",
+    "lead": "Wir verbinden E-Commerce, ERP, POS, Lagerverwaltung und individuelle Systeme – mit den Integrationen, Apps und Automatisierungen, die Ihre Abläufe synchron halten.",
+    "button": "Gespräch vereinbaren"
+  },
+  "strip": {
+    "label": "Abgestimmt auf die Systeme, die Sie bereits nutzen:",
+    "items": [
+      "Shopify POS",
+      "Xentral",
+      "JTL-Wawi",
+      "weclapp",
+      "SAP Business One",
+      "Microsoft Dynamics 365 Business Central",
+      "Odoo",
+      "DATEV",
+      "Lexware Office",
+      "Akeneo",
+      "HubSpot",
+      "Salesforce",
+      "DHL",
+      "DPD",
+      "Sendcloud",
+      "Individuelle APIs",
+      "Middleware"
+    ]
+  },
+  "partner": {
+    "label": "Expertise vor Ort",
+    "paragraphs": [
+      "Bei einer ERP-Integration geht es nicht nur darum, APIs zu verbinden – es geht darum, Geschäftsprozesse zu verstehen und Systeme reibungslos zusammenarbeiten zu lassen. Jede Systemlandschaft ist anders, und die Herausforderungen stecken meist im Detail: darin, wie Bestellungen, Bestände und Rechnungen tatsächlich durch das Unternehmen laufen.",
+      "Entscheidend sind klare Anforderungen, eine eindeutig geregelte Datenhoheit und Tests mit realen Szenarien. Unser Vorgehen sorgt dafür, dass die Integration ein verlässlicher Teil Ihres Tagesgeschäfts wird – und nicht etwas, bei dem Sie ständig Brände löschen müssen."
+    ],
+    "name": "Alexander Karl",
+    "role": "DACH-Partner",
+    "photoPlaceholder": "Foto von Alexander Karl (Platzhalter)"
+  },
+  "capabilities": {
+    "label": "Unsere Leistungen",
+    "title": "Was wir verbinden,<br class='br-desk'> entwickeln und <span class='accent'>automatisieren.</span>",
+    "cards": [
+      {
+        "title": "ERP-Integrationen",
+        "description": "Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP – ganz ohne Handarbeit."
+      },
+      {
+        "title": "CRM-Integrationen",
+        "description": "Kunden- und Bestelldaten landen so in Ihrem CRM, wie Ihr Vertrieb sie braucht."
+      },
+      {
+        "title": "Individuelle APIs",
+        "description": "Anbindungen für Systeme, für die es weder eine App noch eine Standardintegration gibt."
+      },
+      {
+        "title": "Private & individuelle Apps",
+        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann."
+      },
+      {
+        "title": "Individuelle Automatisierung",
+        "description": "Arbeit, die sich von selbst erledigt: Bestellungen, Bestände, Dokumente, Benachrichtigungen."
+      },
+      {
+        "title": "Logistik & Fulfillment",
+        "description": "Versanddienstleister, Etiketten und Sendungsverfolgung direkt in den Bestellablauf eingebunden statt nachträglich aufgesetzt."
+      }
+    ]
+  },
+  "reliable": {
+    "label": "Unter der Haube",
+    "title": "Was eine Integration <span class='accent'>zuverlässig</span> macht",
+    "paragraphs": [
+      "Eine zuverlässige Integration ist mehr als die Verbindung zweier Systeme. Dazu gehört, Feldzuordnung und Datenhoheit festzulegen, Webhooks und API-Limits sauber zu handhaben und automatische Wiederholungsversuche, Datenabgleich und Monitoring einzubauen – damit kritische Daten zuverlässig zwischen Shopify, ERP, POS und dem Rest Ihrer Infrastruktur fließen.",
+      "Wenn ein vorhandener Konnektor zum Prozess passt, nutzen wir ihn. Ist die Geschäftslogik komplexer, entwickeln wir die Integrationsschicht passend dazu – ausgerichtet auf die beteiligten Systeme, das Datenvolumen, das betriebliche Risiko und darauf, wie das Unternehmen tatsächlich arbeitet."
+    ],
+    "button": "Gespräch vereinbaren"
+  },
+  "architecture": {
+    "label": "Systemarchitektur",
+    "title": "Wie Ihre Systeme <span class='accent'>zusammenarbeiten</span>",
+    "paragraphs": [
+      "Shopify, ERP und POS haben jeweils ihre eigene Rolle. Wir entwickeln die Integrationsschicht dazwischen, damit Daten im gesamten Betrieb zuverlässig fließen."
+    ],
+    "diagram": {
+      "svgTitle": "So sind die Systeme verbunden",
+      "svgDesc": "Shopify (Commerce-Plattform) ist mit der Middleware (Integrationsschicht) verbunden, die wiederum mit dem ERP (führendes System) und dem POS (Ladenbetrieb) verbunden ist.",
+      "shopify": "Shopify",
+      "shopifyRole": "Commerce-Plattform",
+      "middleware": "Middleware",
+      "middlewareRole": "Integrationsschicht",
+      "erp": "ERP",
+      "erpRole": "Führendes System",
+      "pos": "POS",
+      "posRole": "Ladenbetrieb"
+    }
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Wenn Standardlösungen<br class='br-desk'> nicht mehr <span class='accent'>ausreichen.</span>",
+    "cards": [
+      {
+        "title": "Ihre Systeme laufen auseinander",
+        "description": "Bestellungen, Bestände oder Kundendaten liegen in verschiedenen Systemen – mit Inkonsistenzen, Verzögerungen und Handarbeit als Folge."
+      },
+      {
+        "title": "Ihr Ablauf passt in keine fertige App",
+        "description": "Die Art, wie Ihr Unternehmen arbeitet, ist zu speziell, als dass ein Standard-Konnektor oder eine Shopify-App sie sauber abbilden könnte."
+      },
+      {
+        "title": "Handarbeit wird zum Teil des Systems",
+        "description": "Ihr Team überträgt Daten, pflegt Bestände oder erledigt Routineabläufe von Hand, weil die Systeme hinter dem Geschäft nicht miteinander verbunden sind."
+      }
+    ]
+  },
+  "case": {
+    "label": "In der Praxis bewährt",
+    "client": "Fresh Market",
+    "tags": [
+      "Private App",
+      "Bestandsabgleich",
+      "POS-Integration",
+      "Automatisierung"
+    ],
+    "challengeTitle": "Die Herausforderung",
+    "challenge": [
+      "Fresh Market verkauft denselben Warenbestand über seinen Shopify-Shop und seine Ladengeschäfte. Ohne gemeinsamen Bestandsfluss konnte ein im Laden verkaufter Artikel online weiterhin verfügbar sein – mit Überverkäufen, stornierten Bestellungen und manuellen Bestandskorrekturen als Folge.",
+      "Die Aufgabe bestand darin, beide Kanäle auf Basis desselben Bestands arbeiten zu lassen, sodass sich jeder Verkauf automatisch im gesamten Unternehmen widerspiegelt."
+    ],
+    "builtTitle": "Was wir umgesetzt haben",
+    "built": [
+      "Wir haben ein vernetztes Commerce-System aufgebaut, das Onlineshop, Ladengeschäfte und Warenbestand über eine individuelle Integrationsschicht synchron hält. Eine private App bildet die geschäftsspezifische Logik ab, während automatisierte Datenflüsse die Verfügbarkeit mit jedem Verkauf kanalübergreifend aktualisieren.",
+      "Statt Online- und Offline-Bestand getrennt zu verwalten, arbeitet das Geschäft mit einem durchgängigen Ablauf – Shopify, POS und Bestandsdaten greifen im Hintergrund ineinander."
+    ],
+    "outcomesTitle": "Die wichtigsten Ergebnisse",
+    "outcomes": [
+      {
+        "title": "Private App",
+        "text": "Individuelle Logik, abgestimmt auf die Bestands- und Verkaufsabläufe des Geschäfts – sie verbindet Systeme dort, wo eine Standardintegration nicht ausreichte."
+      },
+      {
+        "title": "Bestandsabgleich",
+        "text": "Die Verfügbarkeit bleibt zwischen Onlineshop und Ladengeschäften synchron, ganz gleich, über welchen Kanal Produkte verkauft werden."
+      },
+      {
+        "title": "POS-Integration",
+        "text": "Verkäufe im Laden fließen in den gemeinsamen Bestandsfluss zurück, sodass sich Offline-Verkäufe automatisch online widerspiegeln."
+      },
+      {
+        "title": "Automatisierung",
+        "text": "Routinemäßige Bestandsaktualisierungen laufen automatisch und verringern den Bedarf an manuellen Bestandskorrekturen zwischen den Kanälen."
+      }
+    ],
+    "imagePlaceholder": "Projektbild (Platzhalter)"
+  },
+  "posts": {
+    "label": "Tiefer einsteigen",
+    "text": "Lesen Sie technische Analysen, Integrationsberichte und Erfahrungen aus Systemen, die wir für echte Handelsunternehmen entwickelt haben.",
+    "by": "Von",
+    "readMore": "Weiterlesen",
+    "items": [
+      {
+        "url": "/blog/custom-shopify-integrations-gifting-brand/",
+        "title": "Individuelle Shopify-Integrationen: Fallstudie einer britischen Geschenkmarke",
+        "excerpt": "Eine britische Geschenkmarke mit 13 Jahren Geschichte brauchte mehr als einen neuen Onlineshop.",
+        "author": "Vadym-Marko Hruden",
+        "date": "8. Juni 2026",
+        "datetime": "2026-06-08"
+      },
+      {
+        "url": "/blog/nova-poshta-shopify-integration-connect-app/",
+        "title": "Nova-Poshta-Integration für Shopify – Nova Poshta Connect von Base X Tech",
+        "excerpt": "Ukrainische Shopify-Shops mussten Nova-Poshta-Frachtbriefe (TTN) bisher immer manuell bearbeiten – außerhalb von Shopify, eine Bestellung nach der anderen.",
+        "author": "Oleksandr Rudenko",
+        "date": "16. Juni 2026",
+        "datetime": "2026-06-16"
+      },
+      {
+        "url": "/blog/building-an-ai-analytics-agent-with-claude-api/",
+        "title": "Einen KI-Analyse-Agenten mit der Claude-API entwickeln",
+        "excerpt": "Wir haben einen Analyse-Agenten entwickelt, der jeden Monat mehr als 8 Stunden manuelles Reporting ersetzt.",
+        "author": "Vadym-Marko Hruden",
+        "date": "21. Mai 2026",
+        "datetime": "2026-05-21"
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Von der Analyse der Komplexität<br> zu einem System, <span class=\"accent\">das funktioniert.</span>",
+    "button": "Gespräch vereinbaren",
+    "stagePrefix": "Phase",
+    "steps": [
+      {
+        "title": "System erfassen",
+        "description": "Wir erfassen jedes System, jeden Ablauf und jede Abhängigkeit und legen fest, für welche Daten welches System führend ist – bevor wir entscheiden, wie die Systeme verbunden werden."
+      },
+      {
+        "title": "Logik planen",
+        "description": "Wir legen fest, wie Daten fließen sollen, was passiert, wenn Systeme sich widersprechen, und wo individuelle Logik nötig ist – bevor irgendetwas gebaut wird."
+      },
+      {
+        "title": "Entwickeln & testen",
+        "description": "Wir entwickeln Integrationsschicht, Apps und Automatisierungen und spielen dann reale Szenarien durch – einschließlich der Fehlerfälle."
+      },
+      {
+        "title": "Livegang & Monitoring",
+        "description": "Wir gehen unter realen Bedingungen live und überwachen die kritischen Abläufe weiter, denn Integrationen müssen auch nach dem Livegang funktionieren."
+      }
+    ]
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir <span class=\"accent\">oft hören</span>",
+    "items": [
+      {
+        "q": "Können Sie Shopify an unser ERP anbinden?",
+        "a": "Ja. Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP, ohne dass jemand sie abtippen muss. Wir arbeiten über die API, die Ihr ERP bereitstellt, und wo es nichts Brauchbares bereitstellt, entwickeln wir den Konnektor selbst, statt Ihnen zu sagen, dass es nicht geht."
+      },
+      {
+        "q": "Was, wenn es für unser System keine Shopify-App gibt?",
+        "a": "Das ist der Großteil unserer Arbeit. Fertige Apps decken gängige Systeme ab; das System, auf dem Ihr Geschäft läuft, ist oft älter als diese Apps oder wurde intern entwickelt. Solche Systeme binden wir direkt über ihre API an – oder wir entwickeln eine private Shopify-App, die dazwischengeschaltet wird."
+      },
+      {
+        "q": "Wie verhindern Sie, dass Bestände auseinanderlaufen?",
+        "a": "Indem wir festlegen, welches System für den Bestand führend ist, bevor irgendetwas gebaut wird. Bestände laufen auseinander, wenn sich zwei Systeme gleichzeitig für maßgeblich halten. Deshalb legen wir für jedes Feld Richtung und Häufigkeit fest und spielen dann echte Bestellungen durch, einschließlich der Fehlerfälle, bevor die Lösung mit Live-Daten arbeitet."
+      },
+      {
+        "q": "Können Sie Bestellsteuerung und Fulfillment automatisieren?",
+        "a": "Ja. Für eine britische Geschenkmarke haben wir eine Produktions-Engine gebaut, die jede Bestellung in druckfertige Dateien umwandelt, diese bündelt und an die Produktionswarteschlange weiterleitet. Dazu kommt eine Fulfillment-Schicht, die Versandcodes erzeugt, Daten in Echtzeit mit den Paketdiensten abgleicht und zweimal täglich Abholungen einplant."
+      },
+      {
+        "q": "Mit welchen ERP- und CRM-Systemen haben Sie bereits gearbeitet?",
+        "a": "Mit ERP-, CRM-, PIM- und Fulfillment-Systemen aus den gängigen Kategorien, angebunden über die jeweils verfügbare API. Mehrere Kunden nutzen Systeme ganz ohne öffentliche Integration; für sie haben wir individuelle Konnektoren für den konkreten Anwendungsfall entwickelt, statt das Unternehmen auf ein anderes Tool umzustellen."
+      },
+      {
+        "q": "Wie lange dauert eine Integration?",
+        "a": "Das hängt davon ab, wie viele Systeme beteiligt sind und wie sauber ihre Daten sind. Eine einzelne, gut dokumentierte Anbindung ist eine Frage von Wochen. Das Projekt der britischen Geschenkmarke mit drei Systemen – Konfigurator, Produktion und Fulfillment – dauerte vier bis sechs Monate. Wir klären den Umfang, bevor wir ein Angebot erstellen."
+      },
+      {
+        "q": "Wer betreut die Integration nach dem Livegang?",
+        "a": "Wir, wenn Sie möchten. Integrationen fallen aus, wenn sich eine der beiden Seiten ändert: Eine API-Version wird abgekündigt, ein Feld umbenannt, ein System aktualisiert. Wir überwachen die Verbindungen, die wir bauen, und schlagen bei Störungen Alarm, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+      },
+      {
+        "q": "Können Sie unser Lager oder unseren Fulfillment-Dienstleister (3PL) anbinden?",
+        "a": "Ja. Wir haben Barcode-Scanning und Routing-Logik in Lagerabläufe integriert und Anbindungen an Paketdienste entwickelt, die Versandetiketten erzeugen, die Sendungsverfolgung an den Shop zurückmelden und Abholungen einplanen. Nova Poshta Connect ist die öffentlich verfügbare Version dieser Arbeit und im Shopify App Store gelistet."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Sprechen wir",
+    "title": "Sie möchten ein komplexes<br> System anbinden?",
+    "body": "Sprechen Sie mit unserem Team über Ihre Systeme, Abläufe und das, was besser funktionieren soll. Um die nächsten Schritte kümmern wir uns.",
+    "button": "Gespräch vereinbaren"
+  }
+}

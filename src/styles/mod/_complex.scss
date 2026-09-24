@@ -153,3 +153,12 @@
   .post-card--excerpt { line-height: 1.5; opacity: .75; }
   .post-card--more { display: inline-block; margin-top: 1rem; border-bottom: 1px solid currentColor; color: inherit; text-decoration: none; }
 }
+
+// German compounds (Standardlösungen, Sendungsverfolgung) are too long for the narrow heading columns:
+// hyphenate by language instead of breaking mid-word.
+:lang(de) {
+  h1, h2, h3, .section-subtitle, .card-title {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}

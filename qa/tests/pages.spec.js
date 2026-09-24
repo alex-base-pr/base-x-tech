@@ -1,10 +1,10 @@
 // T-001 status + console, T-003 SEO head, T-007 no horizontal scroll + screenshots.
 import { test, expect } from '@playwright/test';
-import { enPages, indexPages, expectedCanonical, rawHtml } from '../site-map.js';
+import { enPages, dePages, indexPages, expectedCanonical, rawHtml } from '../site-map.js';
 
 const attr = (html, re) => (html.match(re) || [])[1];
 
-for (const page of enPages) {
+for (const page of [...enPages, ...dePages]) {
   test.describe(`${page.path} @cross`, () => {
     test('T-001 200 and no console errors', async ({ page: p }) => {
       const errors = [];
