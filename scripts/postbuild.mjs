@@ -13,16 +13,38 @@ const decode = (s) => s.replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/
 const meta = (html, re) => decode((html.match(re) || [])[1] || '').trim();
 
 // Readable text of the page body: headings become markdown headings, everything else paragraphs.
+// UI boilerplate is dropped: the contact modal (title + sent/failed states), anything aria-hidden (slider clones,
+// "[ Scroll to Explore ]", decorative counters), and the "0 - 1" / "/01" counters inside cards.
+// Lines repeated on a page are kept once; a testimonial quoted on several pages is kept at its first page only.
+const seenQuotes = new Set();
 function pageText(html) {
   const body = (html.match(/<body[\s\S]*<\/body>/i) || [''])[0]
     .replace(/<(script|style|svg|noscript|header|footer|nav|form)[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<aside[\s\S]*?<\/aside>/gi, ' ');
+    .replace(/<aside[\s\S]*?<\/aside>/gi, ' ')
+    .replace(/<h2[^>]*class="v2-modal__title"[^>]*>[\s\S]*?<\/h2>/gi, ' ')
+    .replace(/<div[^>]*class="v2-modal__state"[^>]*>[\s\S]*?<\/div>/gi, ' ')
+    .replace(/<(span|p|ul|div)\b[^>]*aria-hidden="true"[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<span class="cx-sr">[^<]*<\/span>/gi, ' ')
+    .replace(/<span[^>]*class="[^"]*(?:__num|__icon)\b[^"]*"[^>]*>[\s\S]*?<\/span>/gi, ' ');
   const lines = [];
+  const seen = new Set();
   for (const m of body.matchAll(/<(h[1-4]|p|li|blockquote)[^>]*>([\s\S]*?)<\/\1>/gi)) {
     const t = decode(m[2].replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
     if (!t || lines[lines.length - 1]?.endsWith(t)) continue;
-    const level = /^h(\d)$/i.exec(m[1]);
-    lines.push(level ? `${'#'.repeat(Number(level[1]) + 1)} ${t}` : m[1].toLowerCase() === 'li' ? `- ${t}` : t);
+    const tag = m[1].toLowerCase();
+    const quote = tag === 'blockquote' ? m[2] : (m[2].match(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/i) || [])[1];
+    if (quote) {
+      const key = decode(quote.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
+      if (seenQuotes.has(key)) continue;
+      seenQuotes.add(key);
+    }
+    const level = /^h(\d)$/i.exec(tag);
+    const line = level ? `${'#'.repeat(Number(level[1]) + 1)} ${t}` : tag === 'li' ? `- ${t}` : t;
+    if (tag !== 'li') { // list items (card tags) legitimately repeat between cards
+      if (seen.has(line)) continue;
+      seen.add(line);
+    }
+    lines.push(line);
   }
   return lines.join('\n\n');
 }

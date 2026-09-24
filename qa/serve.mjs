@@ -25,6 +25,7 @@ http.createServer((req, res) => {
   const p = decodeURIComponent(url.pathname);
   const redirect = (to) => { res.writeHead(301, { location: to + url.search }); res.end(); };
 
+  if (/^\/404(\.html|\/)?$/.test(p)) return send(res, 404, path.join(root, '404.html')); // .htaccess: /404/ is not a page
   if (p === '/index.html') return redirect('/');
   if (p.endsWith('.html')) return redirect(p.replace(/\.html$/, '/'));
 

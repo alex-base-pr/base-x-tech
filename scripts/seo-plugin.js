@@ -65,6 +65,52 @@ function jsonLd(page, path, html) {
   return `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })}</script>`;
 }
 
+// ---- hreflang: templates declare their counterparts; here every cluster is normalised so that each page lists
+// itself, every counterpart has a trailing slash, and there is exactly one x-default = the English URL.
+const ALT_RE = /[ \t]*<link rel="alternate" href="([^"]*)" hreflang="([^"]*)">[ \t]*\n?/g;
+const LANG_ORDER = ['en', 'de', 'uk'];
+const OG_LOCALE = { en: 'en_US', de: 'de_DE', uk: 'uk_UA' };
+export const langOf = (path) => (/^\/uk(\/|$)/.test(path) ? 'uk' : /^\/de(\/|$)/.test(path) ? 'de' : 'en');
+const withSlash = (href) => (href.startsWith(host) && !/(\/|\.[a-z0-9]+)$/i.test(href) && !/[?#]/.test(href) ? href + '/' : href);
+
+export function hreflangCluster(html, path) {
+  const alts = {};
+  for (const m of html.matchAll(ALT_RE)) if (m[2] !== 'x-default') alts[m[2]] = withSlash(m[1]);
+  if (!Object.keys(alts).length) return null;
+  alts[langOf(path)] = host + path;
+  const langs = Object.keys(alts).sort((a, b) => LANG_ORDER.indexOf(a) - LANG_ORDER.indexOf(b));
+  return { alts, langs, xDefault: alts.en || host + path };
+}
+
+const attr = (s) => s.replace(/&(?!(?:[a-z]+|#\d+);)/gi, '&amp;').replace(/"/g, '&quot;');
+const pageTitle = (html) => ((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1] || '').trim();
+
+function socialTags({ html, lang, canonical, cluster }) {
+  const title = attr(pageTitle(html));
+  const description = attr(metaDescription(html));
+  const image = `${host}/favicon/android-chrome-512x512.png`; // brand mark; swap for a 1200×630 card when design has one
+  const tags = [
+    '<meta property="og:type" content="website">',
+    '<meta property="og:site_name" content="Base X Tech">',
+    `<meta property="og:title" content="${title}">`,
+    `<meta property="og:description" content="${description}">`,
+    `<meta property="og:url" content="${canonical}">`,
+    `<meta property="og:locale" content="${OG_LOCALE[lang]}">`,
+  ];
+  if (cluster) cluster.langs.filter((l) => l !== lang).forEach((l) => tags.push(`<meta property="og:locale:alternate" content="${OG_LOCALE[l]}">`));
+  tags.push(
+    `<meta property="og:image" content="${image}">`,
+    '<meta property="og:image:width" content="512">',
+    '<meta property="og:image:height" content="512">',
+    '<meta property="og:image:alt" content="Base X Tech logo">',
+    '<meta name="twitter:card" content="summary">',
+    `<meta name="twitter:title" content="${title}">`,
+    `<meta name="twitter:description" content="${description}">`,
+    `<meta name="twitter:image" content="${image}">`,
+  );
+  return tags;
+}
+
 export function seoPlugin({ deployEnv }) {
   const byPath = new Map(siteMap.pages.map((p) => [p.path, p]));
   return {
@@ -73,11 +119,25 @@ export function seoPlugin({ deployEnv }) {
       order: 'post',
       handler(html, ctx) {
         const path = urlPath(ctx.path);
-        if (/\/404\/$/.test(path) || path.startsWith('/analytics-optout')) return html;
+        if (path.startsWith('/analytics-optout')) return html;
+        if (/\/404\/$/.test(path)) {
+          // Error pages: never indexed, not part of any language cluster.
+          const robots = deployEnv === 'dev' ? 'noindex, nofollow' : 'noindex';
+          let out = html.replace(ALT_RE, '').replace('</head>', `  <meta name="robots" content="${robots}">\n</head>`);
+          if (deployEnv === 'dev') out = out.replace(/<html([^>]*)>/i, '<html$1 data-env="dev">');
+          return out;
+        }
         const page = byPath.get(path) || { role: 'index', group: 'other' }; // /uk/** keeps self-canonical
         const tags = [];
         const canonical = host + (page.role === 'absorbed' ? page.canonical : path);
+        const cluster = hreflangCluster(html, path);
+        html = html.replace(ALT_RE, '');
         tags.push(`<link rel="canonical" href="${canonical}">`);
+        if (cluster) {
+          cluster.langs.forEach((l) => tags.push(`<link rel="alternate" href="${cluster.alts[l]}" hreflang="${l}">`));
+          tags.push(`<link rel="alternate" href="${cluster.xDefault}" hreflang="x-default">`);
+        }
+        tags.push(...socialTags({ html, lang: langOf(path), canonical, cluster }));
         if (deployEnv === 'dev') tags.push('<meta name="robots" content="noindex, nofollow">');
         else if (page.role === 'noindex') tags.push('<meta name="robots" content="noindex, follow">');
         if (page.role === 'index' && (page.lang === 'en' || page.lang === 'de')) tags.push(jsonLd(page, path, html));
