@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DACH Page Brief</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  :root { --ink:#111; --mute:#666; --line:#d9d9d4; --bg:#f6f6f2; --acc:#0f5e4f; --warn:#8a5a00; }
+  * { box-sizing: border-box; }
+  body { font: 10pt/1.45 -apple-system, "Helvetica Neue", Arial, sans-serif; color: var(--ink); margin: 0; }
+  .eyebrow { font: 8pt/1.2 ui-monospace, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); }
+  h1 { font-size: 22pt; line-height: 1.1; margin: 4px 0 6px; }
+  h2 { font-size: 13pt; margin: 18px 0 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+  h3 { font-size: 10.5pt; margin: 0 0 3px; }
+  p { margin: 0 0 6px; }
+  .lead { font-size: 11pt; color: #333; max-width: 165mm; }
+  .meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0 4px; }
+  .meta div { background: var(--bg); padding: 6px 8px; border-radius: 4px; }
+  .meta b { display: block; font-size: 9.5pt; }
+  table { width: 100%; border-collapse: collapse; font-size: 9pt; margin: 4px 0 8px; }
+  th, td { text-align: left; vertical-align: top; padding: 5px 6px; border-bottom: 1px solid var(--line); }
+  th { font: 7.5pt ui-monospace, Menlo, monospace; text-transform: uppercase; letter-spacing: .06em; color: var(--mute); font-weight: 400; }
+  .n { font: 8pt ui-monospace, Menlo, monospace; color: var(--mute); width: 22px; }
+  .wf { border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; margin: 6px 0; page-break-inside: avoid; }
+  .wf .tag { float: right; font: 7.5pt ui-monospace, Menlo, monospace; color: var(--mute); }
+  .wf.new { border-left: 3px solid var(--acc); }
+  .need { color: var(--warn); }
+  ul { margin: 2px 0 6px 16px; padding: 0; }
+  li { margin: 1px 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .box { background: var(--bg); border-radius: 6px; padding: 8px 10px; page-break-inside: avoid; }
+  .q li { margin-bottom: 4px; }
+  .small { font-size: 8.5pt; color: var(--mute); }
+  svg text { font-family: -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  .pb { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="eyebrow">Base-xtech.com · Page brief for review · Draft 1 · 24 Sep 2026</div>
+<h1>DACH page: complex Shopify integrations, with Alexander Karl</h1>
+<p class="lead">One new page for German-speaking merchants whose Shopify store has to talk to an ERP, a POS and custom systems. English first; it is the first page we will also publish in German (Alexander translates). Built now in the current site style as part of the quick EN release; Ira's design is the reference for the later redesign.</p>
+
+<div class="meta">
+  <div><span class="eyebrow">Working URL</span><b>/pages/shopify-erp-integration-dach</b><span class="small">DE: /de/pages/…</span></div>
+  <div><span class="eyebrow">Audience</span><b>DACH merchants, complex stack</b><span class="small">ERP / POS / custom API</span></div>
+  <div><span class="eyebrow">Goal</span><b>Qualified enquiry</b><span class="small">via our contact form</span></div>
+  <div><span class="eyebrow">Status</span><b>Structure for review</b><span class="small">copy not written yet</span></div>
+</div>
+
+<h2>What the page has to do</h2>
+<div class="two">
+  <div>
+    <h3>Positioning</h3>
+    <ul>
+      <li>Show technical depth through detail, not loud claims: calm, black-and-white, lots of air. Reference: <b>sdg.la/shopify-integrations</b>.</li>
+      <li>Focus: complex integrations: ERP, custom API, inventory sync, POS.</li>
+      <li>One to three strong case blocks instead of ten small ones.</li>
+      <li>Give a German-speaking buyer a person in the region. Our site has no other human presence today.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>How Alexander appears</h3>
+    <ul>
+      <li>Our partner and contact for the DACH region: photo, name, role, one first-person quote. Format reference: <b>what.digital/de/shopify-erp-integrationen</b>.</li>
+      <li><b>No direct email, phone or calendar of his.</b> Every CTA goes to our contact form; we handle the enquiry and bring Alexander into the call when needed.</li>
+      <li><b>No logos of his clients</b> (Jungheinrich, EnBW, …). Those are his projects, not ours.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Section order and what each needs</h2>
+<p class="small">Budgets follow Ira's service-page slot map where the section is the same type; new sections have proposed budgets. <span class="need">Orange = needs input from Marko / Alexander.</span></p>
+
+<div class="wf"><span class="tag">01 · existing section</span>
+  <h3>Hero</h3>
+  <p>Eyebrow (≤ 19 chars) · H1, 3 lines × ≤ 23 chars, primary keyword · lead, 3 lines × ≤ 56 chars · CTA "Book a call" → contact form.</p>
+  <p class="need">Needs: H1 + lead. Primary keyword to confirm (see SEO below).</p>
+</div>
+
+<div class="wf new"><span class="tag">02 · new block</span>
+  <h3>Alexander Karl: your contact in the region</h3>
+  <p>Photo (placeholder until Alexander sends a good one) · name · role (e.g. "Partner, DACH") · one first-person quote, ≤ 200 chars · one line: "Talk to us in German or English" (to be confirmed).</p>
+  <p class="need">Needs: role wording, the quote (Alexander, EN + DE), his approval of both.</p>
+</div>
+
+<div class="wf"><span class="tag">03 · existing section</span>
+  <h3>Capabilities: 6 cards</h3>
+  <p>Label · H2, 2 lines × ≤ 31 chars · six H3 titles ≤ 23 chars · six descriptions ≈ 70–90 chars.</p>
+  <p class="need">Needs: the six topics. Suggested starting set for Marko to accept or replace: ERP integration (Xentral) · Shopify POS · Custom middleware · Custom APIs · Inventory &amp; order sync · Monitoring &amp; support.</p>
+</div>
+
+<div class="wf new"><span class="tag">04 · new block</span>
+  <h3>Architecture: how the data flows</h3>
+  <svg viewBox="0 0 640 120" width="100%" height="110" role="img" aria-label="Shopify and Shopify POS connect through custom middleware to the ERP">
+    <g fill="none" stroke="#111" stroke-width="1.2">
+      <rect x="10" y="15" width="150" height="40" rx="4"/>
+      <rect x="10" y="68" width="150" height="40" rx="4"/>
+      <rect x="245" y="30" width="150" height="62" rx="4" fill="#f6f6f2"/>
+      <rect x="480" y="30" width="150" height="62" rx="4"/>
+      <path d="M160 35 L245 52 M160 88 L245 72 M395 61 L480 61"/>
+      <path d="M239 49 l6 3 -5 4 M239 75 l6 -3 -5 -4 M474 57 l6 4 -6 4 M166 31 l-6 4 6 3 M166 92 l-6 -4 6 -3 M401 57 l-6 4 6 4"/>
+    </g>
+    <g font-size="12" text-anchor="middle" fill="#111">
+      <text x="85" y="40">Shopify store</text>
+      <text x="85" y="93">Shopify POS</text>
+      <text x="320" y="57">Middleware</text>
+      <text x="320" y="74" font-size="10" fill="#666">queue · retries · logs</text>
+      <text x="555" y="57">ERP</text>
+      <text x="555" y="74" font-size="10" fill="#666">e.g. Xentral</text>
+    </g>
+  </svg>
+  <p>Built as SVG with real text labels, so it is readable for screen readers, search engines and AI assistants.</p>
+  <p class="need">Needs: confirm the boxes and which data moves in which direction (orders, stock, prices, customers).</p>
+</div>
+
+<div class="wf new"><span class="tag">05 · new block</span>
+  <h3>What an integration really includes</h3>
+  <p>A short list that shows depth: retries, reconciliation, monitoring and alerts, error queues, idempotent order sync, logging, runbook / handover. One line each.</p>
+  <p class="need">Needs: final list, only what we really deliver.</p>
+</div>
+
+<div class="wf"><span class="tag">06 · existing section</span>
+  <h3>Case: 1 to 3 blocks</h3>
+  <p>Client (or anonymised description) · problem · what we connected · result. Our work only.</p>
+  <p class="need">Needs: which project(s). Candidates from the current page list: Prime EVA, UK gifting brand, Nova Poshta Connect. Is any of them an ERP/POS case, or anonymised?</p>
+</div>
+
+<div class="wf"><span class="tag">07 · existing section</span>
+  <h3>Process: 4 steps</h3>
+  <p>e.g. Audit &amp; data mapping → Architecture &amp; plan → Build &amp; test → Launch &amp; monitoring. Title + one line each.</p>
+  <p class="need">Needs: confirm the steps and wording.</p>
+</div>
+
+<div class="wf"><span class="tag">08 · existing section</span>
+  <h3>When we can help</h3>
+  <p>H2, 2 lines × ≤ 31 chars · three short conditions, 2 lines × ≤ 21 chars. They qualify the enquiry.</p>
+  <p class="need">Needs: the three conditions.</p>
+</div>
+
+<div class="wf"><span class="tag">09 · existing section</span>
+  <h3>FAQ</h3>
+  <p>6–8 questions. Marked up as FAQPage structured data (Google + AI assistants).</p>
+  <p class="need">Needs: questions and answers (German market angles: GoBD / DATEV exports, hosting in the EU, German-language support, timelines).</p>
+</div>
+
+<div class="wf"><span class="tag">10 · existing section</span>
+  <h3>Closing CTA</h3>
+  <p>"Book a call" → our contact form (placeholder until we decide whose calendar goes there).</p>
+</div>
+
+<h2 class="pb">Systems we name</h2>
+<p><b>Only what we have delivered:</b> Shopify POS · Xentral · custom middleware / API. No long taxonomy of ERPs we have not worked with.</p>
+
+<h2>Relation to the Shopify Integrations page</h2>
+<p>/pages/service/custom-shopify-integrations stays the broad integrations page (Marko's copy: ERP, CRM, PIM, APIs, logistics, marketplaces). This page is narrower and regional: complex ERP + POS + middleware for DACH, with a person on the ground. The two link to each other. Titles, H1s and meta must differ, so they don't compete for the same query in Google.</p>
+
+<h2>SEO and AI readability (proposal: to confirm)</h2>
+<table>
+  <tr><th>Item</th><th>Proposal</th></tr>
+  <tr><td>Title (≤ 60)</td><td>Shopify ERP &amp; POS Integration for DACH | Base X Tech</td></tr>
+  <tr><td>Primary query</td><td>shopify erp integration (EN) · shopify erp integration / Shopify Xentral Anbindung (DE). <span class="small">Not checked against Search Console yet.</span></td></tr>
+  <tr><td>Structured data</td><td>Service (area served: DE, AT, CH) · FAQPage · BreadcrumbList · Person for Alexander (name, role, affiliation), only if he agrees</td></tr>
+  <tr><td>Languages</td><td>EN now. DE at /de/… with hreflang en ↔ de. All copy kept in one data file, so the German version is a text swap, not a rebuild.</td></tr>
+  <tr><td>AI assistants</td><td>All copy in plain HTML; page listed in llms.txt; diagram as text-based SVG.</td></tr>
+</table>
+
+<h2>What is placeholder in the first build</h2>
+<ul>
+  <li>Alexander's photo: neutral placeholder. The page does not go live with it.</li>
+  <li>"Book a call": opens our existing contact form.</li>
+  <li>No team photos anywhere on the site yet.</li>
+</ul>
+
+<h2>Questions for Marko</h2>
+<ol class="q">
+  <li>Is this section order right? Should "What an integration really includes" sit after the diagram (as drawn) or inside Capabilities?</li>
+  <li>The six capability topics: accept the suggested set or replace it?</li>
+  <li>Which case(s) can we show? Named or anonymised?</li>
+  <li>Alexander's role title and quote: who writes them, and who gets his sign-off?</li>
+  <li>URL: is <b>/pages/shopify-erp-integration-dach</b> fine, or do you prefer one without "dach" (region shown by language instead)?</li>
+  <li>Title and primary query: do you have Search Console / keyword data for DACH ERP queries?</li>
+  <li>Who writes the EN copy and when, so Alexander can start the German version?</li>
+</ol>
+
+<p class="small" style="margin-top:14px">Prepared from the brief sent to Ira on 24 Sep 2026 and the quick-site spec (docs/discovery/2026-09-24-quick-en-site.md, REQ-012…019).</p>
+</body>
+</html>

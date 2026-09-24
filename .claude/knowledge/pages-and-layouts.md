@@ -39,4 +39,6 @@ conversion-rate-optimization, custom-shopify-app-development, custom-shopify-int
 - The `header-alt` / `footer-alt` variants exist alongside the primary variants — purpose isn't obvious from filenames. Open both to see which one a given page includes before assuming.
 - Two CTA partials (`cta.ejs` / `cta-uk.ejs`) — the UK page uses the `-uk` variant. Watch for drift.
 
-**DECIDED:** (none recorded yet)
+**DECIDED:**
+- 2026-09-24 (Alex): quick EN release is EN-only; `/uk/**` is not mirrored. See docs/discovery/2026-09-24-quick-en-site.md.
+- 2026-09-24 (Alex): existing URLs kept, no redirects; absorbed service pages stay live, out of nav/sitemap, with canonical → parent (theme, headless, app-design, mvp) or noindex (ppc, seo).

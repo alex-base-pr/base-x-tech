@@ -29,3 +29,21 @@ When you discover a non-obvious fact, append it to the relevant knowledge file u
   - Both build, then `rsync --delete` the entire `dist/` over SSH.
 - Pages: 11 service pages under `pages/service/` (SEO landing pages — Shopify dev services, PPC, SEO, MVP, etc.) + privacy/terms.
 - No Liquid, no Shopify CLI, no `.shopify/` dir. Standard Node tooling applies (`npm ci`, `npm run build`).
+
+## Quick EN release (2026-09, alex-base-pr/base-x-tech)
+
+This checkout is `alex-base-pr/base-x-tech`: `main` here = `base-xtech/base-xtech@live` + the quick EN release.
+Remote `upstream` = base-xtech/base-xtech. Changes go back later as a PR into upstream `staging` → `live`.
+
+Read first:
+1. `docs/discovery/2026-09-24-quick-en-site.md` — the spec (REQ-IDs, site map §8, decisions §5). Binding.
+2. `docs/STATUS.md` — what is done / next. Update it in every PR.
+3. `docs/OPEN-QUESTIONS.md` — build the stated default, don't block on these.
+
+Rules for this release:
+- **EN only.** `/uk/**` stays as it is (DECIDED by owner 2026-09-24) — do not mirror EN changes to UK.
+- **Keep existing URLs, no redirects.** Absorbed pages stay live with canonical/noindex (spec §8B).
+- **Copy is Marko's** (fixtures in `content/`). Don't invent facts, clients, numbers or quotes.
+- **No team photos** — placeholders only until Alex says otherwise.
+- `main` here auto-deploys to dev (Cloudflare Pages, noindex). Never push to upstream `live`/`staging`.
+- `npm run qa` must pass before merging; commits reference REQ-IDs.
