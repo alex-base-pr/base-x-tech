@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-<%# German version of /pages/complex-solutions/ (REQ-019). Copy: content/pages/complex-solutions.de.json. %>
+<%# German version of /pages/complex-solutions/ (REQ-019), design v2 (Figma "Complex" 877:1584). Copy: content/pages/complex-solutions.de.json. %>
 <%
   const c = content['complex-solutions'].de;
   const en = 'https://base-xtech.com/pages/complex-solutions/';
@@ -9,7 +9,8 @@
 <%- include('layout/head-alt.ejs', {
   title: c.meta.title,
   description: c.meta.description,
+  v2: true,
   hreflangs: [{ lang: 'de', href: de }, { lang: 'en', href: en }, { lang: 'x-default', href: en }]
 }) %>
-<%- include('layout/pages/complex-solutions-body.ejs', { c, lang: 'de' }) %>
+<%- include('layout/pages/complex-v2-body.ejs', { c, lang: 'de' }) %>
 </html>

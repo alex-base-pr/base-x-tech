@@ -1,1 +1,283 @@
 // Complex Solutions EN/DE (design v2) — owned by the complex agent.
+// Figma "Complex" 877:1584 (1440 × 9817): dark hero + CTA, light sections in between, Onest headings, pill buttons,
+// dot labels. Everything is scoped to body.cx-page so the other v2 pages are untouched.
+
+$bp: 1024px;
+@mixin desk { @media (min-width: $bp) { @content; } }
+@mixin tab { @media (min-width: 700px) { @content; } }
+
+body.v2.cx-page {
+  --cx-ink: #2a2a2c;
+  --cx-text: #494949;
+  --cx-soft: #5e5e5e;
+  --cx-white: #fff;
+  --cx-grey-0: #f5f5f5;   // capabilities band
+  --cx-grey-1: #f0f0f0;   // cards, case, photo placeholder
+  --cx-grey-2: #e1e1e1;   // case panels
+  --cx-grey-3: #dbdada;   // "when we can help" band
+  --cx-line: #dcdcdc;
+  --cx-pad: 20px;
+  --cx-head: 'Onest', 'TWKEverett', system-ui, sans-serif;
+  --cx-body: 'TWKEverett', system-ui, sans-serif;
+  @include desk { --cx-pad: 50px; }
+
+  // Desktop: the language menu sits inline next to the globe ("EN | DE" in the Figma header), so the German
+  // version is one click away; on phones it stays behind the globe.
+  @include desk {
+    .v2-lang { display: flex; align-items: center; gap: 4px; }
+    .v2-lang__menu, .v2-lang__menu[hidden] {
+      display: block; position: static; padding: 0 6px; background: transparent;
+      .language-switcher { display: flex; gap: 2px; }
+      .language-switcher a { display: inline-flex; align-items: center; height: 32px; padding: 0 8px; border-radius: 4px; font-size: 15px; text-decoration: none; color: #bdbdbd;
+        &.is-active { color: #fff; background: #26272a; }
+        &:hover, &:focus-visible { color: #fff; }
+        &[hidden] { display: none; }
+      }
+    }
+  }
+}
+
+body.v2.cx-page .cx {
+  font-family: var(--cx-head);
+  color: var(--cx-ink);
+
+  .accent { color: inherit; }
+  .br-desk { display: none; @include desk { display: inline; } }
+  .cx-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  // dot label ("● Our Capabilities") — used as an eyebrow <p> or as the section <h2> where the design has no other title
+  .cx-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--cx-head); font-size: 16px; line-height: 1.1; letter-spacing: -.02em; color: var(--cx-ink);
+    &::before { content: ''; flex: 0 0 10px; height: 10px; border-radius: 50%; background: currentColor; }
+    &--dark { color: #fff; }
+  }
+  .cx-h2 { font-family: var(--cx-head); font-size: clamp(1.875rem, 2.8vw, 2.5rem); line-height: 1.1; letter-spacing: -.02em;
+    br { display: none; @include desk { display: inline; } } // Figma breaks are desktop breaks
+  }
+  .cx-h3 { font-family: var(--cx-head); font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.1; letter-spacing: -.02em;
+    &--s { font-size: 1.5rem; }
+  }
+  .cx-head {
+    display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center; margin: 0 auto 3rem; max-width: 720px;
+    @include desk { gap: 36px; margin-bottom: 4.5rem; }
+    .cx-head__lead { max-width: 400px; margin-top: -8px; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-text); }
+  }
+
+  // Figma buttons are pills; the v2 arrow square is dropped here to match the frame.
+  .cx-btn {
+    display: flex; justify-content: center;
+    .v2-btn { margin-top: 0; }
+    .v2-btn__arrow { display: none; }
+    .v2-btn__label { height: 53px; padding: 0 32px; border-radius: 999px; font-family: var(--cx-head); font-weight: 400; font-size: 18px; letter-spacing: -.02em; box-shadow: none; transition: background .2s, color .2s; }
+    &--light .v2-btn__label { background: #fff; color: var(--cx-ink); }
+    &--light .v2-btn:hover .v2-btn__label, &--light .v2-btn:focus-visible .v2-btn__label { background: #e6e6e6; }
+    &--dark .v2-btn__label { background: #000; color: #fff; }
+    &--dark .v2-btn:hover .v2-btn__label, &--dark .v2-btn:focus-visible .v2-btn__label { background: var(--cx-ink); }
+  }
+
+  .cx-section { padding: 4.5rem var(--cx-pad); background: var(--cx-white); @include desk { padding: 7.5rem var(--cx-pad); } }
+  .cx-card { border-radius: 12px; background: var(--cx-grey-1); padding: 28px 24px; @include desk { padding: 40px; } }
+
+  // ---------- hero + systems strip
+  .cx-hero {
+    display: flex; flex-direction: column; justify-content: space-between; gap: 4rem;
+    padding: 4rem var(--cx-pad) 2rem; background: var(--v2-bg); color: #fff;
+    @include desk { min-height: 695px; padding-top: 9rem; }
+  }
+  .cx-hero__body { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; max-width: 760px; }
+  .cx-hero__title { font-family: var(--cx-head); font-size: clamp(2.375rem, 4.3vw, 3.75rem); line-height: 1; letter-spacing: -.02em; color: #fff;
+    br { display: none; @include desk { display: inline; } }
+  }
+  .cx-hero__lead { max-width: 423px; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: #bdbdbd; }
+  .cx-hero .cx-btn { margin-top: 20px; }
+
+  .cx-strip {
+    display: grid; gap: .75rem; align-items: center; font-size: 18px; letter-spacing: -.02em;
+    @include desk { grid-template-columns: auto minmax(0, 1fr); column-gap: 36px; }
+  }
+  .cx-strip__label { color: #fff; @include desk { white-space: nowrap; } }
+  .cx-strip__viewport {
+    display: flex; overflow: hidden; min-width: 0;
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  }
+  .cx-strip__track {
+    display: flex; flex-shrink: 0; margin: 0; padding: 0; white-space: nowrap; color: #bdbdbd;
+    animation: cx-marquee 50s linear infinite;
+    li { display: inline-flex; align-items: center; &::after { content: '·'; padding: 0 .75em; } }
+  }
+  .cx-strip__viewport:hover .cx-strip__track { animation-play-state: paused; }
+  .cx-strip__ready { font-size: 14px; color: #9a9a9a; @include desk { grid-column: 1 / -1; } span { color: #d0d0d0; margin-right: .35em; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cx-strip__viewport { mask-image: none; }
+    .cx-strip__track { animation: none; flex-wrap: wrap; white-space: normal; flex-shrink: 1; row-gap: .35rem; }
+    .cx-strip__track[aria-hidden] { display: none; }
+  }
+
+  // ---------- partner (photo placeholder, quote, name/role — no contacts)
+  .cx-partner {
+    display: grid; gap: 2rem;
+    @include desk { grid-template-columns: minmax(0, 445px) minmax(0, 788px); justify-content: space-between; gap: 38px; align-items: start; }
+  }
+  .cx-partner__photo { margin: 0; max-width: 445px;
+    img, .cx-partner__placeholder { display: block; width: 100%; aspect-ratio: 445 / 419; border-radius: 20px; object-fit: cover; background: var(--cx-grey-1); }
+  }
+  .cx-partner__body { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; @include desk { gap: 40px; padding-top: 7px; } }
+  .cx-partner__quote { margin: 0;
+    blockquote { margin: 0; display: grid; gap: 1.1em;
+      p { font-size: clamp(1.25rem, 1.9vw, 1.625rem); line-height: 1.1; letter-spacing: -.02em; color: var(--cx-ink); }
+    }
+    figcaption { display: grid; gap: 12px; margin-top: 32px; font-family: var(--cx-body); font-size: 15.6px; line-height: 1.03; letter-spacing: .01em; color: #1d1e20;
+      strong { font-weight: 500; }
+    }
+  }
+
+  // ---------- capabilities (3 × 2 text grid on the grey band)
+  .cx-caps { background: var(--cx-grey-0); }
+  .cx-caps__grid {
+    display: grid; gap: 2.5rem 2rem; max-width: 1316px; margin: 0 auto;
+    @include tab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @include desk { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 128px; row-gap: 65px; }
+  }
+  .cx-caps__item { display: grid; gap: 20px; align-content: start; max-width: 353px;
+    @include desk { gap: 30px; }
+    p { font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
+  }
+
+  // ---------- behind the integration
+  .cx-text .cx-head { margin-bottom: 30px; }
+  .cx-text__body { display: grid; gap: 30px; max-width: 515px; margin: 0 auto 3rem; text-align: center; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-text); }
+  .cx-text { @include desk { padding-bottom: 3.5rem; } }
+
+  // ---------- architecture diagram (text-based SVG)
+  .cx-arch { @include desk { padding-top: 6rem; } }
+  .cx-diagram { margin: 0 auto; max-width: 1080px; padding: 16px; border-radius: 24px;
+    background: radial-gradient(ellipse at center, #faf8f4 0%, rgba(250, 248, 244, 0) 70%);
+    svg { display: block; width: 100%; height: auto; overflow: visible; }
+    // Wide diagram from 700px up; below that a stacked version of the same boxes (same title/desc).
+    .cx-diagram__svg--stack { max-width: 360px; margin: 0 auto; }
+    .cx-diagram__svg--wide { display: none; }
+    @include tab {
+      .cx-diagram__svg--wide { display: block; }
+      .cx-diagram__svg--stack { display: none; }
+    }
+  }
+  .cx-diagram__links { fill: #d9cfc2; stroke: #d9cfc2; stroke-width: 1.5; path { fill: none; } }
+  .cx-diagram__box { fill: #fbfaf8; stroke: #efebe5; stroke-width: 1; }
+  .cx-diagram__box--mid { fill: #f3efe9; }
+  .cx-diagram__group { fill: #f7f5f1; stroke: #efebe5; stroke-width: 1; }
+  .cx-diagram__icon { fill: none; stroke: var(--cx-ink); stroke-width: 1.6; stroke-linejoin: round; }
+  .cx-diagram__text { fill: var(--cx-ink); }
+  .cx-diagram__name { font-family: var(--cx-head); font-size: 30px; letter-spacing: -.02em; &--s { font-size: 22px; } &--m { font-size: 26px; } }
+  .cx-diagram__role { font-family: var(--cx-head); font-size: 11.5px; letter-spacing: .14em; fill: #6b6b6b; }
+
+  // ---------- when we can help
+  .cx-help { background: var(--cx-grey-3); @include desk { padding-top: 6.5rem; padding-bottom: 6.5rem; } }
+  .cx-help__grid {
+    display: grid; gap: 20px; margin-bottom: 3rem;
+    @include desk { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cx-card { display: grid; gap: 20px; align-content: start; @include desk { gap: 30px; min-height: 206px; } }
+    p { max-width: 380px; font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
+  }
+
+  // ---------- case (Fresh Market)
+  .cx-case { display: flex; flex-direction: column; align-items: center; gap: 30px; @include desk { gap: 30px; padding-bottom: 4.5rem; } }
+  .cx-case__card {
+    display: grid; gap: 12px; width: 100%; max-width: 1340px; padding: 20px; border-radius: 20px; background: var(--cx-grey-1);
+    font-family: var(--cx-body); color: #000;
+    @include desk { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 50px 42px 58px; column-gap: 12px; row-gap: 16px; }
+    p { font-size: 16px; line-height: 1.29; font-weight: 300; }
+  }
+  .cx-case__intro { padding: 8px 4px 16px; display: grid; gap: 12px; align-content: start;
+    @include desk { padding: 10px 90px 20px 0; }
+    .cx-case__h { margin-top: 2.5rem; @include desk { margin-top: 5.5rem; } }
+    p + p { margin-top: -12px; }
+  }
+  .cx-case__client { font-family: var(--cx-body); font-size: 32px; line-height: 1.02; letter-spacing: -.03em; font-weight: 300; text-transform: uppercase; }
+  .cx-case__tags { font-size: 14px !important; }
+  .cx-case__h { font-family: var(--cx-body); font-size: 16px; line-height: 1.29; font-weight: 500; }
+  .cx-case__media { margin: 0;
+    img, .cx-case__placeholder { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; min-height: 240px; border-radius: 20px; background: #fff; color: #5f5f5f; object-fit: cover;
+      @include desk { min-height: 419px; }
+    }
+  }
+  .cx-case__panel { display: grid; gap: 1.25rem; align-content: start; padding: 28px 24px; border-radius: 12px; background: var(--cx-grey-2);
+    @include desk { padding: 38px 42px; min-height: 576px; gap: 24px; }
+  }
+  .cx-case__outcomes { display: grid; gap: 27px; margin-top: 12px;
+    li { display: grid; gap: 12px; }
+    h4 { font-family: var(--cx-body); font-size: 20px; line-height: 1.29; font-weight: 500; }
+  }
+
+  // ---------- blog teasers
+  .cx-posts {
+    display: grid; gap: 2.5rem;
+    @include desk { grid-template-columns: minmax(0, 280px) minmax(0, 1fr); column-gap: clamp(40px, 4vw, 90px); padding-top: 4.5rem; padding-bottom: 3rem; }
+  }
+  .cx-posts__intro { display: flex; flex-direction: column; align-items: flex-start; gap: 36px;
+    p { max-width: 334px; font-family: var(--cx-body); font-size: 16px; line-height: 1.29; color: #000; }
+  }
+  .cx-posts__list { display: grid; gap: 2.5rem; @include desk { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; } }
+  .cx-post { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .cx-post__meta { display: flex; justify-content: space-between; gap: 10px; width: 100%; font-size: 14px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-ink); }
+  .cx-post__title { font-family: var(--cx-head); font-size: clamp(1.5rem, 1.7vw, 1.625rem); line-height: 1.1; letter-spacing: -.02em;
+    a { text-decoration: none; &:hover, &:focus-visible { text-decoration: underline; text-underline-offset: 3px; } }
+  }
+  .cx-post__excerpt { font-size: 16px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-text); }
+  .cx-post__more { margin-top: auto; padding: 12px 0 6px; border-bottom: 1px solid currentColor; font-size: 20px; letter-spacing: -.02em; text-decoration: none; color: var(--cx-ink); }
+
+  // ---------- process
+  .cx-process { @include desk { padding-top: 6rem; } }
+  .cx-process__grid { display: grid; gap: 20px; margin-bottom: 3rem; @include desk { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; } }
+  .cx-process__card { display: flex; flex-direction: column; justify-content: space-between; gap: 3.5rem; min-height: 240px;
+    @include desk { min-height: 305px; }
+    > div { display: grid; gap: 20px; @include desk { gap: 30px; } }
+    p { max-width: 580px; font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
+  }
+  .cx-process__num { align-self: flex-start; display: inline-flex; align-items: center; height: 26px; padding: 0 16px; border: 1px solid #bdbdbd; border-radius: 999px; font-size: 14px; color: #000; }
+
+  // ---------- FAQ (no FAQPage schema on this page)
+  .cx-faq { @include desk { padding-top: 4.5rem; } }
+  .cx-faq__list { display: grid; gap: 8px; max-width: 690px; margin: 0 auto; }
+  .cx-faq__item {
+    border: 1px solid var(--cx-line); border-radius: 8px; background: #fff; padding: 0 20px;
+    @include desk { padding: 0 24px 0 32px; }
+    summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 0; cursor: pointer;
+      &::-webkit-details-marker { display: none; }
+      h3 { font-family: var(--cx-body); font-size: clamp(1.25rem, 1.6vw, 1.375rem); line-height: 1.1; letter-spacing: -.03em; color: var(--cx-ink); }
+    }
+    p { max-width: 521px; margin-top: -10px; padding-bottom: 28px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; color: var(--cx-soft); }
+  }
+  .cx-faq__toggle { position: relative; flex: 0 0 40px; height: 40px; border: 1px solid #1a1a1a; border-radius: 50%; color: #1a1a1a; transition: background .2s;
+    &::before, &::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); transition: transform .2s; }
+    &::after { transform: translate(-50%, -50%) rotate(90deg); }
+  }
+  .cx-faq__item[open] .cx-faq__toggle { background: var(--v2-accent); border-color: var(--v2-accent); color: #fff;
+    &::before { transform: translate(-50%, -50%) rotate(45deg); }
+    &::after { transform: translate(-50%, -50%) rotate(135deg); }
+  }
+  .cx-faq__item summary:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 4px; border-radius: 4px; }
+
+  // ---------- closing CTA
+  .cx-cta {
+    display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
+    padding: 5rem var(--cx-pad); background: var(--v2-bg); color: #fff;
+    @include desk { padding: 6rem var(--cx-pad) 7.5rem; }
+    .cx-h2 { max-width: 480px; color: #fff; }
+    .cx-label { margin-bottom: 8px; }
+    .cx-btn { margin-top: 24px; }
+  }
+  .cx-cta__body { max-width: 447px; font-size: 16px; line-height: 1.3; letter-spacing: -.02em; color: #d9d9d9; }
+
+  // German compounds (Standardlösungen, Integrationsschicht) are too long for narrow heading columns:
+  // hyphenate by language instead of breaking mid-word.
+  &:lang(de), :lang(de) {
+    h1, h2, h3, h4 { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 12 5 5; overflow-wrap: break-word; }
+  }
+}
+
+@keyframes cx-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
