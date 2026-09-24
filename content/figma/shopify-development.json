@@ -1,0 +1,849 @@
+{
+  "hero": {
+    "texts": [
+      {
+        "text": "Services",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let`s talk",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Development",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify development for stores that need more than a theme",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom checkout, configurators, B2B and retail on one stack. If the build is the hard part, that's the work we take.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "[ Scroll to Explore ]",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "capabilities": {
+    "texts": [
+      {
+        "text": "The parts a theme was never built for.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Our Capabilities",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 1",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 2",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 3",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Store Build & Launch",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Theme Development",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom Checkout",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New stores built for one market or for several across the EU.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom themes and deep changes to the one you already run.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Checkout logic, validation and payment rules on Shopify Plus.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 4",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 5",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 6",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Configurators",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Headless Storefronts",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "B2B & Wholesale",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product builders for options, variants and made-to-order ranges.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify as the commerce backend behind a front end you control fully.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Wholesale accounts, price lists and terms running beside your retail store.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "node": "image 56",
+        "file": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "node": "Frame 2087327088",
+        "file": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "node": "image 5942",
+        "file": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "node": "ChatGPT Image 9 лип. 2026 р., 16_02_01 1",
+        "file": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "node": "image 5944",
+        "file": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      }
+    ]
+  },
+  "projects": {
+    "rows": [
+      {
+        "name": "Prime EVA",
+        "category": "Automotive",
+        "badge": "10M+ possible configurations",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "name": "Gunia",
+        "category": "Lifestyle brand",
+        "badge": "",
+        "image": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recent Projects",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automotive",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Prime EVA",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product configurator built directly into the native store front end.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom configurator development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "10M+ possible configurations",
+        "size": 12,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Jewellery",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Innan Jewellery",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Brand-led Shopify storefront for a jewellery label built around craft.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "innan-jewellery.com",
+        "size": 6,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Creative Direction",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Lifestyle brand",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Developed a custom Shopify storefront that reflects the brand’s premium identity while delivering a seamless shopping experience across collections and editorial content.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Performance",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "ChatGPT Image 9 лип. 2026 р., 16_02_01 1",
+        "file": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "node": "image 5924",
+        "file": "/images/v2/shopify-development-projects-2-image-5924.webp"
+      },
+      {
+        "node": "image 5925",
+        "file": "/images/v2/shopify-development-projects-3-image-5925.webp"
+      },
+      {
+        "node": "Link → acronym gmbh",
+        "file": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
+      },
+      {
+        "node": "07_464_13c7da4b-aaff-4c76-a284-153390654ddf 1",
+        "file": "/images/v2/shopify-development-projects-5-07-464-13c7da4b-aaff-4c76-a284-153390654.webp"
+      }
+    ]
+  },
+  "help": {
+    "texts": [
+      {
+        "text": "The theme stopped being the answer a while ago.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When We Can Help",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "/02",
+        "size": 24,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Your checkout needs rules Shopify lacks",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "One store must serve wholesale and retail",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Your product needs configuring to sell",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stories": {
+    "texts": [
+      {
+        "text": "Client Stories",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What it’s like  to work with us.",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Stealth Startup",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "size": 26,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Lili Mager",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Development",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Become a Client",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Stealth Startup US",
+        "file": "/images/v2/shopify-development-stories-1-stealth-startup-us.webp"
+      }
+    ]
+  },
+  "process": {
+    "texts": [
+      {
+        "text": "From scoping the build to support after launch.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How We Build",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Scope & Estimate",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Plan & Architecture",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We work through what the build actually needs and what it will cost before anyone writes code.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We decide the data model, the integrations and where custom code is justified rather than convenient.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Build & Review",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Launch & Support",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We develop in reviewable stages so you see the store working before launch, not a demo at the end.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We ship it, watch it under real traffic and stay on it after the launch rather than handing over a login.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stats": {
+    "texts": [
+      {
+        "text": "Numbers that matter",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "4.8*",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "60+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "100+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork Reviews",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Happy Clients",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Projects Delivered",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch matters more.",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "faq": {
+    "texts": [
+      {
+        "text": "faq",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you customise Shopify checkout?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Questions  we get asked",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Yes, on Shopify Plus. Checkout validation, discount logic and delivery rules are built with Shopify Functions and checkout extensions rather than workarounds. On standard plans the options are much narrower, and we will tell you which of your requirements are not possible before you commit to anything.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Do we need Shopify Plus?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Only for specific things. Plus is required for checkout customisation, B2B company accounts and higher API limits. If none of your requirements need those, a standard plan is usually enough and we will say so rather than sell you the upgrade.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you build a product configurator on Shopify?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes, and we have. A configurator built into the storefront handles options, dependencies and made-to-order ranges that variants alone cannot express. Prime EVA is the example: a custom configurator running inside their Shopify store rather than as a bolted-on app.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can one store serve wholesale and retail?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes. Shopify B2B runs company accounts, price lists and payment terms alongside your retail catalogue, so you are not maintaining two stores that drift apart. We have built this, though that client's work is not public.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When does headless Shopify make sense?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Less often than it gets recommended. Headless is worth it when you need a front end Shopify's theme layer cannot deliver, or when the storefront serves more than one channel. It costs more to build and more to maintain, so if a well-built theme does the job we will tell you that instead.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you work with our existing theme, or is it a rebuild?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Usually your existing theme. We audit what it can carry, extend it where that holds up, and only recommend a rebuild when the theme is fighting what you need. A rebuild you did not need is the most expensive thing on a Shopify project.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How long does a custom Shopify build take?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Most builds run 4 to 16 weeks, depending on the integrations and how much is custom rather than configured. We scope and estimate before writing code, so the timeline is agreed at the start.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We stay on it. We watch the store under real traffic, fix what surfaces in the first weeks, and keep it working through Shopify's API version changes. Handing over a login and disappearing is where most of the problems we get called in to fix started.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "cta": {
+    "texts": [
+      {
+        "text": "Have a build that needs more than  a theme?",
+        "size": 75,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Tell us what the store has to do and  we'll tell you how we would build it.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let’s Talk",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Navigation",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connect",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Services",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "LinkedIn",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Behance",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "© 2026 Base X All right reserved",
+        "size": 12,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Terms & Conditions",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Privacy policy",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Opera Знімок_2026-06-22_144736_ua.klottclothes.com 1",
+        "file": "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp"
+      },
+      {
+        "node": "Знімок екрана 2026-06-22 о 21.30.43 1",
+        "file": "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp"
+      },
+      {
+        "node": "image 5914",
+        "file": "/images/v2/shopify-development-cta-3-image-5914.webp"
+      }
+    ]
+  }
+}

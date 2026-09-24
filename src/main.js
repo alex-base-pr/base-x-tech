@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => new DrawerManager(drawerConf
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header');
   const trigger = document.querySelector('.trigger-submenu-1');
+  if (!header) return; // design-v2 pages use their own header (src/v2.js)
   let lastScrollY = window.scrollY;
   let scrollUpDistance = 0;
   const scrollThreshold = 50;

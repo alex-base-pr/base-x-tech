@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "title": "Shopify Web Design & UX/UI Services | Base X Tech",
+    "description": "We design Shopify storefronts for products people compare and configure: UX/UI, design systems, prototypes and creative direction, built by the same team."
+  },
+  "hero": {
+    "tag": "Web Design",
+    "title": [
+      "Shopify design",
+      "for products that take",
+      "more than one click"
+    ],
+    "lead": "You sell products people compare, configure and come back to. We design the storefront that carries that decision, then build it ourselves.",
+    "button": "Discuss Your Project",
+    "size": "l"
+  },
+  "capabilities": {
+    "label": "Our Capabilities",
+    "title": "Every surface a buyer",
+    "titleMuted": "actually touches.",
+    "items": [
+      {
+        "title": "UX/UI Design",
+        "description": "Interfaces built around how your buyers actually behave, not how we assume."
+      },
+      {
+        "title": "Website Redesign",
+        "description": "Rebuilding a store that grew past the structure it started with."
+      },
+      {
+        "title": "Build-Ready Design",
+        "description": "Files handed to the developers who built the last one, nothing lost in between."
+      },
+      {
+        "title": "Design Systems",
+        "description": "Components and rules your team can reuse without the store drifting apart."
+      },
+      {
+        "title": "Prototyping",
+        "description": "Clickable prototypes and MVPs that test decisions before development starts."
+      },
+      {
+        "title": "Creative Direction",
+        "description": "Brand and art direction for stores where the product is the reason people came."
+      }
+    ],
+    "layout": "list"
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Jewellery",
+        "title": "Innan Jewellery",
+        "text": "Brand-led Shopify storefront for a jewellery label built around craft.",
+        "tags": [
+          "Creative Direction",
+          "Shopify",
+          "Jewellery"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Read the Innan Jewellery case study"
+      },
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "Storefront and product page design for a catalogue that keeps growing.",
+        "tags": [
+          "UX/UI Design",
+          "Shopify",
+          "Product Pages"
+        ],
+        "link": "https://primeeva.com/",
+        "linkLabel": "Visit the Prime EVA store",
+        "image": "/images/pages/shopify-development/section/works/prime-eva-back.png"
+      },
+      {
+        "category": "Homeware",
+        "title": "Gunia",
+        "text": "Full redesign and replatform for a Ukrainian homeware brand.",
+        "tags": [
+          "Website Redesign",
+          "Design Systems"
+        ]
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "Your product works.",
+    "titleMuted": "The experience doesn't.",
+    "items": [
+      {
+        "title": "Buyers can't tell your options apart"
+      },
+      {
+        "title": "Your store grew past its own structure"
+      },
+      {
+        "title": "Design keeps breaking in development"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "Stealth Startup US",
+        "context": "UX/UI Design",
+        "quote": "Their team delivered a bug-free Shopify store that resulted in higher conversion rates."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Website Redesign",
+        "quote": "We received positive feedback from customers about the new site, which met all of our expectations and unique needs."
+      },
+      {
+        "client": "Gunia",
+        "context": "Theme Customization",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Our Design Process",
+    "title": "From understanding the problem to a design that is ready to build.",
+    "steps": [
+      {
+        "title": "Discover & Research",
+        "description": "We go through your business, your buyers and who you compete with, then agree the design goals and the direction before anything is drawn."
+      },
+      {
+        "title": "Wireframes & Planning",
+        "description": "We set out the site structure and wireframe every major page, so you can see the journey before any visual design starts."
+      },
+      {
+        "title": "Design & Prototyping",
+        "description": "We turn that into finished mockups and clickable prototypes, with your feedback at each stage rather than only at the end."
+      },
+      {
+        "title": "Handoff & Support",
+        "description": "Once approved, you get the assets and the style guide, and we stay on it through implementation because we are the ones building it."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork rating"
+      },
+      {
+        "value": "60+",
+        "label": "Happy clients"
+      },
+      {
+        "value": "100+",
+        "label": "Projects delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "Do you design and build, or design only?",
+        "a": "Both, and the same team does both. Your design goes to the developers who built the last one, so nothing is lost between the file and the store. We do take design-only work, and even then the design is made to be built: real components, real states, and no decisions that fall apart in code."
+      },
+      {
+        "q": "Can you work with our existing Shopify theme?",
+        "a": "Yes. Most of our design work starts from a theme that already exists rather than a blank file. We audit what the theme can carry, design inside those limits where that is sensible, and tell you which changes need theme development rather than a design adjustment."
+      },
+      {
+        "q": "What do we get at the end?",
+        "a": "Figma files with the components and states, a design system you can reuse, clickable prototypes for the flows that matter, and specifications the developers build from. If we are building it, you also get the store. If someone else is, the handoff is written for them rather than for us."
+      },
+      {
+        "q": "Do you design for products people configure or compare?",
+        "a": "That is most of what we do. <a href='/pages/shopify-development/'>Configurators</a>, variant-heavy catalogues, B2B ordering and multi-step selection all need design decisions that a single product page template cannot carry. We build these too, so the design accounts for what is actually possible on Shopify."
+      },
+      {
+        "q": "Do you build design systems or just pages?",
+        "a": "Both, and the system is usually the cheaper choice. A set of components and rules your team can reuse costs more up front than a handful of pages and stops the store drifting apart every time someone adds a section. For a growing catalogue it pays back quickly."
+      },
+      {
+        "q": "Can you design for German or other EU markets?",
+        "a": "Yes. We run a multi-language site ourselves and build multi-market Shopify setups, so the design accounts for what changes between languages: German text runs longer than English and breaks layouts that were only ever tested in one language. Copy in German is written by a native speaker, not translated by us."
+      },
+      {
+        "q": "How long does a Shopify store design take?",
+        "a": "A storefront design is usually a 3 to 8 week engagement, depending on how many page types you need and how many review rounds you want. We scope it before starting so the timeline is agreed rather than discovered."
+      },
+      {
+        "q": "What does Shopify store design cost?",
+        "a": "It depends on the number of page types and whether we are building it as well as designing it. We scope every project before quoting, and we will tell you if what you need is smaller than the work we take on."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Have a product",
+      "that needs",
+      "a better experience?"
+    ],
+    "body": "Tell us what your buyers get stuck on and we'll tell you what we would change.",
+    "button": "Let’s Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

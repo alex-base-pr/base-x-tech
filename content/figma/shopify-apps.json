@@ -1,0 +1,825 @@
+{
+  "hero": {
+    "texts": [
+      {
+        "text": "Services",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let`s talk",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Apps",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify apps built  for the workflow  you actually have",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Public apps, private apps and the automations that remove work nobody should be doing by hand. Two are live on the App Store.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "[ Scroll to Explore ]",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "capabilities": {
+    "texts": [
+      {
+        "text": "From an idea to a listed Shopify app.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Our Capabilities",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 1",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 2",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 3",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Public App Store Apps",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Private & Custom Apps",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom Automations",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Two of the apps we can name publicly are live on the Shopify App Store.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Apps for one merchant, doing the thing no public app does properly.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Work that happens by itself: orders, stock, documents, notifications.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 4",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 5",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 6",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Functions & Extensions",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "App UX & Interface",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "App Store Launch",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Checkout, discount and delivery logic using Shopify's own extension points.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "App screens designed to match Polaris so merchants know how to use them.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Review submission, listing copy and the compliance work approval needs.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5949",
+        "file": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "node": "image 5950",
+        "file": "/images/v2/shopify-apps-capabilities-2-image-5950.webp"
+      },
+      {
+        "node": "image 5951",
+        "file": "/images/v2/shopify-apps-capabilities-3-image-5951.webp"
+      },
+      {
+        "node": "Frame 2087327088",
+        "file": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "node": "image 5952",
+        "file": "/images/v2/shopify-apps-capabilities-5-image-5952.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      },
+      {
+        "node": "image 5942",
+        "file": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      }
+    ]
+  },
+  "projects": {
+    "rows": [
+      {
+        "name": "UK gifting brand",
+        "category": "Gifting",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "name": "Story Slider Navigation",
+        "category": "App",
+        "badge": "",
+        "image": "/images/v2/shopify-apps-projects-5-image-5954.webp"
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recent Projects",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Logistics",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Nova Poshta Connect",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Carrier app for Ukrainian stores, live on the Shopify App Store.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Public App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gifting",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "UK gifting brand",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gift configurator shipped as a private app with production logic.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Private App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automation",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "App",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Story Slider Navigation",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Story-style navigation app built for a US agency partner, 5.0 rated.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Storefront UX",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Public App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5938",
+        "file": "/images/v2/shopify-apps-projects-1-image-5938.webp"
+      },
+      {
+        "node": "image 5939",
+        "file": "/images/v2/shopify-apps-projects-2-image-5939.webp"
+      },
+      {
+        "node": "image 5953",
+        "file": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "node": "image 5955",
+        "file": "/images/v2/shopify-apps-projects-4-image-5955.webp"
+      },
+      {
+        "node": "image 5954",
+        "file": "/images/v2/shopify-apps-projects-5-image-5954.webp"
+      }
+    ]
+  },
+  "help": {
+    "texts": [
+      {
+        "text": "Someone on your team  is the integration.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When We Can Help",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "/02",
+        "size": 24,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "A person copies data between systems",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "No app does what your process needs",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "You want to sell an app, not just use one",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stories": {
+    "texts": [
+      {
+        "text": "Client Stories",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What it’s like  to work with us.",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Stealth Startup",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "size": 26,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Lili Mager",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Development",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Become a Client",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Stealth Startup US",
+        "file": "/images/v2/shopify-development-stories-1-stealth-startup-us.webp"
+      }
+    ]
+  },
+  "process": {
+    "texts": [
+      {
+        "text": "From the workflow  to a working app.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How We Ship Apps",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Scope the Workflow",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Build & Review",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We watch how the work happens now and decide what an app should do before we decide how it looks.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We build against the Shopify APIs in reviewable stages, with your team using it as it takes shape.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Test on Real Data",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Launch & Maintain",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We run it against real orders and real edge cases, because apps fail on the data nobody expected.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We handle submission if it goes public, and keep it working through Shopify's API version changes.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stats": {
+    "texts": [
+      {
+        "text": "Numbers that matter",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "4.8*",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "60+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "100+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork Reviews",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Happy Clients",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Projects Delivered",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch matters more.",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "faq": {
+    "texts": [
+      {
+        "text": "faq",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you build a public Shopify app for the App Store?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Questions  we get asked",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Yes. Two we can name publicly are live there: Nova Poshta Connect, which is ours, and Mo: Story Slider Navigation, built for a partner agency. Most of what we build is private apps for one merchant, which never appear in the store by design.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What is the difference between a public and a private app?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "A public app is listed on the App Store and any merchant can install it. A private app exists for one store and does exactly what that business needs. If the workflow is specific to you, private is usually cheaper and faster than bending a public app to fit.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you automate something our team does by hand?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "That is most of what we build. For a UK gifting brand we shipped a configurator as a private app, plus a production engine that turns each order into print-ready files and routes them to the queue. Work that used to be manual now happens on order.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How long does a Shopify app take to build?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "A single-purpose private app is measured in weeks. Something with production logic, external systems or App Store review behind it runs longer. The gifting brand's three-system build took four to six months. We scope before quoting so you are not guessing.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Who owns the app and the code?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "You do, for anything we build for you. Private apps and custom code are yours, including the repository. A public app is a different question and worth settling in the contract before it is built rather than after it has users.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens when Shopify changes its API?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify deprecates API versions on a schedule, so an app left alone will eventually break. We keep the apps we build working through those changes. That is maintenance of our own code, and we would not claim to maintain an app we have never seen.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you build checkout or discount logic?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes, using Shopify Functions and checkout extensions rather than workarounds. Checkout specifically needs Shopify Plus. Discount and delivery logic have more room on standard plans, and we will tell you which of your rules are possible before you commit.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you take over an app someone else built?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Sometimes, and we audit it before saying yes. Taking on a codebase without knowing what is in it is how you inherit someone else's problem. If it is maintainable we will say so. If rebuilding costs less than untangling it, we will say that instead.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "cta": {
+    "texts": [
+      {
+        "text": "Have work that should be an app?",
+        "size": 75,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Tell us what your team does by hand and we'll tell you what it takes to stop.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let’s Talk",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Navigation",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connect",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Services",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "LinkedIn",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Behance",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "© 2026 Base X All right reserved",
+        "size": 12,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Terms & Conditions",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Privacy policy",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Opera Знімок_2026-06-22_144736_ua.klottclothes.com 1",
+        "file": "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp"
+      },
+      {
+        "node": "Знімок екрана 2026-06-22 о 21.30.43 1",
+        "file": "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp"
+      },
+      {
+        "node": "image 5914",
+        "file": "/images/v2/shopify-development-cta-3-image-5914.webp"
+      }
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "Shopify Store Development & Custom Builds | Base X Tech",
+    "description": "We build Shopify stores that need more than a theme: custom checkout, product configurators, headless storefronts, wholesale beside retail on one stack."
+  },
+  "hero": {
+    "tag": "Shopify Development",
+    "title": [
+      "Shopify development",
+      "for stores that need",
+      "more than a theme"
+    ],
+    "lead": "Custom checkout, configurators, B2B and retail on one stack. If the build is the hard part, that's the work we take.",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Our Capabilities",
+    "title": "The parts a theme was",
+    "titleMuted": "never built for.",
+    "items": [
+      {
+        "title": "Store Build & Launch",
+        "description": "New stores built for one market or for several across the EU.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Theme Development",
+        "description": "Custom themes and deep changes to the one you already run.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "title": "Custom Checkout",
+        "description": "Checkout logic, validation and payment rules on Shopify Plus.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "Configurators",
+        "description": "Product builders for options, variants and made-to-order ranges.",
+        "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "title": "Headless Storefronts",
+        "description": "Shopify as the commerce backend behind a front end you control fully.",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "title": "B2B & Wholesale",
+        "description": "Wholesale accounts, price lists and terms running beside your retail store.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "Product configurator built directly into the native store front end.",
+        "tags": [
+          "Configurator",
+          "ERP"
+        ],
+        "link": "https://primeeva.com/",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "category": "Jewellery",
+        "title": "Innan Jewellery",
+        "text": "Bespoke theme, enquiry logic and multi-language build for the EU.",
+        "tags": [
+          "Theme Development",
+          "Jewellery"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Read the Innan Jewellery case study",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
+      },
+      {
+        "category": "Homeware",
+        "title": "Gunia",
+        "text": "Theme extension and migration for a Ukrainian luxury homeware brand.",
+        "tags": [
+          "Replatform",
+          "Homeware"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-projects-5-07-464-13c7da4b-aaff-4c76-a284-153390654.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "The theme stopped being the answer",
+    "titleMuted": "a while ago.",
+    "items": [
+      {
+        "title": "Your checkout needs rules Shopify lacks"
+      },
+      {
+        "title": "One store must serve wholesale and retail"
+      },
+      {
+        "title": "Your product needs configuring to sell"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify Development",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Store Build",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+      },
+      {
+        "client": "Gunia",
+        "context": "Theme Development",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "How We Build",
+    "title": "From scoping the build to support after launch.",
+    "steps": [
+      {
+        "title": "Scope & Estimate",
+        "description": "We work through what the build actually needs and what it will cost before anyone writes code."
+      },
+      {
+        "title": "Plan & Architecture",
+        "description": "We decide the data model, the integrations and where custom code is justified rather than convenient."
+      },
+      {
+        "title": "Build & Review",
+        "description": "We develop in reviewable stages so you see the store working before launch, not a demo at the end."
+      },
+      {
+        "title": "Launch & Support",
+        "description": "We ship it, watch it under real traffic and stay on it after the launch rather than handing over a login."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "60+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "Can you customise Shopify checkout?",
+        "a": "Yes, on Shopify Plus. Checkout validation, discount logic and delivery rules are built with Shopify Functions and checkout extensions rather than workarounds. On standard plans the options are much narrower, and we will tell you which of your requirements are not possible before you commit to anything."
+      },
+      {
+        "q": "Do we need Shopify Plus?",
+        "a": "Only for specific things. Plus is required for checkout customisation, B2B company accounts and higher API limits. If none of your requirements need those, a standard plan is usually enough and we will say so rather than sell you the upgrade."
+      },
+      {
+        "q": "Can you build a product configurator on Shopify?",
+        "a": "Yes, and we have. A configurator built into the storefront handles options, dependencies and made-to-order ranges that variants alone cannot express. Prime EVA is the example: a custom configurator running inside their Shopify store rather than as a bolted-on app."
+      },
+      {
+        "q": "Can one store serve wholesale and retail?",
+        "a": "Yes. Shopify B2B runs company accounts, price lists and payment terms alongside your retail catalogue, so you are not maintaining two stores that drift apart. We have built this, though that client's work is not public."
+      },
+      {
+        "q": "When does headless Shopify make sense?",
+        "a": "Less often than it gets recommended. Headless is worth it when you need a front end Shopify's theme layer cannot deliver, or when the storefront serves more than one channel. It costs more to build and more to maintain, so if a well-built theme does the job we will tell you that instead."
+      },
+      {
+        "q": "Can you work with our existing theme, or is it a rebuild?",
+        "a": "Usually your existing theme. We audit what it can carry, extend it where that holds up, and only recommend a rebuild when the theme is fighting what you need. A rebuild you did not need is the most expensive thing on a Shopify project."
+      },
+      {
+        "q": "How long does a custom Shopify build take?",
+        "a": "Most builds run 4 to 16 weeks, depending on the integrations and how much is custom rather than configured. We scope and estimate before writing code, so the timeline is agreed at the start."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "We stay on it. We watch the store under real traffic, fix what surfaces in the first weeks, and keep it working through Shopify's API version changes. Handing over a login and disappearing is where most of the problems we get called in to fix started."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Have a build that needs",
+      "more than a theme?"
+    ],
+    "body": "Tell us what the store has to do and we'll tell you how we would build it.",
+    "button": "Let's Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

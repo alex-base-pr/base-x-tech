@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "Magento & WooCommerce to Shopify Migration | Base X Tech",
+    "description": "We move stores to Shopify from Magento, WooCommerce, BigCommerce or in-house platforms: data checked row by row, redirects and rankings handled."
+  },
+  "hero": {
+    "tag": "Shopify Migration",
+    "title": [
+      "Shopify migration",
+      "without losing what",
+      "already works"
+    ],
+    "lead": "Magento, WooCommerce, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Our Capabilities",
+    "title": "Every platform leaves",
+    "titleMuted": "different problems.",
+    "items": [
+      {
+        "title": "Magento to Shopify",
+        "description": "Magento 1 and 2 stores moved without carrying the maintenance bill over.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "WooCommerce to Shopify",
+        "description": "WordPress and WooCommerce stores moved off plugin dependency for good.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      },
+      {
+        "title": "BigCommerce to Shopify",
+        "description": "BigCommerce stores moved with the catalogue and URLs intact.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "title": "Custom Platform Moves",
+        "description": "In-house platforms moved to Shopify, including the parts nobody documented.",
+        "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "title": "Data & Integrity",
+        "description": "Products, customers and order history moved and checked row by row.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Keeping Traffic",
+        "description": "Redirects, canonicals and hreflang set so rankings survive the switch.",
+        "image": "/images/v2/shopify-migration-capabilities-6-image-5948.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Gifting",
+        "title": "UK gifting brand",
+        "text": "Moved off a custom platform with 1M+ customer profiles intact.",
+        "tags": [
+          "Migration",
+          "Integrations",
+          "Gifting"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Read the UK gifting brand case study",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "Migrated, then integrated with the ERP the business runs on.",
+        "tags": [
+          "Migration",
+          "ERP"
+        ],
+        "link": "https://primeeva.com/",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "category": "Homeware",
+        "title": "Gunia",
+        "text": "Replatformed and redesigned for a Ukrainian luxury homeware brand.",
+        "tags": [
+          "Replatform",
+          "Homeware"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-projects-5-07-464-13c7da4b-aaff-4c76-a284-153390654.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "The platform costs more than",
+    "titleMuted": "it returns.",
+    "items": [
+      {
+        "title": "Every change needs a developer"
+      },
+      {
+        "title": "Your platform is end of life"
+      },
+      {
+        "title": "Hosting costs more than the store earns"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "Gunia",
+        "context": "Store Migration",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      },
+      {
+        "client": "VT Advantec",
+        "context": "Shopify Development",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Store Build",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+      }
+    ]
+  },
+  "process": {
+    "label": "How We Migrate",
+    "title": "From audit to a store that holds its traffic.",
+    "steps": [
+      {
+        "title": "Audit & Inventory",
+        "description": "We catalogue every URL, product, customer and integration on the old platform, because what gets missed is what gets lost."
+      },
+      {
+        "title": "Plan & Map",
+        "description": "We map old URLs to new, decide what moves and what gets rebuilt, and agree the cutover before touching anything."
+      },
+      {
+        "title": "Migrate & Verify",
+        "description": "We move the data and check it against the source, then run the store on a staging build until it behaves."
+      },
+      {
+        "title": "Launch & Watch",
+        "description": "We import redirects, submit sitemaps and monitor Search Console for weeks after, not days."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "1M+",
+        "label": "Customer profiles migrated"
+      },
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "13",
+        "label": "Years of history moved"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "How long does a Shopify migration take?",
+        "a": "It depends on the catalogue, the integrations and how much of the old platform was custom. A straightforward catalogue move runs in weeks. The UK gifting brand's move off a platform built in-house, covering 1M+ customer profiles and thirteen years of history, took four to six months."
+      },
+      {
+        "q": "Will we lose our Google rankings?",
+        "a": "Not if the redirects are done properly, and that is the part nobody quotes for. Every old URL needs to point at its new equivalent in one hop, canonicals and hreflang need to be right on arrival, and Search Console needs watching for weeks afterwards rather than days."
+      },
+      {
+        "q": "What happens to our order history and customer accounts?",
+        "a": "They come with you. Products, customers, order history and the relationships between them are moved and then checked against the source rather than assumed. We moved 1M+ profiles and thirteen years of history for a UK gifting brand. The checking is the slow part and it is not optional."
+      },
+      {
+        "q": "Can you migrate from a custom-built platform?",
+        "a": "Yes, and that is the harder case. Off-the-shelf platforms export predictably; in-house ones have logic nobody documented and fields nobody remembers. We work out what the old system actually does before moving anything, including the parts that only exist in someone's head."
+      },
+      {
+        "q": "Do we need Shopify Plus to migrate?",
+        "a": "Not to migrate. Plus matters afterwards, if you need checkout customisation, B2B company accounts or higher API limits. We will tell you which of your requirements need it rather than putting you on Plus by default."
+      },
+      {
+        "q": "What about our current integrations?",
+        "a": "They get rebuilt, not carried over. Your ERP, CRM, fulfilment and courier connections were written against the old platform's API and none of them transfer. We inventory every one at the audit stage, because an integration discovered late is what turns a migration into an overrun."
+      },
+      {
+        "q": "Can the store stay live during the migration?",
+        "a": "Yes. The new store is built and tested on a password-protected Shopify instance while your current one keeps selling. The cutover is a planned switch with the redirects already prepared, not a period where nothing works."
+      },
+      {
+        "q": "What happens after we launch on Shopify?",
+        "a": "We watch it. Redirects get verified against live responses, sitemaps get submitted, and Search Console gets checked for weeks rather than days. Migrations rarely fail on launch day. They fail three weeks later, when nobody is looking at the coverage report."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Outgrown the platform",
+      "you started on?"
+    ],
+    "body": "Tell us what you're on now and we'll tell you what moving actually involves.",
+    "button": "Let's Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

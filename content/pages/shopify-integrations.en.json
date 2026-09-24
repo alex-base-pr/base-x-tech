@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "Custom Shopify Integrations: ERP, CRM & APIs | Base X Tech",
+    "description": "We connect Shopify to the systems your business already runs on: ERP, CRM, PIM, logistics and marketplaces, built and monitored by the same team."
+  },
+  "hero": {
+    "tag": "Integrations",
+    "title": [
+      "Shopify integrations",
+      "for the systems your",
+      "business runs on"
+    ],
+    "lead": "ERP, CRM, PIM, logistics, marketplaces. When your store has to agree with the systems behind it on every order, this is the work.",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Our Capabilities",
+    "title": "One store, and everything it has to",
+    "titleMuted": "agree with.",
+    "items": [
+      {
+        "title": "ERP Integrations",
+        "description": "Orders, stock and invoices moving between Shopify and your ERP without hands.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "title": "CRM Integrations",
+        "description": "Customer and order data landing in your CRM the way your sales team needs it.",
+        "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp"
+      },
+      {
+        "title": "PIM & Product Data",
+        "description": "One source for product data, pushed to Shopify instead of maintained twice.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Custom APIs",
+        "description": "Connections built for systems with no app and no standard integration.",
+        "image": "/images/v2/shopify-integrations-capabilities-4-image-5947.webp"
+      },
+      {
+        "title": "Logistics & Fulfilment",
+        "description": "Carriers, labels and tracking wired into the order flow rather than bolted on.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Marketplaces & Channels",
+        "description": "Listings, stock and orders kept in step across every channel you sell on.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Gifting",
+        "title": "UK gifting brand",
+        "text": "Configurator, production and courier systems connected on Shopify Plus.",
+        "tags": [
+          "Integrations",
+          "Automation",
+          "Gifting"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Read the UK gifting brand case study",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "ERP integration with order automation behind the store.",
+        "tags": [
+          "ERP",
+          "Automation"
+        ],
+        "link": "https://primeeva.com/",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "category": "B2B",
+        "title": "VT Advantec",
+        "text": "API integration built across a multi-year partnership.",
+        "tags": [
+          "Custom APIs",
+          "Integrations"
+        ],
+        "link": null,
+        "image": null
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "Two systems, two versions of the",
+    "titleMuted": "same order.",
+    "items": [
+      {
+        "title": "Someone re-types orders by hand"
+      },
+      {
+        "title": "Stock is wrong by the time it syncs"
+      },
+      {
+        "title": "Your ERP has no Shopify app"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Platform Integration",
+        "quote": "They deliver top-tier expertise across web development and platform integration, always providing strategic, practical advice, and expertly navigating tight timelines to ensure our success."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Store Build",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+      },
+      {
+        "client": "Gunia",
+        "context": "Migration",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "How We Integrate",
+    "title": "From mapping the systems to watching them run.",
+    "steps": [
+      {
+        "title": "Audit & Map",
+        "description": "We list every system, what data each one owns and where things break today before proposing anything."
+      },
+      {
+        "title": "Plan the Data Flow",
+        "description": "We decide direction, frequency and what wins when two systems disagree, which is where most integrations fail."
+      },
+      {
+        "title": "Build & Test",
+        "description": "We build it and run real orders through it, including the ones that go wrong, before it touches live data."
+      },
+      {
+        "title": "Launch & Monitor",
+        "description": "We watch it under real volume and keep alerting on it, because a silent integration failure costs more than a loud one."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "60+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "Can you connect Shopify to our ERP?",
+        "a": "Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it exposes nothing usable we build the connector ourselves rather than telling you it cannot be done."
+      },
+      {
+        "q": "What if our system has no Shopify app?",
+        "a": "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them."
+      },
+      {
+        "q": "How do you stop stock going out of sync?",
+        "a": "By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and frequency for every field, then run real orders through it, including the ones that fail, before it touches live data."
+      },
+      {
+        "q": "Can you automate order routing and fulfilment?",
+        "a": "Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plus a fulfilment layer that generates shipping codes, syncs couriers in real time and schedules pickups twice a day."
+      },
+      {
+        "q": "Which ERPs and CRMs have you worked with?",
+        "a": "ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integration at all, and for those we have built custom connectors for the specific use rather than moving the business onto a different tool."
+      },
+      {
+        "q": "How long does an integration take?",
+        "a": "It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build, covering configurator, production and fulfilment, took four to six months. We scope it before quoting."
+      },
+      {
+        "q": "Who maintains it after launch?",
+        "a": "We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and alert on the connections we build, because a silent integration failure costs more than a loud one."
+      },
+      {
+        "q": "Can you integrate with our warehouse or 3PL?",
+        "a": "Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Need Shopify to talk",
+      "to something else?"
+    ],
+    "body": "Tell us what the two systems are and we'll tell you what connecting them takes.",
+    "button": "Let's Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

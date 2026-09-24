@@ -1,0 +1,845 @@
+{
+  "hero": {
+    "texts": [
+      {
+        "text": "Services",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let`s talk",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "CRO",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Conversion work for stores where the  fix is in the build",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We audit, prioritise and then actually build the changes. Not a slide deck of recommendations you have to find someone to implement.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "[ Scroll to Explore ]",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "capabilities": {
+    "texts": [
+      {
+        "text": "Findings you can act on, then acted on.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Our Capabilities",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 1",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 2",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 3",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Audit & Backlog",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product Page CRO",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Cart & Checkout",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Problems grouped by area and scored on impact, effort and confidence.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "The page that decides most purchases, rebuilt around the questions buyers ask.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Fewer steps and fewer reasons to leave between cart and payment.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 4",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 5",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 6",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Mobile CRO",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Speed & Core Web Vitals",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Analytics & Reporting",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "The layout most of your traffic sees, treated as the primary one.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Images, scripts and unused apps cleaned up until the store loads properly.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "GA4 events, funnels and Clarity set up so you can see what the change did.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5944",
+        "file": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "node": "Frame 2087327088",
+        "file": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "node": "image 5942",
+        "file": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "node": "image 5946",
+        "file": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      },
+      {
+        "node": "image 56",
+        "file": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      }
+    ]
+  },
+  "projects": {
+    "rows": [
+      {
+        "name": "Prime EVA",
+        "category": "Automotive",
+        "badge": "10M+ possible configurations",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "name": "UK gifting brand",
+        "category": "Gifting",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recent Projects",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gifting",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "UK gifting brand",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Configurator, production and courier systems connected on Shopify Plus.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "innan-jewellery.com",
+        "size": 6,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automation",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gifting",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "UK gifting brand",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gift configurator shipped as a private app with production logic.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Private App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automation",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automotive",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Prime EVA",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product configurator built directly into the native store front end.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom configurator development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "10M+ possible configurations",
+        "size": 12,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5924",
+        "file": "/images/v2/shopify-development-projects-2-image-5924.webp"
+      },
+      {
+        "node": "image 5925",
+        "file": "/images/v2/shopify-development-projects-3-image-5925.webp"
+      },
+      {
+        "node": "image 5953",
+        "file": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "node": "ChatGPT Image 9 лип. 2026 р., 16_02_01 1",
+        "file": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      }
+    ]
+  },
+  "help": {
+    "texts": [
+      {
+        "text": "Traffic arrives.  Very little converts.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When We Can Help",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "/02",
+        "size": 24,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "You get traffic but not orders",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Checkout loses more than it should",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Nobody can tell what a change achieved",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stories": {
+    "texts": [
+      {
+        "text": "Client Stories",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What it’s like  to work with us.",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Stealth Startup",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "size": 26,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Lili Mager",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Development",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Become a Client",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Stealth Startup US",
+        "file": "/images/v2/shopify-development-stories-1-stealth-startup-us.webp"
+      }
+    ]
+  },
+  "process": {
+    "texts": [
+      {
+        "text": "From audit to shipped change to measured.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How We Run CRO",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Audit & Prioritise",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Agree the Scope",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We go through the funnel and score every problem on impact, effort and confidence, so the order of work is not a guess.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We pick the quick wins and the bigger bets with you, and set what success looks like before starting.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Measure & Repeat",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Build & Test",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We report what each change did and update the backlog, because CRO is a cycle rather than a one-off project.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We implement the changes, and A/B test them where you have the traffic to make the result mean something.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stats": {
+    "texts": [
+      {
+        "text": "Numbers that matter",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "4.8*",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "50-200",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "100+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork Reviews",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "% conversion uplift range",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Projects Delivered",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch matters more.",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "faq": {
+    "texts": [
+      {
+        "text": "faq",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What does a CRO audit include?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Questions  we get asked",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "We go through the whole funnel: homepage, listing and product pages, cart, checkout, mobile, speed, and whatever your analytics is or is not recording. Every problem comes back grouped by area and scored on impact, effort and confidence, so you get an ordered list rather than observations.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Do you implement the changes or just recommend them?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We implement them. That is the difference between this and an audit you then have to find a developer for. The same team that finds the problem builds the fix, which is also why we can tell you honestly which fixes are cheap and which are not.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How do you decide what to fix first?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Every hypothesis gets scored on impact, effort and confidence, then ordered. Quick wins go first because they fund the argument for the bigger work. You approve the scope before anything gets built, so the order of work is agreed rather than assumed.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Do we need enough traffic for A/B testing?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "For testing, yes. Below a certain volume a test cannot reach significance, and running one anyway just delays the fix. On lower-traffic stores we implement the changes we are confident about and measure the funnel rather than the variant.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How long before we see results?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Quick wins show inside the first reporting cycle. Structural work on product pages or checkout takes longer to read, because you need enough sessions to separate the change from normal variation. We set what success looks like before starting.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you fix site speed as part of this?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes, and it is usually on the list. Images, third-party scripts, unused apps and theme code all slow a store down, and speed affects mobile conversion most. It is development work, which is why it sits with us rather than a separate specialist.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What analytics do we need in place?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Working GA4 ecommerce events at minimum, and a session recording tool if you want to see behaviour rather than infer it. If tracking is broken or missing we fix that first, because measuring an improvement against bad data tells you nothing.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Is this a one-off project or ongoing?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Both work, and ongoing works better. A single round finds and fixes the obvious problems. After that CRO is a cycle: implement, measure, update the backlog, pick the next thing. Stores that treat it as a project stop improving the moment it ends.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "cta": {
+    "texts": [
+      {
+        "text": "Getting traffic but not the orders?",
+        "size": 75,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Tell us where buyers drop off and we'll tell you what we would change first.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let’s Talk",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Navigation",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connect",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Services",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "LinkedIn",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Behance",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "© 2026 Base X All right reserved",
+        "size": 12,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Terms & Conditions",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Privacy policy",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Opera Знімок_2026-06-22_144736_ua.klottclothes.com 1",
+        "file": "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp"
+      },
+      {
+        "node": "Знімок екрана 2026-06-22 о 21.30.43 1",
+        "file": "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp"
+      },
+      {
+        "node": "image 5914",
+        "file": "/images/v2/shopify-development-cta-3-image-5914.webp"
+      }
+    ]
+  }
+}

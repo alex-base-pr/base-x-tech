@@ -1,0 +1,165 @@
+<%# Design v2 service page (Figma "Service Page" 637-238). Copy: content/pages/<page>.<lang>.json (Marko's slots).
+    All text is in the HTML (hover only changes emphasis) so buyers on touch devices, Google and AI assistants get it. %>
+<body class="v2 locale-en" lang="<%= lang %>">
+  <%- include('layout/noscript.ejs') %>
+  <%- include('layout/v2/header.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <nav class="v2-rail" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span></nav>
+
+  <main id="<%= mainId %>" class="v2-main">
+    <section class="v2-hero" data-v2-section>
+      <div class="v2-hero__grid" aria-hidden="true"></div>
+      <p class="v2-tag v2-hero__tag"><%= c.hero.tag %></p>
+      <div class="v2-hero__body">
+        <h1 class="<%= c.hero.size === 'l' ? 'v2-h-l' : 'v2-h-2xl' %>"><% c.hero.title.forEach((line, i) => { %><span class="<%= i === c.hero.title.length - 1 ? 'v2-muted' : '' %>"><%= line %></span> <% }) %></h1>
+        <p class="v2-hero__lead"><%= c.hero.lead %></p>
+        <%- include('layout/v2/button.ejs', { text: c.hero.button }) %>
+      </div>
+      <p class="v2-hero__scroll" aria-hidden="true">[ Scroll to Explore ]</p>
+    </section>
+
+    <section class="v2-section v2-light v2-caps" data-v2-section>
+      <div class="v2-section__head">
+        <p class="v2-tag v2-tag--light"><%= c.capabilities.label %></p>
+        <h2 class="v2-h-m"><%= c.capabilities.title %> <span class="v2-muted"><%= c.capabilities.titleMuted %></span></h2>
+      </div>
+      <% if (c.capabilities.layout === 'cards') { %>
+      <ol class="v2-capcards">
+        <% c.capabilities.items.forEach((item, i) => { %>
+          <li class="v2-capcard">
+            <div class="v2-capcard__text">
+              <h3 class="v2-capcard__title"><%= item.title %></h3>
+              <p class="v2-capcard__desc"><%= item.description %></p>
+            </div>
+            <span class="v2-capcard__num">0 - <%= i + 1 %></span>
+            <% if (item.image) { %><figure class="v2-capcard__media"><img loading="lazy" src="<%= item.image %>" alt=""></figure><% } %>
+          </li>
+        <% }) %>
+      </ol>
+      <% } else { %>
+      <ol class="v2-caps__list">
+        <% c.capabilities.items.forEach((item, i) => { %>
+          <li class="v2-caps__item<%= i === 0 ? ' is-active' : '' %>" tabindex="0">
+            <span class="v2-caps__num">/<%= String(i + 1).padStart(2, '0') %></span>
+            <h3 class="v2-caps__title"><%= item.title %></h3>
+            <p class="v2-caps__desc"><%= item.description %></p>
+          </li>
+        <% }) %>
+      </ol>
+      <% } %>
+    </section>
+
+    <section class="v2-section v2-dark v2-projects" data-v2-section>
+      <p class="v2-tag"><%= c.projects.label %></p>
+      <div class="v2-projects__list">
+        <% c.projects.items.forEach(item => { %>
+          <article class="v2-project">
+            <p class="v2-project__cat"><span class="v2-dot"></span><%= item.category %></p>
+            <div class="v2-project__media">
+              <% if (item.badge) { %><span class="v2-project__badge"><%= item.badge %></span><% } %>
+              <% if (item.image) { %><img loading="lazy" src="<%= item.image %>" alt="<%= item.title %> — Shopify store"><% } else { %><div class="v2-project__placeholder"><span><%= item.title %></span></div><% } %>
+            </div>
+            <div class="v2-project__info">
+              <h3 class="v2-project__title"><%= item.title %></h3>
+              <p class="v2-project__text"><%= item.text %></p>
+              <ul class="v2-project__tags"><% item.tags.forEach(t => { %><li><%= t %></li><% }) %></ul>
+              <% if (item.link) { %><a class="v2-round-link" href="<%= item.link %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel || ('View ' + item.title) %>"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a><% } %>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+      <div class="v2-center"><%- include('layout/v2/button.ejs', { text: c.hero.button }) %></div>
+    </section>
+
+    <section class="v2-section v2-dark v2-help" data-v2-section>
+      <div class="v2-section__head">
+        <p class="v2-tag"><%= c.help.label %></p>
+        <h2 class="v2-h-m"><%= c.help.title %> <span class="v2-muted"><%= c.help.titleMuted %></span></h2>
+      </div>
+      <ol class="v2-help__grid">
+        <% c.help.items.forEach((item, i) => { %>
+          <li class="v2-help__item<%= i === 1 ? ' is-active' : '' %>" tabindex="0">
+            <span class="v2-help__num">/<%= String(i + 1).padStart(2, '0') %></span>
+            <h3 class="v2-help__title"><%= item.title %></h3>
+            <% if (item.description) { %><p class="v2-help__desc"><%= item.description %></p><% } %>
+          </li>
+        <% }) %>
+      </ol>
+    </section>
+
+    <section class="v2-section v2-light v2-stories" data-v2-section>
+      <p class="v2-tag v2-tag--light"><%= c.stories.label %></p>
+      <h2 class="v2-h-m v2-stories__title"><%- c.stories.title %></h2>
+      <div class="v2-stories__body" data-v2-tabs>
+        <div class="v2-stories__tabs" role="tablist" aria-label="<%= c.stories.label %>">
+          <% c.stories.items.forEach((s, i) => { %>
+            <button type="button" role="tab" id="v2-story-tab-<%= i %>" aria-controls="v2-story-<%= i %>" aria-selected="<%= i === 0 %>" tabindex="<%= i === 0 ? 0 : -1 %>"><%= s.client %></button>
+          <% }) %>
+        </div>
+        <% c.stories.items.forEach((s, i) => { %>
+          <figure class="v2-story" role="tabpanel" id="v2-story-<%= i %>" aria-labelledby="v2-story-tab-<%= i %>" <%= i === 0 ? '' : 'hidden' %>>
+            <blockquote><p><%= s.quote %></p></blockquote>
+            <figcaption><span class="v2-story__avatar" aria-hidden="true"><%= s.client.charAt(0) %></span><span><strong><%= s.client %></strong><%= s.context %></span></figcaption>
+          </figure>
+        <% }) %>
+      </div>
+      <div class="v2-center"><%- include('layout/v2/button.ejs', { text: c.hero.button }) %></div>
+    </section>
+
+    <section class="v2-section v2-dark v2-process" data-v2-section>
+      <div class="v2-section__head">
+        <p class="v2-tag"><%= c.process.label %></p>
+        <h2 class="v2-h-m"><%= c.process.title %></h2>
+      </div>
+      <ol class="v2-process__grid">
+        <% c.process.steps.forEach((step, i) => { %>
+          <li class="v2-process__card">
+            <span class="v2-process__icon" aria-hidden="true"><%= String(i + 1).padStart(2, '0') %></span>
+            <h3 class="v2-process__title"><%= step.title %></h3>
+            <p class="v2-process__desc"><%= step.description %></p>
+          </li>
+        <% }) %>
+      </ol>
+    </section>
+
+    <section class="v2-section v2-light v2-stats" data-v2-section>
+      <h2 class="v2-stats__title"><%= c.stats.title %></h2>
+      <ul class="v2-stats__list">
+        <% c.stats.items.forEach(s => { %><li><strong><%= s.value %></strong><span><%= s.label %></span></li><% }) %>
+      </ul>
+      <% if (c.stats.footnote) { %><p class="v2-stats__note"><%= c.stats.footnote %></p><% } %>
+      <% if (c.stats.closing) { %><p class="v2-stats__closing"><%= c.stats.closing %></p><% } %>
+    </section>
+
+    <section class="v2-section v2-light v2-faq" data-v2-section>
+      <div class="v2-faq__head">
+        <p class="v2-tag v2-tag--light"><%= c.faq.label %></p>
+        <h2 class="v2-h-m"><%- c.faq.title %></h2>
+      </div>
+      <div class="v2-faq__list">
+        <% c.faq.items.forEach((f, i) => { %>
+          <details class="v2-faq__item" <%= i === 0 ? 'open' : '' %>>
+            <summary><h3 data-faq-q><%= f.q %></h3><span class="v2-faq__toggle" aria-hidden="true"></span></summary>
+            <p data-faq-a><%- f.a %></p>
+          </details>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="v2-cta" data-v2-section>
+      <% if (c.cta.images && c.cta.images.length) { %><div class="v2-cta__collage" aria-hidden="true"><% c.cta.images.slice(0, 3).forEach(src => { %><img loading="lazy" src="<%= src %>" alt=""><% }) %></div><% } %>
+      <h2 class="v2-h-l"><% c.cta.title.forEach((line, i) => { %><span class="<%= i === c.cta.title.length - 1 ? 'v2-muted' : '' %>"><%= line %></span> <% }) %></h2>
+      <div class="v2-cta__body">
+        <p><%= c.cta.body %></p>
+        <%- include('layout/v2/button.ejs', { text: c.cta.button }) %>
+      </div>
+    </section>
+  </main>
+
+  <%- include('layout/v2/footer.ejs') %>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/v2.js"></script>
+</body>

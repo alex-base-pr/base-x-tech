@@ -1,0 +1,837 @@
+{
+  "hero": {
+    "texts": [
+      {
+        "text": "Services",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let`s talk",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Migration",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify migration without losing what already works",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Magento, WooCommerce, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "[ Scroll to Explore ]",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "capabilities": {
+    "texts": [
+      {
+        "text": "Every platform leaves different problems.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Our Capabilities",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 1",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 2",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 3",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Magento to Shopify",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "WooCommerce to Shopify",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "BigCommerce to Shopify",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Magento 1 and 2 stores moved without carrying the maintenance bill over.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "WordPress and WooCommerce stores moved off plugin dependency for good.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "BigCommerce stores moved with the catalogue and URLs intact.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 4",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 5",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 6",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom Platform Moves",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Data & Integrity",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Keeping Traffic",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "In-house platforms moved to Shopify, including the parts nobody documented.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Products, customers and order history moved and checked row by row.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Redirects, canonicals and hreflang set so rankings survive the switch.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      },
+      {
+        "node": "image 56",
+        "file": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "node": "image 5949",
+        "file": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "node": "image 5946",
+        "file": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "node": "image 5948",
+        "file": "/images/v2/shopify-migration-capabilities-6-image-5948.webp"
+      }
+    ]
+  },
+  "projects": {
+    "rows": [
+      {
+        "name": "Prime EVA",
+        "category": "Automotive",
+        "badge": "10M+ possible configurations",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "name": "VT Advantec",
+        "category": "Lifestyle brand",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
+      },
+      {
+        "name": "UK gifting brand",
+        "category": "Gifting",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recent Projects",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gifting",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "UK gifting brand",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gift configurator shipped as a private app with production logic.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Private App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automation",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automotive",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Prime EVA",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product configurator built directly into the native store front end.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom configurator development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "10M+ possible configurations",
+        "size": 12,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Lifestyle brand",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "API integration built across a multi-year partnership.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom APIs",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5953",
+        "file": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "node": "ChatGPT Image 9 лип. 2026 р., 16_02_01 1",
+        "file": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "node": "ChatGPT Image 16 вер. 2026 р., 07_57_51 1",
+        "file": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
+      }
+    ]
+  },
+  "help": {
+    "texts": [
+      {
+        "text": "The platform costs more than it returns.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When We Can Help",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "/02",
+        "size": 24,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Every change needs  a developer",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Your platform  is end of life",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Hosting costs more\nthan the store earns",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stories": {
+    "texts": [
+      {
+        "text": "Client Stories",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What it’s like  to work with us.",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Stealth Startup",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+        "size": 26,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Lili Mager",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Store Migration",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Store Migration",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Become a Client",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Stealth Startup US",
+        "file": "/images/v2/shopify-development-stories-1-stealth-startup-us.webp"
+      }
+    ]
+  },
+  "process": {
+    "texts": [
+      {
+        "text": "From audit to a store that holds its traffic.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How We Migrate",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Audit & Inventory",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Plan & Map",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We catalogue every URL, product, customer and integration on the old platform, because what gets missed is what gets lost.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We map old URLs to new, decide what moves and what gets rebuilt, and agree the cutover before touching anything.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Migrate & Verify",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Launch & Watch",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We move the data and check it against the source, then run the store on a staging build until it behaves.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We import redirects, submit sitemaps and monitor Search Console for weeks after, not days.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stats": {
+    "texts": [
+      {
+        "text": "Numbers that matter",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "1M+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "4.8*",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "13",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Customer profiles migrated",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork Reviews",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Years of history moved",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch matters more.",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "faq": {
+    "texts": [
+      {
+        "text": "faq",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How long does a Shopify migration take?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Questions  we get asked",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "It depends on the catalogue, the integrations and how much of the old platform was custom. A straightforward catalogue move runs in weeks. The UK gifting brand's move off a platform built in-house, covering 1M+ customer profiles and thirteen years of history, took four to six months.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Will we lose our Google rankings?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Not if the redirects are done properly, and that is the part nobody quotes for. Every old URL needs to point at its new equivalent in one hop, canonicals and hreflang need to be right on arrival, and Search Console needs watching for weeks afterwards rather than days.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens to our order history and customer accounts?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "They come with you. Products, customers, order history and the relationships between them are moved and then checked against the source rather than assumed. We moved 1M+ profiles and thirteen years of history for a UK gifting brand. The checking is the slow part and it is not optional.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you migrate from a custom-built platform?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes, and that is the harder case. Off-the-shelf platforms export predictably; in-house ones have logic nobody documented and fields nobody remembers. We work out what the old system actually does before moving anything, including the parts that only exist in someone's head.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Do we need Shopify Plus to migrate?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Not to migrate. Plus matters afterwards, if you need checkout customisation, B2B company accounts or higher API limits. We will tell you which of your requirements need it rather than putting you on Plus by default.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What about our current integrations?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "They get rebuilt, not carried over. Your ERP, CRM, fulfilment and courier connections were written against the old platform's API and none of them transfer. We inventory every one at the audit stage, because an integration discovered late is what turns a migration into an overrun.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can the store stay live during the migration?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes. The new store is built and tested on a password-protected Shopify instance while your current one keeps selling. The cutover is a planned switch with the redirects already prepared, not a period where nothing works.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after we launch on Shopify?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We watch it. Redirects get verified against live responses, sitemaps get submitted, and Search Console gets checked for weeks rather than days. Migrations rarely fail on launch day. They fail three weeks later, when nobody is looking at the coverage report.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "cta": {
+    "texts": [
+      {
+        "text": "Outgrown the platform you started on?",
+        "size": 75,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Tell us what the two systems are and we'll tell you what connecting them takes.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let’s Talk",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Navigation",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connect",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Services",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "LinkedIn",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Behance",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "© 2026 Base X All right reserved",
+        "size": 12,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Terms & Conditions",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Privacy policy",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Opera Знімок_2026-06-22_144736_ua.klottclothes.com 1",
+        "file": "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp"
+      },
+      {
+        "node": "Знімок екрана 2026-06-22 о 21.30.43 1",
+        "file": "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp"
+      },
+      {
+        "node": "image 5914",
+        "file": "/images/v2/shopify-development-cta-3-image-5914.webp"
+      }
+    ]
+  }
+}

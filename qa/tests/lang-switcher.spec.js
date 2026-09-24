@@ -15,14 +15,18 @@ for (const c of cases) {
       await page.setViewportSize({ width, height: 900 });
       await page.goto(c.path);
       await page.waitForLoadState('domcontentloaded');
-      const links = page.locator(`${sel} [data-lang]`);
+      // Design-v2 pages have one switcher behind the globe button at every width.
+      const v2 = await page.locator('body.v2').count();
+      const scope = v2 ? '.v2-lang .language-switcher' : sel;
+      const links = page.locator(`${scope} [data-lang]`);
       await expect(links.first()).toBeAttached();
-      if (width === 375) await page.click('#mobileLangToggle'); // open the dropdown so visibility is real, not just the attribute
+      if (v2) await page.click('[data-v2-lang]');
+      else if (width === 375) await page.click('#mobileLangToggle'); // open the dropdown so visibility is real, not just the attribute
       const state = await links.evaluateAll((as) => as.map((a) => ({ lang: a.dataset.lang, hidden: a.hidden || getComputedStyle(a).display === 'none', active: a.classList.contains('is-active'), href: a.getAttribute('href') })));
       expect(state.filter((s) => !s.hidden).map((s) => s.lang).sort()).toEqual([...c.visible].sort());
       expect(state.find((s) => s.active)?.lang).toBe(c.active);
       for (const [lang, href] of Object.entries(c.go)) expect(state.find((s) => s.lang === lang).href).toBe(href);
-      if (width === 375) expect(state[0].lang, 'mobile dropdown: current language first (it overlays the toggle)').toBe(c.active);
+      if (width === 375 && !v2) expect(state[0].lang, 'mobile dropdown: current language first (it overlays the toggle)').toBe(c.active);
     });
   }
 }

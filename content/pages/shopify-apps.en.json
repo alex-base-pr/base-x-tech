@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "Custom Shopify App Development & Automation | Base X Tech",
+    "description": "We build Shopify apps and automations: public App Store apps, private apps for one merchant, checkout extensions, and the integrations behind them."
+  },
+  "hero": {
+    "tag": "Shopify Apps",
+    "title": [
+      "Shopify apps built",
+      "for the workflow you",
+      "actually have"
+    ],
+    "lead": "Public apps, private apps and the automations that remove work nobody should be doing by hand. Two are live on the App Store.",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Our Capabilities",
+    "title": "From an idea to a listed",
+    "titleMuted": "Shopify app.",
+    "items": [
+      {
+        "title": "Public App Store Apps",
+        "description": "Two of the apps we can name publicly are live on the Shopify App Store.",
+        "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "title": "Private & Custom Apps",
+        "description": "Apps for one merchant, doing the thing no public app does properly.",
+        "image": "/images/v2/shopify-apps-capabilities-2-image-5950.webp"
+      },
+      {
+        "title": "Custom Automations",
+        "description": "Work that happens by itself: orders, stock, documents, notifications.",
+        "image": "/images/v2/shopify-apps-capabilities-3-image-5951.webp"
+      },
+      {
+        "title": "Functions & Extensions",
+        "description": "Checkout, discount and delivery logic using Shopify's own extension points.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "App UX & Interface",
+        "description": "App screens designed to match Polaris so merchants know how to use them.",
+        "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp"
+      },
+      {
+        "title": "App Store Launch",
+        "description": "Review submission, listing copy and the compliance work approval needs.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Logistics",
+        "title": "Nova Poshta Connect",
+        "text": "Carrier app for Ukrainian stores, live on the Shopify App Store.",
+        "tags": [
+          "Public App",
+          "Logistics"
+        ],
+        "link": "/blog/nova-poshta-shopify-integration-connect-app/",
+        "linkLabel": "Read how we built Nova Poshta Connect",
+        "image": "/images/v2/shopify-apps-projects-2-image-5939.webp"
+      },
+      {
+        "category": "Gifting",
+        "title": "UK gifting brand",
+        "text": "Gift configurator shipped as a private app with production logic.",
+        "tags": [
+          "Private App",
+          "Automation",
+          "Gifting"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Read the UK gifting brand case study",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "category": "Shopify App",
+        "title": "Mo: Story Slider Navigation",
+        "text": "Story-style navigation app built for a US agency partner, 5.0 rated.",
+        "tags": [
+          "Public App",
+          "Storefront UX"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-apps-projects-4-image-5955.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "Someone on your team is",
+    "titleMuted": "the integration.",
+    "items": [
+      {
+        "title": "A person copies data between systems"
+      },
+      {
+        "title": "No app does what your process needs"
+      },
+      {
+        "title": "You want to sell an app, not just use one"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Custom APIs",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Store Build",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+      },
+      {
+        "client": "Gunia",
+        "context": "Theme Development",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "How We Ship Apps",
+    "title": "From the workflow to a working app.",
+    "steps": [
+      {
+        "title": "Scope the Workflow",
+        "description": "We watch how the work happens now and decide what an app should do before we decide how it looks."
+      },
+      {
+        "title": "Build & Review",
+        "description": "We build against the Shopify APIs in reviewable stages, with your team using it as it takes shape."
+      },
+      {
+        "title": "Test on Real Data",
+        "description": "We run it against real orders and real edge cases, because apps fail on the data nobody expected."
+      },
+      {
+        "title": "Launch & Maintain",
+        "description": "We handle submission if it goes public, and keep it working through Shopify's API version changes."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "60+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "Can you build a public Shopify app for the App Store?",
+        "a": "Yes. Two we can name publicly are live there: Nova Poshta Connect, which is ours, and Mo: Story Slider Navigation, built for a partner agency. Most of what we build is private apps for one merchant, which never appear in the store by design."
+      },
+      {
+        "q": "What is the difference between a public and a private app?",
+        "a": "A public app is listed on the App Store and any merchant can install it. A private app exists for one store and does exactly what that business needs. If the workflow is specific to you, private is usually cheaper and faster than bending a public app to fit."
+      },
+      {
+        "q": "Can you automate something our team does by hand?",
+        "a": "That is most of what we build. For a UK gifting brand we shipped a configurator as a private app, plus a production engine that turns each order into print-ready files and routes them to the queue. Work that used to be manual now happens on order."
+      },
+      {
+        "q": "How long does a Shopify app take to build?",
+        "a": "A single-purpose private app is measured in weeks. Something with production logic, external systems or App Store review behind it runs longer. The gifting brand's three-system build took four to six months. We scope before quoting so you are not guessing."
+      },
+      {
+        "q": "Who owns the app and the code?",
+        "a": "You do, for anything we build for you. Private apps and custom code are yours, including the repository. A public app is a different question and worth settling in the contract before it is built rather than after it has users."
+      },
+      {
+        "q": "What happens when Shopify changes its API?",
+        "a": "Shopify deprecates API versions on a schedule, so an app left alone will eventually break. We keep the apps we build working through those changes. That is maintenance of our own code, and we would not claim to maintain an app we have never seen."
+      },
+      {
+        "q": "Can you build checkout or discount logic?",
+        "a": "Yes, using Shopify Functions and checkout extensions rather than workarounds. Checkout specifically needs Shopify Plus. Discount and delivery logic have more room on standard plans, and we will tell you which of your rules are possible before you commit."
+      },
+      {
+        "q": "Can you take over an app someone else built?",
+        "a": "Sometimes, and we audit it before saying yes. Taking on a codebase without knowing what is in it is how you inherit someone else's problem. If it is maintainable we will say so. If rebuilding costs less than untangling it, we will say that instead."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Have work that should",
+      "be an app?"
+    ],
+    "body": "Tell us what your team does by hand and we'll tell you what it takes to stop.",
+    "button": "Let's Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

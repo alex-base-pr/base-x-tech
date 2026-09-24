@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "Shopify Conversion Rate Optimization (CRO) | Base X Tech",
+    "description": "We audit your Shopify store, score every fix on impact and effort, then build the changes: product pages, checkout, mobile, speed and the tracking."
+  },
+  "hero": {
+    "tag": "CRO",
+    "title": [
+      "Conversion work for",
+      "stores where the fix",
+      "is in the build"
+    ],
+    "lead": "We audit, prioritise and then actually build the changes. Not a slide deck of recommendations you have to find someone to implement.",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Our Capabilities",
+    "title": "Findings you can act on, then",
+    "titleMuted": "acted on.",
+    "items": [
+      {
+        "title": "Audit & Backlog",
+        "description": "Problems grouped by area and scored on impact, effort and confidence.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "title": "Product Page CRO",
+        "description": "The page that decides most purchases, rebuilt around the questions buyers ask.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Cart & Checkout",
+        "description": "Fewer steps and fewer reasons to leave between cart and payment.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "Mobile CRO",
+        "description": "The layout most of your traffic sees, treated as the primary one.",
+        "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "title": "Speed & Core Web Vitals",
+        "description": "Images, scripts and unused apps cleaned up until the store loads properly.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "GA4 events, funnels and Clarity set up so you can see what the change did.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "items": [
+      {
+        "category": "Jewellery",
+        "title": "Innan Jewellery",
+        "text": "Enquiry flow built for pieces sold on request rather than in stock.",
+        "tags": [
+          "UX",
+          "UI Design",
+          "Jewellery"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Read the Innan Jewellery case study",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp"
+      },
+      {
+        "category": "Gifting",
+        "title": "UK gifting brand",
+        "text": "Configurator and checkout path for made-to-order products.",
+        "tags": [
+          "Configurator",
+          "Gifting"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Read the UK gifting brand case study",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "Product pages rebuilt around a catalogue that keeps growing.",
+        "tags": [
+          "UX",
+          "UI Design",
+          "Product Pages"
+        ],
+        "link": "https://primeeva.com/",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "When We Can Help",
+    "title": "Traffic arrives. Very little",
+    "titleMuted": "converts.",
+    "items": [
+      {
+        "title": "You get traffic but not orders"
+      },
+      {
+        "title": "Checkout loses more than it should"
+      },
+      {
+        "title": "Nobody can tell what a change achieved"
+      }
+    ]
+  },
+  "stories": {
+    "label": "Client Stories",
+    "title": "What it’s like<br> to work with us.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify Development",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Store Build",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+      },
+      {
+        "client": "Gunia",
+        "context": "Website Redesign",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "How We Run CRO",
+    "title": "From audit to shipped change to measured.",
+    "steps": [
+      {
+        "title": "Audit & Prioritise",
+        "description": "We go through the funnel and score every problem on impact, effort and confidence, so the order of work is not a guess."
+      },
+      {
+        "title": "Agree the Scope",
+        "description": "We pick the quick wins and the bigger bets with you, and set what success looks like before starting."
+      },
+      {
+        "title": "Build & Test",
+        "description": "We implement the changes, and A/B test them where you have the traffic to make the result mean something."
+      },
+      {
+        "title": "Measure & Repeat",
+        "description": "We report what each change did and update the backlog, because CRO is a cycle rather than a one-off project."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "50-200",
+        "label": "% conversion uplift range"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Questions<br> we get asked",
+    "items": [
+      {
+        "q": "What does a CRO audit include?",
+        "a": "We go through the whole funnel: homepage, listing and product pages, cart, checkout, mobile, speed, and whatever your analytics is or is not recording. Every problem comes back grouped by area and scored on impact, effort and confidence, so you get an ordered list rather than observations."
+      },
+      {
+        "q": "Do you implement the changes or just recommend them?",
+        "a": "We implement them. That is the difference between this and an audit you then have to find a developer for. The same team that finds the problem builds the fix, which is also why we can tell you honestly which fixes are cheap and which are not."
+      },
+      {
+        "q": "How do you decide what to fix first?",
+        "a": "Every hypothesis gets scored on impact, effort and confidence, then ordered. Quick wins go first because they fund the argument for the bigger work. You approve the scope before anything gets built, so the order of work is agreed rather than assumed."
+      },
+      {
+        "q": "Do we need enough traffic for A/B testing?",
+        "a": "For testing, yes. Below a certain volume a test cannot reach significance, and running one anyway just delays the fix. On lower-traffic stores we implement the changes we are confident about and measure the funnel rather than the variant."
+      },
+      {
+        "q": "How long before we see results?",
+        "a": "Quick wins show inside the first reporting cycle. Structural work on product pages or checkout takes longer to read, because you need enough sessions to separate the change from normal variation. We set what success looks like before starting."
+      },
+      {
+        "q": "Can you fix site speed as part of this?",
+        "a": "Yes, and it is usually on the list. Images, third-party scripts, unused apps and theme code all slow a store down, and speed affects mobile conversion most. It is development work, which is why it sits with us rather than a separate specialist."
+      },
+      {
+        "q": "What analytics do we need in place?",
+        "a": "Working GA4 ecommerce events at minimum, and a session recording tool if you want to see behaviour rather than infer it. If tracking is broken or missing we fix that first, because measuring an improvement against bad data tells you nothing."
+      },
+      {
+        "q": "Is this a one-off project or ongoing?",
+        "a": "Both work, and ongoing works better. A single round finds and fixes the obvious problems. After that CRO is a cycle: implement, measure, update the backlog, pick the next thing. Stores that treat it as a project stop improving the moment it ends."
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Getting traffic but",
+      "not the orders?"
+    ],
+    "body": "Tell us where buyers drop off and we'll tell you what we would change first.",
+    "button": "Let's Talk",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

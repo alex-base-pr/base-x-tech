@@ -1,0 +1,837 @@
+{
+  "hero": {
+    "texts": [
+      {
+        "text": "Services",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let`s talk",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Integrations",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify integrations for the systems your business runs on",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP, CRM, PIM, logistics, marketplaces. When your store has to agree with the systems behind it on every order, this is the work.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "[ Scroll to Explore ]",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "capabilities": {
+    "texts": [
+      {
+        "text": "One store, and everything  it has to agree with.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Our Capabilities",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 1",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 2",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 3",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP Integrations",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "CRM Integrations",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "PIM & Product Data",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Orders, stock and invoices moving between Shopify and your ERP without hands.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Customer and order data landing in your CRM the way your sales team needs it.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "One source for product data, pushed to Shopify instead of maintained twice.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 4",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 5",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "0 - 6",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom APIs",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Logistics & Fulfilment",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Marketplaces & Channels",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connections built for systems with no app and no standard integration.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Carriers, labels and tracking wired into the order flow rather than bolted on.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Listings, stock and orders kept in step across every channel you sell on.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5944",
+        "file": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "node": "image 5945",
+        "file": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp"
+      },
+      {
+        "node": "Rectangle 34624320",
+        "file": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "node": "image 5947",
+        "file": "/images/v2/shopify-integrations-capabilities-4-image-5947.webp"
+      },
+      {
+        "node": "image 5946",
+        "file": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "node": "image 56",
+        "file": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      }
+    ]
+  },
+  "projects": {
+    "rows": [
+      {
+        "name": "Prime EVA",
+        "category": "Automotive",
+        "badge": "10M+ possible configurations",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "name": "VT Advantec",
+        "category": "Lifestyle brand",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
+      },
+      {
+        "name": "UK gifting brand",
+        "category": "Gifting",
+        "badge": "",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recent Projects",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gifting",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "UK gifting brand",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gift configurator shipped as a private app with production logic.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Private App",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automation",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Automotive",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Prime EVA",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Product configurator built directly into the native store front end.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom shopify development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "custom configurator development",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "10M+ possible configurations",
+        "size": 12,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Lifestyle brand",
+        "size": 15.397210121154785,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 32,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "API integration built across a multi-year partnership.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "development and integration",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Custom APIs",
+        "size": 13,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Discuss Your Project",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "image 5953",
+        "file": "/images/v2/shopify-integrations-projects-1-image-5953.webp"
+      },
+      {
+        "node": "ChatGPT Image 9 лип. 2026 р., 16_02_01 1",
+        "file": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "node": "ChatGPT Image 16 вер. 2026 р., 07_57_51 1",
+        "file": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
+      }
+    ]
+  },
+  "help": {
+    "texts": [
+      {
+        "text": "Two systems, two versions of the same order.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "When We Can Help",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "/02",
+        "size": 24,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Someone re-types orders by hand",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Stock is wrong by the time it syncs",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Your ERP  has no Shopify app",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "New pages, features, and markets make consistency harder to maintain. We build scalable design systems that keep everything connected as the product grows.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stories": {
+    "texts": [
+      {
+        "text": "Client Stories",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What it’s like  to work with us.",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Stealth Startup",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "size": 26,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Lili Mager",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Gunia",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "VT Advantec",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Shopify Development",
+        "size": 14,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Become a Client",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Stealth Startup US",
+        "file": "/images/v2/shopify-development-stories-1-stealth-startup-us.webp"
+      }
+    ]
+  },
+  "process": {
+    "texts": [
+      {
+        "text": "From mapping the systems to watching them run.",
+        "size": 40,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How We Integrate",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Audit & Map",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Plan the Data Flow",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We list every system, what data each one owns and where things break today before proposing anything.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We decide direction, frequency and what wins when two systems disagree, which is where most integrations fail.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Launch & Monitor",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Build & Test",
+        "size": 24,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We watch it under real volume and keep alerting on it, because a silent integration failure costs more than a loud one.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We build it and run real orders through it, including the ones that go wrong, before it touches live data.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "stats": {
+    "texts": [
+      {
+        "text": "Numbers that matter",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "4.8*",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "60+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "100+",
+        "size": 40,
+        "weight": 700,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork Reviews",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Happy Clients",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Projects Delivered",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What happens after launch matters more.",
+        "size": 65,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "faq": {
+    "texts": [
+      {
+        "text": "faq",
+        "size": 15,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you connect Shopify to our ERP?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Questions  we get asked",
+        "size": 40,
+        "weight": 400,
+        "family": "Onest"
+      },
+      {
+        "text": "Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it exposes nothing usable we build the connector ourselves rather than telling you it cannot be done.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "What if our system has no Shopify app?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How do you stop stock going out of sync?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and frequency for every field, then run real orders through it, including the ones that fail, before it touches live data.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you automate order routing and fulfilment?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plus a fulfilment layer that generates shipping codes, syncs couriers in real time and schedules pickups twice a day.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Which ERPs and CRMs have you worked with?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integration at all, and for those we have built custom connectors for the specific use rather than moving the business onto a different tool.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "How long does an integration take?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build, covering configurator, production and fulfilment, took four to six months. We scope it before quoting.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Who maintains it after launch?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and alert on the connections we build, because a silent integration failure costs more than a loud one.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Can you integrate with our warehouse or 3PL?",
+        "size": 22,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store.",
+        "size": 16,
+        "weight": 400,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": []
+  },
+  "cta": {
+    "texts": [
+      {
+        "text": "Need Shopify  to talk to something else?",
+        "size": 75,
+        "weight": 400,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Tell us what the two systems are and we'll tell you what connecting them takes.",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Let’s Talk",
+        "size": 16,
+        "weight": 500,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Navigation",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Connect",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Services",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Upwork",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Portfolio",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "LinkedIn",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Insights",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Behance",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "About",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Contact",
+        "size": 16,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "© 2026 Base X All right reserved",
+        "size": 12,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Terms & Conditions",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      },
+      {
+        "text": "Privacy policy",
+        "size": 14,
+        "weight": 300,
+        "family": "TWK Everett"
+      }
+    ],
+    "images": [
+      {
+        "node": "Opera Знімок_2026-06-22_144736_ua.klottclothes.com 1",
+        "file": "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp"
+      },
+      {
+        "node": "Знімок екрана 2026-06-22 о 21.30.43 1",
+        "file": "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp"
+      },
+      {
+        "node": "image 5914",
+        "file": "/images/v2/shopify-development-cta-3-image-5914.webp"
+      }
+    ]
+  }
+}
