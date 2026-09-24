@@ -26,10 +26,10 @@ States: `todo` · `in progress` · `review` (on dev, waiting for Alex) · `done`
 | Repo bootstrap (live → main) | CON-003 | done | 2026-09-24 |
 | QA harness + baseline | REQ-030/031 | done | 198/198 chromium + webkit 75/75, 0 broken links |
 | Dev env switch (robots, analytics, form stub) | REQ-022…025 | done | `npm run build:dev` |
-| Cloudflare Pages → dev.base-xtech.com | REQ-020/021 | blocked: Alex (CF access) | guide in docs/CLOUDFLARE-PAGES.md |
+| Cloudflare Pages → dev.base-xtech.com | REQ-020/021 | done | project base-x-tech-dev, CNAME dev → base-x-tech-dev.pages.dev (wildcard *.base-xtech.com kept); GitHub app limited to this repo |
 | Canonical, clean nav links, services menu | REQ-003…009 | done | canonical at build (scripts/seo-plugin.js), menu = 6, sitemap trailing slash |
 | Absorbed pages: canonical / noindex | REQ-008 | done | |
 | GEO: robots, llms.txt, llms-full.txt, JSON-LD | REQ-040…046 | done (base) | FAQPage per page with copy |
-| GPTBot 403 at Cloudflare | REQ-041 | blocked: Alex | CF → AI Crawl Control → allow |
+| GPTBot at Cloudflare | REQ-041 | done — not blocked | the 403 seen earlier was CF rejecting a spoofed GPTBot UA; real GPTBot is allowed (AI Crawl Control, all toggles off) |
 | Accessibility: names/alt on icon controls, Sortlist badge | NFR-002 | done | contrast + dot size = design-owned, reported only |
 | Bug: preload of missing bg-mob.jpg on every page | — | done | removed |

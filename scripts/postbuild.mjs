@@ -69,6 +69,17 @@ const full = [`# Base X Tech — full site text\n\nSource: ${host}/ · generated
 fs.writeFileSync(path.join(dist, 'llms-full.txt'), full + '\n');
 
 if (env === 'dev') {
+  // Cloudflare Pages serves x.html at /x and redirects /x/ → /x; prod (Apache) uses /x/. Lay pages out as
+  // x/index.html so dev keeps the same trailing-slash URLs, canonicals and hreflang targets as prod.
+  const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) =>
+    e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []);
+  for (const file of walk(dist)) {
+    const base = path.basename(file);
+    if (base === 'index.html' || base === '404.html') continue;
+    const dir = file.slice(0, -'.html'.length);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.renameSync(file, path.join(dir, 'index.html'));
+  }
   fs.writeFileSync(path.join(dist, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
   // Cloudflare Pages headers; ignored by the Apache prod host.
   fs.writeFileSync(path.join(dist, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow\n');

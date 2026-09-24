@@ -1,6 +1,6 @@
 // T-001 status + console, T-003 SEO head, T-007 no horizontal scroll + screenshots.
 import { test, expect } from '@playwright/test';
-import { enPages, dePages, indexPages, expectedCanonical, rawHtml } from '../site-map.js';
+import { enPages, dePages, indexPages, expectedCanonical, rawHtml, isDevTarget } from '../site-map.js';
 
 const attr = (html, re) => (html.match(re) || [])[1];
 
@@ -39,7 +39,8 @@ for (const page of [...enPages, ...dePages]) {
       expect(canonical, 'static canonical').toBe(expectedCanonical(page));
 
       const robots = attr(html, /<meta\s+name="robots"\s+content="([^"]*)"/i) || '';
-      if (page.role === 'noindex') expect(robots).toContain('noindex');
+      if (isDevTarget) expect(robots, 'dev is noindex everywhere').toContain('noindex');
+      else if (page.role === 'noindex') expect(robots).toContain('noindex');
       else expect(robots, 'no noindex on indexable page').not.toContain('noindex');
     });
 

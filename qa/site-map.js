@@ -17,3 +17,5 @@ export async function rawHtml(request, path) {
   return { status: res.status(), html: await res.text() };
 }
 export const dePages = siteMap.pages.filter((p) => p.lang === 'de');
+// Dev/preview deploys are noindex + Disallow by design (REQ-022); SEO checks flip their expectation there.
+export const isDevTarget = /dev\.base-xtech\.com|pages\.dev/.test(process.env.QA_BASE_URL || '');

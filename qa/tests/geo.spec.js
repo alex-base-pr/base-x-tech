@@ -1,6 +1,6 @@
 // GEO: T-040 robots, T-041 content without JS, T-042 JSON-LD, T-043 llms.txt.
 import { test, expect } from '@playwright/test';
-import { host, indexPages, rawHtml } from '../site-map.js';
+import { host, indexPages, rawHtml, isDevTarget } from '../site-map.js';
 
 const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User',
   'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'CCBot', 'Amazonbot', 'meta-externalagent'];
@@ -23,6 +23,7 @@ function allowedRoot(robots, bot) {
 }
 
 test('T-040 robots.txt allows every AI crawler, ai-train=yes, both sitemaps', async ({ request }) => {
+  test.skip(isDevTarget, 'dev robots.txt is Disallow: / by design (REQ-022)');
   const robots = await (await request.get('/robots.txt')).text();
   for (const bot of AI_BOTS) expect(allowedRoot(robots, bot), `${bot} allowed`).toBe(true);
   expect(robots).toMatch(/Content-Signal:.*ai-train=yes/i);
