@@ -1,0 +1,85 @@
+Service Page Slot Map
+Copy specification for the approved service-page template. Every text slot in the frame, in reading order, with its semantic heading level and its character budget.
+
+All six service pages are written into this same structure: Web Design, Shopify Development, Shopify Integrations, Shopify Migration, Custom Shopify Apps, Conversion Rate Optimization.
+How the budgets were measured
+Read from the Service frame itself (PDF export, text layer), not estimated. Each figure is the longest line Ira actually used in that slot at that column width.
+
+Treat them as safe limits rather than hard maximums — a slot may take a little more than the longest line currently in it. Where copy needs more room than the budget allows, that is a question for Ira rather than something to squeeze.
+Heading semantics
+Separate from visual size, and the thing the current site gets backwards: today every service page carries nine identical non-topical H2s (ADVANTAGES, 40+, WORKFLOW) while the actual subject matter sits in H3s.
+
+Per page: one H1, five H2s, thirteen H3s.
+
+Things that look like headings but are not: project card descriptions (32pt), stat values (40pt), and the small-caps section labels. Those stay as paragraphs.
+The slots, in order
+Hero
+	•	hero.eyebrow — paragraph — 14pt — 1 line, max 19 characters. The page name.
+	•	hero.h1 — H1 — 60pt — 3 lines, max 23 characters per line. Carries the primary keyword.
+	•	hero.lead — paragraph — 18pt — 3 lines, max 56 characters per line.
+	•	hero.cta — button — 18pt — max 24 characters. Currently "Discuss Your Project".
+Capabilities
+	•	cap.label — paragraph — 16pt — max 20 characters. Currently "Our Capabilities".
+	•	cap.h2 — H2 — 40pt — 2 lines, max 31 characters per line.
+	•	cap.1.title … cap.6.title — H3 — 32pt — max 23 characters, one line.
+	•	cap.1.desc … cap.6.desc — paragraph — 16pt — 2 lines, max 48 characters per line (about 90 total).
+
+Six blocks, always six. The capability titles are the keyword-bearing sub-topics of the page.
+Recent projects
+	•	proj.label — paragraph — 16pt — max 20 characters. Currently "Recent Projects".
+	•	proj.1.client … proj.3.client — H3 — 24pt — max 32 characters.
+	•	proj.1.desc … proj.3.desc — paragraph — 32pt — 2 lines, max 41 characters per line.
+	•	proj.1.tags … proj.3.tags — paragraph — 16pt — max 43 characters. Service tags for that project.
+When we can help
+	•	help.label — paragraph — 16pt — max 20 characters. Currently "When We Can Help".
+	•	help.h2 — H2 — 40pt — 2 lines, max 31 characters per line.
+	•	help.1 … help.3 — paragraph — 32pt — 2 lines, max 21 characters per line.
+
+Three qualifying conditions. Short and blunt by design — the budget is tight.
+Testimonials
+	•	quote.1 … quote.3 — paragraph — 24pt — up to 5 lines, max 44 characters per line.
+	•	quote.1.author … quote.3.author — paragraph — 15.6pt — max 22 characters.
+	•	quote.1.tag … quote.3.tag — paragraph — 15.6pt — max 22 characters. Project type.
+
+Existing testimonials are reused across pages. The tag is a per-page field, so it should match the page it appears on.
+Process
+	•	process.label — paragraph — 16pt — max 20 characters.
+	•	process.h2 — H2 — 40pt — 2 lines, max 31 characters per line.
+	•	process.1.title … process.4.title — H3 — 32pt — max 21 characters.
+	•	process.1.desc … process.4.desc — paragraph — 16pt — 2 lines, max 76 characters per line.
+
+Four steps, numbered 01–04 in the design.
+
+Per-page, not fixed. The four steps currently in the frame — Discover & Understand, Define the Experience, Design & Prototype, Validate & Deliver — are the design process and belong on the Web Design page. Every other page fills the same four slots with its own process, since the goal of a migration is not the goal of a design engagement. The home page's six-step company process (Discover, Plan, Design & Build, Validate, Launch, Support) is the source those are adapted from, so the pages stay consistent with it.
+Stats
+	•	stats.h2 — H2 — 40pt — 2 lines, max 31 characters per line.
+	•	stats.value.1 … stats.value.3 — paragraph — 40pt — max 6 characters.
+	•	stats.label.1 … stats.label.3 — paragraph — 15.6pt — max 32 characters.
+
+Open question for Ira: the value slot is 6 characters at most, measured from the frame's own placeholders (XX+, XX, +XKX%). A range such as "50–200%" is 7 characters and will not fit as drawn. Either the range moves into the label line, or the value field needs widening. Worth resolving before the copy is written, because it changes how the figures are phrased.
+Closing CTA
+	•	cta.h2 — H2 — 40pt — 2 lines, max 31 characters per line.
+	•	cta.body — paragraph — 16pt — 2 lines, max 48 characters per line.
+	•	cta.button — button — 18pt — max 12 characters. Currently "Let's Talk".
+Footer
+Global, not per page. Nav (Services, Portfolio, Insights, About, Contact), year range, copyright, Terms & Conditions, Privacy Policy.
+SEO block — delivered with each page, sits outside the template
+	•	seo.title — max 60 characters.
+	•	seo.meta_description — max 155 characters.
+	•	seo.h1 — matches hero.h1 as one string.
+	•	seo.target_queries — the queries the page is built around, with impression data where we have it. Known latent demand, sixteen months, zero clicks against each: "shopify product configurator" 242 impressions, "headless shopify development company" 229, "shopify custom app development company" 151.
+Voice rules applied to every slot
+Second person throughout — you, your store, your team. Never third-person agency speak.
+
+Banned outright: seamless, end-to-end, robust, cutting-edge, leverage, empower, passionate, dedicated, solutions (as a noun standing in for a service). No idioms. The current site breaks these repeatedly — "Seamlessly Move Your Store to Shopify with Confidence", "let's get down to business", "Why Choose Base-X-Tech" — and the new copy will not.
+
+Lead with specificity. Anything that could sit on any agency's website gets cut.
+Three questions for Ira
+	•	Process section — confirmed as per-page copy rather than a fixed section? Four slots stay, contents change per service.
+	•	Stats value field — 6 characters is the measured limit. Can it take a range, or does the range go in the label?
+	•	Testimonial tags — confirmed as a per-page field?
+Still needed before two pages can be written
+	•	Shopify Migration project cards. UK gifting brand is confirmed: custom-built platform to Shopify, over 3 million users migrated. Two more needed.
+	•	Conversion Rate Optimization project cards. None identified yet.
+	•	Web Design third project card. BONKIND is dropped, so Innan Jewellery and Gunia need a third — KLOTT is the natural candidate.
+

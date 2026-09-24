@@ -1,15 +1,16 @@
+<% const sem = typeof semantic !== 'undefined' && semantic; %>
 <section
   id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
-  class="section section-split <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
+  class="section section-split <%= (typeof extra_class !== 'undefined' && extra_class) ? extra_class : '' %> <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
   <div class="container">
     <% if (typeof title !== 'undefined' && title) { %>
       <div class="inner column-1">
         <header class="section-header">
           <% if (typeof title !== 'undefined' && title) { %>
-            <h2 class="section-title alt up"><%= title %></h2>
+            <% if (sem) { %><p class="section-title alt up"><%= title %></p><% } else { %><h2 class="section-title alt up"><%= title %></h2><% } %>
           <% } %>
           <% if (typeof subtitle !== 'undefined' && subtitle) { %>
-            <h3 class="section-subtitle up"><%- subtitle %></h3>
+            <% if (sem) { %><h2 class="section-subtitle up"><%- subtitle %></h2><% } else { %><h3 class="section-subtitle up"><%- subtitle %></h3><% } %>
           <% } %>
           <% if (typeof button !== 'undefined' && button) { %>
             <a class="btn btn--dark" data-form-trigger=""><span><%- button.text %></span><i arrow-right=""><span></span></i></a>
@@ -23,7 +24,7 @@
                   <header class="faq-header">
                     <div class="header-inner">
                       <div>
-                        <span class="stage">Stage <%= index + 1 %></span>
+                        <% if (typeof numbered === 'undefined' || numbered) { %><span class="stage">Stage <%= index + 1 %></span><% } %>
                         <h3 class="title up"<% if (typeof schema !== 'undefined' && schema) { %> data-faq-q<% } %>><%- item.title %></h3>
                       </div>
                     </div>

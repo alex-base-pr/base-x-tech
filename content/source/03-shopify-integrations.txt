@@ -1,0 +1,266 @@
+Shopify Integrations — final copy
+Page 3 of 8. URL: /pages/shopify-integrations
+
+Absorbs /pages/service/custom-shopify-integrations/ — your best-performing service page at 3 clicks and 197 impressions, the only one in the GSC top ten. ERP, CRM and API become sections here rather than the separate pages WellDigital proposed.
+
+62 slots + 8 FAQ pairs. Zero over-length lines. One H1, five H2s, thirteen H3s in the slots, plus one H2 and eight H3s in the FAQ. Body copy 801 words against the 900-word page it replaces.
+
+Line breaks below are the breaks in the design. Budgets are per line. Every character count here was computed, not typed.
+SEO
+Title — 58 / 60
+
+Custom Shopify Integrations: ERP, CRM & APIs | Base X Tech
+
+Meta description — 145 / 155
+
+We connect Shopify to the systems your business already runs on: ERP, CRM, PIM, logistics and marketplaces, built and monitored by the same team.
+
+H1 — 57
+
+Shopify integrations for the systems your business runs on
+
+Target queries: shopify erp integration · shopify crm integration · custom shopify integrations · shopify api integration · shopify pim · shopify fulfilment integration
+Hero
+hero.eyebrow — paragraph — 12/19
+
+Integrations
+
+Shortened from "Shopify Integrations" (20), one over the measured limit.
+
+hero.h1 — H1 — 20 / 20 / 16 (budget 23)
+
+Shopify integrations for the systems your business runs on
+
+hero.lead — paragraph — 55 / 55 / 17 (budget 56)
+
+ERP, CRM, PIM, logistics, marketplaces. When your store has to agree with the systems behind it on every order, this is the work.
+
+hero.cta — button — 20/24
+
+Discuss Your Project
+Capabilities
+cap.label — paragraph — 16/20
+
+Our Capabilities
+
+cap.h2 — H2 — 25 / 21 (budget 31)
+
+One store, and everything it has to agree with.
+
+cap.1.title — H3 — 16/23 → ERP Integrations
+
+cap.1.desc — paragraph — 41 / 35 (budget 48)
+
+Orders, stock and invoices moving between Shopify and your ERP without hands.
+
+cap.2.title — H3 — 16/23 → CRM Integrations
+
+cap.2.desc — paragraph — 39 / 37
+
+Customer and order data landing in your CRM the way your sales team needs it.
+
+cap.3.title — H3 — 18/23 → PIM & Product Data
+
+cap.3.desc — paragraph — 38 / 36
+
+One source for product data, pushed to Shopify instead of maintained twice.
+
+cap.4.title — H3 — 11/23 → Custom APIs
+
+cap.4.desc — paragraph — 37 / 32
+
+Connections built for systems with no app and no standard integration.
+
+cap.5.title — H3 — 22/23 → Logistics & Fulfilment
+
+cap.5.desc — paragraph — 40 / 37
+
+Carriers, labels and tracking wired into the order flow rather than bolted on.
+
+cap.6.title — H3 — 23/23 → Marketplaces & Channels
+
+cap.6.desc — paragraph — 39 / 33
+
+Listings, stock and orders kept in step across every channel you sell on.
+
+Slot 6 is exactly at the 23-character limit. Worth Iryna's glance.
+Recent projects
+proj.label — paragraph — 15/20
+
+Recent Projects
+
+proj.1.client — H3 — 16/32
+
+UK gifting brand
+
+proj.1.desc — paragraph — 36 / 34 (budget 41)
+
+Configurator, production and courier systems connected on Shopify Plus.
+
+proj.1.tags — paragraph — 35/43
+
+Integrations / Automation / Gifting
+
+Leads the section. Three systems connected — a configurator shipped as a private app, a production engine turning orders into print-ready files and routing them to the production queue, and a fulfilment layer generating shipping codes and scheduling courier pickups twice a day. Client stays anonymous, as in the published case study.
+
+proj.2.client — H3 — 9/32
+
+Prime EVA
+
+proj.2.desc — paragraph — 26 / 28
+
+ERP integration with order automation behind the store.
+
+proj.2.tags — paragraph — 16/43
+
+ERP / Automation
+
+proj.3.client — H3 — 11/32
+
+VT Advantec
+
+proj.3.desc — paragraph — 30 / 23
+
+API integration built across a multi-year partnership.
+
+proj.3.tags — paragraph — 26/43
+
+Custom APIs / Integrations
+
+When we can help
+help.label — paragraph — 16/20
+
+When We Can Help
+
+help.h2 — H2 — 25 / 18 (budget 31)
+
+Two systems, two versions of the same order.
+
+help.1 — paragraph — 16 / 14 (budget 21)
+
+Someone re-types orders by hand
+
+help.2 — paragraph — 17 / 17
+
+Stock is wrong by the time it syncs
+
+help.3 — paragraph — 15 / 11
+
+Your ERP has no Shopify app
+Testimonials
+The three standard quotes. VT leads with variant B, which opens on the work rather than the relationship — "platform integration" is the half of their quote that belongs on this page.
+
+quote.1 — paragraph — 38 / 41 / 37 / 37 / 32 (budget 44)
+
+They deliver top-tier expertise across web development and platform integration, always providing strategic, practical advice, and expertly navigating tight timelines to ensure our success.
+
+quote.1.author — 11/22 → VT Advantec quote.1.tag — 20/22 → Platform Integration
+
+quote.2 — paragraph — 34 / 39 / 39
+
+We received positive feedback from customers about the new site, which was fully functional and met all our needs.
+
+quote.2.author — 10/22 → Lili Mager quote.2.tag — 11/22 → Store Build
+
+quote.3 — paragraph — 31 / 43 / 38 / 25
+
+Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.
+
+quote.3.author — 5/22 → Gunia quote.3.tag — 9/22 → Migration
+Process
+process.label — paragraph — 16/20
+
+How We Integrate
+
+process.h2 — H2 — 24 / 21 (budget 31)
+
+From mapping the systems to watching them run.
+
+process.1.title — H3 — 11/21 → Audit & Map
+
+process.1.desc — paragraph — 68 / 32 (budget 76)
+
+We list every system, what data each one owns and where things break today before proposing anything.
+
+process.2.title — H3 — 18/21 → Plan the Data Flow
+
+process.2.desc — paragraph — 71 / 38
+
+We decide direction, frequency and what wins when two systems disagree, which is where most integrations fail.
+
+process.3.title — H3 — 12/21 → Build & Test
+
+process.3.desc — paragraph — 70 / 35
+
+We build it and run real orders through it, including the ones that go wrong, before it touches live data.
+
+process.4.title — H3 — 16/21 → Launch & Monitor
+
+process.4.desc — paragraph — 71 / 47
+
+We watch it under real volume and keep alerting on it, because a silent integration failure costs more than a loud one.
+
+Step 2 is the one that sells. Conflict resolution between two systems is where integrations actually fail, and naming it signals you have done this before. It also carries the point that came out of the FAQ when the "two systems disagree" question was cut.
+
+These four steps are inferred, not documented — same caveat as page 02. If a written delivery flow exists, it should replace them.
+Stats
+stats.h2 — H2 — 20 / 18 (budget 31)
+
+Systems that stay in step after launch.
+
+Value
+Label
+Counts
+100+
+Projects delivered
+4/6 · 18/32
+60+
+Happy clients
+3/6 · 13/32
+4.8
+Upwork rating
+3/6 · 13/32
+
+The 1M+ customer profiles figure belongs on the Migration page, where migration is the service being sold. Keeping it off this page avoids the same number appearing three times.
+FAQ
+faq.h2 → Questions we get asked
+
+Eight rows. Answers must render in the HTML whether a row is open or closed — if the accordion fetches them on click they are invisible to crawlers and to AI answer engines. Confirm with Dima at build time.
+Can you connect Shopify to our ERP?
+Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it exposes nothing usable we build the connector ourselves rather than telling you it cannot be done.
+What if our system has no Shopify app?
+That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them.
+How do you stop stock going out of sync?
+By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and frequency for every field, then run real orders through it, including the ones that fail, before it touches live data.
+Can you automate order routing and fulfilment?
+Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plus a fulfilment layer that generates shipping codes, syncs couriers in real time and schedules pickups twice a day.
+Which ERPs and CRMs have you worked with?
+ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integration at all, and for those we have built custom connectors for the specific use rather than moving the business onto a different tool.
+How long does an integration take?
+It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build, covering configurator, production and fulfilment, took four to six months. We scope it before quoting.
+Who maintains it after launch?
+We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and alert on the connections we build, because a silent integration failure costs more than a loud one.
+Can you integrate with our warehouse or 3PL?
+Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store.
+Closing CTA
+cta.h2 — H2 — 23 / 15 (budget 31)
+
+Need Shopify to talk to something else?
+
+cta.body — paragraph — 42 / 36 (budget 48)
+
+Tell us what the two systems are and we'll tell you what connecting them takes.
+
+cta.button — button — 10/12
+
+Let's Talk
+Schema
+Service and BreadcrumbList for the page, FAQPage generated from the eight pairs above, Organization site-wide.
+Voice check
+Second person throughout, no third-person agency speak, none of the banned words. Tags follow the controlled vocabulary: two or three, Service / Service / Sector, services drawn only from page names and capability slots, sector last, never facts.
+Open
+	•	"Which ERPs and CRMs have you worked with?" names nothing. It is the weakest answer on the page and the one that matters most — someone searching "shopify netsuite integration" needs to see their system. Two or three systems you have actually connected would make it the strongest answer here.
+	•	Prime EVA's sector — still needed for the third tag. Every other card has one.
+	•	A documented integration process, per the note in the Process section.
+	•	cap.6.title is exactly at the 23-character limit.
+

@@ -1,0 +1,9 @@
+{
+  "path": "/pages/service/custom-shopify-integrations/",
+  "source": "content/source/03-shopify-integrations.txt",
+  "title": "Custom Shopify Integrations: ERP, CRM & APIs | Base X Tech",
+  "description": "We connect Shopify to the systems your business already runs on: ERP, CRM, PIM, logistics and marketplaces, built and monitored by the same team.",
+  "h1": "Shopify integrations for the systems your business runs on",
+  "h3": ["ERP Integrations", "CRM Integrations", "PIM & Product Data", "Custom APIs", "Logistics & Fulfilment", "Marketplaces & Channels"],
+  "faq_count": 8
+}

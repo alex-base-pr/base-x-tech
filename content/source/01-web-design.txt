@@ -1,0 +1,284 @@
+Web Design — final copy
+Page 1 of 8. URL: /pages/web-design
+
+Written to the measured budgets in the Service Page Slot Map. Every line was checked before this document was created: 62 slots, zero over-length lines. Heading structure lands on exactly one H1, five H2s, thirteen H3s.
+
+Line breaks below are the breaks in the design. Keep them — budgets are per line, not per slot. The number after each slot is the actual character count.
+SEO
+Title — 49 / 60
+
+Shopify Web Design & UX/UI Services | Base X Tech
+
+Meta description — 154 / 155
+
+We design Shopify storefronts for products people compare and configure: UX/UI, design systems, prototypes and creative direction, built by the same team.
+
+H1 — 57
+
+Shopify design for products that take more than one click
+
+Target queries: shopify web design · ux ui design shopify · shopify store design · ecommerce web design agency · shopify redesign
+
+No impression data exists for design queries on the current site. The three queries we know carry latent demand — configurator 242, headless 229, custom app 151 — all belong to other pages.
+Hero
+hero.eyebrow — paragraph — 10/19
+
+Web Design
+
+hero.h1 — H1 — 18 / 18 / 19 (budget 23)
+
+Shopify design for products that take more than one click
+
+hero.lead — paragraph — 47 / 50 / 39 (budget 56)
+
+You sell products people compare, configure and come back to. We design the storefront that carries that decision, then build it ourselves.
+
+hero.cta — button — 20/24
+
+Discuss Your Project
+Capabilities
+Six blocks. The titles are the keyword-bearing sub-topics of the page. 
+
+cap.label — paragraph — 16/20
+
+Our Capabilities
+
+cap.h2 — H2 — 21 / 17 (budget 31)
+
+Every surface a buyer actually touches.
+
+cap.1.title — H3 — 12/23
+
+UX/UI Design
+
+cap.1.desc — paragraph — 39 / 35 (budget 48)
+
+Interfaces built around how your buyers actually behave, not how we assume.
+
+cap.2.title — H3 — 14/23
+
+Design Systems
+
+cap.2.desc — paragraph — 40 / 33
+
+Components and rules your team can reuse without the store drifting apart.
+
+cap.3.title — H3 — 11/23
+
+Prototyping
+
+cap.3.desc — paragraph — 39 / 36
+
+Clickable prototypes and MVPs that test decisions before development starts.
+
+cap.4.title — H3 — 18/23
+
+Creative Direction
+
+cap.4.desc — paragraph — 40 / 38
+
+Brand and art direction for stores where the product is the reason people came.
+
+cap.5.title — H3 — 16/23
+
+Website Redesign
+
+cap.5.desc — paragraph — 37 / 26
+
+Rebuilding a store that grew past the structure it started with.
+
+cap.6.title — H3 — 18/23
+
+Build-Ready Design
+
+cap.6.desc — paragraph — 40 / 38
+
+Files handed to the developers who built the last one, nothing lost in between.
+Recent projects
+
+proj.label — paragraph — 15/20
+
+Recent Projects
+
+proj.1.client — H3 — 15/32
+
+Innan Jewellery
+
+proj.1.desc — paragraph — 34 / 35 (budget 41)
+
+Brand-led Shopify storefront for a jewellery label built around craft.
+
+proj.1.tags — paragraph — 40/43
+
+Creative Direction / Shopify / Jewellery
+
+proj.2.client — H3 — 5/32
+
+Gunia
+
+proj.2.desc — paragraph — 34 / 25
+
+Full redesign and replatform for a Ukrainian homeware brand.
+
+proj.2.tags — paragraph — 33/43
+
+Website Redesign / Design Systems
+
+proj.3.client — H3 — 9/32
+
+Prime EVA
+
+proj.3.desc — paragraph — 32 / 29 (budget 41)
+
+Storefront and product page design for a catalogue that keeps growing.
+
+proj.3.tags — paragraph — 38/43
+
+UX/UI Design / Shopify / Product Pages
+When we can help
+Three qualifying conditions. The third one sets up Build-Ready Design. Tightest slot on the page at 21 characters per line.
+
+help.label — paragraph — 16/20
+
+When We Can Help
+
+help.h2 — H2 — 19 / 23 (budget 31)
+
+Your product works. The experience doesn't.
+
+help.1 — paragraph — 17 / 18 (budget 21)
+
+Buyers can't tell your options apart
+
+help.2 — paragraph — 20 / 17
+
+Your store grew past its own structure
+
+help.3 — paragraph — 21 / 14
+
+Design keeps breaking in development
+Testimonials
+Existing quotes, reused verbatim. Only the tag is new per page.
+
+quote.1 — Gunia — 4 lines (budget 44)(budget 44)
+
+Great attention to detail and a
+professional approach. I can recommend them
+both for store migration and for theme
+customization on Shopify.
+
+quote.1.author — 18/22 → Gunia quote.1.tag — 10/22 → Theme Customization
+
+quote.2 — paragraph — 44 / 40 / 30 (budget 44 — line 1 is at the limit)
+
+We received positive feedback from customers about the new site, which met all of our expectations and unique needs.
+
+quote.2.author — 10/22 → Lili Mager quote.2.tag — 16/22 → Website Redesign
+
+quote.3 — paragraph — 38 / 40 / 6
+
+Their team delivered a bug-free Shopify store that resulted in higher conversion rates.
+
+quote.3.author — 18/22 → Stealth Startup US quote.3.tag — 12/22 → UX/UI Design
+Process
+Ira's four steps kept exactly as designed — this is the design page, so they are correct here. The other five pages fill the same four slots with their own process.
+
+process.label — paragraph — 18/20
+
+Our Design Process
+
+process.h2 — H2 — 22 / 30 (budget 31)
+
+From understanding the problem to a design that is ready to build.
+
+process.1.title — H3 — 21/21
+
+Discover & Research
+
+process.1.desc — paragraph — 69 / 40 (budget 76)
+
+We go through your business, your buyers and who you compete with, then
+agree the design goals and the direction before anything is drawn.
+
+process.2.title — H3 — 21/21
+
+Wireframes & Planning
+
+process.2.desc — paragraph — 67 / 49
+
+We set out the site structure and wireframe every major page, so you can
+see the journey before any visual design starts.
+
+process.3.title — H3 — 18/21
+
+Design & Prototyping 
+
+process.3.desc — paragraph — 70 / 47
+
+We turn that into finished mockups and clickable prototypes, with your
+feedback at each stage rather than only at the end.
+
+process.4.title — H3 — 18/21
+
+Handoff & Support
+
+process.4.desc — paragraph — 65 / 43
+
+Once approved, you get the assets and the style guide, and we stay on it
+through implementation because we are the ones building it.
+Stats (замість % в плані приросту, тощо)
+All three figures are the ones already approved on the home page — real, countable, and inside the 6-character value field. No conversion percentage on this page; that claim belongs on the CRO page.
+
+stats.h2 — H2 — 23 / 17 (budget 31)
+
+Design decisions backed by real outcomes.
+
+Value
+Label
+100+
+Projects delivered
+60+
+Happy clients
+4.8
+Upwork rating
+
+Web Design — FAQ
+faq.h2 → Questions we get asked
+Do you design and build, or design only?
+Both, and the same team does both. Your design goes to the developers who built the last one, so nothing is lost between the file and the store. We do take design-only work, and even then the design is made to be built: real components, real states, and no decisions that fall apart in code.
+Can you work with our existing Shopify theme?
+Yes. Most of our design work starts from a theme that already exists rather than a blank file. We audit what the theme can carry, design inside those limits where that is sensible, and tell you which changes need theme development rather than a design adjustment.
+What do we get at the end?
+Figma files with the components and states, a design system you can reuse, clickable prototypes for the flows that matter, and specifications the developers build from. If we are building it, you also get the store. If someone else is, the handoff is written for them rather than for us.
+Do you design for products people configure or compare?
+That is most of what we do. Configurators, variant-heavy catalogues, B2B ordering and multi-step selection all need design decisions that a single product page template cannot carry. We build these too, so the design accounts for what is actually possible on Shopify.
+
+Link "configurators" to /pages/shopify-development.
+Do you build design systems or just pages?
+Both, and the system is usually the cheaper choice. A set of components and rules your team can reuse costs more up front than a handful of pages and stops the store drifting apart every time someone adds a section. For a growing catalogue it pays back quickly.
+Can you design for German or other EU markets?
+Yes. We run a multi-language site ourselves and build multi-market Shopify setups, so the design accounts for what changes between languages: German text runs longer than English and breaks layouts that were only ever tested in one language. Copy in German is written by a native speaker, not translated by us.
+
+The strongest question on the page for your target market. It is also the only one that names a limitation, which is what makes the rest credible.
+How long does a Shopify store design take?
+A storefront design is usually a 3 to 8 week engagement, depending on how many page types you need and how many review rounds you want. We scope it before starting so the timeline is agreed rather than discovered.
+What does Shopify store design cost?
+It depends on the number of page types and whether we are building it as well as designing it. We scope every project before quoting, and we will tell you if what you need is smaller than the work we take on.
+
+Closing CTA
+cta.h2 — H2 — 25 / 20 (budget 31)
+
+Have a product that needs a better experience?
+
+cta.body — paragraph — 41 / 36 (budget 48)
+
+Tell us what your buyers get stuck on and we'll tell you what we would change.
+
+cta.button — button — 10/12
+
+Let's Talk
+Voice check
+Twelve second-person mentions. Zero third-person agency speak. None of the banned words: seamless, end-to-end, robust, cutting-edge, leverage, empower, passionate, dedicated, solutions.
+
+For comparison, the page this replaces opens with "Seamlessly Move Your Store to Shopify with Confidence" and closes with "let's get down to business".
+

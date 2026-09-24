@@ -1,0 +1,268 @@
+Conversion Rate Optimization — final copy
+Page 6 of 8. URL: /pages/conversion-rate-optimization
+
+Supersedes the earlier doc 06. Changed: project cards filled, quotes set to the three standard ones, FAQ written, schema added.
+
+Absorbs /pages/service/conversion-rate-optimization/ — a clean one-to-one move, since the slug words are unchanged. All six capability slots trace to a numbered section of your internal CRO service document.
+
+62 slots + 8 FAQ pairs. Zero over-length lines. Body copy 796 words against 873. Every count computed, not typed.
+SEO
+Title — 56 / 60
+
+Shopify Conversion Rate Optimization (CRO) | Base X Tech
+
+Meta description — 147 / 155
+
+We audit your Shopify store, score every fix on impact and effort, then build the changes: product pages, checkout, mobile, speed and the tracking.
+
+H1 — 55
+
+Conversion work for stores where the fix is in the build
+
+Target queries: shopify cro · shopify conversion rate optimization · shopify checkout optimization · shopify speed optimization · shopify cro audit · shopify product page optimization
+Hero
+hero.eyebrow — paragraph — 3/19
+
+CRO
+
+hero.h1 — H1 — 19 / 20 / 15 (budget 23)
+
+Conversion work for stores where the fix is in the build
+
+This H1 does the qualifying. "The fix is in the build" says the work is development, which filters out the twenty-hour tweak enquiries your 2026 discipline excludes — without a list of exclusions.
+
+hero.lead — paragraph — 48 / 48 / 34 (budget 56)
+
+We audit, prioritise and then actually build the changes. Not a slide deck of recommendations you have to find someone to implement.
+
+Straight from your own document's framing: a scored backlog rather than a chaotic set of recommendations. It is also the LTV argument stated as a buyer benefit.
+
+hero.cta — button — 20/24
+
+Discuss Your Project
+Capabilities
+cap.label — paragraph — 16/20
+
+Our Capabilities
+
+cap.h2 — H2 — 20 / 18 (budget 31)
+
+Findings you can act on, then acted on.
+
+cap.1.title — H3 — 15/23 → Audit & Backlog
+
+cap.1.desc — paragraph — 38 / 30 (budget 48)
+
+Problems grouped by area and scored on impact, effort and confidence.
+
+Section 1 of your doc. This is the differentiator and it belongs first.
+
+cap.2.title — H3 — 16/23 → Product Page CRO
+
+cap.2.desc — paragraph — 37 / 40
+
+The page that decides most purchases, rebuilt around the questions buyers ask.
+
+Sections 3 and 9 — your doc says PDP has the biggest conversion impact, and content and trust work lands here.
+
+cap.3.title — H3 — 15/23 → Cart & Checkout
+
+cap.3.desc — paragraph — 38 / 25
+
+Fewer steps and fewer reasons to leave between cart and payment.
+
+cap.4.title — H3 — 10/23 → Mobile CRO
+
+cap.4.desc — paragraph — 37 / 27
+
+The layout most of your traffic sees, treated as the primary one.
+
+cap.5.title — H3 — 18/23 → Speed & Core Web Vitals
+
+cap.5.desc — paragraph — 39 / 34
+
+Images, scripts and unused apps cleaned up until the store loads properly.
+
+cap.6.title — H3 — 21/23 → Analytics & Reporting
+
+cap.6.desc — paragraph — 38 / 35
+
+GA4 events, funnels and Clarity set up so you can see what the change did.
+
+Sections 7, 8 and 10 merged. A/B testing sits in this description rather than taking a slot, since your doc only offers it to stores with enough traffic.
+Recent projects
+These are not CRO engagements and the copy does not claim they are. No CRO case has been named, so each card describes conversion-relevant work that actually happened — an enquiry flow, a configurator, a product page rebuild — and the word CRO appears in none of them. The page's context does the rest. If you later have a real CRO engagement to name, these swap out.
+
+proj.label — paragraph — 15/20
+
+Recent Projects
+
+proj.1.client — H3 — 15/32
+
+Innan Jewellery
+
+proj.1.desc — paragraph — 34 / 32 (budget 41)
+
+Enquiry flow built for pieces sold on request rather than in stock.
+
+proj.1.tags — paragraph — 24/43
+
+UX/UI Design / Jewellery
+
+A separate enquiry journey for price-on-enquiry pieces is conversion-path design in everything but name — it exists because the standard product page could not carry that sale.
+
+proj.2.client — H3 — 16/32
+
+UK gifting brand
+
+proj.2.desc — paragraph — 30 / 27
+
+Configurator and checkout path for made-to-order products.
+
+proj.2.tags — paragraph — 22/43
+
+Configurator / Gifting
+
+proj.3.client — H3 — 9/32
+
+Prime EVA
+
+proj.3.desc — paragraph — 30 / 29
+
+Product pages rebuilt around a catalogue that keeps growing.
+
+proj.3.tags — paragraph — 28/43
+
+UX/UI Design / Product Pages
+When we can help
+help.label — paragraph — 16/20
+
+When We Can Help
+
+help.h2 — H2 — 16 / 21 (budget 31)
+
+Traffic arrives. Very little converts.
+
+help.1 — paragraph — 19 / 10 (budget 21)
+
+You get traffic but not orders
+
+help.2 — paragraph — 19 / 14
+
+Checkout loses more than it should
+
+help.3 — paragraph — 20 / 17
+
+Nobody can tell what a change achieved
+Testimonials
+quote.1 — 37 / 40 / 43 / 41 / 25 (budget 44) — VT Advantec — tag: Shopify Development (19/22)
+
+Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.
+
+quote.2 — 34 / 39 / 39 — Lili Mager — tag: Store Build (11/22)
+
+We received positive feedback from customers about the new site, which was fully functional and met all our needs.
+
+quote.3 — 31 / 43 / 38 / 25 — Gunia — tag: Website Redesign (16/22)
+
+Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.
+
+
+Process
+process.label — paragraph — 14/20
+
+How We Run CRO
+
+process.h2 — H2 — 21 / 19 (budget 31)
+
+From audit to shipped change to measured.
+
+process.1.title — H3 — 18/21 → Audit & Prioritise
+
+process.1.desc — paragraph — 70 / 48 (budget 76)
+
+We go through the funnel and score every problem on impact, effort and confidence, so the order of work is not a guess.
+
+process.2.title — H3 — 15/21 → Agree the Scope
+
+process.2.desc — paragraph — 65 / 35
+
+We pick the quick wins and the bigger bets with you, and set what success looks like before starting.
+
+process.3.title — H3 — 12/21 → Build & Test
+
+process.3.desc — paragraph — 70 / 34
+
+We implement the changes, and A/B test them where you have the traffic to make the result mean something.
+
+process.4.title — H3 — 16/21 → Measure & Repeat
+
+process.4.desc — paragraph — 71 / 36
+
+We report what each change did and update the backlog, because CRO is a cycle rather than a one-off project.
+
+Step 4 carries the retainer logic. "A cycle rather than a one-off project" is your doc's own closing line, and it is what makes this an LTV page rather than a project page. Unlike pages 02 to 05, this process is not inferred — all four steps come from your CRO document.
+Stats
+stats.h2 — H2 — 20 / 14 (budget 31)
+
+Changes we can point to afterwards.
+
+Value
+Label
+Counts
+50-200
+% conversion uplift range
+6/6 · 25/32
+100+
+Projects delivered
+4/6 · 18/32
+4.8
+Upwork rating
+3/6 · 13/32
+
+This is how the range fits. The value field measures 6 characters and "50–200%" is 7, so the number goes in the value and the percent sign moves to the label. 50-200 is exactly 6 — no widening needed from Iryna. Use a hyphen, not an en dash, so the width is predictable.
+
+Two notes and then I will leave it: this is the only figure on the site that is not independently checkable, so the working should exist somewhere if anyone asks. And it is the only place the whole site makes an outcome claim rather than a countable one, which is precisely why it will be the thing a sceptical DACH buyer tests you on.
+FAQ
+faq.h2 → Questions we get asked
+
+Answers must render in the HTML whether a row is open or closed. Confirm with Dima.
+What does a CRO audit include?
+We go through the whole funnel: homepage, listing and product pages, cart, checkout, mobile, speed, and whatever your analytics is or is not recording. Every problem comes back grouped by area and scored on impact, effort and confidence, so you get an ordered list rather than observations.
+Do you implement the changes or just recommend them?
+We implement them. That is the difference between this and an audit you then have to find a developer for. The same team that finds the problem builds the fix, which is also why we can tell you honestly which fixes are cheap and which are not.
+How do you decide what to fix first?
+Every hypothesis gets scored on impact, effort and confidence, then ordered. Quick wins go first because they fund the argument for the bigger work. You approve the scope before anything gets built, so the order of work is agreed rather than assumed.
+Do we need enough traffic for A/B testing?
+For testing, yes. Below a certain volume a test cannot reach significance, and running one anyway just delays the fix. On lower-traffic stores we implement the changes we are confident about and measure the funnel rather than the variant.
+How long before we see results?
+Quick wins show inside the first reporting cycle. Structural work on product pages or checkout takes longer to read, because you need enough sessions to separate the change from normal variation. We set what success looks like before starting.
+Can you fix site speed as part of this?
+Yes, and it is usually on the list. Images, third-party scripts, unused apps and theme code all slow a store down, and speed affects mobile conversion most. It is development work, which is why it sits with us rather than a separate specialist.
+What analytics do we need in place?
+Working GA4 ecommerce events at minimum, and a session recording tool if you want to see behaviour rather than infer it. If tracking is broken or missing we fix that first, because measuring an improvement against bad data tells you nothing.
+Is this a one-off project or ongoing?
+Both work, and ongoing works better. A single round finds and fixes the obvious problems. After that CRO is a cycle: implement, measure, update the backlog, pick the next thing. Stores that treat it as a project stop improving the moment it ends.
+
+The last answer is the commercial one. It makes the retainer case in the buyer's own terms rather than as a pricing model, which is the LTV argument you made when you split this page out.
+Closing CTA
+cta.h2 — H2 — 19 / 15 (budget 31)
+
+Getting traffic but not the orders?
+
+cta.body — paragraph — 39 / 36 (budget 48)
+
+Tell us where buyers drop off and we'll tell you what we would change first.
+
+cta.button — button — 10/12
+
+Let's Talk
+Schema
+Service, BreadcrumbList, FAQPage from the eight pairs, Organization site-wide.
+Voice check
+Second person throughout, no agency speak, no banned words. The page never says "optimize your conversion rate" — every claim names a specific surface, which keeps it reading as development work rather than marketing services. Tags follow the controlled vocabulary.
+Open
+	•	No conversion-specific testimonial. The retired Stealth quote is the only one, and this is the page it would earn its place on.
+	•	The 50-200 range is the only unverifiable figure on the site. Worth having the working filed somewhere.
+	•	Prime EVA's sector for the third tag — outstanding across four pages now.
+

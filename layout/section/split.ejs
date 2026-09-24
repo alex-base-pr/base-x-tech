@@ -1,3 +1,4 @@
+<% const sem = typeof semantic !== 'undefined' && semantic; %>
 <section
   id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
   class="section section-split <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
@@ -6,10 +7,10 @@
       <div class="inner column-1">
         <header class="section-header">
           <% if (typeof title !== 'undefined' && title) { %>
-            <h2 class="section-title alt up"><%= title %></h2>
+            <% if (sem) { %><p class="section-title alt up"><%= title %></p><% } else { %><h2 class="section-title alt up"><%= title %></h2><% } %>
           <% } %>
           <% if (typeof subtitle !== 'undefined' && subtitle) { %>
-            <h3 class="section-subtitle up"><%- subtitle %></h3>
+            <% if (sem) { %><h2 class="section-subtitle up"><%- subtitle %></h2><% } else { %><h3 class="section-subtitle up"><%- subtitle %></h3><% } %>
           <% } %>
         </header>
         <div>
@@ -33,7 +34,7 @@
                         </ul>
                       <% } %>
                       <% if (typeof card.title !== 'undefined' && card.title) { %>
-                        <h4 class="card-title up"><%- card.title %></h4>
+                        <% if (sem) { %><h3 class="card-title up"><%- card.title %></h3><% } else { %><h4 class="card-title up"><%- card.title %></h4><% } %>
                       <% } %>
                     </header>
                     <footer>
@@ -57,7 +58,7 @@
                         <%- card.subtitle %>
                       <% } %>
                       <% if (typeof card.title !== 'undefined' && card.title) { %>
-                        <h4 class="card-title up"><%- card.title %></h4>
+                        <% if (sem) { %><h3 class="card-title up"><%- card.title %></h3><% } else { %><h4 class="card-title up"><%- card.title %></h4><% } %>
                       <% } %>
                     </header>
                     <footer>

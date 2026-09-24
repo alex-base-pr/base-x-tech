@@ -1,0 +1,270 @@
+Shopify Migration — final copy
+Page 4 of 8. URL: /pages/shopify-migration
+
+Absorbs /pages/service/shopify-migration-service/ — your deepest page today at 973 words. Five of the six capability slots already have a published blog post behind them, which makes this the easiest page to link internally and the strongest candidate to actually rank.
+
+62 slots + 8 FAQ pairs. Zero over-length lines. One H1, five H2s, thirteen H3s in the slots, plus one H2 and eight H3s in the FAQ. Every character count computed, not typed.
+
+Body copy 771 words against 973. The largest shortfall of the six pages, because the page it replaces was the deepest. Partly offset by the internal linking below — five posts pointing in and five sections pointing back is depth the word count doesn't show. If you want it level, the lever is two or three more FAQ rows rather than padding the slots.
+SEO
+Title — 56 / 60
+
+Magento & WooCommerce to Shopify Migration | Base X Tech
+
+Meta description — 144 / 155
+
+We move stores to Shopify from Magento, WooCommerce, BigCommerce or in-house platforms: data checked row by row, redirects and rankings handled.
+
+H1 — 51
+
+Shopify migration without losing what already works
+
+Target queries: magento to shopify migration · woocommerce to shopify migration · bigcommerce to shopify migration · shopify replatforming · shopify migration services · custom platform to shopify
+
+Internal linking — the most valuable thing on this page. Each capability section links to its matching post, each post links back to the section:
+
+Section
+Post
+Magento to Shopify
+/blog/magento-to-shopify-migration/
+WooCommerce to Shopify
+/blog/woocommerce-to-shopify-migration/
+BigCommerce to Shopify
+/blog/how-to-migrate-from-bigcommerce-to-shopify-a-2026-guide/
+Custom Platform Moves
+/blog/custom-platform-to-shopify-migration/
+Keeping Traffic
+/blog/why-migrate-to-shopify/
+Hero
+hero.eyebrow — paragraph — 17/19
+
+Shopify Migration
+
+hero.h1 — H1 — 17 / 19 / 13 (budget 23)
+
+Shopify migration without losing what already works
+
+hero.lead — paragraph — 52 / 54 / 21 (budget 56)
+
+Magento, WooCommerce, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.
+
+
+hero.cta — button — 20/24
+
+Discuss Your Project
+Capabilities
+cap.label — paragraph — 16/20
+
+Our Capabilities
+
+cap.h2 — H2 — 21 / 19 (budget 31)
+
+Every platform leaves different problems.
+
+cap.1.title — H3 — 18/23 → Magento to Shopify
+
+cap.1.desc — paragraph — 36 / 35 (budget 48)
+
+Magento 1 and 2 stores moved without carrying the maintenance bill over.
+
+cap.2.title — H3 — 22/23 → WooCommerce to Shopify
+
+cap.2.desc — paragraph — 38 / 31
+
+WordPress and WooCommerce stores moved off plugin dependency for good.
+
+cap.3.title — H3 — 22/23 → BigCommerce to Shopify
+
+cap.3.desc — paragraph — 33 / 26
+
+BigCommerce stores moved with the catalogue and URLs intact.
+
+cap.4.title — H3 — 21/23 → Custom Platform Moves
+
+cap.4.desc — paragraph — 36 / 38
+
+In-house platforms moved to Shopify, including the parts nobody documented.
+
+cap.5.title — H3 — 16/23 → Data & Integrity
+
+cap.5.desc — paragraph — 37 / 29
+
+Products, customers and order history moved and checked row by row.
+
+cap.6.title — H3 — 15/23 → Keeping Traffic
+
+cap.6.desc — paragraph — 38 / 31
+
+Redirects, canonicals and hreflang set so rankings survive the switch.
+
+Slot 6 has unusual credibility right now: you are running this migration on your own site and the audit found exactly these three things missing — no canonicals anywhere, hreflang that cancels itself out, and a www duplicate. Knowing where it goes wrong is the claim.
+Recent projects
+proj.label — paragraph — 15/20
+
+Recent Projects
+
+proj.1.client — H3 — 16/32
+
+UK gifting brand
+
+proj.1.desc — paragraph — 32 / 29 (budget 41)
+
+Moved off a custom platform with 1M+ customer profiles intact.
+
+proj.1.tags — paragraph — 34/43
+
+Migration / Integrations / Gifting
+
+proj.2.client — H3 — 9/32
+
+Prime EVA
+
+proj.2.desc — paragraph — 34 / 25
+
+Migrated, then integrated with the ERP the business runs on.
+
+proj.2.tags — paragraph — 15/43
+
+Migration / ERP
+
+proj.3.client — H3 — 5/32
+
+Gunia
+
+proj.3.desc — paragraph — 33 / 32
+
+Replatformed and redesigned for a Ukrainian luxury homeware brand.
+
+proj.3.tags — paragraph — 21/43
+
+Replatform / Homeware
+When we can help
+help.label — paragraph — 16/20
+
+When We Can Help
+
+help.h2 — H2 — 23 / 16 (budget 31)
+
+The platform costs more than it returns.
+
+help.1 — paragraph — 18 / 11 (budget 21)
+
+Every change needs a developer
+
+help.2 — paragraph — 16 / 11
+
+Your platform is end of life
+
+help.3 — paragraph — 18 / 20
+
+Hosting costs more than the store earns
+Testimonials
+quote.1 — paragraph — 31 / 43 / 38 / 25 (budget 44)
+
+Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.
+
+quote.1.author — 5/22 → Gunia quote.1.tag — 15/22 → Store Migration
+
+Gunia leads this page deliberately. A client saying "I can recommend them for store migration" on the migration page is worth more than three generic quotes — it is the only testimonial in the set that names this service.
+
+quote.2 — paragraph — 37 / 40 / 43 / 41 / 25
+
+Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.
+
+quote.2.author — 11/22 → VT Advantec quote.2.tag — 19/22 → Shopify Development
+
+quote.3 — paragraph — 34 / 39 / 39
+
+We received positive feedback from customers about the new site, which was fully functional and met all our needs.
+
+quote.3.author — 10/22 → Lili Mager quote.3.tag — 11/22 → Store Build
+Process
+process.label — paragraph — 14/20
+
+How We Migrate
+
+process.h2 — H2 — 21 / 23 (budget 31)
+
+From audit to a store that holds its traffic.
+
+process.1.title — H3 — 17/21 → Audit & Inventory
+
+process.1.desc — paragraph — 68 / 53 (budget 76)
+
+We catalogue every URL, product, customer and integration on the old platform, because what gets missed is what gets lost.
+
+process.2.title — H3 — 10/21 → Plan & Map
+
+process.2.desc — paragraph — 68 / 43
+
+We map old URLs to new, decide what moves and what gets rebuilt, and agree the cutover before touching anything.
+
+process.3.title — H3 — 16/21 → Migrate & Verify
+
+process.3.desc — paragraph — 71 / 33
+
+We move the data and check it against the source, then run the store on a staging build until it behaves.
+
+process.4.title — H3 — 14/21 → Launch & Watch
+
+process.4.desc — paragraph — 67 / 22
+
+We import redirects, submit sitemaps and monitor Search Console for weeks after, not days.
+
+Inferred, not documented — same caveat as pages 02 and 03.
+Stats
+stats.h2 — H2 — 20 / 12 (budget 31)
+
+Migrations that keep the traffic.
+
+Value
+Label
+Counts
+1M+
+Customer profiles migrated
+3/6 · 26/32
+13
+Years of history moved
+2/6 · 22/32
+4.8
+Upwork rating
+3/6 · 13/32
+
+This is where the number is highlighted. 1M+ replaces the 3M+ I had, per your correction, and it now sits in the most prominent slot on the page rather than only in a card. The 13 years is the harder claim of the two — a million rows is volume, thirteen years of history surviving a replatform is difficulty. Both come from the published case study, so both survive being questioned. Projects delivered and Happy clients drop off this page to make room; they appear on every other page already.
+FAQ
+faq.h2 → Questions we get asked
+
+How long does a Shopify migration take?
+It depends on the catalogue, the integrations and how much of the old platform was custom. A straightforward catalogue move runs in weeks. The UK gifting brand's move off a platform built in-house, covering 1M+ customer profiles and thirteen years of history, took four to six months.
+Will we lose our Google rankings?
+Not if the redirects are done properly, and that is the part nobody quotes for. Every old URL needs to point at its new equivalent in one hop, canonicals and hreflang need to be right on arrival, and Search Console needs watching for weeks afterwards rather than days.
+What happens to our order history and customer accounts?
+They come with you. Products, customers, order history and the relationships between them are moved and then checked against the source rather than assumed. We moved 1M+ profiles and thirteen years of history for a UK gifting brand. The checking is the slow part and it is not optional.
+Can you migrate from a custom-built platform?
+Yes, and that is the harder case. Off-the-shelf platforms export predictably; in-house ones have logic nobody documented and fields nobody remembers. We work out what the old system actually does before moving anything, including the parts that only exist in someone's head.
+Do we need Shopify Plus to migrate?
+Not to migrate. Plus matters afterwards, if you need checkout customisation, B2B company accounts or higher API limits. We will tell you which of your requirements need it rather than putting you on Plus by default.
+What about our current integrations?
+They get rebuilt, not carried over. Your ERP, CRM, fulfilment and courier connections were written against the old platform's API and none of them transfer. We inventory every one at the audit stage, because an integration discovered late is what turns a migration into an overrun.
+Can the store stay live during the migration?
+Yes. The new store is built and tested on a password-protected Shopify instance while your current one keeps selling. The cutover is a planned switch with the redirects already prepared, not a period where nothing works.
+What happens after we launch on Shopify?
+We watch it. Redirects get verified against live responses, sitemaps get submitted, and Search Console gets checked for weeks rather than days. Migrations rarely fail on launch day. They fail three weeks later, when nobody is looking at the coverage report.
+Closing CTA
+cta.h2 — H2 — 21 / 15 (budget 31)
+
+Outgrown the platform you started on?
+
+cta.body — paragraph — 41 / 34 (budget 48)
+
+Tell us what you're on now and we'll tell you what moving actually involves.
+
+cta.button — button — 10/12
+
+Let's Talk
+Schema
+Service and BreadcrumbList for the page, FAQPage from the eight pairs, Organization site-wide.
+Voice check
+Second person throughout, no agency speak, no banned words — "bespoke" was caught in the first FAQ answer and replaced with "built in-house". Tags follow the controlled vocabulary.
+
+

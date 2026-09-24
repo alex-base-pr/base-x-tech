@@ -1,3 +1,4 @@
+<% const sem = typeof semantic !== 'undefined' && semantic; %>
 <section
   id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
   class="section section-works <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %> <%= (typeof background_image !== 'undefined' && background_image) ? 'has-back' : '' %> "
@@ -8,10 +9,10 @@
       <div class="inner">
         <header class="section-header">
           <% if (typeof title !== 'undefined' && title) { %>
-            <h2 class="section-title alt up"><%= title %></h2>
+            <% if (sem) { %><p class="section-title alt up"><%= title %></p><% } else { %><h2 class="section-title alt up"><%= title %></h2><% } %>
           <% } %>
           <% if (typeof subtitle !== 'undefined' && subtitle) { %>
-            <h3 class="section-subtitle up"><%- subtitle %></h3>
+            <% if (sem) { %><h2 class="section-subtitle up"><%- subtitle %></h2><% } else { %><h3 class="section-subtitle up"><%- subtitle %></h3><% } %>
           <% } %>
         </header>
         <blockquote>
@@ -48,11 +49,13 @@
                     <p class="text"><%= item.text %></p>
                   </header>
                   <footer class="block-stack" style="--gap: .3rem;">
+                    <% if (item.avatar) { %>
                     <div class="avatar" style="--avatar-size: 64px;">
                       <img loading="lazy" fetchpriority="low" src="<%= item.avatar %>" alt="<%= item.name %>">
                     </div>
+                    <% } %>
                     <div>
-                      <h4 class="title def"><%= item.name %></h4>
+                      <% if (sem) { %><p class="title def h4"><%= item.name %></p><% } else { %><h4 class="title def"><%= item.name %></h4><% } %>
                       <p class="subtitle"><%= item.post %></p>
                     </div>
                   </footer>

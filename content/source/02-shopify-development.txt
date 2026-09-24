@@ -1,0 +1,283 @@
+Shopify Development — final copy
+Page 2 of 8. URL: /pages/shopify-development — slug unchanged, so the most-linked service URL in your proposals keeps working.
+
+Absorbs three current pages: the existing shopify-development hub, theme customization and development, and headless development. Shopify Plus sits inside the Custom Checkout description; multi-language EU inside Store Build & Launch.
+
+62 slots + 8 FAQ pairs. Zero over-length lines. One H1, five H2s, thirteen H3s in the slots, plus one H2 and eight H3s in the FAQ. Body copy 779 words against the 742-word page it replaces.
+
+Line breaks below are the breaks in the design. Keep them — budgets are per line. Every character count in this document was computed, not typed.
+SEO
+Title — 55 / 60
+
+Shopify Store Development & Custom Builds | Base X Tech
+
+Meta description — 152 / 155
+
+We build Shopify stores that need more than a theme: custom checkout, product configurators, headless storefronts, wholesale beside retail on one stack.
+
+H1 — 57
+
+Shopify development for stores that need more than a theme
+
+Target queries: shopify store development · shopify development company · custom shopify development · headless shopify development company (229 impressions) · shopify checkout customization · shopify b2b development
+
+This page carries the strongest latent demand in the set. headless shopify development company pulls 229 impressions at zero clicks and shopify product configurator pulls 242. Both are capability slots here rather than separate pages, so this is where that demand has to land.
+Hero
+hero.eyebrow — paragraph — 19/19
+
+Shopify Development
+
+hero.h1 — H1 — 19 / 20 / 17 (budget 23)
+
+Shopify development for stores that need more than a theme
+
+hero.lead — paragraph — 49 / 52 / 13 (budget 56)
+
+Custom checkout, configurators, B2B and retail on one stack. If the build is the hard part, that's the work we take.
+
+The last clause does the qualifying: it says what you take and, by implication, what you don't. ICP discipline without a list of exclusions.
+
+hero.cta — button — 20/24
+
+Discuss Your Project
+Capabilities
+cap.label — paragraph — 15/20
+
+Our capabilites
+
+cap.h2 — H2 — 17 / 20 (budget 31)
+
+The parts a theme was never built for.
+
+cap.1.title — H3 — 20/23 → Store Build & Launch
+
+cap.1.desc — paragraph — 38 / 22 (budget 48)
+
+New stores built for one market or for several across the EU.
+
+Carries the turnkey and starter-store coverage plus multi-language EU in one slot. Innan Jewellery is the proof — a shipped EN/DE storefront.
+
+cap.2.title — H3 — 17/23 → Theme Development
+
+cap.2.desc — paragraph — 37 / 20
+
+Custom themes and deep changes to the one you already run.
+
+cap.3.title — H3 — 15/23 → Custom Checkout
+
+cap.3.desc — paragraph — 38 / 22
+
+Checkout logic, validation and payment rules on Shopify Plus.
+
+Plus appears as the enabling platform, not as a service of its own.
+
+cap.4.title — H3 — 13/23 → Configurators
+
+cap.4.desc — paragraph — 38 / 25
+
+Product builders for options, variants and made-to-order ranges.
+
+242 impressions, zero clicks on "shopify product configurator". This slot is why that query should start converting.
+
+cap.5.title — H3 — 20/23 → Headless Storefronts
+
+cap.5.desc — paragraph — 38 / 30
+
+Shopify as the commerce backend behind a front end you control fully.
+
+cap.6.title — H3 — 15/23 → B2B & Wholesale
+
+cap.6.desc — paragraph — 41 / 33
+
+Wholesale accounts, price lists and terms running beside your retail store.
+
+Written without naming the client, since that work can't be disclosed.
+Recent projects
+proj.label — paragraph — 15/20
+
+Recent Projects
+
+proj.1.client — H3 — 9/32
+
+Prime EVA
+
+proj.1.desc — paragraph — 35 / 32 (budget 41)
+
+Product configurator built directly into the native store front end.
+
+proj.1.tags — paragraph — 18/43
+
+Configurator / ERP
+
+Leads the section because Configurators is the slot with the demand behind it.
+
+proj.2.client — H3 — 15/32
+
+Innan Jewellery
+
+proj.2.desc — paragraph — 32 / 32
+
+Bespoke theme, enquiry logic and multi-language build for the EU.
+
+proj.2.tags — paragraph — 29/43
+
+Theme Development / Jewellery
+
+proj.3.client — H3 — 5/32
+
+Gunia
+
+proj.3.desc — paragraph — 33 / 34
+
+Theme extension and migration for a Ukrainian luxury homeware brand.
+
+proj.3.tags — paragraph — 21/43
+
+Replatform / Homeware
+
+"Ukrainian" replaces "local" — local to whom, from a German reader's side of the screen. A Ukrainian luxury homeware brand is also a more interesting reference than an unplaced one.
+When we can help
+help.label — paragraph — 16/20
+
+When We Can Help
+
+help.h2 — H2 — 23 / 23 (budget 31)
+
+The theme stopped being the answer a while ago.
+
+help.1 — paragraph — 19 / 19 (budget 21)
+
+Your checkout needs rules Shopify lacks
+
+help.2 — paragraph — 20 / 20
+
+One store must serve wholesale and retail
+
+help.3 — paragraph — 18 / 19
+
+Your product needs configuring to sell
+Testimonials
+VT Advantec replaces the anonymous Stealth Startup quote in both slots it held. A named company carries more weight, and this one names two services outright. Elided to fit the five-line block — trimmed, never reworded. "Top-tier" is their word and it stays.
+
+quote.1 — paragraph — 37 / 40 / 43 / 41 / 25 (budget 44)
+
+Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.
+
+quote.1.author — 11/22 → VT Advantec quote.1.tag — 19/22 → Shopify Development
+
+"Platform Integration" is saved for VT's tag on the Integrations page — that's the half of their quote which fits there.
+
+quote.2 — paragraph — 34 / 39 / 39 (budget 44)
+
+We received positive feedback from customers about the new site, which was fully functional and met all our needs.
+
+quote.2.author — 10/22 → Lili Mager quote.2.tag — 11/22 → Store Build
+
+quote.3 — paragraph — 31 / 43 / 38 / 25 (budget 44)
+
+Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.
+
+quote.3.author — 5/22 → Gunia quote.3.tag — 17/22 → Theme Development
+
+Gunia's quote names theme customization and Theme Development is capability slot 2, so the card and the quote reinforce each other.
+Process
+process.label — paragraph — 12/20
+
+How We Build
+
+process.h2 — H2 — 22 / 24 (budget 31)
+
+From scoping the build to support after launch.
+
+process.1.title — H3 — 16/21 → Scope & Estimate
+
+process.1.desc — paragraph — 67 / 26 (budget 76)
+
+We work through what the build actually needs and what it will cost before anyone writes code.
+
+process.2.title — H3 — 19/21 → Plan & Architecture
+
+process.2.desc — paragraph — 67 / 33
+
+We decide the data model, the integrations and where custom code is justified rather than convenient.
+
+process.3.title — H3 — 14/21 → Build & Review
+
+process.3.desc — paragraph — 67 / 30
+
+We develop in reviewable stages so you see the store working before launch, not a demo at the end.
+
+process.4.title — H3 — 16/21 → Launch & Support
+
+process.4.desc — paragraph — 64 / 40
+
+We ship it, watch it under real traffic and stay on it after the launch rather than handing over a login.
+
+Step 4 echoes "What happens after launch matters more", already a headline on the new home page.
+
+These four steps are inferred, not documented. They compress the home page's six-step company process into the template's four slots. If Vadym has a written delivery flow, it should replace them the way your design flow replaced my invented one on page 01.
+Stats
+stats.h2 — H2 — 20 / 18 (budget 31)
+
+Stores built to last past their launch.
+
+Value
+Label
+Counts
+100+
+Projects delivered
+4/6 · 18/32
+60+
+Happy clients
+3/6 · 13/32
+4.8
+Upwork rating
+3/6 · 13/32
+
+Same approved figures as the home page and page 01. All countable, all inside the 6-character value field.
+FAQ
+faq.h2 → Questions we get asked
+
+Eight rows. Answers must render in the HTML whether a row is open or closed — if the accordion fetches them on click they are invisible to crawlers and to AI answer engines, and the section stops doing the job it was added for. Confirm with Dima at build time.
+Can you customise Shopify checkout?
+Yes, on Shopify Plus. Checkout validation, discount logic and delivery rules are built with Shopify Functions and checkout extensions rather than workarounds. On standard plans the options are much narrower, and we will tell you which of your requirements are not possible before you commit to anything.
+Do we need Shopify Plus?
+Only for specific things. Plus is required for checkout customisation, B2B company accounts and higher API limits. If none of your requirements need those, a standard plan is usually enough and we will say so rather than sell you the upgrade.
+Can you build a product configurator on Shopify?
+Yes, and we have. A configurator built into the storefront handles options, dependencies and made-to-order ranges that variants alone cannot express. Prime EVA is the example: a custom configurator running inside their Shopify store rather than as a bolted-on app.
+Can one store serve wholesale and retail?
+Yes. Shopify B2B runs company accounts, price lists and payment terms alongside your retail catalogue, so you are not maintaining two stores that drift apart. We have built this, though that client's work is not public.
+When does headless Shopify make sense?
+Less often than it gets recommended. Headless is worth it when you need a front end Shopify's theme layer cannot deliver, or when the storefront serves more than one channel. It costs more to build and more to maintain, so if a well-built theme does the job we will tell you that instead.
+Can you work with our existing theme, or is it a rebuild?
+Usually your existing theme. We audit what it can carry, extend it where that holds up, and only recommend a rebuild when the theme is fighting what you need. A rebuild you did not need is the most expensive thing on a Shopify project.
+How long does a custom Shopify build take?
+Most builds run 4 to 16 weeks, depending on the integrations and how much is custom rather than configured. We scope and estimate before writing code, so the timeline is agreed at the start.
+What happens after launch?
+We stay on it. We watch the store under real traffic, fix what surfaces in the first weeks, and keep it working through Shopify's API version changes. Handing over a login and disappearing is where most of the problems we get called in to fix started.
+Closing CTA
+cta.h2 — H2 — 23 / 18 (budget 31)
+
+Have a build that needs more than a theme?
+
+cta.body — paragraph — 42 / 31 (budget 48)
+
+Tell us what the store has to do and we'll tell you how we would build it.
+
+cta.button — button — 10/12
+
+Let's Talk
+Schema
+Service and BreadcrumbList for the page, FAQPage generated from the eight pairs above, Organization site-wide. The current site emits no structured data at all on any service page, so this is free ground on a new build.
+Voice check
+Second person throughout, no third-person agency speak, and none of the banned words: seamless, end-to-end, robust, cutting-edge, leverage, empower, passionate, dedicated, solutions.
+
+Reused across pages by design: the section labels, the CTA button, the stat labels and the testimonials. Every other line is written for this page.
+
+Tags follow the controlled vocabulary — two or three, format Service / Service / Sector, services drawn only from page names and capability slots, sector last, never facts.
+Open
+	•	Prime EVA's sector — needed for the third tag. Every other card has one.
+	•	A documented build process, per the note in the Process section.
+	•	hero.eyebrow is 19 characters against a 19-character measured limit. Should fit; worth Iryna's glance.
+	•	help.h2 and help.1–3 — the two-line 21-character blocks are the tightest on the page. Same question as page 01.
+

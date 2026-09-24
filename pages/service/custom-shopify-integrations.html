@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<%# Copy: content/source/03-shopify-integrations.txt (Marko, final). Slot order: spec §5 D8. %>
 <%- include('layout/head-alt.ejs', {
-  title: "Custom Shopify Integrations: ERP, CRM & More | Base X Tech",
-  description: "We connect your Shopify store to ERP, CRM, payment gateways, and shipping systems, so your orders, stock, and customer data sync automatically.",
+  title: "Custom Shopify Integrations: ERP, CRM & APIs | Base X Tech",
+  description: "We connect Shopify to the systems your business already runs on: ERP, CRM, PIM, logistics and marketplaces, built and monitored by the same team.",
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/pages/service/custom-shopify-integrations/",
   hreflangDefault: "https://base-xtech.com/pages/service/custom-shopify-integrations/"
@@ -19,9 +20,11 @@
       include('layout/section/hero-type-two.ejs', {
         locale: 'en',
         id: "service-hero",
-        title: "Custom Shopify Integrations",
-        subtitle: "shopify automation and growth",
-        description: "We build seamless integrations between Shopify and your business tools, including ERP systems, accounting software, and marketplaces, to streamline operations and support growth.",
+        subtitle: "Integrations",
+        title: "Shopify integrations<br> for the systems your<br> business runs on",
+        description: "ERP, CRM, PIM, logistics, marketplaces. When your store has to agree with the systems behind it on every order, this is the work.",
+        title_size: "long",
+        button_text: "Discuss Your Project",
         icons: [
           "shopify"
         ]
@@ -30,212 +33,196 @@
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
         id: "service-type-of-apps",
-        title: "SERVICES AND TECHNOLOGIES",
-        subtitle: "Connect Your Shopify<br class='br-desk'> Store to the <span class='accent'>Tools That<br class='br-desk'> Power Your Business</span>",
+        title: "Our Capabilities",
+        subtitle: "One store, and everything<br class='br-desk'> it has to <span class='accent'>agree with.</span>",
         cards: [
           {
-            title: "Third-Party Platforms",
-            description: "Link Shopify to marketing automation tools, CRMs, customer service platforms, project management software, or accounting platforms. From QuickBooks and HubSpot to Mailchimp and Zendesk, we streamline your processes and eliminate manual data entry. If you use it, we can connect it.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "ERP Integrations",
+            description: "Orders, stock and invoices moving between Shopify and your ERP without hands.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Marketplaces and Sales Channels",
-            description: "Sell where your customers are. We integrate Shopify with leading marketplaces, including Amazon, enabling you to manage inventory, products, pricing, and orders from one centralized location.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "CRM Integrations",
+            description: "Customer and order data landing in your CRM the way your sales team needs it.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Payment Gateways",
-            description: "Offer customers multiple secure payment options. We integrate both global and local payment providers into your Shopify store for a seamless, frictionless checkout experience that improves conversion rates and customer loyalty.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "PIM & Product Data",
+            description: "One source for product data, pushed to Shopify instead of maintained twice.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Shipping and Fulfillment",
-            description: "Simplify your logistics by connecting Shopify to shipping carriers, 3PL services, and warehouse management systems. Automate label generation, real-time tracking, and order updates to deliver faster and more accurately.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Custom APIs",
+            description: "Connections built for systems with no app and no standard integration.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "ERP and Inventory Systems",
-            description: "We connect your Shopify store to your ERP or inventory management system so orders, stock levels, customer details, and product information are perfectly synchronized. Whether you use SAP, NetSuite, or a custom system, we ensure smooth communication between platforms.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Logistics & Fulfilment",
+            description: "Carriers, labels and tracking wired into the order flow rather than bolted on.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Custom APIs and Middleware",
-            description: "When off-the-shelf apps aren’t enough, we build custom APIs or middleware that let Shopify integrate with any software you need. We remove data silos and enable even the most complex multi-system workflows to operate flawlessly.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
-          },
+            title: "Marketplaces & Channels",
+            description: "Listings, stock and orders kept in step across every channel you sell on.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          }
         ]
       })
     %>
-
-    <%-
-      include('layout/section/split.ejs', {
-        locale: 'en',
-        theme: 'light',
-        id: "service-advantages",
-        title: "ADVANTAGES",
-        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
-        content_cards: [
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Built for Business Results",
-            description: "Every integration we build is designed to reduce manual processes, improve operational efficiency, and deliver better customer experiences."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "No Outsourcing, Ever",
-            description: "Your project stays 100% in-house with our dedicated team. You get direct communication, faster results, and full accountability."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Agile and Transparent Process",
-            description: "We move fast and keep you informed at every step. You’ll have clear timelines, regular updates, and flexibility for mid-project adjustments."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Specialists in Shopify",
-            description: "We live and breathe Shopify. Our deep knowledge of the platform, APIs, and architecture allows us to deliver faster, smoother custom Shopify integrations with fewer delays and roadblocks."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "No Nonsense Partnership",
-            description: "We don’t overpromise. You’ll get realistic delivery dates, straightforward pricing, and a partner who exceeds expectations."
-          },
-        ]
-      })
-    %>
-
 
     <%- include('layout/section/works.ejs', {
+      semantic: true,
       locale: 'en',
       id: "service-portfolio",
       theme: "dark",
-      title: "PORTFOLIO",
-      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
-      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      title: "Recent Projects",
+      stat: "100+",
+      description: "Projects delivered, for 60+ clients, with a 4.8 rating on Upwork. Systems that stay in step after launch.",
       items: [
         {
-          title: "Naya Tech",
-          text: "Design & Shopify development for technology startup",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-1-bg.png",
+          title: "UK gifting brand",
+          text: "Configurator, production and courier systems connected on Shopify Plus.",
+          tags: "Integrations / Automation / Gifting",
           icons: ['shopify']
         },
         {
-          title: "Bonkind",
-          text: "Brand identity & redesign of self-care ecommerce",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-2-bg.png",
-          icons: ['figma', 'ai']
+          title: "Prime EVA",
+          text: "ERP integration with order automation behind the store.",
+          tags: "ERP / Automation",
+          link: "https://primeeva.com/",
+          background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
+          icons: ['shopify']
         },
         {
-          title: "KLOTT",
-          text: "Store setup & customizations for fashion brand",
-          link: "https://ua.klottclothes.com/",
-          background_image: "/images/sections/works/card-3-bg.png",
-          icons: ['git', 'shopify']
+          title: "VT Advantec",
+          text: "API integration built across a multi-year partnership.",
+          tags: "Custom APIs / Integrations",
+          icons: ['shopify']
         }
       ]
     }) %>
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
-        id: "service-expertise",
-        title: "EXPERTISE",
-        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
-        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
-        media_cards: [
+        id: "service-advantages",
+        title: "When We Can Help",
+        subtitle: "Two systems, two versions<br class='br-desk'> of the <span class='accent'>same order.</span>",
+        content_cards: [
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Someone re-types orders by hand" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Stock is wrong by the time it syncs" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Your ERP has no Shopify app" }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/info.ejs', {
+      semantic: true,
+      locale: "en",
+      id: "reviews",
+      theme: "dark",
+      class: "reviews",
+      title: "What clients say",
+      background_image: "/images/pages/shopify-development/section/reviews/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
+      reviews: [
+        {
+          text: "They deliver top-tier expertise across web development and platform integration, always providing strategic, practical advice, and expertly navigating tight timelines to ensure our success.",
+          name: "VT Advantec",
+          post: "Platform Integration"
+        },
+        {
+          text: "We received positive feedback from customers about the new site, which was fully functional and met all our needs.",
+          name: "Lili Mager",
+          post: "Store Build"
+        },
+        {
+          text: "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+          name: "Gunia",
+          post: "Migration"
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        locale: 'en',
+        id: 'service-faq',
+        title: 'How We Integrate',
+        subtitle: 'From mapping the systems<br> to <span class="accent">watching them run.</span>',
+        button: {
+          text: "Discuss Your Project"
+        },
+        faq: [
           {
-            title: "fashion",
-            image: "/images/pages/service/index/industries/card-1.png"
+            title: "Audit & Map",
+            description: "We list every system, what data each one owns and where things break today before proposing anything."
           },
           {
-            title: "beauty",
-            image: "/images/pages/service/index/industries/card-2.png"
+            title: "Plan the Data Flow",
+            description: "We decide direction, frequency and what wins when two systems disagree, which is where most integrations fail."
           },
           {
-            title: "automotive",
-            image: "/images/pages/service/index/industries/card-3.png"
+            title: "Build & Test",
+            description: "We build it and run real orders through it, including the ones that go wrong, before it touches live data."
           },
           {
-            title: "Food & Drinks",
-            image: "/images/pages/service/index/industries/card-4.png"
-          },
-          {
-            title: "Jewelry & Luxury",
-            image: "/images/pages/service/index/industries/card-5.png"
-          },
-          {
-            title: "Furniture & Decor",
-            image: "/images/pages/service/index/industries/card-6.png"
-          },
-          {
-            title: "Health & Supplements",
-            image: "/images/pages/service/index/industries/card-7.png"
-          },
-          {
-            title: "Bags & Accessories",
-            image: "/images/pages/service/index/industries/card-8.png"
-          },
-          {
-            title: "Tech & Gadgets",
-            image: "/images/pages/service/index/industries/card-9.png"
-          },
-          {
-            title: "Sports & Lifestyle",
-            image: "/images/pages/service/index/industries/card-10.png"
-          },
+            title: "Launch & Monitor",
+            description: "We watch it under real volume and keep alerting on it, because a silent integration failure costs more than a loud one."
+          }
         ]
       })
     %>
 
     <%-
       include('layout/section/faq.ejs', {
+        semantic: true,
+        schema: true,
+        numbered: false,
+        extra_class: 'faq-list',
         locale: 'en',
-        id: 'service-faq',
-        title: 'WORKFLOW',
-        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
-        button: {
-          text: "Discuss a project"
-        },
+        id: 'service-questions',
+        title: 'FAQ',
+        subtitle: 'Questions we <span class="accent">get asked</span>',
         faq: [
           {
-            title: "Discovery Call",
-            description: "We start with a conversation. You tell us what you want to connect and why. We listen carefully, gather all details, and offer advice to ensure alignment. This foundation leads to a successful, smooth project."
+            title: "Can you connect Shopify to our ERP?",
+            description: "Yes. Orders, stock levels and invoices move between Shopify and your ERP without anyone re-typing them. We work through the API your ERP exposes, and where it exposes nothing usable we build the connector ourselves rather than telling you it cannot be done."
           },
           {
-            title: "Scope & Planning",
-            description: "We map out the integration architecture, define data flows, document technical needs, and set clear milestones. You’ll always know what’s next and how we are progressing."
+            title: "What if our system has no Shopify app?",
+            description: "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them."
           },
           {
-            title: "Development & Testing",
-            description: "Our team builds your integration using best practices and industry-leading security standards. We conduct extensive testing to guarantee stable performance and error-free data flow before launch."
+            title: "How do you stop stock going out of sync?",
+            description: "By deciding which system owns the number before anything is built. Stock drifts when two systems both think they are authoritative, so we set direction and frequency for every field, then run real orders through it, including the ones that fail, before it touches live data."
           },
           {
-            title: "Training & Support",
-            description: "After launch, we provide full documentation and personalized training so your team feels confident managing the integration. We also offer ongoing support and future upgrades to meet your evolving business needs."
+            title: "Can you automate order routing and fulfilment?",
+            description: "Yes. For a UK gifting brand we built a production engine that turns each order into print-ready files, batches them and routes them to the production queue, plus a fulfilment layer that generates shipping codes, syncs couriers in real time and schedules pickups twice a day."
+          },
+          {
+            title: "Which ERPs and CRMs have you worked with?",
+            description: "ERP, CRM, PIM and fulfilment systems across the common categories, connected through whatever API they expose. Several clients run systems with no public integration at all, and for those we have built custom connectors for the specific use rather than moving the business onto a different tool."
+          },
+          {
+            title: "How long does an integration take?",
+            description: "It depends on how many systems and how clean their data is. A single well-documented connection is measured in weeks. The UK gifting brand's three-system build, covering configurator, production and fulfilment, took four to six months. We scope it before quoting."
+          },
+          {
+            title: "Who maintains it after launch?",
+            description: "We do, if you want us to. Integrations break when either side changes: an API version is deprecated, a field is renamed, a system is upgraded. We monitor and alert on the connections we build, because a silent integration failure costs more than a loud one."
+          },
+          {
+            title: "Can you integrate with our warehouse or 3PL?",
+            description: "Yes. We have built barcode scanning and routing logic into warehouse operations, and courier integrations that generate labels, push tracking back to the store and schedule collections. Nova Poshta Connect is the public version of that work, listed on the Shopify App Store."
           }
         ]
       })
@@ -243,7 +230,14 @@
 
     <%- include('layout/section/approach.ejs') -%>
 
-    <%- include('layout/section/cta.ejs') %>
+    <%- include('layout/section/cta.ejs', {
+      cta: {
+        label: "Let’s talk",
+        title: "Need Shopify to talk<br> to something else?",
+        body: "Tell us what the two systems are and we'll tell you what connecting them takes.",
+        button: "Let's Talk"
+      }
+    }) %>
   </main>
 
   <%- include('layout/footer-alt.ejs') %>

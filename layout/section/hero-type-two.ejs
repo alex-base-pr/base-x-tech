@@ -25,7 +25,7 @@
         <% } %>
 			<div>
 				<p class="section--hero-subtitle"><%= subtitle %></p>
-				<h1 class="section--hero-title up"><span class="inner"><%- title %></h1>
+				<h1 class="section--hero-title up<%= (typeof title_size !== 'undefined' && title_size) ? ' is-' + title_size : '' %>"><span class="inner"><%- title %></span></h1>
 			</div>
 			<div class="block-stack one-half">
         <% if (typeof button_text !== 'undefined' && button_text) { %>

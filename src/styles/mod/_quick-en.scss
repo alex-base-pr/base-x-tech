@@ -1,0 +1,58 @@
+// Quick EN release (2026-09): modifiers for the longer, keyword-bearing copy in the legacy components.
+// Opt-in only (classes set by EN service pages), so /uk/ and untouched pages render as before.
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+
+// H1s now carry the primary keyword (≈ 55 chars, 3 lines in Marko's copy) instead of 2–3 words.
+// Legacy styles size the hero title under #hero / #service-hero; match that weight without !important.
+.section--hero-title.is-long,
+#hero .section--hero-title.is-long,
+#service-hero .section--hero-title.is-long {
+  font-size: 3rem;
+  line-height: 3rem;
+
+  @include desk {
+    font-size: 5.25rem;
+    line-height: 4.9rem;
+  }
+}
+
+// FAQ as a list of real questions: readable question size, full-width answers.
+.section.faq-list {
+  component-accordion .faq-header .title {
+    font-size: 1.5rem;
+    line-height: 1.15;
+
+    @include desk {
+      font-size: 2.25rem;
+    }
+  }
+
+  component-accordion .inner-content {
+    @include desk {
+      display: block;
+    }
+  }
+
+  component-accordion .inner-content .description,
+  component-accordion .inner-content main.description {
+    max-width: 44rem;
+    margin-left: 0;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.section-works .card .card-tags {
+  margin-top: .5rem;
+  opacity: .7;
+  font-size: .875rem;
+}
+
+.section-cta .section-cta--body {
+  max-width: 30rem;
+  margin: 0 0 1.5rem;
+}

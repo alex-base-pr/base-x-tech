@@ -1,3 +1,4 @@
+<% const sem = typeof semantic !== 'undefined' && semantic; %>
 <section
   id="<%= (typeof id !== 'undefined' && id) ? id : '' %>"
   class="section section-works <% if (typeof theme !== 'undefined' && theme){ %>theme-<%= theme %><% } %> <%= (typeof locale !== 'undefined' && locale) ? ' locale-' + locale : '' %>">
@@ -6,14 +7,14 @@
       <div class="inner">
         <header class="section-header">
           <% if (typeof title !== 'undefined' && title) { %>
-            <h2 class="section-title alt up"><%= title %></h2>
+            <% if (sem) { %><p class="section-title alt up"><%= title %></p><% } else { %><h2 class="section-title alt up"><%= title %></h2><% } %>
           <% } %>
           <% if (typeof subtitle !== 'undefined' && subtitle) { %>
-            <h3 class="section-subtitle up"><%- subtitle %></h3>
+            <% if (sem) { %><h2 class="section-subtitle up"><%- subtitle %></h2><% } else { %><h3 class="section-subtitle up"><%- subtitle %></h3><% } %>
           <% } %>
         </header>
         <blockquote>
-          <h2 class="title up">40+</h2>
+          <% if (sem) { %><p class="title up"><%= (typeof stat !== 'undefined' && stat) ? stat : '40+' %></p><% } else { %><h2 class="title up">40+</h2><% } %>
           <% if (typeof description !== 'undefined' && description) { %>
             <p><%= description %></p>
           <% } %>
@@ -33,12 +34,12 @@
                     <img loading="lazy" fetchpriority="low" src="<%= item.background_image_mob %>" alt="<%= item.title %>" class="card-background mobile--alt-image">
                   <% } %>
                   <% if (typeof item.background_image !== 'undefined' && item.background_image) { %>
-                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="<%= item.title %><" class="card-background">
+                    <img loading="lazy" fetchpriority="low" src="<%= item.background_image %>" alt="<%= item.title %>" class="card-background">
                   <% } %>
                   <div class="card-content">
                     <header>
                       <% if (typeof item.title !== 'undefined' && item.title) { %>
-                        <h4 class="card-title up"><%= item.title %></h4>
+                        <% if (sem) { %><h3 class="card-title up"><%= item.title %></h3><% } else { %><h4 class="card-title up"><%= item.title %></h4><% } %>
                       <% } %>
                       <% if (typeof item.icons !== 'undefined' && item.icons) { %>
                         <ul class="icon-set">
@@ -50,9 +51,10 @@
                     </header>
                     <footer>
                       <p><%= item.text %></p>
+                      <% if (typeof item.tags !== 'undefined' && item.tags) { %><p class="card-tags"><%= item.tags %></p><% } %>
                     </footer>
                   </div>
-              </a>
+              <% if (typeof item.link !== 'undefined' && item.link) { %></a><% } %>
             </li>
           <% }) %>
         </ul>
