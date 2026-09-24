@@ -1,0 +1,8 @@
+<%# Systems we actually work with (REQ-015). Figma: dark band under the hero. %>
+<section class="section section-systems-strip">
+  <div class="container">
+    <p class="systems-strip"><span class="systems-strip--label"><%= label %></span>
+      <% items.forEach((item, i) => { %><span class="systems-strip--item"><%= item %></span><% if (i < items.length - 1) { %><span class="systems-strip--dot" aria-hidden="true">·</span><% } %><% }) %>
+    </p>
+  </div>
+</section>

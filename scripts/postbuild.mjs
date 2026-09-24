@@ -38,7 +38,7 @@ const built = pages.map((p) => {
   };
 });
 
-const section = (group) => built.filter((p) => p.group === group).map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
+const section = (group) => built.filter((p) => p.group === group || p.group === group + '-extra').map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
 const home = built.find((p) => p.group === 'home');
 
 const llms = `# Base X Tech

@@ -1,0 +1,129 @@
+// Complex Service / DACH page (2026-09): Figma structure in the legacy visual language.
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as color;
+@use '../base/fonts' as font;
+
+.section-systems-strip {
+  background: color.$black;
+  color: color.$white2;
+  padding: 1.5rem 0;
+  border-top: 1px solid alpha(color.$white2, .15);
+
+  .systems-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem .75rem;
+    align-items: baseline;
+    font-size: 1rem;
+  }
+  .systems-strip--label { font-weight: 500; margin-right: 1rem; }
+  .systems-strip--item { opacity: .75; }
+  .systems-strip--dot { opacity: .4; }
+}
+
+.section-person-quote {
+  padding: 5rem 0;
+
+  .person-quote {
+    display: grid;
+    gap: 2rem;
+    @include desk {
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: start;
+    }
+  }
+  .person-quote--photo { margin: 0; }
+  .person-quote--photo img,
+  .person-quote--placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: alpha(color.$black, .08);
+  }
+  blockquote {
+    margin: 1.5rem 0 2rem;
+    p {
+      font-size: 1.25rem;
+      line-height: 1.4;
+      margin: 0 0 1rem;
+      @include desk { font-size: 1.625rem; }
+    }
+  }
+  .person-quote--name { font-weight: 600; margin: 0; }
+  .person-quote--role { opacity: .6; margin: .25rem 0 0; }
+}
+
+.section-text-block {
+  padding: 5rem 0;
+  border-top: 1px solid alpha(color.$black, .15);
+
+  .text-block--header {
+    max-width: 46rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .section-subtitle { margin: 1rem 0 1.5rem; }
+  .text-block--p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0 0 1rem;
+  }
+  .text-block--cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+.flow-diagram {
+  margin: 3rem auto 0;
+  max-width: 62rem;
+  color: color.$black;
+
+  svg { width: 100%; height: auto; display: block; }
+  .flow-diagram--mid { fill: alpha(color.$black, .05); }
+  .flow-diagram--name { font-family: font.$heading-font; font-size: 32px; text-transform: uppercase; }
+  .flow-diagram--role { font-size: 13px; letter-spacing: .12em; opacity: .6; }
+}
+
+.section-case {
+  padding: 5rem 0;
+
+  .case--label { text-align: center; margin-bottom: 2rem; }
+  .case {
+    display: grid;
+    gap: 1rem;
+    background: alpha(color.$black, .05);
+    padding: 1.5rem;
+    @include desk {
+      grid-template-columns: 1fr 1fr;
+      padding: 2.5rem;
+    }
+    p { line-height: 1.5; margin: 0 0 .75rem; }
+  }
+  .case--client { font-family: font.$heading-font; font-size: 3rem; margin: 0; @include desk { font-size: 4rem; } }
+  .case--tags { opacity: .7; margin-bottom: 2rem !important; }
+  .case--h { font-family: font.$body-font; font-weight: 600; font-size: 1rem; margin: 1.5rem 0 .75rem; }
+  .case--image { margin: 0; }
+  .case--image img,
+  .case--placeholder { width: 100%; height: 100%; min-height: 16rem; object-fit: cover; background: color.$white; }
+  .case--built,
+  .case--outcomes { background: alpha(color.$black, .05); padding: 1.5rem 2rem; }
+  .case--outcomes ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+  .case--outcomes li { display: grid; gap: .35rem; }
+  .case--outcomes strong { font-family: font.$heading-font; font-size: 1.5rem; text-transform: uppercase; font-weight: normal; }
+}
+
+.section-posts {
+  padding: 5rem 0;
+  border-top: 1px solid alpha(color.$black, .15);
+
+  .posts { display: grid; gap: 2rem; @include desk { grid-template-columns: 1fr 3fr; } }
+  .posts--text { font-size: 1.125rem; line-height: 1.4; margin-top: 1rem; max-width: 22rem; }
+  .posts--list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2rem; @include desk { grid-template-columns: repeat(3, 1fr); } }
+  .post-card--meta { display: flex; justify-content: space-between; gap: 1rem; font-size: .875rem; opacity: .6; }
+  .post-card--title { font-family: font.$heading-font; font-size: 1.75rem; line-height: 1.05; text-transform: uppercase; margin: 1rem 0 .75rem; a { color: inherit; text-decoration: none; } }
+  .post-card--excerpt { line-height: 1.5; opacity: .75; }
+  .post-card--more { display: inline-block; margin-top: 1rem; border-bottom: 1px solid currentColor; color: inherit; text-decoration: none; }
+}

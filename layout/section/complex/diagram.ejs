@@ -1,0 +1,24 @@
+<%# Data-flow diagram as text-based SVG (readable by screen readers, search engines and AI assistants). %>
+<figure class="flow-diagram">
+  <svg viewBox="0 0 1000 220" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
+    <title id="flow-title">How the systems connect</title>
+    <desc id="flow-desc">Shopify (commerce platform) connects to middleware (integration layer), which connects to the ERP (system of record) and the POS (in-store operations).</desc>
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="10" y="50" width="250" height="120" rx="8"/>
+      <rect x="375" y="40" width="250" height="140" rx="8" class="flow-diagram--mid"/>
+      <rect x="740" y="10" width="250" height="90" rx="8"/>
+      <rect x="740" y="120" width="250" height="90" rx="8"/>
+      <path d="M260 110 H375 M625 100 L740 55 M625 120 L740 165"/>
+    </g>
+    <g fill="currentColor" text-anchor="middle">
+      <text x="135" y="112" class="flow-diagram--name">Shopify</text>
+      <text x="135" y="140" class="flow-diagram--role">COMMERCE PLATFORM</text>
+      <text x="500" y="108" class="flow-diagram--name">Middleware</text>
+      <text x="500" y="136" class="flow-diagram--role">INTEGRATION LAYER</text>
+      <text x="865" y="52" class="flow-diagram--name">ERP</text>
+      <text x="865" y="78" class="flow-diagram--role">SYSTEM OF RECORD</text>
+      <text x="865" y="162" class="flow-diagram--name">POS</text>
+      <text x="865" y="188" class="flow-diagram--role">IN-STORE OPERATIONS</text>
+    </g>
+  </svg>
+</figure>

@@ -48,7 +48,7 @@ function jsonLd(page, path, html) {
       ],
     });
   }
-  if (page.group === 'service') {
+  if (page.group === 'service' || page.group === 'service-extra') {
     graph.push({
       '@type': 'Service',
       '@id': `${url}#service`,

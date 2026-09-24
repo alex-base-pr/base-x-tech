@@ -48,6 +48,7 @@ for (const page of enPages) {
         await p.setViewportSize({ width, height: 900 });
         await p.goto(page.path);
         await p.waitForLoadState('networkidle');
+        await p.waitForTimeout(500); // sliders (Flickity) finish layout after load; measuring earlier is flaky under load
         // Off-canvas drawers widen scrollWidth but are clipped by body overflow-x; what matters is whether the user can scroll.
         const scrollX = await p.evaluate(() => { window.scrollTo(10000, 0); return window.scrollX; });
         expect(scrollX, 'page scrolls horizontally by px').toBe(0);

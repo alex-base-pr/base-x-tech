@@ -152,7 +152,7 @@ prod path (§16 follow-up).
 | A9 Bytespider stays disallowed (known to ignore robots, no citation value) | Disallow | none meaningful | owner may lift |
 | A10 `llms.txt`/`llms-full.txt` help some assistants; no major engine has confirmed using them | ship (cheap) | wasted ~1 h | none needed |
 | A11 DACH page is visually built from existing sections + two new light components (person/quote block, SVG diagram) in the old style | new components minimal | +0.5–1 day | Alex reviews on dev |
-| A13 DACH page is a separate page with a narrow focus (complex Shopify ↔ ERP/POS/middleware integration for DACH), cross-linked with #4 which stays broad; URL proposed `/pages/shopify-erp-integration-dach` | as stated | keyword overlap with #4 | owner confirms slug when copy arrives |
+| A13 (superseded 2026-09-24 by the Figma "Complex Service" page, URL /pages/complex-solutions/) DACH page is a separate page with a narrow focus (complex Shopify ↔ ERP/POS/middleware integration for DACH), cross-linked with #4 which stays broad; URL proposed `/pages/shopify-erp-integration-dach` | as stated | keyword overlap with #4 | owner confirms slug when copy arrives |
 | A12 Content in Drive folder `1hfUjjSvHXmPP_rVyNdJXRphycSbYwGSz` = final copy for Home/About/DACH | use once shared | wrong text | Marko |
 | A7 Cloudflare Access (password on dev) not needed; noindex is enough | off | dev visible to anyone with the link | owner can switch on later |
 
@@ -170,7 +170,7 @@ A. Indexable EN pages
 | 6 | `/pages/service/custom-web-design-services` | existing → new copy | 01 + FAQ set |
 | 7 | `/pages/service/conversion-rate-optimization` | existing → new copy | 06 v2 |
 | 8 | `/pages/about` | NEW | Marko (pending) |
-| 9 | `/pages/<dach-slug>` (see OPEN) | NEW | DACH / complex Shopify integrations page with Alexander Karl; EN now, DE by Alexander later; brief to Ira 2026-09-24; copy in Drive folder (access pending) |
+| 9 | `/pages/complex-solutions/` | NEW | DACH / complex Shopify integrations page with Alexander Karl; EN now, DE by Alexander later; brief to Ira 2026-09-24; copy in Drive folder (access pending) |
 | 10 | `/pages/privacy-policy` | unchanged | — |
 | 11 | `/pages/terms-and-conditions` | unchanged | — |
 

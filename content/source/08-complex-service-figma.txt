@@ -1,0 +1,101 @@
+Complex Service (DACH / Alexander Karl) — copy as laid out in Figma
+Source: https://www.figma.com/design/TbM2uNtTNxbejfVUUNvDVu/base-xtech?node-id=877-1583 (page "Complex Service", frame "Complex", 1440×9817)
+Transcribed 2026-09-24 from the prototype view. Agreed with the designer (Alex, 2026-09-24).
+Not in Figma (lead's draft, for Marko): SEO title, meta description, URL. Marked [DRAFT] below.
+
+SEO [DRAFT]
+Title: Complex Shopify Systems: ERP, POS & Middleware | Base X Tech
+Meta description: (hero lead, verbatim)
+URL: /pages/complex-solutions/  (old header already shows "Complex Solutions")
+
+Hero
+H1: Complex systems, connected around how your business works.
+Lead: We connect e-commerce, ERP, POS, inventory and custom systems — building the integrations, apps and automation that keep your operations in sync.
+Button: Book a call
+Systems strip: Built around the systems you already use: Shopify POS · Xentral · Custom APIs · Middleware
+  Figma comment #122 (Vadym-Marko): add others — as a marquee, or as blocks that flip asynchronously.
+
+Alexander Karl block
+Label: Local Expertise
+Quote p1: ERP integration isn’t just about connecting APIs – it’s about understanding business processes and making systems work together seamlessly. We’ve built integrations with every major system in the Swiss market, and we know where the challenges hide.
+Quote p2: The key is clear requirements, proper data ownership, and testing with real-world scenarios. Our approach ensures the integration becomes a reliable part of your daily operations, not a source of constant firefighting.
+Name: Alexander Karl
+Role: DACH Partner
+Photo: placeholder (grey box in Figma; side frame shows a photo + dark quote card variant)
+
+Capabilities
+Label: Our Capabilities
+H2: What we integrate, build and automate.
+ERP Integrations — Orders, stock and invoices moving between Shopify and your ERP without hands.
+CRM Integrations — Customer and order data landing in your CRM the way your sales team needs it.
+Custom APIs — Connections built for systems with no app and no standard integration.
+Private & Custom Apps — Apps for one merchant, doing the thing no public app does properly.
+Custom Automations — Work that happens by itself: orders, stock, documents, notifications.
+Logistics & Fulfilment — Carriers, labels and tracking wired into the order flow rather than bolted on.
+
+Behind the integration
+Label: Behind the integration
+H2: What makes an integration reliable
+P1: A reliable integration is more than connecting two systems. It means defining field mapping and data ownership, handling webhooks and API limits, and building in retries, reconciliation and monitoring so critical data keeps moving reliably across Shopify, ERP, POS and the rest of your infrastructure.
+P2: When an existing connector fits the process, we use it. When the business logic is more complex, we build the integration layer around it — based on the systems involved, data volume, operational risk and how the business actually works.
+Button: Book a call
+
+System architecture
+Label: System architecture
+H2: How your systems work together
+P: Shopify, ERP and POS each have their own role. We build the integration layer between them so data moves reliably across the entire operation.
+Diagram: Shopify (Commerce platform) — Middleware (Integration layer) — ERP (System of record) + POS (In-store operations)
+
+When we can help
+Label: When We Can Help
+H2: When standard solutions stop being enough.
+1 Your systems don’t stay in sync — Orders, inventory or customer data live across different systems, creating inconsistencies, delays and manual work.
+2 Your workflow doesn’t fit an existing app — The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly.
+3 Manual work is becoming part of the system — Your team is moving data, updating stock or handling routine processes by hand because the systems behind the business aren’t connected.
+Button: Book a call
+
+Case
+Label: Proven in practice
+Client: FRESH MARKET
+Tags: Private App · Inventory Sync · POS Integration · Automation
+The challenge: Fresh Market sells the same inventory through its Shopify store and physical locations. Without a shared inventory flow, an item sold in-store could remain available online — creating overselling, cancelled orders and manual stock corrections.
+The challenge was to make both channels operate against the same inventory, so every sale is reflected across the business automatically.
+What we built: We built a connected commerce system that keeps the online store, physical locations and inventory in sync through a custom integration layer. A private app handles the business-specific logic, while automated data flows keep stock availability updated across channels as sales happen.
+Instead of managing online and offline inventory separately, the store operates around one connected flow — with Shopify, POS and inventory data working together behind the scenes.
+Key outcomes:
+- Private App — Custom logic built around the store’s inventory and sales workflow, connecting systems where a standard integration wasn’t enough.
+- Inventory Sync — Stock availability stays aligned between online and physical stores as products are sold across either channel.
+- POS Integration — In-store sales feed back into the connected inventory flow, so offline transactions are reflected online automatically.
+- Automation — Routine inventory updates happen automatically, reducing the need for manual stock adjustments between channels.
+Image: placeholder
+
+Go deeper
+Label: Go deeper
+Text: Explore technical breakdowns, integration stories and lessons from the systems we’ve built for real commerce businesses.
+Cards in Figma: the same placeholder post three times ("Building an AI Analytics Agent with Claude API").
+Built with three real Ghost posts (titles/excerpts from the posts' og tags, 2026-09-24):
+- /blog/custom-shopify-integrations-gifting-brand/ — Custom Shopify Integrations: A UK Gifting Brand Case Study — Vadym-Marko Hruden, 08 Jun 2026
+- /blog/nova-poshta-shopify-integration-connect-app/ — Nova Poshta Shopify Integration — Nova Poshta Connect by Base X Tech — Oleksandr Rudenko, 16 Jun 2026
+- /blog/building-an-ai-analytics-agent-with-claude-api/ — Building an AI Analytics Agent with Claude API — Vadym-Marko Hruden, 21 May 2026
+
+Process
+Label: Our Process
+H2: From mapping the complexity to a system that works.
+01 Map the System — We map every system, workflow and dependency, and define what data each one owns before deciding how they should connect.
+02 Plan the Logic — We define how data should move, what happens when systems disagree and where custom logic is needed before anything gets built.
+03 Build & Test — We build the integration layer, apps and automations, then run real scenarios through them — including the ones that fail.
+04 Launch & Monitor — We launch under real conditions and keep watching the critical flows, because integrations need to keep working after go-live.
+
+FAQ
+Label: faq
+H2: Questions we get asked
+(The eight pairs are identical to the Shopify Integrations page, content/source/03-shopify-integrations.txt.)
+
+Closing CTA
+H2: Have a complex system to connect?
+Body: Talk to our team about your systems, workflows and what needs to work better. We’ll take it from there.
+Button: Book a call
+
+Other Figma comments on this page
+#123 Vadym-Marko: a DE option must exist too (base it on the switcher already in the design).
+#121 Vadym-Marko → Ira: "where is this text from? I can't tie it to a source" (pin location not visible from view-only access).

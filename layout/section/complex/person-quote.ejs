@@ -1,0 +1,22 @@
+<%# Partner block (REQ-013, REQ-016/018): photo, first-person quote, name, role. No direct contact details. %>
+<section id="<%= id %>" class="section section-person-quote theme-light">
+  <div class="container">
+    <div class="person-quote">
+      <figure class="person-quote--photo">
+        <% if (typeof photo !== 'undefined' && photo) { %>
+          <img loading="lazy" src="<%= photo %>" alt="<%= name %>, <%= role %>">
+        <% } else { %>
+          <div class="person-quote--placeholder" role="img" aria-label="Photo of <%= name %> (placeholder)"></div>
+        <% } %>
+      </figure>
+      <div class="person-quote--body">
+        <p class="section-title alt up"><%= label %></p>
+        <blockquote>
+          <% paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
+        </blockquote>
+        <p class="person-quote--name"><%= name %></p>
+        <p class="person-quote--role"><%= role %></p>
+      </div>
+    </div>
+  </div>
+</section>

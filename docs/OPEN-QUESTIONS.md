@@ -22,3 +22,9 @@ None of these block the work that is in progress. Default in brackets is what we
 | Q-16 | Project cards changed vs the page list: Apps = Nova Poshta Connect, UK gifting brand, Mo (not Prime EVA); Web Design = Innan, Gunia, Prime EVA (not BONKIND); Migration = UK gifting brand, Prime EVA, Gunia. Built from the final copy files | Marko | as in final copy | 2026-09-24 |
 | Q-17 | Morpheus Media NYC: can it be named on the Apps page (now "a US agency partner")? | Marko | anonymous | 2026-09-24 |
 | Q-18 | Migration page `<main id>` is `custom-shopify-integrations` (copy-paste leftover), so it inherits that page's CSS. Rename? | Alex | unchanged | 2026-09-24 |
+| Q-19 | Complex page FAQ = the same 8 pairs as Shopify Integrations (as in Figma). Duplicate content; FAQPage schema left off this page. Unique DACH questions? | Marko | same FAQ, no schema | 2026-09-24 |
+| Q-20 | "Fresh Market" case: is it a real, disclosable client (name, facts)? Not in any of Marko's files | Alex / Marko | shown on dev; must be confirmed before prod | 2026-09-24 |
+| Q-21 | Alexander's quote claims "integrations with every major system in the Swiss market" — his experience or ours? Figma comment #121 ("where is this text from?") may be about it | Alexander / Marko | shown on dev; confirm before prod | 2026-09-24 |
+| Q-22 | Complex page title/meta/URL are drafts (not in Figma): "Complex Shopify Systems: ERP, POS & Middleware \| Base X Tech", /pages/complex-solutions/ | Marko | draft | 2026-09-24 |
+| Q-23 | Figma #122: more systems in the strip (marquee) — only systems we delivered (REQ-015). Which? | Marko | Shopify POS, Xentral, Custom APIs, Middleware | 2026-09-24 |
+| Q-24 | Figma #123: DE switch on this page — planned as /de/pages/complex-solutions/ when Alexander's German copy arrives (REQ-019) | Alexander | EN only | 2026-09-24 |

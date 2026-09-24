@@ -1,0 +1,16 @@
+<%# Centered label + H2 + paragraphs (+ optional diagram include, button). %>
+<section id="<%= id %>" class="section section-text-block <%= (typeof theme !== 'undefined' && theme) ? 'theme-' + theme : 'theme-light' %>">
+  <div class="container">
+    <header class="section-header text-block--header">
+      <p class="section-title alt up"><%= label %></p>
+      <h2 class="section-subtitle up"><%- title %></h2>
+      <% paragraphs.forEach(p => { %><p class="text-block--p"><%= p %></p><% }) %>
+    </header>
+    <% if (typeof diagram !== 'undefined' && diagram) { %>
+      <%- include('layout/section/complex/diagram.ejs', diagram) %>
+    <% } %>
+    <% if (typeof button !== 'undefined' && button) { %>
+      <div class="text-block--cta"><a class="btn btn--dark" data-form-trigger href="#"><span><%= button %></span><i arrow-right><span></span></i></a></div>
+    <% } %>
+  </div>
+</section>
