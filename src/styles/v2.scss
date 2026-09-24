@@ -5,6 +5,12 @@
 @use 'v2/complex-v2';
 @use 'v2/modal';
 
+// TWK Everett with the Figma weights. The legacy faces (base/_fonts.scss) register Regular as 500 and Medium as 600,
+// which rendered every Figma "Medium 500" as Regular. Light (300) is not licensed/in the repo yet: 300 falls back to Regular.
+// When public/fonts/TWKEverett-Light.woff2 arrives: add a 300 face and change the Regular range to 400.
+@font-face { font-family: 'TWKEverettV2'; src: url('/fonts/TWKEverett-Regular.woff2') format('woff2'), url('/fonts/TWKEverett-Regular.woff') format('woff'); font-weight: 300 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'TWKEverettV2'; src: url('/fonts/TWKEverett-Medium.woff2') format('woff2'), url('/fonts/TWKEverett-Medium.woff') format('woff'); font-weight: 500 700; font-style: normal; font-display: swap; }
+
 $bp: 1024px;
 @mixin desk { @media (min-width: $bp) { @content; } }
 @mixin mob { @media (max-width: $bp - 1) { @content; } }
@@ -27,7 +33,7 @@ body.v2 {
   margin: 0;
   background: var(--v2-bg);
   color: var(--v2-ink);
-  font-family: 'TWKEverett', system-ui, sans-serif;
+  font-family: 'TWKEverettV2', system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.29;
   -webkit-font-smoothing: antialiased;
@@ -306,8 +312,8 @@ body.v2 .v2-footer {
 body.v2 .v2-h-2xl { font-size: clamp(2.5rem, 4.6vw, 4.0625rem); line-height: .94; letter-spacing: -.03em;
   span { display: block; }
 }
-body.v2 .v2-stories__title, body.v2 .v2-faq__head .v2-h-m { font-family: 'Onest', 'TWKEverett', sans-serif; line-height: 1.1; letter-spacing: -.02em; }
-body.v2 .v2-story blockquote p { font-family: 'Onest', 'TWKEverett', sans-serif; font-size: clamp(1.25rem, 1.9vw, 1.625rem); line-height: 1.1; letter-spacing: -.02em; color: #2a2a2c; }
+body.v2 .v2-stories__title, body.v2 .v2-faq__head .v2-h-m { font-family: 'Onest', 'TWKEverettV2', sans-serif; line-height: 1.1; letter-spacing: -.02em; }
+body.v2 .v2-story blockquote p { font-family: 'Onest', 'TWKEverettV2', sans-serif; font-size: clamp(1.25rem, 1.9vw, 1.625rem); line-height: 1.1; letter-spacing: -.02em; color: #2a2a2c; }
 
 body.v2 .v2-caps .v2-section__head { @include desk { grid-template-columns: 1fr minmax(0, 526px); } }
 body.v2 .v2-capcards {

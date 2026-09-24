@@ -31,7 +31,7 @@ body.v2 .v2-modal {
     &:hover, &:focus-visible { background: rgba(255, 255, 255, .14); }
   }
   .v2-modal__title {
-    font-family: 'Onest', 'TWKEverett', sans-serif; font-weight: 300;
+    font-family: 'Onest', 'TWKEverettV2', sans-serif; font-weight: 300;
     font-size: 32px; line-height: 1.1; letter-spacing: -.02em; padding-right: 48px;
     span { display: block; }
   }
@@ -44,7 +44,7 @@ body.v2 .v2-modal {
   .v2-modal__state-title { color: #fff; font-size: 24px; font-weight: 500; line-height: 1.2; }
   .v2-modal__secondary {
     align-self: flex-start; margin-top: 8px; height: 42px; padding: 0 16px; border-radius: 4px; border: 0;
-    background: #fff; color: #040507; font: 500 16px/1 'TWKEverett', sans-serif; cursor: pointer;
+    background: #fff; color: #040507; font: 500 16px/1 'TWKEverettV2', sans-serif; cursor: pointer;
   }
 }
 
@@ -60,7 +60,7 @@ body.v2 .v2-form {
     width: 100%; box-sizing: border-box; min-height: 44px; padding: 12px 20px;
     border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px;
     background: transparent; color: #fff;
-    font: 300 14px/1.29 'TWKEverett', sans-serif;
+    font: 300 14px/1.29 'TWKEverettV2', sans-serif;
     &::placeholder { color: #a8a8a8; opacity: 1; }
     &:focus { outline: none; border-color: #fff; }
     &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 1px; }
@@ -112,7 +112,7 @@ body.v2 .v2-mnav__list { display: flex; flex-direction: column; gap: 4px; }
 body.v2 .v2-mnav__item {
   display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; min-height: 44px; box-sizing: border-box;
   padding: 6px 12px; border: 0; border-radius: 4px; background: #27282a; color: #fff;
-  font: 300 14px/1.4 'TWKEverett', sans-serif; text-decoration: none; text-align: left; cursor: pointer;
+  font: 300 14px/1.4 'TWKEverettV2', sans-serif; text-decoration: none; text-align: left; cursor: pointer;
   &:hover, &:focus-visible { background: #35373a; }
 }
 body.v2 .v2-mnav__back { justify-content: flex-start; margin-bottom: 4px; }
