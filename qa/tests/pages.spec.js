@@ -10,7 +10,8 @@ for (const page of enPages) {
       const errors = [];
       // CookieYes warns when the host is not the registered prod domain (localhost, dev) — expected off prod.
       const offProd = !(process.env.QA_BASE_URL || '').startsWith('https://base-xtech.com');
-      const expected = (msg) => offProd && /CookieYes|website URL has changed/i.test(msg);
+      // Third-party review widgets (GoodFirms, Sortlist) log their own frame/CSP errors — not ours to fix.
+      const expected = (msg) => (offProd && /CookieYes|website URL has changed/i.test(msg)) || /goodfirms|sortlist/i.test(msg);
       p.on('console', (m) => {
         if (m.type() === 'error' && !expected(m.text())) errors.push(`${m.text()} ${m.location()?.url || ''}`.trim());
       });
