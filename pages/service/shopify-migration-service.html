@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<%# Copy: content/source/04-shopify-migration.txt (Marko, final). Slot order: spec §5 D8. %>
 <%- include('layout/head-alt.ejs', {
-  title: "Shopify Migration Services for Your Store | Base X Tech",
-  description: "We migrate your store to Shopify from Magento, WooCommerce, or another platform, moving your catalog, customer data, and SEO rankings safely.",
+  title: "Magento & WooCommerce to Shopify Migration | Base X Tech",
+  description: "We move stores to Shopify from Magento, WooCommerce, BigCommerce or in-house platforms: data checked row by row, redirects and rankings handled.",
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/pages/service/shopify-migration-service/",
   hreflangDefault: "https://base-xtech.com/pages/service/shopify-migration-service/"
@@ -19,9 +20,11 @@
       include('layout/section/hero-type-two.ejs', {
         locale: 'en',
         id: "service-hero",
-        title: "Shopify <br>Migration <br>Service",
-        subtitle: "Move Your Store to Shopify Safely",
-        description: "We provide secure and efficient Shopify migration services, ensuring all store data, design elements, and functionality are preserved during the transition.",
+        subtitle: "Shopify Migration",
+        title: "Shopify migration<br> without losing what<br> already works",
+        description: "Magento, WooCommerce, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.",
+        title_size: "long",
+        button_text: "Discuss Your Project",
         icons: [
           "webflow",
           "magento",
@@ -33,223 +36,196 @@
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
         id: "service-type-of-apps",
-        title: "SERVICES AND TECHNOLOGIES",
-        subtitle: "<span class='accent'>Seamlessly</span> Move Your Store to Shopify with Confidence",
+        title: "Our Capabilities",
+        subtitle: "Every platform leaves<br class='br-desk'> <span class='accent'>different problems.</span>",
         cards: [
           {
-            empty: true
+            title: "Magento to Shopify",
+            description: "Magento 1 and 2 stores moved without carrying the maintenance bill over.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Product and Catalog Transfer",
-            description: "We migrate your complete product data set: titles, SKUs, descriptions, pricing, images, variants, categories, tags, and SEO metadata. Whether you sell 50 items or 50,000, we ensure no loss of data and no manual re-entry is required after migration. Your full catalog arrives structured, accurate, and ready for customers.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "WooCommerce to Shopify",
+            description: "WordPress and WooCommerce stores moved off plugin dependency for good.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Customer and Order Data Migration",
-            description: "We rebuild, optimize, or enhance your existing store design for Shopify. Whether you want a fresh new look or prefer to keep the same style, our Shopify expert team ensures brand consistency, mobile responsiveness, and optimal performance.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "BigCommerce to Shopify",
+            description: "BigCommerce stores moved with the catalogue and URLs intact.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Design and Theme Implementation",
-            description: "We rebuild, optimize, or enhance your existing store design for Shopify. Whether you want a fresh new look or prefer to keep the same style, our Shopify expert team ensures brand consistency, mobile responsiveness, and optimal performance.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Custom Platform Moves",
+            description: "In-house platforms moved to Shopify, including the parts nobody documented.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Third-Party Tools and App Connections",
-            description: "We reconnect your essential apps and third-party tools with no functionality loss. As a Shopify agency, we handle marketing platforms, CRM systems, shipping solutions, accounting software, and custom APIs to ensure full business continuity.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
+            title: "Data & Integrity",
+            description: "Products, customers and order history moved and checked row by row.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
           },
           {
-            title: "Multi-Platform Store Migration",
-            description: "Whether you’re coming from Magento, WooCommerce, BigCommerce, PrestaShop, Wix, Squarespace, or a custom-built store, we help you move to Shopify efficiently. We minimize risks and delays while preserving every critical data set and feature of your store.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
-          },
-          {
-            title: "SEO and URL Mapping",
-            description: "We protect your traffic and rankings by mapping every existing URL and setting up smart redirects. Every shopify migrate project we handle includes SEO audits, error checks, and full redirect setup to preserve your search presence post-migration.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
-          },
-          {
-            title: "Pre-Launch Testing and Optimization",
-            description: "Before your store goes live, we conduct exhaustive quality checks on desktop and mobile devices. We test speed, security, responsiveness, checkout functionality, and third-party integrations to guarantee flawless performance from day one.",
-            background_image: "/images/pages/service/index/app-types/card-1.png",
-            icons: [
-              "shopify"
-            ]
-          },
+            title: "Keeping Traffic",
+            description: "Redirects, canonicals and hreflang set so rankings survive the switch.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          }
         ]
       })
     %>
-
-    <%-
-      include('layout/section/split.ejs', {
-        locale: 'en',
-        theme: 'light',
-        id: "service-advantages",
-        title: "ADVANTAGES",
-        subtitle: "<span class='accent'>Why Choose</span><br> Base-X-Tech",
-        content_cards: [
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Outcome-Driven Approach",
-            description: "Our goal isn’t just to transfer data. We help you build a Shopify store that delivers higher conversions, better usability, and long-term scalability."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "In-House Execution",
-            description: "All migration work is completed by our internal team. No freelancers. No confusion. You always know exactly who’s responsible for each stage of your project."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Flexible and Fast",
-            description: "We work quickly and adapt to your evolving needs. You’ll always have full visibility into your timeline, with proactive communication from start to finish."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "True Shopify Experts",
-            description: "Our Shopify expert team has completed dozens of complex migrations across industries and platforms. We know the ecosystem, the limitations, and how to avoid costly mistakes during transition."
-          },
-          {
-            subtitle: "<span class='fig-rhombus black'></span>",
-            title: "Transparent and Reliable",
-            description: "We believe in clear deliverables, no hidden fees, and providing exactly what we promise. You get a dependable partner who values integrity as much as quality."
-          },
-        ]
-      })
-    %>
-
 
     <%- include('layout/section/works.ejs', {
+      semantic: true,
       locale: 'en',
       id: "service-portfolio",
       theme: "dark",
-      title: "PORTFOLIO",
-      subtitle: "<span class='hide-desk'>Our featured projects</span><span class='hide-mob'>Foundations<br> of Impactful <br>Digital <br>Experiences</span>",
-      description: "A showcase of brands we’ve helped grow through strategy, design, and technology. Each project is a testament to our commitment to building lasting digital experiences.",
+      title: "Recent Projects",
+      stat: "1M+",
+      description: "Customer profiles migrated, 13 years of history moved, and a 4.8 rating on Upwork. Migrations that keep the traffic.",
       items: [
         {
-          title: "Naya Tech",
-          text: "Design & Shopify development for technology startup",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-1-bg.png",
+          title: "UK gifting brand",
+          text: "Moved off a custom platform with 1M+ customer profiles intact.",
+          tags: "Migration / Integrations / Gifting",
           icons: ['shopify']
         },
         {
-          title: "Bonkind",
-          text: "Brand identity & redesign of self-care ecommerce",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-2-bg.png",
-          icons: ['figma', 'ai']
+          title: "Prime EVA",
+          text: "Migrated, then integrated with the ERP the business runs on.",
+          tags: "Migration / ERP",
+          link: "https://primeeva.com/",
+          background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
+          icons: ['shopify']
         },
         {
-          title: "KLOTT",
-          text: "Store setup & customizations for fashion brand",
-          link: "https://ua.klottclothes.com/",
-          background_image: "/images/sections/works/card-3-bg.png",
-          icons: ['git', 'shopify']
+          title: "Gunia",
+          text: "Replatformed and redesigned for a Ukrainian luxury homeware brand.",
+          tags: "Replatform / Homeware",
+          icons: ['shopify']
         }
       ]
     }) %>
 
     <%-
       include('layout/section/split.ejs', {
+        semantic: true,
         locale: 'en',
         theme: 'light',
-        id: "service-expertise",
-        title: "EXPERTISE",
-        subtitle: "Working <br> across <br class='br-desk'><span class='accent'>Key <br class='br-mob'>Industries</span>",
-        description: "<h2 class='title up'>10</h2><p>We have worked with 10 verticals and brought better results to clients</p>",
-        media_cards: [
+        id: "service-advantages",
+        title: "When We Can Help",
+        subtitle: "The platform costs more<br class='br-desk'> than <span class='accent'>it returns.</span>",
+        content_cards: [
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Every change needs a developer" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Your platform is end of life" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Hosting costs more than the store earns" }
+        ]
+      })
+    %>
+
+    <%- include('layout/section/info.ejs', {
+      semantic: true,
+      locale: "en",
+      id: "reviews",
+      theme: "dark",
+      class: "reviews",
+      title: "What clients say",
+      background_image: "/images/pages/shopify-development/section/reviews/back.png",
+      background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
+      reviews: [
+        {
+          text: "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+          name: "Gunia",
+          post: "Store Migration"
+        },
+        {
+          text: "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+          name: "VT Advantec",
+          post: "Shopify Development"
+        },
+        {
+          text: "We received positive feedback from customers about the new site, which was fully functional and met all our needs.",
+          name: "Lili Mager",
+          post: "Store Build"
+        }
+      ]
+    }) %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        locale: 'en',
+        id: 'service-faq',
+        title: 'How We Migrate',
+        subtitle: 'From audit to a store<br> that holds <span class="accent">its traffic.</span>',
+        button: {
+          text: "Discuss Your Project"
+        },
+        faq: [
           {
-            title: "fashion",
-            image: "/images/pages/service/index/industries/card-1.png"
+            title: "Audit & Inventory",
+            description: "We catalogue every URL, product, customer and integration on the old platform, because what gets missed is what gets lost."
           },
           {
-            title: "beauty",
-            image: "/images/pages/service/index/industries/card-2.png"
+            title: "Plan & Map",
+            description: "We map old URLs to new, decide what moves and what gets rebuilt, and agree the cutover before touching anything."
           },
           {
-            title: "automotive",
-            image: "/images/pages/service/index/industries/card-3.png"
+            title: "Migrate & Verify",
+            description: "We move the data and check it against the source, then run the store on a staging build until it behaves."
           },
           {
-            title: "Food & Drinks",
-            image: "/images/pages/service/index/industries/card-4.png"
-          },
-          {
-            title: "Jewelry & Luxury",
-            image: "/images/pages/service/index/industries/card-5.png"
-          },
-          {
-            title: "Furniture & Decor",
-            image: "/images/pages/service/index/industries/card-6.png"
-          },
-          {
-            title: "Health & Supplements",
-            image: "/images/pages/service/index/industries/card-7.png"
-          },
-          {
-            title: "Bags & Accessories",
-            image: "/images/pages/service/index/industries/card-8.png"
-          },
-          {
-            title: "Tech & Gadgets",
-            image: "/images/pages/service/index/industries/card-9.png"
-          },
-          {
-            title: "Sports & Lifestyle",
-            image: "/images/pages/service/index/industries/card-10.png"
-          },
+            title: "Launch & Watch",
+            description: "We import redirects, submit sitemaps and monitor Search Console for weeks after, not days."
+          }
         ]
       })
     %>
 
     <%-
       include('layout/section/faq.ejs', {
+        semantic: true,
+        schema: true,
+        numbered: false,
+        extra_class: 'faq-list',
         locale: 'en',
-        id: 'service-faq',
-        title: 'WORKFLOW',
-        subtitle: '<span class="accent">How We Do It</span><br> at Base-X-Tech',
-        button: {
-          text: "Discuss a project"
-        },
+        id: 'service-questions',
+        title: 'FAQ',
+        subtitle: 'Questions we <span class="accent">get asked</span>',
         faq: [
           {
-            title: "Strategy Call",
-            description: "We start by understanding your current platform, pain points, and business goals. Together, we define migration objectives and outline the scope."
+            title: "How long does a Shopify migration take?",
+            description: "It depends on the catalogue, the integrations and how much of the old platform was custom. A straightforward catalogue move runs in weeks. The UK gifting brand's move off a platform built in-house, covering 1M+ customer profiles and thirteen years of history, took four to six months."
           },
           {
-            title: "Planning the Migration",
-            description: "We map out the project with detailed milestones, deadlines, deliverables, and risk assessments. You’ll have a clear blueprint before we start."
+            title: "Will we lose our Google rankings?",
+            description: "Not if the redirects are done properly, and that is the part nobody quotes for. Every old URL needs to point at its new equivalent in one hop, canonicals and hreflang need to be right on arrival, and Search Console needs watching for weeks afterwards rather than days."
           },
           {
-            title: "Data Migration and Store Setup",
-            description: "We safely transfer your data, rebuild your Shopify store, customize your design, integrate apps, and configure store settings based on your goals."
+            title: "What happens to our order history and customer accounts?",
+            description: "They come with you. Products, customers, order history and the relationships between them are moved and then checked against the source rather than assumed. We moved 1M+ profiles and thirteen years of history for a UK gifting brand. The checking is the slow part and it is not optional."
           },
           {
-            title: "Testing and Launch",
-            description: "We run comprehensive testing across devices and browsers. Once we’re confident your store is perfect, we help you go live and provide post-launch support to resolve any adjustments as you grow."
+            title: "Can you migrate from a custom-built platform?",
+            description: "Yes, and that is the harder case. Off-the-shelf platforms export predictably; in-house ones have logic nobody documented and fields nobody remembers. We work out what the old system actually does before moving anything, including the parts that only exist in someone's head."
+          },
+          {
+            title: "Do we need Shopify Plus to migrate?",
+            description: "Not to migrate. Plus matters afterwards, if you need checkout customisation, B2B company accounts or higher API limits. We will tell you which of your requirements need it rather than putting you on Plus by default."
+          },
+          {
+            title: "What about our current integrations?",
+            description: "They get rebuilt, not carried over. Your ERP, CRM, fulfilment and courier connections were written against the old platform's API and none of them transfer. We inventory every one at the audit stage, because an integration discovered late is what turns a migration into an overrun."
+          },
+          {
+            title: "Can the store stay live during the migration?",
+            description: "Yes. The new store is built and tested on a password-protected Shopify instance while your current one keeps selling. The cutover is a planned switch with the redirects already prepared, not a period where nothing works."
+          },
+          {
+            title: "What happens after we launch on Shopify?",
+            description: "We watch it. Redirects get verified against live responses, sitemaps get submitted, and Search Console gets checked for weeks rather than days. Migrations rarely fail on launch day. They fail three weeks later, when nobody is looking at the coverage report."
           }
         ]
       })
@@ -257,7 +233,14 @@
 
     <%- include('layout/section/approach.ejs') -%>
 
-    <%- include('layout/section/cta.ejs') %>
+    <%- include('layout/section/cta.ejs', {
+      cta: {
+        label: "Let’s talk",
+        title: "Outgrown the platform<br> you started on?",
+        body: "Tell us what you're on now and we'll tell you what moving actually involves.",
+        button: "Let's Talk"
+      }
+    }) %>
   </main>
 
   <%- include('layout/footer-alt.ejs') %>
