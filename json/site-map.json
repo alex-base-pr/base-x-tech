@@ -1,0 +1,23 @@
+{
+  "host": "https://base-xtech.com",
+  "_note": "Single source of truth for sitemap.xml, llms.txt, nav checks and QA. Spec §8. index = in sitemap + indexable; absorbed = live, canonical to parent, not in sitemap; noindex = live, robots noindex, not in sitemap.",
+  "pages": [
+    { "path": "/", "file": "index.html", "lang": "en", "role": "index", "group": "home", "name": "Home" },
+    { "path": "/pages/shopify-development/", "file": "pages/shopify-development.html", "lang": "en", "role": "index", "group": "service", "name": "Shopify Development", "faq": true },
+    { "path": "/pages/service/custom-shopify-integrations/", "file": "pages/service/custom-shopify-integrations.html", "lang": "en", "role": "index", "group": "service", "name": "Shopify Integrations" },
+    { "path": "/pages/service/shopify-migration-service/", "file": "pages/service/shopify-migration-service.html", "lang": "en", "role": "index", "group": "service", "name": "Shopify Migration" },
+    { "path": "/pages/service/custom-shopify-app-development/", "file": "pages/service/custom-shopify-app-development.html", "lang": "en", "role": "index", "group": "service", "name": "Custom Shopify Apps" },
+    { "path": "/pages/service/custom-web-design-services/", "file": "pages/service/custom-web-design-services.html", "lang": "en", "role": "index", "group": "service", "name": "Web Design", "faq": true },
+    { "path": "/pages/service/conversion-rate-optimization/", "file": "pages/service/conversion-rate-optimization.html", "lang": "en", "role": "index", "group": "service", "name": "Conversion Rate Optimization" },
+    { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
+    { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
+
+    { "path": "/pages/service/shopify-theme-customization-and-development/", "file": "pages/service/shopify-theme-customization-and-development.html", "lang": "en", "role": "absorbed", "canonical": "/pages/shopify-development/" },
+    { "path": "/pages/service/shopify-headless-development/", "file": "pages/service/shopify-headless-development.html", "lang": "en", "role": "absorbed", "canonical": "/pages/shopify-development/" },
+    { "path": "/pages/service/shopify-app-design-services/", "file": "pages/service/shopify-app-design-services.html", "lang": "en", "role": "absorbed", "canonical": "/pages/service/custom-shopify-app-development/" },
+    { "path": "/pages/service/mvp-design-services/", "file": "pages/service/mvp-design-services.html", "lang": "en", "role": "absorbed", "canonical": "/pages/service/custom-web-design-services/" },
+    { "path": "/pages/service/ppc-advertising/", "file": "pages/service/ppc-advertising.html", "lang": "en", "role": "noindex" },
+    { "path": "/pages/service/seo-promotion/", "file": "pages/service/seo-promotion.html", "lang": "en", "role": "noindex" }
+  ],
+  "uk": { "_note": "UA pages are untouched (EN-only release) and all stay in the sitemap as today.", "include_all": true }
+}

@@ -36,11 +36,11 @@ so indexing of the new positioning starts now. A throwaway-but-production-qualit
 | REQ-002 | The six service pages shall carry Marko's copy (§8 source file) in the existing section components: title, meta description, H1, capabilities, projects, "when we can help", FAQ where provided, CTA. | T-002, T-010 |
 | REQ-003 | Each EN page shall contain exactly one `<h1>`. | T-003 |
 | REQ-004 | Each EN page shall have a `<title>` ≤ 60 chars and a meta description ≤ 160 chars, unique across the site. | T-003 |
-| REQ-005 | Each page shall have `<link rel="canonical">` pointing to its clean URL on `https://base-xtech.com` (no `.html`, no trailing slash, matching sitemap). | T-003 |
-| REQ-006 | Header, drawer nav and footer links shall use clean URLs (no `.html`). | T-004 |
+| REQ-005 | Each page shall have `<link rel="canonical">` **in the static HTML** (today it is injected by JS) pointing to its prod URL in the server's canonical form: `https://base-xtech.com/pages/<path>/` (trailing slash, no `.html`; home = `/`). | T-003 |
+| REQ-006 | Header, drawer nav and footer links shall use the canonical form (trailing slash, no `.html`) — already true on `live`, keep it. | T-004 |
 | REQ-007 | The services menu shall list exactly the six service pages (§8 rows 2–7). | T-004 |
 | REQ-008 | The six absorbed pages (§8 table B) shall stay reachable, be removed from nav and `sitemap.xml`; theme/headless/app-design/mvp shall have canonical → absorbing page; ppc/seo shall carry `noindex, follow`. | T-003, T-005 |
-| REQ-009 | `sitemap.xml` shall list exactly the indexable URLs of §8 (EN + unchanged UA), with the prod host. | T-005 |
+| REQ-009 | `sitemap.xml` shall list exactly the indexable URLs of §8 (EN + unchanged UA) in canonical form (trailing slash) — today it lists no-slash URLs that 301. | T-005 |
 | REQ-010 | Home shall get Marko's Home copy when delivered; until then its title/meta shall drop "Marketing". | T-003, T-010 |
 | REQ-011 | Where the About text is delivered, `/pages/about` shall exist, be in nav and sitemap. | T-001, T-004 |
 | REQ-012 | Where the partnership ("Karl") text is delivered, it shall be a public, indexed page at a URL agreed with the owner, in sitemap. | T-001, T-005 |
@@ -121,6 +121,7 @@ prod path (§16 follow-up).
 | Old site: Vite 6, EJS, SCSS, flickity, motion; `npm run build` → `dist/` + sitemap | base-xtech/base-xtech `package.json`, `vite.config.js` |
 | Deploy: GH Actions, push `staging`/`live` → rsync to server (secrets REMOTE_*) ; `deploy-live.yml` job is misnamed "Deploy to Staging" | `.github/workflows/*` |
 | Obfuscated malware (`global['!']…`, loads `require` and runs payload) was appended to `vite.config.js`; removed in `ac221cd` 2026-06-03. Current tree scanned — no remaining copy | `git show ac221cd`, grep of tree |
+| Prod `.htaccess` (live): `.html` → 301 clean; clean → 301 trailing slash; canonical form is `/pages/x/`. Canonical tag is added by inline JS in `layout/head-alt.ejs:26`. `generate-sitemap.js` emits no-slash URLs | `public/.htaccess`, `layout/head-alt.ejs`, `generate-sitemap.js` |
 | Live: Cloudflare in front; root served by shared hosting (`x-ray: wnp…`, `x-page-speed`), `/blog/` by Ghost 6.43 (Express) — different origins | `curl -I` 2026-09-24 |
 | `www` → apex 301 already live | `curl` |
 | Live pages: `/x` → 301 → `/x/`; `/x.html` also served; nav links use `.html`; no canonical tags | curl, `layout/*.ejs`, Marko's page list |

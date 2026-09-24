@@ -2,3 +2,8 @@ dist
 node_modules
 .htpasswd
 .DS_Store
+
+# QA output
+qa/results
+qa/report
+qa/screens
