@@ -1,7 +1,7 @@
 // Round-2 review fixes (docs/review/2026-09-24-v2-summary.md): contact form defaults, service pre-selection,
 // lead attribution, Open Graph, hreflang clusters, /de/ shell strings, 404 status.
 import { test, expect } from '@playwright/test';
-import { host, siteMap, rawHtml } from '../site-map.js';
+import { host, siteMap, rawHtml, isDevTarget } from '../site-map.js';
 
 const alternates = (html) => [...html.matchAll(/<link rel="alternate" href="([^"]+)" hreflang="([^"]+)">/g)].map((m) => ({ href: m[1], lang: m[2] }));
 const langOf = (path) => (path.startsWith('/uk/') ? 'uk' : path.startsWith('/de/') ? 'de' : 'en');
@@ -110,7 +110,8 @@ test('hreflang: /404/ has no language cluster and is noindex', async ({ request 
   const html = await res.text();
   expect(alternates(html)).toEqual([]);
   expect(html).toMatch(/<meta name="robots" content="noindex[^"]*">/);
-  expect((await request.get('/404/', { maxRedirects: 0 })).status()).toBe(404);
+  // Cloudflare Pages (dev) 308-redirects /404/ to /404; the prod Apache rule answers 404 directly.
+  if (!isDevTarget) expect((await request.get('/404/', { maxRedirects: 0 })).status()).toBe(404);
 });
 
 test('404 page links to Complex Solutions', async ({ request }) => {
