@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%# Structure: Figma "Complex Service" (agreed 2026-09-24). Copy: content/pages/complex-solutions.en.json. %>
+<%# Design v2 (Figma "Complex" 877:1584). Copy: content/pages/complex-solutions.en.json (REQ-013…019). %>
 <%
   const c = content['complex-solutions'].en;
   const url = 'https://base-xtech.com/pages/complex-solutions/';
@@ -8,6 +8,6 @@
   if (content['complex-solutions'].de) hreflangs.push({ lang: 'de', href: 'https://base-xtech.com/de/pages/complex-solutions/' });
   hreflangs.push({ lang: 'x-default', href: url });
 %>
-<%- include('layout/head-alt.ejs', { title: c.meta.title, description: c.meta.description, hreflangs }) %>
-<%- include('layout/pages/complex-solutions-body.ejs', { c, lang: 'en' }) %>
+<%- include('layout/head-alt.ejs', { title: c.meta.title, description: c.meta.description, hreflangs, v2: true }) %>
+<%- include('layout/pages/complex-v2-body.ejs', { c, lang: 'en' }) %>
 </html>

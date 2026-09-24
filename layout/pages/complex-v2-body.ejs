@@ -1,0 +1,276 @@
+<%# Complex Solutions / DACH page, design v2 (Figma "Complex" 877:1584). Copy: content/pages/complex-solutions.<lang>.json (REQ-013…019).
+    All text is in the HTML. Every CTA opens our contact drawer (REQ-018): no direct contacts of the partner, no logos of his clients (REQ-016).
+    FAQ = the same pairs as Shopify Integrations, so no data-faq-q/a here → no FAQPage schema on this page (Q-19). %>
+<%
+  const btn = (text) => include('layout/v2/button.ejs', { text });
+  const pad2 = (i) => String(i + 1).padStart(2, '0');
+%>
+<body class="v2 cx-page locale-en" lang="<%= lang %>">
+  <%- include('layout/noscript.ejs') %>
+  <%- include('layout/v2/header.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <nav class="v2-rail" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span></nav>
+
+  <main id="complex-solutions" class="v2-main cx">
+
+    <%# Hero + systems strip (REQ-015, Q-23/Q-25) %>
+    <section class="cx-hero" data-v2-section>
+      <div class="cx-hero__body">
+        <p class="cx-label cx-label--dark"><%= c.hero.eyebrow %></p>
+        <h1 class="cx-hero__title"><%- c.hero.title %></h1>
+        <p class="cx-hero__lead"><%= c.hero.lead %></p>
+        <div class="cx-btn cx-btn--light"><%- btn(c.hero.button) %></div>
+      </div>
+      <div class="cx-strip">
+        <p class="cx-strip__label"><%= c.strip.label %></p>
+        <div class="cx-strip__viewport">
+          <ul class="cx-strip__track">
+            <% c.strip.items.forEach(item => { %><li><%= item %></li><% }) %>
+          </ul>
+          <ul class="cx-strip__track" aria-hidden="true">
+            <% c.strip.items.forEach(item => { %><li><%= item %></li><% }) %>
+          </ul>
+        </div>
+        <% if (c.strip.ready && c.strip.ready.length) { %>
+          <%# Systems we can integrate but have no delivered project with yet — said plainly (Alex, 2026-09-24; Q-25). %>
+          <p class="cx-strip__ready"><span><%= c.strip.readyLabel %></span> <%= c.strip.ready.join(' · ') %></p>
+        <% } %>
+      </div>
+    </section>
+
+    <%# Partner block (REQ-013/016/017/018): photo placeholder, first-person quote, name, role — no email, phone or calendar. %>
+    <section class="cx-section cx-partner" id="local-expertise" data-v2-section>
+      <figure class="cx-partner__photo">
+        <% if (c.partner.photo) { %>
+          <img loading="lazy" src="<%= c.partner.photo %>" alt="<%= c.partner.name %>, <%= c.partner.role %>">
+        <% } else { %>
+          <div class="cx-partner__placeholder" role="img" aria-label="<%= c.partner.photoPlaceholder %>"></div>
+        <% } %>
+      </figure>
+      <div class="cx-partner__body">
+        <h2 class="cx-label"><%= c.partner.label %></h2>
+        <figure class="cx-partner__quote">
+          <blockquote>
+            <% c.partner.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
+          </blockquote>
+          <figcaption><strong><%= c.partner.name %></strong><span><%= c.partner.role %></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <%# Capabilities (6) %>
+    <section class="cx-section cx-caps" id="capabilities" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.capabilities.label %></p>
+        <h2 class="cx-h2"><%- c.capabilities.title %></h2>
+      </header>
+      <ul class="cx-caps__grid">
+        <% c.capabilities.cards.forEach(card => { %>
+          <li class="cx-caps__item">
+            <h3 class="cx-h3"><%= card.title %></h3>
+            <p><%= card.description %></p>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <%# What an integration really includes (REQ-014) %>
+    <section class="cx-section cx-text" id="behind-the-integration" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.reliable.label %></p>
+        <h2 class="cx-h2"><%- c.reliable.title %></h2>
+      </header>
+      <div class="cx-text__body">
+        <% c.reliable.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
+      </div>
+      <div class="cx-btn cx-btn--dark"><%- btn(c.reliable.button) %></div>
+    </section>
+
+    <%# Architecture: text-based SVG (readable by screen readers, search engines and AI assistants) — REQ-013 %>
+    <% const d = c.architecture.diagram; %>
+    <section class="cx-section cx-arch" id="system-architecture" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.architecture.label %></p>
+        <h2 class="cx-h2"><%- c.architecture.title %></h2>
+        <% c.architecture.paragraphs.forEach(p => { %><p class="cx-head__lead"><%= p %></p><% }) %>
+      </header>
+      <figure class="cx-diagram">
+        <svg class="cx-diagram__svg--wide" viewBox="0 0 1000 260" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
+          <title id="flow-title"><%= d.svgTitle %></title>
+          <desc id="flow-desc"><%= d.svgDesc %></desc>
+          <g class="cx-diagram__links">
+            <path d="M262 130 H372 M628 130 H698"/>
+            <circle cx="262" cy="130" r="4"/><circle cx="372" cy="130" r="4"/>
+            <circle cx="628" cy="130" r="4"/><circle cx="698" cy="130" r="4"/>
+          </g>
+          <rect class="cx-diagram__box" x="12" y="62" width="250" height="136" rx="14"/>
+          <rect class="cx-diagram__box cx-diagram__box--mid" x="372" y="46" width="256" height="168" rx="14"/>
+          <rect class="cx-diagram__group" x="698" y="28" width="290" height="204" rx="16"/>
+          <rect class="cx-diagram__box" x="712" y="42" width="262" height="84" rx="10"/>
+          <rect class="cx-diagram__box" x="712" y="134" width="262" height="84" rx="10"/>
+          <g class="cx-diagram__icon" aria-hidden="true">
+            <path d="M486 84 l14 -8 l14 8 l-14 8 z M486 94 l14 8 l14 -8 M486 104 l14 8 l14 -8"/>
+            <ellipse cx="752" cy="72" rx="12" ry="5"/><path d="M740 72 v24 c0 3 5 5 12 5 s12 -2 12 -5 v-24 M740 84 c0 3 5 5 12 5 s12 -2 12 -5"/>
+            <path d="M740 168 h24 l-2 -8 h-20 z M742 168 v18 h20 v-18 M749 186 v-9 h6 v9"/>
+          </g>
+          <g class="cx-diagram__text">
+            <text x="137" y="132" text-anchor="middle" class="cx-diagram__name"><%= d.shopify %></text>
+            <text x="137" y="160" text-anchor="middle" class="cx-diagram__role"><%= d.shopifyRole.toUpperCase() %></text>
+            <text x="500" y="150" text-anchor="middle" class="cx-diagram__name"><%= d.middleware %></text>
+            <text x="500" y="178" text-anchor="middle" class="cx-diagram__role"><%= d.middlewareRole.toUpperCase() %></text>
+            <text x="784" y="82" class="cx-diagram__name cx-diagram__name--s"><%= d.erp %></text>
+            <text x="784" y="104" class="cx-diagram__role"><%= d.erpRole.toUpperCase() %></text>
+            <text x="784" y="174" class="cx-diagram__name cx-diagram__name--s"><%= d.pos %></text>
+            <text x="784" y="196" class="cx-diagram__role"><%= d.posRole.toUpperCase() %></text>
+          </g>
+        </svg>
+        <%# Phones: the same boxes stacked (only one of the two SVGs is displayed; both use the title/desc above). %>
+        <svg class="cx-diagram__svg--stack" viewBox="0 0 340 474" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
+          <g class="cx-diagram__links">
+            <path d="M170 100 V140 M170 260 V300"/>
+            <circle cx="170" cy="100" r="4"/><circle cx="170" cy="140" r="4"/>
+            <circle cx="170" cy="260" r="4"/><circle cx="170" cy="300" r="4"/>
+          </g>
+          <rect class="cx-diagram__box" x="20" y="2" width="300" height="98" rx="14"/>
+          <rect class="cx-diagram__box cx-diagram__box--mid" x="20" y="140" width="300" height="120" rx="14"/>
+          <rect class="cx-diagram__group" x="8" y="300" width="324" height="172" rx="16"/>
+          <rect class="cx-diagram__box" x="20" y="312" width="300" height="70" rx="10"/>
+          <rect class="cx-diagram__box" x="20" y="390" width="300" height="70" rx="10"/>
+          <g class="cx-diagram__icon" aria-hidden="true">
+            <path transform="translate(-330 78)" d="M486 84 l14 -8 l14 8 l-14 8 z M486 94 l14 8 l14 -8 M486 104 l14 8 l14 -8"/>
+            <g transform="translate(-690 261)"><ellipse cx="752" cy="72" rx="12" ry="5"/><path d="M740 72 v24 c0 3 5 5 12 5 s12 -2 12 -5 v-24 M740 84 c0 3 5 5 12 5 s12 -2 12 -5"/></g>
+            <path transform="translate(-690 252)" d="M740 168 h24 l-2 -8 h-20 z M742 168 v18 h20 v-18 M749 186 v-9 h6 v9"/>
+          </g>
+          <g class="cx-diagram__text">
+            <text x="170" y="50" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.shopify %></text>
+            <text x="170" y="76" text-anchor="middle" class="cx-diagram__role"><%= d.shopifyRole.toUpperCase() %></text>
+            <text x="170" y="222" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.middleware %></text>
+            <text x="170" y="246" text-anchor="middle" class="cx-diagram__role"><%= d.middlewareRole.toUpperCase() %></text>
+            <text x="94" y="344" class="cx-diagram__name cx-diagram__name--s"><%= d.erp %></text>
+            <text x="94" y="366" class="cx-diagram__role"><%= d.erpRole.toUpperCase() %></text>
+            <text x="94" y="422" class="cx-diagram__name cx-diagram__name--s"><%= d.pos %></text>
+            <text x="94" y="444" class="cx-diagram__role"><%= d.posRole.toUpperCase() %></text>
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <%# When we can help %>
+    <section class="cx-section cx-help" id="when-we-can-help" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.help.label %></p>
+        <h2 class="cx-h2"><%- c.help.title %></h2>
+      </header>
+      <ul class="cx-help__grid">
+        <% c.help.cards.forEach(card => { %>
+          <li class="cx-card">
+            <h3 class="cx-h3 cx-h3--s"><%= card.title %></h3>
+            <p><%= card.description %></p>
+          </li>
+        <% }) %>
+      </ul>
+      <div class="cx-btn cx-btn--dark"><%- btn(c.hero.button) %></div>
+    </section>
+
+    <%# Case (Fresh Market — real and disclosable, Q-20) %>
+    <section class="cx-section cx-case" id="proven-in-practice" data-v2-section>
+      <p class="cx-label cx-case__label"><%= c.case.label %></p>
+      <article class="cx-case__card">
+        <div class="cx-case__intro">
+          <h2 class="cx-case__client"><%= c.case.client %></h2>
+          <p class="cx-case__tags"><%= c.case.tags.join(' · ') %></p>
+          <h3 class="cx-case__h"><%= c.case.challengeTitle %></h3>
+          <% c.case.challenge.forEach(p => { %><p><%= p %></p><% }) %>
+        </div>
+        <figure class="cx-case__media">
+          <% if (c.case.image) { %>
+            <img loading="lazy" src="<%= c.case.image %>" alt="<%= c.case.client %>">
+          <% } else { %>
+            <div class="cx-case__placeholder" role="img" aria-label="<%= c.case.imagePlaceholder %>">
+              <svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="12" fill="currentColor" opacity=".12"/><circle cx="84" cy="44" r="9" fill="#fff"/><path d="M22 92 48 58l16 20 10-12 24 26z" fill="#fff"/></svg>
+            </div>
+          <% } %>
+        </figure>
+        <div class="cx-case__panel">
+          <h3 class="cx-case__h"><%= c.case.builtTitle %></h3>
+          <% c.case.built.forEach(p => { %><p><%= p %></p><% }) %>
+        </div>
+        <div class="cx-case__panel">
+          <h3 class="cx-case__h"><%= c.case.outcomesTitle %></h3>
+          <ul class="cx-case__outcomes">
+            <% c.case.outcomes.forEach(o => { %><li><h4><%= o.title %></h4><p><%= o.text %></p></li><% }) %>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <%# Blog teasers — real Ghost posts only %>
+    <section class="cx-section cx-posts" id="go-deeper" data-v2-section>
+      <div class="cx-posts__intro">
+        <h2 class="cx-label"><%= c.posts.label %></h2>
+        <p><%= c.posts.text %></p>
+      </div>
+      <ul class="cx-posts__list">
+        <% c.posts.items.forEach(post => { %>
+          <li class="cx-post">
+            <p class="cx-post__meta"><span><%= c.posts.by %> <%= post.author %></span><time datetime="<%= post.datetime %>"><%= post.date %></time></p>
+            <h3 class="cx-post__title"><a href="<%= post.url %>"><%= post.title %></a></h3>
+            <p class="cx-post__excerpt"><%= post.excerpt %></p>
+            <a class="cx-post__more" href="<%= post.url %>" aria-hidden="true" tabindex="-1"><%= c.posts.readMore %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <%# Process (4 steps) %>
+    <section class="cx-section cx-process" id="process" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.process.label %></p>
+        <h2 class="cx-h2"><%- c.process.title %></h2>
+      </header>
+      <ol class="cx-process__grid">
+        <% c.process.steps.forEach((step, i) => { %>
+          <li class="cx-card cx-process__card">
+            <span class="cx-process__num"><span class="cx-sr"><%= c.process.stagePrefix %> </span><%= pad2(i) %></span>
+            <div>
+              <h3 class="cx-h3"><%= step.title %></h3>
+              <p><%= step.description %></p>
+            </div>
+          </li>
+        <% }) %>
+      </ol>
+      <div class="cx-btn cx-btn--dark"><%- btn(c.process.button) %></div>
+    </section>
+
+    <%# FAQ — same pairs as Shopify Integrations; deliberately without data-faq-q/a (no FAQPage schema, Q-19). %>
+    <section class="cx-section cx-faq" id="faq" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.faq.label %></p>
+        <h2 class="cx-h2"><%- c.faq.title %></h2>
+      </header>
+      <div class="cx-faq__list">
+        <% c.faq.items.forEach((f, i) => { %>
+          <details class="cx-faq__item" <%= i === 0 ? 'open' : '' %>>
+            <summary><h3><%= f.q %></h3><span class="cx-faq__toggle" aria-hidden="true"></span></summary>
+            <p><%= f.a %></p>
+          </details>
+        <% }) %>
+      </div>
+    </section>
+
+    <%# Closing CTA %>
+    <section class="cx-cta" id="contact" data-v2-section>
+      <p class="cx-label cx-label--dark"><%= c.cta.label %></p>
+      <h2 class="cx-h2"><%- c.cta.title %></h2>
+      <p class="cx-cta__body"><%= c.cta.body %></p>
+      <div class="cx-btn cx-btn--light"><%- btn(c.cta.button) %></div>
+    </section>
+  </main>
+
+  <%- include('layout/v2/footer.ejs') %>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/v2.js"></script>
+</body>
