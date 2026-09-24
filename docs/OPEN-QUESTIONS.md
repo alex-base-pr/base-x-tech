@@ -18,3 +18,7 @@ None of these block the work that is in progress. Default in brackets is what we
 | Q-12 | Accessibility: colour contrast (#bbb, accent) and slider dot size fail WCAG AA — treated as design-owned, not blocking in this bridge release. OK? | Alex | reported, not fixed | 2026-09-24 |
 | Q-13 | Shopify Development page: keep the old pricing section (Quick Start from $2200, Turnkey from $4500, "payment and shipping setup for Ukraine")? Marko's copy has no pricing | Alex / Marko | kept unchanged | 2026-09-24 |
 | Q-14 | Home: interim title "Shopify Development & Web Design Agency \| Base X Tech" ("Marketing" dropped, REQ-010) until Marko's Home copy | Marko | interim title | 2026-09-24 |
+| Q-15 | Lili Mager quote has two wordings in Marko's files: Integrations/Apps "…fully functional and met all our needs" vs Web Design "…met all of our expectations and unique needs". Which is the real one? | Marko | each page uses its own file | 2026-09-24 |
+| Q-16 | Project cards changed vs the page list: Apps = Nova Poshta Connect, UK gifting brand, Mo (not Prime EVA); Web Design = Innan, Gunia, Prime EVA (not BONKIND); Migration = UK gifting brand, Prime EVA, Gunia. Built from the final copy files | Marko | as in final copy | 2026-09-24 |
+| Q-17 | Morpheus Media NYC: can it be named on the Apps page (now "a US agency partner")? | Marko | anonymous | 2026-09-24 |
+| Q-18 | Migration page `<main id>` is `custom-shopify-integrations` (copy-paste leftover), so it inherits that page's CSS. Rename? | Alex | unchanged | 2026-09-24 |

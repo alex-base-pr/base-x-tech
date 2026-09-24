@@ -83,3 +83,19 @@
     }
   }
 }
+
+// A range as the headline stat (CRO "50-200") is twice as wide as "100+": keep it on one line.
+#service-conversion-rate-optimization .section-works blockquote .title {
+  font-size: 4.5rem;
+  white-space: nowrap;
+
+  @include desk {
+    font-size: 5.5rem;
+  }
+}
+
+#service-conversion-rate-optimization .section-works blockquote {
+  @include desk {
+    max-width: 26rem;
+  }
+}

@@ -10,8 +10,10 @@
       min-height: 810px;
     }
 
+    // No widget images since the 2026-09 copy: size the hero like the other service pages so it clears the fixed header.
     .container {
-      height: auto;
+      height: 100vh;
+      max-height: 810px;
       @include desk {
         min-height: 810px;
       }

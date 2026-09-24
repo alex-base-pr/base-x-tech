@@ -8,7 +8,7 @@
     { "path": "/pages/service/shopify-migration-service/", "file": "pages/service/shopify-migration-service.html", "lang": "en", "role": "index", "group": "service", "name": "Shopify Migration", "faq": true },
     { "path": "/pages/service/custom-shopify-app-development/", "file": "pages/service/custom-shopify-app-development.html", "lang": "en", "role": "index", "group": "service", "name": "Custom Shopify Apps", "faq": true },
     { "path": "/pages/service/custom-web-design-services/", "file": "pages/service/custom-web-design-services.html", "lang": "en", "role": "index", "group": "service", "name": "Web Design", "faq": true },
-    { "path": "/pages/service/conversion-rate-optimization/", "file": "pages/service/conversion-rate-optimization.html", "lang": "en", "role": "index", "group": "service", "name": "Conversion Rate Optimization" },
+    { "path": "/pages/service/conversion-rate-optimization/", "file": "pages/service/conversion-rate-optimization.html", "lang": "en", "role": "index", "group": "service", "name": "Conversion Rate Optimization", "faq": true },
     { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
     { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
 

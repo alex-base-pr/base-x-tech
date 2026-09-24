@@ -3,7 +3,8 @@ import { initializeTimezone } from './utils/timezone.js';
 document.addEventListener('DOMContentLoaded', function () {
   initializeTimezone();
   
-  const cardsContainer = document.querySelector('.cards');
+  // Old portfolio "show more" (UA label); the 2026-09 EN page has no #portfolio, so this is a no-op there.
+  const cardsContainer = document.querySelector('#portfolio .cards');
   if (!cardsContainer) return;
 
   const originalOrder = Array.from(cardsContainer.children);
