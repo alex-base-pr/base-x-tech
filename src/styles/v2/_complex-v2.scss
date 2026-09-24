@@ -17,8 +17,8 @@ body.v2.cx-page {
   --cx-grey-3: #dbdada;   // "when we can help" band
   --cx-line: #dcdcdc;
   --cx-pad: 20px;
-  --cx-head: 'Onest', 'TWKEverett', system-ui, sans-serif;
-  --cx-body: 'TWKEverett', system-ui, sans-serif;
+  --cx-head: 'Onest', 'TWKEverettV2', system-ui, sans-serif;
+  --cx-body: 'TWKEverettV2', system-ui, sans-serif;
   @include desk { --cx-pad: 50px; }
 
   // Desktop: the language menu sits inline next to the globe ("EN | DE" in the Figma header), so the German
