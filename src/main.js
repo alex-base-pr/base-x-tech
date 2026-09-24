@@ -294,6 +294,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// First touch of this visit (sessionStorage, so it survives page-to-page navigation until the tab closes):
+// landing page, external referrer and campaign parameters. Added to the lead description on submit.
+const FIRST_TOUCH_KEY = 'bxt_first_touch';
+const TRACKED_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'];
+function readFirstTouch() {
+  try { return JSON.parse(sessionStorage.getItem(FIRST_TOUCH_KEY) || 'null'); } catch (e) { return null; }
+}
+(function captureFirstTouch() {
+  try {
+    if (sessionStorage.getItem(FIRST_TOUCH_KEY)) return;
+    const params = new URLSearchParams(window.location.search);
+    const utm = {};
+    TRACKED_PARAMS.forEach((p) => { if (params.has(p)) utm[p] = params.get(p); });
+    sessionStorage.setItem(FIRST_TOUCH_KEY, JSON.stringify({
+      landing: window.location.pathname + window.location.search,
+      referrer: document.referrer || '',
+      utm,
+    }));
+  } catch (e) { /* storage blocked (private mode, cookies off): the lead still sends without first-touch data */ }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('task-form');
   const successMsg = document.getElementById('success-msg');
@@ -356,9 +377,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = formData.get('email');
       const phone = formData.get('phone');
       const company = formData.get('company');
-      const service = form.querySelector('.form-select').selectedOptions[0].text;
+      // v2 options carry the English label in data-lead (DE page shows German text); legacy drawers use the text.
+      const serviceOption = form.querySelector('.form-select')?.selectedOptions[0];
+      const service = serviceOption ? (serviceOption.dataset.lead || serviceOption.text) : '';
       const budget = formData.get('budget');
+      const source = formData.get('source'); // "How did you find us?" (v2 modal only)
       const tellUsMore = formData.get('tell_us_more') || '';
+      const firstTouch = readFirstTouch();
+      const firstUtm = firstTouch && firstTouch.utm ? Object.entries(firstTouch.utm).map(([k, v]) => `${k}=${v}`).join(', ') : '';
       let sent = false;
 
       const currentDateTime = getCurrentDateTime();
@@ -373,7 +399,12 @@ document.addEventListener('DOMContentLoaded', () => {
           formatToDescription('Company', company),
           formatToDescription('Service required', service),
           formatToDescription('Budget', budget),
+          formatToDescription('Source', source),
           formatToDescription('lang', browserLanguage),
+          formatToDescription('Page', window.location.pathname),
+          firstTouch ? formatToDescription('First landing page', firstTouch.landing) : '',
+          firstTouch ? formatToDescription('First referrer', firstTouch.referrer || '(direct)') : '',
+          formatToDescription('First-touch UTM', firstUtm),
           tellUsMore ? `Tell us more:\n${tellUsMore}` : ''
       ].filter(Boolean);
 

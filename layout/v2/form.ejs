@@ -1,62 +1,67 @@
 <%# Design v2 contact modal (Figma "Modal-form" 825:33 / "Modal-mobile" 825:122).
-    Field names and #task-form / #success-msg / .form-select are what src/main.js submits to ClickUp — keep them. %>
+    Field names and #task-form / #success-msg / .form-select are what src/main.js submits to ClickUp — keep them.
+    Strings: content/pages/shell.<lang>.json (EN default). Option values stay English so every lead reads the same;
+    the service is pre-selected from <main data-service> (src/v2.js). Budget has no default (optional). %>
+<% const sh = content.shell[typeof lang !== 'undefined' && content.shell[lang] ? lang : 'en']; const f = sh.form; %>
 <div class="v2-modal" role="dialog" aria-modal="true" aria-labelledby="v2-modal-title">
   <div class="v2-modal__overlay" data-form-close></div>
   <div class="v2-modal__panel">
-    <button type="button" class="v2-modal__close" data-form-close aria-label="Close the form">
+    <button type="button" class="v2-modal__close" data-form-close aria-label="<%= f.close %>">
       <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2l12 12M14 2 2 14" stroke="currentColor" stroke-width="1.6"/></svg>
     </button>
-    <h2 class="v2-modal__title" id="v2-modal-title">Let’s talk <span>about your project</span></h2>
+    <h2 class="v2-modal__title" id="v2-modal-title"><%= f.title %> <span><%= f.titleMuted %></span></h2>
 
     <div id="success-msg" class="v2-modal__state" role="status">
-      <p class="v2-modal__state-title">Thank you — your project details are with us.</p>
-      <p>We’ll reply by email shortly. If it’s urgent, write to <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
-      <button type="button" class="v2-modal__secondary" data-form-close>Close</button>
+      <p class="v2-modal__state-title"><%= f.successTitle %></p>
+      <p><%= f.successBefore %> <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
+      <button type="button" class="v2-modal__secondary" data-form-close><%= f.closeButton %></button>
     </div>
     <div id="error-msg" class="v2-modal__state" role="alert">
-      <p class="v2-modal__state-title">Sorry, the form didn’t send.</p>
-      <p>Please try again, or email your project details to <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
-      <button type="button" class="v2-modal__secondary" data-form-retry>Try again</button>
+      <p class="v2-modal__state-title"><%= f.errorTitle %></p>
+      <p><%= f.errorBefore %> <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
+      <button type="button" class="v2-modal__secondary" data-form-retry><%= f.retry %></button>
     </div>
 
     <form id="task-form" class="v2-form">
       <div class="v2-form__row">
-        <label><span class="v2-sr">Your name (required)</span><input required name="name" type="text" autocomplete="name" placeholder="Your name*"></label>
-        <label><span class="v2-sr">Work email (required)</span><input required name="email" type="email" autocomplete="email" placeholder="name@company.com*"></label>
+        <label><span class="v2-sr"><%= f.nameLabel %></span><input required name="name" type="text" autocomplete="name" placeholder="<%= f.namePlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.emailLabel %></span><input required name="email" type="email" autocomplete="email" placeholder="<%= f.emailPlaceholder %>"></label>
       </div>
       <div class="v2-form__row">
-        <label><span class="v2-sr">Phone (optional)</span><input name="phone" type="tel" autocomplete="tel" placeholder="Phone (optional)"></label>
-        <label><span class="v2-sr">Company name (required)</span><input required name="company" type="text" autocomplete="organization" placeholder="Company name*"></label>
+        <label><span class="v2-sr"><%= f.phoneLabel %></span><input name="phone" type="tel" autocomplete="tel" placeholder="<%= f.phonePlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.companyLabel %></span><input name="company" type="text" autocomplete="organization" placeholder="<%= f.companyPlaceholder %>"></label>
       </div>
       <label class="v2-form__field">
-        <span>What do you need help with?</span>
+        <span><%= f.serviceLabel %></span>
         <select name="service" class="form-select">
-          <option>Shopify Development</option>
-          <option>Custom Shopify Integrations</option>
-          <option>Shopify Migration</option>
-          <option>Custom Shopify App</option>
-          <option>Web Design</option>
-          <option>Conversion Rate Optimization</option>
-          <option>Complex Solutions (ERP, POS, middleware)</option>
-          <option>Not sure yet</option>
+          <% f.services.forEach(o => { %><option value="<%= o.value %>" data-lead="<%= o.value %>"><%= o.label %></option>
+          <% }) %>
         </select>
       </label>
       <fieldset class="v2-form__field v2-form__budget">
-        <legend>What’s your project budget?</legend>
+        <legend><%= f.budgetLegend %></legend>
         <div>
-          <label><input type="radio" name="budget" value="$2K–5K" checked><span>$2K–5K</span></label>
+          <label><input type="radio" name="budget" value="$2K–5K"><span>$2K–5K</span></label>
           <label><input type="radio" name="budget" value="$5K–10K"><span>$5K–10K</span></label>
           <label><input type="radio" name="budget" value="$10K–25K"><span>$10K–25K</span></label>
           <label><input type="radio" name="budget" value="$25K+"><span>$25K+</span></label>
-          <label><input type="radio" name="budget" value="Not sure yet"><span>Not sure</span></label>
+          <label><input type="radio" name="budget" value="Not sure yet"><span><%= f.budgetNotSure %></span></label>
         </div>
       </fieldset>
       <label class="v2-form__field">
-        <span>Tell us about the project</span>
-        <textarea name="tell_us_more" rows="4" placeholder="What are you building, changing, or trying to solve?"></textarea>
+        <span><%= f.messageLabel %></span>
+        <textarea name="tell_us_more" rows="4" placeholder="<%= f.messagePlaceholder %>"></textarea>
       </label>
-      <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label">Send project details</span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
-      <p class="v2-form__note">We use your details only to reply to this request. <a href="/pages/privacy-policy/">Privacy policy</a></p>
+      <label class="v2-form__field">
+        <span><%= f.sourceLabel %></span>
+        <select name="source" class="v2-form__source">
+          <option value=""><%= f.sourcePlaceholder %></option>
+          <% f.sources.forEach(o => { %><option value="<%= o.value %>"><%= o.label %></option>
+          <% }) %>
+        </select>
+      </label>
+      <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label"><%= f.submit %></span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
+      <p class="v2-form__note"><%= f.note %> <a href="/pages/privacy-policy/"><%= f.privacy %></a></p>
     </form>
   </div>
 </div>

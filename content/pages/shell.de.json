@@ -1,0 +1,93 @@
+{
+  "_note": "German design-v2 shell strings (see shell.en.json). Formal 'Sie'. Budget amounts and option values stay as in EN; only labels are translated.",
+  "homeLabel": "Base X Tech Startseite",
+  "nav": {
+    "main": "Hauptnavigation",
+    "mobile": "Mobile Navigation",
+    "footer": "Fußzeile",
+    "services": "Leistungen",
+    "portfolio": "Referenzen",
+    "insights": "Insights",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "back": "Zurück",
+    "language": "Sprache",
+    "menu": "Menü",
+    "closeMenu": "Menü schließen",
+    "cta": "Kontakt aufnehmen"
+  },
+  "servicesMenu": [
+    { "name": "Shopify-Entwicklung", "href": "/pages/shopify-development/" },
+    { "name": "Individuelle Shopify-Apps", "href": "/pages/service/custom-shopify-app-development/" },
+    { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/" },
+    { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/" },
+    { "name": "Webdesign", "href": "/pages/service/custom-web-design-services/" },
+    { "name": "Conversion-Optimierung (CRO)", "href": "/pages/service/conversion-rate-optimization/" },
+    { "name": "Komplexe Systeme (DACH)", "href": "/de/pages/complex-solutions/" }
+  ],
+  "mobileServices": [
+    { "name": "Shopify-Entwicklung", "href": "/pages/shopify-development/", "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp" },
+    { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/", "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp" },
+    { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/", "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp" },
+    { "name": "Shopify-Apps", "href": "/pages/service/custom-shopify-app-development/", "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp" },
+    { "name": "CRO", "href": "/pages/service/conversion-rate-optimization/", "image": "/images/v2/shopify-development-capabilities-2-image-56.webp" },
+    { "name": "Webdesign", "href": "/pages/service/custom-web-design-services/", "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp" },
+    { "name": "Komplexe Systeme (DACH)", "href": "/de/pages/complex-solutions/", "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp" }
+  ],
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "navigation": "Navigation",
+    "connect": "Profile",
+    "terms": "AGB",
+    "privacy": "Datenschutzerklärung"
+  },
+  "form": {
+    "close": "Formular schließen",
+    "title": "Lassen Sie uns",
+    "titleMuted": "über Ihr Projekt sprechen",
+    "successTitle": "Vielen Dank – Ihre Projektangaben sind bei uns eingegangen.",
+    "successBefore": "Wir antworten Ihnen in Kürze per E-Mail. In dringenden Fällen schreiben Sie uns an",
+    "closeButton": "Schließen",
+    "errorTitle": "Das Formular konnte leider nicht gesendet werden.",
+    "errorBefore": "Bitte versuchen Sie es erneut oder senden Sie Ihre Projektangaben per E-Mail an",
+    "retry": "Erneut versuchen",
+    "nameLabel": "Ihr Name (Pflichtfeld)",
+    "namePlaceholder": "Ihr Name*",
+    "emailLabel": "Geschäftliche E-Mail-Adresse (Pflichtfeld)",
+    "emailPlaceholder": "name@firma.de*",
+    "phoneLabel": "Telefon (optional)",
+    "phonePlaceholder": "Telefon (optional)",
+    "companyLabel": "Firma oder Shop-URL (optional)",
+    "companyPlaceholder": "Firma oder Shop-URL",
+    "serviceLabel": "Wobei können wir Sie unterstützen?",
+    "services": [
+      { "value": "Shopify Development", "label": "Shopify-Entwicklung" },
+      { "value": "Custom Shopify Integrations", "label": "Individuelle Shopify-Integrationen" },
+      { "value": "Shopify Migration", "label": "Shopify-Migration" },
+      { "value": "Custom Shopify App", "label": "Individuelle Shopify-App" },
+      { "value": "Web Design", "label": "Webdesign" },
+      { "value": "Conversion Rate Optimization", "label": "Conversion-Optimierung (CRO)" },
+      { "value": "Complex Solutions (ERP, POS, middleware)", "label": "Komplexe Systeme (ERP, POS, Middleware)" },
+      { "value": "Not sure yet", "label": "Noch unklar" }
+    ],
+    "sourceLabel": "Wie sind Sie auf uns aufmerksam geworden?",
+    "sourcePlaceholder": "Bitte wählen (optional)",
+    "sources": [
+      { "value": "Google", "label": "Google" },
+      { "value": "ChatGPT / AI assistant", "label": "ChatGPT / KI-Assistent" },
+      { "value": "Clutch", "label": "Clutch" },
+      { "value": "Upwork", "label": "Upwork" },
+      { "value": "Shopify Partner Directory", "label": "Shopify Partner Directory" },
+      { "value": "LinkedIn", "label": "LinkedIn" },
+      { "value": "Referral / partner", "label": "Empfehlung / Partner" },
+      { "value": "Other", "label": "Sonstiges" }
+    ],
+    "budgetLegend": "Wie hoch ist Ihr Projektbudget?",
+    "budgetNotSure": "Noch unklar",
+    "messageLabel": "Erzählen Sie uns von Ihrem Projekt",
+    "messagePlaceholder": "Was möchten Sie aufbauen, verändern oder lösen?",
+    "submit": "Projektangaben senden",
+    "note": "Wir verwenden Ihre Angaben ausschließlich, um auf diese Anfrage zu antworten.",
+    "privacy": "Datenschutzerklärung"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "_note": "Design-v2 shell strings (header, mobile menu, footer, contact modal). Picked by the page's lang (layout/v2/*.ejs); EN is the default. Option `value`s stay English so leads read the same in ClickUp.",
+  "homeLabel": "Base X Tech home",
+  "nav": {
+    "main": "Main",
+    "mobile": "Mobile",
+    "footer": "Footer",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact",
+    "back": "Back",
+    "language": "Language",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "cta": "Let’s talk"
+  },
+  "servicesMenu": [
+    { "name": "Shopify Development", "href": "/pages/shopify-development/" },
+    { "name": "Custom Shopify Apps", "href": "/pages/service/custom-shopify-app-development/" },
+    { "name": "Shopify Integrations", "href": "/pages/service/custom-shopify-integrations/" },
+    { "name": "Shopify Migration", "href": "/pages/service/shopify-migration-service/" },
+    { "name": "Web Design", "href": "/pages/service/custom-web-design-services/" },
+    { "name": "Conversion Rate Optimization", "href": "/pages/service/conversion-rate-optimization/" },
+    { "name": "Complex Solutions (DACH)", "href": "/pages/complex-solutions/" }
+  ],
+  "mobileServices": [
+    { "name": "Shopify Development", "href": "/pages/shopify-development/", "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp" },
+    { "name": "Shopify Integrations", "href": "/pages/service/custom-shopify-integrations/", "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp" },
+    { "name": "Shopify Migration", "href": "/pages/service/shopify-migration-service/", "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp" },
+    { "name": "Shopify Apps", "href": "/pages/service/custom-shopify-app-development/", "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp" },
+    { "name": "CRO", "href": "/pages/service/conversion-rate-optimization/", "image": "/images/v2/shopify-development-capabilities-2-image-56.webp" },
+    { "name": "Web Design", "href": "/pages/service/custom-web-design-services/", "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp" },
+    { "name": "Complex Solutions (DACH)", "href": "/pages/complex-solutions/", "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp" }
+  ],
+  "footer": {
+    "rights": "All rights reserved.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy policy"
+  },
+  "form": {
+    "close": "Close the form",
+    "title": "Let’s talk",
+    "titleMuted": "about your project",
+    "successTitle": "Thank you — your project details are with us.",
+    "successBefore": "We’ll reply by email shortly. If it’s urgent, write to",
+    "closeButton": "Close",
+    "errorTitle": "Sorry, the form didn’t send.",
+    "errorBefore": "Please try again, or email your project details to",
+    "retry": "Try again",
+    "nameLabel": "Your name (required)",
+    "namePlaceholder": "Your name*",
+    "emailLabel": "Work email (required)",
+    "emailPlaceholder": "name@company.com*",
+    "phoneLabel": "Phone (optional)",
+    "phonePlaceholder": "Phone (optional)",
+    "companyLabel": "Company or store URL (optional)",
+    "companyPlaceholder": "Company or store URL",
+    "serviceLabel": "What do you need help with?",
+    "services": [
+      { "value": "Shopify Development", "label": "Shopify Development" },
+      { "value": "Custom Shopify Integrations", "label": "Custom Shopify Integrations" },
+      { "value": "Shopify Migration", "label": "Shopify Migration" },
+      { "value": "Custom Shopify App", "label": "Custom Shopify App" },
+      { "value": "Web Design", "label": "Web Design" },
+      { "value": "Conversion Rate Optimization", "label": "Conversion Rate Optimization" },
+      { "value": "Complex Solutions (ERP, POS, middleware)", "label": "Complex Solutions (ERP, POS, middleware)" },
+      { "value": "Not sure yet", "label": "Not sure yet" }
+    ],
+    "sourceLabel": "How did you find us?",
+    "sourcePlaceholder": "Select (optional)",
+    "sources": [
+      { "value": "Google", "label": "Google" },
+      { "value": "ChatGPT / AI assistant", "label": "ChatGPT / AI assistant" },
+      { "value": "Clutch", "label": "Clutch" },
+      { "value": "Upwork", "label": "Upwork" },
+      { "value": "Shopify Partner Directory", "label": "Shopify Partner Directory" },
+      { "value": "LinkedIn", "label": "LinkedIn" },
+      { "value": "Referral / partner", "label": "Referral / partner" },
+      { "value": "Other", "label": "Other" }
+    ],
+    "budgetLegend": "What’s your project budget?",
+    "budgetNotSure": "Not sure",
+    "messageLabel": "Tell us about the project",
+    "messagePlaceholder": "What are you building, changing, or trying to solve?",
+    "submit": "Send project details",
+    "note": "We use your details only to reply to this request.",
+    "privacy": "Privacy policy"
+  }
+}
