@@ -1,145 +1,132 @@
+// Language switcher driven by the page's own hreflang links: a language is offered only where this page
+// has a version in it (e.g. DE exists only for /pages/complex-solutions/). Pages without any hreflang fall
+// back to the old /uk prefix rule.
+const PREFIX = { uk: '/uk', de: '/de' };
+const SUGGEST = {
+  uk: 'Перейти до української версії?',
+  de: 'Zur deutschen Version wechseln?',
+  en: 'Switch to English version?',
+};
+
+export function pageAlternates() {
+  const map = {};
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((l) => {
+    const lang = l.getAttribute('hreflang');
+    if (lang === 'x-default') return;
+    try { map[lang] = new URL(l.href, location.origin).pathname; } catch (e) { /* ignore malformed */ }
+  });
+  return map;
+}
+
+export function detectLang(path = location.pathname) {
+  if (path.startsWith(PREFIX.uk + '/') || path === PREFIX.uk) return 'uk';
+  if (path.startsWith(PREFIX.de + '/') || path === PREFIX.de) return 'de';
+  return 'en';
+}
+
 export class LanguageSwitcher {
-  constructor({
-    selector = '.language-switcher',
-    mobileSelector = '.language-switcher-mobile',
-    storageKey = 'preferredLang',
-    defaultLang = 'en',
-    altLangPrefix = '/uk'
-  } = {}) {
-    this.selector = selector;
-    this.mobileSelector = mobileSelector;
+  constructor({ selector = '.language-switcher', mobileSelector = '.language-switcher-mobile', storageKey = 'preferredLang' } = {}) {
     this.storageKey = storageKey;
-    this.defaultLang = defaultLang;
-    this.altLangPrefix = altLangPrefix;
-
-    this.wrapper = document.querySelector(this.selector);
-    this.mobileWrapper = document.querySelector(this.mobileSelector);
-
+    this.wrapper = document.querySelector(selector);
+    this.mobileWrapper = document.querySelector(mobileSelector);
     if (!this.wrapper && !this.mobileWrapper) return;
 
-    this.currentPath = window.location.pathname;
-    this.currentLang = this.detectCurrentLang();
-    this.savedLang = localStorage.getItem(this.storageKey);
+    this.currentLang = detectLang();
+    this.alternates = pageAlternates();
+    this.hasAlternates = Object.keys(this.alternates).length > 0;
+    this.savedLang = this.readSaved();
 
     if (this.wrapper) {
-      this.links = this.wrapper.querySelectorAll('[data-lang]');
-      this.highlightActiveLink();
-      this.bindEvents();
+      this.links = [...this.wrapper.querySelectorAll('[data-lang]')];
+      this.prepare(this.links);
+      this.links.forEach((link) => link.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.switchLanguage(link.dataset.lang);
+      }));
     }
 
     if (this.mobileWrapper) {
-      this.mobileLinks = this.mobileWrapper.querySelectorAll('[data-lang]');
+      this.mobileLinks = [...this.mobileWrapper.querySelectorAll('[data-lang]')];
       this.mobileToggleBtn = this.mobileWrapper.querySelector('#mobileLangToggle');
       this.mobileDropdown = this.mobileWrapper.querySelector('#mobileLangDropdown');
-
-      this.highlightActiveMobileLink();
-      this.bindMobileEvents();
-    }
-    this.showLanguageSuggestion();
-  }
-
-  detectCurrentLang() {
-    return this.currentPath.startsWith(this.altLangPrefix) ? 'uk' : this.defaultLang;
-  }
-
-  showLanguageSuggestion() {
-    if (!this.savedLang || this.savedLang === this.currentLang) return;
-
-    if (!window.localStorage) return;
-
-    if (document.readyState !== 'complete') {
-      window.addEventListener('load', () => this.showLanguageSuggestion());
-      return;
+      this.prepare(this.mobileLinks);
+      // The dropdown overlays the toggle: 1st item = current language (transparent), the rest below it.
+      // Drop languages this page lacks and put the current one first, so :first-child/:last-child styles hold.
+      this.mobileLinks.filter((l) => l.hidden).forEach((l) => l.remove());
+      this.mobileLinks = this.mobileLinks.filter((l) => !l.hidden);
+      const current = this.mobileLinks.find((l) => l.dataset.lang === this.currentLang);
+      if (current && this.mobileDropdown) this.mobileDropdown.prepend(current);
+      if (this.mobileDropdown) this.mobileDropdown.style.height = `${this.mobileLinks.length * 100}%`;
+      const active = this.mobileLinks.find((l) => l.classList.contains('is-active'));
+      if (active && this.mobileToggleBtn) this.mobileToggleBtn.textContent = active.textContent;
+      this.bindMobile();
     }
 
-    const message = this.savedLang === 'uk'
-      ? 'Перейти до української версії?'
-      : 'Switch to English version?';
-
-    if (confirm(message)) {
-      this.switchLanguage(this.savedLang);
-    }
+    this.suggestSavedLanguage();
   }
 
-  highlightActiveLink() {
-    this.links.forEach(link => {
-      const lang = link.getAttribute('data-lang');
+  readSaved() {
+    try { return localStorage.getItem(this.storageKey); } catch (e) { return null; }
+  }
+
+  save(lang) {
+    try { localStorage.setItem(this.storageKey, lang); } catch (e) { /* private mode */ }
+  }
+
+  // Where does `lang` live for this page? null = no version in that language.
+  targetFor(lang) {
+    if (lang === this.currentLang) return location.pathname;
+    if (this.hasAlternates) return this.alternates[lang] || null;
+    // Legacy pages without hreflang: EN ↔ UK by prefix only.
+    const path = location.pathname;
+    if (lang === 'uk') return path.startsWith('/uk') ? path : ('/uk' + path).replace(/\/{2,}/g, '/');
+    if (lang === 'en') return path.replace(/^\/(uk|de)(?=\/|$)/, '') || '/';
+    return null;
+  }
+
+  isAvailable(lang) {
+    return this.targetFor(lang) !== null;
+  }
+
+  prepare(links) {
+    links.forEach((link) => {
+      const lang = link.dataset.lang;
+      link.hidden = !this.isAvailable(lang);
       link.classList.toggle('is-active', lang === this.currentLang);
+      const target = this.targetFor(lang);
+      if (target) {
+        link.setAttribute('href', target);
+        link.setAttribute('hreflang', lang);
+      }
     });
   }
 
-  highlightActiveMobileLink() {
-    this.mobileLinks.forEach(link => {
-      const lang = link.getAttribute('data-lang');
-      link.classList.toggle('is-active', lang === this.currentLang);
-    });
-    const activeLink = Array.from(this.mobileLinks).find(l => l.classList.contains('is-active'));
-    if (activeLink) {
-      this.mobileToggleBtn.textContent = activeLink.textContent;
-    }
-  }
-
-  bindEvents() {
-    this.links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const selectedLang = link.getAttribute('data-lang');
-        this.switchLanguage(selectedLang);
-      });
-    });
-  }
-
-  bindMobileEvents() {
+  bindMobile() {
+    if (!this.mobileToggleBtn || !this.mobileDropdown) return;
     this.mobileToggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       this.mobileDropdown.classList.toggle('hidden');
     });
-
-    this.mobileLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const selectedLang = link.getAttribute('data-lang');
-        this.mobileDropdown.classList.add('hidden');
-        this.switchLanguage(selectedLang);
-      });
-    });
-    document.addEventListener('click', () => {
+    this.mobileLinks.forEach((link) => link.addEventListener('click', (e) => {
+      e.preventDefault();
       this.mobileDropdown.classList.add('hidden');
-    });
+      this.switchLanguage(link.dataset.lang);
+    }));
+    document.addEventListener('click', () => this.mobileDropdown.classList.add('hidden'));
   }
 
   switchLanguage(lang) {
-    localStorage.setItem(this.storageKey, lang);
-
-    let targetPath = this.currentPath;
-
-    if (lang === 'uk') {
-      if (!this.currentPath.startsWith(this.altLangPrefix)) {
-        targetPath = this.altLangPrefix + this.currentPath;
-      }
-    } else {
-      if (this.currentPath.startsWith(this.altLangPrefix)) {
-        targetPath = this.currentPath.replace(this.altLangPrefix, '') || '/';
-      }
-    }
-
-    targetPath = targetPath.replace(/\/{2,}/g, '/');
-    window.location.href = targetPath;
+    const target = this.targetFor(lang);
+    if (!target) return;
+    this.save(lang);
+    if (target !== location.pathname) window.location.href = target;
   }
 
-  // handleRedirect() {
-  //   const navType = performance.getEntriesByType('navigation')[0]?.type;
-  //   const isFromHistory = navType === 'back_forward';
-  //
-  //   if (isFromHistory) return;
-  //
-  //   if (!this.savedLang || this.savedLang === this.currentLang) return;
-  //
-  //   if (this.savedLang === 'uk' && this.currentLang !== 'uk') {
-  //     window.location.assign(this.altLangPrefix + this.currentPath);
-  //   } else if (this.savedLang === 'en' && this.currentLang !== 'en') {
-  //     const path = this.currentPath.replace(this.altLangPrefix, '') || '/';
-  //     window.location.assign(path);
-  //   }
-  // }
+  // Offer the saved language only when this page actually exists in it.
+  suggestSavedLanguage() {
+    const saved = this.savedLang;
+    if (!saved || saved === this.currentLang || !this.isAvailable(saved)) return;
+    const ask = () => { if (confirm(SUGGEST[saved] || SUGGEST.en)) this.switchLanguage(saved); };
+    if (document.readyState === 'complete') ask(); else window.addEventListener('load', ask, { once: true });
+  }
 }

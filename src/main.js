@@ -1,6 +1,6 @@
 import './component-accordion.js';
 import Flickity from 'flickity';
-import { LanguageSwitcher } from './language-switcher.js';
+import { LanguageSwitcher, pageAlternates, detectLang } from './language-switcher.js';
 import { initializeTimezone } from './utils/timezone.js';
 
 function throttle(fn, delay) {
@@ -522,41 +522,14 @@ document.querySelectorAll('[data-collapse-trigger]').forEach(trigger => {
   });
 });
 
+// Saved-language redirect (was: always to /uk + path, which 404s on EN-only pages). Now only where the page
+// declares that version via hreflang; the LanguageSwitcher offers the rest.
 (function () {
-  const langSwitcherLinks = document.querySelectorAll('.language-switcher [data-lang]');
-  const currentPath = window.location.pathname;
-  const savedLang = localStorage.getItem('preferredLang');
-
-  if (savedLang && !currentPath.startsWith('/uk') && savedLang === 'uk') {
-    const newPath = '/uk' + currentPath;
-    window.location.href = newPath;
-    return;
-  }
-
-  langSwitcherLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-
-      const selectedLang = link.getAttribute('data-lang');
-      localStorage.setItem('preferredLang', selectedLang);
-
-      let targetPath = currentPath;
-
-      if (selectedLang === 'uk') {
-        if (!currentPath.startsWith('/uk')) {
-          targetPath = '/uk' + currentPath;
-        }
-      } else {
-        if (currentPath.startsWith('/uk')) {
-          targetPath = currentPath.replace(/^\/uk/, '') || '/';
-        }
-      }
-
-      targetPath = targetPath.replace(/\/{2,}/g, '/');
-
-      window.location.href = targetPath;
-    });
-  });
+  let saved = null;
+  try { saved = localStorage.getItem('preferredLang'); } catch (e) { return; }
+  if (saved !== 'uk' || detectLang() === 'uk') return;
+  const target = pageAlternates().uk;
+  if (target && target !== window.location.pathname) window.location.href = target;
 })();
 
 document.addEventListener("DOMContentLoaded", function () {

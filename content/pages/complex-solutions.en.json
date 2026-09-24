@@ -16,19 +16,22 @@
       "Xentral",
       "JTL-Wawi",
       "weclapp",
-      "SAP Business One",
       "Microsoft Dynamics 365 Business Central",
       "Odoo",
       "DATEV",
       "Lexware Office",
-      "Akeneo",
       "HubSpot",
-      "Salesforce",
       "DHL",
       "DPD",
       "Sendcloud",
       "Custom APIs",
       "Middleware"
+    ],
+    "readyLabel": "Ready to integrate (no delivered project yet):",
+    "ready": [
+      "SAP Business One",
+      "Akeneo",
+      "Salesforce"
     ]
   },
   "partner": {

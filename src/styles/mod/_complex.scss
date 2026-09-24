@@ -12,11 +12,19 @@
 
   .systems-strip {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: .75rem;
     align-items: center;
     @include desk { grid-template-columns: auto 1fr; gap: 2rem; }
   }
-  .systems-strip--label { font-weight: 500; margin: 0; white-space: nowrap; }
+  .systems-strip--label { font-weight: 500; margin: 0; @include desk { white-space: nowrap; } }
+  .systems-strip--ready {
+    margin: 0;
+    font-size: .875rem;
+    opacity: .6;
+    @include desk { grid-column: 1 / -1; }
+    span { margin-right: .5rem; }
+  }
   .systems-strip--viewport {
     display: flex;
     overflow: hidden;

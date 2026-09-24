@@ -12,6 +12,15 @@ header.site-header .lang-switcher-wrapper {
     text-decoration: none;
     opacity: 0.5;
 
+    // Separator between visible languages only (hidden ones are display:none).
+    & ~ a:not([hidden])::before {
+      content: '|';
+      display: inline-block;
+      margin: 0 .35em;
+      opacity: .6;
+      font-weight: normal;
+    }
+
     &.is-active {
       font-weight: bold;
       opacity: 1;
@@ -103,4 +112,10 @@ header.site-header .lang-switcher-wrapper {
       }
     }
   }
+}
+
+// Languages this page has no version in are [hidden] by src/language-switcher.js; dropdown link styles must not revive them.
+.language-switcher [hidden],
+.language-switcher-mobile [hidden] {
+  display: none !important;
 }

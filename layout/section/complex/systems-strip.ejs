@@ -1,4 +1,4 @@
-<%# Systems strip (Figma #122: marquee). The list is in the HTML once; the moving copy is aria-hidden. %>
+<%# Systems strip (Figma #122: marquee): systems with delivered projects; the list is in the HTML once, the moving copy is aria-hidden. %>
 <section class="section section-systems-strip">
   <div class="container systems-strip">
     <p class="systems-strip--label"><%= label %></p>
@@ -10,5 +10,9 @@
         <% items.forEach(item => { %><li><%= item %></li><% }) %>
       </ul>
     </div>
+    <% if (typeof ready !== 'undefined' && ready && ready.length) { %>
+      <%# Systems we can integrate but have no delivered project with yet — said plainly (Alex, 2026-09-24). %>
+      <p class="systems-strip--ready"><span><%= readyLabel %></span> <%= ready.join(' · ') %></p>
+    <% } %>
   </div>
 </section>
