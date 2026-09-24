@@ -104,10 +104,16 @@
       <div class="h-approach__body">
         <p class="h-approach__lead"><%= c.approach.lead %></p>
         <ul class="h-approach__list">
-          <% c.approach.items.forEach(item => { %>
+          <% c.approach.items.forEach((item, i) => { %>
             <li class="h-principle">
+              <% if (item.description) { %>
+              <details class="h-principle__details" name="h-approach" <%= i === 0 ? 'open' : '' %>>
+                <summary class="h-principle__head"><span class="h-principle__icon"><%- icons[item.icon] %></span><h3><%= item.title %></h3></summary>
+                <p class="h-principle__desc"><%= item.description %></p>
+              </details>
+              <% } else { %>
               <div class="h-principle__head"><span class="h-principle__icon"><%- icons[item.icon] %></span><h3><%= item.title %></h3></div>
-              <% if (item.description) { %><p class="h-principle__desc"><%= item.description %></p><% } %>
+              <% } %>
             </li>
           <% }) %>
         </ul>
