@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<%# Copy: content/source/02-shopify-development.txt (Marko, final). Slot order: spec §5 D8. Pricing (#price-brief) kept as a business decision. %>
 <%- include('layout/head-alt.ejs', {
-  title: "Turnkey Shopify Store Development Services | Base X Tech",
-  description: "We build your Shopify store from strategy to launch: custom theme, catalog setup, payments, and integrations, delivered by our in-house team.",
+  title: "Shopify Store Development & Custom Builds | Base X Tech",
+  description: "We build Shopify stores that need more than a theme: custom checkout, product configurators, headless storefronts, wholesale beside retail on one stack.",
   hrefLangCode: "en",
   hrefLangLink: "https://base-xtech.com/uk/pages/shopify-development/",
   hreflangDefault: "https://base-xtech.com/pages/shopify-development/"
@@ -19,149 +20,168 @@
       include('layout/section/hero-type-two.ejs', {
         locale: 'en',
         id: "hero",
-        title: "Shopify Store Development",
-        subtitle: "Ready-made and custom solutions for your business",
-        button_text: "Discuss Project",
+        subtitle: "Shopify Development",
+        title: "Shopify development<br> for stores that need<br> more than a theme",
+        description: "Custom checkout, configurators, B2B and retail on one stack. If the build is the hard part, that's the work we take.",
+        title_size: "long",
+        button_text: "Discuss Your Project",
         background_image: "/images/pages/shopify-development/back.png",
-        background_image_mob: "/images/pages/shopify-development/back-mob.png"
+        background_image_mob: "/images/pages/shopify-development/back-mob.png",
+        icons: [
+          "shopify"
+        ]
       })
-    %>`
+    %>
 
-    <%- include('layout/section/info.ejs', {
-      locale: 'en',
-      id: "services",
-      theme: "light",
-      title: "Services and Technologies",
-      subtitle: "main<br> range of <br><span class='accent'>services</span>",
-      cards: [
-        {
-          title: "Development based on<br> ready-made Shopify themes",
-          subtitle: "quick start",
-          background_image: "/images/pages/shopify-development/section/info-1/card-2.png"
-        },
-        {
-          title: "Development of<br> custom themes",
-          subtitle: "turnkey shopify",
-          background_image: "/images/pages/shopify-development/section/info-1/card-1.png"
-        }
-      ]
-    }) %>
-
-    <%- include('layout/section/info.ejs', {
-      locale: 'en',
-      id: "additional",
-      theme: "light",
-      title: "Services and Technologies",
-      subtitle: "Additional <span class='accent'>Services</span>",
-      list: [
-        {
-          title: "Shopify app development"
-        },
-        {
-          title: "Migration"
-        },
-        {
-          title: "Shopify integrations"
-        },
-        {
-          title: "Headless"
-        },
-        {
-          title: "Optimization"
-        }
-      ]
-    }) %>
+    <%-
+      include('layout/section/split.ejs', {
+        semantic: true,
+        locale: 'en',
+        theme: 'light',
+        id: "service-type-of-apps",
+        title: "Our Capabilities",
+        subtitle: "The parts a theme<br class='br-desk'> was <span class='accent'>never built for.</span>",
+        cards: [
+          {
+            title: "Store Build & Launch",
+            description: "New stores built for one market or for several across the EU.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          },
+          {
+            title: "Theme Development",
+            description: "Custom themes and deep changes to the one you already run.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          },
+          {
+            title: "Custom Checkout",
+            description: "Checkout logic, validation and payment rules on Shopify Plus.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          },
+          {
+            title: "Configurators",
+            description: "Product builders for options, variants and made-to-order ranges.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          },
+          {
+            title: "Headless Storefronts",
+            description: "Shopify as the commerce backend behind a front end you control fully.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          },
+          {
+            title: "B2B & Wholesale",
+            description: "Wholesale accounts, price lists and terms running beside your retail store.",
+            background_image: "/images/pages/service/index/app-types/card-1.png"
+          }
+        ]
+      })
+    %>
 
     <%- include('layout/section/works.ejs', {
+      semantic: true,
       locale: 'en',
-      id: "portfolio",
-      theme: "light",
-      title: "Portfolio",
-      subtitle: "Our <span class='accent'><br>Cases</span>",
-      description: "Showcasing brands we've helped grow through strategy, design, and technology. Each project is a testament to our commitment to creating lasting digital experiences.",
+      id: "service-portfolio",
+      theme: "dark",
+      title: "Recent Projects",
+      stat: "100+",
+      description: "Projects delivered, for 60+ clients, with a 4.8 rating on Upwork. Stores built to last past their launch.",
       items: [
         {
-          title: "Naya Tech",
-          text: "Design & Shopify development for technology startup",
-          link: "https://naya.tech/",
-          background_image: "/images/sections/works/card-1-bg.png",
-          icons: ['shopify']
-        },
-        {
-          title: "MO",
-          text: "Website & app development",
-          link: "https://getmo.us/",
-          background_image: "/images/pages/shopify-development/section/works/mo-back.png",
-          background_image_mob: "/images/pages/shopify-development/section/works/mo-back-mob.png",
-          icons: ['figma', 'shopify']
-        },
-        {
-          title: "Prime Eva",
-          text: "Custom website & ERP development",
+          title: "Prime EVA",
+          text: "Product configurator built directly into the native store front end.",
+          tags: "Configurator / ERP",
           link: "https://primeeva.com/",
           background_image: "/images/pages/shopify-development/section/works/prime-eva-back.png",
-          icons: ['figma', 'shopify']
-        },
-        {
-          title: "Wood and Hearts",
-          text: "Custom store development & additional functionality for kids furniture",
-          link: "https://woodandhearts.com/",
-          background_image: "/images/pages/shopify-development/section/works/w&h-back.png",
           icons: ['shopify']
         },
         {
-          title: "Komo Diamands",
-          text: "Store setup & customizations for jewelry brand",
-          link: "https://komodiamonds.com/",
-          background_image: "/images/pages/shopify-development/section/works/komo-diamands-back.png",
+          title: "Innan Jewellery",
+          text: "Bespoke theme, enquiry logic and multi-language build for the EU.",
+          tags: "Theme Development / Jewellery",
           icons: ['shopify']
         },
         {
-          title: "KLOTT",
-          text: "Store setup & customizations for fashion brand",
-          link: "https://ua.klottclothes.com/",
-          background_image: "/images/pages/shopify-development/section/works/klott-back.png",
-          icons: ['git', 'shopify']
+          title: "Gunia",
+          text: "Theme extension and migration for a Ukrainian luxury homeware brand.",
+          tags: "Replatform / Homeware",
+          icons: ['shopify']
         }
       ]
     }) %>
 
+    <%-
+      include('layout/section/split.ejs', {
+        semantic: true,
+        locale: 'en',
+        theme: 'light',
+        id: "service-advantages",
+        title: "When We Can Help",
+        subtitle: "The theme stopped being<br class='br-desk'> the answer <span class='accent'>a while ago.</span>",
+        content_cards: [
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Your checkout needs rules Shopify lacks" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "One store must serve wholesale and retail" },
+          { subtitle: "<span class='fig-rhombus black'></span>", title: "Your product needs configuring to sell" }
+        ]
+      })
+    %>
+
     <%- include('layout/section/info.ejs', {
+      semantic: true,
       locale: "en",
       id: "reviews",
       theme: "dark",
       class: "reviews",
-      title: "Reviews",
-      subtitle: "<span class='accent'>With trust</span><br> from our partners",
+      title: "What clients say",
       background_image: "/images/pages/shopify-development/section/reviews/back.png",
       background_image_mobile: "/images/pages/shopify-development/section/reviews/back-mob.png",
       reviews: [
         {
-          text: "Base X Tech was just fantastic throughout the entire design process.",
-          name: "Alexey Cherevuta",
-          post: "COO, DevIT Group",
-          avatar: "/images/pages/shopify-development/section/reviews/avatar-1.png"
+          text: "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+          name: "VT Advantec",
+          post: "Shopify Development"
         },
         {
-          text: "Base X Tech's approach was never one-size-fits-all—every part of the process felt personalized.",
-          name: "Hanna Korovianska",
-          post: "Business Assistant, Komanda",
-          avatar: "/images/pages/shopify-development/section/reviews/avatar-2.png"
+          text: "We received positive feedback from customers about the new site, which was fully functional and met all our needs.",
+          name: "Lili Mager",
+          post: "Store Build"
         },
         {
-          text: "Base X Tech was structured, professional, and highly responsive.",
-          name: "Mike Yemchura",
-          post: "Founder, Figmatica",
-          avatar: "/images/pages/shopify-development/section/reviews/avatar-3.png"
-        },
-        {
-          text: "Base X's project management was efficient and professional.",
-          name: "Julia Yakusha",
-          post: "CMO, Codeska",
-          avatar: "/images/pages/shopify-development/section/reviews/avatar-4.png"
+          text: "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify.",
+          name: "Gunia",
+          post: "Theme Development"
         }
       ]
     }) %>
+
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        locale: 'en',
+        id: 'service-faq',
+        title: 'How We Build',
+        subtitle: 'From scoping the build<br> to <span class="accent">support after launch.</span>',
+        button: {
+          text: "Discuss Your Project"
+        },
+        faq: [
+          {
+            title: "Scope & Estimate",
+            description: "We work through what the build actually needs and what it will cost before anyone writes code."
+          },
+          {
+            title: "Plan & Architecture",
+            description: "We decide the data model, the integrations and where custom code is justified rather than convenient."
+          },
+          {
+            title: "Build & Review",
+            description: "We develop in reviewable stages so you see the store working before launch, not a demo at the end."
+          },
+          {
+            title: "Launch & Support",
+            description: "We ship it, watch it under real traffic and stay on it after the launch rather than handing over a login."
+          }
+        ]
+      })
+    %>
 
     <%- include('layout/section/default.ejs', {
       locale: "en",
@@ -218,49 +238,63 @@
 
     }) %>
 
-    <%- include('layout/section/timeline.ejs', {
-      locale: "en",
-      theme: "dark",
-      id: "timeline",
-      title: "<span class='accent'>How</span> we<br class='br-mob'> work",
-      subtitle: "Stages",
-      background_image: "/images/pages/shopify-development/section/timeline/back.png",
-      background_image_mobile: "/images/pages/shopify-development/section/timeline/back-mob.png",
-      items: [
-        {
-          number: "1",
-          title: "Opportunity Discovery and Proposal",
-          text: "<p>A. We identify your needs, develop solution ideas and present you with a proposal.</p><p>B. We agree on all terms with you and sign a contract to officially start cooperation.</p>"
-        },
-        {
-          number: "2",
-          title: "Project Initiation and Planning:",
-          text: "<p>A. We define detailed project scope, goals, results and success criteria.</p><p>B. We develop a comprehensive project plan, including schedule, resources, budget and risks.</p>"
-        },
-        {
-          number: "3",
-          title: "DESIGN AND DEVELOPMENT / IMPLEMENTATION",
-          text: "<p>A. We design and implement the core solution according to the approved plan.</p><p>B. We execute tasks, managing progress, communication and resources.</p>"
-        },
-        {
-          number: "4",
-          title: "QUALITY ASSURANCE AND TESTING",
-          text: "<p>A. We conduct thorough testing to identify, track and eliminate defects.</p><p>B. We ensure that results meet agreed quality standards and requirements.</p>"
-        },
-        {
-          number: "5",
-          title: "Project Handover",
-          text: "<p>A. We prepare, launch the solution and receive your final approval.</p><p>B. We formally transfer all results, documentation and conduct necessary training.</p>"
-        },
-        {
-          number: "6",
-          title: "Support (MAINTENANCE AND CLOSURE)",
-          text: "<p>A. We provide initial post-launch support and collect client/team feedback.</p><p>B. We complete final documentation, reporting and officially close the project.</p>"
-        }
-      ]
-    }) %>
+    <%-
+      include('layout/section/faq.ejs', {
+        semantic: true,
+        schema: true,
+        numbered: false,
+        extra_class: 'faq-list',
+        locale: 'en',
+        id: 'service-questions',
+        title: 'FAQ',
+        subtitle: 'Questions we <span class="accent">get asked</span>',
+        faq: [
+          {
+            title: "Can you customise Shopify checkout?",
+            description: "Yes, on Shopify Plus. Checkout validation, discount logic and delivery rules are built with Shopify Functions and checkout extensions rather than workarounds. On standard plans the options are much narrower, and we will tell you which of your requirements are not possible before you commit to anything."
+          },
+          {
+            title: "Do we need Shopify Plus?",
+            description: "Only for specific things. Plus is required for checkout customisation, B2B company accounts and higher API limits. If none of your requirements need those, a standard plan is usually enough and we will say so rather than sell you the upgrade."
+          },
+          {
+            title: "Can you build a product configurator on Shopify?",
+            description: "Yes, and we have. A configurator built into the storefront handles options, dependencies and made-to-order ranges that variants alone cannot express. Prime EVA is the example: a custom configurator running inside their Shopify store rather than as a bolted-on app."
+          },
+          {
+            title: "Can one store serve wholesale and retail?",
+            description: "Yes. Shopify B2B runs company accounts, price lists and payment terms alongside your retail catalogue, so you are not maintaining two stores that drift apart. We have built this, though that client's work is not public."
+          },
+          {
+            title: "When does headless Shopify make sense?",
+            description: "Less often than it gets recommended. Headless is worth it when you need a front end Shopify's theme layer cannot deliver, or when the storefront serves more than one channel. It costs more to build and more to maintain, so if a well-built theme does the job we will tell you that instead."
+          },
+          {
+            title: "Can you work with our existing theme, or is it a rebuild?",
+            description: "Usually your existing theme. We audit what it can carry, extend it where that holds up, and only recommend a rebuild when the theme is fighting what you need. A rebuild you did not need is the most expensive thing on a Shopify project."
+          },
+          {
+            title: "How long does a custom Shopify build take?",
+            description: "Most builds run 4 to 16 weeks, depending on the integrations and how much is custom rather than configured. We scope and estimate before writing code, so the timeline is agreed at the start."
+          },
+          {
+            title: "What happens after launch?",
+            description: "We stay on it. We watch the store under real traffic, fix what surfaces in the first weeks, and keep it working through Shopify's API version changes. Handing over a login and disappearing is where most of the problems we get called in to fix started."
+          }
+        ]
+      })
+    %>
 
-    <%- include('layout/section/cta.ejs') %>
+    <%- include('layout/section/approach.ejs') -%>
+
+    <%- include('layout/section/cta.ejs', {
+      cta: {
+        label: "Let’s talk",
+        title: "Have a build that needs<br> more than a theme?",
+        body: "Tell us what the store has to do and we'll tell you how we would build it.",
+        button: "Let's Talk"
+      }
+    }) %>
   </main>
 
   <%- include('layout/footer-alt.ejs') %>
