@@ -1,0 +1,190 @@
+<%# Design v2 home (Figma "Home Page" 693:1781, frames Home + Mobile). Copy: content/pages/home.en.json.
+    All text is in the HTML; hover/scroll only change emphasis. Legacy anchors kept for the site nav:
+    #section-service (capabilities), #section-works (projects), #section-team (approach), #section-reviews (reviews). %>
+<%
+  const arrow = '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+  const icons = {
+    compass: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></svg>',
+    wand: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m4 20 11-11M13 7l4 4M18 3v3M16.5 4.5h3M20 9v2M19 10h2M9 3v2M8 4h2"/></svg>',
+    timer: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 2h4M12 2v3M5.6 8.4A8 8 0 1 0 12 5"/><path d="M12 13V9M5 5l2 2"/></svg>'
+  };
+%>
+<body class="v2 v2-home locale-en" lang="<%= lang %>">
+  <%- include('layout/noscript.ejs') %>
+  <%- include('layout/v2/header.ejs') %>
+  <%- include('layout/drawer/nav.ejs') %>
+  <%- include('layout/drawer/form.ejs') %>
+
+  <nav class="v2-rail" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></nav>
+
+  <main id="<%= mainId %>" class="v2-main">
+    <!-- Hero -->
+    <section class="h-hero" data-v2-section>
+      <h1 class="h-hero__title">
+        <% c.hero.title.forEach(line => { %><span><%= line %></span> <% }) %>
+        <% c.hero.titleMuted.forEach((line, i) => { %><span class="v2-muted<%= i === c.hero.titleMuted.length - 1 ? ' h-hero__indent' : '' %>"><%= line %></span> <% }) %>
+      </h1>
+      <figure class="h-hero__media"><img src="<%= c.hero.image %>" alt="<%= c.hero.imageAlt %>" width="229" height="160" fetchpriority="high"></figure>
+      <div class="h-hero__foot">
+        <ol class="h-hero__focus" aria-label="What we focus on">
+          <% c.hero.focus.forEach((f, i) => { %><li><span class="h-hero__num" aria-hidden="true">/<%= String(i + 1).padStart(2, '0') %></span> <%= f %></li><% }) %>
+        </ol>
+        <%- include('layout/v2/button.ejs', { text: c.hero.button }) %>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="section-service" class="v2-section v2-light h-caps" data-v2-section aria-labelledby="h-caps-title">
+      <div class="v2-section__head h-head">
+        <p class="v2-tag v2-tag--light h-tag"><%= c.capabilities.label %></p>
+        <h2 id="h-caps-title" class="h-title"><%= c.capabilities.title %> <span class="h-title__muted"><%= c.capabilities.titleMuted %></span> <%= c.capabilities.titleEnd %></h2>
+      </div>
+      <ul class="h-caps__grid">
+        <% c.capabilities.items.forEach(item => { %>
+          <li class="h-cap">
+            <img class="h-cap__img" loading="lazy" src="<%= item.image %>" alt="">
+            <h3 class="h-cap__title"><a href="<%= item.link %>"><%= item.title %></a></h3>
+            <ul class="h-cap__services" aria-label="<%= item.title %> services">
+              <% item.services.forEach(s => { %><li><a href="<%= s.href %>"><%= s.name %></a></li><% }) %>
+            </ul>
+            <span class="h-cap__plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+
+    <!-- Reviews -->
+    <section id="section-reviews" class="v2-light h-reviews" data-v2-section aria-labelledby="h-reviews-title">
+      <h2 id="h-reviews-title" class="v2-tag v2-tag--light h-tag h-tag--h"><%= c.reviews.label %></h2>
+      <div class="h-reviews__viewport">
+        <div class="h-reviews__track">
+          <% [0, 1].forEach(copy => { %>
+          <ul class="h-reviews__list" <%- copy ? 'aria-hidden="true"' : '' %>>
+            <% c.reviews.items.forEach(r => { %>
+              <li><figure class="h-review">
+                <blockquote><p><%= r.quote %></p></blockquote>
+                <figcaption><%= r.author %></figcaption>
+              </figure></li>
+            <% }) %>
+          </ul>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent projects -->
+    <section id="section-works" class="v2-section v2-dark v2-projects h-projects" data-v2-section aria-labelledby="h-projects-title">
+      <h2 id="h-projects-title" class="v2-tag h-tag h-tag--h"><%= c.projects.label %></h2>
+      <div class="v2-projects__list">
+        <% c.projects.items.forEach(item => { %>
+          <article class="v2-project h-project">
+            <p class="v2-project__cat"><span class="v2-dot"></span><%= item.category %></p>
+            <div class="v2-project__media">
+              <% if (item.image) { %><img loading="lazy" src="<%= item.image %>" alt="<%= item.imageAlt %>"><% } else { %><div class="v2-project__placeholder" aria-hidden="true"><span><%= item.title %></span></div><% } %>
+              <% if (item.badges.length) { %><ul class="h-project__badges"><% item.badges.forEach(b => { %><li><%= b %></li><% }) %></ul><% } %>
+            </div>
+            <div class="v2-project__info">
+              <h3 class="v2-project__title"><%= item.title %></h3>
+              <p class="v2-project__text"><%= item.text %></p>
+              <ul class="v2-project__tags"><% item.tags.forEach(t => { %><li><%= t %></li><% }) %></ul>
+              <% if (item.link) { %><a class="v2-round-link" href="<%= item.link %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel %>"><%- arrow %></a><% } %>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+      <div class="v2-center"><%- include('layout/v2/button.ejs', { text: c.projects.button }) %></div>
+    </section>
+
+    <!-- Approach -->
+    <section id="section-team" class="v2-section v2-light h-approach" data-v2-section aria-labelledby="h-approach-title">
+      <div class="v2-section__head h-head">
+        <p class="v2-tag v2-tag--light h-tag"><%= c.approach.label %></p>
+        <h2 id="h-approach-title" class="h-title h-title--ink"><%= c.approach.title %></h2>
+      </div>
+      <div class="h-approach__body">
+        <p class="h-approach__lead"><%= c.approach.lead %></p>
+        <ul class="h-approach__list">
+          <% c.approach.items.forEach(item => { %>
+            <li class="h-principle">
+              <div class="h-principle__head"><span class="h-principle__icon"><%- icons[item.icon] %></span><h3><%= item.title %></h3></div>
+              <% if (item.description) { %><p class="h-principle__desc"><%= item.description %></p><% } %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="h-trust">
+        <p class="h-trust__label"><span class="v2-dot"></span><%= c.approach.trustedBy %></p>
+        <ul class="h-trust__list">
+          <li><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener"><img loading="lazy" src="/images/sections/reviews/badge-upwork.png" alt="Upwork Top Rated" width="32" height="32"></a></li>
+          <li><a href="https://clutch.co/profile/base-x-tech" target="_blank" rel="noopener"><img loading="lazy" src="/images/sections/reviews/badge-clutch.png" alt="Clutch Global" width="37" height="32"></a></li>
+          <li><img loading="lazy" src="/images/sections/reviews/badge-design-rush.png" alt="DesignRush top eCommerce development company" width="30" height="32"></li>
+          <li class="h-trust__widget"><div class="goodfirm-widget" data-widget-type="goodfirms-widget-t6" data-widget-pattern="star-no-review" data-height="100" data-company-id="171088"></div></li>
+          <li class="h-trust__widget"><div class="sortlist-badge"></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Highlighted articles -->
+    <section class="v2-section v2-dark h-articles" data-v2-section aria-labelledby="h-articles-title">
+      <div class="h-articles__head">
+        <h2 id="h-articles-title" class="v2-tag h-tag h-tag--h"><%= c.articles.label %></h2>
+        <a class="h-more" href="/blog/"><%= c.articles.more %><span class="h-more__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 16 16"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></a>
+      </div>
+      <div class="h-articles__grid">
+        <% c.articles.items.forEach(a => { %>
+          <article class="h-article">
+            <div class="h-article__text">
+              <h3 class="h-article__title"><a href="<%= a.href %>"><%= a.title %></a></h3>
+              <p class="h-article__excerpt"><%= a.excerpt %></p>
+            </div>
+            <p class="h-article__meta">By <%= a.author %><span class="v2-dot" aria-hidden="true"></span><time datetime="<%= a.date %>"><%= a.dateLabel %></time></p>
+            <span class="v2-round-link h-article__arrow" aria-hidden="true"><%- arrow %></span>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="v2-section v2-light h-stats" data-v2-section aria-labelledby="h-stats-title">
+      <h2 id="h-stats-title" class="h-stats__title"><%= c.stats.title %></h2>
+      <ul class="h-stats__list">
+        <% c.stats.items.forEach(s => { %><li><strong><%= s.value %></strong><span><%= s.label %></span></li><% }) %>
+      </ul>
+      <p class="h-stats__closing"><%= c.stats.closing %></p>
+      <p class="h-stats__note"><%= c.stats.footnote %></p>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="v2-section v2-dark h-roadmap" data-v2-section aria-labelledby="h-roadmap-title">
+      <div class="v2-section__head h-head">
+        <p class="v2-tag h-tag"><%= c.roadmap.label %></p>
+        <h2 id="h-roadmap-title" class="h-title h-title--light"><%= c.roadmap.title %></h2>
+      </div>
+      <ol class="h-steps">
+        <% c.roadmap.steps.forEach((s, i) => { %>
+          <li class="h-step<%= i === 2 ? ' is-active' : '' %>" tabindex="0">
+            <span class="h-step__num" aria-hidden="true">/<%= String(i + 1).padStart(2, '0') %></span>
+            <h3 class="h-step__title"><%= s.title %></h3>
+            <p class="h-step__desc"><%= s.description %></p>
+          </li>
+        <% }) %>
+      </ol>
+    </section>
+
+    <!-- Closing CTA -->
+    <section class="v2-cta h-cta" data-v2-section aria-labelledby="h-cta-title">
+      <div class="v2-cta__collage h-cta__collage" aria-hidden="true"><% c.cta.images.forEach(src => { %><img loading="lazy" src="<%= src %>" alt=""><% }) %></div>
+      <h2 id="h-cta-title" class="v2-h-l"><span><%= c.cta.title %></span> <span class="v2-muted"><%= c.cta.titleMuted %></span></h2>
+      <div class="v2-cta__body">
+        <p><%= c.cta.body %></p>
+        <%- include('layout/v2/button.ejs', { text: c.cta.button }) %>
+      </div>
+    </section>
+  </main>
+
+  <%- include('layout/v2/footer.ejs') %>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/v2.js"></script>
+  <script type="module" src="/src/v2-home.js"></script>
+</body>
