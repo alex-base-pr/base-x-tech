@@ -1,0 +1,254 @@
+{
+  "_source": "Figma 'Home Page' 693:1781, frame Home (desktop 1440) + Mobile — approved home copy. meta.* and stats.footnote are not in the frame (see comments in the keys).",
+  "meta": {
+    "title": "Shopify Development & Web Design Agency | Base X Tech",
+    "description": "Base X Tech builds the systems behind modern commerce: custom Shopify development, apps, integrations and AI automation, from idea to launch."
+  },
+  "hero": {
+    "title": [
+      "Building",
+      "the systems"
+    ],
+    "titleMuted": [
+      "behind modern",
+      "commerce"
+    ],
+    "focus": [
+      "Shopify Apps",
+      "AI Automation",
+      "Shopify Development"
+    ],
+    "image": "/images/v2/home-hero-klott.webp",
+    "imageAlt": "Klott clothing store built on Shopify, shown on a desktop monitor",
+    "button": "Discuss Your Project"
+  },
+  "capabilities": {
+    "label": "Our Capabilities",
+    "title": "Everything needed to",
+    "titleMuted": "build, scale, and automate",
+    "titleEnd": "modern commerce.",
+    "items": [
+      {
+        "title": "Design & Experience",
+        "image": "/images/v2/home-cap-design.webp",
+        "link": "/pages/service/custom-web-design-services/",
+        "services": [
+          {
+            "name": "Web Design",
+            "href": "/pages/service/custom-web-design-services/"
+          },
+          {
+            "name": "Conversion Rate Optimization",
+            "href": "/pages/service/conversion-rate-optimization/"
+          }
+        ]
+      },
+      {
+        "title": "Shopify Development",
+        "image": "/images/v2/home-cap-shopify.webp",
+        "link": "/pages/shopify-development/",
+        "services": [
+          {
+            "name": "Shopify Development",
+            "href": "/pages/shopify-development/"
+          },
+          {
+            "name": "Shopify Migration",
+            "href": "/pages/service/shopify-migration-service/"
+          }
+        ]
+      },
+      {
+        "title": "AI & Automation",
+        "image": "/images/v2/home-cap-ai.webp",
+        "link": "/pages/service/custom-shopify-integrations/",
+        "services": [
+          {
+            "name": "Shopify Integrations",
+            "href": "/pages/service/custom-shopify-integrations/"
+          },
+          {
+            "name": "Custom Shopify Apps",
+            "href": "/pages/service/custom-shopify-app-development/"
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "label": "What people say about us:",
+    "items": [
+      {
+        "quote": "Base X went through each task in detail to ensure the final product aligned with our vision.",
+        "author": "Stealth Startup US"
+      },
+      {
+        "quote": "Their team delivered a bug-free Shopify store that resulted in higher conversion rates.",
+        "author": "Stealth Startup US"
+      },
+      {
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs.",
+        "author": "Lili Mager"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Recent Projects",
+    "button": "Discuss Your Project",
+    "items": [
+      {
+        "category": "Hardware startup",
+        "title": "NAYA.TECH",
+        "text": "Built a custom Shopify experience for a CES Innovation Awards Honoree, combining a bespoke storefront with a product configurator designed around a highly modular hardware product.",
+        "tags": [
+          "custom shopify development",
+          "custom configurator development"
+        ],
+        "badges": [
+          "CES Innovation Awards Honoree",
+          "$3M+ raised"
+        ],
+        "image": "/images/v2/home-project-naya.webp",
+        "imageAlt": "Naya modular keyboard and trackball modules from the Naya Shopify store",
+        "link": "/blog/shopify-product-configurator-naya-tech/",
+        "linkLabel": "Read the NAYA.TECH case study"
+      },
+      {
+        "category": "Automotive",
+        "title": "Prime EVA",
+        "text": "Designed and developed one of the most advanced Shopify configurators for custom car mats, fully integrated with the ERP to support millions of possible product combinations.",
+        "tags": [
+          "custom shopify development",
+          "custom configurator development",
+          "ERP development and integration"
+        ],
+        "badges": [
+          "10M+ possible configurations"
+        ],
+        "image": "/images/v2/home-project-primeeva.webp",
+        "link": "https://primeeva.com/",
+        "linkLabel": "Visit the Prime EVA store",
+        "imageAlt": "Prime EVA custom car mat configurator on Shopify, shown on a desktop monitor"
+      },
+      {
+        "category": "Lifestyle brand",
+        "title": "Gunia",
+        "text": "Developed a custom Shopify storefront that reflects the brand’s premium identity while delivering a seamless shopping experience across collections and editorial content.",
+        "tags": [
+          "custom shopify development",
+          "Performance"
+        ],
+        "badges": [],
+        "image": "/images/v2/home-project-gunia.webp",
+        "imageAlt": "Gunia brand campaign image: portrait with flower petals",
+        "link": "https://guniaproject.com/",
+        "linkLabel": "Visit the Gunia store"
+      }
+    ]
+  },
+  "approach": {
+    "label": "Approach",
+    "title": "Technology changes fast. Our approach doesn’t.",
+    "lead": "We focus on building systems that remain useful, scalable, and maintainable long after launch.",
+    "items": [
+      {
+        "title": "Depth over shortcuts",
+        "description": "We build for long-term scalability, not quick fixes. Complex problems deserve thoughtful solutions.",
+        "icon": "compass"
+      },
+      {
+        "title": "Pragmatic innovation",
+        "description": null,
+        "icon": "wand"
+      },
+      {
+        "title": "Long-term thinking",
+        "description": null,
+        "icon": "timer"
+      }
+    ],
+    "trustedBy": "Trusted by"
+  },
+  "articles": {
+    "label": "Highlighted Articles",
+    "more": "More articles",
+    "items": [
+      {
+        "title": "What's New in Shopify 2026: Spring Edition Breakdown",
+        "excerpt": "Shopify Spring '26 dropped 150+ updates. Most of it can wait. A few things — EU withdrawal compliance, the...",
+        "author": "Vadym-Marko Hruden",
+        "date": "2026-06-19",
+        "dateLabel": "19 Jun 2026",
+        "href": "/blog/whats-new-shopify-2026-spring-edition/"
+      },
+      {
+        "title": "Nova Poshta Shopify Integration: Introducing Nova Poshta Connect",
+        "excerpt": "Ukrainian Shopify stores have always had to handle Nova Poshta TTNs manually — outside Shopify, one...",
+        "author": "Oleksandr Rudenko",
+        "date": "2026-06-16",
+        "dateLabel": "16 Jun 2026",
+        "href": "/blog/nova-poshta-shopify-integration-connect-app/"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Numbers that matter",
+    "items": [
+      {
+        "value": "4.8*",
+        "label": "Upwork Reviews"
+      },
+      {
+        "value": "60+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "100+",
+        "label": "Projects Delivered"
+      }
+    ],
+    "footnote": "* Average client rating on our Upwork agency profile.",
+    "closing": "What happens after launch matters more."
+  },
+  "roadmap": {
+    "label": "Roadmap",
+    "title": "From idea to launch",
+    "steps": [
+      {
+        "title": "Discover",
+        "description": "Understanding the business, identifying challenges, and defining the opportunity before any work begins."
+      },
+      {
+        "title": "Plan",
+        "description": "Aligning scope, priorities, timeline, and technical direction to create a clear roadmap."
+      },
+      {
+        "title": "Design & Build",
+        "description": "Designing, developing, and iterating the solution while keeping communication transparent."
+      },
+      {
+        "title": "Validate",
+        "description": "Testing every feature, resolving issues, and making sure the product is ready for release."
+      },
+      {
+        "title": "Launch",
+        "description": "Deploying the project, delivering documentation, and ensuring everything works."
+      },
+      {
+        "title": "Support",
+        "description": "Providing post-launch support, collecting feedback, and helping the product evolve."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Have a complex challenge?",
+    "titleMuted": "Let’s solve it together.",
+    "body": "Whether you’re planning a custom Shopify build, an internal tool, or an AI-powered workflow, we’ll help you find the right solution.",
+    "button": "Let’s Talk",
+    "images": [
+      "/images/v2/home-cta-klott.webp",
+      "/images/v2/home-project-naya.webp",
+      "/images/v2/home-cta-gunia.webp"
+    ]
+  }
+}

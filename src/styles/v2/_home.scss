@@ -1,1 +1,264 @@
-// Home page (design v2) — owned by the home agent.
+// Home page (design v2, Figma "Home Page" 693:1781). Scoped to body.v2.v2-home; reuses v2 tokens/classes.
+$bp: 1024px;
+@mixin desk { @media (min-width: $bp) { @content; } }
+@mixin mob { @media (max-width: $bp - 1) { @content; } }
+
+body.v2.v2-home {
+  overflow-x: clip;
+
+  // ---- shared bits
+  .h-tag { font-size: 15px; padding: 6px 8px; border-radius: 6px; @include desk { font-size: 16px; } }
+  .v2-tag--light.h-tag { background: #e0e0e0; color: #6b6c6d; }
+  .h-tag--h { font-weight: 400; line-height: 1.29; }
+  .h-head { @include desk { grid-template-columns: 1fr minmax(0, 526px); margin-bottom: 0; } }
+  .h-title {
+    font-size: 2rem; line-height: 1.04; letter-spacing: -.03em; font-weight: 300; color: #2a2a2c;
+    @include desk { font-size: 2.5rem; }
+    &--ink { font-weight: 400; max-width: 480px; justify-self: end; }
+    &--light { color: #fff; font-weight: 400; @include desk { justify-self: end; } }
+  }
+  .h-title__muted { color: #6f6f6f; }
+
+  // ---- hero
+  .h-hero {
+    position: relative; display: flex; flex-direction: column; gap: 2rem;
+    padding: 1.5rem 12px 1.5rem; min-height: calc(100svh - 64px);
+    @include desk { min-height: 720px; padding: 24px 30px 49px 24px; }
+  }
+  .h-hero__title {
+    font-size: clamp(3.25rem, 5.2vw, 4.6875rem); line-height: .94; letter-spacing: -.03em; color: #fff;
+    span { display: block; }
+    .v2-muted { color: rgba(255, 255, 255, .52); text-align: right; max-width: 522px;
+      @include desk { text-align: left; } }
+    .h-hero__indent { @include desk { padding-left: 150px; } }
+  }
+  .h-hero__media {
+    margin: 0; align-self: center; width: 245px; padding: 8px; border-radius: 4px; background: var(--v2-panel-2);
+    img { display: block; width: 100%; height: auto; aspect-ratio: 229 / 160; object-fit: cover; border-radius: 4px; }
+    @include desk { position: absolute; right: 30px; top: 154px; }
+  }
+  .h-hero__foot {
+    margin-top: auto; display: flex; flex-direction: column; gap: 1rem;
+    @include desk { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    .v2-btn { margin-top: 0; @include mob { display: flex; .v2-btn__label { flex: 1; justify-content: center; } } }
+  }
+  .h-hero__focus { display: grid; gap: 8px; font-size: 14px; line-height: 1.4; font-weight: 300; color: #fff; }
+  .h-hero__num { color: rgba(255, 255, 255, .45); }
+}
+
+// ---- capabilities (3 image cards; title + service links always visible)
+body.v2.v2-home .h-caps {
+  padding-bottom: 3rem;
+  @include desk { padding: 40px 30px 60px 24px; }
+  .h-head { margin-bottom: 2rem; @include desk { margin-bottom: 140px; } }
+}
+body.v2.v2-home .h-caps__grid {
+  display: grid; gap: 12px;
+  @include desk { grid-template-columns: repeat(3, 1fr); }
+}
+body.v2.v2-home .h-cap {
+  position: relative; display: flex; flex-direction: column; gap: .75rem;
+  min-height: 450px; padding: 24px; border-radius: 10px; overflow: hidden; background: #010101; color: #fff;
+  @include desk { min-height: 500px; }
+  .h-cap__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  > :not(.h-cap__img) { position: relative; }
+  .h-cap__title { font-size: 22px; line-height: .94; letter-spacing: -.03em; font-weight: 500; @include desk { font-size: 24px; }
+    a { text-decoration: none; &::after { content: ''; position: absolute; inset: 0; z-index: 1; } }
+  }
+  .h-cap__services { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-right: 56px;
+    li { position: relative; z-index: 2; }
+    a { display: inline-block; padding: 5px 10px; border-radius: 4px; background: rgba(0, 0, 0, .6);
+        font-size: 13px; text-decoration: none; color: #fff; transition: background .2s;
+        &:hover, &:focus-visible { background: #5d7a22; } }
+  }
+  .h-cap__plus { position: absolute; right: 16px; bottom: 16px; width: 40px; height: 40px; border-radius: 50%; background: var(--v2-accent); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center; transition: transform .25s; }
+  &:hover, &:focus-within {
+    .h-cap__img { transform: scale(1.04); }
+    .h-cap__plus { transform: rotate(90deg); }
+  }
+}
+// The whole card is a link (stretched ::after), so the card itself must be the positioning box:
+// the title stays static and the image sits behind it inside the card's own stacking context.
+body.v2.v2-home .h-cap { isolation: isolate; }
+body.v2.v2-home .h-cap > .h-cap__img { z-index: -1; }
+body.v2.v2-home .h-cap > .h-cap__title { position: static; }
+
+// ---- reviews (slow CSS marquee; static, scrollable list with reduced motion)
+body.v2.v2-home .h-reviews {
+  padding: 40px 12px 60px; border-top: 1px solid rgba(0, 0, 0, .3);
+  @include desk { padding: 40px 0 60px 24px; }
+  .h-tag { display: inline-block; margin-bottom: 2rem; }
+}
+body.v2.v2-home .h-reviews__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 60px, #000 calc(100% - 60px), transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 60px, #000 calc(100% - 60px), transparent);
+}
+body.v2.v2-home .h-reviews__track { display: flex; width: max-content; animation: h-marquee 45s linear infinite;
+  &:hover, &:focus-within { animation-play-state: paused; } }
+body.v2.v2-home .h-reviews__list { display: flex; gap: 40px; padding-right: 40px; @include desk { gap: 60px; padding-right: 60px; } }
+body.v2.v2-home .h-review {
+  margin: 0; width: 280px; display: grid; gap: 16px; font-size: 14px; @include desk { width: 340px; }
+  blockquote { margin: 0; p { color: #5e5e5e; line-height: 1.4; } }
+  figcaption { color: #1d1e20; letter-spacing: .01em; }
+}
+@keyframes h-marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  body.v2.v2-home .h-reviews__track { animation: none; width: auto; }
+  body.v2.v2-home .h-reviews__viewport { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  body.v2.v2-home .h-reviews__list[aria-hidden="true"] { display: none; }
+}
+
+// ---- recent projects (extends .v2-project from the service template)
+body.v2.v2-home .h-projects {
+  padding: 40px 12px 60px;
+  @include desk { padding: 100px 30px 100px 24px; }
+  .v2-projects__list { margin: 2rem -12px 0; @include desk { margin: 37px -30px 0 -24px; } }
+  .v2-project { padding: 24px 12px; @include desk { grid-template-columns: 215px minmax(0, 1fr) 327px; gap: 12px; padding: 24px 30px 55px 28px; } }
+  .v2-project__media { aspect-ratio: 369 / 300; @include desk { aspect-ratio: 755 / 600; } }
+  .v2-project__info { @include desk { min-height: 602px; padding: 32px 24px 24px; } }
+  .v2-project__title { font-weight: 400; @include mob { font-size: 26px; font-weight: 300; } }
+  .v2-project__text { color: #d1d1d1; font-weight: 300; line-height: 1.29; }
+  .v2-project__tags { margin-top: 2rem; font-size: 13px; color: #fff; font-weight: 300; text-transform: capitalize; gap: 12px;
+    @include desk { margin-top: 120px; }
+    li::before { width: 6px; height: 6px; background: #383838; }
+  }
+  .v2-round-link { position: static; align-self: flex-end; margin-top: auto; }
+  .v2-project__cat { font-weight: 300; color: #d1d1d1; }
+}
+body.v2.v2-home .h-project__badges {
+  position: absolute; left: 16px; bottom: 16px; right: 16px; z-index: 1; display: flex; flex-wrap: wrap; gap: 4px;
+  li { padding: 6px 12px; border-radius: 4px; background: #fff; color: #040507; font-size: 12px; font-weight: 500; line-height: 1.4; }
+}
+
+// ---- approach
+body.v2.v2-home .h-approach {
+  padding: 40px 12px 0;
+  @include desk { padding: 40px 30px 0 24px; }
+  .h-head { margin-bottom: 3rem; @include desk { margin-bottom: 0; } }
+}
+body.v2.v2-home .h-approach__body {
+  display: grid; gap: 2rem; padding-bottom: 60px;
+  @include desk { grid-template-columns: 1fr 480px; align-items: start; padding: 196px 0 30px; }
+}
+body.v2.v2-home .h-approach__lead { max-width: 316px; line-height: 1.4; color: #030208; @include mob { max-width: none; } }
+body.v2.v2-home .h-approach__list { display: grid; gap: 8px; }
+body.v2.v2-home .h-principle {
+  display: grid; gap: 4px;
+  .h-principle__head { display: flex; align-items: center; gap: 16px; padding: 8px; border-radius: 8px; background: #fff; }
+  .h-principle__icon { flex: 0 0 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
+  h3 { font-size: 22px; line-height: .94; letter-spacing: -.03em; font-weight: 500; color: #2a2a2c; @include desk { font-size: 24px; } }
+  .h-principle__desc { padding: 24px; border-radius: 8px; background: #fff; line-height: 1.4; color: #030208; }
+}
+body.v2.v2-home .h-trust {
+  display: flex; flex-direction: column; gap: 1rem; margin: 0 -12px; padding: 16px 12px 24px; border-top: 1px solid rgba(0, 0, 0, .3);
+  @include desk { flex-direction: row; align-items: center; justify-content: space-between; margin: 0 -30px 0 -24px; padding: 14px 30px 14px 877px; }
+  .h-trust__label { font-size: 15px; font-weight: 300; color: #4a4949; white-space: nowrap; }
+  .h-trust__list { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; @include desk { gap: 12px; }
+    img { display: block; height: 32px; width: auto; }
+    a { display: block; }
+  }
+  .h-trust__widget { min-height: 30px; max-height: 48px; display: flex; align-items: center; max-width: 120px; overflow: hidden;
+    iframe { max-height: 48px; } }
+}
+
+// ---- highlighted articles
+body.v2.v2-home .h-articles {
+  padding: 40px 12px 60px;
+  @include desk { padding: 100px 30px 100px 24px; }
+}
+body.v2.v2-home .h-articles__head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2rem; @include desk { margin-bottom: 57px; } }
+body.v2.v2-home .h-more {
+  display: inline-flex; align-items: center; gap: 12px; font-weight: 500; text-decoration: none; color: #fff;
+  .h-more__icon { width: 24px; height: 24px; border-radius: 3px; background: var(--v2-accent); display: inline-flex; align-items: center; justify-content: center; transition: transform .2s; }
+  &:hover .h-more__icon, &:focus-visible .h-more__icon { transform: translate(2px, -2px); }
+}
+body.v2.v2-home .h-articles__grid { display: grid; gap: 12px; @include desk { grid-template-columns: 1fr 1fr; } }
+body.v2.v2-home .h-article {
+  position: relative; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 1fr auto; grid-template-areas: 'text text' 'meta arrow';
+  row-gap: 80px; padding: 24px; border-radius: 10px; background: var(--v2-panel); transition: background .2s;
+  @include desk { row-gap: 120px; min-height: 287px; }
+  @include mob { grid-template-rows: auto; grid-template-areas: 'text text' 'arrow arrow' 'meta meta'; row-gap: 24px; .h-article__text { margin-bottom: 56px; } }
+  .h-article__text { grid-area: text; align-self: start; display: grid; gap: 16px; max-width: 434px; }
+  .h-article__title { font-size: 24px; line-height: .94; letter-spacing: -.03em; font-weight: 500; color: #fff;
+    a { text-decoration: none; &::after { content: ''; position: absolute; inset: 0; } }
+  }
+  .h-article__excerpt { color: #d1d1d1; font-weight: 300; }
+  .h-article__meta { grid-area: meta; align-self: end; display: flex; align-items: center; gap: 16px; font-size: 12px; color: #d1d1d1; font-weight: 300;
+    .v2-dot { width: 6px; height: 6px; margin: 0; } }
+  .h-article__arrow { grid-area: arrow; position: static; justify-self: end; align-self: end; }
+  &:hover, &:focus-within { background: #26282b; .h-article__arrow { transform: rotate(45deg); } }
+}
+
+// ---- numbers
+body.v2.v2-home .h-stats {
+  text-align: center; padding: 80px 12px;
+  @include desk { padding: 146px 30px 120px; }
+  .h-stats__title { font-size: clamp(3.125rem, 4.5vw, 4.0625rem); line-height: .94; letter-spacing: -.03em; color: #6f6f6f; }
+  .h-stats__list {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6px; max-width: 366px; margin: 20px auto;
+    @include desk { display: flex; justify-content: center; max-width: none; }
+    li { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; height: 124px; padding: 24px 12px; border-radius: 8px; white-space: nowrap; background: var(--v2-accent); color: #fff;
+      @include desk { width: 180px; }
+      &:last-child:nth-child(odd) { @include mob { grid-column: 1 / -1; } }
+    }
+    strong { font-size: 40px; line-height: 1.04; letter-spacing: -.03em; font-weight: 700; }
+    span { font-size: 16px; line-height: 1.4; }
+  }
+  .h-stats__closing { max-width: 619px; margin: 0 auto; font-size: clamp(3.125rem, 4.5vw, 4.0625rem); line-height: .94; letter-spacing: -.03em; color: #2a2a2c; }
+  .h-stats__note { margin-top: 1.5rem; font-size: 13px; color: #595959; }
+}
+
+// ---- roadmap: every step shows title + description; the active one (hover/focus/scroll) is emphasised
+body.v2.v2-home .h-roadmap {
+  padding: 40px 12px 0;
+  @include desk { padding: 40px 0 0 24px; }
+  .h-head { margin-bottom: 2rem; @include desk { margin-bottom: 146px; padding-right: 30px; } }
+  .h-tag { background: #282828; color: #dadada; }
+}
+body.v2.v2-home .h-steps { margin: 0 -12px; border-top: 1px solid var(--v2-line); @include desk { margin: 0 0 0 -24px; } }
+body.v2.v2-home .h-step {
+  display: grid; grid-template-columns: 50px 1fr; column-gap: 32px; row-gap: 14px; padding: 24px 12px;
+  border-bottom: 1px solid var(--v2-line); outline: none; transition: background .25s;
+  @include desk { grid-template-columns: 100px minmax(0, 1fr) 382px; align-items: center; padding: 24px 30px 24px 24px; min-height: 71px; }
+  .h-step__num { font-size: 22px; line-height: .94; letter-spacing: -.03em; color: #5a5c63; @include desk { font-size: 24px; } }
+  .h-step__title { font-size: 22px; line-height: .94; letter-spacing: -.03em; color: #fff; transition: color .25s, font-size .25s;
+    @include desk { font-size: 24px; color: #8a8b90; } }
+  .h-step__desc { grid-column: 2; color: #d1d1d1; font-weight: 300; @include desk { grid-column: 3; color: #8a8b90; transition: color .25s; } }
+  @include desk {
+    &.is-active, &:hover, &:focus-visible {
+      .h-step__title { color: #fff; font-size: 32px; }
+      .h-step__desc { color: #d1d1d1; }
+      .h-step__num { color: #8a8b90; }
+    }
+  }
+  &:focus-visible { box-shadow: inset 0 0 0 2px var(--v2-accent); }
+}
+
+// ---- closing CTA
+body.v2.v2-home .h-cta {
+  padding: 80px 12px;
+  @include desk { padding: 150px 30px 160px; min-height: 680px; }
+  .v2-h-l { font-size: 2.5rem; @include desk { font-size: 4.6875rem; max-width: 600px; } }
+  .v2-h-l span { display: inline; }
+  .v2-cta__body { color: #d1d1d1; font-weight: 300; max-width: 374px; @include desk { margin-left: 205px; }
+    .v2-btn { @include mob { display: flex; .v2-btn__label { flex: 1; justify-content: center; } } } }
+}
+body.v2.v2-home .h-cta__collage {
+  @include desk {
+    right: 60px; width: 560px; height: 640px;
+    img { width: 290px; aspect-ratio: 4 / 3; object-fit: cover; }
+    img:nth-child(1) { top: 0; right: 80px; transform: rotate(16deg); }
+    img:nth-child(2) { top: 230px; left: 0; right: auto; width: 300px; transform: rotate(-8deg); }
+    img:nth-child(3) { bottom: 0; right: 40px; transform: rotate(-35deg); }
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  @include desk {
+    body.v2.v2-home .h-cta__collage img { animation: h-float 9s ease-in-out infinite alternate; }
+    body.v2.v2-home .h-cta__collage img:nth-child(2) { animation-delay: -3s; }
+    body.v2.v2-home .h-cta__collage img:nth-child(3) { animation-delay: -6s; }
+  }
+}
+@keyframes h-float { to { translate: 0 -14px; } }
