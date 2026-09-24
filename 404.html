@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('layout/head-alt.ejs', {
-  title: "404 - Page Not Found | BaseX-Tech",
+  title: "404 - Page Not Found | Base X Tech",
   description: "The page you are looking for does not exist.",
+  v2: true,
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/404/",
   hreflangDefault: "https://base-xtech.com/404/"
 }) %>
-
-<body class="body-404">
-  <%- include('layout/noscript.ejs') %>
-  <%- include('layout/header-alt.ejs') %>
-
-  <%- include('layout/drawer/nav.ejs') %>
-  <%- include('layout/drawer/form.ejs') %>
-
-  <main class="page-404">
-    <div class="container">
-      <div class="page-404__content">
-        <div class="page-404__info">
-          <h1 class="page-404__title">Page not found</h1>
-          <p class="page-404__subtitle">This is not the page you are looking for</p>
-          <a href="/" class="btn btn--primary"><span>Return home</span><i arrow-right><span></span></i></a>
-        </div>
-        <div class="page-404__image">
-          <img src="/images/404.png" alt="404">
-        </div>
-      </div>
+<%- include('layout/v2/shell-top.ejs') %>
+  <main id="page-404" class="v2-main v2-404">
+    <p class="v2-tag">Error 404</p>
+    <h1 class="v2-h-l"><span>Page not found.</span> <span class="v2-muted">The link may be old or mistyped.</span></h1>
+    <div class="v2-404__actions">
+      <a href="/" class="v2-btn"><span class="v2-btn__label">Back to home</span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
     </div>
+    <nav class="v2-404__links" aria-label="Popular pages">
+      <p>Or go straight to:</p>
+      <ul>
+        <li><a href="/pages/shopify-development/">Shopify Development</a></li>
+        <li><a href="/pages/service/custom-shopify-integrations/">Shopify Integrations</a></li>
+        <li><a href="/pages/service/shopify-migration-service/">Shopify Migration</a></li>
+        <li><a href="/pages/service/custom-shopify-app-development/">Custom Shopify Apps</a></li>
+        <li><a href="/pages/service/custom-web-design-services/">Web Design</a></li>
+        <li><a href="/pages/service/conversion-rate-optimization/">Conversion Rate Optimization</a></li>
+        <li><a href="/blog/">Insights</a></li>
+      </ul>
+    </nav>
   </main>
-  <script type="module" src="/src/main.js"></script>
-</body>
+<%- include('layout/v2/shell-bottom.ejs') %>
 </html>

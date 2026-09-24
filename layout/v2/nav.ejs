@@ -1,0 +1,39 @@
+<%# Design v2 mobile menu (Figma "Mobile menu" 693:1574): pill list, Services opens a card grid, social tiles. %>
+<% const v2Services = [
+  ['Shopify Development', '/pages/shopify-development/', '/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp'],
+  ['Shopify Integrations', '/pages/service/custom-shopify-integrations/', '/images/v2/shopify-development-capabilities-6-image-5944.webp'],
+  ['Shopify Migration', '/pages/service/shopify-migration-service/', '/images/v2/shopify-migration-capabilities-4-image-5949.webp'],
+  ['Shopify Apps', '/pages/service/custom-shopify-app-development/', '/images/v2/shopify-apps-capabilities-5-image-5952.webp'],
+  ['CRO', '/pages/service/conversion-rate-optimization/', '/images/v2/shopify-development-capabilities-2-image-56.webp'],
+  ['Web Design', '/pages/service/custom-web-design-services/', '/images/v2/shopify-development-capabilities-4-image-5942.webp'],
+  ['Complex Solutions (DACH)', '/pages/complex-solutions/', '/images/v2/shopify-integrations-capabilities-2-image-5945.webp'],
+]; %>
+<div class="v2-mnav" id="v2-mnav">
+  <nav class="v2-mnav__panel" aria-label="Mobile">
+    <div class="v2-mnav__level" data-v2-mnav-main>
+      <ul class="v2-mnav__list">
+        <li><button type="button" class="v2-mnav__item" data-v2-mnav-open aria-expanded="false" aria-controls="v2-mnav-services">Services <svg width="7" height="10" viewBox="0 0 7 10" aria-hidden="true"><path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button></li>
+        <li><a class="v2-mnav__item" href="/#section-works" data-nav-trigger>Portfolio</a></li>
+        <li><a class="v2-mnav__item" href="/blog/">Insights</a></li>
+        <li><a class="v2-mnav__item" href="/#section-team" data-nav-trigger>About</a></li>
+        <li><a class="v2-mnav__item" href="#" data-form-trigger data-nav-trigger>Contact</a></li>
+      </ul>
+    </div>
+    <div class="v2-mnav__level" id="v2-mnav-services" data-v2-mnav-sub hidden>
+      <button type="button" class="v2-mnav__item v2-mnav__back" data-v2-mnav-back><svg width="7" height="10" viewBox="0 0 7 10" aria-hidden="true"><path d="M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg> Back</button>
+      <ul class="v2-mnav__grid">
+        <% v2Services.forEach(([name, href, img]) => { %>
+          <li><a class="v2-mnav__card" href="<%= href %>">
+            <span class="v2-mnav__thumb"><% if (img) { %><img loading="lazy" src="<%= img %>" alt=""><% } %></span>
+            <span class="v2-mnav__name"><%= name %> <svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+          </a></li>
+        <% }) %>
+      </ul>
+    </div>
+    <ul class="v2-mnav__social">
+      <li><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener">Upwork</a></li>
+      <li><a href="https://www.linkedin.com/company/base-x-tech/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.behance.net/base-xtech" target="_blank" rel="noopener">Behance</a></li>
+    </ul>
+  </nav>
+</div>

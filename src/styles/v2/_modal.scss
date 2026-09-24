@@ -1,1 +1,162 @@
-// Contact modal + mobile menu (design v2).
+// Design v2 contact modal (Figma "Modal-form" 825:33, "Modal-mobile" 825:122) and mobile menu ("Mobile menu" 693:1574).
+$bp: 1024px;
+
+body.v2 .v2-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+// ---------- contact modal
+body.v2 .v2-modal {
+  position: fixed; inset: 0; z-index: 200;
+  visibility: hidden; pointer-events: none;
+  transition: visibility 0s .3s;
+
+  &.active { visibility: visible; pointer-events: auto; transition: none; }
+
+  .v2-modal__overlay { position: absolute; inset: 0; background: rgba(30, 32, 34, .7); opacity: 0; transition: opacity .3s; }
+  &.active .v2-modal__overlay { opacity: 1; }
+
+  .v2-modal__panel {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: min(550px, 100%); overflow-y: auto; overscroll-behavior: contain;
+    display: flex; flex-direction: column; gap: 40px;
+    padding: 32px 40px; background: #040507; color: #fff;
+    transform: translateX(100%); transition: transform .3s ease;
+    @media (max-width: $bp - 1) { padding: 24px 16px; gap: 28px; }
+  }
+  &.active .v2-modal__panel { transform: none; }
+
+  .v2-modal__close {
+    position: absolute; top: 24px; right: 24px; width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: none; border: 0; color: #fff; cursor: pointer; border-radius: 4px;
+    &:hover, &:focus-visible { background: rgba(255, 255, 255, .14); }
+  }
+  .v2-modal__title {
+    font-family: 'Onest', 'TWKEverett', sans-serif; font-weight: 300;
+    font-size: 32px; line-height: 1.1; letter-spacing: -.02em; padding-right: 48px;
+    span { display: block; }
+  }
+
+  // result panels: hidden until main.js adds .success / .error
+  .v2-modal__state { display: none; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.29; color: #d1d1d1;
+    a { color: #fff; }
+  }
+  #success-msg.success, #error-msg.error { display: flex; }
+  .v2-modal__state-title { color: #fff; font-size: 24px; font-weight: 500; line-height: 1.2; }
+  .v2-modal__secondary {
+    align-self: flex-start; margin-top: 8px; height: 42px; padding: 0 16px; border-radius: 4px; border: 0;
+    background: #fff; color: #040507; font: 500 16px/1 'TWKEverett', sans-serif; cursor: pointer;
+  }
+}
+
+body.v2 .v2-form {
+  display: flex; flex-direction: column; gap: 20px;
+  &.hide { display: none; }
+  &.unactive { opacity: .5; pointer-events: none; }
+
+  .v2-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    @media (max-width: 479px) { grid-template-columns: 1fr; }
+  }
+  input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%; box-sizing: border-box; min-height: 44px; padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px;
+    background: transparent; color: #fff;
+    font: 300 14px/1.29 'TWKEverett', sans-serif;
+    &::placeholder { color: #a8a8a8; opacity: 1; }
+    &:focus { outline: none; border-color: #fff; }
+    &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 1px; }
+  }
+  select {
+    appearance: none; cursor: pointer; padding-right: 44px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0h8L4 5z' fill='%23fff'/%3E%3C/svg%3E") no-repeat right 20px center;
+    option { color: #040507; }
+  }
+  textarea { min-height: 90px; resize: vertical; }
+
+  .v2-form__field { display: flex; flex-direction: column; gap: 16px; border: 0; margin: 0; padding: 0; min-width: 0;
+    > span, legend { font-size: 16px; font-weight: 300; color: #fff; padding: 0; }
+    legend { margin-bottom: 16px; }
+  }
+  .v2-form__budget div { display: flex; flex-wrap: wrap; gap: 4px; }
+  .v2-form__budget label { position: relative; flex: 1 1 auto; }
+  .v2-form__budget input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .v2-form__budget span {
+    display: flex; align-items: center; justify-content: center; height: 42px; padding: 0 16px;
+    border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; font-size: 14px; color: #d1d1d1; white-space: nowrap;
+  }
+  .v2-form__budget input:checked + span { background: var(--v2-accent); border-color: var(--v2-accent); color: #fff; }
+  .v2-form__budget input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
+
+  .v2-btn--wide { display: flex; width: 100%; border: 0; padding: 0; background: none; cursor: pointer; gap: 4px; margin-top: 12px;
+    .v2-btn__label { flex: 1; }
+  }
+  .v2-form__note { font-size: 12px; line-height: 1.4; color: #a8a8a8; a { color: #fff; } }
+}
+
+// ---------- mobile menu
+body.v2 .v2-mnav {
+  position: fixed; left: 0; right: 0; bottom: 0; top: 64px; z-index: 40;
+  display: none; overflow-y: auto; overscroll-behavior: contain;
+  background: #040507;
+  @media (min-width: $bp) { display: none !important; }
+}
+body.v2.nav-active { overflow: hidden; }
+body.v2.nav-active .v2-mnav { display: block; }
+body.v2.nav-active .v2-header__burger {
+  span:first-child { transform: translateY(3.25px) rotate(45deg); }
+  span:last-child { transform: translateY(-3.25px) rotate(-45deg); }
+}
+body.v2 .v2-header__burger span { transition: transform .2s; }
+
+body.v2 .v2-mnav__panel { display: flex; flex-direction: column; gap: 10px; padding: 24px 12px; max-width: 560px; margin: 0 auto; }
+body.v2 .v2-mnav__list { display: flex; flex-direction: column; gap: 4px; }
+body.v2 .v2-mnav__item {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; min-height: 44px; box-sizing: border-box;
+  padding: 6px 12px; border: 0; border-radius: 4px; background: #27282a; color: #fff;
+  font: 300 14px/1.4 'TWKEverett', sans-serif; text-decoration: none; text-align: left; cursor: pointer;
+  &:hover, &:focus-visible { background: #35373a; }
+}
+body.v2 .v2-mnav__back { justify-content: flex-start; margin-bottom: 4px; }
+body.v2 .v2-mnav__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+body.v2 .v2-mnav__card {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 12px; aspect-ratio: 1; box-sizing: border-box;
+  padding: 11px; border-radius: 3px; background: #27282a; color: #fff; text-decoration: none;
+  &:hover, &:focus-visible { background: #35373a; }
+}
+body.v2 .v2-mnav__thumb { width: 84px; height: 84px; border-radius: 4px; background: #1e2023; overflow: hidden;
+  img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+body.v2 .v2-mnav__name { display: flex; align-items: flex-end; justify-content: space-between; gap: 4px; font-size: 14px; line-height: 1.4; font-weight: 300;
+  svg { flex: none; margin-bottom: 4px; }
+}
+body.v2 .v2-mnav__social { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 6px;
+  a { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 4px; background: rgba(255, 255, 255, .14);
+    color: #fff; text-decoration: none; font-size: 14px; font-weight: 300;
+    &:hover, &:focus-visible { background: rgba(255, 255, 255, .22); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.v2 .v2-modal__panel, body.v2 .v2-modal__overlay, body.v2 .v2-header__burger span { transition: none; }
+}
+
+// ---------- simple pages in the v2 shell: legal, 404
+body.v2 .v2-legal, body.v2 .v2-404 { padding: 64px var(--v2-pad) 96px; max-width: 880px;
+  @media (min-width: $bp) { padding: 96px 64px 128px; }
+}
+body.v2 .v2-legal__head { display: flex; flex-direction: column; gap: 24px; margin-bottom: 56px; }
+body.v2 .v2-legal__body {
+  font-size: 16px; line-height: 1.6; font-weight: 300; color: #d1d1d1;
+  h2 { font-size: 24px; font-weight: 500; line-height: 1.2; color: #fff; margin: 48px 0 16px; }
+  h3 { font-size: 18px; font-weight: 500; color: #fff; margin: 32px 0 12px; }
+  p, ul, ol { margin: 0 0 16px; }
+  ul { list-style: disc; padding-left: 1.25em; }
+  a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  strong, b { color: #fff; font-weight: 500; }
+}
+body.v2 .v2-404 { display: flex; flex-direction: column; gap: 32px; min-height: 60vh; }
+body.v2 .v2-404__links { color: #d1d1d1; font-size: 16px;
+  ul { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+  a { display: inline-flex; min-height: 32px; align-items: center; padding: 6px 12px; border-radius: 4px; background: rgba(255,255,255,.14); color: #fff; text-decoration: none; font-size: 14px;
+    &:hover, &:focus-visible { background: rgba(255,255,255,.22); }
+  }
+}

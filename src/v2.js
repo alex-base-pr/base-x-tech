@@ -67,4 +67,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach((s) => io.observe(s));
   }
+  // Mobile menu (layout/v2/nav.ejs): main.js toggles body.nav-active; here only ARIA state and the Services level.
+  const burger = document.querySelector('.v2-header__burger');
+  const mnav = document.getElementById('v2-mnav');
+  if (burger && mnav) {
+    const main = mnav.querySelector('[data-v2-mnav-main]');
+    const sub = mnav.querySelector('[data-v2-mnav-sub]');
+    const opener = mnav.querySelector('[data-v2-mnav-open]');
+    const showSub = (on) => {
+      main.hidden = on; sub.hidden = !on;
+      opener.setAttribute('aria-expanded', String(on));
+      (on ? sub.querySelector('a, button') : opener).focus();
+    };
+    opener.addEventListener('click', () => showSub(true));
+    mnav.querySelector('[data-v2-mnav-back]').addEventListener('click', () => showSub(false));
+    burger.setAttribute('aria-controls', 'v2-mnav');
+    burger.setAttribute('aria-expanded', 'false');
+    new MutationObserver(() => {
+      const open = document.body.classList.contains('nav-active');
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+      if (!open && !sub.hidden) { main.hidden = false; sub.hidden = true; opener.setAttribute('aria-expanded', 'false'); }
+    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) document.body.classList.remove('nav-active'); });
+  }
+
+  // Contact modal (layout/v2/form.ejs): focus the first field on open, Escape closes, focus returns to the trigger.
+  const modal = document.querySelector('.v2-modal');
+  if (modal) {
+    let lastTrigger = null;
+    document.addEventListener('click', (e) => {
+      const t = e.target.closest('[data-form-trigger]');
+      if (!t) return;
+      e.preventDefault();
+      lastTrigger = t;
+      setTimeout(() => modal.querySelector('input:not([type=hidden]), .v2-modal__close')?.focus(), 50);
+    });
+    new MutationObserver(() => {
+      if (!modal.classList.contains('active') && lastTrigger && modal.contains(document.activeElement)) { lastTrigger.focus(); lastTrigger = null; }
+    }).observe(modal, { attributes: true, attributeFilter: ['class'] });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) modal.querySelector('.v2-modal__close').click();
+    });
+  }
 });

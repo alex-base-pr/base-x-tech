@@ -71,7 +71,7 @@ const drawerConfig = {
     closeTrigger: '[data-nav-trigger]'
   },
   form: {
-    selector: '.drawer-form--wrapper',
+    selector: '.drawer-form--wrapper, .v2-modal',
     bodyClass: 'block-scroll',
     openTrigger: '[data-form-trigger]',
     closeTrigger: '[data-form-close]'
@@ -80,8 +80,8 @@ const drawerConfig = {
 
 document.body.addEventListener('click', (event) => {
   if (document.body.classList.contains('block-scroll')) {
-      if (event.target === document.body || !event.target.closest('.drawer-form--wrapper')) {
-          let drawer = document.querySelector('.drawer-form--wrapper');
+      if (event.target === document.body || !event.target.closest('.drawer-form--wrapper, .v2-modal__panel')) {
+          let drawer = document.querySelector('.drawer-form--wrapper, .v2-modal');
           let closeBtn = document.querySelector('[data-form-close]');
           if (drawer && closeBtn) {
               drawer.classList.remove('active');
@@ -297,6 +297,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('task-form');
   const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg'); // design-v2 modal only
+  if (!form) return;
+
+  document.querySelector('[data-form-retry]')?.addEventListener('click', () => {
+      errorMsg.classList.remove('error');
+      form.classList.remove('hide');
+  });
 
   function getUrlParams() {
       const params = new URLSearchParams(window.location.search);
@@ -352,6 +359,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const service = form.querySelector('.form-select').selectedOptions[0].text;
       const budget = formData.get('budget');
       const tellUsMore = formData.get('tell_us_more') || '';
+      let sent = false;
 
       const currentDateTime = getCurrentDateTime();
       const taskName = `${currentDateTime} - ${email || 'No Email'} - ${name || 'No Name'}`;
@@ -393,6 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (__DEPLOY_ENV__ === 'dev') {
               console.info('[dev] contact form not sent', taskData);
               form.reset();
+              sent = true;
               return;
           }
           const response = await fetch('https://clickup.base-xtech.com', {
@@ -413,6 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
           if (result.success) {
+              sent = true;
               form.reset();
               form.classList.add('unactive');
               if (typeof gtag === 'function') {
@@ -426,7 +436,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } finally {
           form.classList.remove('unactive');
           form.classList.add('hide');
-          successMsg.classList.add('success');
+          // Legacy drawers have no error panel and keep showing the thank-you state.
+          if (!sent && errorMsg) errorMsg.classList.add('error');
+          else successMsg.classList.add('success');
       }
   });
 });
@@ -434,6 +446,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector('.drawer-nav');
+  if (!nav) return; // design-v2 pages use layout/v2/nav.ejs
   const firstLevelBlocks = nav.querySelectorAll('[data-level-first]');
   const submenus = nav.querySelectorAll('[data-level="submenu"]');
   const triggers = nav.querySelectorAll('[data-submenu-tirger]');

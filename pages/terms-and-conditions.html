@@ -2,217 +2,43 @@
 <html lang="en">
 <%- include('layout/head-alt.ejs', {
   title: "Terms & Conditions | Base X Tech",
+  v2: true,
   description: "Read the terms and conditions that apply when you use the Base X Tech website, submit an inquiry, or order our design and development services.",
   hrefLangCode: "uk",
   hrefLangLink: "https://base-xtech.com/uk/pages/terms-and-conditions/",
   hreflangDefault: "https://base-xtech.com/pages/terms-and-conditions/"
 }) %>
-<body>
-    <%- include('layout/noscript.ejs') %>
-    <%- include('layout/header-alt.ejs') %>
-    <div class="drawer-nav--wrapper">
-      <div class="container">
-        <nav class="drawer-nav">
-          <div class="drawer-nav--block">
-            <ul>
-              <li><a data-nav-trigger href="/#section-service" class="link up"><span>service</span></a></li>
-              <li><a data-nav-trigger href="/#section-works" class="link up"><span>portfolio</span> <small>Complex Solutions</small></a></li>
-            </ul>
-          </div>
-          <div class="drawer-nav--block">
-            <ul>
-              <li><a data-nav-trigger href="/#section-team" class="link up"><span>team</span></a></li>
-              <li><a data-nav-trigger href="/#section-reviews" class="link up"><span>clients</span><small>Working Worldwide</small></a></li>
-            </ul>
-          </div>
-          <div class="drawer-nav--block">
-            <ul>
-              <li><a data-form-trigger href="#" class="link up"><span class="underline">Contact us</span><small>UTC+2</small></a></li>
-            </ul>
-          </div>
-        </nav>
-        <footer>
-          <div class="custom-widget">
-            <a data-form-trigger class="custom-widget--link">
-              <div class="inline-stack space-between">
-                <div class="inline-stack v-mid" style="--gap:1rem">
-                  <div class="avatar" style="--avatar-size: 48px;">
-                    <img loading="lazy" fetchpriority="low" src="/images/sections/team/avatar-7.png" alt="Nastia Hudyma">
-                  </div>
-                  <div class="user-info block-stack" style="--gap: .5rem">
-                    <h4 class="title def">Discuss Your Project</h4>
-                    <p class="subtitle">Nastia Hudyma</p>
-                  </div>
-                </div>
-                <i class="icon">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.01562 13.6511V2.34375H14.9896V13.6511H1.01562ZM8.00263 9.06925L2.78229 5.73592V11.8844H13.223V5.73592L8.00263 9.06925ZM8.00263 7.44375L13.223 4.11042H2.78229L8.00263 7.44375ZM2.78229 5.73592V4.11042V11.8844V5.73592Z" fill="#81A13F"/>
-                  </svg>
-                </i>
-              </div>
-            </a>
-          </div>
-          <ul class="social-list">
-            <li><a href="https://www.upwork.com/agencies/base/" target="_blank" class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-upwork.svg" alt="Upwork"></a></li>
-            <li><a href="https://www.linkedin.com/company/base-x-tech/" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-linkedin.svg" alt="linkedin"></a></li>
-            <li><a href="https://www.behance.net/base-xtech" target="_blank"  class="link up"><img loading="lazy" fetchpriority="low" src="/images/icons/social-behance.svg" alt="behance"></a></li>
-          </ul>
-        </footer>
-      </div>
-    </div>
-
-    <div class="drawer-form--wrapper">
-      <div class="container">
-        <header class="drawer-form--header">
-          <a href="#" class="logo" aria-label="Base X Tech">
-            <svg width="112" height="64" viewBox="0 0 112 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M79.9898 11.6328L91.6225 0H112V20.3709L100.367 32.0038L112 43.6367V64.0004H91.6226L79.9898 52.3675L68.3571 64.0004H48.0006V43.6298L59.6265 32.0038L48.0006 20.3777V0H68.3572L79.9898 11.6328Z" fill="#FAFAFA"/>
-              <path d="M0 7.50943e-06H28.0016L47.9997 19.9983V42.0023L47.9979 42.0041V20.3596L36.3616 31.996L47.1837 42.8183L26.0019 64.0004H0V43.6238L11.6276 31.996L0 20.3683V7.50943e-06Z" fill="#FAFAFA"/>
-            </svg>
-            <span class="logo-text up">Base X</span>
-          </a>
-          <span class="btn--rounded-close" data-form-close>
-            <img loading="lazy" fetchpriority="low" src="/images/icons/close.svg" alt="close">
-          </span>
-        </header>
-        <div class="scroller">
-          <nav class="drawer-form">
-            <h5 class="drawer-form--title up">let’s discuss a project</h5>
-            <div id="success-msg">
-              <header>
-                <h5 class="up">thanks you for<br> submitting the form</h5>
-                <p>We will back shortly to you with response.</p>
-              </header>
-              <footer>
-                <a data-form-close href="#" class="btn btn--primary up">Close the form</a>
-              </footer>
-            </div>
-            <form id="task-form" action="" class="form">
-              <div class="form-block grid-desk-2">
-                <label class="form-label">
-                  <span>name *</span>
-                  <input required name="name" type="text" class="form-input" placeholder="Full name">
-                </label>
-                <label class="form-label">
-                  <span>Email *</span>
-                  <input required name="email" type="email" class="form-input" placeholder="name@website.com">
-                </label>
-                <label class="form-label">
-                  <span>Phone *</span>
-                  <input required name="phone" type="phone" class="form-input" placeholder="e.g. +1 395 495 994">
-                </label>
-                <label class="form-label">
-                  <span>Company *</span>
-                  <input required name="company" type="text" class="form-input" placeholder="e.g. Inditex">
-                </label>
-              </div>
-              <div class="form-block">
-                <label class="form-label">
-                  <span>Service required</span>
-                  <select name="service" class="form-select" placeholder="Tell us about your project">
-                    <option value="1">Shopify Development</option>
-                    <option value="2">Website Design</option>
-                    <option value="3">Custom Development</option>
-                    <option value="4">API Integration</option>
-                    <option value="5">Theme Store</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-block">
-                  <label class="form-label">
-                    <span>What’s your budget</span>
-                  </label>
-                  <div class="form-radio-custom budget-options">
-                    <label>
-                      <input type="radio" name="budget" value="2k" checked>
-                      <span>$2k</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="budget" value="5k">
-                        <span>$5k+</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="budget" value="10k">
-                        <span>$10k+</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="budget" value="25k">
-                        <span>$25k+</span>
-                    </label>
-                  </div>
-              </div>
-              <div class="form-block">
-                <label class="form-label">
-                  <span>Tell us more if you need</span>
-                  <textarea name="tell_us_more" class="form-textarea" placeholder="Type here any details that you want to discuss or details not mentioned before"></textarea>
-                </label>
-              </div>
-              <div class="form-block">
-                <button class="btn btn--primary up" type="submit">Send</button>
-              </div>
-            </form>
-          </nav>
-        </div>
-      </div>
-    </div>
-
-    <main>
-      <section class="section section-page">
-        <header>
-          <div class="container">
-            <h1 class="up">Terms & Conditions</h1>
-          </div>
-        </header>
-      </section>
-
-      <section class="section section-content">
-        <div class="container">
-        <article>
-          <h3 class="title up def">Acceptance of Terms</h3>
+<%- include('layout/v2/shell-top.ejs') %>
+  <main id="terms-and-conditions" class="v2-main v2-legal">
+    <header class="v2-legal__head">
+      <p class="v2-tag">Legal</p>
+      <h1 class="v2-h-l">Terms & Conditions</h1>
+    </header>
+    <article class="v2-legal__body">
+          <h2>Acceptance of Terms</h2>
           <p>Welcome to base-xtech.com. By browsing and using this website, you agree to comply with and be bound by the following terms and conditions of use, which, together with our Privacy Policy, govern Base X Tech’s relationship with you in relation to this website.</p>
           <p>If you disagree with any part of these terms and conditions, please do not use our website.
             <br>— The term “Base X”, “Base X Tech”, “us”, or “we” refers to the owner of the website.
             <br>— The term “you” refers to the user or viewer of our website.</p>
 
-          <h3 class="title up def">Website Use</h3>
+          <h2>Website Use</h2>
           <p>Your use of this website is subject to the following conditions:
             <br>— The content of this website is for general information and use only and is subject to change without notice.
             <br>— This website uses cookies to monitor browsing preferences. If you allow cookies, the following personal information may be stored for use by third parties: Google Analytics.</p>
 
-          <h3 class="title up def">Intellectual Property</h3>
+          <h2>Intellectual Property</h2>
           <p>— This website contains material owned by or licensed to us, including but not limited to the design, layout, look, appearance, and graphics.
             <br>— Reproduction is prohibited except in accordance with the copyright notice.
             <br>— All trademarks not owned by or licensed to the operator are acknowledged on the website.
             <br>— Unauthorized use of this website may lead to claims for damages and/or be a criminal offense.</p>
 
-          <h3 class="title up def">External Links</h3>
+          <h2>External Links</h2>
           <p>— This website may contain links to third-party websites for additional information.
             <br>— These links do not signify endorsement, and we have no responsibility for the content of linked websites.</p>
 
-            <h3 class="title up def">Governing Law</h3>
+            <h2>Governing Law</h2>
             <p>Your use of this website and any disputes arising from it are subject to the laws of Ukraine.</p>
           </article>
-        </div>
-      </section>
-
-      <section id="section-cta" class="section section-cta">
-        <div class="container">
-          <div class="inner-back">
-            <header class="section-header">
-              <h2 class="section-title alt up">BECOME OUR SUCCESS PARTNER</h2>
-              <h3 class="section-subtitle up gradient">let's get<br mob> down<br desk> to business</h3>
-              <a class="btn btn--primary" data-form-trigger><span>Book a call</span><i arrow-right><span></span></i></a>
-            </header>
-            <div class="masked-image">
-              <img loading="lazy" fetchpriority="low" src="/images/sections/cta/bg.png" alt="background">
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <%- include('layout/footer-alt.ejs') %>
-
-    <script type="module" src="/src/main.js"></script>
-</body>
+  </main>
+<%- include('layout/v2/shell-bottom.ejs') %>
 </html>
