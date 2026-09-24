@@ -16,3 +16,5 @@ None of these block the work that is in progress. Default in brackets is what we
 | Q-10 | Team photos for About/site | Alex | placeholders only; do not use Drive "content" photos | 2026-09-24 |
 | Q-11 | Contact form shows success even when the ClickUp request fails (`src/main.js`, `finally` block) — leads can be lost silently. Fix in this release? | Alex | unchanged (out of scope) | 2026-09-24 |
 | Q-12 | Accessibility: colour contrast (#bbb, accent) and slider dot size fail WCAG AA — treated as design-owned, not blocking in this bridge release. OK? | Alex | reported, not fixed | 2026-09-24 |
+| Q-13 | Shopify Development page: keep the old pricing section (Quick Start from $2200, Turnkey from $4500, "payment and shipping setup for Ukraine")? Marko's copy has no pricing | Alex / Marko | kept unchanged | 2026-09-24 |
+| Q-14 | Home: interim title "Shopify Development & Web Design Agency \| Base X Tech" ("Marketing" dropped, REQ-010) until Marko's Home copy | Marko | interim title | 2026-09-24 |

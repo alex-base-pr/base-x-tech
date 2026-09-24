@@ -8,13 +8,13 @@ States: `todo` · `in progress` · `review` (on dev, waiting for Alex) · `done`
 
 | # | Page | URL | Copy source | State | PR / notes |
 |---|------|-----|-------------|-------|------------|
-| 1 | Home | `/` | Marko Home (pending) | blocked: copy | title/meta fix first (REQ-010) |
-| 2 | Shopify Development | `/pages/shopify-development` | 02 final copy + FAQ | todo | |
-| 3 | Shopify Integrations | `/pages/service/custom-shopify-integrations` | 03 final copy | todo | |
-| 4 | Shopify Migration | `/pages/service/shopify-migration-service` | 04 final copy | todo | |
-| 5 | Custom Shopify Apps | `/pages/service/custom-shopify-app-development` | 05 v2 | todo | |
-| 6 | Web Design | `/pages/service/custom-web-design-services` | 01 + FAQ | todo | |
-| 7 | CRO | `/pages/service/conversion-rate-optimization` | 06 v2 | todo | |
+| 1 | Home | `/` | Marko Home (pending) | blocked: copy | interim title without "Marketing" done (Q-14) |
+| 2 | Shopify Development | `/pages/shopify-development` | 02 final copy + FAQ | in progress | agent
+| 3 | Shopify Integrations | `/pages/service/custom-shopify-integrations` | 03 final copy | review | reference page for the template; Marko open: named ERPs in FAQ, Prime EVA sector tag |
+| 4 | Shopify Migration | `/pages/service/shopify-migration-service` | 04 final copy | in progress | agent
+| 5 | Custom Shopify Apps | `/pages/service/custom-shopify-app-development` | 05 v2 | in progress | agent
+| 6 | Web Design | `/pages/service/custom-web-design-services` | 01 + FAQ | in progress | agent
+| 7 | CRO | `/pages/service/conversion-rate-optimization` | 06 v2 | in progress | agent
 | 8 | About | `/pages/about` | Marko (pending) | blocked: copy | photos: placeholder only |
 | 9 | DACH (Alexander Karl) | `/pages/shopify-erp-integration-dach` (working) | brief in review with Marko | blocked: copy, photo, calendar | [brief PDF](briefs/Base-X-Tech_DACH-page-brief_2026-09-24.pdf) |
 | 10 | Privacy / Terms | unchanged | — | done | canonical only |
