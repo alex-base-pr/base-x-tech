@@ -7,3 +7,6 @@ node_modules
 qa/results
 qa/report
 qa/screens
+
+# agent worktrees
+.claude/worktrees/
