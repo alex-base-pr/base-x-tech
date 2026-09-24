@@ -1,0 +1,9 @@
+{
+  "path": "/pages/shopify-development/",
+  "source": "content/source/02-shopify-development.txt",
+  "title": "Shopify Store Development & Custom Builds | Base X Tech",
+  "description": "We build Shopify stores that need more than a theme: custom checkout, product configurators, headless storefronts, wholesale beside retail on one stack.",
+  "h1": "Shopify development for stores that need more than a theme",
+  "h3": ["Store Build & Launch", "Theme Development", "Custom Checkout", "Configurators", "Headless Storefronts", "B2B & Wholesale"],
+  "faq_count": 8
+}
