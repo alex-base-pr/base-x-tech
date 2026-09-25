@@ -99,13 +99,16 @@
     "titleMuted": "same order.",
     "items": [
       {
-        "title": "Someone re-types orders by hand"
+        "title": "Someone re-types orders by hand",
+        "description": "If orders move from Shopify to your ERP by copy-paste, errors and delays are built in. We connect the systems so orders flow on their own and every failure is logged."
       },
       {
-        "title": "Stock is wrong by the time it syncs"
+        "title": "Stock is wrong by the time it syncs",
+        "description": "Batch syncs leave a window where you sell stock you no longer have. We move inventory updates closer to real time and reconcile what a sync missed."
       },
       {
-        "title": "Your ERP has no Shopify app"
+        "title": "Your ERP has no Shopify app",
+        "description": "No app in the store doesn't mean no integration. We build the connector against your ERP's API, or its database or files when there is no API."
       }
     ]
   },

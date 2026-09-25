@@ -102,13 +102,16 @@
     "titleMuted": "converts.",
     "items": [
       {
-        "title": "You get traffic but not orders"
+        "title": "You get traffic but not orders",
+        "description": "Visitors land, browse and leave. We find where they drop off and why, from your analytics, session recordings and the store itself."
       },
       {
-        "title": "Checkout loses more than it should"
+        "title": "Checkout loses more than it should",
+        "description": "Shipping surprises, forced accounts, slow steps. We remove what stops people at checkout and measure the effect of each change."
       },
       {
-        "title": "Nobody can tell what a change achieved"
+        "title": "Nobody can tell what a change achieved",
+        "description": "Changes go live without a baseline, so no one knows what worked. We set up tracking and tests, so every change has a measured result."
       }
     ]
   },

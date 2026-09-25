@@ -99,13 +99,16 @@
     "titleMuted": "it returns.",
     "items": [
       {
-        "title": "Every change needs a developer"
+        "title": "Every change needs a developer",
+        "description": "When a banner change needs a ticket, the platform is slowing the business down. On Shopify your team edits content, products and promotions themselves."
       },
       {
-        "title": "Your platform is end of life"
+        "title": "Your platform is end of life",
+        "description": "Magento 1, an unsupported plugin stack or a custom platform nobody maintains any more. We move products, customers, orders and URLs before it becomes a security problem."
       },
       {
-        "title": "Hosting costs more than the store earns"
+        "title": "Hosting costs more than the store earns",
+        "description": "Servers, patches and extensions add up. Shopify replaces most of that with one predictable subscription, and we plan the move so you don't pay for both for long."
       }
     ]
   },

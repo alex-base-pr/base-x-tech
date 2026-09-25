@@ -94,13 +94,16 @@
     "titleMuted": "The experience doesn't.",
     "items": [
       {
-        "title": "Buyers can't tell your options apart"
+        "title": "Buyers can't tell your options apart",
+        "description": "If buyers can't see the difference between your variants or bundles, they hesitate or leave. We design product pages that make each choice clear."
       },
       {
-        "title": "Your store grew past its own structure"
+        "title": "Your store grew past its own structure",
+        "description": "Navigation and collections built for 50 products don't work for 500. We rework the structure so buyers find things and your team can keep adding."
       },
       {
-        "title": "Design keeps breaking in development"
+        "title": "Design keeps breaking in development",
+        "description": "Designs that look right in Figma but break in the theme cost time twice. We design and build in one team, so what's approved is what ships."
       }
     ]
   },

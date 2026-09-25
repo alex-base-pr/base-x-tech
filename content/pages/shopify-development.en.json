@@ -98,13 +98,16 @@
     "titleMuted": "a while ago.",
     "items": [
       {
-        "title": "Your checkout needs rules Shopify lacks"
+        "title": "Your checkout needs rules Shopify lacks",
+        "description": "Tiered pricing, order minimums, B2B terms or bundle logic that apps only half cover. We build the rules into checkout, so they hold on every order."
       },
       {
-        "title": "One store must serve wholesale and retail"
+        "title": "One store must serve wholesale and retail",
+        "description": "Wholesale buyers need their own prices, terms and catalogue, and retail customers shouldn't see any of it. We set up one store that serves both, without a second backend."
       },
       {
-        "title": "Your product needs configuring to sell"
+        "title": "Your product needs configuring to sell",
+        "description": "Options, dependencies and prices that change with every choice. We build configurators that show buyers exactly what they're ordering and pass production-ready data with the order."
       }
     ]
   },

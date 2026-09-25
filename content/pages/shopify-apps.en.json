@@ -103,13 +103,16 @@
     "titleMuted": "the integration.",
     "items": [
       {
-        "title": "A person copies data between systems"
+        "title": "A person copies data between systems",
+        "description": "When someone's job is keeping two systems in sync by hand, an app should be doing it. We automate the routine and leave people the exceptions."
       },
       {
-        "title": "No app does what your process needs"
+        "title": "No app does what your process needs",
+        "description": "The App Store covers common needs, not your workflow. We build a custom app for your store that does exactly what your process requires."
       },
       {
-        "title": "You want to sell an app, not just use one"
+        "title": "You want to sell an app, not just use one",
+        "description": "You have a product idea for other merchants. We build public apps and take them through Shopify's review to the App Store, as we did with our own."
       }
     ]
   },
