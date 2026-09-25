@@ -39,14 +39,15 @@
     "navigation": "Navigation",
     "connect": "Connect",
     "terms": "Terms & Conditions",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+    "company": "Base X Tech Ltd, registered in London, UK. Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours."
   },
   "form": {
     "close": "Close the form",
     "title": "Let’s talk",
     "titleMuted": "about your project",
     "successTitle": "Thank you — your project details are with us.",
-    "successBefore": "We’ll reply by email shortly. If it’s urgent, write to",
+    "successBefore": "We reply within 1 working day. If it’s urgent, write to",
     "closeButton": "Close",
     "errorTitle": "Sorry, the form didn’t send.",
     "errorBefore": "Please try again, or email your project details to",
@@ -83,11 +84,29 @@
       { "value": "Other", "label": "Other" }
     ],
     "budgetLegend": "What’s your project budget?",
-    "budgetNotSure": "Not sure",
+    "_budgets": "A3: EUR bands. `value` goes to ClickUp (English/EUR); `hideOnComplex` drops the band on Complex pages.",
+    "budgets": [
+      { "value": "Up to €5k", "label": "Up to €5k", "hideOnComplex": true },
+      { "value": "€5–15k", "label": "€5–15k" },
+      { "value": "€15–40k", "label": "€15–40k" },
+      { "value": "€40k+", "label": "€40k+" },
+      { "value": "Not sure yet", "label": "Not sure yet" }
+    ],
     "messageLabel": "Tell us about the project",
     "messagePlaceholder": "What are you building, changing, or trying to solve?",
     "submit": "Send project details",
+    "promise": "We reply within 1 working day.",
     "note": "We use your details only to reply to this request.",
     "privacy": "Privacy policy"
+  },
+  "team": {
+    "_note": "A2 (proposal): text-only 'Who you'll talk to' block (layout/v2/team.ejs). `dach` is listed first on Complex pages only.",
+    "label": "Who you’ll talk to",
+    "people": [
+      { "name": "Sofiia Zabrodska", "role": "Business Development Manager", "note": "first contact, proposals" },
+      { "name": "Vadym Hula", "role": "Head of Delivery", "note": "runs your project" },
+      { "name": "Vadym-Marko Hruden", "role": "CBDO" }
+    ],
+    "dach": { "name": "Alexander Karl", "role": "DACH Partner", "note": "your contact in German" }
   }
 }

@@ -38,15 +38,16 @@
     "rights": "Alle Rechte vorbehalten.",
     "navigation": "Navigation",
     "connect": "Profile",
-    "terms": "AGB",
-    "privacy": "Datenschutzerklärung"
+    "terms": "Terms (EN)",
+    "privacy": "Datenschutzerklärung",
+    "company": "Base X Tech Ltd, eingetragen in London, UK. Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten."
   },
   "form": {
     "close": "Formular schließen",
     "title": "Lassen Sie uns",
     "titleMuted": "über Ihr Projekt sprechen",
-    "successTitle": "Vielen Dank – Ihre Projektangaben sind bei uns eingegangen.",
-    "successBefore": "Wir antworten Ihnen in Kürze per E-Mail. In dringenden Fällen schreiben Sie uns an",
+    "successTitle": "Vielen Dank — Ihre Projektdetails sind bei uns.",
+    "successBefore": "Wir antworten innerhalb eines Werktages. In dringenden Fällen schreiben Sie uns an",
     "closeButton": "Schließen",
     "errorTitle": "Das Formular konnte leider nicht gesendet werden.",
     "errorBefore": "Bitte versuchen Sie es erneut oder senden Sie Ihre Projektangaben per E-Mail an",
@@ -83,11 +84,27 @@
       { "value": "Other", "label": "Sonstiges" }
     ],
     "budgetLegend": "Wie hoch ist Ihr Projektbudget?",
-    "budgetNotSure": "Noch unklar",
+    "budgets": [
+      { "value": "Up to €5k", "label": "Bis 5.000 €", "hideOnComplex": true },
+      { "value": "€5–15k", "label": "5.000–15.000 €" },
+      { "value": "€15–40k", "label": "15.000–40.000 €" },
+      { "value": "€40k+", "label": "Über 40.000 €" },
+      { "value": "Not sure yet", "label": "Noch unklar" }
+    ],
     "messageLabel": "Erzählen Sie uns von Ihrem Projekt",
     "messagePlaceholder": "Was möchten Sie aufbauen, verändern oder lösen?",
     "submit": "Projektangaben senden",
+    "promise": "Wir antworten innerhalb eines Werktages.",
     "note": "Wir verwenden Ihre Angaben ausschließlich, um auf diese Anfrage zu antworten.",
     "privacy": "Datenschutzerklärung"
+  },
+  "team": {
+    "label": "Ihre Ansprechpartner",
+    "people": [
+      { "name": "Sofiia Zabrodska", "role": "Business Development Manager", "note": "erster Kontakt, Angebote" },
+      { "name": "Vadym Hula", "role": "Head of Delivery", "note": "leitet Ihr Projekt" },
+      { "name": "Vadym-Marko Hruden", "role": "CBDO" }
+    ],
+    "dach": { "name": "Alexander Karl", "role": "DACH-Partner", "note": "Ihr Ansprechpartner auf Deutsch" }
   }
 }

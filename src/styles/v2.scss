@@ -324,6 +324,7 @@ body.v2 .v2-footer {
   .v2-footer__brand { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; }
   .v2-footer__logo { color: #fff; }
   .v2-footer__copy { font-size: 14px; color: #bdbdbd; }
+  .v2-footer__company { max-width: 34ch; margin-bottom: 12px; font-size: 14px; line-height: 1.45; color: #bdbdbd; } // A1
   .v2-footer__col { display: flex; flex-direction: column; gap: 14px; a { text-decoration: none; font-size: 18px; &:hover { color: #fff; text-decoration: underline; } } }
   .v2-footer__label { color: #7c7c7c; font-size: 15px; margin-bottom: 2.5rem; }
   .v2-footer__legal { display: flex; justify-content: space-between; padding: 20px 30px; border-top: 1px solid var(--v2-line); font-size: 15px; color: #bdbdbd; a { text-decoration: none; } }
@@ -385,6 +386,16 @@ body.v2 .v2-cta__collage {
 body.v2 .v2-cta > .v2-h-l, body.v2 .v2-cta__body { position: relative; z-index: 1; }
 
 body.v2 .v2-cta > .v2-h-l { max-width: 700px; }
+
+// "Who you'll talk to" (A2, layout/v2/team.ejs): text only, sits under the closing CTA.
+body.v2 .v2-team {
+  position: relative; z-index: 1; margin-top: 3rem; max-width: 420px; font-size: 14px; line-height: 1.4; color: #bdbdbd;
+  @include desk { margin-left: 200px; }
+  .v2-team__label { margin-bottom: 12px; font-size: 13px; letter-spacing: .02em; color: #8c8c8c; }
+  .v2-team__list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  strong { font-weight: 500; color: #fff; }
+}
+body.v2 .cx-cta .v2-team { margin: 2.5rem auto 0; text-align: center; font-family: var(--cx-body); }
 
 // Figma line breaks are desktop line breaks; on phones the H1 flows.
 body.v2 .v2-hero .v2-h-l span, body.v2 .v2-hero .v2-h-2xl span { display: inline; @include desk { display: block; } }

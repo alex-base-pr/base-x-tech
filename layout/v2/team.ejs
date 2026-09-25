@@ -1,0 +1,11 @@
+<%# A2 (proposal, 2026-09-25): text-only "Who you'll talk to" — names and roles, no photos.
+    Strings: content/pages/shell.<lang>.json → team. Pass { teamDach: true } to list the DACH partner first (Complex). %>
+<% const sh = content.shell[typeof lang !== 'undefined' && content.shell[lang] ? lang : 'en']; const t = sh.team;
+   const people = (typeof teamDach !== 'undefined' && teamDach ? [t.dach] : []).concat(t.people); %>
+<aside class="v2-team" aria-labelledby="v2-team-label">
+  <p class="v2-team__label" id="v2-team-label"><%= t.label %></p>
+  <ul class="v2-team__list">
+    <% people.forEach(p => { %><li><strong><%= p.name %></strong> <span class="v2-team__role"><%= p.role %><% if (p.note) { %> (<%= p.note %>)<% } %></span></li>
+    <% }) %>
+  </ul>
+</aside>
