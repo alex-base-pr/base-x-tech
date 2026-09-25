@@ -4,11 +4,14 @@
   title: "Privacy Policy | Base X Tech",
   v2: true,
   description: "Learn how Base X Tech collects, stores, and protects your personal data when you visit our website, submit a form, or reach out to our team.",
-  hrefLangCode: "uk",
-  hrefLangLink: "https://base-xtech.com/uk/pages/privacy-policy/",
-  hreflangDefault: "https://base-xtech.com/pages/privacy-policy/"
+  hreflangs: [
+    { lang: 'en', href: 'https://base-xtech.com/pages/privacy-policy/' },
+    { lang: 'uk', href: 'https://base-xtech.com/uk/pages/privacy-policy/' },
+    { lang: 'de', href: 'https://base-xtech.com/de/datenschutz/' },
+    { lang: 'x-default', href: 'https://base-xtech.com/pages/privacy-policy/' }
+  ]
 }) %>
-<%- include('layout/v2/shell-top.ejs') %>
+<%- include('layout/v2/shell-top.ejs', { langSwitch: true }) %>
   <main id="privacy-policy" class="v2-main v2-legal">
     <header class="v2-legal__head">
       <p class="v2-tag">Legal</p>
@@ -17,7 +20,16 @@
     <article class="v2-legal__body">
           <h2>Introduction</h2>
           <p>Welcome to Base X Tech. Our Privacy Policy explains how we collect, safeguard, and disclose information resulting from your use of our Website.</p>
-          <p>This Website is operated by Base X Tech Ltd (London, UK) ("we", "us", "our"), which is the controller of the personal data described in this policy.</p>
+          <p>This Website is operated by Base X Tech Ltd ("we", "us", "our"), which is the controller of the personal data described in this policy.</p>
+
+          <h2>Controller</h2>
+          <p>Base X Tech Ltd
+            <br>27 Old Gloucester Street
+            <br>London WC1N 3AX
+            <br>United Kingdom
+            <br>Registered in England and Wales, company number 16134538
+            <br>Director: Oleksandr Rudenko
+            <br>Email: <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a></p>
           <p>By using our Website, you agree to the collection and use of information in accordance with this policy.</p>
 
           <h2>Types of Data We Collect</h2>
@@ -113,7 +125,7 @@
             <p>We may update this Privacy Policy periodically. Changes become effective once posted on this page. Users will be notified via email or Website announcements.</p>
 
             <h2>Contact Us</h2>
-            <p>For any questions regarding this Privacy Policy, please contact us at hello@base-xtech.com.</p>
+            <p>For any questions regarding this Privacy Policy, please contact Base X Tech Ltd, 27 Old Gloucester Street, London WC1N 3AX, United Kingdom, at <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
 
 
 

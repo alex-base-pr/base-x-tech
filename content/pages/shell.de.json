@@ -39,8 +39,12 @@
     "navigation": "Navigation",
     "connect": "Profile",
     "terms": "Terms (EN)",
-    "privacy": "Datenschutzerklärung",
-    "company": "Base X Tech Ltd, eingetragen in London, UK. Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten."
+    "impressum": "Impressum",
+    "impressumHref": "/de/impressum/",
+    "privacy": "Datenschutz",
+    "privacyHref": "/de/datenschutz/",
+    "company": "Base X Tech Ltd, eingetragen in London, UK. Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten.",
+    "legal": "Base X Tech Ltd · Company No. 16134538 (Companies House) · 27 Old Gloucester Street, London WC1N 3AX, Vereinigtes Königreich"
   },
   "form": {
     "close": "Formular schließen",
@@ -96,7 +100,8 @@
     "submit": "Projektangaben senden",
     "promise": "Wir antworten innerhalb eines Werktages.",
     "note": "Wir verwenden Ihre Angaben ausschließlich, um auf diese Anfrage zu antworten.",
-    "privacy": "Datenschutzerklärung"
+    "privacy": "Datenschutzerklärung",
+    "privacyHref": "/de/datenschutz/"
   },
   "team": {
     "label": "Ihre Ansprechpartner",

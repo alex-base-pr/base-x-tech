@@ -13,6 +13,8 @@
     { "path": "/de/pages/complex-solutions/", "file": "de/pages/complex-solutions.html", "lang": "de", "role": "index", "group": "service-extra", "name": "Komplexe Systeme (DACH)", "en": "/pages/complex-solutions/", "faq": true },
     { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
     { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
+    { "path": "/de/impressum/", "file": "de/impressum.html", "lang": "de", "role": "index", "group": "legal", "name": "Impressum" },
+    { "path": "/de/datenschutz/", "file": "de/datenschutz.html", "lang": "de", "role": "index", "group": "legal", "name": "Datenschutzerklärung", "en": "/pages/privacy-policy/" },
 
     { "path": "/pages/service/shopify-theme-customization-and-development/", "file": "pages/service/shopify-theme-customization-and-development.html", "lang": "en", "role": "absorbed", "canonical": "/pages/shopify-development/" },
     { "path": "/pages/service/shopify-headless-development/", "file": "pages/service/shopify-headless-development.html", "lang": "en", "role": "absorbed", "canonical": "/pages/shopify-development/" },

@@ -40,7 +40,8 @@
     "connect": "Connect",
     "terms": "Terms & Conditions",
     "privacy": "Privacy policy",
-    "company": "Base X Tech Ltd, registered in London, UK. Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours."
+    "company": "Base X Tech Ltd, registered in London, UK. Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.",
+    "legal": "Base X Tech Ltd · Company no. 16134538 · 27 Old Gloucester Street, London WC1N 3AX, UK"
   },
   "form": {
     "close": "Close the form",

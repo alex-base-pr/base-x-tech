@@ -60,7 +60,7 @@
       </label>
       <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label"><%= f.submit %></span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
       <p class="v2-form__promise"><%= f.promise %></p>
-      <p class="v2-form__note"><%= f.note %> <a href="/pages/privacy-policy/"><%= f.privacy %></a></p>
+      <p class="v2-form__note"><%= f.note %> <a href="<%= f.privacyHref || '/pages/privacy-policy/' %>"><%= f.privacy %></a></p>
     </form>
   </div>
 </div>

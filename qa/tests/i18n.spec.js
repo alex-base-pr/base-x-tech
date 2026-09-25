@@ -10,6 +10,12 @@ for (const de of dePages) {
     expect(html).toMatch(/<html lang="de"/);
     const alt = (h) => Object.fromEntries([...h.matchAll(/<link rel="alternate" href="([^"]+)" hreflang="([^"]+)">/g)].map((m) => [m[2], m[1]]));
     const deAlt = alt(html);
+    expect(fs.readFileSync('dist/sitemap.xml', 'utf8')).toContain(`<loc>${host + de.path}</loc>`);
+    expect(html).toContain(`<link rel="canonical" href="${host + de.path}">`);
+    if (!de.en) { // DE-only page (Impressum): no language cluster at all
+      expect(deAlt, 'DE-only page has no hreflang').toEqual({});
+      return;
+    }
     expect(deAlt.de).toBe(host + de.path);
     expect(deAlt.en).toBe(host + de.en);
     expect(deAlt['x-default']).toBe(host + de.en);
@@ -17,8 +23,7 @@ for (const de of dePages) {
     expect(alt(en.html).de, 'English page links back to German').toBe(host + de.path);
     const t = (h) => (h.match(/<title>([^<]*)<\/title>/) || [])[1];
     expect(t(html)).not.toBe(t(en.html));
-    expect(html).toContain('"@type":"Service"');
-    expect(fs.readFileSync('dist/sitemap.xml', 'utf8')).toContain(`<loc>${host + de.path}</loc>`);
+    if (de.group.startsWith('service')) expect(html).toContain('"@type":"Service"');
   });
 }
 

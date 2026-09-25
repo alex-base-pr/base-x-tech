@@ -8,6 +8,7 @@
       </a>
       <div class="v2-footer__meta">
         <% if (sh.footer.company) { %><p class="v2-footer__company"><%= sh.footer.company %></p><% } %>
+        <% if (sh.footer.legal) { %><p class="v2-footer__entity"><%= sh.footer.legal %></p><% } %>
         <p class="v2-footer__copy">© <%= new Date().getFullYear() %> Base X Tech. <%= sh.footer.rights %></p>
       </div>
     </div>
@@ -27,7 +28,9 @@
     </div>
   </div>
   <div class="v2-footer__legal">
+    <%# DE pages link the German legal pages (Impressum · Datenschutz); terms exist in English only. %>
+    <% if (sh.footer.impressumHref) { %><a href="<%= sh.footer.impressumHref %>"><%= sh.footer.impressum %></a><% } %>
+    <a href="<%= sh.footer.privacyHref || '/pages/privacy-policy/' %>"><%= sh.footer.privacy %></a>
     <a href="/pages/terms-and-conditions/"><%= sh.footer.terms %></a>
-    <a href="/pages/privacy-policy/"><%= sh.footer.privacy %></a>
   </div>
 </footer>

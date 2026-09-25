@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Impressum (§ 5 DDG, § 18 Abs. 2 MStV) for the German pages, design v2 shell. DE-only page: no hreflang cluster.
+    Entity data: owner + Companies House (2026-09-25). No VAT number known, so none is shown.
+    OS platform: the EU ODR platform was shut down on 20 July 2025 (Reg. (EU) 2024/3228), so no link to it; see docs/STATUS.md. %>
+<%- include('layout/head-alt.ejs', {
+  title: "Impressum | Base X Tech",
+  v2: true,
+  description: "Impressum der Base X Tech Ltd: Anbieterkennzeichnung nach § 5 DDG, Anschrift in London, Registereintrag bei Companies House und Kontakt."
+}) %>
+<%- include('layout/v2/shell-top.ejs', { lang: 'de' }) %>
+  <main id="impressum" class="v2-main v2-legal">
+    <header class="v2-legal__head">
+      <p class="v2-tag">Rechtliches</p>
+      <h1 class="v2-h-l">Impressum</h1>
+    </header>
+    <article class="v2-legal__body">
+      <h2>Angaben gemäß § 5 DDG</h2>
+      <p><strong>Anbieter</strong>
+        <br>Base X Tech Ltd</p>
+      <p><strong>Anschrift</strong>
+        <br>27 Old Gloucester Street
+        <br>London WC1N 3AX
+        <br>Vereinigtes Königreich</p>
+      <p><strong>Vertreten durch</strong>
+        <br>den Director Oleksandr Rudenko</p>
+
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a></p>
+
+      <h2>Registereintrag</h2>
+      <p>Eingetragen bei Companies House, England und Wales
+        <br>Registernummer (Company No.): 16134538</p>
+
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Oleksandr Rudenko
+        <br>27 Old Gloucester Street
+        <br>London WC1N 3AX
+        <br>Vereinigtes Königreich</p>
+
+      <h2>EU-Streitschlichtung</h2>
+      <p>Die Europäische Kommission hat ihre Plattform zur Online-Streitbeilegung (OS-Plattform) zum 20. Juli 2025 eingestellt; ein Link auf die OS-Plattform entfällt daher.</p>
+
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+    </article>
+  </main>
+<%- include('layout/v2/shell-bottom.ejs', { lang: 'de' }) %>
+</html>
