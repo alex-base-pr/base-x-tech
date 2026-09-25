@@ -121,11 +121,11 @@
       {
         "client": "Lili Mager",
         "context": "Store Build",
-        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
       },
       {
         "client": "Gunia",
-        "context": "Theme Development",
+        "context": "Store Migration & Theme Customization",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       }
     ]
@@ -181,7 +181,7 @@
       },
       {
         "q": "What if our system has no Shopify app?",
-        "a": "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a private Shopify app to sit between them."
+        "a": "That is most of the work we do. Off-the-shelf apps cover common systems; the one that runs your business often predates them or was built in-house. We connect those directly through their API, or build a custom Shopify app to sit between them."
       },
       {
         "q": "How do you stop stock going out of sync?",

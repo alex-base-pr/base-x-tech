@@ -24,6 +24,7 @@
         <% c.hero.title.forEach(line => { %><span><%= line %></span> <% }) %>
         <% c.hero.titleMuted.forEach((line, i) => { %><span class="v2-muted<%= i === c.hero.titleMuted.length - 1 ? ' h-hero__indent' : '' %>"><%= line %></span> <% }) %>
       </h1>
+      <% if (c.hero.sub) { %><p class="h-hero__sub"><%= c.hero.sub %></p><% } %>
       <figure class="h-hero__media"><img src="<%= c.hero.image %>" alt="<%= c.hero.imageAlt %>" width="229" height="160" fetchpriority="high"></figure>
       <div class="h-hero__foot">
         <ol class="h-hero__focus" aria-label="What we focus on">

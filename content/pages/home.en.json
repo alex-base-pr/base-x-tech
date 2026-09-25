@@ -13,6 +13,7 @@
       "behind modern",
       "commerce"
     ],
+    "sub": "Shopify development, custom apps and integrations for brands that have outgrown standard setups.",
     "focus": [
       "Shopify Apps",
       "AI Automation",
@@ -87,7 +88,7 @@
         "author": "VT Advantec"
       },
       {
-        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs.",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project.",
         "author": "Lili Mager"
       }
     ]
@@ -157,12 +158,12 @@
       },
       {
         "title": "Pragmatic innovation",
-        "description": "We use new tools — AI, automation, headless — where they pay off for your store, not because they're new.",
+        "description": "We use new tools (AI, automation, headless) where they pay off for your store, not because they're new.",
         "icon": "wand"
       },
       {
         "title": "Long-term thinking",
-        "description": "Clean code, documentation and monitoring from day one, so your team — or ours — can keep building on it for years.",
+        "description": "Clean code, documentation and monitoring from day one, so your team, or ours, can keep building on it for years.",
         "icon": "timer"
       }
     ],

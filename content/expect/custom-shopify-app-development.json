@@ -2,8 +2,8 @@
   "path": "/pages/service/custom-shopify-app-development/",
   "source": "content/source/05-custom-shopify-apps.txt",
   "title": "Custom Shopify App Development & Automation | Base X Tech",
-  "description": "We build Shopify apps and automations: public App Store apps, private apps for one merchant, checkout extensions, and the integrations behind them.",
+  "description": "We build Shopify apps and automations: public App Store apps, custom apps for one merchant, checkout extensions, and the integrations behind them.",
   "h1": "Shopify apps built for the workflow you actually have",
-  "h3": ["Public App Store Apps", "Private & Custom Apps", "Custom Automations", "Functions & Extensions", "App UX & Interface", "App Store Launch"],
+  "h3": ["Public App Store Apps", "Custom Apps", "Custom Automations", "Functions & Extensions", "App UX & Interface", "App Store Launch"],
   "faq_count": 8
 }

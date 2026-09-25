@@ -32,6 +32,7 @@ body.v2.v2-home {
       @include desk { text-align: left; } }
     .h-hero__indent { @include desk { padding-left: 150px; } }
   }
+  .h-hero__sub { max-width: 460px; font-size: 16px; line-height: 1.4; font-weight: 300; color: #cfcfcf; } // M3
   .h-hero__media {
     margin: 0; align-self: center; width: 245px; padding: 8px; border-radius: 4px; background: var(--v2-panel-2);
     img { display: block; width: 100%; height: auto; aspect-ratio: 229 / 160; object-fit: cover; border-radius: 4px; }

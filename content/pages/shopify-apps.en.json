@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Custom Shopify App Development & Automation | Base X Tech",
-    "description": "We build Shopify apps and automations: public App Store apps, private apps for one merchant, checkout extensions, and the integrations behind them."
+    "description": "We build Shopify apps and automations: public App Store apps, custom apps for one merchant, checkout extensions, and the integrations behind them."
   },
   "hero": {
     "tag": "Shopify Apps",
@@ -10,7 +10,7 @@
       "for the workflow you",
       "actually have"
     ],
-    "lead": "Public apps, private apps and the automations that remove work nobody should be doing by hand. Two are live on the App Store.",
+    "lead": "Public apps, custom apps and the automations that remove work nobody should be doing by hand. Two are live on the App Store.",
     "button": "Discuss Your Project"
   },
   "capabilities": {
@@ -25,7 +25,7 @@
         "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
       },
       {
-        "title": "Private & Custom Apps",
+        "title": "Custom Apps",
         "description": "Apps for one merchant, doing the thing no public app does properly.",
         "image": "/images/v2/shopify-apps-capabilities-2-image-5950.webp"
       },
@@ -62,16 +62,18 @@
           "Public App",
           "Logistics"
         ],
-        "link": "/blog/nova-poshta-shopify-integration-connect-app/",
-        "linkLabel": "Read how we built Nova Poshta Connect",
-        "image": "/images/v2/shopify-apps-projects-2-image-5939.webp"
+        "link": "https://apps.shopify.com/nova-poshta-connect",
+        "linkLabel": "View on the Shopify App Store",
+        "image": "/images/v2/shopify-apps-projects-2-image-5939.webp",
+        "caseLink": "/blog/nova-poshta-shopify-integration-connect-app/",
+        "caseLabel": "Read how we built it"
       },
       {
         "category": "Gifting",
         "title": "UK gifting brand",
-        "text": "Gift configurator shipped as a private app with production logic.",
+        "text": "Gift configurator shipped as a custom app with production logic.",
         "tags": [
-          "Private App",
+          "Custom App",
           "Automation",
           "Gifting"
         ],
@@ -122,11 +124,11 @@
       {
         "client": "Lili Mager",
         "context": "Store Build",
-        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all our needs."
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
       },
       {
         "client": "Gunia",
-        "context": "Theme Development",
+        "context": "Store Migration & Theme Customization",
         "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
       }
     ]
@@ -178,23 +180,23 @@
     "items": [
       {
         "q": "Can you build a public Shopify app for the App Store?",
-        "a": "Yes. Two we can name publicly are live there: Nova Poshta Connect, which is ours, and Mo: Story Slider Navigation, built for a partner agency. Most of what we build is private apps for one merchant, which never appear in the store by design."
+        "a": "Yes. Two we can name publicly are live there: Nova Poshta Connect, which is ours, and Mo: Story Slider Navigation, built for a partner agency. Most of what we build is custom apps for one merchant, which never appear in the store by design."
       },
       {
-        "q": "What is the difference between a public and a private app?",
-        "a": "A public app is listed on the App Store and any merchant can install it. A private app exists for one store and does exactly what that business needs. If the workflow is specific to you, private is usually cheaper and faster than bending a public app to fit."
+        "q": "What is the difference between a public and a custom app?",
+        "a": "A public app is listed on the App Store and any merchant can install it. A custom app exists for one store and does exactly what that business needs. If the workflow is specific to you, custom is usually cheaper and faster than bending a public app to fit."
       },
       {
         "q": "Can you automate something our team does by hand?",
-        "a": "That is most of what we build. For a UK gifting brand we shipped a configurator as a private app, plus a production engine that turns each order into print-ready files and routes them to the queue. Work that used to be manual now happens on order."
+        "a": "That is most of what we build. For a UK gifting brand we shipped a configurator as a custom app, plus a production engine that turns each order into print-ready files and routes them to the queue. Work that used to be manual now happens on order."
       },
       {
         "q": "How long does a Shopify app take to build?",
-        "a": "A single-purpose private app is measured in weeks. Something with production logic, external systems or App Store review behind it runs longer. The gifting brand's three-system build took four to six months. We scope before quoting so you are not guessing."
+        "a": "A single-purpose custom app is measured in weeks. Something with production logic, external systems or App Store review behind it runs longer. The gifting brand's three-system build took four to six months. We scope before quoting so you are not guessing."
       },
       {
         "q": "Who owns the app and the code?",
-        "a": "You do, for anything we build for you. Private apps and custom code are yours, including the repository. A public app is a different question and worth settling in the contract before it is built rather than after it has users."
+        "a": "You do, for anything we build for you. Custom apps and custom code are yours, including the repository. A public app is a different question and worth settling in the contract before it is built rather than after it has users."
       },
       {
         "q": "What happens when Shopify changes its API?",
