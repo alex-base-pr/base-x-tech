@@ -6,40 +6,38 @@
   "hero": {
     "eyebrow": "Komplexe Lösungen",
     "title": "Komplexe Systeme,<br> so verbunden, wie<br> Ihr Unternehmen arbeitet.",
+    "sub": "Individuelle Shopify-Integrationen mit ERP, Kassensystem und den Systemen hinter Ihrem Betrieb.",
     "lead": "Wir verbinden E-Commerce, ERP, POS, Lagerverwaltung und individuelle Systeme – mit den Integrationen, Apps und Automatisierungen, die Ihre Abläufe synchron halten.",
     "button": "Projekt besprechen"
   },
   "strip": {
-    "label": "Abgestimmt auf die Systeme, die Sie bereits nutzen:",
+    "label": "Systeme, die wir anbinden",
     "items": [
       "Shopify POS",
+      "Mettler Toledo",
       "Xentral",
+      "Odoo",
+      "Individuelles ERP",
+      "Middleware",
       "JTL-Wawi",
       "weclapp",
       "Microsoft Dynamics 365 Business Central",
-      "Odoo",
-      "DATEV",
-      "Lexware Office",
-      "HubSpot",
-      "DHL",
-      "DPD",
-      "Sendcloud",
-      "Individuelle APIs",
-      "Middleware"
-    ],
-    "readyLabel": "Integrierbar (noch kein abgeschlossenes Projekt):",
-    "ready": [
       "SAP Business One",
+      "plentymarkets",
       "Akeneo",
-      "Salesforce"
+      "Pimcore",
+      "Plytix",
+      "HubSpot",
+      "Salesforce",
+      "Pipedrive"
     ]
   },
   "partner": {
-    "label": "Expertise vor Ort",
+    "label": "Persönlicher Ansprechpartner im DACH-Raum",
     "paragraphs": [
-      "Bei einer ERP-Integration geht es nicht nur darum, APIs zu verbinden – es geht darum, Geschäftsprozesse zu verstehen und Systeme reibungslos zusammenarbeiten zu lassen. Jede Systemlandschaft ist anders, und die Herausforderungen stecken meist im Detail: darin, wie Bestellungen, Bestände und Rechnungen tatsächlich durch das Unternehmen laufen.",
-      "Entscheidend sind klare Anforderungen, eine eindeutig geregelte Datenhoheit und Tests mit realen Szenarien. Unser Vorgehen sorgt dafür, dass die Integration ein verlässlicher Teil Ihres Tagesgeschäfts wird – und nicht etwas, bei dem Sie ständig Brände löschen müssen."
+      "Alexander Karl ist Ihr Ansprechpartner für Projekte in Deutschland, Österreich und der Schweiz. Er kommuniziert mit Ihnen auf Deutsch und stimmt Ihre Anforderungen mit unserem Team ab, damit zwischen Ihrem Unternehmen und den Menschen, die das System entwickeln, nichts verloren geht."
     ],
+    "bio": "Interim Product Owner und E-Commerce-Berater aus Berlin mit mehr als 40 abgeschlossenen Digitalprojekten, darunter Migrationen von Shopware zu Shopify mit ERP-Anbindung. Lehrbeauftragter für E-Commerce an der BHT Berlin.",
     "name": "Alexander Karl",
     "role": "DACH-Partner",
     "photoPlaceholder": "Foto von Alexander Karl (Platzhalter)"
@@ -61,7 +59,7 @@
         "description": "Anbindungen für Systeme, für die es weder eine App noch eine Standardintegration gibt."
       },
       {
-        "title": "Private & individuelle Apps",
+        "title": "Custom Apps",
         "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann."
       },
       {
@@ -79,7 +77,8 @@
     "title": "Was eine Integration <span class='accent'>zuverlässig</span> macht",
     "paragraphs": [
       "Eine zuverlässige Integration ist mehr als die Verbindung zweier Systeme. Dazu gehört, Feldzuordnung und Datenhoheit festzulegen, Webhooks und API-Limits sauber zu handhaben und automatische Wiederholungsversuche, Datenabgleich und Monitoring einzubauen – damit kritische Daten zuverlässig zwischen Shopify, ERP, POS und dem Rest Ihrer Infrastruktur fließen.",
-      "Wenn ein vorhandener Konnektor zum Prozess passt, nutzen wir ihn. Ist die Geschäftslogik komplexer, entwickeln wir die Integrationsschicht passend dazu – ausgerichtet auf die beteiligten Systeme, das Datenvolumen, das betriebliche Risiko und darauf, wie das Unternehmen tatsächlich arbeitet."
+      "Wenn ein vorhandener Konnektor zum Prozess passt, nutzen wir ihn. Ist die Geschäftslogik komplexer, entwickeln wir die Integrationsschicht passend dazu – ausgerichtet auf die beteiligten Systeme, das Datenvolumen, das betriebliche Risiko und darauf, wie das Unternehmen tatsächlich arbeitet.",
+      "Für einen Händler übermitteln wir verkaufte Mengen als einzelne Lagerbewegungen an Xentral, statt die Gesamtbestände zu überschreiben. Änderungen durch Onlinebestellungen bleiben erhalten, und jede Anpassung ist nachvollziehbar."
     ],
     "button": "Projekt besprechen"
   },
@@ -91,7 +90,7 @@
     ],
     "diagram": {
       "svgTitle": "So sind die Systeme verbunden",
-      "svgDesc": "Shopify (Commerce-Plattform) ist mit der Middleware (Integrationsschicht) verbunden, die wiederum mit dem ERP (führendes System) und dem POS (Ladenbetrieb) verbunden ist.",
+      "svgDesc": "Shopify (Commerce-Plattform, mit Shopify POS im Laden) ist in beide Richtungen mit der Middleware (Integrationsschicht) verbunden: Produkte und Barcodes in die eine, Bestellungen und Verkäufe in die andere Richtung. Die Middleware tauscht Produktdaten (XML) und Barcodes gewogener Artikel mit den Mettler-Toledo-Waagen aus und übermittelt jede Nacht die verkauften Mengen pro Filiale an das ERP (Xentral).",
       "shopify": "Shopify",
       "shopifyRole": "Commerce-Plattform",
       "middleware": "Middleware",
@@ -99,7 +98,18 @@
       "erp": "ERP",
       "erpRole": "Führendes System",
       "pos": "POS",
-      "posRole": "Ladenbetrieb"
+      "posRole": "Ladenbetrieb",
+      "scales": "Waagen",
+      "scalesRole": "Mettler Toledo",
+      "erpVendor": "Xentral",
+      "flowShopifyA": "Produkte, Barcodes",
+      "flowShopifyB": "Bestellungen, Verkäufe",
+      "flowScalesA": "Produktdaten (XML)",
+      "flowScalesB": "Barcodes gewogener Artikel",
+      "flowErp": [
+        "nächtlich: verkaufte",
+        "Mengen pro Filiale"
+      ]
     }
   },
   "help": {
@@ -122,42 +132,41 @@
   },
   "case": {
     "label": "In der Praxis bewährt",
-    "client": "Fresh Market",
+    "client": "Deutscher Feinkost-Fachhändler",
     "tags": [
-      "Private App",
-      "Bestandsabgleich",
-      "POS-Integration",
-      "Automatisierung"
+      "Shopify POS",
+      "Mettler-Toledo-Waagen",
+      "Xentral ERP",
+      "Individuelle Middleware"
     ],
-    "challengeTitle": "Die Herausforderung",
+    "challengeTitle": "Herausforderung",
     "challenge": [
-      "Fresh Market verkauft denselben Warenbestand über seinen Shopify-Shop und seine Ladengeschäfte. Ohne gemeinsamen Bestandsfluss konnte ein im Laden verkaufter Artikel online weiterhin verfügbar sein – mit Überverkäufen, stornierten Bestellungen und manuellen Bestandskorrekturen als Folge.",
-      "Die Aufgabe bestand darin, beide Kanäle auf Basis desselben Bestands arbeiten zu lassen, sodass sich jeder Verkauf automatisch im gesamten Unternehmen widerspiegelt."
+      "Der Händler verkauft Waren nach Gewicht in mehreren Ladengeschäften. Shopify sollte zum zentralen führenden System für Produkte, Barcodes und Verkäufe werden, auch für Artikel, die nach Gewicht verkauft werden. Die Waagen, das Kassensystem und das Xentral-ERP benötigten jeweils dieselben Daten, jedes System in seinem eigenen Format."
     ],
     "builtTitle": "Was wir umgesetzt haben",
     "built": [
-      "Wir haben ein vernetztes Commerce-System aufgebaut, das Onlineshop, Ladengeschäfte und Warenbestand über eine individuelle Integrationsschicht synchron hält. Eine private App bildet die geschäftsspezifische Logik ab, während automatisierte Datenflüsse die Verfügbarkeit mit jedem Verkauf kanalübergreifend aktualisieren.",
-      "Statt Online- und Offline-Bestand getrennt zu verwalten, arbeitet das Geschäft mit einem durchgängigen Ablauf – Shopify, POS und Bestandsdaten greifen im Hintergrund ineinander."
+      "Eine Middleware, die Barcodes für gewogene Artikel und Stückware erzeugt und Produkte mit den Mettler-Toledo-Waagen synchronisiert. Eine Shopify-POS-Erweiterung, die den Barcode der Waage liest und den gewogenen Artikel automatisch in den Warenkorb legt. Ein Admin-Bereich für Barcode-Regeln mit vollständigem Änderungsprotokoll. Eine nächtliche Synchronisierung, die die verkauften Gewichte pro Filiale und pro Artikelnummer (SKU) als Lagerbewegungen an Xentral übermittelt, ohne Bestände zu überschreiben, die durch Onlinebestellungen geändert wurden."
     ],
-    "outcomesTitle": "Die wichtigsten Ergebnisse",
+    "outcomesTitle": "Leistungsumfang",
     "outcomes": [
       {
-        "title": "Private App",
-        "text": "Individuelle Logik, abgestimmt auf die Bestands- und Verkaufsabläufe des Geschäfts – sie verbindet Systeme dort, wo eine Standardintegration nicht ausreichte."
+        "title": "Waagen-Anbindung",
+        "text": "Produkte gelangen automatisch auf die Waagen, und die Barcodes der Waagen werden an der Kasse gelesen."
       },
       {
-        "title": "Bestandsabgleich",
-        "text": "Die Verfügbarkeit bleibt zwischen Onlineshop und Ladengeschäften synchron, ganz gleich, über welchen Kanal Produkte verkauft werden."
+        "title": "POS-Erweiterung",
+        "text": "Das Personal sieht und erstellt Barcodes direkt am Kassenterminal."
       },
       {
-        "title": "POS-Integration",
-        "text": "Verkäufe im Laden fließen in den gemeinsamen Bestandsfluss zurück, sodass sich Offline-Verkäufe automatisch online widerspiegeln."
+        "title": "Xentral-Bestandsabgleich",
+        "text": "Verkaufte Gewichte fließen jede Nacht ins ERP, und jede Änderung bleibt nachvollziehbar."
       },
       {
-        "title": "Automatisierung",
-        "text": "Routinemäßige Bestandsaktualisierungen laufen automatisch und verringern den Bedarf an manuellen Bestandskorrekturen zwischen den Kanälen."
+        "title": "Mehrere Filialen",
+        "text": "Ein Setup für alle Standorte und jede künftige Filiale."
       }
     ],
+    "footer": "Im Produktivbetrieb. Neue Module für Inventur, Pfandabwicklung und Etikettendruck befinden sich in der Planung.",
     "imagePlaceholder": "Projektbild (Platzhalter)"
   },
   "posts": {
@@ -168,27 +177,27 @@
     "items": [
       {
         "url": "/blog/custom-shopify-integrations-gifting-brand/",
-        "title": "Individuelle Shopify-Integrationen: Fallstudie einer britischen Geschenkmarke",
+        "title": "Individuelle Shopify-Integrationen: Neuaufbau für eine britische Geschenkmarke",
         "excerpt": "Eine britische Geschenkmarke mit 13 Jahren Geschichte brauchte mehr als einen neuen Onlineshop.",
         "author": "Vadym-Marko Hruden",
         "date": "8. Juni 2026",
         "datetime": "2026-06-08"
       },
       {
-        "url": "/blog/nova-poshta-shopify-integration-connect-app/",
-        "title": "Nova-Poshta-Integration für Shopify – Nova Poshta Connect von Base X Tech",
-        "excerpt": "Ukrainische Shopify-Shops mussten Nova-Poshta-Frachtbriefe (TTN) bisher immer manuell bearbeiten – außerhalb von Shopify, eine Bestellung nach der anderen.",
+        "url": "/blog/custom-platform-to-shopify-migration/",
+        "title": "Von einer individuellen Plattform zu Shopify migrieren",
+        "excerpt": "Eine selbst entwickelte E-Commerce-Plattform beginnt als Vorteil und wird nach und nach zur Last: Die Wartung verschlingt das Entwicklungsbudget, und Updates fühlen sich riskant an.",
         "author": "Oleksandr Rudenko",
-        "date": "16. Juni 2026",
-        "datetime": "2026-06-16"
+        "date": "31. Juli 2026",
+        "datetime": "2026-07-31"
       },
       {
-        "url": "/blog/building-an-ai-analytics-agent-with-claude-api/",
-        "title": "Einen KI-Analyse-Agenten mit der Claude-API entwickeln",
-        "excerpt": "Wir haben einen Analyse-Agenten entwickelt, der jeden Monat mehr als 8 Stunden manuelles Reporting ersetzt.",
-        "author": "Vadym-Marko Hruden",
-        "date": "21. Mai 2026",
-        "datetime": "2026-05-21"
+        "url": "/blog/shopify-product-configurator-naya-tech/",
+        "title": "Wie wir einen individuellen Shopify-Produktkonfigurator für NAYA.TECH entwickelt haben",
+        "excerpt": "NAYA.TECH verkauft eine zweifach mit dem CES Innovation Award ausgezeichnete modulare Tastatur in 16 Konfigurationen.",
+        "author": "Oleksandr Rudenko",
+        "date": "3. Juni 2026",
+        "datetime": "2026-06-03"
       }
     ]
   },
@@ -221,44 +230,42 @@
     "title": "Fragen, die wir <span class=\"accent\">oft hören</span>",
     "items": [
       {
+        "q": "Mit wem werden wir sprechen?",
+        "a": "Alexander Karl, unser DACH-Partner, ist Ihr Ansprechpartner auf Deutsch. Unser Team entwickelt und betreut das System."
+      },
+      {
         "q": "Können Sie Shopify an unser ERP anbinden?",
-        "a": "Ja. Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP, ohne dass jemand sie abtippen muss. Wir arbeiten über die API, die Ihr ERP bereitstellt, und wo es nichts Brauchbares bereitstellt, entwickeln wir den Konnektor selbst, statt Ihnen zu sagen, dass es nicht geht."
+        "a": "Ja. Wir haben Integrationen mit Xentral, Odoo und individuellen ERP-Systemen umgesetzt. Andere Systeme binden wir über ihre API an, und wo es keine brauchbare API gibt, entwickeln wir den Konnektor selbst."
       },
       {
-        "q": "Was, wenn es für unser System keine Shopify-App gibt?",
-        "a": "Das ist der Großteil unserer Arbeit. Fertige Apps decken gängige Systeme ab; das System, auf dem Ihr Geschäft läuft, ist oft älter als diese Apps oder wurde intern entwickelt. Solche Systeme binden wir direkt über ihre API an – oder wir entwickeln eine private Shopify-App, die dazwischengeschaltet wird."
-      },
-      {
-        "q": "Wie verhindern Sie, dass Bestände auseinanderlaufen?",
-        "a": "Indem wir festlegen, welches System für den Bestand führend ist, bevor irgendetwas gebaut wird. Bestände laufen auseinander, wenn sich zwei Systeme gleichzeitig für maßgeblich halten. Deshalb legen wir für jedes Feld Richtung und Häufigkeit fest und spielen dann echte Bestellungen durch, einschließlich der Fehlerfälle, bevor die Lösung mit Live-Daten arbeitet."
-      },
-      {
-        "q": "Können Sie Bestellsteuerung und Fulfillment automatisieren?",
-        "a": "Ja. Für eine britische Geschenkmarke haben wir eine Produktions-Engine gebaut, die jede Bestellung in druckfertige Dateien umwandelt, diese bündelt und an die Produktionswarteschlange weiterleitet. Dazu kommt eine Fulfillment-Schicht, die Versandcodes erzeugt, Daten in Echtzeit mit den Paketdiensten abgleicht und zweimal täglich Abholungen einplant."
-      },
-      {
-        "q": "Mit welchen ERP- und CRM-Systemen haben Sie bereits gearbeitet?",
-        "a": "Mit ERP-, CRM-, PIM- und Fulfillment-Systemen aus den gängigen Kategorien, angebunden über die jeweils verfügbare API. Mehrere Kunden nutzen Systeme ganz ohne öffentliche Integration; für sie haben wir individuelle Konnektoren für den konkreten Anwendungsfall entwickelt, statt das Unternehmen auf ein anderes Tool umzustellen."
+        "q": "Funktioniert Shopify POS mit Waagen und gewogener Ware?",
+        "a": "Ja. Wir haben Shopify POS an Mettler-Toledo-Waagen angebunden: Die Barcodes gewogener Artikel werden an der Kasse gelesen, und die verkauften Gewichte fließen ins ERP."
       },
       {
         "q": "Wie lange dauert eine Integration?",
-        "a": "Das hängt davon ab, wie viele Systeme beteiligt sind und wie sauber ihre Daten sind. Eine einzelne, gut dokumentierte Anbindung ist eine Frage von Wochen. Das Projekt der britischen Geschenkmarke mit drei Systemen – Konfigurator, Produktion und Fulfillment – dauerte vier bis sechs Monate. Wir klären den Umfang, bevor wir ein Angebot erstellen."
+        "a": "Eine einzelne, gut dokumentierte Anbindung dauert Wochen. Ein Projekt mit mehreren Systemen dauert Monate, vor allem wegen der Analysephase. Wir klären den Umfang, bevor wir ein Angebot erstellen."
       },
       {
-        "q": "Wer betreut die Integration nach dem Livegang?",
-        "a": "Wir, wenn Sie möchten. Integrationen fallen aus, wenn sich eine der beiden Seiten ändert: Eine API-Version wird abgekündigt, ein Feld umbenannt, ein System aktualisiert. Wir überwachen die Verbindungen, die wir bauen, und schlagen bei Störungen Alarm, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+        "q": "Was passiert, wenn nach dem Livegang etwas ausfällt?",
+        "a": "Wir überwachen die Verbindungen, die wir bauen, melden Störungen und können die Wartung übernehmen, wenn sich die API einer der beiden Seiten ändert."
       },
       {
-        "q": "Können Sie unser Lager oder unseren Fulfillment-Dienstleister (3PL) anbinden?",
-        "a": "Ja. Wir haben Barcode-Scanning und Routing-Logik in Lagerabläufe integriert und Anbindungen an Paketdienste entwickelt, die Versandetiketten erzeugen, die Sendungsverfolgung an den Shop zurückmelden und Abholungen einplanen. Nova Poshta Connect ist die öffentlich verfügbare Version dieser Arbeit und im Shopify App Store gelistet."
+        "q": "Braucht unser Shop Shopify Plus?",
+        "a": "Nicht immer. Plus ist bei hohem API-Volumen oder individueller Checkout-Logik wichtig. Das sagen wir Ihnen bei der Klärung des Umfangs."
       }
     ]
   },
   "related": {
     "label": "Verwandte Leistungen",
     "items": [
-      { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/" },
-      { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/" }
+      {
+        "name": "Shopify-Integrationen",
+        "href": "/pages/service/custom-shopify-integrations/"
+      },
+      {
+        "name": "Shopify-Migration",
+        "href": "/pages/service/shopify-migration-service/"
+      }
     ]
   },
   "cta": {

@@ -396,7 +396,7 @@ body.v2 .v2-team {
   .v2-team__list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
   strong { font-weight: 500; color: #fff; }
 }
-body.v2 .cx-cta .v2-team { margin: 2.5rem auto 0; text-align: center; font-family: var(--cx-body); }
+body.v2 .cx-cta .v2-team { max-width: 560px; margin: 2.5rem auto 0; text-align: center; font-family: var(--cx-body); }
 
 // Figma line breaks are desktop line breaks; on phones the H1 flows.
 body.v2 .v2-hero .v2-h-l span, body.v2 .v2-hero .v2-h-2xl span { display: inline; @include desk { display: block; } }

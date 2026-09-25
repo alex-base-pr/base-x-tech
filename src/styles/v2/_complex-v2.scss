@@ -89,6 +89,7 @@ body.v2.cx-page .cx {
   .cx-hero__title { font-family: var(--cx-head); font-size: clamp(2.375rem, 4.3vw, 3.75rem); line-height: 1; letter-spacing: -.02em; color: #fff;
     br { display: none; @include desk { display: inline; } }
   }
+  .cx-hero__sub { max-width: 560px; font-size: 20px; line-height: 1.3; letter-spacing: -.02em; color: #fff; } // M3
   .cx-hero__lead { max-width: 423px; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: #bdbdbd; }
   .cx-hero .cx-btn { margin-top: 20px; }
 
@@ -107,7 +108,6 @@ body.v2.cx-page .cx {
     li { display: inline-flex; align-items: center; &::after { content: '·'; padding: 0 .75em; } }
   }
   .cx-strip__viewport:hover .cx-strip__track { animation-play-state: paused; }
-  .cx-strip__ready { font-size: 14px; color: #9a9a9a; @include desk { grid-column: 1 / -1; } span { color: #d0d0d0; margin-right: .35em; } }
 
   @media (prefers-reduced-motion: reduce) {
     .cx-strip__viewport { mask-image: none; }
@@ -115,7 +115,7 @@ body.v2.cx-page .cx {
     .cx-strip__track[aria-hidden] { display: none; }
   }
 
-  // ---------- partner (photo placeholder, quote, name/role — no contacts)
+  // ---------- partner (photo when there is one, name/role, text — no contacts)
   .cx-partner {
     display: grid; gap: 2rem;
     @include desk { grid-template-columns: minmax(0, 445px) minmax(0, 788px); justify-content: space-between; gap: 38px; align-items: start; }
@@ -132,6 +132,17 @@ body.v2.cx-page .cx {
       strong { font-weight: 500; }
     }
   }
+
+  // Text-only partner block (M1/M5): no photo yet → one centred column, name/role, what he does, short bio.
+  .cx-partner--text { @include desk { grid-template-columns: minmax(0, 788px); justify-content: center; } }
+  .cx-partner__person { display: grid; gap: 10px; font-family: var(--cx-body); font-size: 15.6px; line-height: 1.1; letter-spacing: .01em; color: #1d1e20;
+    strong { font-size: 22px; font-weight: 500; letter-spacing: -.01em; }
+    a { color: inherit; }
+  }
+  .cx-partner__text { display: grid; gap: 1.1em;
+    p { font-size: clamp(1.25rem, 1.9vw, 1.625rem); line-height: 1.15; letter-spacing: -.02em; color: var(--cx-ink); }
+  }
+  .cx-partner__bio { max-width: 640px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; color: #4a4a4a; }
 
   // ---------- capabilities (3 × 2 text grid on the grey band)
   .cx-caps { background: var(--cx-grey-0); }
@@ -170,7 +181,10 @@ body.v2.cx-page .cx {
   .cx-diagram__icon { fill: none; stroke: var(--cx-ink); stroke-width: 1.6; stroke-linejoin: round; }
   .cx-diagram__text { fill: var(--cx-ink); }
   .cx-diagram__name { font-family: var(--cx-head); font-size: 30px; letter-spacing: -.02em; &--s { font-size: 22px; } &--m { font-size: 26px; } }
-  .cx-diagram__role { font-family: var(--cx-head); font-size: 11.5px; letter-spacing: .14em; fill: #6b6b6b; }
+  .cx-diagram__role { font-family: var(--cx-head); font-size: 11.5px; letter-spacing: .14em; fill: #6b6b6b; &--s { font-size: 9.5px; letter-spacing: .08em; } }
+  // A51: data-flow labels on the connectors
+  .cx-diagram__flows { font-family: var(--cx-body); font-size: 12.5px; fill: #5a5a5a; &--s { font-size: 11px; } }
+  .cx-diagram__arrow { fill: #cbbfae; }
 
   // ---------- when we can help
   .cx-help { background: var(--cx-grey-3); @include desk { padding-top: 6.5rem; padding-bottom: 6.5rem; } }
@@ -203,12 +217,13 @@ body.v2.cx-page .cx {
     }
   }
   .cx-case__panel { display: grid; gap: 1.25rem; align-content: start; padding: 28px 24px; border-radius: 12px; background: var(--cx-grey-2);
-    @include desk { padding: 38px 42px; min-height: 576px; gap: 24px; }
+    @include desk { padding: 38px 42px; gap: 24px; } // no fixed min-height: shorter case copy left an empty band
   }
   .cx-case__outcomes { display: grid; gap: 27px; margin-top: 12px;
     li { display: grid; gap: 12px; }
     h4 { font-family: var(--cx-body); font-size: 20px; line-height: 1.29; font-weight: 500; }
   }
+  .cx-case__footer { padding: 4px 4px 0; font-size: 14px !important; color: #4a4a4a; @include desk { grid-column: 1 / -1; padding: 12px 0 0; } }
 
   // ---------- blog teasers
   .cx-posts {
@@ -230,14 +245,15 @@ body.v2.cx-page .cx {
   // ---------- process
   .cx-process { @include desk { padding-top: 6rem; } }
   .cx-process__grid { display: grid; gap: 20px; margin-bottom: 3rem; @include desk { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 20px; } }
-  .cx-process__card { display: flex; flex-direction: column; justify-content: space-between; gap: 3.5rem; min-height: 240px;
-    @include desk { min-height: 305px; }
+  // D3: shorter cards (number on top, text at the bottom, less empty middle)
+  .cx-process__card { display: flex; flex-direction: column; justify-content: space-between; gap: 2rem; min-height: 200px;
+    @include desk { min-height: 240px; }
     > div { display: grid; gap: 20px; @include desk { gap: 30px; } }
     p { max-width: 580px; font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
   }
   .cx-process__num { align-self: flex-start; display: inline-flex; align-items: center; height: 26px; padding: 0 16px; border: 1px solid #bdbdbd; border-radius: 999px; font-size: 14px; color: #000; }
 
-  // ---------- FAQ (no FAQPage schema on this page)
+  // ---------- FAQ (own DACH questions, FAQPage schema via data-faq-q/a)
   .cx-faq { @include desk { padding-top: 4.5rem; } }
   .cx-faq__list { display: grid; gap: 8px; max-width: 690px; margin: 0 auto; }
   .cx-faq__item {
@@ -263,7 +279,7 @@ body.v2.cx-page .cx {
   .cx-cta {
     display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
     padding: 5rem var(--cx-pad); background: var(--v2-bg); color: #fff;
-    @include desk { padding: 6rem var(--cx-pad) 7.5rem; }
+    @include desk { padding: 6rem var(--cx-pad) 5rem; } // D3: less empty space under the last block
     .cx-h2 { max-width: 480px; color: #fff; }
     .cx-label { margin-bottom: 8px; }
     .cx-btn { margin-top: 24px; }
