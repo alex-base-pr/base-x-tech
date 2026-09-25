@@ -89,10 +89,10 @@ test('Complex partner: in-person line, no photo, Alexander still named', async (
 
 test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with the service preselected', async ({ page, request }) => {
   const cases = [
-    ['/pages/service/custom-shopify-integrations/', 'From $1,600', 'We map your systems', 'Custom Shopify Integrations'],
-    ['/pages/service/shopify-migration-service/', 'From $1,600', 'Migration scoping:', 'Shopify Migration'],
-    ['/pages/complex-solutions/', 'From €1,500', 'We map your systems', 'Complex Solutions (ERP, POS, middleware)'],
-    ['/de/pages/complex-solutions/', 'Ab 1.500 €', 'Wir erfassen Ihre Systeme', 'Complex Solutions (ERP, POS, middleware)'],
+    ['/pages/service/custom-shopify-integrations/', 'Fixed price: $1,999', 'We map your systems', 'Custom Shopify Integrations'],
+    ['/pages/service/shopify-migration-service/', 'Fixed price: $1,999', 'Migration scoping:', 'Shopify Migration'],
+    ['/pages/complex-solutions/', 'Fixed price: €1,999', 'We map your systems', 'Complex Solutions (ERP, POS, middleware)'],
+    ['/de/pages/complex-solutions/', 'Festpreis: 1.999 €', 'Wir erfassen Ihre Systeme', 'Complex Solutions (ERP, POS, middleware)'],
   ];
   for (const [path, price, text, service] of cases) {
     const { html } = await rawHtml(request, path);
@@ -103,7 +103,7 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
     const block = html.slice(offer, faq);
     expect(block).toContain(`<p class="v2-offer__amount">${price}</p>`);
     expect(block).toContain(text);
-    expect(block).toMatch(/Final price confirmed after a short call\.|Der endgültige Preis wird nach einem kurzen Gespräch bestätigt\./);
+    expect(block).toMatch(/Scope confirmed after a short call\.|Der Umfang wird nach einem kurzen Gespräch abgestimmt\./);
     expect(block).toContain('data-form-trigger');
     expect(block, 'no hourly rate').not.toMatch(/\/\s?h(ou)?r|per hour|Stunde/i);
     await page.goto(path);
@@ -113,6 +113,18 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
   }
   for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/']) {
     expect((await rawHtml(request, path)).html, `${path}: no offer`).not.toContain('v2-offer');
+  }
+});
+
+test('Prices: the fixed-price offer is the only price on the site, no hourly rates', async ({ request }) => {
+  for (const p of [...indexPages, ...dePages]) {
+    const { html } = await rawHtml(request, p.path);
+    const body = (html.match(/<body[\s\S]*<\/body>/) || [''])[0]
+      .replace(/<section class="v2-section v2-dark v2-offer"[\s\S]*?<\/section>/, ' ') // the offer itself
+      .replace(/<(script|style|form|svg)[\s\S]*?<\/\1>/g, ' ') // form = budget bands, not prices
+      .replace(/<[^>]+>/g, ' ');
+    const prices = (body.match(/(\$|€) ?\d[\d,.]*(?![\d,.]*\s?[MB]\+?)|\d[\d.,]* ?€|per hour|hourly|Stundensatz/gi) || []);
+    expect(prices, p.path).toEqual([]);
   }
 });
 

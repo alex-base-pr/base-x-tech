@@ -172,12 +172,12 @@
     "closing": "What happens after launch matters more."
   },
   "offer": {
-    "_note": "Paid entry offer (owner, 2026-09-25): fixed price, final price after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
+    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
     "label": "First step",
     "title": "Start with a fixed-price audit",
     "text": "We map your systems, data flows and failure points, and recommend connector or custom build — with a fixed quote for the build. Credited against the build if you go ahead.",
-    "price": "From $1,600",
-    "note": "Final price confirmed after a short call.",
+    "price": "Fixed price: $1,999",
+    "note": "Scope confirmed after a short call.",
     "button": "Book the audit"
   },
   "faq": {
