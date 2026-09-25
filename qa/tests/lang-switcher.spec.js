@@ -6,6 +6,8 @@ import { test, expect } from '@playwright/test';
 const cases = [
   { path: '/pages/complex-solutions/', visible: ['en', 'de'], active: 'en', go: { de: '/de/pages/complex-solutions/' } },
   { path: '/de/pages/complex-solutions/', visible: ['en', 'de'], active: 'de', go: { en: '/pages/complex-solutions/' } },
+  { path: '/pages/privacy-policy/', visible: ['en', 'de'], active: 'en', go: { de: '/de/datenschutz/' } }, // DE version since 2026-09-25
+  { path: '/de/datenschutz/', visible: ['en', 'de'], active: 'de', go: { en: '/pages/privacy-policy/' } },
   { path: '/uk/', visible: ['en', 'uk'], active: 'uk', go: { en: '/' } },
 ];
 
@@ -32,7 +34,7 @@ for (const c of cases) {
 }
 
 // Pages without a German version: no globe / no switcher at all (desktop and mobile), and never a link to /uk/.
-const noSwitcher = ['/', '/pages/service/custom-shopify-integrations/', '/pages/privacy-policy/', '/pages/service/ppc-advertising/'];
+const noSwitcher = ['/', '/pages/service/custom-shopify-integrations/', '/pages/terms-and-conditions/', '/de/impressum/', '/pages/service/ppc-advertising/'];
 for (const path of noSwitcher) {
   for (const width of [1440, 375]) {
     test(`A10: no language switcher on ${path} @${width} @cross`, async ({ page }) => {
