@@ -72,19 +72,23 @@ test('Accent: selected budget chip is dark on accent', async ({ page }) => {
   expect(s).toEqual({ bg: ACCENT, color: ON_ACCENT });
 });
 
-test('Complex partner: in-person line, no photo, Alexander still named', async ({ request }) => {
-  const lines = {
-    '/pages/complex-solutions/': 'In person in Berlin on request, elsewhere by arrangement.',
-    '/de/pages/complex-solutions/': 'Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.',
+test('Complex partner: in-person line, approved photo, Alexander named, no placeholder', async ({ request }) => {
+  const cases = {
+    '/pages/complex-solutions/': ['In person in Berlin on request, elsewhere by arrangement.', 'Alexander Karl, DACH Partner at Base X Tech'],
+    '/de/pages/complex-solutions/': ['Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.', 'Alexander Karl, DACH-Partner von Base X Tech'],
   };
-  for (const [path, line] of Object.entries(lines)) {
+  for (const [path, [line, alt]] of Object.entries(cases)) {
     const { html } = await rawHtml(request, path);
     const partner = (html.match(/<section class="cx-section cx-partner[\s\S]*?<\/section>/) || [''])[0];
     expect(partner, path).toContain(`<p class="cx-partner__inperson">${line}</p>`);
-    expect(partner, path).toContain('Alexander Karl');
-    expect(partner, path).not.toContain('<img');
+    expect(partner, path).toContain('<strong>Alexander Karl</strong>');
+    expect(partner, path).toMatch(new RegExp(`<img loading="lazy" src="/images/v2/alexander-karl\\.webp" width="800" height="1000" alt="${alt}">`));
+    expect(partner, path).not.toMatch(/placeholder|Platzhalter/i);
     expect(html, path).not.toMatch(/Expertise vor Ort|on-site/i);
   }
+  const img = await request.get('/images/v2/alexander-karl.webp');
+  expect(img.status()).toBe(200);
+  expect((await img.body()).length).toBeLessThan(200 * 1024);
 });
 
 test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with the service preselected', async ({ page, request }) => {

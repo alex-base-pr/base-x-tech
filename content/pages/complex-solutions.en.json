@@ -41,7 +41,8 @@
     "bio": "Berlin-based interim product owner and e-commerce consultant with 40+ completed digital projects, including Shopware to Shopify migrations with ERP integration. Lecturer in e-commerce at BHT Berlin.",
     "name": "Alexander Karl",
     "role": "DACH Partner",
-    "photoPlaceholder": "Photo of Alexander Karl (placeholder)"
+    "photo": "/images/v2/alexander-karl.webp",
+    "photoAlt": "Alexander Karl, DACH Partner at Base X Tech"
   },
   "capabilities": {
     "label": "Our Capabilities",

@@ -37,12 +37,12 @@
       </div>
     </section>
 
-    <%# Partner block (REQ-013/016/017/018; M1/M5/K2 2026-09-25): text only until Alexander sends a photo — no quote,
-        no placeholder, no email/phone/calendar. A photo (c.partner.photo) brings the image column back. LinkedIn only if c.partner.linkedin is set. %>
+    <%# Partner block (REQ-013/016/017/018; M1/M5/K2 2026-09-25): photo approved by the owner 2026-09-25
+        (public/images/v2/alexander-karl.webp) — no quote, no placeholder, no email/phone/calendar. Without c.partner.photo the block is text-only. LinkedIn only if c.partner.linkedin is set. %>
     <section class="cx-section cx-partner<%= c.partner.photo ? '' : ' cx-partner--text' %>" id="local-expertise" data-v2-section>
       <% if (c.partner.photo) { %>
       <figure class="cx-partner__photo">
-        <img loading="lazy" src="<%= c.partner.photo %>" alt="<%= c.partner.name %>, <%= c.partner.role %>">
+        <img loading="lazy" src="<%= c.partner.photo %>" width="800" height="1000" alt="<%= c.partner.photoAlt || (c.partner.name + ', ' + c.partner.role) %>">
       </figure>
       <% } %>
       <div class="cx-partner__body">

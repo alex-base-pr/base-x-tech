@@ -41,7 +41,8 @@
     "bio": "Interim Product Owner und E-Commerce-Berater aus Berlin mit mehr als 40 abgeschlossenen Digitalprojekten, darunter Migrationen von Shopware zu Shopify mit ERP-Anbindung. Lehrbeauftragter für E-Commerce an der BHT Berlin.",
     "name": "Alexander Karl",
     "role": "DACH-Partner",
-    "photoPlaceholder": "Foto von Alexander Karl (Platzhalter)"
+    "photo": "/images/v2/alexander-karl.webp",
+    "photoAlt": "Alexander Karl, DACH-Partner von Base X Tech"
   },
   "capabilities": {
     "label": "Unsere Leistungen",
