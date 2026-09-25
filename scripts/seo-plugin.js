@@ -90,7 +90,7 @@ function socialTags({ html, lang, canonical, cluster }) {
   const description = attr(metaDescription(html));
   // 1200×630 share card (public/images/og/). Dev builds point at the dev host so link previews work before the file is on prod.
   const imageHost = process.env.DEPLOY_ENV === 'dev' ? (process.env.OG_HOST || 'https://dev.base-xtech.com') : host;
-  const image = `${imageHost}/images/og/base-x-tech-og.png`;
+  const image = `${imageHost}/images/og/base-x-tech-og.png?v=2`; // bump v when the card changes (Slack/LinkedIn cache by URL)
   const tags = [
     '<meta property="og:type" content="website">',
     '<meta property="og:site_name" content="Base X Tech">',

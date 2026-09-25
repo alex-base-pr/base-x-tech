@@ -75,12 +75,12 @@ for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/de/pag
     expect(og('description')).toBeTruthy();
     expect(og('type')).toBe('website');
     expect(og('url')).toBe(canonical);
-    expect(og('image')).toBe('https://base-xtech.com/images/og/base-x-tech-og.png'); // 1200×630 share card (2026-09-25)
+    expect(og('image')).toBe(`${isDevTarget ? 'https://dev.base-xtech.com' : 'https://base-xtech.com'}/images/og/base-x-tech-og.png?v=2`); // 1200×630 share card (2026-09-25)
     expect(og('image:width')).toBe('1200');
     expect(og('image:height')).toBe('630');
     expect(og('locale')).toBe({ en: 'en_US', de: 'de_DE', uk: 'uk_UA' }[langOf(path)]);
     expect(html).toContain('<meta name="twitter:card" content="summary_large_image">');
-    expect(html).toContain('<meta name="twitter:image" content="https://base-xtech.com/images/og/base-x-tech-og.png">');
+    expect(html).toContain(`<meta name="twitter:image" content="${isDevTarget ? 'https://dev.base-xtech.com' : 'https://base-xtech.com'}/images/og/base-x-tech-og.png?v=2">`);
   });
 }
 

@@ -158,7 +158,7 @@ test('Complex buttons use the service-page system (white label + accent arrow sq
 
 test('OG image: absolute URL on every indexable page, served as a 1200×630 PNG under 300 KB', async ({ request }) => {
   // Dev builds point previews at the dev host (the file is not on prod before release).
-  const url = `${isDevTarget ? 'https://dev.base-xtech.com' : 'https://base-xtech.com'}/images/og/base-x-tech-og.png`;
+  const url = `${isDevTarget ? 'https://dev.base-xtech.com' : 'https://base-xtech.com'}/images/og/base-x-tech-og.png?v=2`;
   for (const p of [...indexPages, ...dePages]) {
     const { html } = await rawHtml(request, p.path);
     expect(html, p.path).toContain(`<meta property="og:image" content="${url}">`);
