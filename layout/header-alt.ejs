@@ -41,14 +41,11 @@
 					</ul>
 					<small class="lang-switcher-wrapper">
             <span>UTC: +2</span>
-            <%- include('layout/component/lang-switcher.ejs') %>
+            <%# A10: switcher = EN | DE only; these legacy EN pages have no German version, so no switcher. %>
           </small>
 				</div>
 			</div>
 			<div class="inner nav">
-        <div class="lang-switcher-mobile">
-          <%- include('layout/component/lang-switcher-mobile.ejs') %>
-        </div>
 				<a href="#" class="support" data-form-trigger>
 					<img loading="lazy" fetchpriority="low" src="/images/header-support-icon.svg" alt="help">
 				</a>

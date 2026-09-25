@@ -7,7 +7,7 @@
 %>
 <body class="v2 cx-page locale-en" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
-  <%- include('layout/v2/header.ejs') %>
+  <%- include('layout/v2/header.ejs', { langSwitch: true }) %>
   <%- include('layout/v2/nav.ejs') %>
   <%- include('layout/v2/form.ejs', { cxPage: true }) %>
 

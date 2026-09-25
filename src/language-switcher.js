@@ -1,6 +1,9 @@
 // Language switcher driven by the page's own hreflang links: a language is offered only where this page
 // has a version in it (e.g. DE exists only for /pages/complex-solutions/). Pages without any hreflang fall
 // back to the old /uk prefix rule.
+// A10 (2026-09-25): Ukrainian is not offered from EN/DE pages until /uk/ is redesigned (switcher = EN | DE).
+// /uk/ pages and their hreflang stay as they are; on a /uk/ page the switcher still leads back to EN.
+// With fewer than two languages left, the whole switcher (globe) is hidden.
 const PREFIX = { uk: '/uk', de: '/de' };
 const SUGGEST = {
   uk: 'Перейти до української версії?',
@@ -43,6 +46,7 @@ export class LanguageSwitcher {
         e.preventDefault();
         this.switchLanguage(link.dataset.lang);
       }));
+      if (this.links.filter((l) => !l.hidden).length < 2) (this.wrapper.closest('.v2-lang') || this.wrapper).hidden = true;
     }
 
     if (this.mobileWrapper) {
@@ -60,6 +64,7 @@ export class LanguageSwitcher {
       const active = this.mobileLinks.find((l) => l.classList.contains('is-active'));
       if (active && this.mobileToggleBtn) this.mobileToggleBtn.textContent = active.textContent;
       this.bindMobile();
+      if (this.mobileLinks.length < 2) (this.mobileWrapper.closest('.lang-switcher-mobile') || this.mobileWrapper).hidden = true;
     }
 
     this.suggestSavedLanguage();
@@ -85,6 +90,7 @@ export class LanguageSwitcher {
   }
 
   isAvailable(lang) {
+    if (lang === 'uk' && this.currentLang !== 'uk') return false; // A10
     return this.targetFor(lang) !== null;
   }
 

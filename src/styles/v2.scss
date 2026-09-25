@@ -98,7 +98,7 @@ body.v2 .v2-services-menu {
   &[hidden] { display: none; }
   a { padding: 10px 12px; border-radius: 4px; text-decoration: none; font-size: 15px; &:hover, &:focus-visible { background: #2c2d31; } }
 }
-body.v2 .v2-lang { position: relative; }
+body.v2 .v2-lang { position: relative; &[hidden] { display: none !important; } }
 body.v2 .v2-lang__menu {
   position: absolute; top: calc(100% + 8px); right: 0; padding: 10px 14px; border-radius: 8px; background: var(--v2-panel);
   &[hidden] { display: none; }

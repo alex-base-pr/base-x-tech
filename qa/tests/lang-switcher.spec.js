@@ -1,11 +1,11 @@
 // Language switcher shows a language only where this page has that version (hreflang), and links there.
+// A10 (2026-09-25): Ukrainian is not offered from EN/DE pages (switcher = EN | DE); where no German version
+// exists the globe is hidden at every width. /uk/ pages keep their own switcher back to EN.
 import { test, expect } from '@playwright/test';
 
 const cases = [
   { path: '/pages/complex-solutions/', visible: ['en', 'de'], active: 'en', go: { de: '/de/pages/complex-solutions/' } },
   { path: '/de/pages/complex-solutions/', visible: ['en', 'de'], active: 'de', go: { en: '/pages/complex-solutions/' } },
-  { path: '/pages/service/custom-shopify-integrations/', visible: ['en', 'uk'], active: 'en', go: { uk: '/uk/pages/service/custom-shopify-integrations/' } },
-  { path: '/', visible: ['en', 'uk'], active: 'en', go: { uk: '/uk/' } },
   { path: '/uk/', visible: ['en', 'uk'], active: 'uk', go: { en: '/' } },
 ];
 
@@ -30,6 +30,29 @@ for (const c of cases) {
     });
   }
 }
+
+// Pages without a German version: no globe / no switcher at all (desktop and mobile), and never a link to /uk/.
+const noSwitcher = ['/', '/pages/service/custom-shopify-integrations/', '/pages/privacy-policy/', '/pages/service/ppc-advertising/'];
+for (const path of noSwitcher) {
+  for (const width of [1440, 375]) {
+    test(`A10: no language switcher on ${path} @${width} @cross`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(path);
+      await page.waitForLoadState('load');
+      await expect(page.locator('[data-v2-lang]')).toHaveCount(await page.locator('body.v2').count() ? 1 : 0);
+      await expect(page.locator('[data-v2-lang]')).toBeHidden();
+      await expect(page.locator('.language-switcher [data-lang], .language-switcher-mobile [data-lang]').filter({ visible: true })).toHaveCount(0);
+      expect(await page.locator('.language-switcher [data-lang="uk"]:not([hidden])').count(), 'UK not offered').toBe(0);
+    });
+  }
+}
+
+test('A10: UK is not offered on Complex (EN | DE only) @cross', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/pages/complex-solutions/');
+  await expect(page.locator('.v2-lang .language-switcher [data-lang="uk"]')).toBeHidden();
+  await expect(page.locator('.v2-lang .language-switcher [data-lang="de"]')).toBeVisible();
+});
 
 test('saved UK preference does not redirect an EN-only page to a 404', async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem('preferredLang', 'uk'));

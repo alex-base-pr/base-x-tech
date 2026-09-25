@@ -21,3 +21,12 @@ for (const de of dePages) {
     expect(fs.readFileSync('dist/sitemap.xml', 'utf8')).toContain(`<loc>${host + de.path}</loc>`);
   });
 }
+
+// A10: Ukrainian is hidden from the switcher UI only; /uk/ pages and their hreflang in <head> stay as they are.
+test('A10: EN pages keep hreflang="uk" and /uk/ pages still render', async ({ request }) => {
+  for (const [en, uk] of [['/', '/uk/'], ['/pages/service/custom-shopify-integrations/', '/uk/pages/service/custom-shopify-integrations/']]) {
+    const { html } = await rawHtml(request, en);
+    expect(html, `${en} hreflang uk`).toContain(`<link rel="alternate" href="${host + uk}" hreflang="uk">`);
+    expect((await rawHtml(request, uk)).status).toBe(200);
+  }
+});
