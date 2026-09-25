@@ -26,8 +26,9 @@ test('Legal: DE footer links Impressum and Datenschutz and carries the company n
 test('Legal: /de/impressum/ answers 200 with the § 5 DDG data', async ({ request }) => {
   const { status, html } = await rawHtml(request, '/de/impressum/');
   expect(status).toBe(200);
-  for (const s of ['Base X Tech Ltd', '16134538', '27 Old Gloucester Street', 'WC1N 3AX', 'Oleksandr Rudenko', 'hello@base-xtech.com',
+  for (const s of ['Base X Tech Ltd', '16134538', '27 Old Gloucester Street', 'WC1N 3AX', 'Oleksandr Rudenko',
     'Companies House', '§ 18 Abs. 2 MStV', 'Verbraucherschlichtungsstelle']) expect(html).toContain(s);
+  expect(html).toMatch(/hello@base-xtech\.com|cdn-cgi\/l\/email-protection/); // Cloudflare Email Obfuscation on proxied hosts
   expect(html).not.toMatch(/USt-IdNr|VAT/);
 });
 
