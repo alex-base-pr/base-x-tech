@@ -34,3 +34,4 @@ States: `todo` · `in progress` · `review` (on dev, waiting for Alex) · `done`
 | Accessibility: names/alt on icon controls, Sortlist badge | NFR-002 | done | contrast + dot size = design-owned, reported only |
 | Bug: preload of missing bg-mob.jpg on every page | — | done | removed |
 | Round-2 review, no-input fixes (form, /de/ shell, testimonials, cards, related links, visual bugs, hreflang/OG/404, llms-full) | REQ-019/044 | review | [summary](review/2026-09-24-v2-summary.md) "Today, no input"; open: EUR bands, Mo App Store URL, 1200×630 OG card, UK-side hreflang is head-only |
+| Team answers 2026-09-25 (A1–A5, A10, A49–A56, M1–M8, M12, K1, K2, D3) | REQ-019 | review | [answers](review/2026-09-25-answers.md); DE strings for Alexander: [de-for-alexander](review/2026-09-25-de-for-alexander.md) (K3); still open: Alexander's photo + LinkedIn, Impressum data (A9), Mo App Store URL, M4 descriptions |

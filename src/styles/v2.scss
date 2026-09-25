@@ -194,7 +194,7 @@ body.v2 .v2-project {
   }
   .v2-project__title { font-size: 2.25rem; line-height: 1.04; letter-spacing: -.02em; font-weight: 300; }
   .v2-project__text { color: #bdbdbd; }
-  .v2-project__case { align-self: flex-start; margin-right: 70px; font-size: 14px; color: #d0d0d0; text-underline-offset: 3px; &:hover { color: #fff; } } // A56: secondary text link
+  .v2-project__case { align-self: flex-start; margin-right: 70px; font-size: 14px; color: #d0d0d0; text-decoration: underline; text-underline-offset: 3px; &:hover { color: #fff; } } // A56: secondary text link
   .v2-project__tags { margin-top: auto; display: grid; gap: .5rem; font-size: 14px; color: #d0d0d0;
     li::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: #6d6d6d; margin-right: .6rem; vertical-align: middle; }
   }
