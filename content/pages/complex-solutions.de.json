@@ -133,7 +133,8 @@
   },
   "case": {
     "label": "In der Praxis bewährt",
-    "client": "Deutscher Feinkost-Fachhändler",
+    "client": "Vom Einfachen das Gute",
+    "descriptor": "Deutscher Feinkost-Fachhändler",
     "tags": [
       "Shopify POS",
       "Mettler-Toledo-Waagen",

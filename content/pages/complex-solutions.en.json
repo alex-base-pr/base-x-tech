@@ -133,7 +133,8 @@
   },
   "case": {
     "label": "Proven in practice",
-    "client": "German specialty food retailer",
+    "client": "Vom Einfachen das Gute",
+    "descriptor": "German specialty food retailer",
     "tags": [
       "Shopify POS",
       "Mettler Toledo scales",
