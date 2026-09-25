@@ -63,7 +63,7 @@ body.v2 .v2-form {
     font: 300 14px/1.29 'TWKEverettV2', sans-serif;
     &::placeholder { color: #a8a8a8; opacity: 1; }
     &:focus { outline: none; border-color: #fff; }
-    &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 1px; }
+    &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 2px; box-shadow: 0 0 0 2px var(--v2-on-accent); }
   }
   select {
     appearance: none; cursor: pointer; padding-right: 44px;
@@ -83,7 +83,7 @@ body.v2 .v2-form {
     display: flex; align-items: center; justify-content: center; height: 42px; padding: 0 16px;
     border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; font-size: 14px; color: #d1d1d1; white-space: nowrap;
   }
-  .v2-form__budget input:checked + span { background: var(--v2-accent); border-color: var(--v2-accent); color: #fff; }
+  .v2-form__budget input:checked + span { background: var(--v2-accent); border-color: var(--v2-accent); color: var(--v2-on-accent); font-weight: 500; }
   .v2-form__budget input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
 
   .v2-btn--wide { display: flex; width: 100%; border: 0; padding: 0; background: none; cursor: pointer; gap: 4px; margin-top: 12px; font: inherit;

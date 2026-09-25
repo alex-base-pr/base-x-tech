@@ -38,3 +38,36 @@ test('Legal: privacy policy (EN + DE) names the controller with registered addre
     for (const s of ['Base X Tech Ltd', '27 Old Gloucester Street', 'WC1N 3AX', '16134538', 'mailto:hello@base-xtech.com']) expect(html, path).toContain(s);
   }
 });
+
+// Accent = brand #B5DC4A; anything on the accent fill is dark #1D1E20 (white on #B5DC4A ≈ 1.6:1).
+const ACCENT = 'rgb(181, 220, 74)';
+const ON_ACCENT = 'rgb(29, 30, 32)';
+test('Accent: tokens and on-accent colour @cross', async ({ page }) => {
+  await page.goto('/pages/service/custom-shopify-integrations/');
+  const t = await page.evaluate(() => {
+    const cs = getComputedStyle(document.body);
+    const pick = (sel) => { const el = document.querySelector(sel); if (!el) return null; const s = getComputedStyle(el); return { bg: s.backgroundColor, color: s.color }; };
+    return {
+      accent: cs.getPropertyValue('--v2-accent').trim().toLowerCase(),
+      on: cs.getPropertyValue('--v2-on-accent').trim().toLowerCase(),
+      pill: pick('.v2-pill--accent'),
+      arrow: pick('.v2-btn__arrow'),
+    };
+  });
+  expect(t.accent).toBe('#b5dc4a');
+  expect(t.on).toBe('#1d1e20');
+  for (const k of ['pill', 'arrow']) expect(t[k], k).toEqual({ bg: ACCENT, color: ON_ACCENT });
+  // v2 rules only: the legacy main.scss $primary (#81A13F) still serves the untouched /uk/ and legacy pages.
+  const css = await page.evaluate(() => [...document.styleSheets].flatMap((s) => { try { return [...s.cssRules].map((r) => r.cssText); } catch { return []; } })
+    .filter((r) => /body\.v2|--v2-/.test(r)).join('\n'));
+  expect(css.toLowerCase(), 'old accent gone from v2 styles').not.toMatch(/#81a13f|rgb\(129, 161, 63\)/);
+});
+
+test('Accent: selected budget chip is dark on accent', async ({ page }) => {
+  await page.goto('/pages/service/custom-shopify-integrations/');
+  await page.locator('[data-form-trigger]').first().click();
+  const chip = page.locator('.v2-form__budget label').nth(1);
+  await chip.click();
+  const s = await chip.locator('span').evaluate((el) => ({ bg: getComputedStyle(el).backgroundColor, color: getComputedStyle(el).color }));
+  expect(s).toEqual({ bg: ACCENT, color: ON_ACCENT });
+});

@@ -30,7 +30,12 @@ body.v2 {
   --v2-panel-2: #101113;
   --v2-line: rgba(255, 255, 255, .14);
   --v2-line-dark: rgba(0, 0, 0, .14);
-  --v2-accent: #81a13f;
+  // Brand accent (owner decision 2026-09-25). Anything placed ON the accent fill uses --v2-on-accent:
+  // #1D1E20 on #B5DC4A ≈ 10.6:1, white would be ≈ 1.6:1. Focus rings pair the accent with a dark inner ring
+  // so they stay visible on dark and light sections alike.
+  --v2-accent: #B5DC4A;
+  --v2-accent-hover: #c8e777;
+  --v2-on-accent: #1D1E20;
   --v2-rail: 80px;
   --v2-pad: 24px;
 
@@ -88,7 +93,7 @@ body.v2 .v2-pill {
   transition: background .2s;
   &:hover, &:focus-visible, &[aria-expanded="true"] { background: #3a3b3f; }
   &--icon { width: 32px; padding: 0; }
-  &--accent { background: var(--v2-accent); color: #fff; &:hover { background: #97b24f; } }
+  &--accent { background: var(--v2-accent); color: var(--v2-on-accent); font-weight: 500; &:hover, &:focus-visible { background: var(--v2-accent-hover); } }
 }
 
 body.v2 .v2-nav-item--services { position: relative; }
@@ -121,7 +126,7 @@ body.v2 .v2-rail {
 body.v2 .v2-btn {
   display: inline-flex; gap: 4px; text-decoration: none; margin-top: 2rem;
   .v2-btn__label { display: inline-flex; align-items: center; height: 42px; padding: 0 16px; border-radius: 4px; background: #fff; color: #0a0a0a; font-weight: 500; font-size: 16px; }
-  .v2-btn__arrow { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: #fff; transition: transform .2s; }
+  .v2-btn__arrow { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: var(--v2-on-accent); transition: transform .2s; }
   &:hover .v2-btn__arrow, &:focus-visible .v2-btn__arrow { transform: translate(2px, 2px); }
 }
 body.v2 .v2-light .v2-btn .v2-btn__label { background: #fff; box-shadow: inset 0 0 0 1px var(--v2-line-dark); }
@@ -249,7 +254,7 @@ body.v2 .v2-process__grid { display: grid; gap: 10px; @include desk { grid-templ
 body.v2 .v2-process__card {
   display: flex; flex-direction: column; gap: .5rem; min-height: 240px; padding: 24px; border-radius: 8px; background: var(--v2-panel);
   @include desk { min-height: 310px; }
-  .v2-process__icon { width: 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; }
+  .v2-process__icon { width: 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: var(--v2-on-accent); display: inline-flex; align-items: center; justify-content: center; font-size: 14px; }
   .v2-process__title { margin-top: auto; font-size: 1.5rem; font-weight: 500; }
   .v2-process__desc { color: #bdbdbd; font-size: 14px; line-height: 1.4; max-width: 430px; }
 }
@@ -259,7 +264,7 @@ body.v2 .v2-stats { text-align: center; }
 body.v2 .v2-stats__title { font-size: clamp(2.5rem, 4.5vw, 4rem); letter-spacing: -.03em; color: #9a9a9a; }
 body.v2 .v2-stats__list {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 1.5rem;
-  li { width: 180px; height: 122px; border-radius: 6px; background: var(--v2-accent); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .4rem;
+  li { width: 180px; height: 122px; border-radius: 6px; background: var(--v2-accent); color: var(--v2-on-accent); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .4rem;
     strong { font-size: 2.5rem; font-weight: 500; line-height: 1; }
     span { font-size: 15px; }
   }
@@ -287,7 +292,7 @@ body.v2 .v2-faq__item {
     &::before, &::after { content: ''; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: currentColor; transform: translate(-50%, -50%); }
     &::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .2s; }
   }
-  &[open] .v2-faq__toggle { background: var(--v2-accent); border-color: var(--v2-accent); color: #fff; &::before { transform: translate(-50%, -50%) rotate(45deg); } &::after { transform: translate(-50%, -50%) rotate(135deg); } }
+  &[open] .v2-faq__toggle { background: var(--v2-accent); border-color: var(--v2-accent); color: var(--v2-on-accent); &::before { transform: translate(-50%, -50%) rotate(45deg); } &::after { transform: translate(-50%, -50%) rotate(135deg); } }
 }
 
 // related services: a slim row of links under the FAQ (service pages and Complex)
