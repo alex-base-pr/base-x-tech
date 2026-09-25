@@ -124,6 +124,17 @@ test('Apps: Mo: Story Slider links to its App Store listing like Nova Poshta Con
   }
 });
 
+test('Complex buttons use the service-page system (white label + accent arrow square)', async ({ page }) => {
+  await page.goto('/pages/complex-solutions/');
+  const btns = await page.locator('.cx-btn .v2-btn').evaluateAll((els) => els.map((el) => {
+    const label = getComputedStyle(el.querySelector('.v2-btn__label'));
+    const arrow = getComputedStyle(el.querySelector('.v2-btn__arrow'));
+    return { labelBg: label.backgroundColor, radius: label.borderRadius, arrowShown: arrow.display !== 'none', arrowBg: arrow.backgroundColor };
+  }));
+  expect(btns.length).toBeGreaterThanOrEqual(4);
+  for (const b of btns) expect(b).toEqual({ labelBg: 'rgb(255, 255, 255)', radius: '4px', arrowShown: true, arrowBg: ACCENT });
+});
+
 test('Complex case: end client named with descriptor', async ({ request }) => {
   for (const [path, descriptor] of [['/pages/complex-solutions/', 'German specialty food retailer'], ['/de/pages/complex-solutions/', 'Deutscher Feinkost-Fachhändler']]) {
     const { html } = await rawHtml(request, path);

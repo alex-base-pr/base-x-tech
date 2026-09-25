@@ -64,16 +64,12 @@ body.v2.cx-page .cx {
     .cx-head__lead { max-width: 400px; margin-top: -8px; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-text); }
   }
 
-  // Figma buttons are pills; the v2 arrow square is dropped here to match the frame.
+  // Buttons = the service-page system (layout/v2/button.ejs: white label + accent arrow square), owner 2026-09-25 (D2).
+  // .cx-btn only centres them; --dark sits on light sections and gets the hairline the v2 light sections use.
   .cx-btn {
     display: flex; justify-content: center;
     .v2-btn { margin-top: 0; }
-    .v2-btn__arrow { display: none; }
-    .v2-btn__label { height: 53px; padding: 0 32px; border-radius: 999px; font-family: var(--cx-head); font-weight: 400; font-size: 18px; letter-spacing: -.02em; box-shadow: none; transition: background .2s, color .2s; }
-    &--light .v2-btn__label { background: #fff; color: var(--cx-ink); }
-    &--light .v2-btn:hover .v2-btn__label, &--light .v2-btn:focus-visible .v2-btn__label { background: #e6e6e6; }
-    &--dark .v2-btn__label { background: #000; color: #fff; }
-    &--dark .v2-btn:hover .v2-btn__label, &--dark .v2-btn:focus-visible .v2-btn__label { background: var(--cx-ink); }
+    &--dark .v2-btn__label { box-shadow: inset 0 0 0 1px var(--v2-line-dark); }
   }
 
   .cx-section { padding: 4.5rem var(--cx-pad); background: var(--cx-white); @include desk { padding: 7.5rem var(--cx-pad); } }
