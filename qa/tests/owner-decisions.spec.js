@@ -35,7 +35,9 @@ test('Legal: privacy policy (EN + DE) names the controller with registered addre
   for (const path of ['/pages/privacy-policy/', '/de/datenschutz/']) {
     const { status, html } = await rawHtml(request, path);
     expect(status).toBe(200);
-    for (const s of ['Base X Tech Ltd', '27 Old Gloucester Street', 'WC1N 3AX', '16134538', 'mailto:hello@base-xtech.com']) expect(html, path).toContain(s);
+    for (const s of ['Base X Tech Ltd', '27 Old Gloucester Street', 'WC1N 3AX', '16134538']) expect(html, path).toContain(s);
+    // Cloudflare Email Obfuscation rewrites mailto links on proxied hosts (dev, prod) to /cdn-cgi/l/email-protection.
+    expect(html, path).toMatch(/mailto:hello@base-xtech\.com|cdn-cgi\/l\/email-protection/);
   }
 });
 
