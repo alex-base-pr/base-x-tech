@@ -116,6 +116,14 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
   }
 });
 
+test('Apps: Mo: Story Slider links to its App Store listing like Nova Poshta Connect', async ({ request }) => {
+  const { html } = await rawHtml(request, '/pages/service/custom-shopify-app-development/');
+  const card = (title) => (html.match(new RegExp(`<article class="v2-project">(?:(?!</article>)[\\s\\S])*?${title}[\\s\\S]*?</article>`)) || [''])[0];
+  for (const [title, href] of [['Mo: Story Slider Navigation', 'https://apps.shopify.com/mo-story-slider-navigation'], ['Nova Poshta Connect', 'https://apps.shopify.com/nova-poshta-connect']]) {
+    expect(card(title), title).toContain(`<a class="v2-round-link" href="${href}" target="_blank" rel="noopener" aria-label="View on the Shopify App Store">`);
+  }
+});
+
 test('Complex case: end client named with descriptor', async ({ request }) => {
   for (const [path, descriptor] of [['/pages/complex-solutions/', 'German specialty food retailer'], ['/de/pages/complex-solutions/', 'Deutscher Feinkost-Fachhändler']]) {
     const { html } = await rawHtml(request, path);

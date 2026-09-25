@@ -90,7 +90,8 @@
           "Public App",
           "Storefront UX"
         ],
-        "link": null,
+        "link": "https://apps.shopify.com/mo-story-slider-navigation",
+        "linkLabel": "View on the Shopify App Store",
         "image": "/images/v2/shopify-apps-projects-4-image-5955.webp",
         "imageFit": "contain"
       }
