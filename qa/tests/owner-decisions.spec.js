@@ -87,6 +87,35 @@ test('Complex partner: in-person line, no photo, Alexander still named', async (
   }
 });
 
+test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with the service preselected', async ({ page, request }) => {
+  const cases = [
+    ['/pages/service/custom-shopify-integrations/', 'From $1,600', 'We map your systems', 'Custom Shopify Integrations'],
+    ['/pages/service/shopify-migration-service/', 'From $1,600', 'Migration scoping:', 'Shopify Migration'],
+    ['/pages/complex-solutions/', 'From €1,500', 'We map your systems', 'Complex Solutions (ERP, POS, middleware)'],
+    ['/de/pages/complex-solutions/', 'Ab 1.500 €', 'Wir erfassen Ihre Systeme', 'Complex Solutions (ERP, POS, middleware)'],
+  ];
+  for (const [path, price, text, service] of cases) {
+    const { html } = await rawHtml(request, path);
+    const offer = html.indexOf('class="v2-section v2-dark v2-offer"');
+    const faq = html.search(/class="(v2-section v2-light v2-faq|cx-section cx-faq)"/);
+    expect(offer, `${path}: offer present`).toBeGreaterThan(0);
+    expect(offer, `${path}: offer before FAQ`).toBeLessThan(faq);
+    const block = html.slice(offer, faq);
+    expect(block).toContain(`<p class="v2-offer__amount">${price}</p>`);
+    expect(block).toContain(text);
+    expect(block).toMatch(/Final price confirmed after a short call\.|Der endgültige Preis wird nach einem kurzen Gespräch bestätigt\./);
+    expect(block).toContain('data-form-trigger');
+    expect(block, 'no hourly rate').not.toMatch(/\/\s?h(ou)?r|per hour|Stunde/i);
+    await page.goto(path);
+    await page.locator('.v2-offer [data-form-trigger]').click();
+    await expect(page.locator('.v2-modal')).toHaveClass(/active/);
+    await expect(page.locator('.v2-modal select[name="service"]')).toHaveValue(service);
+  }
+  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/']) {
+    expect((await rawHtml(request, path)).html, `${path}: no offer`).not.toContain('v2-offer');
+  }
+});
+
 test('Complex case: end client named with descriptor', async ({ request }) => {
   for (const [path, descriptor] of [['/pages/complex-solutions/', 'German specialty food retailer'], ['/de/pages/complex-solutions/', 'Deutscher Feinkost-Fachhändler']]) {
     const { html } = await rawHtml(request, path);

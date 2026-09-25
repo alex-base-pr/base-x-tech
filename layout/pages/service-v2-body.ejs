@@ -137,6 +137,8 @@
       <% if (c.stats.closing) { %><p class="v2-stats__closing"><%= c.stats.closing %></p><% } %>
     </section>
 
+    <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
+
     <section class="v2-section v2-light v2-faq" data-v2-section>
       <div class="v2-faq__head">
         <p class="v2-tag v2-tag--light"><%= c.faq.label %></p>

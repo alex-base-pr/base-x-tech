@@ -273,6 +273,8 @@
       <div class="cx-btn cx-btn--dark"><%- btn(c.process.button) %></div>
     </section>
 
+    <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
+
     <%# FAQ — the page's own questions (M2); data-faq-q/a feed the FAQPage schema like on the service pages. %>
     <section class="cx-section cx-faq" id="faq" data-v2-section>
       <header class="cx-head">

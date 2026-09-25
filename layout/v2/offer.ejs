@@ -1,0 +1,17 @@
+<%# Paid entry offer (owner, 2026-09-25): fixed-price audit / migration scoping, placed before the FAQ.
+    Copy: content/pages/<page>.<lang>.json → offer. The CTA opens the contact modal; the page's <main data-service>
+    preselects the service. No hourly rate on the site. %>
+<section class="v2-section v2-dark v2-offer" id="fixed-price-audit" data-v2-section>
+  <div class="v2-offer__card">
+    <div class="v2-offer__text">
+      <p class="v2-tag"><%= offer.label %></p>
+      <h2 class="v2-h-m"><%= offer.title %></h2>
+      <p class="v2-offer__body"><%= offer.text %></p>
+    </div>
+    <div class="v2-offer__price">
+      <p class="v2-offer__amount"><%= offer.price %></p>
+      <p class="v2-offer__note"><%= offer.note %></p>
+      <%- include('layout/v2/button.ejs', { text: offer.button }) %>
+    </div>
+  </div>
+</section>
