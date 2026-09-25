@@ -27,8 +27,8 @@ for (const de of dePages) {
   });
 }
 
-// A10: Ukrainian is hidden from the switcher UI only; /uk/ pages and their hreflang in <head> stay as they are.
-test('A10: EN pages keep hreflang="uk" and /uk/ pages still render', async ({ request }) => {
+// EN pages keep their Ukrainian counterparts (hreflang + switcher since the owner reversed A10 on 2026-09-25).
+test('EN pages keep hreflang="uk" and /uk/ pages still render', async ({ request }) => {
   for (const [en, uk] of [['/', '/uk/'], ['/pages/service/custom-shopify-integrations/', '/uk/pages/service/custom-shopify-integrations/']]) {
     const { html } = await rawHtml(request, en);
     expect(html, `${en} hreflang uk`).toContain(`<link rel="alternate" href="${host + uk}" hreflang="uk">`);

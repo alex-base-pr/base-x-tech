@@ -1,8 +1,8 @@
 <%# Design v2 header (Figma "Service Page"): logo in the rail, pill navigation, language globe, CTA.
     Strings: content/pages/shell.<lang>.json (pages pass `lang`; EN is the default). %>
 <% const sh = content.shell[typeof lang !== 'undefined' && content.shell[lang] ? lang : 'en'];
-   // A10: the switcher is EN | DE only, so the globe shows only on pages that have a German version (pass { langSwitch: true }). %>
-<% const showLang = typeof langSwitch !== 'undefined' && langSwitch; %>
+   // Language globe: rendered hidden; src/language-switcher.js shows it when this page has another language version
+   // (hreflang: EN | DE | UK, owner 2026-09-25). %>
 <header class="v2-header">
   <a href="/" class="v2-header__logo" aria-label="<%= sh.homeLabel %>">
     <svg width="44" height="25" viewBox="0 0 112 64" aria-hidden="true"><path d="M79.9898 11.6328L91.6225 0H112V20.3709L100.367 32.0038L112 43.6367V64.0004H91.6226L79.9898 52.3675L68.3571 64.0004H48.0006V43.6298L59.6265 32.0038L48.0006 20.3777V0H68.3572L79.9898 11.6328Z" fill="currentColor"/><path d="M0 7.50943e-06H28.0016L47.9997 19.9983V42.0023L47.9979 42.0041V20.3596L36.3616 31.996L47.1837 42.8183L26.0019 64.0004H0V43.6238L11.6276 31.996L0 20.3683V7.50943e-06Z" fill="currentColor"/></svg>
@@ -21,7 +21,7 @@
     <a class="v2-pill" href="#contact" data-form-trigger><%= sh.nav.contact %></a>
   </nav>
   <div class="v2-header__actions">
-    <div class="v2-lang"<%- showLang ? '' : ' hidden' %>>
+    <div class="v2-lang" hidden>
       <button type="button" class="v2-pill v2-pill--icon" aria-label="<%= sh.nav.language %>" data-v2-lang>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5Z"/></svg>
       </button>

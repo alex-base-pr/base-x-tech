@@ -1,9 +1,9 @@
 // Language switcher driven by the page's own hreflang links: a language is offered only where this page
 // has a version in it (e.g. DE exists only for /pages/complex-solutions/). Pages without any hreflang fall
 // back to the old /uk prefix rule.
-// A10 (2026-09-25): Ukrainian is not offered from EN/DE pages until /uk/ is redesigned (switcher = EN | DE).
-// /uk/ pages and their hreflang stay as they are; on a /uk/ page the switcher still leads back to EN.
-// With fewer than two languages left, the whole switcher (globe) is hidden.
+// Owner 2026-09-25 (reverses A10): switcher = EN | DE | UK again, each only where this page has that version.
+// The v2 globe is rendered hidden and shown here once at least two languages are available; German pages
+// and v2 pages without hreflang (Impressum, 404) never fall back to the legacy /uk prefix rule.
 const PREFIX = { uk: '/uk', de: '/de' };
 const SUGGEST = {
   uk: 'Перейти до української версії?',
@@ -46,7 +46,7 @@ export class LanguageSwitcher {
         e.preventDefault();
         this.switchLanguage(link.dataset.lang);
       }));
-      if (this.links.filter((l) => !l.hidden).length < 2) (this.wrapper.closest('.v2-lang') || this.wrapper).hidden = true;
+      (this.wrapper.closest('.v2-lang') || this.wrapper).hidden = this.links.filter((l) => !l.hidden).length < 2;
     }
 
     if (this.mobileWrapper) {
@@ -82,6 +82,8 @@ export class LanguageSwitcher {
   targetFor(lang) {
     if (lang === this.currentLang) return location.pathname;
     if (this.hasAlternates) return this.alternates[lang] || null;
+    // v2 pages always declare their versions via hreflang; none = single-language page (Impressum, 404).
+    if (document.body.classList.contains('v2') || this.currentLang === 'de') return null;
     // Legacy pages without hreflang: EN ↔ UK by prefix only.
     const path = location.pathname;
     if (lang === 'uk') return path.startsWith('/uk') ? path : ('/uk' + path).replace(/\/{2,}/g, '/');
@@ -90,7 +92,6 @@ export class LanguageSwitcher {
   }
 
   isAvailable(lang) {
-    if (lang === 'uk' && this.currentLang !== 'uk') return false; // A10
     return this.targetFor(lang) !== null;
   }
 
