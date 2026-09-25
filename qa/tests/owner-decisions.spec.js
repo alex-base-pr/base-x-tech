@@ -1,6 +1,6 @@
 // Owner decisions, round 3 (2026-09-25): legal entity, accent colour, Complex partner/case, paid audit, OG image, Mo link.
 import { test, expect } from '@playwright/test';
-import { rawHtml } from '../site-map.js';
+import { rawHtml, indexPages, dePages } from '../site-map.js';
 
 const LEGAL_EN = 'Base X Tech Ltd · Company no. 16134538 · 27 Old Gloucester Street, London WC1N 3AX, UK';
 
@@ -133,6 +133,24 @@ test('Complex buttons use the service-page system (white label + accent arrow sq
   }));
   expect(btns.length).toBeGreaterThanOrEqual(4);
   for (const b of btns) expect(b).toEqual({ labelBg: 'rgb(255, 255, 255)', radius: '4px', arrowShown: true, arrowBg: ACCENT });
+});
+
+test('OG image: absolute URL on every indexable page, served as a 1200×630 PNG under 300 KB', async ({ request }) => {
+  const url = 'https://base-xtech.com/images/og/base-x-tech-og.png';
+  for (const p of [...indexPages, ...dePages]) {
+    const { html } = await rawHtml(request, p.path);
+    expect(html, p.path).toContain(`<meta property="og:image" content="${url}">`);
+    expect(html, p.path).toContain('<meta property="og:image:width" content="1200">');
+    expect(html, p.path).toContain('<meta property="og:image:height" content="630">');
+    expect(html, p.path).toContain(`<meta name="twitter:image" content="${url}">`);
+    expect(html, p.path).toContain('<meta name="twitter:card" content="summary_large_image">');
+  }
+  const res = await request.get('/images/og/base-x-tech-og.png');
+  expect(res.status()).toBe(200);
+  const png = await res.body();
+  expect(png.subarray(1, 4).toString()).toBe('PNG');
+  expect([png.readUInt32BE(16), png.readUInt32BE(20)]).toEqual([1200, 630]);
+  expect(png.length).toBeLessThan(300 * 1024);
 });
 
 test('Complex case: end client named with descriptor', async ({ request }) => {

@@ -88,7 +88,7 @@ const pageTitle = (html) => ((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1
 function socialTags({ html, lang, canonical, cluster }) {
   const title = attr(pageTitle(html));
   const description = attr(metaDescription(html));
-  const image = `${host}/favicon/android-chrome-512x512.png`; // brand mark; swap for a 1200×630 card when design has one
+  const image = `${host}/images/og/base-x-tech-og.png`; // 1200×630 share card (public/images/og/)
   const tags = [
     '<meta property="og:type" content="website">',
     '<meta property="og:site_name" content="Base X Tech">',
@@ -100,10 +100,11 @@ function socialTags({ html, lang, canonical, cluster }) {
   if (cluster) cluster.langs.filter((l) => l !== lang).forEach((l) => tags.push(`<meta property="og:locale:alternate" content="${OG_LOCALE[l]}">`));
   tags.push(
     `<meta property="og:image" content="${image}">`,
-    '<meta property="og:image:width" content="512">',
-    '<meta property="og:image:height" content="512">',
-    '<meta property="og:image:alt" content="Base X Tech logo">',
-    '<meta name="twitter:card" content="summary">',
+    '<meta property="og:image:width" content="1200">',
+    '<meta property="og:image:height" content="630">',
+    '<meta property="og:image:type" content="image/png">',
+    '<meta property="og:image:alt" content="Base X Tech: Shopify development, custom apps and integrations">',
+    '<meta name="twitter:card" content="summary_large_image">',
     `<meta name="twitter:title" content="${title}">`,
     `<meta name="twitter:description" content="${description}">`,
     `<meta name="twitter:image" content="${image}">`,
