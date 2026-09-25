@@ -1,25 +1,27 @@
 // Owner decisions, round 3 (2026-09-25): legal entity, accent colour, Complex partner/case, paid audit, OG image, Mo link.
 import { test, expect } from '@playwright/test';
-import { rawHtml, indexPages, dePages } from '../site-map.js';
+import { rawHtml, indexPages, dePages, isDevTarget } from '../site-map.js';
 
-const LEGAL_EN = 'Base X Tech Ltd · Company no. 16134538 · 27 Old Gloucester Street, London WC1N 3AX, UK';
-
-test('Legal: EN footer carries the company line next to the team line', async ({ request }) => {
-  for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/pages/complex-solutions/', '/pages/privacy-policy/']) {
+test('Legal: footer stays simple — no address block; entity details live on the legal pages', async ({ request }) => {
+  for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/pages/complex-solutions/']) {
     const { html } = await rawHtml(request, path);
-    expect(html, path).toContain(`<p class="v2-footer__entity">${LEGAL_EN}</p>`);
-    expect(html, path).toContain('v2-footer__company');
-    expect(html, `${path}: no DE legal links in EN footer`).not.toContain('href="/de/impressum/"');
+    const footer = html.slice(html.indexOf('<footer class="v2-footer"'));
+    expect(footer, path).toContain('Base X Tech Ltd.');
+    expect(footer, path).not.toContain('Old Gloucester');
+    expect(footer, `${path}: no DE legal links in EN footer`).not.toContain('href="/de/impressum/"');
+  }
+  for (const path of ['/pages/privacy-policy/', '/pages/terms-and-conditions/']) {
+    const { html } = await rawHtml(request, path);
+    for (const s of ['Base X Tech Ltd', '16134538', '27 Old Gloucester Street']) expect(html, path).toContain(s);
   }
 });
 
-test('Legal: DE footer links Impressum and Datenschutz and carries the company number', async ({ request }) => {
+test('Legal: DE footer links Impressum and Datenschutz', async ({ request }) => {
   for (const path of ['/de/pages/complex-solutions/', '/de/impressum/', '/de/datenschutz/']) {
     const { html } = await rawHtml(request, path);
     const footer = html.slice(html.indexOf('<footer class="v2-footer"'));
     expect(footer, path).toContain('href="/de/impressum/"');
     expect(footer, path).toContain('href="/de/datenschutz/"');
-    expect(footer, path).toContain('16134538');
   }
 });
 
@@ -85,7 +87,7 @@ test('Complex partner: in-person line, approved photo, Alexander named, no place
     const partner = (html.match(/<section class="cx-section cx-partner[\s\S]*?<\/section>/) || [''])[0];
     expect(partner, path).toContain(`<p class="cx-partner__inperson">${line}</p>`);
     expect(partner, path).toContain('<strong>Alexander Karl</strong>');
-    expect(partner, path).toMatch(new RegExp(`<img loading="lazy" src="/images/v2/alexander-karl\\.webp" width="800" height="1000" alt="${alt}">`));
+    expect(partner, path).toMatch(new RegExp(`<img loading="lazy" src="/images/v2/alexander-karl\\.webp" width="1335" height="1257" alt="${alt}">`));
     expect(partner, path).not.toMatch(/placeholder|Platzhalter/i);
     expect(html, path).not.toMatch(/Expertise vor Ort|on-site/i);
   }
@@ -155,7 +157,8 @@ test('Complex buttons use the service-page system (white label + accent arrow sq
 });
 
 test('OG image: absolute URL on every indexable page, served as a 1200×630 PNG under 300 KB', async ({ request }) => {
-  const url = 'https://base-xtech.com/images/og/base-x-tech-og.png';
+  // Dev builds point previews at the dev host (the file is not on prod before release).
+  const url = `${isDevTarget ? 'https://dev.base-xtech.com' : 'https://base-xtech.com'}/images/og/base-x-tech-og.png`;
   for (const p of [...indexPages, ...dePages]) {
     const { html } = await rawHtml(request, p.path);
     expect(html, p.path).toContain(`<meta property="og:image" content="${url}">`);

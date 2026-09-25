@@ -38,14 +38,14 @@ test('A4: success text promises a reply within 1 working day (EN, DE)', async ({
 });
 
 test('A1: company line in the footer; controller named in the privacy policy', async ({ request }) => {
-  expect((await rawHtml(request, '/')).html).toContain('Base X Tech Ltd, registered in London, UK. Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.');
+  expect((await rawHtml(request, '/')).html).toContain('Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.'); // moved from the footer to the team block
   expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Base X Tech Ltd, eingetragen in London, UK.');
   expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
 test('A2: "Who you\'ll talk to" names the team; Alexander Karl first on Complex', async ({ request }) => {
   const names = (html) => [...(html.match(/<aside class="v2-team"[\s\S]*?<\/aside>/) || [''])[0].matchAll(/<strong>([^<]+)<\/strong>/g)].map((m) => m[1]);
-  expect(names((await rawHtml(request, '/pages/shopify-development/')).html)).toEqual(['Sofiia Zabrodska', 'Vadym Hula', 'Vadym-Marko Hruden']);
+  expect(names((await rawHtml(request, '/pages/shopify-development/')).html)).toEqual(['Sofiia Zabrodska', 'Vadym-Marko Hruden']);
   for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) {
     expect(names((await rawHtml(request, p)).html)[0], p).toBe('Alexander Karl');
   }

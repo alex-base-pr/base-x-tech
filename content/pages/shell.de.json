@@ -17,22 +17,71 @@
     "cta": "Kontakt aufnehmen"
   },
   "servicesMenu": [
-    { "name": "Shopify-Entwicklung", "href": "/pages/shopify-development/" },
-    { "name": "Individuelle Shopify-Apps", "href": "/pages/service/custom-shopify-app-development/" },
-    { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/" },
-    { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/" },
-    { "name": "Webdesign", "href": "/pages/service/custom-web-design-services/" },
-    { "name": "Conversion-Optimierung (CRO)", "href": "/pages/service/conversion-rate-optimization/" },
-    { "name": "Komplexe Systeme (DACH)", "href": "/de/pages/complex-solutions/" }
+    {
+      "name": "Shopify-Entwicklung",
+      "href": "/pages/shopify-development/"
+    },
+    {
+      "name": "Individuelle Shopify-Apps",
+      "href": "/pages/service/custom-shopify-app-development/"
+    },
+    {
+      "name": "Shopify-Integrationen",
+      "href": "/pages/service/custom-shopify-integrations/"
+    },
+    {
+      "name": "Shopify-Migration",
+      "href": "/pages/service/shopify-migration-service/"
+    },
+    {
+      "name": "Webdesign",
+      "href": "/pages/service/custom-web-design-services/"
+    },
+    {
+      "name": "Conversion-Optimierung (CRO)",
+      "href": "/pages/service/conversion-rate-optimization/"
+    },
+    {
+      "name": "Komplexe Systeme (DACH)",
+      "href": "/de/pages/complex-solutions/"
+    }
   ],
   "mobileServices": [
-    { "name": "Shopify-Entwicklung", "href": "/pages/shopify-development/", "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp" },
-    { "name": "Shopify-Integrationen", "href": "/pages/service/custom-shopify-integrations/", "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp" },
-    { "name": "Shopify-Migration", "href": "/pages/service/shopify-migration-service/", "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp" },
-    { "name": "Shopify-Apps", "href": "/pages/service/custom-shopify-app-development/", "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp" },
-    { "name": "CRO", "href": "/pages/service/conversion-rate-optimization/", "image": "/images/v2/shopify-development-capabilities-2-image-56.webp" },
-    { "name": "Webdesign", "href": "/pages/service/custom-web-design-services/", "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp" },
-    { "name": "Komplexe Systeme (DACH)", "href": "/de/pages/complex-solutions/", "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp" }
+    {
+      "name": "Shopify-Entwicklung",
+      "href": "/pages/shopify-development/",
+      "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+    },
+    {
+      "name": "Shopify-Integrationen",
+      "href": "/pages/service/custom-shopify-integrations/",
+      "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+    },
+    {
+      "name": "Shopify-Migration",
+      "href": "/pages/service/shopify-migration-service/",
+      "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+    },
+    {
+      "name": "Shopify-Apps",
+      "href": "/pages/service/custom-shopify-app-development/",
+      "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp"
+    },
+    {
+      "name": "CRO",
+      "href": "/pages/service/conversion-rate-optimization/",
+      "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+    },
+    {
+      "name": "Webdesign",
+      "href": "/pages/service/custom-web-design-services/",
+      "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+    },
+    {
+      "name": "Komplexe Systeme (DACH)",
+      "href": "/de/pages/complex-solutions/",
+      "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp"
+    }
   ],
   "footer": {
     "rights": "Alle Rechte vorbehalten.",
@@ -42,9 +91,7 @@
     "impressum": "Impressum",
     "impressumHref": "/de/impressum/",
     "privacy": "Datenschutz",
-    "privacyHref": "/de/datenschutz/",
-    "company": "Base X Tech Ltd, eingetragen in London, UK. Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten.",
-    "legal": "Base X Tech Ltd · Company No. 16134538 (Companies House) · 27 Old Gloucester Street, London WC1N 3AX, Vereinigtes Königreich"
+    "privacyHref": "/de/datenschutz/"
   },
   "form": {
     "close": "Formular schließen",
@@ -66,34 +113,98 @@
     "companyPlaceholder": "Firma oder Shop-URL",
     "serviceLabel": "Wobei können wir Sie unterstützen?",
     "services": [
-      { "value": "Shopify Development", "label": "Shopify-Entwicklung" },
-      { "value": "Custom Shopify Integrations", "label": "Individuelle Shopify-Integrationen" },
-      { "value": "Shopify Migration", "label": "Shopify-Migration" },
-      { "value": "Custom Shopify App", "label": "Individuelle Shopify-App" },
-      { "value": "Web Design", "label": "Webdesign" },
-      { "value": "Conversion Rate Optimization", "label": "Conversion-Optimierung (CRO)" },
-      { "value": "Complex Solutions (ERP, POS, middleware)", "label": "Komplexe Systeme (ERP, POS, Middleware)" },
-      { "value": "Not sure yet", "label": "Noch unklar" }
+      {
+        "value": "Shopify Development",
+        "label": "Shopify-Entwicklung"
+      },
+      {
+        "value": "Custom Shopify Integrations",
+        "label": "Individuelle Shopify-Integrationen"
+      },
+      {
+        "value": "Shopify Migration",
+        "label": "Shopify-Migration"
+      },
+      {
+        "value": "Custom Shopify App",
+        "label": "Individuelle Shopify-App"
+      },
+      {
+        "value": "Web Design",
+        "label": "Webdesign"
+      },
+      {
+        "value": "Conversion Rate Optimization",
+        "label": "Conversion-Optimierung (CRO)"
+      },
+      {
+        "value": "Complex Solutions (ERP, POS, middleware)",
+        "label": "Komplexe Systeme (ERP, POS, Middleware)"
+      },
+      {
+        "value": "Not sure yet",
+        "label": "Noch unklar"
+      }
     ],
     "sourceLabel": "Wie sind Sie auf uns aufmerksam geworden?",
     "sourcePlaceholder": "Bitte wählen (optional)",
     "sources": [
-      { "value": "Google", "label": "Google" },
-      { "value": "ChatGPT / AI assistant", "label": "ChatGPT / KI-Assistent" },
-      { "value": "Clutch", "label": "Clutch" },
-      { "value": "Upwork", "label": "Upwork" },
-      { "value": "Shopify Partner Directory", "label": "Shopify Partner Directory" },
-      { "value": "LinkedIn", "label": "LinkedIn" },
-      { "value": "Referral / partner", "label": "Empfehlung / Partner" },
-      { "value": "Other", "label": "Sonstiges" }
+      {
+        "value": "Google",
+        "label": "Google"
+      },
+      {
+        "value": "ChatGPT / AI assistant",
+        "label": "ChatGPT / KI-Assistent"
+      },
+      {
+        "value": "Clutch",
+        "label": "Clutch"
+      },
+      {
+        "value": "Upwork",
+        "label": "Upwork"
+      },
+      {
+        "value": "Shopify Partner Directory",
+        "label": "Shopify Partner Directory"
+      },
+      {
+        "value": "LinkedIn",
+        "label": "LinkedIn"
+      },
+      {
+        "value": "Referral / partner",
+        "label": "Empfehlung / Partner"
+      },
+      {
+        "value": "Other",
+        "label": "Sonstiges"
+      }
     ],
     "budgetLegend": "Wie hoch ist Ihr Projektbudget?",
     "budgets": [
-      { "value": "Up to €5k", "label": "Bis 5.000 €", "hideOnComplex": true },
-      { "value": "€5–15k", "label": "5.000–15.000 €" },
-      { "value": "€15–40k", "label": "15.000–40.000 €" },
-      { "value": "€40k+", "label": "Über 40.000 €" },
-      { "value": "Not sure yet", "label": "Noch unklar" }
+      {
+        "value": "Up to €5k",
+        "label": "Bis 5.000 €",
+        "hideOnComplex": true
+      },
+      {
+        "value": "€5–15k",
+        "label": "5.000–15.000 €"
+      },
+      {
+        "value": "€15–40k",
+        "label": "15.000–40.000 €"
+      },
+      {
+        "value": "€40k+",
+        "label": "Über 40.000 €"
+      },
+      {
+        "value": "Not sure yet",
+        "label": "Noch unklar"
+      }
     ],
     "messageLabel": "Erzählen Sie uns von Ihrem Projekt",
     "messagePlaceholder": "Was möchten Sie aufbauen, verändern oder lösen?",
@@ -106,10 +217,21 @@
   "team": {
     "label": "Ihre Ansprechpartner",
     "people": [
-      { "name": "Sofiia Zabrodska", "role": "Business Development Manager", "note": "erster Kontakt, Angebote" },
-      { "name": "Vadym Hula", "role": "Head of Delivery", "note": "leitet Ihr Projekt" },
-      { "name": "Vadym-Marko Hruden", "role": "CBDO" }
+      {
+        "name": "Sofiia Zabrodska",
+        "role": "Business Development Manager",
+        "note": "erster Kontakt, Angebote"
+      },
+      {
+        "name": "Vadym-Marko Hruden",
+        "role": "CBDO"
+      }
     ],
-    "dach": { "name": "Alexander Karl", "role": "DACH-Partner", "note": "Ihr Ansprechpartner auf Deutsch" }
+    "dach": {
+      "name": "Alexander Karl",
+      "role": "DACH-Partner",
+      "note": "Ihr Ansprechpartner auf Deutsch"
+    },
+    "location": "Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten."
   }
 }

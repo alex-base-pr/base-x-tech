@@ -88,7 +88,9 @@ const pageTitle = (html) => ((html.match(/<title>([\s\S]*?)<\/title>/i) || [])[1
 function socialTags({ html, lang, canonical, cluster }) {
   const title = attr(pageTitle(html));
   const description = attr(metaDescription(html));
-  const image = `${host}/images/og/base-x-tech-og.png`; // 1200×630 share card (public/images/og/)
+  // 1200×630 share card (public/images/og/). Dev builds point at the dev host so link previews work before the file is on prod.
+  const imageHost = process.env.DEPLOY_ENV === 'dev' ? (process.env.OG_HOST || 'https://dev.base-xtech.com') : host;
+  const image = `${imageHost}/images/og/base-x-tech-og.png`;
   const tags = [
     '<meta property="og:type" content="website">',
     '<meta property="og:site_name" content="Base X Tech">',

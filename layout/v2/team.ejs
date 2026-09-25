@@ -8,4 +8,5 @@
     <% people.forEach(p => { %><li><strong><%= p.name %></strong> <span class="v2-team__role"><%= p.role %><% if (p.note) { %> (<%= p.note %>)<% } %></span></li>
     <% }) %>
   </ul>
+  <% if (t.location) { %><p class="v2-team__location"><%= t.location %></p><% } %>
 </aside>

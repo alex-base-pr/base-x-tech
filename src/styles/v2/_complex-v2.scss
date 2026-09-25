@@ -117,7 +117,7 @@ body.v2.cx-page .cx {
     @include desk { grid-template-columns: minmax(0, 445px) minmax(0, 788px); justify-content: space-between; gap: 38px; align-items: start; }
   }
   .cx-partner__photo { margin: 0; max-width: 445px;
-    img { display: block; width: 100%; height: auto; aspect-ratio: 445 / 419; border-radius: 20px; object-fit: cover; object-position: 50% 12%; background: var(--cx-grey-1); }
+    img { display: block; width: 100%; height: auto; aspect-ratio: 1335 / 1257; border-radius: 20px; object-fit: cover; object-position: 50% 0; background: var(--cx-grey-1); }
   }
   .cx-partner__body { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; @include desk { gap: 40px; padding-top: 7px; } }
   .cx-partner__quote { margin: 0;
