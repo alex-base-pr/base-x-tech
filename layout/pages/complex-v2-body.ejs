@@ -52,6 +52,7 @@
           <% c.partner.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
         </div>
         <% if (c.partner.bio) { %><p class="cx-partner__bio"><%= c.partner.bio %></p><% } %>
+        <% if (c.partner.inPerson) { %><p class="cx-partner__inperson"><%= c.partner.inPerson %></p><% } %>
       </div>
     </section>
 
@@ -200,12 +201,13 @@
       <div class="cx-btn cx-btn--dark"><%- btn(c.hero.button) %></div>
     </section>
 
-    <%# Case (A49, 2026-09-25): Marko's case copy from Figma; the end client stays unnamed until Alexander and the store agree. %>
+    <%# Case (A49, 2026-09-25): Marko's case copy from Figma. End client named with permission (owner, 2026-09-25). %>
     <section class="cx-section cx-case" id="proven-in-practice" data-v2-section>
       <p class="cx-label cx-case__label"><%= c.case.label %></p>
       <article class="cx-case__card">
         <div class="cx-case__intro">
           <h2 class="cx-case__client"><%= c.case.client %></h2>
+          <% if (c.case.descriptor) { %><p class="cx-case__descriptor"><%= c.case.descriptor %></p><% } %>
           <p class="cx-case__tags"><%= c.case.tags.join(' · ') %></p>
           <h3 class="cx-case__h"><%= c.case.challengeTitle %></h3>
           <% c.case.challenge.forEach(p => { %><p><%= p %></p><% }) %>

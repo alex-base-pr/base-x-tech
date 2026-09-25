@@ -143,6 +143,7 @@ body.v2.cx-page .cx {
     p { font-size: clamp(1.25rem, 1.9vw, 1.625rem); line-height: 1.15; letter-spacing: -.02em; color: var(--cx-ink); }
   }
   .cx-partner__bio { max-width: 640px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; color: #4a4a4a; }
+  .cx-partner__inperson { max-width: 640px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; font-weight: 500; color: var(--cx-ink); }
 
   // ---------- capabilities (3 × 2 text grid on the grey band)
   .cx-caps { background: var(--cx-grey-0); }
@@ -208,6 +209,7 @@ body.v2.cx-page .cx {
     .cx-case__h { margin-top: 2.5rem; @include desk { margin-top: 5.5rem; } }
     p + p { margin-top: -12px; }
   }
+  .cx-case__descriptor { margin-top: -4px; font-family: var(--cx-body); font-size: 16px; line-height: 1.3; color: #4a4a4a; }
   .cx-case__client { font-family: var(--cx-body); font-size: 32px; line-height: 1.02; letter-spacing: -.03em; font-weight: 300; text-transform: uppercase; }
   .cx-case__tags { font-size: 14px !important; }
   .cx-case__h { font-family: var(--cx-body); font-size: 16px; line-height: 1.29; font-weight: 500; }

@@ -71,3 +71,26 @@ test('Accent: selected budget chip is dark on accent', async ({ page }) => {
   const s = await chip.locator('span').evaluate((el) => ({ bg: getComputedStyle(el).backgroundColor, color: getComputedStyle(el).color }));
   expect(s).toEqual({ bg: ACCENT, color: ON_ACCENT });
 });
+
+test('Complex partner: in-person line, no photo, Alexander still named', async ({ request }) => {
+  const lines = {
+    '/pages/complex-solutions/': 'In person in Berlin on request, elsewhere by arrangement.',
+    '/de/pages/complex-solutions/': 'Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.',
+  };
+  for (const [path, line] of Object.entries(lines)) {
+    const { html } = await rawHtml(request, path);
+    const partner = (html.match(/<section class="cx-section cx-partner[\s\S]*?<\/section>/) || [''])[0];
+    expect(partner, path).toContain(`<p class="cx-partner__inperson">${line}</p>`);
+    expect(partner, path).toContain('Alexander Karl');
+    expect(partner, path).not.toContain('<img');
+    expect(html, path).not.toMatch(/Expertise vor Ort|on-site/i);
+  }
+});
+
+test('Complex case: end client named with descriptor', async ({ request }) => {
+  for (const [path, descriptor] of [['/pages/complex-solutions/', 'German specialty food retailer'], ['/de/pages/complex-solutions/', 'Deutscher Feinkost-Fachhändler']]) {
+    const { html } = await rawHtml(request, path);
+    expect(html, path).toMatch(new RegExp(`<h2 class="cx-case__client">Vom Einfachen das Gute</h2>\\s*<p class="cx-case__descriptor">${descriptor}</p>`));
+    expect(html, path).toContain('Mettler');
+  }
+});

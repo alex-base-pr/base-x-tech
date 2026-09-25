@@ -40,7 +40,7 @@ test('A4: success text promises a reply within 1 working day (EN, DE)', async ({
 test('A1: company line in the footer; controller named in the privacy policy', async ({ request }) => {
   expect((await rawHtml(request, '/')).html).toContain('Base X Tech Ltd, registered in London, UK. Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.');
   expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Base X Tech Ltd, eingetragen in London, UK.');
-  expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Base X Tech Ltd (London, UK)');
+  expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
 test('A2: "Who you\'ll talk to" names the team; Alexander Karl first on Complex', async ({ request }) => {
@@ -87,7 +87,7 @@ test('Complex: partner block is text only, no quote; K1 one systems strip; A49 c
   expect(de).toContain('Systeme, die wir anbinden');
   expect(de).not.toContain('Expertise vor Ort');
   expect(de).toContain('Persönlicher Ansprechpartner im DACH-Raum');
-  expect(en).toContain('German specialty food retailer');
+  expect(en).toContain('German specialty food retailer'); // descriptor under the client name (owner, 2026-09-25)
   expect(en).toContain('What’s included');
   expect(de).toContain('Leistungsumfang');
   expect(en).toContain('Custom Shopify integrations with the ERP, POS and systems behind your operations.');
