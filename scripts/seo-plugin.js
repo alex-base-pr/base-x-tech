@@ -34,6 +34,8 @@ function faqEntities(html) {
     .filter((e) => e.name && e.acceptedAnswer.text);
 }
 
+const HOME_NAME = { en: 'Home', de: 'Startseite', uk: 'Головна' };
+
 function jsonLd(page, path, html) {
   const url = host + path;
   const graph = [];
@@ -43,7 +45,7 @@ function jsonLd(page, path, html) {
     graph.push({
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: page.lang === 'de' ? 'Startseite' : 'Home', item: `${host}/` },
+        { '@type': 'ListItem', position: 1, name: HOME_NAME[page.lang] || HOME_NAME.en, item: `${host}${page.lang === 'uk' ? '/uk/' : '/'}` },
         { '@type': 'ListItem', position: 2, name: page.name, item: url },
       ],
     });
@@ -143,7 +145,7 @@ export function seoPlugin({ deployEnv }) {
         tags.push(...socialTags({ html, lang: langOf(path), canonical, cluster }));
         if (deployEnv === 'dev') tags.push('<meta name="robots" content="noindex, nofollow">');
         else if (page.role === 'noindex') tags.push('<meta name="robots" content="noindex, follow">');
-        if (page.role === 'index' && (page.lang === 'en' || page.lang === 'de')) tags.push(jsonLd(page, path, html));
+        if (page.role === 'index' && ['en', 'de', 'uk'].includes(page.lang)) tags.push(jsonLd(page, path, html));
         let out = html.replace('</head>', `  ${tags.join('\n  ')}\n</head>`);
         if (deployEnv === 'dev') out = out.replace(/<html([^>]*)>/i, '<html$1 data-env="dev">');
         return out;
