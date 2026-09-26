@@ -193,8 +193,8 @@
         "a": "Jede Hypothese wird nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht einfach angenommen wird."
       },
       {
-        "q": "Haben wir genug Traffic für A/B-Tests?",
-        "a": "Für Tests braucht es ihn tatsächlich. Unterhalb eines bestimmten Volumens erreicht ein Test keine Signifikanz, und ihn trotzdem laufen zu lassen, verzögert nur die Verbesserung. Bei Shops mit weniger Traffic setzen wir die Änderungen um, von denen wir überzeugt sind, und messen den Funnel statt der Variante."
+        "q": "Brauchen wir für A/B-Tests genug Traffic?",
+        "a": "Für Tests ja. Unterhalb eines bestimmten Volumens erreicht ein Test keine Signifikanz, und ihn trotzdem laufen zu lassen, verzögert nur die Verbesserung. Bei Shops mit weniger Traffic setzen wir die Änderungen um, von denen wir überzeugt sind, und messen den Funnel statt der Variante."
       },
       {
         "q": "Wann sehen wir Ergebnisse?",

@@ -29,7 +29,7 @@
       },
       {
         "title": "Umsetzungsreifes Design",
-        "description": "Dateien gehen an die Entwickler, die auch den letzten Shop gebaut haben – dazwischen geht nichts verloren."
+        "description": "Dateien gehen direkt an unsere eigenen Entwickler – dazwischen geht nichts verloren."
       },
       {
         "title": "Designsysteme",
@@ -175,7 +175,7 @@
     "items": [
       {
         "q": "Übernehmen Sie Design und Umsetzung oder nur das Design?",
-        "a": "Beides, und zwar im selben Team. Ihr Design geht an die Entwickler, die auch den letzten Shop gebaut haben, sodass zwischen Datei und Shop nichts verloren geht. Wir übernehmen auch reine Designprojekte, und selbst dann ist das Design für die Umsetzung gemacht: echte Komponenten, echte Zustände und keine Entscheidungen, die im Code nicht halten."
+        "a": "Beides, und zwar im selben Team. Ihr Design geht direkt an unsere eigenen Entwickler, sodass zwischen Datei und Shop nichts verloren geht. Wir übernehmen auch reine Designprojekte, und selbst dann ist das Design für die Umsetzung gemacht: echte Komponenten, echte Zustände und keine Entscheidungen, die im Code nicht halten."
       },
       {
         "q": "Können Sie mit unserem bestehenden Shopify-Theme arbeiten?",
@@ -195,7 +195,7 @@
       },
       {
         "q": "Können Sie für den deutschen Markt oder andere EU-Märkte gestalten?",
-        "a": "Ja. Wir betreiben selbst eine mehrsprachige Website und bauen Shopify-Setups für mehrere Märkte, deshalb berücksichtigt das Design, was sich zwischen Sprachen ändert: Deutscher Text ist länger als englischer und sprengt Layouts, die nur in einer Sprache getestet wurden. Deutsche Texte schreibt ein Muttersprachler, nicht wir als Übersetzer."
+        "a": "Ja. Wir betreiben selbst eine mehrsprachige Website und bauen Shopify-Setups für mehrere Märkte, deshalb berücksichtigt das Design, was sich zwischen Sprachen ändert: Deutscher Text ist länger als englischer und sprengt Layouts, die nur in einer Sprache getestet wurden. Deutsche Texte für Ihren Shop schreibt ein Muttersprachler – wir übersetzen sie nicht selbst."
       },
       {
         "q": "Wie lange dauert das Design eines Shopify-Shops?",
