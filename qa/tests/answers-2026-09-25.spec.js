@@ -39,7 +39,7 @@ test('A4: success text promises a reply within 1 working day (EN, DE)', async ({
 
 test('A1: company line in the footer; controller named in the privacy policy', async ({ request }) => {
   expect((await rawHtml(request, '/')).html).toContain('Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.'); // moved from the footer to the team block
-  expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Base X Tech Ltd, eingetragen in London, UK.');
+  expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten.'); // moved from the footer to the team block
   expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
