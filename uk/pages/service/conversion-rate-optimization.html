@@ -6,13 +6,13 @@
 <%
   const c = content['conversion-rate-optimization'].uk || content['conversion-rate-optimization'].en;
   const ukMeta = (content['conversion-rate-optimization'].uk || {}).meta || {};
-  const url = { en: 'https://base-xtech.com/pages/service/conversion-rate-optimization/', uk: 'https://base-xtech.com/uk/pages/service/conversion-rate-optimization/' };
+  const url = { en: 'https://base-xtech.com/pages/service/conversion-rate-optimization/', de: 'https://base-xtech.com/de/pages/service/conversion-rate-optimization/', uk: 'https://base-xtech.com/uk/pages/service/conversion-rate-optimization/' };
 %>
 <%- include('layout/head-alt.ejs', {
   title: ukMeta.title || "CRO-оптимізація – збільшення конверсій сайту | BaseX-Tech",
   description: ukMeta.description || "CRO для Shopify-магазинів: аудит сайту, теплові карти, аналіз поведінки користувачів та A/B тести, щоб конвертувати більше вже наявного трафіку.",
   v2: true,
-  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'uk', service: 'Conversion Rate Optimization', mainId: 'service-conversion-rate-optimization' }) %>
 </html>

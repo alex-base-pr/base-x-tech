@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of /pages/service/shopify-migration-service/ (same body and content key as the EN page).
+    Copy: content/pages/shopify-migration.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['shopify-migration'].de || content['shopify-migration'].en;
+  const deMeta = (content['shopify-migration'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/pages/service/shopify-migration-service/', de: 'https://base-xtech.com/de/pages/service/shopify-migration-service/', uk: 'https://base-xtech.com/uk/pages/service/shopify-migration-service/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Shopify-Migration von Magento & WooCommerce | Base X Tech",
+  description: deMeta.description || "Wir migrieren Shops von Magento, WooCommerce, BigCommerce oder Eigenentwicklungen zu Shopify: Daten Zeile für Zeile geprüft, Redirects und Rankings gesichert.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/service-v2-body.ejs', { c, lang: 'de', service: 'Shopify Migration', mainId: 'service-shopify-migration' }) %>
+</html>

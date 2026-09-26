@@ -21,14 +21,16 @@ const content = glob.sync('content/pages/*.json').reduce((acc, file) => {
   return acc;
 }, {});
 
-// Design-v2 templates keep visitors in their language: on /uk/ pages an internal EN link ('/pages/x/', '/#section-works')
-// points at its /uk/ twin when that page exists (uk/pages/x.html, uk/index.html); otherwise the EN link stays.
-// Other languages (en, de) are returned unchanged. Used by layout/v2/*.ejs and layout/pages/*-v2-body.ejs.
+// Design-v2 templates keep visitors in their language: on /uk/ and /de/ pages an internal EN link ('/pages/x/',
+// '/#section-works') points at its twin in that language when the page exists (uk/pages/x.html, de/index.html, ...);
+// otherwise the EN link stays (e.g. DE terms → EN terms). EN is returned unchanged.
+// Used by layout/v2/*.ejs and layout/pages/*-v2-body.ejs.
+const LOCAL_LANGS = ['uk', 'de'];
 function localHref(href, lang) {
-  if (lang !== 'uk' || typeof href !== 'string' || !href.startsWith('/') || href.startsWith('//') || /^\/uk(\/|$)/.test(href)) return href;
+  if (!LOCAL_LANGS.includes(lang) || typeof href !== 'string' || !href.startsWith('/') || href.startsWith('//') || /^\/(uk|de)(\/|$)/.test(href)) return href;
   const [pathPart, hash] = href.split('#');
-  const file = pathPart === '/' ? 'uk/index.html' : `uk${pathPart.replace(/\/$/, '')}.html`;
-  return existsSync(file) ? `/uk${pathPart}${hash !== undefined ? `#${hash}` : ''}` : href;
+  const file = pathPart === '/' ? `${lang}/index.html` : `${lang}${pathPart.replace(/\/$/, '')}.html`;
+  return existsSync(file) ? `/${lang}${pathPart}${hash !== undefined ? `#${hash}` : ''}` : href;
 }
 
 function moveOutputPlugin() {
@@ -47,6 +49,7 @@ const getInputFiles = () => {
     '404': path.resolve(__dirname, '404.html'),
     'uk/index': path.resolve(__dirname, 'uk/index.html'),
     'uk/404': path.resolve(__dirname, 'uk/404.html'),
+    'de/404': path.resolve(__dirname, 'de/404.html'),
   };
 
   const pageFiles = glob.sync('pages/**/*.html').reduce((acc, file) => {
@@ -61,7 +64,7 @@ const getInputFiles = () => {
     return acc;
   }, {});
 
-  // German pages (REQ-019): de/pages/<name>.html → /de/pages/<name>/
+  // German pages (REQ-019; design-v2 index pages since 2026-09-26): de/index.html → /de/, de/pages/<name>.html → /de/pages/<name>/
   const deFiles = glob.sync('de/**/*.html').reduce((acc, file) => {
     const name = path.relative('.', file.slice(0, file.length - path.extname(file).length));
     acc[name] = path.resolve(__dirname, file);

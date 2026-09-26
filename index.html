@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <%# Design v2 home (Figma "Home Page" 693:1781). Copy: content/pages/home.en.json — approved Figma copy. %>
-<% const c = content['home'].en; %>
+<%
+  const c = content['home'].en;
+  const url = { en: 'https://base-xtech.com/', de: 'https://base-xtech.com/de/', uk: 'https://base-xtech.com/uk/' };
+%>
 <%- include('layout/head-alt.ejs', {
   title: c.meta.title,
   description: c.meta.description,
   v2: true,
-  hrefLangCode: "uk",
-  hrefLangLink: "https://base-xtech.com/uk/",
-  hreflangDefault: "https://base-xtech.com/"
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/home-v2-body.ejs', { c, lang: 'en', mainId: 'home' }) %>
 </html>

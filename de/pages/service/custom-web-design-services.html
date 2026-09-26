@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of /pages/service/custom-web-design-services/ (same body and content key as the EN page).
+    Copy: content/pages/web-design.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['web-design'].de || content['web-design'].en;
+  const deMeta = (content['web-design'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/pages/service/custom-web-design-services/', de: 'https://base-xtech.com/de/pages/service/custom-web-design-services/', uk: 'https://base-xtech.com/uk/pages/service/custom-web-design-services/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Shopify-Webdesign & UX/UI-Design | Base X Tech",
+  description: deMeta.description || "Wir gestalten Shopify-Storefronts für Produkte, die verglichen und konfiguriert werden: UX/UI, Designsysteme, Prototypen und Art Direction aus einer Hand.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/service-v2-body.ejs', { c, lang: 'de', service: 'Web Design', mainId: 'service-custom-web-design-services' }) %>
+</html>

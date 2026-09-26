@@ -234,5 +234,14 @@
       "note": "Ihr Ansprechpartner auf Deutsch"
     },
     "location": "Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten."
+  },
+  "ui": {
+    "_note": "Small UI strings inside the page bodies (see shell.en.json → ui). Added 2026-09-26 with the German v2 index pages so they don't show the English fallback (\"By\", \"Scroll to Explore\").",
+    "scrollHint": "[ Weiter scrollen ]",
+    "viewProject": "Ansehen",
+    "storeAlt": "Shopify-Shop",
+    "focusLabel": "Unsere Schwerpunkte",
+    "servicesOf": "– Leistungen",
+    "byAuthor": "Von"
   }
 }

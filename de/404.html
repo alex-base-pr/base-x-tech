@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# German 404, design v2 shell (like 404.html and uk/404.html). Error pages are noindex and have no language cluster (scripts/seo-plugin.js).
+    Built to dist/de/404.html; like uk/404.html it is not wired as an ErrorDocument yet (public/.htaccess serves /404.html). %>
+<%- include('layout/head-alt.ejs', {
+  title: "404 – Seite nicht gefunden | Base X Tech",
+  description: "Die gesuchte Seite existiert nicht.",
+  v2: true
+}) %>
+<%- include('layout/v2/shell-top.ejs', { lang: 'de' }) %>
+  <main id="page-404" class="v2-main v2-404">
+    <p class="v2-tag">Fehler 404</p>
+    <h1 class="v2-h-l"><span>Seite nicht gefunden.</span> <span class="v2-muted">Der Link ist vielleicht veraltet oder falsch geschrieben.</span></h1>
+    <div class="v2-404__actions">
+      <a href="/de/" class="v2-btn"><span class="v2-btn__label">Zur Startseite</span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
+    </div>
+    <nav class="v2-404__links" aria-label="Beliebte Seiten">
+      <p>Oder direkt weiter zu:</p>
+      <ul>
+        <li><a href="/de/pages/shopify-development/">Shopify-Entwicklung</a></li>
+        <li><a href="/de/pages/service/custom-shopify-integrations/">Shopify-Integrationen</a></li>
+        <li><a href="/de/pages/service/shopify-migration-service/">Shopify-Migration</a></li>
+        <li><a href="/de/pages/service/custom-shopify-app-development/">Individuelle Shopify-Apps</a></li>
+        <li><a href="/de/pages/service/custom-web-design-services/">Webdesign</a></li>
+        <li><a href="/de/pages/service/conversion-rate-optimization/">Conversion-Optimierung (CRO)</a></li>
+        <li><a href="/de/pages/complex-solutions/">Komplexe Systeme (DACH)</a></li>
+        <li><a href="/blog/">Insights (auf Englisch)</a></li>
+      </ul>
+    </nav>
+  </main>
+<%- include('layout/v2/shell-bottom.ejs', { lang: 'de' }) %>
+</html>

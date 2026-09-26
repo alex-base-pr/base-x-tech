@@ -6,13 +6,13 @@
 <%
   const c = content['home'].uk || content['home'].en;
   const ukMeta = (content['home'].uk || {}).meta || {};
-  const url = { en: 'https://base-xtech.com/', uk: 'https://base-xtech.com/uk/' };
+  const url = { en: 'https://base-xtech.com/', de: 'https://base-xtech.com/de/', uk: 'https://base-xtech.com/uk/' };
 %>
 <%- include('layout/head-alt.ejs', {
   title: ukMeta.title || "BaseX-Tech ▶️  Дизайн | Розробка | Маркетинг",
   description: ukMeta.description || "Веб-дизайн та розробка ➤ BaseX-Tech ⭐️ Ми створюємо рішення, які поєднують інновації, ефективність і реальний вплив на зростання бізнесу.",
   v2: true,
-  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/home-v2-body.ejs', { c, lang: 'uk', mainId: 'home' }) %>
 </html>

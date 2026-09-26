@@ -35,6 +35,7 @@ function faqEntities(html) {
 }
 
 const HOME_NAME = { en: 'Home', de: 'Startseite', uk: 'Головна' };
+const HOME_PATH = { en: '/', de: '/de/', uk: '/uk/' }; // breadcrumb root = the home page in the page's language (/de/ since 2026-09-26)
 
 function jsonLd(page, path, html) {
   const url = host + path;
@@ -45,7 +46,7 @@ function jsonLd(page, path, html) {
     graph.push({
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: HOME_NAME[page.lang] || HOME_NAME.en, item: `${host}${page.lang === 'uk' ? '/uk/' : '/'}` },
+        { '@type': 'ListItem', position: 1, name: HOME_NAME[page.lang] || HOME_NAME.en, item: `${host}${HOME_PATH[page.lang] || '/'}` },
         { '@type': 'ListItem', position: 2, name: page.name, item: url },
       ],
     });

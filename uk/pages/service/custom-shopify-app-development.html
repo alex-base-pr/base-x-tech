@@ -6,13 +6,13 @@
 <%
   const c = content['shopify-apps'].uk || content['shopify-apps'].en;
   const ukMeta = (content['shopify-apps'].uk || {}).meta || {};
-  const url = { en: 'https://base-xtech.com/pages/service/custom-shopify-app-development/', uk: 'https://base-xtech.com/uk/pages/service/custom-shopify-app-development/' };
+  const url = { en: 'https://base-xtech.com/pages/service/custom-shopify-app-development/', de: 'https://base-xtech.com/de/pages/service/custom-shopify-app-development/', uk: 'https://base-xtech.com/uk/pages/service/custom-shopify-app-development/' };
 %>
 <%- include('layout/head-alt.ejs', {
   title: ukMeta.title || "Розробка додатків для Shopify | BaseX-Tech",
   description: ukMeta.description || "Розробляємо кастомні Shopify-додатки для замовлень, логістики, каналів продажу, оплат та дизайну магазину — власною командою з підтримкою.",
   v2: true,
-  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'uk', service: 'Custom Shopify App', mainId: 'service-custom-shopify-app-development' }) %>
 </html>

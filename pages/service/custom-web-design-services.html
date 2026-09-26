@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <%# Design v2 (Figma "Service Page"). Copy: content/pages/web-design.en.json (Marko, 01-web-design). %>
-<% const c = content['web-design'].en; %>
+<%
+  const c = content['web-design'].en;
+  const url = { en: 'https://base-xtech.com/pages/service/custom-web-design-services/', de: 'https://base-xtech.com/de/pages/service/custom-web-design-services/', uk: 'https://base-xtech.com/uk/pages/service/custom-web-design-services/' };
+%>
 <%- include('layout/head-alt.ejs', {
   title: c.meta.title,
   description: c.meta.description,
   v2: true,
-  hrefLangCode: "uk",
-  hrefLangLink: "https://base-xtech.com/uk/pages/service/custom-web-design-services/",
-  hreflangDefault: "https://base-xtech.com/pages/service/custom-web-design-services/"
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'en', service: 'Web Design', mainId: 'service-custom-web-design-services' }) %>
 </html>

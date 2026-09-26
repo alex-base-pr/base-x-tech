@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <%# Design v2 (Figma Ui-kit service frames). Copy: content/pages/shopify-migration.en.json — Marko's text; images/categories from Figma (scripts/figma). %>
-<% const c = content['shopify-migration'].en; %>
+<%
+  const c = content['shopify-migration'].en;
+  const url = { en: 'https://base-xtech.com/pages/service/shopify-migration-service/', de: 'https://base-xtech.com/de/pages/service/shopify-migration-service/', uk: 'https://base-xtech.com/uk/pages/service/shopify-migration-service/' };
+%>
 <%- include('layout/head-alt.ejs', {
   title: c.meta.title,
   description: c.meta.description,
   v2: true,
-  hrefLangCode: "uk",
-  hrefLangLink: "https://base-xtech.com/uk/pages/service/shopify-migration-service/",
-  hreflangDefault: "https://base-xtech.com/pages/service/shopify-migration-service/"
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'en', service: 'Shopify Migration', mainId: 'service-shopify-migration' }) %>
 </html>

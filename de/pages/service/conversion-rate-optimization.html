@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of /pages/service/conversion-rate-optimization/ (same body and content key as the EN page).
+    Copy: content/pages/conversion-rate-optimization.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['conversion-rate-optimization'].de || content['conversion-rate-optimization'].en;
+  const deMeta = (content['conversion-rate-optimization'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/pages/service/conversion-rate-optimization/', de: 'https://base-xtech.com/de/pages/service/conversion-rate-optimization/', uk: 'https://base-xtech.com/uk/pages/service/conversion-rate-optimization/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Conversion-Optimierung (CRO) für Shopify | Base X Tech",
+  description: deMeta.description || "Wir analysieren Ihren Shopify-Shop, bewerten jede Maßnahme nach Wirkung und Aufwand und setzen sie um: Produktseiten, Checkout, Mobile, Speed und Tracking.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/service-v2-body.ejs', { c, lang: 'de', service: 'Conversion Rate Optimization', mainId: 'service-conversion-rate-optimization' }) %>
+</html>

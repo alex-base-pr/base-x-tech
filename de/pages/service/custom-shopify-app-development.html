@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of /pages/service/custom-shopify-app-development/ (same body and content key as the EN page).
+    Copy: content/pages/shopify-apps.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['shopify-apps'].de || content['shopify-apps'].en;
+  const deMeta = (content['shopify-apps'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/pages/service/custom-shopify-app-development/', de: 'https://base-xtech.com/de/pages/service/custom-shopify-app-development/', uk: 'https://base-xtech.com/uk/pages/service/custom-shopify-app-development/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Individuelle Shopify-Apps & Automatisierung | Base X Tech",
+  description: deMeta.description || "Wir entwickeln Shopify-Apps und Automatisierungen: öffentliche Apps für den App Store, Custom Apps für einen Händler, Checkout-Extensions und Integrationen.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/service-v2-body.ejs', { c, lang: 'de', service: 'Custom Shopify App', mainId: 'service-custom-shopify-app-development' }) %>
+</html>

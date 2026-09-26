@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of /pages/shopify-development/ (same body and content key as the EN page).
+    Copy: content/pages/shopify-development.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['shopify-development'].de || content['shopify-development'].en;
+  const deMeta = (content['shopify-development'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/pages/shopify-development/', de: 'https://base-xtech.com/de/pages/shopify-development/', uk: 'https://base-xtech.com/uk/pages/shopify-development/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Shopify-Shop-Entwicklung nach Maß | Base X Tech",
+  description: deMeta.description || "Wir bauen Shopify-Shops, die mehr brauchen als ein Theme: individueller Checkout, Produktkonfiguratoren, Headless-Storefronts, B2B und B2C auf einem Stack.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/service-v2-body.ejs', { c, lang: 'de', service: 'Shopify Development', mainId: 'shopify-development' }) %>
+</html>

@@ -6,13 +6,13 @@
 <%
   const c = content['web-design'].uk || content['web-design'].en;
   const ukMeta = (content['web-design'].uk || {}).meta || {};
-  const url = { en: 'https://base-xtech.com/pages/service/custom-web-design-services/', uk: 'https://base-xtech.com/uk/pages/service/custom-web-design-services/' };
+  const url = { en: 'https://base-xtech.com/pages/service/custom-web-design-services/', de: 'https://base-xtech.com/de/pages/service/custom-web-design-services/', uk: 'https://base-xtech.com/uk/pages/service/custom-web-design-services/' };
 %>
 <%- include('layout/head-alt.ejs', {
   title: ukMeta.title || "Web design під ключ – створення вебдизайну | BaseX-Tech",
   description: ukMeta.description || "Створюємо кастомні сайти та Shopify-магазини з адаптивним дизайном, зрозумілою навігацією та візуальною ідентикою під ваш бренд і аудиторію.",
   v2: true,
-  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'uk', service: 'Web Design', mainId: 'service-custom-web-design-services' }) %>
 </html>

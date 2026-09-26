@@ -6,13 +6,13 @@
 <%
   const c = content['shopify-development'].uk || content['shopify-development'].en;
   const ukMeta = (content['shopify-development'].uk || {}).meta || {};
-  const url = { en: 'https://base-xtech.com/pages/shopify-development/', uk: 'https://base-xtech.com/uk/pages/shopify-development/' };
+  const url = { en: 'https://base-xtech.com/pages/shopify-development/', de: 'https://base-xtech.com/de/pages/shopify-development/', uk: 'https://base-xtech.com/uk/pages/shopify-development/' };
 %>
 <%- include('layout/head-alt.ejs', {
   title: ukMeta.title || "Створення Shopify-магазинів під ключ | BaseX-Tech",
   description: ukMeta.description || "Створюємо ваш Shopify-магазин під ключ: бізнес-аналіз, стратегія, кастомна тема, налаштування каталогу, оплати та інтеграції — власною командою.",
   v2: true,
-  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
 <%- include('layout/pages/service-v2-body.ejs', { c, lang: 'uk', service: 'Shopify Development', mainId: 'shopify-development' }) %>
 </html>

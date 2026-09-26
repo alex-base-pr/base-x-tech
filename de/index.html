@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<%# Design v2, German version of / (same body and content key as the EN page).
+    Copy: content/pages/home.de.json (copywriter); until that file exists the EN copy renders.
+    The title/description below are a German rendering of the EN meta, used only while the de JSON has no meta. %>
+<%
+  const c = content['home'].de || content['home'].en;
+  const deMeta = (content['home'].de || {}).meta || {};
+  const url = { en: 'https://base-xtech.com/', de: 'https://base-xtech.com/de/', uk: 'https://base-xtech.com/uk/' };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: deMeta.title || "Shopify-Entwicklung & Webdesign-Agentur | Base X Tech",
+  description: deMeta.description || "Base X Tech baut die Systeme für modernen Commerce: individuelle Shopify-Entwicklung, Apps, Integrationen und KI-Automatisierung, von der Idee bis zum Launch.",
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/home-v2-body.ejs', { c, lang: 'de', mainId: 'home' }) %>
+</html>
