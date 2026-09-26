@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Shopify-Migration von Magento & WooCommerce | Base X Tech",
-    "description": "Wir migrieren Shops von Magento, WooCommerce, BigCommerce oder Eigenentwicklungen zu Shopify: Daten zeilengenau geprüft, Weiterleitungen und Rankings im Blick."
+    "title": "Shopify-Migration von Shopware, Magento & WooCommerce",
+    "description": "Wir migrieren Shops von Shopware, Magento, WooCommerce oder Eigenentwicklungen zu Shopify: Daten zeilengenau geprüft, Weiterleitungen im Blick."
   },
   "hero": {
     "tag": "Shopify-Migration",
@@ -10,7 +10,7 @@
       "ohne zu verlieren,",
       "was schon funktioniert"
     ],
-    "lead": "Magento, WooCommerce, BigCommerce oder eine Eigenentwicklung. Wir ziehen Shop, Daten und Traffic um und begleiten den Shop, bis alles stabil läuft.",
+    "lead": "Shopware, Magento, WooCommerce, BigCommerce oder eine Eigenentwicklung. Wir ziehen Shop, Daten und Traffic um und begleiten den Shop, bis alles stabil läuft.",
     "button": "Projekt besprechen"
   },
   "capabilities": {

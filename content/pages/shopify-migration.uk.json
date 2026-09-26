@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Міграція на Shopify з Magento та WooCommerce | Base X Tech",
-    "description": "Переносимо магазини на Shopify з Magento, WooCommerce, BigCommerce чи власних платформ: дані звіряємо рядок за рядком, редиректи й позиції — під контролем."
+    "description": "Переносимо магазини на Shopify з Magento, WooCommerce, Shopware, BigCommerce чи власних платформ: дані звіряємо рядок за рядком, редиректи — під контролем."
   },
   "hero": {
     "tag": "Міграція на Shopify",
@@ -10,7 +10,7 @@
       "без втрати того,",
       "що вже працює"
     ],
-    "lead": "Magento, WooCommerce, BigCommerce або власна платформа. Переносимо магазин, дані й трафік, а потім стежимо, доки все не стабілізується.",
+    "lead": "Magento, WooCommerce, Shopware, BigCommerce або власна платформа. Переносимо магазин, дані й трафік, а потім стежимо, доки все не стабілізується.",
     "button": "Обговорити проєкт"
   },
   "capabilities": {

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Magento & WooCommerce to Shopify Migration | Base X Tech",
-    "description": "We move stores to Shopify from Magento, WooCommerce, BigCommerce or in-house platforms: data checked row by row, redirects and rankings handled."
+    "description": "We move stores to Shopify from Magento, WooCommerce, Shopware, BigCommerce or in-house platforms: data checked row by row, redirects handled."
   },
   "hero": {
     "tag": "Shopify Migration",
@@ -10,7 +10,7 @@
       "without losing what",
       "already works"
     ],
-    "lead": "Magento, WooCommerce, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.",
+    "lead": "Magento, WooCommerce, Shopware, BigCommerce or something built in-house. We move the store, the data and the traffic, then watch it settle.",
     "button": "Discuss Your Project"
   },
   "capabilities": {
