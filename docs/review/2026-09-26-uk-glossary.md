@@ -80,7 +80,7 @@ The `value` fields of form options stay in English.
 ## Kept in English on purpose
 
 - Client testimonial quotes (real quotes). Only the `context` labels are translated.
-- Brand, product and system names, company names, people's names (in Latin script), `_note`, `_budgets` and `_source`.
+- Brand, product and system names, company names, foreign people's names (Alexander Karl) in Latin script, `_note`, `_budgets` and `_source`. Ukrainian team members are written in Cyrillic on UK pages (owner, 2026-09-26): Софія Забродська, Вадим-Марко Груден, Олександр Руденко (team block, partner block, blog-card authors).
 - URLs, image paths and icons.
 - Blog `href`s. The linked articles are English, but their titles and excerpts are translated on the cards.
 
