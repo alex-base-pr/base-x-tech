@@ -21,7 +21,7 @@
     "items": [
       {
         "title": "Audit & Maßnahmenliste",
-        "description": "Probleme nach Bereich gruppiert und nach Wirkung, Aufwand und Sicherheit bewertet.",
+        "description": "Probleme nach Bereich gruppiert und nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet.",
         "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
       },
       {
@@ -142,7 +142,7 @@
     "steps": [
       {
         "title": "Audit & Priorisierung",
-        "description": "Wir gehen den gesamten Funnel durch und bewerten jedes Problem nach Wirkung, Aufwand und Sicherheit, damit die Reihenfolge der Arbeit kein Ratespiel ist."
+        "description": "Wir gehen den gesamten Funnel durch und bewerten jedes Problem nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit, damit die Reihenfolge der Arbeit kein Ratespiel ist."
       },
       {
         "title": "Umfang abstimmen",
@@ -182,7 +182,7 @@
     "items": [
       {
         "q": "Was umfasst ein CRO-Audit?",
-        "a": "Wir gehen den gesamten Funnel durch: Startseite, Kategorie- und Produktseiten, Warenkorb, Checkout, mobile Ansicht, Ladezeit und alles, was Ihr Analytics-Setup erfasst oder eben nicht erfasst. Jedes Problem wird nach Bereich gruppiert und nach Wirkung, Aufwand und Sicherheit bewertet – Sie erhalten also eine priorisierte Liste statt loser Beobachtungen."
+        "a": "Wir gehen den gesamten Funnel durch: Startseite, Kategorie- und Produktseiten, Warenkorb, Checkout, mobile Ansicht, Ladezeit und alles, was Ihr Analytics-Setup erfasst oder eben nicht erfasst. Jedes Problem wird nach Bereich gruppiert und nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet – Sie erhalten also eine priorisierte Liste statt loser Beobachtungen."
       },
       {
         "q": "Setzen Sie die Änderungen um oder empfehlen Sie sie nur?",
@@ -190,7 +190,7 @@
       },
       {
         "q": "Wie entscheiden Sie, was zuerst behoben wird?",
-        "a": "Jede Hypothese wird nach Wirkung, Aufwand und Sicherheit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht vorausgesetzt."
+        "a": "Jede Hypothese wird nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht vorausgesetzt."
       },
       {
         "q": "Haben wir genug Traffic für A/B-Tests?",
