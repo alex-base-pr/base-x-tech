@@ -104,7 +104,7 @@
       },
       {
         "title": "Beim Abgleich ist der Bestand schon veraltet",
-        "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und gleichen ab, was ein Abgleich verpasst hat."
+        "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und holen nach, was ein Abgleich verpasst hat."
       },
       {
         "title": "Für Ihr ERP gibt es keine Shopify-App",
