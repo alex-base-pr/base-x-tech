@@ -24,6 +24,12 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 | cart | кошик | |
 | configurator | конфігуратор | |
 | variants / options | варіанти / опції | |
+| made-to-order | на замовлення | Not «під замовлення» (a calque of «под заказ»). Added in proofread 2026-09-26 |
+| in-house platform | власна платформа | Not «самописна» (slang). Added in proofread |
+| under real traffic / volume | під реальним навантаженням | Not «під реальним трафіком». Added in proofread |
+| your contact (person) | ваша контактна особа | Not «ваш контакт» (calque). Added in proofread |
+| takes N weeks (duration) | триває | Not «займає» / «зайняв». Added in proofread |
+| growing catalogue | каталог, що зростає | One form on every page. Added in proofread |
 | headless | headless (headless-вітрина) | |
 | wholesale / retail | опт / роздріб | |
 | B2B company accounts | B2B-акаунти компаній | |
@@ -41,7 +47,8 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 | impact, effort and confidence | ефект, зусилля та впевненість | |
 | design system / wireframes / prototype | дизайн-система / вайрфрейми / прототип | |
 | Web Design | Вебдизайн | One word, per current orthography |
-| Creative Direction | Креативний напрям | |
+| Creative Direction | Креативний напрям | Proofread flag: «напрям» reads as "trend" rather than a service. «Креативна дирекція» or «Креативна концепція» may fit better. Left for the team to decide |
+| art direction | арт-дирекція | Not «арт-дирекшн». Added in proofread |
 | e-commerce | е-комерція | Cyrillic "е" |
 | AI | ШІ | |
 | Discuss Your Project | Обговорити проєкт | |
@@ -64,6 +71,7 @@ Number and price formatting follows Ukrainian style:
 - "10M+" is written "10 млн+"
 - "$1,999" is written "1 999 $" and "€1,999" is written "1 999 €", with non-breaking spaces
 - the budget bands read "до 5 тис. €", "5–15 тис. €" and so on
+- non-breaking spaces go between the number and "млн" / "тис." and before the currency sign. The proofread on 2026-09-26 added these, because they were missing in "10 млн+", "1 млн", "3 млн $" and the budget bands
 
 The `value` fields of form options stay in English.
 
