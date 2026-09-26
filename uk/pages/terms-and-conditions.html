@@ -1,63 +1,51 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
+<%# Ukrainian terms, design v2 shell (like pages/terms-and-conditions.html). Legal text unchanged from the pre-v2 page; legal-entity block added 2026-09-26. %>
 <%- include('layout/head-alt.ejs', {
   title: "Умови та положення | BaseX-Tech",
+  v2: true,
   description: "Ознайомтеся з умовами, які діють під час використання сайту Base X Tech, надсилання запиту на проєкт або замовлення послуг дизайну і розробки.",
-  hrefLangCode: "en",
-  hrefLangLink: "https://base-xtech.com/pages/terms-and-conditions/",
-  hreflangDefault: "https://base-xtech.com/uk/pages/terms-and-conditions/"
+  hreflangs: [
+    { lang: 'en', href: 'https://base-xtech.com/pages/terms-and-conditions/' },
+    { lang: 'uk', href: 'https://base-xtech.com/uk/pages/terms-and-conditions/' },
+    { lang: 'x-default', href: 'https://base-xtech.com/pages/terms-and-conditions/' }
+  ]
 }) %>
-<body class="locale-ua">
-  <%- include('layout/noscript.ejs') %>
-  <%- include('layout/header-alt-ua.ejs') %>
-  <%- include('layout/drawer/nav-ua.ejs') %>
-  <%- include('layout/drawer/form-ua.ejs') %>
+<%- include('layout/v2/shell-top.ejs', { lang: 'uk' }) %>
+  <main id="terms-and-conditions" class="v2-main v2-legal">
+    <header class="v2-legal__head">
+      <p class="v2-tag">Юридична інформація</p>
+      <h1 class="v2-h-l">Умови та положення</h1>
+    </header>
+    <article class="v2-legal__body">
+          <h2>Хто керує цим сайтом</h2>
+          <p>Сайт належить компанії Base X Tech Ltd, зареєстрованій в Англії та Уельсі, номер компанії 16134538. Зареєстрована адреса: 27 Old Gloucester Street, London WC1N 3AX, United Kingdom. Контакт: <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
 
-    <main>
-      <section class="section section-page locale-ua">
-        <header>
-          <div class="container">
-            <h1 class="up">Умови та положення</h1>
-          </div>
-        </header>
-      </section>
-
-      <section class="section section-content locale-ua">
-        <div class="container">
-        <article>
-          <h3 class="title up def">Згода з правилами</h3>
+          <h2>Згода з правилами</h2>
           <p>Ласкаво просимо на base-xtech.com. Використовуючи цей вебсайт, ви погоджуєтеся дотримуватися наступних умов користування, які разом з нашою Політикою конфіденційності регулюють відносини між вами та Base X Tech щодо цього сайту.</p>
           <p>Якщо ви не погоджуєтеся з будь-якою частиною цих умов, будь ласка, не використовуйте наш вебсайт.
             <br>— Термін “Base X”, “Base X Tech”, “ми” або “нас” відноситься до власника вебсайту.
             <br>— Термін “ви” відноситься до користувача або відвідувача нашого вебсайту.</p>
 
-          <h3 class="title up def">Використання вебсайту</h3>
+          <h2>Використання вебсайту</h2>
 
           <p>Використання цього вебсайту підпорядковується наступним умовам:
             <br>— Зміст цього вебсайту призначений лише для загального ознайомлення і використання і може змінюватися без попереднього повідомлення.
             <br>— Цей сайт використовує файли cookie для відстеження ваших налаштувань перегляду. Якщо ви дозволяєте використання cookie, наступна особиста інформація може зберігатися та використовуватися третіми сторонами, такими як Google Analytics.</p>
 
-          <h3 class="title up def">Інтелектуальна власність</h3>
+          <h2>Інтелектуальна власність</h2>
           <p>— Матеріали цього сайту є власністю або ліцензовані нам, включаючи дизайн, структуру, зовнішній вигляд та графіку.
             <br>— Відтворення заборонене, за винятком випадків, передбачених повідомленням про авторські права.
             <br>— Всі торгові марки, що не належать оператору або не ліцензовані ним, вказані на сайті.
             <br>— Несанкціоноване використання цього сайту може призвести до вимог відшкодування збитків та/або бути кримінальним правопорушенням.</p>
 
-          <h3 class="title up def">Зовнішні посилання</h3>
+          <h2>Зовнішні посилання</h2>
           <p>— Сайт може містити посилання на сторонні вебсайти для додаткової інформації.
             <br>— Ці посилання не є рекомендацією, і ми не відповідаємо за зміст зовнішніх ресурсів.</p>
 
-            <h3 class="title up def">Юридична відповідність</h3>
+            <h2>Юридична відповідність</h2>
             <p>Ваше користування цим вебсайтом та будь-які спори, що виникають у зв'язку з цим, регулюються законодавством України.</p>
-          </article>
-        </div>
-      </section>
-
-      <%- include('layout/section/cta-uk.ejs') %>
-    </main>
-
-    <%- include('layout/footer-ua.ejs') %>
-
-    <script type="module" src="/src/main.js"></script>
-</body>
+    </article>
+  </main>
+<%- include('layout/v2/shell-bottom.ejs', { lang: 'uk' }) %>
 </html>

@@ -1,41 +1,31 @@
 <!DOCTYPE html>
 <html lang="uk">
+<%# Ukrainian 404, design v2 shell (like 404.html). Error pages are noindex and have no language cluster (scripts/seo-plugin.js). %>
 <%- include('layout/head-alt.ejs', {
   title: "404 - Сторінку не знайдено | BaseX-Tech",
   description: "Сторінка, яку ви шукаєте, не існує.",
-  hrefLangCode: "en",
-  hrefLangLink: "https://base-xtech.com/404/",
-  hreflangDefault: "https://base-xtech.com/uk/404/"
+  v2: true
 }) %>
-
-<body class="body-404 locale-ua">
-  <%- include('layout/noscript.ejs') %>
-  <%- include('layout/header-alt-ua.ejs') %>
-
-  <%- include('layout/drawer/nav-ua.ejs') %>
-  <%- include('layout/drawer/form-ua.ejs') %>
-
-  <main class="page-404">
-    <div class="container">
-      <div class="page-404__content">
-        <div class="page-404__info">
-          <h1 class="page-404__title">Сторінку не знайдено</h1>
-          <p class="page-404__subtitle">Це не та сторінка, яку ви шукаєте</p>
-          <a href="/uk/" class="btn btn--primary"><span>На головну</span><i arrow-right><span></span></i></a>
-        </div>
-        <div class="page-404__image">
-          <img src="/images/404.png" alt="404">
-        </div>
-      </div>
+<%- include('layout/v2/shell-top.ejs', { lang: 'uk' }) %>
+  <main id="page-404" class="v2-main v2-404">
+    <p class="v2-tag">Помилка 404</p>
+    <h1 class="v2-h-l"><span>Сторінку не знайдено.</span> <span class="v2-muted">Посилання могло застаріти або містити помилку.</span></h1>
+    <div class="v2-404__actions">
+      <a href="/uk/" class="v2-btn"><span class="v2-btn__label">На головну</span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></a>
     </div>
+    <nav class="v2-404__links" aria-label="Популярні сторінки">
+      <p>Або перейдіть одразу до:</p>
+      <ul>
+        <li><a href="/uk/pages/shopify-development/">Розробка на Shopify</a></li>
+        <li><a href="/uk/pages/service/custom-shopify-integrations/">Інтеграції Shopify</a></li>
+        <li><a href="/uk/pages/service/shopify-migration-service/">Міграція на Shopify</a></li>
+        <li><a href="/uk/pages/service/custom-shopify-app-development/">Додатки для Shopify</a></li>
+        <li><a href="/uk/pages/service/custom-web-design-services/">Вебдизайн</a></li>
+        <li><a href="/uk/pages/service/conversion-rate-optimization/">Оптимізація конверсії (CRO)</a></li>
+        <li><a href="/uk/pages/complex-solutions/">Комплексні рішення (DACH)</a></li>
+        <li><a href="/blog/">Блог (англійською)</a></li>
+      </ul>
+    </nav>
   </main>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const header = document.querySelector('.site-header');
-      if (header) header.classList.add('in-scroll');
-    });
-  </script>
-  <script type="module" src="/src/main.js"></script>
-</body>
+<%- include('layout/v2/shell-bottom.ejs', { lang: 'uk' }) %>
 </html>

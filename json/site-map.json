@@ -21,6 +21,8 @@
     { "path": "/uk/pages/complex-solutions/", "file": "uk/pages/complex-solutions.html", "lang": "uk", "role": "index", "group": "service-extra", "name": "Комплексні рішення (DACH)", "en": "/pages/complex-solutions/", "faq": true },
     { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
     { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
+    { "path": "/uk/pages/privacy-policy/", "file": "uk/pages/privacy-policy.html", "lang": "uk", "role": "index", "group": "legal", "name": "Політика конфіденційності", "en": "/pages/privacy-policy/" },
+    { "path": "/uk/pages/terms-and-conditions/", "file": "uk/pages/terms-and-conditions.html", "lang": "uk", "role": "index", "group": "legal", "name": "Умови та положення", "en": "/pages/terms-and-conditions/" },
     { "path": "/de/impressum/", "file": "de/impressum.html", "lang": "de", "role": "index", "group": "legal", "name": "Impressum" },
     { "path": "/de/datenschutz/", "file": "de/datenschutz.html", "lang": "de", "role": "index", "group": "legal", "name": "Datenschutzerklärung", "en": "/pages/privacy-policy/" },
 

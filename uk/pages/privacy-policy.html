@@ -1,35 +1,31 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
+<%# Ukrainian privacy policy, design v2 shell (like pages/privacy-policy.html). Legal text unchanged from the pre-v2 page; legal-entity block (data controller) added 2026-09-26. %>
 <%- include('layout/head-alt.ejs', {
   title: "Політика конфіденційності | BaseX-Tech",
+  v2: true,
   description: "Дізнайтеся, як Base X Tech збирає, зберігає та захищає ваші персональні дані під час використання сайту, заповнення форми чи співпраці з нами.",
-  hrefLangCode: "en",
-  hrefLangLink: "https://base-xtech.com/pages/privacy-policy/",
-  hreflangDefault: "https://base-xtech.com/uk/pages/privacy-policy/"
+  hreflangs: [
+    { lang: 'en', href: 'https://base-xtech.com/pages/privacy-policy/' },
+    { lang: 'uk', href: 'https://base-xtech.com/uk/pages/privacy-policy/' },
+    { lang: 'de', href: 'https://base-xtech.com/de/datenschutz/' },
+    { lang: 'x-default', href: 'https://base-xtech.com/pages/privacy-policy/' }
+  ]
 }) %>
-<body class="locale-ua">
-  <%- include('layout/noscript.ejs') %>
-
-  <%- include('layout/header-alt-ua.ejs') %>
-  <%- include('layout/drawer/nav-ua.ejs') %>
-  <%- include('layout/drawer/form-ua.ejs') %>
-
-    <main>
-      <section class="section section-page">
-        <header>
-          <div class="container">
-            <h1 class="up">Політика конфіденційності</h1>
-          </div>
-        </header>
-      </section>
-
-      <section class="section section-content">
-        <div class="container">
-        <article>
-          <h3 class="title up def">Вступ</h3>
+<%- include('layout/v2/shell-top.ejs', { lang: 'uk' }) %>
+  <main id="privacy-policy" class="v2-main v2-legal">
+    <header class="v2-legal__head">
+      <p class="v2-tag">Юридична інформація</p>
+      <h1 class="v2-h-l">Політика конфіденційності</h1>
+    </header>
+    <article class="v2-legal__body">
+          <h2>Вступ</h2>
           <p>Вітаємо на сайті Base X Tech. Наша політика конфіденційності пояснює, як ми збираємо, захищаємо та розкриваємо інформацію, отриману в результаті використання вами нашого вебсайту.</p> <p>Користуючись нашим вебсайтом, ви погоджуєтесь на збір і використання інформації відповідно до цієї політики.</p>
 
-          <h3 class="title up def">Типи даних, які ми збираємо</h3>
+          <h2>Контролер даних</h2>
+          <p>Сайт належить компанії Base X Tech Ltd, зареєстрованій в Англії та Уельсі, номер компанії 16134538, яка є контролером персональних даних, описаних у цій політиці. Зареєстрована адреса: 27 Old Gloucester Street, London WC1N 3AX, United Kingdom. Контакт: <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
+
+          <h2>Типи даних, які ми збираємо</h2>
           <p><strong>Особисті дані</strong>
             <br>Під час використання нашого вебсайту ми можемо попросити вас добровільно надати певну особисту інформацію ("Особисті дані"), щоб покращити ваш досвід користування. Це може включати:</p>
           <p>Ім'я
@@ -63,7 +59,7 @@
               <br>— Правова основа: Згода, законний інтерес.
             </p>
 
-            <h3 class="title up def">Зберігання даних</h3>
+            <h2>Зберігання даних</h2>
             <ul class="default shift-left"><li>Ми зберігаємо особисті дані стільки, скільки це необхідно для дотримання законодавства, вирішення спорів та виконання угод.</li> </ul>
             <p>— Деякі дані можуть бути видалені користувачами, тоді як інші дані зберігаються протягом тривалих періодів, коли це необхідно для:</p>
             <ul class="default shift">
@@ -74,7 +70,7 @@
             </ul>
 
 
-            <h3 class="title up def">Розкриття даних</h3>
+            <h2>Розкриття даних</h2>
             <p>— Правоохоронні органи
               <ul class="default shift-left">
                 <li>Ми можемо розкривати особисті дані, якщо це вимагається законом або запитом державних органів.</li>
@@ -99,10 +95,10 @@
                 </ul>
               </p>
 
-            <h3 class="title up def">Безпека даних</h3>
+            <h2>Безпека даних</h2>
             <p>Ми надаємо пріоритет безпеці даних, але не можемо гарантувати абсолютний захист, оскільки жоден метод електронного зберігання не є 100% безпечним.</p>
 
-            <h3 class="title up def">Ваші права відповідно до GDPR</h3>
+            <h2>Ваші права відповідно до GDPR</h2>
             <p>Якщо ви проживаєте в Європейському Союзі (ЄС) або Європейській економічній зоні (ЄЕЗ), ви маєте такі права:</p>
             <ul class="default shift-left">
               <li>Доступ – Запитати деталі про ваші особисті дані.</li>
@@ -112,26 +108,18 @@
               <li>Скарга – Подати скаргу до органу захисту даних.</li>
             </ul>
 
-            <h3 class="title up def">Посилання на інші вебсайти</h3>
+            <h2>Посилання на інші вебсайти</h2>
             <p>Наш вебсайт може містити посилання на сайти третіх сторін. Ми не несемо відповідальності за їхній вміст, політику конфіденційності або практики. Рекомендуємо ознайомитися з їхніми політиками перед використанням.</p>
 
-            <h3 class="title up def">Конфіденційність дітей</h3>
+            <h2>Конфіденційність дітей</h2>
             <p>Наш вебсайт не призначений для осіб молодше 18 років. Якщо ми дізнаємося про дані, зібрані від неповнолітніх без згоди батьків, ми їх видалимо.</p>
 
-            <h3 class="title up def">Зміни до цієї політики конфіденційності</h3>
+            <h2>Зміни до цієї політики конфіденційності</h2>
             <p>Ми можемо періодично оновлювати цю політику конфіденційності. Зміни набирають чинності після їх публікації на цій сторінці. Користувачі будуть повідомлені електронною поштою або оголошеннями на вебсайті.</p>
 
-            <h3 class="title up def">Зв'яжіться з нами</h3>
+            <h2>Зв'яжіться з нами</h2>
             <p>Якщо у вас є питання щодо цієї політики конфіденційності, будь ласка, зв'яжіться з нами за адресою hello@base-xtech.com.</p>
-          </article>
-        </div>
-      </section>
-
-      <%- include('layout/section/cta-uk.ejs') %>
-    </main>
-
-    <%- include('layout/footer-ua.ejs') %>
-
-    <script type="module" src="/src/main.js"></script>
-</body>
+    </article>
+  </main>
+<%- include('layout/v2/shell-bottom.ejs', { lang: 'uk' }) %>
 </html>
