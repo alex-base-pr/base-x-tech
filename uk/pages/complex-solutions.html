@@ -16,5 +16,6 @@
   v2: true,
   hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
 }) %>
-<%- include('layout/pages/complex-v2-body.ejs', { c, lang: 'uk' }) %>
+<%# teamDach false: on UK the contact is Vadym-Marko (partner block), so Alexander is not listed first in "Who you'll talk to" (owner, 2026-09-26). %>
+<%- include('layout/pages/complex-v2-body.ejs', { c, lang: 'uk', teamDach: false }) %>
 </html>

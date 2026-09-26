@@ -117,3 +117,8 @@ The `value` fields of form options stay in English.
 - **Privacy link goes to the EN page.** `shell.uk.json` has no `footer.privacyHref` or `form.privacyHref`, because the EN twin has none. As a result the "Політика конфіденційності" link opens the EN privacy page. `uk/pages/privacy-policy.html` exists; adding `privacyHref: "/uk/pages/privacy-policy/"` (like DE) is a one-line follow-up.
 - **Currency.** The offer price keeps the currency from EN: $ on integrations and migration, € on Complex. A Ukrainian audience might be better served by one currency, or by UAH. That is a business call and I have not changed it.
 - **People's names in Latin script.** Alexander Karl, Sofiia Zabrodska and the others stay in Latin inside Ukrainian sentences, per the brief. The Ukrainian team members could be written in Cyrillic (Софія Забродська, Вадим-Марко Груден, Олександр Руденко) if preferred.
+
+## Owner decisions applied 2026-09-26 (second pass)
+
+- **Creative Direction → «Арт-дирекція»** (web-design card title, project tag, meta description).
+- **UK Complex contact.** On `/uk/pages/complex-solutions/` the partner block names **Вадим-Марко Груден, CBDO, Base X Tech** as the Ukrainian-language contact for complex projects. Text-only (no `photo`), no in-person line, no bio: `partner.inPerson`, `bio`, `photo` and `photoAlt` are deliberately absent from `complex-solutions.uk.json` (the only intended key difference from the EN twin). The FAQ "Who will we be talking to?" names him too. The UK wrapper passes `teamDach: false`, so "З ким ви говоритимете" lists Sofiia and Vadym-Marko only. EN and DE keep Alexander Karl. The page still offers DACH integrations and keeps the German case study; the menu label «Складні системи (DACH)» is unchanged.
