@@ -1,0 +1,254 @@
+{
+  "_source": "Figma 'Home Page' 693:1781, frame Home (desktop 1440) + Mobile — approved home copy. meta.* and stats.footnote are not in the frame (see comments in the keys).",
+  "meta": {
+    "title": "Shopify-Agentur für Entwicklung & Webdesign | Base X Tech",
+    "description": "Wir entwickeln die Systeme hinter modernem E-Commerce: individuelle Shopify-Entwicklung, Apps, Integrationen und KI-Automatisierung – bis zum Livegang."
+  },
+  "hero": {
+    "title": [
+      "Wir entwickeln",
+      "die Systeme"
+    ],
+    "titleMuted": [
+      "hinter modernem",
+      "E-Commerce"
+    ],
+    "sub": "Shopify-Entwicklung, individuelle Apps und Integrationen für Marken, denen Standardlösungen zu eng geworden sind.",
+    "focus": [
+      "Shopify-Apps",
+      "KI-Automatisierung",
+      "Shopify-Entwicklung"
+    ],
+    "image": "/images/v2/home-hero-klott.webp",
+    "imageAlt": "Der Shopify-Shop der Modemarke Klott auf einem Desktop-Monitor",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "label": "Unsere Leistungen",
+    "title": "Alles, um modernen E-Commerce",
+    "titleMuted": "aufzubauen, zu skalieren",
+    "titleEnd": "und zu automatisieren.",
+    "items": [
+      {
+        "title": "Design & Nutzererlebnis",
+        "image": "/images/v2/home-cap-design.webp",
+        "link": "/pages/service/custom-web-design-services/",
+        "services": [
+          {
+            "name": "Webdesign",
+            "href": "/pages/service/custom-web-design-services/"
+          },
+          {
+            "name": "Conversion-Optimierung (CRO)",
+            "href": "/pages/service/conversion-rate-optimization/"
+          }
+        ]
+      },
+      {
+        "title": "Shopify-Entwicklung",
+        "image": "/images/v2/home-cap-shopify.webp",
+        "link": "/pages/shopify-development/",
+        "services": [
+          {
+            "name": "Shopify-Entwicklung",
+            "href": "/pages/shopify-development/"
+          },
+          {
+            "name": "Shopify-Migration",
+            "href": "/pages/service/shopify-migration-service/"
+          }
+        ]
+      },
+      {
+        "title": "KI & Automatisierung",
+        "image": "/images/v2/home-cap-ai.webp",
+        "link": "/pages/service/custom-shopify-integrations/",
+        "services": [
+          {
+            "name": "Shopify-Integrationen",
+            "href": "/pages/service/custom-shopify-integrations/"
+          },
+          {
+            "name": "Individuelle Shopify-Apps",
+            "href": "/pages/service/custom-shopify-app-development/"
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "label": "Das sagen unsere Kunden:",
+    "items": [
+      {
+        "quote": "Base X went through each task in detail to ensure the final product aligned with our vision.",
+        "author": "Stealth Startup US"
+      },
+      {
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "author": "VT Advantec"
+      },
+      {
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project.",
+        "author": "Lili Mager"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "button": "Projekt besprechen",
+    "items": [
+      {
+        "category": "Hardware-Start-up",
+        "title": "NAYA.TECH",
+        "text": "Ein individueller Shopify-Auftritt für einen Honoree der CES Innovation Awards: eine eigens gestaltete Storefront mit einem Produktkonfigurator, der auf ein stark modulares Hardwareprodukt zugeschnitten ist.",
+        "tags": [
+          "individuelle Shopify-Entwicklung",
+          "Konfigurator-Entwicklung"
+        ],
+        "badges": [
+          "Honoree der CES Innovation Awards",
+          "Über 3 Mio. US-Dollar Kapital eingeworben"
+        ],
+        "image": "/images/v2/home-project-naya.webp",
+        "imageAlt": "Modulare Tastatur und Trackball-Module von Naya aus dem Naya-Shop auf Shopify",
+        "link": "/blog/shopify-product-configurator-naya-tech/",
+        "linkLabel": "Case Study zu NAYA.TECH lesen"
+      },
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "Konzeption und Entwicklung eines der fortschrittlichsten Shopify-Konfiguratoren für maßgefertigte Autofußmatten – vollständig ins ERP integriert und ausgelegt auf Millionen möglicher Produktkombinationen.",
+        "tags": [
+          "individuelle Shopify-Entwicklung",
+          "Konfigurator-Entwicklung",
+          "ERP-Entwicklung und -Integration"
+        ],
+        "badges": [
+          "10 Mio.+ mögliche Konfigurationen"
+        ],
+        "image": "/images/v2/home-project-primeeva.webp",
+        "link": null,
+        "imageAlt": "Konfigurator für maßgefertigte Autofußmatten von Prime EVA auf Shopify, auf einem Desktop-Monitor"
+      },
+      {
+        "category": "Lifestyle-Marke",
+        "title": "Gunia",
+        "text": "Eine individuelle Shopify-Storefront, die den Premium-Anspruch der Marke transportiert und ein reibungsloses Einkaufserlebnis bietet – über Kollektionen und redaktionelle Inhalte hinweg.",
+        "tags": [
+          "individuelle Shopify-Entwicklung",
+          "Performance"
+        ],
+        "badges": [],
+        "image": "/images/v2/home-project-gunia.webp",
+        "imageAlt": "Kampagnenbild der Marke Gunia: Porträt mit Blütenblättern",
+        "link": "https://guniaproject.com/",
+        "linkLabel": "Zum Shop von Gunia"
+      }
+    ]
+  },
+  "approach": {
+    "label": "Unser Ansatz",
+    "title": "Technologie ändert sich schnell. Unser Ansatz nicht.",
+    "lead": "Wir entwickeln Systeme, die auch lange nach dem Livegang nützlich, skalierbar und wartbar bleiben.",
+    "items": [
+      {
+        "title": "Gründlich statt schnell geflickt",
+        "description": "Wir bauen für langfristige Skalierbarkeit, nicht für schnelle Notlösungen. Komplexe Probleme verdienen durchdachte Lösungen.",
+        "icon": "compass"
+      },
+      {
+        "title": "Pragmatische Innovation",
+        "description": "Neue Werkzeuge (KI, Automatisierung, Headless) setzen wir dort ein, wo sie sich für Ihren Shop auszahlen – nicht, weil sie neu sind.",
+        "icon": "wand"
+      },
+      {
+        "title": "Langfristig gedacht",
+        "description": "Sauberer Code, Dokumentation und Monitoring vom ersten Tag an – damit Ihr Team oder unseres jahrelang darauf aufbauen kann.",
+        "icon": "timer"
+      }
+    ],
+    "trustedBy": "Diese Marken vertrauen uns"
+  },
+  "articles": {
+    "label": "Ausgewählte Artikel",
+    "more": "Weitere Artikel",
+    "items": [
+      {
+        "title": "Neu in Shopify 2026: die Spring Edition im Überblick",
+        "excerpt": "Shopify Spring ’26 bringt mehr als 150 Updates. Das meiste davon kann warten. Einige Punkte – die EU-Vorgaben zum Widerruf, der…",
+        "author": "Vadym-Marko Hruden",
+        "date": "2026-06-19",
+        "dateLabel": "19. Juni 2026",
+        "href": "/blog/whats-new-shopify-2026-spring-edition/"
+      },
+      {
+        "title": "Nova-Poshta-Integration für Shopify: Nova Poshta Connect im Überblick",
+        "excerpt": "Ukrainische Shopify-Shops mussten Nova-Poshta-Versandscheine (TTN) bisher manuell erstellen – außerhalb von Shopify, einen nach dem…",
+        "author": "Oleksandr Rudenko",
+        "date": "2026-06-16",
+        "dateLabel": "16. Juni 2026",
+        "href": "/blog/nova-poshta-shopify-integration-connect-app/"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "60+",
+        "label": "Zufriedene Kunden"
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "roadmap": {
+    "label": "Ablauf",
+    "title": "Von der Idee zum Livegang",
+    "steps": [
+      {
+        "title": "Verstehen",
+        "description": "Wir verstehen das Geschäft, benennen die Herausforderungen und loten die Chancen aus – bevor die Arbeit beginnt."
+      },
+      {
+        "title": "Planen",
+        "description": "Wir stimmen Umfang, Prioritäten, Zeitplan und technische Ausrichtung ab und erstellen daraus einen klaren Fahrplan."
+      },
+      {
+        "title": "Gestalten & Entwickeln",
+        "description": "Wir gestalten, entwickeln und verfeinern die Lösung schrittweise – bei transparenter Kommunikation."
+      },
+      {
+        "title": "Prüfen",
+        "description": "Wir testen jede Funktion, beheben Fehler und stellen sicher, dass das Produkt bereit für den Livegang ist."
+      },
+      {
+        "title": "Livegang",
+        "description": "Wir bringen das Projekt live, übergeben die Dokumentation und stellen sicher, dass alles funktioniert."
+      },
+      {
+        "title": "Betreuung",
+        "description": "Wir betreuen das Produkt nach dem Livegang, sammeln Feedback und entwickeln es mit Ihnen weiter."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Sie haben eine komplexe Herausforderung?",
+    "titleMuted": "Lösen wir sie gemeinsam.",
+    "body": "Ob individueller Shopify-Shop, internes Tool oder KI-gestützter Workflow: Wir helfen Ihnen, die passende Lösung zu finden.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/home-cta-klott.webp",
+      "/images/v2/home-project-naya.webp",
+      "/images/v2/home-cta-gunia.webp"
+    ]
+  }
+}

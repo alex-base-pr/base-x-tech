@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "title": "Shopify-Entwicklung & individuelle Shops | Base X Tech",
+    "description": "Shopify-Entwicklung für Shops, die mehr brauchen als ein Theme: individueller Checkout, Produktkonfiguratoren, Headless, B2B und B2C in einem System."
+  },
+  "hero": {
+    "tag": "Shopify-Entwicklung",
+    "title": [
+      "Shopify-Entwicklung",
+      "für Shops, die mehr",
+      "brauchen als ein Theme"
+    ],
+    "lead": "Individueller Checkout, Konfiguratoren, B2B und B2C in einem System. Wenn die Umsetzung der schwierige Teil ist, übernehmen wir sie.",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Unsere Leistungen",
+    "title": "Alles, wofür ein Theme",
+    "titleMuted": "nie gebaut wurde.",
+    "items": [
+      {
+        "title": "Shop-Aufbau & Livegang",
+        "description": "Neue Shops für einen Markt oder für mehrere Länder in der EU.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Theme-Entwicklung",
+        "description": "Individuelle Themes und tiefgreifende Anpassungen an Ihrem bestehenden Theme.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "title": "Individueller Checkout",
+        "description": "Checkout-Logik, Validierungen und Zahlungsregeln auf Shopify Plus.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "Konfiguratoren",
+        "description": "Produktkonfiguratoren für Optionen, Varianten und Sortimente, die auf Bestellung gefertigt werden.",
+        "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "title": "Headless-Storefronts",
+        "description": "Shopify als Commerce-Backend hinter einem Frontend, das Sie vollständig selbst steuern.",
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp"
+      },
+      {
+        "title": "B2B & Großhandel",
+        "description": "Händlerkonten, Preislisten und Zahlungsbedingungen parallel zu Ihrem Endkunden-Shop.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "Produktkonfigurator, direkt in das native Shop-Frontend integriert.",
+        "tags": [
+          "Konfigurator",
+          "ERP"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10 Mio.+ mögliche Konfigurationen"
+      },
+      {
+        "category": "Schmuck",
+        "title": "Innan Jewellery",
+        "text": "Individuelles Theme, Anfragelogik und mehrsprachiger Shop für die EU.",
+        "tags": [
+          "Theme-Entwicklung",
+          "Schmuck"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Case Study zu Innan Jewellery lesen",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Wohnaccessoires",
+        "title": "Gunia",
+        "text": "Theme-Erweiterung und Migration für eine ukrainische Luxusmarke für Wohnaccessoires.",
+        "tags": [
+          "Plattformwechsel",
+          "Wohnaccessoires"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Das Theme ist schon länger",
+    "titleMuted": "nicht mehr die Antwort.",
+    "items": [
+      {
+        "title": "Ihr Checkout braucht Regeln, die Shopify nicht bietet",
+        "description": "Staffelpreise, Mindestbestellwerte, B2B-Konditionen oder Bundle-Logik, die Apps nur halb abdecken. Wir bauen die Regeln direkt in den Checkout, damit sie bei jeder Bestellung greifen."
+      },
+      {
+        "title": "Ein Shop soll Großhandel und Endkunden bedienen",
+        "description": "Händler brauchen eigene Preise, Konditionen und ein eigenes Sortiment, und Endkunden sollen davon nichts sehen. Wir richten einen Shop ein, der beides abdeckt – ohne zweites Backend."
+      },
+      {
+        "title": "Ihr Produkt muss vor dem Kauf konfiguriert werden",
+        "description": "Optionen, Abhängigkeiten und Preise, die sich mit jeder Auswahl ändern. Wir entwickeln Konfiguratoren, die Käufern genau zeigen, was sie bestellen, und produktionsreife Daten mit der Bestellung übergeben."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify-Entwicklung",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      },
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Von der Klärung des Umfangs bis zur Betreuung nach dem Livegang.",
+    "steps": [
+      {
+        "title": "Umfang & Schätzung",
+        "description": "Wir klären, was der Shop tatsächlich braucht und was er kosten wird – bevor jemand Code schreibt."
+      },
+      {
+        "title": "Planung & Architektur",
+        "description": "Wir legen Datenmodell und Integrationen fest und entscheiden, wo individueller Code wirklich nötig ist und nicht nur bequem."
+      },
+      {
+        "title": "Entwicklung & Prüfung",
+        "description": "Wir entwickeln in prüfbaren Etappen, damit Sie den Shop schon vor dem Livegang funktionieren sehen – nicht erst eine Demo am Ende."
+      },
+      {
+        "title": "Livegang & Betreuung",
+        "description": "Wir bringen den Shop live, beobachten ihn bei echtem Traffic und bleiben nach dem Livegang dran, statt nur die Zugangsdaten zu übergeben."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "60+",
+        "label": "Zufriedene Kunden"
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Können Sie den Shopify-Checkout anpassen?",
+        "a": "Ja, auf Shopify Plus. Checkout-Validierung, Rabattlogik und Versandregeln setzen wir mit Shopify Functions und Checkout Extensions um statt mit Workarounds. In den Standardtarifen sind die Möglichkeiten deutlich enger, und wir sagen Ihnen, welche Ihrer Anforderungen nicht umsetzbar sind, bevor Sie sich auf etwas festlegen."
+      },
+      {
+        "q": "Brauchen wir Shopify Plus?",
+        "a": "Nur für bestimmte Dinge. Plus ist nötig für Checkout-Anpassungen, B2B-Firmenkonten und höhere API-Limits. Wenn keine Ihrer Anforderungen das braucht, reicht meist ein Standardtarif, und das sagen wir Ihnen auch, statt Ihnen das Upgrade zu verkaufen."
+      },
+      {
+        "q": "Können Sie einen Produktkonfigurator auf Shopify entwickeln?",
+        "a": "Ja, das haben wir bereits umgesetzt. Ein in die Storefront integrierter Konfigurator bildet Optionen, Abhängigkeiten und Auftragsfertigung ab, die sich mit Varianten allein nicht darstellen lassen. Prime EVA ist das Beispiel: ein individueller Konfigurator, der direkt im Shopify-Shop läuft statt als nachträglich angebaute App."
+      },
+      {
+        "q": "Kann ein Shop Großhandel und Endkunden bedienen?",
+        "a": "Ja. Shopify B2B bietet Firmenkonten, Preislisten und Zahlungsbedingungen parallel zu Ihrem Endkunden-Sortiment – Sie pflegen also nicht zwei Shops, die mit der Zeit auseinanderlaufen. Wir haben das bereits umgesetzt, auch wenn dieses Kundenprojekt nicht öffentlich ist."
+      },
+      {
+        "q": "Wann lohnt sich Headless Shopify?",
+        "a": "Seltener, als häufig empfohlen wird. Headless lohnt sich, wenn Sie ein Frontend brauchen, das die Theme-Ebene von Shopify nicht leisten kann, oder wenn die Storefront mehr als einen Kanal bedient. Entwicklung und Wartung kosten mehr. Wenn also ein gut gebautes Theme die Aufgabe erfüllt, sagen wir Ihnen das."
+      },
+      {
+        "q": "Können Sie mit unserem bestehenden Theme arbeiten, oder wird alles neu gebaut?",
+        "a": "In der Regel mit Ihrem bestehenden Theme. Wir prüfen, was es tragen kann, erweitern es dort, wo das sinnvoll ist, und empfehlen einen Neuaufbau nur, wenn das Theme gegen Ihre Anforderungen arbeitet. Ein unnötiger Neuaufbau ist das Teuerste an einem Shopify-Projekt."
+      },
+      {
+        "q": "Wie lange dauert eine individuelle Shopify-Entwicklung?",
+        "a": "Die meisten Projekte dauern 4 bis 16 Wochen – je nach Integrationen und danach, wie viel individuell entwickelt statt nur konfiguriert wird. Wir klären Umfang und Aufwand, bevor wir Code schreiben, damit der Zeitplan von Anfang an feststeht."
+      },
+      {
+        "q": "Was passiert nach dem Livegang?",
+        "a": "Wir bleiben dran. Wir beobachten den Shop bei echtem Traffic, beheben, was in den ersten Wochen auftaucht, und halten ihn über die API-Versionswechsel von Shopify hinweg funktionsfähig. Zugangsdaten übergeben und verschwinden – genau dort haben die meisten Probleme angefangen, für deren Behebung man uns später holt."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Webdesign",
+        "href": "/pages/service/custom-web-design-services/"
+      },
+      {
+        "name": "Shopify-Integrationen",
+        "href": "/pages/service/custom-shopify-integrations/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Ihr Shop braucht",
+      "mehr als ein Theme?"
+    ],
+    "body": "Sagen Sie uns, was der Shop können muss, und wir sagen Ihnen, wie wir ihn bauen würden.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}

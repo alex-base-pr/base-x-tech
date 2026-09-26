@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "title": "Conversion-Optimierung für Shopify (CRO) | Base X Tech",
+    "description": "Wir prüfen Ihren Shopify-Shop, bewerten jede Maßnahme nach Wirkung und Aufwand und setzen sie um: Produktseiten, Checkout, Mobilansicht, Ladezeit, Tracking."
+  },
+  "hero": {
+    "tag": "CRO",
+    "title": [
+      "Conversion-Optimierung",
+      "für Shops, bei denen die",
+      "Lösung im Code liegt"
+    ],
+    "lead": "Wir analysieren, priorisieren und setzen die Änderungen dann selbst um. Kein Foliensatz mit Empfehlungen, für den Sie erst jemanden zur Umsetzung finden müssen.",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Unsere Leistungen",
+    "title": "Erkenntnisse, die sich umsetzen lassen –",
+    "titleMuted": "und umgesetzt werden.",
+    "items": [
+      {
+        "title": "Audit & Maßnahmenliste",
+        "description": "Probleme nach Bereich gruppiert und nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "title": "Produktseiten-Optimierung",
+        "description": "Die Seite, die über die meisten Käufe entscheidet, neu aufgebaut rund um die Fragen der Käufer.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Warenkorb & Checkout",
+        "description": "Weniger Schritte und weniger Gründe abzuspringen – zwischen Warenkorb und Zahlung.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "Mobile Optimierung",
+        "description": "Die Ansicht, die die meisten Ihrer Besucher sehen, als eigentliche Hauptansicht behandelt.",
+        "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+      },
+      {
+        "title": "Ladezeit & Core Web Vitals",
+        "description": "Bilder, Skripte und ungenutzte Apps aufgeräumt, bis der Shop ordentlich lädt.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Analytics & Reporting",
+        "description": "GA4-Events, Funnels und Clarity so eingerichtet, dass Sie sehen, was eine Änderung bewirkt hat.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Schmuck",
+        "title": "Innan Jewellery",
+        "text": "Anfrageprozess für Schmuckstücke, die auf Anfrage statt ab Lager verkauft werden.",
+        "tags": [
+          "UX",
+          "UI-Design",
+          "Schmuck"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Case Study zu Innan Jewellery lesen",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Geschenke",
+        "title": "Britische Geschenkmarke",
+        "text": "Konfigurator und Checkout-Strecke für Produkte, die auf Bestellung gefertigt werden.",
+        "tags": [
+          "Konfigurator",
+          "Geschenke"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Case Study zur britischen Geschenkmarke lesen",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "Produktseiten neu aufgebaut für einen Katalog, der ständig wächst.",
+        "tags": [
+          "UX",
+          "UI-Design",
+          "Produktseiten"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10 Mio.+ mögliche Konfigurationen"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Der Traffic kommt. Nur wenig davon",
+    "titleMuted": "konvertiert.",
+    "items": [
+      {
+        "title": "Sie haben Traffic, aber keine Bestellungen",
+        "description": "Besucher kommen, stöbern und gehen wieder. Wir finden heraus, wo und warum sie abspringen – anhand Ihrer Analytics-Daten, Session-Aufzeichnungen und des Shops selbst."
+      },
+      {
+        "title": "Im Checkout gehen zu viele Käufe verloren",
+        "description": "Überraschende Versandkosten, Kontozwang, langsame Schritte. Wir beseitigen, was Käufer im Checkout aufhält, und messen die Wirkung jeder Änderung."
+      },
+      {
+        "title": "Niemand weiß, was eine Änderung gebracht hat",
+        "description": "Änderungen gehen ohne Ausgangswert live, also weiß niemand, was funktioniert hat. Wir richten Tracking und Tests ein, damit jede Änderung ein messbares Ergebnis hat."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify-Entwicklung",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      },
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Vom Audit über die umgesetzte Änderung bis zum gemessenen Ergebnis.",
+    "steps": [
+      {
+        "title": "Audit & Priorisierung",
+        "description": "Wir gehen den gesamten Funnel durch und bewerten jedes Problem nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit, damit die Reihenfolge der Arbeit kein Ratespiel ist."
+      },
+      {
+        "title": "Umfang abstimmen",
+        "description": "Gemeinsam mit Ihnen wählen wir die Quick Wins und die größeren Vorhaben aus und legen vor dem Start fest, woran wir Erfolg messen."
+      },
+      {
+        "title": "Umsetzen & testen",
+        "description": "Wir setzen die Änderungen um und prüfen sie per A/B-Test, wo Ihr Traffic für ein aussagekräftiges Ergebnis reicht."
+      },
+      {
+        "title": "Messen & wiederholen",
+        "description": "Wir berichten, was jede Änderung bewirkt hat, und aktualisieren die Maßnahmenliste, denn CRO ist ein Kreislauf und kein einmaliges Projekt."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "text": "Wir finden die Schwachstellen, ordnen sie nach den Kosten, die sie Ihnen verursachen, und beheben die größten zuerst."
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Was umfasst ein CRO-Audit?",
+        "a": "Wir gehen den gesamten Funnel durch: Startseite, Kategorie- und Produktseiten, Warenkorb, Checkout, mobile Ansicht, Ladezeit und alles, was Ihr Analytics-Setup erfasst oder eben nicht erfasst. Jedes Problem wird nach Bereich gruppiert und nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet – Sie erhalten also eine priorisierte Liste statt loser Beobachtungen."
+      },
+      {
+        "q": "Setzen Sie die Änderungen um oder empfehlen Sie sie nur?",
+        "a": "Wir setzen sie um. Das ist der Unterschied zu einem Audit, für das Sie danach erst einen Entwickler suchen müssen. Dasselbe Team, das das Problem findet, baut auch die Lösung – deshalb können wir Ihnen ehrlich sagen, welche Maßnahmen günstig sind und welche nicht."
+      },
+      {
+        "q": "Wie entscheiden Sie, was zuerst behoben wird?",
+        "a": "Jede Hypothese wird nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht einfach angenommen wird."
+      },
+      {
+        "q": "Brauchen wir für A/B-Tests genug Traffic?",
+        "a": "Für Tests ja. Unterhalb eines bestimmten Volumens erreicht ein Test keine Signifikanz, und ihn trotzdem laufen zu lassen, verzögert nur die Verbesserung. Bei Shops mit weniger Traffic setzen wir die Änderungen um, von denen wir überzeugt sind, und messen den Funnel statt der Variante."
+      },
+      {
+        "q": "Wann sehen wir Ergebnisse?",
+        "a": "Quick Wins zeigen sich schon im ersten Berichtszeitraum. Strukturelle Änderungen an Produktseiten oder im Checkout brauchen länger, bis sie sich auswerten lassen, weil genug Sessions nötig sind, um die Änderung von normalen Schwankungen zu unterscheiden. Woran wir Erfolg messen, legen wir vor dem Start fest."
+      },
+      {
+        "q": "Können Sie dabei auch die Ladezeit verbessern?",
+        "a": "Ja, und meist steht das ohnehin auf der Liste. Bilder, Skripte von Drittanbietern, ungenutzte Apps und Theme-Code bremsen einen Shop, und die Ladezeit wirkt sich am stärksten auf die mobile Conversion aus. Das ist Entwicklungsarbeit und liegt deshalb bei uns statt bei einem separaten Spezialisten."
+      },
+      {
+        "q": "Welches Analytics-Setup brauchen wir?",
+        "a": "Mindestens funktionierende GA4-E-Commerce-Events, dazu ein Tool für Session-Aufzeichnungen, wenn Sie Nutzerverhalten sehen statt nur ableiten möchten. Ist das Tracking fehlerhaft oder fehlt es, beheben wir das zuerst, denn eine Verbesserung anhand fehlerhafter Daten zu messen, sagt nichts aus."
+      },
+      {
+        "q": "Ist das ein einmaliges Projekt oder laufende Arbeit?",
+        "a": "Beides ist möglich, laufende Betreuung funktioniert besser. Eine einzelne Runde findet und behebt die offensichtlichen Probleme. Danach ist CRO ein Kreislauf: umsetzen, messen, Maßnahmenliste aktualisieren, das Nächste auswählen. Shops, die es als Projekt behandeln, hören in dem Moment auf, sich zu verbessern, in dem es endet."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Shopify-Entwicklung",
+        "href": "/pages/shopify-development/"
+      },
+      {
+        "name": "Webdesign",
+        "href": "/pages/service/custom-web-design-services/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Viel Traffic, aber",
+      "zu wenige Bestellungen?"
+    ],
+    "body": "Sagen Sie uns, wo Käufer abspringen, und wir sagen Ihnen, was wir zuerst ändern würden.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}
