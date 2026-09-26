@@ -88,6 +88,7 @@ body.v2.cx-page .cx {
   .cx-hero__sub { max-width: 560px; font-size: 20px; line-height: 1.3; letter-spacing: -.02em; color: #fff; } // M3
   .cx-hero__lead { max-width: 423px; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: #bdbdbd; }
   .cx-hero .cx-btn { margin-top: 20px; }
+  .cx-hero .v2-cta-note { margin-top: -10px; }
 
   .cx-strip {
     display: grid; gap: .75rem; align-items: center; font-size: 18px; letter-spacing: -.02em;
@@ -281,6 +282,7 @@ body.v2.cx-page .cx {
     .cx-h2 { max-width: 480px; color: #fff; }
     .cx-label { margin-bottom: 8px; }
     .cx-btn { margin-top: 24px; }
+    .v2-cta-note { margin-top: -6px; text-align: center; }
   }
   .cx-cta__body { max-width: 447px; font-size: 16px; line-height: 1.3; letter-spacing: -.02em; color: #d9d9d9; }
 

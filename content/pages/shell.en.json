@@ -1,6 +1,8 @@
 {
   "_note": "Design-v2 shell strings (header, mobile menu, footer, contact modal). Picked by the page's lang (layout/v2/*.ejs); EN is the default. Option `value`s stay English so leads read the same in ClickUp.",
   "homeLabel": "Base X Tech home",
+  "_ctaNote": "Owner 2026-09-26: the first call is free and takes about 30 minutes. Shown under the hero and closing CTA buttons (layout/v2/cta-note.ejs) and in the contact modal instead of form.promise.",
+  "ctaNote": "The first call is free — 30 minutes. We reply within 1 working day.",
   "nav": {
     "main": "Main",
     "mobile": "Mobile",

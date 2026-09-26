@@ -24,6 +24,7 @@
         <% if (c.hero.sub) { %><p class="cx-hero__sub"><%= c.hero.sub %></p><% } %>
         <p class="cx-hero__lead"><%= c.hero.lead %></p>
         <div class="cx-btn cx-btn--light"><%- btn(c.hero.button) %></div>
+        <%- include('layout/v2/cta-note.ejs') %>
       </div>
       <div class="cx-strip">
         <p class="cx-strip__label"><%= c.strip.label %></p>
@@ -307,6 +308,7 @@
       <h2 class="cx-h2"><%- c.cta.title %></h2>
       <p class="cx-cta__body"><%= c.cta.body %></p>
       <div class="cx-btn cx-btn--light"><%- btn(c.cta.button) %></div>
+      <%- include('layout/v2/cta-note.ejs') %>
       <%- include('layout/v2/team.ejs', { teamDach: typeof teamDach === 'undefined' ? true : teamDach }) %>
     </section>
   </main>

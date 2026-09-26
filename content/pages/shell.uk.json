@@ -1,6 +1,7 @@
 {
   "_note": "Design-v2 shell strings (header, mobile menu, footer, contact modal). Picked by the page's lang (layout/v2/*.ejs); EN is the default. Option `value`s stay English so leads read the same in ClickUp.",
   "homeLabel": "Base X Tech — головна",
+  "ctaNote": "Перша розмова — безкоштовно, 30 хвилин. Відповідаємо протягом 1 робочого дня.",
   "ui": {
     "_note": "Small UI strings inside the page bodies (see shell.en.json → ui). Added 2026-09-26 so UK pages don't show the English fallback (\"By\", \"Scroll to Explore\").",
     "scrollHint": "[ Гортайте далі ]",

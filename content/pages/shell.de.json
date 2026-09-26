@@ -1,6 +1,7 @@
 {
   "_note": "German design-v2 shell strings (see shell.en.json). Formal 'Sie'. Budget amounts and option values stay as in EN; only labels are translated.",
   "homeLabel": "Base X Tech Startseite",
+  "ctaNote": "Das erste Gespräch ist kostenlos – 30 Minuten. Wir antworten innerhalb eines Werktages.",
   "nav": {
     "main": "Hauptnavigation",
     "mobile": "Mobile Navigation",

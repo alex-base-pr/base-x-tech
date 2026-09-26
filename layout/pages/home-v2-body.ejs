@@ -31,7 +31,7 @@
         <ol class="h-hero__focus" aria-label="<%= ui.focusLabel %>">
           <% c.hero.focus.forEach((f, i) => { %><li><span class="h-hero__num" aria-hidden="true">/<%= String(i + 1).padStart(2, '0') %></span> <%= f %></li><% }) %>
         </ol>
-        <%- include('layout/v2/button.ejs', { text: c.hero.button }) %>
+        <div class="v2-cta-group"><%- include('layout/v2/button.ejs', { text: c.hero.button }) %><%- include('layout/v2/cta-note.ejs') %></div>
       </div>
     </section>
 
@@ -186,6 +186,7 @@
       <div class="v2-cta__body">
         <p><%= c.cta.body %></p>
         <%- include('layout/v2/button.ejs', { text: c.cta.button }) %>
+        <%- include('layout/v2/cta-note.ejs') %>
       </div>
       <%- include('layout/v2/team.ejs') %>
     </section>

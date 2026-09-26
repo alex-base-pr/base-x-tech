@@ -129,6 +129,12 @@ body.v2 .v2-btn {
   .v2-btn__arrow { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 4px; background: var(--v2-accent); color: var(--v2-on-accent); transition: transform .2s; }
   &:hover .v2-btn__arrow, &:focus-visible .v2-btn__arrow { transform: translate(2px, 2px); }
 }
+// Microcopy under the primary CTA buttons (layout/v2/cta-note.ejs, owner 2026-09-26): small, left-aligned with the button.
+body.v2 .v2-cta-note { margin-top: 10px; max-width: 360px; font-size: 13px; line-height: 1.4; font-weight: 300; color: #bdbdbd; }
+body.v2 .v2-cta-group { display: flex; flex-direction: column; align-items: flex-start;
+  @include mob { align-items: stretch; }
+  @include desk { align-items: flex-end; .v2-cta-note { text-align: right; } }
+}
 body.v2 .v2-light .v2-btn .v2-btn__label { background: #fff; box-shadow: inset 0 0 0 1px var(--v2-line-dark); }
 
 body.v2 .v2-tag {

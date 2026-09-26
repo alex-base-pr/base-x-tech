@@ -1,0 +1,4 @@
+<%# Microcopy under the primary CTA buttons (hero + closing CTA; owner 2026-09-26: the first call is free, 30 minutes).
+    String: content/pages/shell.<lang>.json → ctaNote (EN fallback). The contact modal shows the same line instead of form.promise. %>
+<% const L = typeof lang !== 'undefined' ? lang : 'en'; const note = (content.shell[L] || {}).ctaNote || content.shell.en.ctaNote; %>
+<% if (note) { %><p class="v2-cta-note"><%= note %></p><% } %>

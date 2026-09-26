@@ -17,6 +17,7 @@
         <h1 class="<%= c.hero.size === 'l' ? 'v2-h-l' : 'v2-h-2xl' %>"><% c.hero.title.forEach((line, i) => { %><span class="<%= i === c.hero.title.length - 1 ? 'v2-muted' : '' %>"><%= line %></span> <% }) %></h1>
         <p class="v2-hero__lead"><%= c.hero.lead %></p>
         <%- include('layout/v2/button.ejs', { text: c.hero.button }) %>
+        <%- include('layout/v2/cta-note.ejs') %>
       </div>
       <p class="v2-hero__scroll" aria-hidden="true"><%= ui.scrollHint %></p>
     </section>
@@ -170,6 +171,7 @@
       <div class="v2-cta__body">
         <p><%= c.cta.body %></p>
         <%- include('layout/v2/button.ejs', { text: c.cta.button }) %>
+        <%- include('layout/v2/cta-note.ejs') %>
       </div>
       <%- include('layout/v2/team.ejs') %>
     </section>

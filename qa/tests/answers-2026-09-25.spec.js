@@ -16,7 +16,7 @@ test('A3: EUR budget bands on service pages; values stay English @cross', async 
   expect(await budgets(page)).toEqual(['Up to €5k', '€5–15k', '€15–40k', '€40k+', 'Not sure yet']);
   await openModal(page);
   await expect(page.locator('.v2-form__budget')).not.toContainText('$');
-  await expect(page.locator('.v2-form__promise')).toHaveText('We reply within 1 working day.');
+  await expect(page.locator('.v2-form__promise')).toHaveText('The first call is free — 30 minutes. We reply within 1 working day.'); // merged with the free-call line (owner, 2026-09-26)
 });
 
 for (const [p, labels] of [
