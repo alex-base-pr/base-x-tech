@@ -226,7 +226,7 @@
     ]
   },
   "offer": {
-    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
+    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999; UK pages show euro only, owner 2026-09-26), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
     "label": "Перший крок",
     "title": "Почніть з аудиту за фіксованою ціною",
     "text": "Ми складаємо карту ваших систем, потоків даних і точок збою та радимо готовий конектор або кастомну розробку — з фіксованою ціною на розробку. Якщо продовжите з нами, вартість аудиту відрахуємо від ціни розробки.",

@@ -71,7 +71,7 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 Number and price formatting follows Ukrainian style:
 - "4.8*" is written "4,8*"
 - "10M+" is written "10 млн+"
-- "$1,999" is written "1 999 $" and "€1,999" is written "1 999 €", with non-breaking spaces
+- prices on UK pages are in euro only (owner, 2026-09-26): the fixed-price audit reads "1 999 €" on Integrations, Migration and Complex, with non-breaking spaces. The form budget bands are EUR too. The NAYA funding badge is a historical fact in dollars, so it is written out in words, «Залучено понад 3 млн доларів», with no "$" sign
 - the budget bands read "до 5 тис. €", "5–15 тис. €" and so on
 - non-breaking spaces go between the number and "млн" / "тис." and before the currency sign. The proofread on 2026-09-26 added these, because they were missing in "10 млн+", "1 млн", "3 млн $" and the budget bands
 
@@ -117,8 +117,8 @@ The `value` fields of form options stay in English.
 
 - **Links go to EN pages.** The shell keeps EN `href`s, as the brief asks. The DE shell points Complex to `/de/pages/complex-solutions/`. If UK pages get their own `/uk/…` routes, the menu, related links and FAQ inline links need `/uk/` hrefs.
 - **Privacy link goes to the EN page.** `shell.uk.json` has no `footer.privacyHref` or `form.privacyHref`, because the EN twin has none. As a result the "Політика конфіденційності" link opens the EN privacy page. `uk/pages/privacy-policy.html` exists; adding `privacyHref: "/uk/pages/privacy-policy/"` (like DE) is a one-line follow-up.
-- **Currency.** The offer price keeps the currency from EN: $ on integrations and migration, € on Complex. A Ukrainian audience might be better served by one currency, or by UAH. That is a business call and I have not changed it.
-- **People's names in Latin script.** Alexander Karl, Sofiia Zabrodska and the others stay in Latin inside Ukrainian sentences, per the brief. The Ukrainian team members could be written in Cyrillic (Софія Забродська, Вадим-Марко Груден, Олександр Руденко) if preferred.
+- ~~**Currency.**~~ Decided 2026-09-26: euro only on UK pages (see number formatting above).
+- ~~**People's names in Latin script.**~~ Decided 2026-09-26: Ukrainian team members in Cyrillic on UK pages (see "Owner decisions" below).
 
 ## Owner decisions applied 2026-09-26 (second pass)
 

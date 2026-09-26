@@ -175,11 +175,11 @@
     "closing": "Те, що відбувається після запуску, важить більше."
   },
   "offer": {
-    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
+    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999; UK pages show euro only, owner 2026-09-26), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
     "label": "Перший крок",
     "title": "Почніть з аудиту за фіксованою ціною",
     "text": "Оцінка міграції: інвентаризуємо ваші дані, URL-адреси, редиректи й розширення та даємо фіксовану ціну на переїзд. Якщо продовжите з нами, вартість оцінки відрахуємо від ціни міграції.",
-    "price": "Фіксована ціна: 1 999 $",
+    "price": "Фіксована ціна: 1 999 €",
     "note": "Обсяг робіт підтверджуємо після короткого дзвінка.",
     "button": "Замовити оцінку"
   },
