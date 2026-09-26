@@ -10,6 +10,13 @@
     { "path": "/pages/service/custom-web-design-services/", "file": "pages/service/custom-web-design-services.html", "lang": "en", "role": "index", "group": "service", "name": "Web Design", "faq": true },
     { "path": "/pages/service/conversion-rate-optimization/", "file": "pages/service/conversion-rate-optimization.html", "lang": "en", "role": "index", "group": "service", "name": "Conversion Rate Optimization", "faq": true },
     { "path": "/pages/complex-solutions/", "file": "pages/complex-solutions.html", "lang": "en", "role": "index", "group": "service-extra", "name": "Complex Systems (DACH)", "faq": true },
+    { "path": "/de/", "file": "de/index.html", "lang": "de", "role": "index", "group": "home", "name": "Startseite", "en": "/" },
+    { "path": "/de/pages/shopify-development/", "file": "de/pages/shopify-development.html", "lang": "de", "role": "index", "group": "service", "name": "Shopify-Entwicklung", "en": "/pages/shopify-development/", "faq": true },
+    { "path": "/de/pages/service/custom-shopify-integrations/", "file": "de/pages/service/custom-shopify-integrations.html", "lang": "de", "role": "index", "group": "service", "name": "Shopify-Integrationen", "en": "/pages/service/custom-shopify-integrations/", "faq": true },
+    { "path": "/de/pages/service/shopify-migration-service/", "file": "de/pages/service/shopify-migration-service.html", "lang": "de", "role": "index", "group": "service", "name": "Shopify-Migration", "en": "/pages/service/shopify-migration-service/", "faq": true },
+    { "path": "/de/pages/service/custom-shopify-app-development/", "file": "de/pages/service/custom-shopify-app-development.html", "lang": "de", "role": "index", "group": "service", "name": "Individuelle Shopify-Apps", "en": "/pages/service/custom-shopify-app-development/", "faq": true },
+    { "path": "/de/pages/service/custom-web-design-services/", "file": "de/pages/service/custom-web-design-services.html", "lang": "de", "role": "index", "group": "service", "name": "Webdesign", "en": "/pages/service/custom-web-design-services/", "faq": true },
+    { "path": "/de/pages/service/conversion-rate-optimization/", "file": "de/pages/service/conversion-rate-optimization.html", "lang": "de", "role": "index", "group": "service", "name": "Conversion-Optimierung (CRO)", "en": "/pages/service/conversion-rate-optimization/", "faq": true },
     { "path": "/de/pages/complex-solutions/", "file": "de/pages/complex-solutions.html", "lang": "de", "role": "index", "group": "service-extra", "name": "Komplexe Systeme (DACH)", "en": "/pages/complex-solutions/", "faq": true },
     { "path": "/uk/", "file": "uk/index.html", "lang": "uk", "role": "index", "group": "home", "name": "Головна", "en": "/" },
     { "path": "/uk/pages/shopify-development/", "file": "uk/pages/shopify-development.html", "lang": "uk", "role": "index", "group": "service", "name": "Розробка магазину на Shopify", "en": "/pages/shopify-development/", "faq": true },
@@ -40,5 +47,6 @@
     { "path": "/uk/pages/service/ppc-advertising/", "file": "uk/pages/service/ppc-advertising.html", "lang": "uk", "role": "noindex" },
     { "path": "/uk/pages/service/seo-promotion/", "file": "uk/pages/service/seo-promotion.html", "lang": "uk", "role": "noindex" }
   ],
-  "uk": { "_note": "UK pages (2026-09-26) are listed above like EN/DE: the index ones are design v2 (copy content/pages/<page>.uk.json, EN fallback); absorbed/noindex ones keep the old design and mirror their EN twins' SEO treatment. Only role index goes to sitemap.xml." }
+  "uk": { "_note": "UK pages (2026-09-26) are listed above like EN/DE: the index ones are design v2 (copy content/pages/<page>.uk.json, EN fallback); absorbed/noindex ones keep the old design and mirror their EN twins' SEO treatment. Only role index goes to sitemap.xml." },
+  "de": { "_note": "DE pages (2026-09-26): the v2 index pages (home, Shopify development, 5 services) mirror EN/UK with copy content/pages/<page>.de.json (EN fallback, German fallback meta in the wrapper); plus Complex, Impressum, Datenschutz. No German terms page: the DE footer links the EN terms." }
 }

@@ -60,12 +60,17 @@ const built = pages.map((p) => {
   };
 });
 
-// Ukrainian index pages (design v2 since 2026-09-26): linked from llms.txt in their own section, not in llms-full.txt.
-const ukPages = siteMap.pages.filter((p) => p.lang === 'uk' && p.role === 'index').map((p) => {
+// German and Ukrainian index pages (design v2 since 2026-09-26): linked from llms.txt in their own sections
+// ("Deutsch", "Українською"), not in llms-full.txt.
+const langPages = (lang) => siteMap.pages.filter((p) => p.lang === lang && p.role === 'index').map((p) => {
   const html = fs.readFileSync(path.join(dist, p.file), 'utf8');
   return { ...p, url: host + p.path, description: meta(html, /<meta\s+name="description"\s+content="([^"]*)"/i) };
 });
-const ukSection = ukPages.map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
+const dePages = langPages('de');
+const ukPages = langPages('uk');
+const list = (ps) => ps.map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
+const deSection = list(dePages);
+const ukSection = list(ukPages);
 
 const section = (group) => built.filter((p) => p.group === group || p.group === group + '-extra').map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
 const home = built.find((p) => p.group === 'home');
@@ -90,7 +95,7 @@ ${section('service')}
 ## Legal
 
 ${section('legal')}
-${ukSection ? `\n## Українською\n\n${ukSection}\n` : ''}`;
+${deSection ? `\n## Deutsch\n\n${deSection}\n` : ''}${ukSection ? `\n## Українською\n\n${ukSection}\n` : ''}`;
 fs.writeFileSync(path.join(dist, 'llms.txt'), llms);
 
 const full = [`# Base X Tech — full site text\n\nSource: ${host}/ · generated at build · English pages only.`]
@@ -113,4 +118,4 @@ if (env === 'dev') {
   // Cloudflare Pages headers; ignored by the Apache prod host.
   fs.writeFileSync(path.join(dist, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow\n');
 }
-console.log(`postbuild (${env}): llms.txt (+${ukPages.length} UK), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers' : ''}`);
+console.log(`postbuild (${env}): llms.txt (+${dePages.length} DE, +${ukPages.length} UK), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers' : ''}`);
