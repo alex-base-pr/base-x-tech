@@ -48,6 +48,7 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 | design system / wireframes / prototype / style guide | дизайн-система / схеми сторінок / прототип / посібник зі стилю | Since 2026-09-26 (was «вайрфрейми», «гайдлайн») |
 | Depth over shortcuts | Ґрунтовно, а не нашвидкуруч | Home approach card (2026-09-26). Replaces «Глибина замість латок»: "shortcuts" are not "patches", and the idiom pair «ґрунтовно / нашвидкуруч» carries the contrast. Description: «…з розрахунком на роки зростання, а не на тимчасові виправлення» |
 | Hardware startup | Стартап у сфері електроніки | Home project category (2026-09-26). Replaces «Hardware-стартап» |
+| CES Innovation Awards Honoree / two-time honoree | Відзнака CES Innovation Awards / двічі відзначена CES Innovation Awards (Honoree) | Verified 2026-09-26: Naya Create was a 2023 honoree, Naya Tune Float a 2024 honoree. "Honoree", never "winner" / «отримала нагороду». EN: "two-time CES Innovation Awards honoree"; DE: „zweimal als Honoree der CES Innovation Awards ausgewählt" |
 | Web Design | Вебдизайн | One word, per current orthography |
 | Creative Direction | Арт-дирекція | DECIDED by the owner 2026-09-26 (was «Креативний напрям»). The service card's description then says «Бренд і візуальний стиль…» so «арт-дирекція» is not repeated |
 | art direction | арт-дирекція | Not «арт-дирекшн». Added in proofread |
