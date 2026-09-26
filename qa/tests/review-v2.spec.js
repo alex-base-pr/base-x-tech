@@ -86,8 +86,7 @@ for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/de/pag
 
 // Every page in a language cluster lists itself, all counterparts (with trailing slash) and one x-default = EN.
 const clusterPaths = [
-  ...siteMap.pages.map((p) => p.path),
-  '/uk/', '/uk/pages/service/custom-shopify-integrations/', '/uk/pages/service/ppc-advertising/',
+  ...siteMap.pages.map((p) => p.path), // EN, DE and UK (index, absorbed, noindex)
 ];
 for (const path of clusterPaths) {
   test(`hreflang: ${path} self-references and has exactly one x-default = EN`, async ({ request }) => {

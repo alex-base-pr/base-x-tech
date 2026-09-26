@@ -1,6 +1,6 @@
 // GEO: T-040 robots, T-041 content without JS, T-042 JSON-LD, T-043 llms.txt.
 import { test, expect } from '@playwright/test';
-import { host, indexPages, rawHtml, isDevTarget } from '../site-map.js';
+import { host, indexPages, ukIndexPages, rawHtml, isDevTarget } from '../site-map.js';
 
 const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User',
   'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'CCBot', 'Amazonbot', 'meta-externalagent'];
@@ -31,7 +31,7 @@ test('T-040 robots.txt allows every AI crawler, ai-train=yes, both sitemaps', as
   expect(robots).toContain(`Sitemap: ${host}/blog/sitemap.xml`);
 });
 
-for (const page of indexPages) {
+for (const page of [...indexPages, ...ukIndexPages]) {
   test(`T-041 ${page.path}: copy in raw HTML inside <main>`, async ({ request }) => {
     const { html } = await rawHtml(request, page.path);
     const main = (html.match(/<main[\s>][\s\S]*<\/main>/i) || [''])[0];
@@ -61,7 +61,13 @@ test('T-043 llms.txt lists exactly the indexable pages; llms-full.txt has every 
   const llms = await (await request.get('/llms.txt')).text();
   const urls = [...llms.matchAll(/\((https:\/\/base-xtech\.com[^)\s]*)\)/g)].map((m) => m[1]);
   const pages = urls.filter((u) => !u.includes('/blog'));
-  expect([...new Set(pages)].sort()).toEqual(indexPages.map((p) => host + p.path).sort());
+  expect([...new Set(pages)].sort()).toEqual([...indexPages, ...ukIndexPages].map((p) => host + p.path).sort());
+  // UK pages only in their own section (2026-09-26), never mixed into the English ones.
+  const [enPart, ukPart = ''] = llms.split('## Українською');
+  for (const p of ukIndexPages) {
+    expect(ukPart, `UK section lists ${p.path}`).toContain(`(${host + p.path})`);
+    expect(enPart, `${p.path} only in the UK section`).not.toContain(`(${host + p.path})`);
+  }
 
   const full = await request.get('/llms-full.txt');
   expect(full.status()).toBe(200);

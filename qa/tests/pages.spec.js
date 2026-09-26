@@ -1,10 +1,10 @@
 // T-001 status + console, T-003 SEO head, T-007 no horizontal scroll + screenshots.
 import { test, expect } from '@playwright/test';
-import { enPages, dePages, indexPages, expectedCanonical, rawHtml, isDevTarget } from '../site-map.js';
+import { enPages, dePages, ukPages, siteMap, expectedCanonical, rawHtml, isDevTarget } from '../site-map.js';
 
 const attr = (html, re) => (html.match(re) || [])[1];
 
-for (const page of [...enPages, ...dePages]) {
+for (const page of [...enPages, ...dePages, ...ukPages]) {
   test.describe(`${page.path} @cross`, () => {
     test('T-001 200 and no console errors', async ({ page: p }) => {
       const errors = [];
@@ -62,9 +62,11 @@ for (const page of [...enPages, ...dePages]) {
   });
 }
 
-test('T-003 titles and descriptions are unique across indexable pages', async ({ request }) => {
+// Per language: a UK page still on EN fallback copy may legitimately share the EN page's meta (Complex) until its
+// content/pages/<page>.uk.json lands; within one language every indexable page must be unique.
+for (const lang of ['en', 'de', 'uk']) test(`T-003 titles and descriptions are unique across indexable ${lang} pages`, async ({ request }) => {
   const seen = { title: new Map(), desc: new Map() };
-  for (const page of indexPages) {
+  for (const page of siteMap.pages.filter((p) => p.role === 'index' && p.lang === lang)) {
     const { html } = await rawHtml(request, page.path);
     const t = attr(html, /<title>([^<]*)<\/title>/i)?.trim();
     const d = attr(html, /<meta\s+name="description"\s+content="([^"]*)"/i);

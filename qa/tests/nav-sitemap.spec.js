@@ -1,7 +1,7 @@
 // T-004 nav links, T-005 sitemap.
 import fs from 'node:fs';
 import { test, expect } from '@playwright/test';
-import { siteMap, host, indexPages, servicePaths } from '../site-map.js';
+import { siteMap, host, indexPages, servicePaths, ukIndexPages } from '../site-map.js';
 
 test('T-004 header/drawer/footer links use canonical form (no .html, trailing slash)', async ({ page }) => {
   await page.goto('/');
@@ -19,7 +19,7 @@ test('T-004 services menu lists exactly the six service pages (REQ-007)', async 
   expect(services).toEqual([...servicePaths].sort());
 });
 
-test('T-005 sitemap.xml = indexable EN set + all UA, canonical form', async () => {
+test('T-005 sitemap.xml = indexable EN set + indexable UK set, canonical form', async () => {
   const xml = fs.readFileSync('dist/sitemap.xml', 'utf8');
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   const en = locs.filter((u) => !u.startsWith(host + '/uk/') && !u.startsWith(host + '/de/')).sort();
@@ -27,5 +27,6 @@ test('T-005 sitemap.xml = indexable EN set + all UA, canonical form', async () =
   const nonIndex = siteMap.pages.filter((p) => p.role !== 'index').map((p) => host + p.path);
   expect(locs.filter((u) => nonIndex.includes(u)), 'absorbed/noindex pages must not be in sitemap').toEqual([]);
   expect(locs.filter((u) => !u.endsWith('/')), 'every sitemap URL ends with /').toEqual([]);
-  expect(locs.some((u) => u.startsWith(host + '/uk/')), 'UA pages kept').toBe(true);
+  const uk = locs.filter((u) => u.startsWith(host + '/uk/')).sort();
+  expect(uk, 'UK = the indexable UK pages of the site map').toEqual(ukIndexPages.map((p) => host + p.path).sort());
 });

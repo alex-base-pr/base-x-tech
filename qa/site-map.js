@@ -19,3 +19,6 @@ export async function rawHtml(request, path) {
 export const dePages = siteMap.pages.filter((p) => p.lang === 'de');
 // Dev/preview deploys are noindex + Disallow by design (REQ-022); SEO checks flip their expectation there.
 export const isDevTarget = /dev\.base-xtech\.com|pages\.dev/.test(process.env.QA_BASE_URL || '');
+// UK pages (design v2 since 2026-09-26): index pages get the same checks as EN; absorbed/noindex keep the old design.
+export const ukPages = siteMap.pages.filter((p) => p.lang === 'uk');
+export const ukIndexPages = ukPages.filter((p) => p.role === 'index');
