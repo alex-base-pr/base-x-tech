@@ -18,6 +18,7 @@
     { "path": "/uk/pages/service/custom-shopify-app-development/", "file": "uk/pages/service/custom-shopify-app-development.html", "lang": "uk", "role": "index", "group": "service", "name": "Розробка додатків для Shopify", "en": "/pages/service/custom-shopify-app-development/", "faq": true },
     { "path": "/uk/pages/service/custom-web-design-services/", "file": "uk/pages/service/custom-web-design-services.html", "lang": "uk", "role": "index", "group": "service", "name": "Індивідуальні web design рішення", "en": "/pages/service/custom-web-design-services/", "faq": true },
     { "path": "/uk/pages/service/conversion-rate-optimization/", "file": "uk/pages/service/conversion-rate-optimization.html", "lang": "uk", "role": "index", "group": "service", "name": "Оптимізація конверсії", "en": "/pages/service/conversion-rate-optimization/", "faq": true },
+    { "path": "/uk/pages/complex-solutions/", "file": "uk/pages/complex-solutions.html", "lang": "uk", "role": "index", "group": "service-extra", "name": "Комплексні рішення (DACH)", "en": "/pages/complex-solutions/", "faq": true },
     { "path": "/pages/privacy-policy/", "file": "pages/privacy-policy.html", "lang": "en", "role": "index", "group": "legal", "name": "Privacy Policy" },
     { "path": "/pages/terms-and-conditions/", "file": "pages/terms-and-conditions.html", "lang": "en", "role": "index", "group": "legal", "name": "Terms and Conditions" },
     { "path": "/de/impressum/", "file": "de/impressum.html", "lang": "de", "role": "index", "group": "legal", "name": "Impressum" },

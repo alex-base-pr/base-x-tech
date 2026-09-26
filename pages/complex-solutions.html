@@ -6,6 +6,7 @@
   const url = 'https://base-xtech.com/pages/complex-solutions/';
   const hreflangs = [{ lang: 'en', href: url }];
   if (content['complex-solutions'].de) hreflangs.push({ lang: 'de', href: 'https://base-xtech.com/de/pages/complex-solutions/' });
+  hreflangs.push({ lang: 'uk', href: 'https://base-xtech.com/uk/pages/complex-solutions/' });
   hreflangs.push({ lang: 'x-default', href: url });
 %>
 <%- include('layout/head-alt.ejs', { title: c.meta.title, description: c.meta.description, hreflangs, v2: true }) %>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<%# Ukrainian version of /pages/complex-solutions/ (design v2, Figma "Complex" 877:1584), same body as EN/DE.
+    Copy: content/pages/complex-solutions.uk.json (copywriter); until that file exists the EN copy (and EN meta) renders. %>
+<%
+  const c = content['complex-solutions'].uk || content['complex-solutions'].en;
+  const url = {
+    en: 'https://base-xtech.com/pages/complex-solutions/',
+    de: 'https://base-xtech.com/de/pages/complex-solutions/',
+    uk: 'https://base-xtech.com/uk/pages/complex-solutions/',
+  };
+%>
+<%- include('layout/head-alt.ejs', {
+  title: c.meta.title,
+  description: c.meta.description,
+  v2: true,
+  hreflangs: [{ lang: 'en', href: url.en }, { lang: 'de', href: url.de }, { lang: 'uk', href: url.uk }, { lang: 'x-default', href: url.en }]
+}) %>
+<%- include('layout/pages/complex-v2-body.ejs', { c, lang: 'uk' }) %>
+</html>
