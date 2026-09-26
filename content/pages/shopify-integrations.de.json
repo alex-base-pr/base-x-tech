@@ -10,7 +10,7 @@
       "für die Systeme, mit denen",
       "Ihr Unternehmen arbeitet"
     ],
-    "lead": "ERP, CRM, PIM, Logistik, Marktplätze. Wenn Ihr Shop bei jeder Bestellung mit den Systemen dahinter übereinstimmen muss, ist das unsere Arbeit.",
+    "lead": "ERP, CRM, PIM, Logistik, Marktplätze. Wenn Ihr Shop bei jeder Bestellung mit den Systemen dahinter übereinstimmen muss, ist genau das unsere Arbeit.",
     "button": "Projekt besprechen"
   },
   "capabilities": {
@@ -103,7 +103,7 @@
         "description": "Wenn Bestellungen per Copy & Paste von Shopify ins ERP wandern, sind Fehler und Verzögerungen vorprogrammiert. Wir verbinden die Systeme, sodass Bestellungen automatisch fließen und jeder Fehler protokolliert wird."
       },
       {
-        "title": "Der Bestand stimmt nicht mehr, wenn er synchronisiert ist",
+        "title": "Beim Abgleich ist der Bestand schon veraltet",
         "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und gleichen ab, was ein Abgleich verpasst hat."
       },
       {

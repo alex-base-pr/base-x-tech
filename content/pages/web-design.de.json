@@ -16,8 +16,8 @@
   },
   "capabilities": {
     "label": "Unsere Leistungen",
-    "title": "Jede Fläche, mit der Käufer",
-    "titleMuted": "tatsächlich in Berührung kommen.",
+    "title": "Jeder Berührungspunkt, mit dem Käufer",
+    "titleMuted": "tatsächlich in Kontakt kommen.",
     "items": [
       {
         "title": "UX/UI-Design",
@@ -130,7 +130,7 @@
   },
   "process": {
     "label": "Unser Designprozess",
-    "title": "Vom Verständnis des Problems zu einem Design, das bereit für die Umsetzung ist.",
+    "title": "Vom Verständnis des Problems bis zum umsetzungsreifen Design.",
     "steps": [
       {
         "title": "Analyse & Recherche",
@@ -174,7 +174,7 @@
     "title": "Fragen, die wir<br> oft hören",
     "items": [
       {
-        "q": "Gestalten und entwickeln Sie, oder nur Design?",
+        "q": "Übernehmen Sie Design und Umsetzung oder nur das Design?",
         "a": "Beides, und zwar im selben Team. Ihr Design geht an die Entwickler, die auch den letzten Shop gebaut haben, sodass zwischen Datei und Shop nichts verloren geht. Wir übernehmen auch reine Designprojekte, und selbst dann ist das Design für die Umsetzung gemacht: echte Komponenten, echte Zustände und keine Entscheidungen, die im Code nicht halten."
       },
       {

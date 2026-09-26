@@ -10,7 +10,7 @@
       "ohne zu verlieren,",
       "was schon funktioniert"
     ],
-    "lead": "Magento, WooCommerce, BigCommerce oder eine Eigenentwicklung. Wir ziehen Shop, Daten und Traffic um und begleiten ihn, bis alles stabil läuft.",
+    "lead": "Magento, WooCommerce, BigCommerce oder eine Eigenentwicklung. Wir ziehen Shop, Daten und Traffic um und begleiten den Shop, bis alles stabil läuft.",
     "button": "Projekt besprechen"
   },
   "capabilities": {
@@ -100,7 +100,7 @@
     "items": [
       {
         "title": "Jede Änderung braucht einen Entwickler",
-        "description": "Wenn für einen neuen Banner ein Ticket nötig ist, bremst die Plattform das Geschäft. Auf Shopify pflegt Ihr Team Inhalte, Produkte und Aktionen selbst."
+        "description": "Wenn schon für eine Banneränderung ein Ticket nötig ist, bremst die Plattform das Geschäft. Auf Shopify pflegt Ihr Team Inhalte, Produkte und Aktionen selbst."
       },
       {
         "title": "Ihre Plattform ist am Ende ihres Lebenszyklus",
@@ -197,15 +197,15 @@
       },
       {
         "q": "Was passiert mit unserer Bestellhistorie und den Kundenkonten?",
-        "a": "Sie kommen mit. Produkte, Kunden, Bestellhistorie und die Beziehungen zwischen ihnen werden übertragen und anschließend mit der Quelle abgeglichen, statt einfach als korrekt angenommen. Für eine britische Geschenkmarke haben wir über 1 Mio. Profile und dreizehn Jahre Historie übertragen. Die Prüfung ist der langsame Teil, und sie ist nicht optional."
+        "a": "Sie kommen mit. Produkte, Kunden, Bestellhistorie und die Beziehungen zwischen ihnen werden übertragen und anschließend mit der Quelle abgeglichen, statt einfach als korrekt angenommen zu werden. Für eine britische Geschenkmarke haben wir über 1 Mio. Profile und dreizehn Jahre Historie übertragen. Die Prüfung ist der langsame Teil, und sie ist nicht optional."
       },
       {
         "q": "Können Sie von einer selbst entwickelten Plattform migrieren?",
-        "a": "Ja, und das ist der schwierigere Fall. Standardplattformen lassen sich vorhersehbar exportieren; Eigenentwicklungen enthalten Logik, die nie dokumentiert wurde, und Felder, an die sich niemand erinnert. Wir finden heraus, was das alte System tatsächlich tut, bevor wir etwas übertragen – auch die Teile, die nur in jemandes Kopf existieren."
+        "a": "Ja, und das ist der schwierigere Fall. Standardplattformen lassen sich vorhersehbar exportieren; Eigenentwicklungen enthalten Logik, die nie dokumentiert wurde, und Felder, an die sich niemand erinnert. Wir finden heraus, was das alte System tatsächlich tut, bevor wir etwas übertragen – auch die Teile, die nur in den Köpfen einzelner Mitarbeiter existieren."
       },
       {
         "q": "Brauchen wir für die Migration Shopify Plus?",
-        "a": "Für die Migration nicht. Plus wird danach relevant, wenn Sie Checkout-Anpassungen, B2B-Firmenkonten oder höhere API-Limits brauchen. Wir sagen Ihnen, welche Ihrer Anforderungen Plus erfordern, statt Sie standardmäßig auf Plus zu setzen."
+        "a": "Für die Migration nicht. Plus wird danach relevant, wenn Sie Checkout-Anpassungen, B2B-Firmenkonten oder höhere API-Limits brauchen. Wir sagen Ihnen, welche Ihrer Anforderungen Plus erfordern, statt Ihnen pauschal Plus zu empfehlen."
       },
       {
         "q": "Was ist mit unseren bestehenden Integrationen?",

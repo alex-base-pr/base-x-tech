@@ -150,7 +150,7 @@
       },
       {
         "title": "Umsetzen & testen",
-        "description": "Wir setzen die Änderungen um und testen sie per A/B-Test, wo Ihr Traffic für ein aussagekräftiges Ergebnis reicht."
+        "description": "Wir setzen die Änderungen um und prüfen sie per A/B-Test, wo Ihr Traffic für ein aussagekräftiges Ergebnis reicht."
       },
       {
         "title": "Messen & wiederholen",
@@ -166,7 +166,7 @@
         "label": "Upwork-Bewertung"
       },
       {
-        "text": "Wir finden die Schwachstellen, ordnen sie nach dem, was sie Sie kosten, und beheben die größten zuerst."
+        "text": "Wir finden die Schwachstellen, ordnen sie nach den Kosten, die sie Ihnen verursachen, und beheben die größten zuerst."
       },
       {
         "value": "100+",
@@ -190,7 +190,7 @@
       },
       {
         "q": "Wie entscheiden Sie, was zuerst behoben wird?",
-        "a": "Jede Hypothese wird nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht vorausgesetzt."
+        "a": "Jede Hypothese wird nach Wirkung, Aufwand und Erfolgswahrscheinlichkeit bewertet und dann priorisiert. Quick Wins kommen zuerst, weil sie die Argumente für die größeren Vorhaben liefern. Sie geben den Umfang frei, bevor etwas gebaut wird, damit die Reihenfolge abgestimmt ist und nicht einfach angenommen wird."
       },
       {
         "q": "Haben wir genug Traffic für A/B-Tests?",
@@ -206,11 +206,11 @@
       },
       {
         "q": "Welches Analytics-Setup brauchen wir?",
-        "a": "Mindestens funktionierende GA4-E-Commerce-Events, dazu ein Tool für Session-Aufzeichnungen, wenn Sie Nutzerverhalten sehen statt nur ableiten möchten. Ist das Tracking fehlerhaft oder fehlt es, beheben wir das zuerst, denn eine Verbesserung an schlechten Daten zu messen, sagt nichts aus."
+        "a": "Mindestens funktionierende GA4-E-Commerce-Events, dazu ein Tool für Session-Aufzeichnungen, wenn Sie Nutzerverhalten sehen statt nur ableiten möchten. Ist das Tracking fehlerhaft oder fehlt es, beheben wir das zuerst, denn eine Verbesserung anhand fehlerhafter Daten zu messen, sagt nichts aus."
       },
       {
         "q": "Ist das ein einmaliges Projekt oder laufende Arbeit?",
-        "a": "Beides ist möglich, laufend funktioniert besser. Eine einzelne Runde findet und behebt die offensichtlichen Probleme. Danach ist CRO ein Kreislauf: umsetzen, messen, Maßnahmenliste aktualisieren, das Nächste auswählen. Shops, die es als Projekt behandeln, hören in dem Moment auf, sich zu verbessern, in dem es endet."
+        "a": "Beides ist möglich, laufende Betreuung funktioniert besser. Eine einzelne Runde findet und behebt die offensichtlichen Probleme. Danach ist CRO ein Kreislauf: umsetzen, messen, Maßnahmenliste aktualisieren, das Nächste auswählen. Shops, die es als Projekt behandeln, hören in dem Moment auf, sich zu verbessern, in dem es endet."
       }
     ]
   },

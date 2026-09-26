@@ -104,7 +104,7 @@
     "items": [
       {
         "title": "Jemand überträgt Daten von Hand zwischen Systemen",
-        "description": "Wenn es jemandes Job ist, zwei Systeme manuell abzugleichen, sollte das eine App erledigen. Wir automatisieren die Routine und überlassen den Menschen die Ausnahmen."
+        "description": "Wenn die Aufgabe einer Person darin besteht, zwei Systeme von Hand abzugleichen, sollte das eine App erledigen. Wir automatisieren die Routine und überlassen den Menschen die Ausnahmen."
       },
       {
         "title": "Keine App kann, was Ihr Prozess braucht",
@@ -188,7 +188,7 @@
       },
       {
         "q": "Was ist der Unterschied zwischen einer öffentlichen App und einer Custom App?",
-        "a": "Eine öffentliche App ist im App Store gelistet, und jeder Händler kann sie installieren. Eine Custom App gibt es nur für einen Shop, und sie tut genau das, was dieses Unternehmen braucht. Wenn der Ablauf spezifisch für Sie ist, ist eine Custom App meist günstiger und schneller, als eine öffentliche App passend zu biegen."
+        "a": "Eine öffentliche App ist im App Store gelistet, und jeder Händler kann sie installieren. Eine Custom App gibt es nur für einen Shop, und sie tut genau das, was dieses Unternehmen braucht. Wenn der Ablauf spezifisch für Sie ist, ist eine Custom App meist günstiger und schneller, als eine öffentliche App zurechtzubiegen."
       },
       {
         "q": "Können Sie automatisieren, was unser Team von Hand erledigt?",
@@ -204,7 +204,7 @@
       },
       {
         "q": "Was passiert, wenn Shopify seine API ändert?",
-        "a": "Shopify kündigt API-Versionen nach festem Zeitplan ab, eine App ohne Pflege funktioniert also irgendwann nicht mehr. Wir halten die Apps, die wir entwickeln, über diese Änderungen hinweg funktionsfähig. Das ist Wartung unseres eigenen Codes – eine App, die wir nie gesehen haben, würden wir nicht als gewartet ausgeben."
+        "a": "Shopify kündigt API-Versionen nach festem Zeitplan ab, eine App ohne Pflege funktioniert also irgendwann nicht mehr. Wir halten die Apps, die wir entwickeln, über diese Änderungen hinweg funktionsfähig. Das ist Wartung unseres eigenen Codes – die Wartung einer App, die wir nie gesehen haben, würden wir nicht zusagen."
       },
       {
         "q": "Können Sie Checkout- oder Rabattlogik entwickeln?",

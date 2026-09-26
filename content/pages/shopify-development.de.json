@@ -106,7 +106,7 @@
         "description": "Händler brauchen eigene Preise, Konditionen und ein eigenes Sortiment, und Endkunden sollen davon nichts sehen. Wir richten einen Shop ein, der beides abdeckt – ohne zweites Backend."
       },
       {
-        "title": "Ihr Produkt muss konfiguriert werden, um sich zu verkaufen",
+        "title": "Ihr Produkt muss vor dem Kauf konfiguriert werden",
         "description": "Optionen, Abhängigkeiten und Preise, die sich mit jeder Auswahl ändern. Wir entwickeln Konfiguratoren, die Käufern genau zeigen, was sie bestellen, und produktionsreife Daten mit der Bestellung übergeben."
       }
     ]
@@ -195,11 +195,11 @@
       },
       {
         "q": "Wann lohnt sich Headless Shopify?",
-        "a": "Seltener, als es empfohlen wird. Headless lohnt sich, wenn Sie ein Frontend brauchen, das die Theme-Ebene von Shopify nicht leisten kann, oder wenn die Storefront mehr als einen Kanal bedient. Entwicklung und Wartung kosten mehr. Wenn ein gut gebautes Theme die Aufgabe erfüllt, sagen wir Ihnen das."
+        "a": "Seltener, als häufig empfohlen wird. Headless lohnt sich, wenn Sie ein Frontend brauchen, das die Theme-Ebene von Shopify nicht leisten kann, oder wenn die Storefront mehr als einen Kanal bedient. Entwicklung und Wartung kosten mehr. Wenn ein gut gebautes Theme die Aufgabe erfüllt, sagen wir Ihnen das."
       },
       {
         "q": "Können Sie mit unserem bestehenden Theme arbeiten, oder wird alles neu gebaut?",
-        "a": "In der Regel mit Ihrem bestehenden Theme. Wir prüfen, was es tragen kann, erweitern es dort, wo das trägt, und empfehlen einen Neuaufbau nur, wenn das Theme gegen Ihre Anforderungen arbeitet. Ein unnötiger Neuaufbau ist das Teuerste an einem Shopify-Projekt."
+        "a": "In der Regel mit Ihrem bestehenden Theme. Wir prüfen, was es tragen kann, erweitern es dort, wo das sinnvoll ist, und empfehlen einen Neuaufbau nur, wenn das Theme gegen Ihre Anforderungen arbeitet. Ein unnötiger Neuaufbau ist das Teuerste an einem Shopify-Projekt."
       },
       {
         "q": "Wie lange dauert eine individuelle Shopify-Entwicklung?",
