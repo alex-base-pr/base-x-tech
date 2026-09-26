@@ -47,7 +47,7 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 | impact, effort and confidence | ефект, зусилля та впевненість | |
 | design system / wireframes / prototype | дизайн-система / вайрфрейми / прототип | |
 | Web Design | Вебдизайн | One word, per current orthography |
-| Creative Direction | Креативний напрям | Proofread flag: «напрям» reads as "trend" rather than a service. «Креативна дирекція» or «Креативна концепція» may fit better. Left for the team to decide |
+| Creative Direction | Арт-дирекція | DECIDED by the owner 2026-09-26 (was «Креативний напрям»). The service card's description then says «Бренд і візуальний стиль…» so «арт-дирекція» is not repeated |
 | art direction | арт-дирекція | Not «арт-дирекшн». Added in proofread |
 | e-commerce | е-комерція | Cyrillic "е" |
 | AI | ШІ | |
