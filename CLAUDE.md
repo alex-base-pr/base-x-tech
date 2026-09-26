@@ -41,7 +41,7 @@ Read first:
 3. `docs/OPEN-QUESTIONS.md` — build the stated default, don't block on these.
 
 Rules for this release:
-- **Languages (DECIDED 2026-09-26):** EN, DE (Complex + legal) and UK. UK index pages are on design v2 with copy in `content/pages/<page>.uk.json` (glossary: `docs/review/2026-09-26-uk-glossary.md`); copy changes in EN must be mirrored to UK (and DE where the page exists). Retired UK pages stay old-design, canonicalised/noindex like EN.
+- **Languages (DECIDED 2026-09-26):** EN, DE and UK on all index pages (DE also has Impressum/Datenschutz; terms stay EN). UK index pages are on design v2 with copy in `content/pages/<page>.uk.json` (glossary: `docs/review/2026-09-26-uk-glossary.md`); copy changes in EN must be mirrored to UK and DE (glossaries: docs/review/2026-09-26-{uk,de}-glossary.md). Language 404s: public/{uk,de}/.htaccess. Retired UK pages stay old-design, canonicalised/noindex like EN.
 - **Keep existing URLs, no redirects.** Absorbed pages stay live with canonical/noindex (spec §8B).
 - **Copy is Marko's** (fixtures in `content/`). Don't invent facts, clients, numbers or quotes.
 - **No team photos** — placeholders only until Alex says otherwise.

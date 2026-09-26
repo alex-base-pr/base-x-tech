@@ -1,0 +1,2 @@
+# Missing /de/ URLs get the German 404 page (still answers 404). Rewrite rules are inherited from the root .htaccess.
+ErrorDocument 404 /de/404.html
