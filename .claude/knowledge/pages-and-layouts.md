@@ -40,5 +40,6 @@ conversion-rate-optimization, custom-shopify-app-development, custom-shopify-int
 - Two CTA partials (`cta.ejs` / `cta-uk.ejs`) — the UK page uses the `-uk` variant. Watch for drift.
 
 **DECIDED:**
-- 2026-09-24 (Alex): quick EN release is EN-only; `/uk/**` is not mirrored. See docs/discovery/2026-09-24-quick-en-site.md.
+- 2026-09-24 (Alex): quick EN release is EN-only; `/uk/**` is not mirrored. See docs/discovery/2026-09-24-quick-en-site.md. (Superseded 2026-09-26: EN, DE and UK — see CLAUDE.md "Languages".)
+- 2026-09-26: `/de/` home + 6 service pages are thin v2 wrappers like `/uk/` (de/index.html, de/pages/**): copy `content['<page>'].de || .en`, German fallback meta in the wrapper, hreflang en/de/uk + x-default=EN on all three language versions. `localHref(href, lang)` (vite.config.js) localises links for `uk` and `de` by checking the `<lang>/…html` file exists. No German terms page on purpose: the DE footer links the EN terms (an English copy under /de/ would be duplicate content). de/404.html is built but, like uk/404.html, not an ErrorDocument (public/.htaccess).
 - 2026-09-24 (Alex): existing URLs kept, no redirects; absorbed service pages stay live, out of nav/sitemap, with canonical → parent (theme, headless, app-design, mvp) or noindex (ppc, seo).
