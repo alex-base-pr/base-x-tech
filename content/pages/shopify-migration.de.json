@@ -142,12 +142,12 @@
         "description": "Wir erfassen jede URL, jedes Produkt, jeden Kunden und jede Integration der alten Plattform – denn was übersehen wird, geht verloren."
       },
       {
-        "title": "Planung & Mapping",
+        "title": "Planung & Zuordnung",
         "description": "Wir ordnen alte URLs den neuen zu, entscheiden, was übernommen und was neu gebaut wird, und legen die Umstellung fest, bevor wir etwas anfassen."
       },
       {
         "title": "Migration & Prüfung",
-        "description": "Wir übertragen die Daten, prüfen sie gegen die Quelle und betreiben den Shop auf einer Staging-Umgebung, bis alles stimmt."
+        "description": "Wir übertragen die Daten, gleichen sie mit der Quelle ab und betreiben den Shop auf einer Staging-Umgebung, bis alles stimmt."
       },
       {
         "title": "Livegang & Beobachtung",
@@ -197,7 +197,7 @@
       },
       {
         "q": "Was passiert mit unserer Bestellhistorie und den Kundenkonten?",
-        "a": "Sie kommen mit. Produkte, Kunden, Bestellhistorie und die Beziehungen zwischen ihnen werden übertragen und anschließend gegen die Quelle geprüft, statt einfach als korrekt angenommen. Für eine britische Geschenkmarke haben wir über 1 Mio. Profile und dreizehn Jahre Historie übertragen. Die Prüfung ist der langsame Teil, und sie ist nicht optional."
+        "a": "Sie kommen mit. Produkte, Kunden, Bestellhistorie und die Beziehungen zwischen ihnen werden übertragen und anschließend mit der Quelle abgeglichen, statt einfach als korrekt angenommen. Für eine britische Geschenkmarke haben wir über 1 Mio. Profile und dreizehn Jahre Historie übertragen. Die Prüfung ist der langsame Teil, und sie ist nicht optional."
       },
       {
         "q": "Können Sie von einer selbst entwickelten Plattform migrieren?",
@@ -209,7 +209,7 @@
       },
       {
         "q": "Was ist mit unseren bestehenden Integrationen?",
-        "a": "Sie werden neu gebaut, nicht übernommen. Ihre Anbindungen an ERP, CRM, Fulfillment und Versanddienstleister wurden gegen die API der alten Plattform entwickelt, und keine davon lässt sich übertragen. Wir erfassen jede einzelne schon in der Analysephase, denn eine spät entdeckte Integration ist es, die eine Migration über Budget und Zeitplan treibt."
+        "a": "Sie werden neu gebaut, nicht übernommen. Ihre Anbindungen an ERP, CRM, Fulfillment und Versanddienstleister wurden für die API der alten Plattform entwickelt, und keine davon lässt sich übertragen. Wir erfassen jede einzelne schon in der Analysephase, denn eine spät entdeckte Integration ist es, die eine Migration über Budget und Zeitplan treibt."
       },
       {
         "q": "Bleibt der Shop während der Migration online?",
@@ -217,7 +217,7 @@
       },
       {
         "q": "Was passiert nach dem Livegang auf Shopify?",
-        "a": "Wir beobachten den Shop. Die Weiterleitungen werden gegen die Live-Antworten geprüft, Sitemaps eingereicht und die Search Console wochenlang kontrolliert, nicht nur ein paar Tage. Migrationen scheitern selten am Tag des Livegangs. Sie scheitern drei Wochen später, wenn niemand mehr auf den Indexierungsbericht schaut."
+        "a": "Wir beobachten den Shop. Die Weiterleitungen werden anhand der Live-Antworten geprüft, Sitemaps eingereicht und die Search Console wochenlang kontrolliert, nicht nur ein paar Tage. Migrationen scheitern selten am Tag des Livegangs. Sie scheitern drei Wochen später, wenn niemand mehr auf den Indexierungsbericht schaut."
       }
     ]
   },

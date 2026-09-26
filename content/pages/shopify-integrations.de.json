@@ -104,11 +104,11 @@
       },
       {
         "title": "Der Bestand stimmt nicht mehr, wenn er synchronisiert ist",
-        "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und gleichen ab, was ein Sync verpasst hat."
+        "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und gleichen ab, was ein Abgleich verpasst hat."
       },
       {
         "title": "Für Ihr ERP gibt es keine Shopify-App",
-        "description": "Keine App im App Store heißt nicht, dass keine Integration möglich ist. Wir entwickeln den Konnektor gegen die API Ihres ERP – oder gegen Datenbank oder Dateischnittstelle, wenn es keine API gibt."
+        "description": "Keine App im App Store heißt nicht, dass keine Integration möglich ist. Wir entwickeln den Konnektor auf Basis der API Ihres ERP – oder über Datenbank oder Dateischnittstelle, wenn es keine API gibt."
       }
     ]
   },
@@ -151,7 +151,7 @@
       },
       {
         "title": "Livegang & Monitoring",
-        "description": "Wir beobachten sie unter realem Volumen und behalten die Alarmierung bei, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+        "description": "Wir beobachten sie unter realer Last und halten die Alarmierung aktiv, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
       }
     ]
   },
@@ -213,7 +213,7 @@
       },
       {
         "q": "Wer betreut die Integration nach dem Livegang?",
-        "a": "Wir, wenn Sie das möchten. Integrationen brechen, wenn sich eine der beiden Seiten ändert: Eine API-Version wird abgekündigt, ein Feld umbenannt, ein System aktualisiert. Wir überwachen die Verbindungen, die wir bauen, und melden Störungen, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+        "a": "Wir, wenn Sie das möchten. Integrationen fallen aus, wenn sich eine der beiden Seiten ändert: Eine API-Version wird abgekündigt, ein Feld umbenannt, ein System aktualisiert. Wir überwachen die Verbindungen, die wir bauen, und melden Störungen, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
       },
       {
         "q": "Können Sie unser Lager oder unseren 3PL anbinden?",

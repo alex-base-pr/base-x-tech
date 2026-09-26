@@ -150,7 +150,7 @@
       },
       {
         "title": "Livegang & Betreuung",
-        "description": "Wir bringen den Shop live, beobachten ihn unter realem Traffic und bleiben nach dem Livegang dran, statt nur die Zugangsdaten zu übergeben."
+        "description": "Wir bringen den Shop live, beobachten ihn bei echtem Traffic und bleiben nach dem Livegang dran, statt nur die Zugangsdaten zu übergeben."
       }
     ]
   },
@@ -187,7 +187,7 @@
       },
       {
         "q": "Können Sie einen Produktkonfigurator auf Shopify entwickeln?",
-        "a": "Ja, und wir haben es bereits getan. Ein in die Storefront integrierter Konfigurator bildet Optionen, Abhängigkeiten und Auftragsfertigung ab, die sich mit Varianten allein nicht darstellen lassen. Prime EVA ist das Beispiel: ein individueller Konfigurator, der direkt im Shopify-Shop läuft statt als nachträglich angebaute App."
+        "a": "Ja, das haben wir bereits umgesetzt. Ein in die Storefront integrierter Konfigurator bildet Optionen, Abhängigkeiten und Auftragsfertigung ab, die sich mit Varianten allein nicht darstellen lassen. Prime EVA ist das Beispiel: ein individueller Konfigurator, der direkt im Shopify-Shop läuft statt als nachträglich angebaute App."
       },
       {
         "q": "Kann ein Shop Großhandel und Endkunden bedienen?",
@@ -207,7 +207,7 @@
       },
       {
         "q": "Was passiert nach dem Livegang?",
-        "a": "Wir bleiben dran. Wir beobachten den Shop unter realem Traffic, beheben, was in den ersten Wochen auftaucht, und halten ihn über die API-Versionswechsel von Shopify hinweg funktionsfähig. Zugangsdaten übergeben und verschwinden – genau dort haben die meisten Probleme angefangen, für deren Behebung man uns später holt."
+        "a": "Wir bleiben dran. Wir beobachten den Shop bei echtem Traffic, beheben, was in den ersten Wochen auftaucht, und halten ihn über die API-Versionswechsel von Shopify hinweg funktionsfähig. Zugangsdaten übergeben und verschwinden – genau dort haben die meisten Probleme angefangen, für deren Behebung man uns später holt."
       }
     ]
   },
