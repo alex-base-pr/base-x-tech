@@ -55,7 +55,7 @@ Scope: `content/pages/*.uk.json` for home, shopify-development, shopify-integrat
 | e-commerce | е-комерція | Cyrillic "е" |
 | AI | ШІ | |
 | Discuss Your Project | Обговорити проєкт | |
-| Let's Talk | Поговорімо | |
+| Let's Talk | Поговорімо (section label, form title) / Зв’язатися (header pill) | Owner 2026-09-26: every primary CTA button reads «Обговорити проєкт»; the short header/mobile pill reads «Зв’язатися». The offer buttons «Замовити аудит» / «Замовити оцінку» are a different action and stay |
 | Our Capabilities | Що ми робимо | |
 | Recent Projects | Останні проєкти | |
 | When We Can Help | Коли ми допоможемо | |
