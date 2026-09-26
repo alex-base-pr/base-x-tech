@@ -98,7 +98,7 @@
     "close": "Formular schließen",
     "title": "Lassen Sie uns",
     "titleMuted": "über Ihr Projekt sprechen",
-    "successTitle": "Vielen Dank — Ihre Projektdetails sind bei uns.",
+    "successTitle": "Vielen Dank – Ihre Projektdetails sind bei uns.",
     "successBefore": "Wir antworten innerhalb eines Werktages. In dringenden Fällen schreiben Sie uns an",
     "closeButton": "Schließen",
     "errorTitle": "Das Formular konnte leider nicht gesendet werden.",
@@ -233,7 +233,7 @@
       "role": "DACH-Partner",
       "note": "Ihr Ansprechpartner auf Deutsch"
     },
-    "location": "Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten."
+    "location": "Unser Team arbeitet in Kyjiw, Lwiw, Krakau und Spanien – zu MEZ-Arbeitszeiten."
   },
   "ui": {
     "_note": "Small UI strings inside the page bodies (see shell.en.json → ui). Added 2026-09-26 with the German v2 index pages so they don't show the English fallback (\"By\", \"Scroll to Explore\").",

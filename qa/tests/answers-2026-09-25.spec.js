@@ -33,13 +33,13 @@ for (const [p, labels] of [
 test('A4: success text promises a reply within 1 working day (EN, DE)', async ({ request }) => {
   expect((await rawHtml(request, '/')).html).toContain('We reply within 1 working day.');
   const de = (await rawHtml(request, '/de/pages/complex-solutions/')).html;
-  expect(de).toContain('Vielen Dank — Ihre Projektdetails sind bei uns.');
+  expect(de).toContain('Vielen Dank – Ihre Projektdetails sind bei uns.');
   expect(de).toContain('Wir antworten innerhalb eines Werktages.');
 });
 
 test('A1: company line in the footer; controller named in the privacy policy', async ({ request }) => {
   expect((await rawHtml(request, '/')).html).toContain('Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours.'); // moved from the footer to the team block
-  expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Unser Team arbeitet von Kyiv, Lviv, Kraków und Spanien aus, zu MEZ-Zeiten.'); // moved from the footer to the team block
+  expect((await rawHtml(request, '/de/pages/complex-solutions/')).html).toContain('Unser Team arbeitet in Kyjiw, Lwiw, Krakau und Spanien – zu MEZ-Arbeitszeiten.'); // moved from the footer to the team block
   expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
