@@ -31,7 +31,14 @@
     { "path": "/pages/service/shopify-app-design-services/", "file": "pages/service/shopify-app-design-services.html", "lang": "en", "role": "absorbed", "canonical": "/pages/service/custom-shopify-app-development/" },
     { "path": "/pages/service/mvp-design-services/", "file": "pages/service/mvp-design-services.html", "lang": "en", "role": "absorbed", "canonical": "/pages/service/custom-web-design-services/" },
     { "path": "/pages/service/ppc-advertising/", "file": "pages/service/ppc-advertising.html", "lang": "en", "role": "noindex" },
-    { "path": "/pages/service/seo-promotion/", "file": "pages/service/seo-promotion.html", "lang": "en", "role": "noindex" }
+    { "path": "/pages/service/seo-promotion/", "file": "pages/service/seo-promotion.html", "lang": "en", "role": "noindex" },
+
+    { "path": "/uk/pages/service/shopify-theme-customization-and-development/", "file": "uk/pages/service/shopify-theme-customization-and-development.html", "lang": "uk", "role": "absorbed", "canonical": "/uk/pages/shopify-development/" },
+    { "path": "/uk/pages/service/shopify-headless-development/", "file": "uk/pages/service/shopify-headless-development.html", "lang": "uk", "role": "absorbed", "canonical": "/uk/pages/shopify-development/" },
+    { "path": "/uk/pages/service/shopify-app-design-services/", "file": "uk/pages/service/shopify-app-design-services.html", "lang": "uk", "role": "absorbed", "canonical": "/uk/pages/service/custom-shopify-app-development/" },
+    { "path": "/uk/pages/service/mvp-design-services/", "file": "uk/pages/service/mvp-design-services.html", "lang": "uk", "role": "absorbed", "canonical": "/uk/pages/service/custom-web-design-services/" },
+    { "path": "/uk/pages/service/ppc-advertising/", "file": "uk/pages/service/ppc-advertising.html", "lang": "uk", "role": "noindex" },
+    { "path": "/uk/pages/service/seo-promotion/", "file": "uk/pages/service/seo-promotion.html", "lang": "uk", "role": "noindex" }
   ],
-  "uk": { "_note": "UA pages are untouched (EN-only release) and all stay in the sitemap as today.", "include_all": true }
+  "uk": { "_note": "UK pages (2026-09-26) are listed above like EN/DE: the index ones are design v2 (copy content/pages/<page>.uk.json, EN fallback); absorbed/noindex ones keep the old design and mirror their EN twins' SEO treatment. Only role index goes to sitemap.xml." }
 }
