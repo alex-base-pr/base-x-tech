@@ -1,6 +1,6 @@
 // GEO: T-040 robots, T-041 content without JS, T-042 JSON-LD, T-043 llms.txt.
 import { test, expect } from '@playwright/test';
-import { host, indexPages, ukIndexPages, rawHtml, isDevTarget } from '../site-map.js';
+import { host, indexPages, deIndexPages, ukIndexPages, rawHtml, isDevTarget } from '../site-map.js';
 
 const AI_BOTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User',
   'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'CCBot', 'Amazonbot', 'meta-externalagent'];
@@ -31,14 +31,16 @@ test('T-040 robots.txt allows every AI crawler, ai-train=yes, both sitemaps', as
   expect(robots).toContain(`Sitemap: ${host}/blog/sitemap.xml`);
 });
 
-for (const page of [...indexPages, ...ukIndexPages]) {
+for (const page of [...indexPages, ...deIndexPages, ...ukIndexPages]) {
   test(`T-041 ${page.path}: copy in raw HTML inside <main>`, async ({ request }) => {
+    // The Impressum is a short statutory notice (DE-only, § 5 DDG), not a content page: h1 in <main> is enough.
+    const minWords = page.path === '/de/impressum/' ? 50 : 150;
     const { html } = await rawHtml(request, page.path);
     const main = (html.match(/<main[\s>][\s\S]*<\/main>/i) || [''])[0];
     expect(main.length, '<main> present').toBeGreaterThan(0);
     expect(main, 'h1 inside <main>').toMatch(/<h1[\s>]/i);
     const words = main.replace(/<(script|style|svg)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean);
-    expect(words.length, 'words of copy in <main> without JS').toBeGreaterThan(150);
+    expect(words.length, 'words of copy in <main> without JS').toBeGreaterThan(minWords);
   });
 
   test(`T-042 ${page.path}: valid JSON-LD with required types`, async ({ request }) => {
@@ -61,13 +63,17 @@ test('T-043 llms.txt lists exactly the indexable pages; llms-full.txt has every 
   const llms = await (await request.get('/llms.txt')).text();
   const urls = [...llms.matchAll(/\((https:\/\/base-xtech\.com[^)\s]*)\)/g)].map((m) => m[1]);
   const pages = urls.filter((u) => !u.includes('/blog'));
-  expect([...new Set(pages)].sort()).toEqual([...indexPages, ...ukIndexPages].map((p) => host + p.path).sort());
-  // UK pages only in their own section (2026-09-26), never mixed into the English ones.
-  const [enPart, ukPart = ''] = llms.split('## Українською');
-  for (const p of ukIndexPages) {
-    expect(ukPart, `UK section lists ${p.path}`).toContain(`(${host + p.path})`);
-    expect(enPart, `${p.path} only in the UK section`).not.toContain(`(${host + p.path})`);
+  expect([...new Set(pages)].sort()).toEqual([...indexPages, ...deIndexPages, ...ukIndexPages].map((p) => host + p.path).sort());
+  // DE and UK pages only in their own sections (2026-09-26), never mixed into the English ones.
+  const [enPart, rest = ''] = llms.split('## Deutsch');
+  const [dePart, ukPart = ''] = rest.split('## Українською');
+  for (const [pages, part, name] of [[deIndexPages, dePart, 'DE'], [ukIndexPages, ukPart, 'UK']]) {
+    for (const p of pages) {
+      expect(part, `${name} section lists ${p.path}`).toContain(`(${host + p.path})`);
+      expect(enPart, `${p.path} only in the ${name} section`).not.toContain(`(${host + p.path})`);
+    }
   }
+  for (const p of ukIndexPages) expect(dePart, `${p.path} not in the DE section`).not.toContain(`(${host + p.path})`);
 
   const full = await request.get('/llms-full.txt');
   expect(full.status()).toBe(200);

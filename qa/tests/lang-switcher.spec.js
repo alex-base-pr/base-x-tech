@@ -12,10 +12,16 @@ const cases = [
   { path: '/de/datenschutz/', visible: ['en', 'de', 'uk'], active: 'de', go: { en: '/pages/privacy-policy/', uk: '/uk/pages/privacy-policy/' } },
   { path: '/uk/pages/privacy-policy/', visible: ['en', 'de', 'uk'], active: 'uk', go: { en: '/pages/privacy-policy/', de: '/de/datenschutz/' } },
   { path: '/uk/pages/terms-and-conditions/', visible: ['en', 'uk'], active: 'uk', go: { en: '/pages/terms-and-conditions/' } },
-  { path: '/uk/pages/service/custom-shopify-integrations/', visible: ['en', 'uk'], active: 'uk', go: { en: '/pages/service/custom-shopify-integrations/' } },
-  { path: '/uk/', visible: ['en', 'uk'], active: 'uk', go: { en: '/' } },
-  { path: '/', visible: ['en', 'uk'], active: 'en', go: { uk: '/uk/' } },
-  { path: '/pages/service/custom-shopify-integrations/', visible: ['en', 'uk'], active: 'en', go: { uk: '/uk/pages/service/custom-shopify-integrations/' } },
+  // Home and service pages exist in EN, DE and UK since 2026-09-26.
+  { path: '/uk/pages/service/custom-shopify-integrations/', visible: ['en', 'de', 'uk'], active: 'uk', go: { en: '/pages/service/custom-shopify-integrations/', de: '/de/pages/service/custom-shopify-integrations/' } },
+  { path: '/uk/', visible: ['en', 'de', 'uk'], active: 'uk', go: { en: '/', de: '/de/' } },
+  { path: '/', visible: ['en', 'de', 'uk'], active: 'en', go: { de: '/de/', uk: '/uk/' } },
+  { path: '/pages/service/custom-shopify-integrations/', visible: ['en', 'de', 'uk'], active: 'en', go: { de: '/de/pages/service/custom-shopify-integrations/', uk: '/uk/pages/service/custom-shopify-integrations/' } },
+  { path: '/de/', visible: ['en', 'de', 'uk'], active: 'de', go: { en: '/', uk: '/uk/' } },
+  { path: '/de/pages/service/custom-shopify-integrations/', visible: ['en', 'de', 'uk'], active: 'de', go: { en: '/pages/service/custom-shopify-integrations/', uk: '/uk/pages/service/custom-shopify-integrations/' } },
+  { path: '/de/pages/shopify-development/', visible: ['en', 'de', 'uk'], active: 'de', go: { en: '/pages/shopify-development/', uk: '/uk/pages/shopify-development/' } },
+  // Terms: English and Ukrainian only (no German terms page; the DE footer links the EN terms).
+  { path: '/pages/terms-and-conditions/', visible: ['en', 'uk'], active: 'en', go: { uk: '/uk/pages/terms-and-conditions/' } },
 ];
 
 for (const c of cases) {

@@ -1,5 +1,5 @@
 // Language switcher driven by the page's own hreflang links: a language is offered only where this page
-// has a version in it (e.g. DE exists only for /pages/complex-solutions/). Pages without any hreflang fall
+// has a version in it (e.g. no DE version of the terms or the retired pages). Pages without any hreflang fall
 // back to the old /uk prefix rule.
 // Owner 2026-09-25 (reverses A10): switcher = EN | DE | UK again, each only where this page has that version.
 // The v2 globe is rendered hidden and shown here once at least two languages are available; German pages
