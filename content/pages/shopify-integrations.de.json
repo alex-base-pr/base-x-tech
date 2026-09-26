@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Shopify-ERP-Anbindung, CRM & API-Integration | Base X Tech",
+    "description": "Wir binden Shopify an die Systeme an, mit denen Ihr Unternehmen arbeitet: ERP, CRM, PIM, Logistik und Marktplätze – entwickelt und überwacht vom selben Team."
+  },
+  "hero": {
+    "tag": "Integrationen",
+    "title": [
+      "Shopify-Integrationen",
+      "für die Systeme, mit denen",
+      "Ihr Unternehmen arbeitet"
+    ],
+    "lead": "ERP, CRM, PIM, Logistik, Marktplätze. Wenn Ihr Shop bei jeder Bestellung mit den Systemen dahinter übereinstimmen muss, ist das unsere Arbeit.",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Unsere Leistungen",
+    "title": "Ein Shop – und alles, womit er",
+    "titleMuted": "übereinstimmen muss.",
+    "items": [
+      {
+        "title": "ERP-Integrationen",
+        "description": "Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP – ganz ohne Handarbeit.",
+        "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+      },
+      {
+        "title": "CRM-Integrationen",
+        "description": "Kunden- und Bestelldaten landen so in Ihrem CRM, wie Ihr Vertrieb sie braucht.",
+        "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp"
+      },
+      {
+        "title": "PIM & Produktdaten",
+        "description": "Eine zentrale Quelle für Produktdaten, die an Shopify übertragen statt doppelt gepflegt werden.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "Individuelle APIs",
+        "description": "Anbindungen für Systeme, für die es weder eine App noch eine Standardintegration gibt.",
+        "image": "/images/v2/shopify-integrations-capabilities-4-image-5947.webp"
+      },
+      {
+        "title": "Logistik & Fulfillment",
+        "description": "Versanddienstleister, Etiketten und Sendungsverfolgung direkt in den Bestellablauf eingebunden statt nachträglich aufgesetzt.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Marktplätze & Kanäle",
+        "description": "Angebote, Bestände und Bestellungen bleiben auf allen Verkaufskanälen synchron.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Geschenke",
+        "title": "Britische Geschenkmarke",
+        "text": "Konfigurator, Produktion und Versanddienstleister auf Shopify Plus miteinander verbunden.",
+        "tags": [
+          "Integrationen",
+          "Automatisierung",
+          "Geschenke"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Case Study zur britischen Geschenkmarke lesen",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "ERP-Integration mit automatisierter Auftragsabwicklung hinter dem Shop.",
+        "tags": [
+          "ERP",
+          "Automatisierung"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10 Mio.+ mögliche Konfigurationen"
+      },
+      {
+        "category": "B2B",
+        "title": "VT Advantec",
+        "text": "API-Integration, entstanden in einer mehrjährigen Partnerschaft.",
+        "tags": [
+          "Individuelle APIs",
+          "Integrationen"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-integrations-projects-3-chatgpt-image-16-2026-07-57-51-1.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Zwei Systeme, zwei Versionen",
+    "titleMuted": "derselben Bestellung.",
+    "items": [
+      {
+        "title": "Jemand tippt Bestellungen von Hand ab",
+        "description": "Wenn Bestellungen per Copy & Paste von Shopify ins ERP wandern, sind Fehler und Verzögerungen vorprogrammiert. Wir verbinden die Systeme, sodass Bestellungen automatisch fließen und jeder Fehler protokolliert wird."
+      },
+      {
+        "title": "Der Bestand stimmt nicht mehr, wenn er synchronisiert ist",
+        "description": "Bei Batch-Abgleichen entsteht ein Zeitfenster, in dem Sie Ware verkaufen, die Sie nicht mehr haben. Wir bringen Bestandsaktualisierungen näher an Echtzeit und gleichen ab, was ein Sync verpasst hat."
+      },
+      {
+        "title": "Für Ihr ERP gibt es keine Shopify-App",
+        "description": "Keine App im App Store heißt nicht, dass keine Integration möglich ist. Wir entwickeln den Konnektor gegen die API Ihres ERP – oder gegen Datenbank oder Dateischnittstelle, wenn es keine API gibt."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify-Entwicklung",
+        "quote": "They deliver top-tier expertise across web development and platform integration, always providing strategic, practical advice, and expertly navigating tight timelines to ensure our success."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      },
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Von der Bestandsaufnahme der Systeme bis zum laufenden Betrieb.",
+    "steps": [
+      {
+        "title": "Analyse & Bestandsaufnahme",
+        "description": "Wir erfassen jedes System, welche Daten es führt und wo es heute hakt – bevor wir irgendetwas vorschlagen."
+      },
+      {
+        "title": "Datenfluss planen",
+        "description": "Wir legen Richtung und Häufigkeit fest und bestimmen, welches System gewinnt, wenn sich zwei widersprechen – daran scheitern die meisten Integrationen."
+      },
+      {
+        "title": "Entwickeln & testen",
+        "description": "Wir entwickeln die Integration und schicken echte Bestellungen hindurch, auch die fehlerhaften – bevor sie mit Livedaten arbeitet."
+      },
+      {
+        "title": "Livegang & Monitoring",
+        "description": "Wir beobachten sie unter realem Volumen und behalten die Alarmierung bei, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "60+",
+        "label": "Zufriedene Kunden"
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "offer": {
+    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
+    "label": "Erster Schritt",
+    "title": "Starten Sie mit einem Festpreis-Audit",
+    "text": "Wir erfassen Ihre Systeme, Datenflüsse und Schwachstellen und empfehlen Connector oder Individualentwicklung – mit einem Festpreisangebot für die Umsetzung. Wird bei Beauftragung auf die Umsetzung angerechnet.",
+    "price": "Festpreis: 1.999 €",
+    "note": "Der Umfang wird nach einem kurzen Gespräch abgestimmt.",
+    "button": "Audit anfragen"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Können Sie Shopify an unser ERP anbinden?",
+        "a": "Ja. Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP, ohne dass jemand sie abtippt. Wir arbeiten mit der API, die Ihr ERP bereitstellt, und wo es nichts Brauchbares gibt, entwickeln wir den Konnektor selbst, statt Ihnen zu sagen, dass es nicht geht."
+      },
+      {
+        "q": "Was, wenn es für unser System keine Shopify-App gibt?",
+        "a": "Das ist der Großteil unserer Arbeit. Fertige Apps decken gängige Systeme ab; das System, auf dem Ihr Geschäft läuft, ist oft älter oder wurde intern entwickelt. Solche Systeme binden wir direkt über ihre API an oder entwickeln eine individuelle Shopify-App als Bindeglied."
+      },
+      {
+        "q": "Wie verhindern Sie, dass Bestände auseinanderlaufen?",
+        "a": "Indem wir festlegen, welches System für den Wert führend ist, bevor irgendetwas gebaut wird. Bestände driften, wenn sich zwei Systeme beide für maßgeblich halten. Deshalb legen wir für jedes Feld Richtung und Häufigkeit fest und schicken dann echte Bestellungen hindurch, auch die fehlerhaften, bevor die Integration mit Livedaten arbeitet."
+      },
+      {
+        "q": "Können Sie Auftragsrouting und Fulfillment automatisieren?",
+        "a": "Ja. Für eine britische Geschenkmarke haben wir eine Produktions-Engine entwickelt, die aus jeder Bestellung druckfertige Dateien erzeugt, sie bündelt und an die Produktionswarteschlange weiterleitet – dazu eine Fulfillment-Schicht, die Versandcodes erzeugt, Versanddienstleister in Echtzeit synchronisiert und zweimal täglich Abholungen einplant."
+      },
+      {
+        "q": "Mit welchen ERP- und CRM-Systemen haben Sie gearbeitet?",
+        "a": "Mit ERP-, CRM-, PIM- und Fulfillment-Systemen aus allen gängigen Kategorien, angebunden über die jeweils verfügbare API. Mehrere Kunden nutzen Systeme ganz ohne öffentliche Integration. Dafür haben wir individuelle Konnektoren für den konkreten Einsatzzweck entwickelt, statt das Unternehmen auf ein anderes Tool umzustellen."
+      },
+      {
+        "q": "Wie lange dauert eine Integration?",
+        "a": "Das hängt davon ab, wie viele Systeme beteiligt sind und wie sauber ihre Daten sind. Eine einzelne, gut dokumentierte Anbindung dauert Wochen. Das Projekt der britischen Geschenkmarke mit drei Systemen – Konfigurator, Produktion und Fulfillment – dauerte vier bis sechs Monate. Wir klären den Umfang, bevor wir ein Angebot erstellen."
+      },
+      {
+        "q": "Wer betreut die Integration nach dem Livegang?",
+        "a": "Wir, wenn Sie das möchten. Integrationen brechen, wenn sich eine der beiden Seiten ändert: Eine API-Version wird abgekündigt, ein Feld umbenannt, ein System aktualisiert. Wir überwachen die Verbindungen, die wir bauen, und melden Störungen, denn ein unbemerkter Integrationsfehler kostet mehr als ein offensichtlicher."
+      },
+      {
+        "q": "Können Sie unser Lager oder unseren 3PL anbinden?",
+        "a": "Ja. Wir haben Barcode-Scanning und Routing-Logik in Lagerprozesse eingebaut sowie Versanddienstleister angebunden, die Etiketten erzeugen, die Sendungsverfolgung an den Shop zurückmelden und Abholungen einplanen. Nova Poshta Connect ist die öffentliche Version dieser Arbeit und im Shopify App Store gelistet."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Komplexe Systeme (DACH)",
+        "href": "/pages/complex-solutions/"
+      },
+      {
+        "name": "Individuelle Shopify-Apps",
+        "href": "/pages/service/custom-shopify-app-development/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Shopify soll mit einem",
+      "anderen System sprechen?"
+    ],
+    "body": "Nennen Sie uns die beiden Systeme, und wir sagen Ihnen, was ihre Anbindung erfordert.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}
