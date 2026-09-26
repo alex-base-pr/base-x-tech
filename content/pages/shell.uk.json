@@ -1,0 +1,235 @@
+{
+  "_note": "Design-v2 shell strings (header, mobile menu, footer, contact modal). Picked by the page's lang (layout/v2/*.ejs); EN is the default. Option `value`s stay English so leads read the same in ClickUp.",
+  "homeLabel": "Base X Tech — головна",
+  "nav": {
+    "main": "Основна навігація",
+    "mobile": "Мобільна навігація",
+    "footer": "Навігація у футері",
+    "services": "Послуги",
+    "portfolio": "Портфоліо",
+    "insights": "Статті",
+    "about": "Про нас",
+    "contact": "Контакти",
+    "back": "Назад",
+    "language": "Мова",
+    "menu": "Меню",
+    "closeMenu": "Закрити меню",
+    "cta": "Поговорімо"
+  },
+  "servicesMenu": [
+    {
+      "name": "Розробка на Shopify",
+      "href": "/pages/shopify-development/"
+    },
+    {
+      "name": "Кастомні застосунки Shopify",
+      "href": "/pages/service/custom-shopify-app-development/"
+    },
+    {
+      "name": "Інтеграції Shopify",
+      "href": "/pages/service/custom-shopify-integrations/"
+    },
+    {
+      "name": "Міграція на Shopify",
+      "href": "/pages/service/shopify-migration-service/"
+    },
+    {
+      "name": "Вебдизайн",
+      "href": "/pages/service/custom-web-design-services/"
+    },
+    {
+      "name": "Оптимізація конверсії (CRO)",
+      "href": "/pages/service/conversion-rate-optimization/"
+    },
+    {
+      "name": "Складні системи (DACH)",
+      "href": "/pages/complex-solutions/"
+    }
+  ],
+  "mobileServices": [
+    {
+      "name": "Розробка на Shopify",
+      "href": "/pages/shopify-development/",
+      "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+    },
+    {
+      "name": "Інтеграції Shopify",
+      "href": "/pages/service/custom-shopify-integrations/",
+      "image": "/images/v2/shopify-development-capabilities-6-image-5944.webp"
+    },
+    {
+      "name": "Міграція на Shopify",
+      "href": "/pages/service/shopify-migration-service/",
+      "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+    },
+    {
+      "name": "Застосунки Shopify",
+      "href": "/pages/service/custom-shopify-app-development/",
+      "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp"
+    },
+    {
+      "name": "CRO",
+      "href": "/pages/service/conversion-rate-optimization/",
+      "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+    },
+    {
+      "name": "Вебдизайн",
+      "href": "/pages/service/custom-web-design-services/",
+      "image": "/images/v2/shopify-development-capabilities-4-image-5942.webp"
+    },
+    {
+      "name": "Складні системи (DACH)",
+      "href": "/pages/complex-solutions/",
+      "image": "/images/v2/shopify-integrations-capabilities-2-image-5945.webp"
+    }
+  ],
+  "footer": {
+    "rights": "Усі права захищено.",
+    "navigation": "Навігація",
+    "connect": "Наші профілі",
+    "terms": "Умови використання",
+    "privacy": "Політика конфіденційності"
+  },
+  "form": {
+    "close": "Закрити форму",
+    "title": "Поговорімо",
+    "titleMuted": "про ваш проєкт",
+    "successTitle": "Дякуємо — деталі вашого проєкту вже в нас.",
+    "successBefore": "Відповімо протягом 1 робочого дня. Якщо справа термінова, напишіть на",
+    "closeButton": "Закрити",
+    "errorTitle": "На жаль, форму не надіслано.",
+    "errorBefore": "Спробуйте ще раз або надішліть деталі проєкту на",
+    "retry": "Спробувати ще раз",
+    "nameLabel": "Ваше ім’я (обов’язково)",
+    "namePlaceholder": "Ваше ім’я*",
+    "emailLabel": "Робоча пошта (обов’язково)",
+    "emailPlaceholder": "name@company.com*",
+    "phoneLabel": "Телефон (необов’язково)",
+    "phonePlaceholder": "Телефон (необов’язково)",
+    "companyLabel": "Компанія або посилання на магазин (необов’язково)",
+    "companyPlaceholder": "Компанія або посилання на магазин",
+    "serviceLabel": "Чим ми можемо допомогти?",
+    "services": [
+      {
+        "value": "Shopify Development",
+        "label": "Розробка на Shopify"
+      },
+      {
+        "value": "Custom Shopify Integrations",
+        "label": "Кастомні інтеграції Shopify"
+      },
+      {
+        "value": "Shopify Migration",
+        "label": "Міграція на Shopify"
+      },
+      {
+        "value": "Custom Shopify App",
+        "label": "Кастомний застосунок Shopify"
+      },
+      {
+        "value": "Web Design",
+        "label": "Вебдизайн"
+      },
+      {
+        "value": "Conversion Rate Optimization",
+        "label": "Оптимізація конверсії (CRO)"
+      },
+      {
+        "value": "Complex Solutions (ERP, POS, middleware)",
+        "label": "Складні системи (ERP, POS, middleware)"
+      },
+      {
+        "value": "Not sure yet",
+        "label": "Ще не визначилися"
+      }
+    ],
+    "sourceLabel": "Як ви про нас дізналися?",
+    "sourcePlaceholder": "Оберіть (необов’язково)",
+    "sources": [
+      {
+        "value": "Google",
+        "label": "Google"
+      },
+      {
+        "value": "ChatGPT / AI assistant",
+        "label": "ChatGPT / ШІ-асистент"
+      },
+      {
+        "value": "Clutch",
+        "label": "Clutch"
+      },
+      {
+        "value": "Upwork",
+        "label": "Upwork"
+      },
+      {
+        "value": "Shopify Partner Directory",
+        "label": "Shopify Partner Directory"
+      },
+      {
+        "value": "LinkedIn",
+        "label": "LinkedIn"
+      },
+      {
+        "value": "Referral / partner",
+        "label": "Рекомендація / партнер"
+      },
+      {
+        "value": "Other",
+        "label": "Інше"
+      }
+    ],
+    "budgetLegend": "Який бюджет проєкту?",
+    "_budgets": "A3: EUR bands. `value` goes to ClickUp (English/EUR); `hideOnComplex` drops the band on Complex pages.",
+    "budgets": [
+      {
+        "value": "Up to €5k",
+        "label": "До 5 тис. €",
+        "hideOnComplex": true
+      },
+      {
+        "value": "€5–15k",
+        "label": "5–15 тис. €"
+      },
+      {
+        "value": "€15–40k",
+        "label": "15–40 тис. €"
+      },
+      {
+        "value": "€40k+",
+        "label": "Понад 40 тис. €"
+      },
+      {
+        "value": "Not sure yet",
+        "label": "Ще не визначилися"
+      }
+    ],
+    "messageLabel": "Розкажіть про проєкт",
+    "messagePlaceholder": "Що ви створюєте, змінюєте або яку задачу хочете розв’язати?",
+    "submit": "Надіслати деталі проєкту",
+    "promise": "Відповідаємо протягом 1 робочого дня.",
+    "note": "Ваші дані ми використовуємо лише для відповіді на цей запит.",
+    "privacy": "Політика конфіденційності"
+  },
+  "team": {
+    "_note": "A2 (proposal): text-only 'Who you'll talk to' block (layout/v2/team.ejs). `dach` is listed first on Complex pages only.",
+    "label": "З ким ви говоритимете",
+    "people": [
+      {
+        "name": "Sofiia Zabrodska",
+        "role": "Менеджерка з розвитку бізнесу",
+        "note": "перший контакт, комерційні пропозиції"
+      },
+      {
+        "name": "Vadym-Marko Hruden",
+        "role": "CBDO"
+      }
+    ],
+    "dach": {
+      "name": "Alexander Karl",
+      "role": "Партнер у регіоні DACH",
+      "note": "ваш контакт німецькою мовою"
+    },
+    "location": "Наша команда працює з Києва, Львова, Кракова та Іспанії, за центральноєвропейським часом (CET)."
+  }
+}
