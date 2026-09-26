@@ -1,0 +1,250 @@
+{
+  "meta": {
+    "title": "Shopify-Migration von Magento & WooCommerce | Base X Tech",
+    "description": "Wir migrieren Shops von Magento, WooCommerce, BigCommerce oder Eigenentwicklungen zu Shopify: Daten zeilengenau geprüft, Weiterleitungen und Rankings gesichert."
+  },
+  "hero": {
+    "tag": "Shopify-Migration",
+    "title": [
+      "Shopify-Migration,",
+      "ohne zu verlieren,",
+      "was schon funktioniert"
+    ],
+    "lead": "Magento, WooCommerce, BigCommerce oder eine Eigenentwicklung. Wir ziehen Shop, Daten und Traffic um und begleiten ihn, bis alles stabil läuft.",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Unsere Leistungen",
+    "title": "Jede Plattform hinterlässt",
+    "titleMuted": "andere Probleme.",
+    "items": [
+      {
+        "title": "Magento zu Shopify",
+        "description": "Shops auf Magento 1 und 2 umgezogen, ohne die Wartungskosten mitzunehmen.",
+        "image": "/images/v2/shopify-development-capabilities-1-rectangle-34624320.webp"
+      },
+      {
+        "title": "WooCommerce zu Shopify",
+        "description": "WordPress- und WooCommerce-Shops dauerhaft aus der Plugin-Abhängigkeit gelöst.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      },
+      {
+        "title": "BigCommerce zu Shopify",
+        "description": "BigCommerce-Shops umgezogen – mit vollständigem Katalog und unveränderten URLs.",
+        "image": "/images/v2/shopify-development-capabilities-2-image-56.webp"
+      },
+      {
+        "title": "Umzug von Eigenentwicklungen",
+        "description": "Selbst entwickelte Plattformen zu Shopify migriert, einschließlich der Teile, die nie dokumentiert wurden.",
+        "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "title": "Daten & Integrität",
+        "description": "Produkte, Kunden und Bestellhistorie übertragen und Zeile für Zeile geprüft.",
+        "image": "/images/v2/shopify-integrations-capabilities-5-image-5946.webp"
+      },
+      {
+        "title": "Traffic erhalten",
+        "description": "Weiterleitungen, Canonicals und hreflang so eingerichtet, dass Ihre Rankings den Wechsel überstehen.",
+        "image": "/images/v2/shopify-migration-capabilities-6-image-5948.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Geschenke",
+        "title": "Britische Geschenkmarke",
+        "text": "Umzug von einer Eigenentwicklung – mit über 1 Mio. vollständig erhaltenen Kundenprofilen.",
+        "tags": [
+          "Migration",
+          "Integrationen",
+          "Geschenke"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Case Study zur britischen Geschenkmarke lesen",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "Migriert und anschließend an das ERP angebunden, mit dem das Unternehmen arbeitet.",
+        "tags": [
+          "Migration",
+          "ERP"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10 Mio.+ mögliche Konfigurationen"
+      },
+      {
+        "category": "Wohnaccessoires",
+        "title": "Gunia",
+        "text": "Plattformwechsel und Redesign für eine ukrainische Luxusmarke für Wohnaccessoires.",
+        "tags": [
+          "Plattformwechsel",
+          "Wohnaccessoires"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Die Plattform kostet mehr,",
+    "titleMuted": "als sie einbringt.",
+    "items": [
+      {
+        "title": "Jede Änderung braucht einen Entwickler",
+        "description": "Wenn für einen neuen Banner ein Ticket nötig ist, bremst die Plattform das Geschäft. Auf Shopify pflegt Ihr Team Inhalte, Produkte und Aktionen selbst."
+      },
+      {
+        "title": "Ihre Plattform ist am Ende ihres Lebenszyklus",
+        "description": "Magento 1, ein nicht mehr unterstützter Plugin-Stack oder eine Eigenentwicklung, die niemand mehr pflegt. Wir übertragen Produkte, Kunden, Bestellungen und URLs, bevor daraus ein Sicherheitsproblem wird."
+      },
+      {
+        "title": "Das Hosting kostet mehr, als der Shop verdient",
+        "description": "Server, Patches und Erweiterungen summieren sich. Shopify ersetzt das meiste davon durch ein planbares Abo, und wir planen den Umzug so, dass Sie nicht lange für beides zahlen."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      },
+      {
+        "client": "VT Advantec",
+        "context": "Shopify-Entwicklung",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Von der Analyse bis zum Shop, der seinen Traffic hält.",
+    "steps": [
+      {
+        "title": "Analyse & Inventur",
+        "description": "Wir erfassen jede URL, jedes Produkt, jeden Kunden und jede Integration der alten Plattform – denn was übersehen wird, geht verloren."
+      },
+      {
+        "title": "Planung & Mapping",
+        "description": "Wir ordnen alte URLs den neuen zu, entscheiden, was übernommen und was neu gebaut wird, und legen die Umstellung fest, bevor wir etwas anfassen."
+      },
+      {
+        "title": "Migration & Prüfung",
+        "description": "Wir übertragen die Daten, prüfen sie gegen die Quelle und betreiben den Shop auf einer Staging-Umgebung, bis alles stimmt."
+      },
+      {
+        "title": "Livegang & Beobachtung",
+        "description": "Wir importieren die Weiterleitungen, reichen Sitemaps ein und beobachten die Search Console danach wochenlang, nicht nur ein paar Tage."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "1 Mio.+",
+        "label": "Migrierte Kundenprofile"
+      },
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "13",
+        "label": "Jahre Shop-Historie übernommen"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "offer": {
+    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
+    "label": "Erster Schritt",
+    "title": "Starten Sie mit einem Festpreis-Audit",
+    "text": "Migrationsanalyse: Wir erfassen Ihre Daten, URLs, Weiterleitungen und Erweiterungen und erstellen ein Festpreisangebot für den Umzug. Wird bei Beauftragung auf die Migration angerechnet.",
+    "price": "Festpreis: 1.999 €",
+    "note": "Der Umfang wird nach einem kurzen Gespräch abgestimmt.",
+    "button": "Migrationsanalyse anfragen"
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Wie lange dauert eine Shopify-Migration?",
+        "a": "Das hängt vom Katalog, von den Integrationen und davon ab, wie viel an der alten Plattform individuell entwickelt war. Ein einfacher Katalogumzug dauert Wochen. Der Umzug der britischen Geschenkmarke von einer Eigenentwicklung – mit über 1 Mio. Kundenprofilen und dreizehn Jahren Historie – dauerte vier bis sechs Monate."
+      },
+      {
+        "q": "Verlieren wir unsere Google-Rankings?",
+        "a": "Nicht, wenn die Weiterleitungen sauber umgesetzt sind – und genau diesen Teil kalkuliert oft niemand ein. Jede alte URL muss mit einer einzigen Weiterleitung auf ihr neues Gegenstück zeigen, Canonicals und hreflang müssen ab dem ersten Tag stimmen, und die Search Console muss danach wochenlang beobachtet werden, nicht nur ein paar Tage."
+      },
+      {
+        "q": "Was passiert mit unserer Bestellhistorie und den Kundenkonten?",
+        "a": "Sie kommen mit. Produkte, Kunden, Bestellhistorie und die Beziehungen zwischen ihnen werden übertragen und anschließend gegen die Quelle geprüft, statt einfach als korrekt angenommen. Für eine britische Geschenkmarke haben wir über 1 Mio. Profile und dreizehn Jahre Historie übertragen. Die Prüfung ist der langsame Teil, und sie ist nicht optional."
+      },
+      {
+        "q": "Können Sie von einer selbst entwickelten Plattform migrieren?",
+        "a": "Ja, und das ist der schwierigere Fall. Standardplattformen lassen sich vorhersehbar exportieren; Eigenentwicklungen enthalten Logik, die nie dokumentiert wurde, und Felder, an die sich niemand erinnert. Wir finden heraus, was das alte System tatsächlich tut, bevor wir etwas übertragen – auch die Teile, die nur in jemandes Kopf existieren."
+      },
+      {
+        "q": "Brauchen wir für die Migration Shopify Plus?",
+        "a": "Für die Migration nicht. Plus wird danach relevant, wenn Sie Checkout-Anpassungen, B2B-Firmenkonten oder höhere API-Limits brauchen. Wir sagen Ihnen, welche Ihrer Anforderungen Plus erfordern, statt Sie standardmäßig auf Plus zu setzen."
+      },
+      {
+        "q": "Was ist mit unseren bestehenden Integrationen?",
+        "a": "Sie werden neu gebaut, nicht übernommen. Ihre Anbindungen an ERP, CRM, Fulfillment und Versanddienstleister wurden gegen die API der alten Plattform entwickelt, und keine davon lässt sich übertragen. Wir erfassen jede einzelne schon in der Analysephase, denn eine spät entdeckte Integration ist es, die eine Migration über Budget und Zeitplan treibt."
+      },
+      {
+        "q": "Bleibt der Shop während der Migration online?",
+        "a": "Ja. Der neue Shop wird auf einer passwortgeschützten Shopify-Instanz aufgebaut und getestet, während Ihr aktueller Shop weiter verkauft. Die Umstellung ist ein geplanter Wechsel mit bereits vorbereiteten Weiterleitungen – keine Phase, in der nichts funktioniert."
+      },
+      {
+        "q": "Was passiert nach dem Livegang auf Shopify?",
+        "a": "Wir beobachten den Shop. Die Weiterleitungen werden gegen die Live-Antworten geprüft, Sitemaps eingereicht und die Search Console wochenlang kontrolliert, nicht nur ein paar Tage. Migrationen scheitern selten am Tag des Livegangs. Sie scheitern drei Wochen später, wenn niemand mehr auf den Indexierungsbericht schaut."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Shopify-Integrationen",
+        "href": "/pages/service/custom-shopify-integrations/"
+      },
+      {
+        "name": "Shopify-Entwicklung",
+        "href": "/pages/shopify-development/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Ihrer bisherigen Plattform",
+      "entwachsen?"
+    ],
+    "body": "Sagen Sie uns, worauf Ihr Shop heute läuft, und wir sagen Ihnen, was ein Umzug tatsächlich bedeutet.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}
