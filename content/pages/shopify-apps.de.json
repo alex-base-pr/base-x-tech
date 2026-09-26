@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "title": "Shopify-App-Entwicklung & Automatisierung | Base X Tech",
+    "description": "Wir entwickeln Shopify-Apps und Automatisierungen: öffentliche Apps für den App Store, Custom Apps für einzelne Händler, Checkout Extensions und Integrationen."
+  },
+  "hero": {
+    "tag": "Shopify-Apps",
+    "title": [
+      "Shopify-Apps, gebaut",
+      "für die Abläufe, die Sie",
+      "tatsächlich haben"
+    ],
+    "lead": "Öffentliche Apps, Custom Apps und Automatisierungen, die Arbeit übernehmen, die niemand von Hand erledigen sollte. Zwei davon sind im App Store live.",
+    "button": "Projekt besprechen"
+  },
+  "capabilities": {
+    "layout": "cards",
+    "label": "Unsere Leistungen",
+    "title": "Von der Idee bis zur gelisteten",
+    "titleMuted": "Shopify-App.",
+    "items": [
+      {
+        "title": "Öffentliche Apps für den App Store",
+        "description": "Zwei der Apps, die wir öffentlich nennen dürfen, sind im Shopify App Store live.",
+        "image": "/images/v2/shopify-migration-capabilities-4-image-5949.webp"
+      },
+      {
+        "title": "Custom Apps",
+        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann.",
+        "image": "/images/v2/shopify-apps-capabilities-2-image-5950.webp"
+      },
+      {
+        "title": "Individuelle Automatisierung",
+        "description": "Arbeit, die sich von selbst erledigt: Bestellungen, Bestände, Dokumente, Benachrichtigungen.",
+        "image": "/images/v2/shopify-apps-capabilities-3-image-5951.webp"
+      },
+      {
+        "title": "Functions & Extensions",
+        "description": "Checkout-, Rabatt- und Versandlogik über die Erweiterungspunkte von Shopify selbst.",
+        "image": "/images/v2/shopify-development-capabilities-3-frame-2087327088.webp"
+      },
+      {
+        "title": "App-UX & Oberfläche",
+        "description": "App-Oberflächen im Polaris-Stil, damit Händler sie ohne Einarbeitung bedienen können.",
+        "image": "/images/v2/shopify-apps-capabilities-5-image-5952.webp"
+      },
+      {
+        "title": "Launch im App Store",
+        "description": "Einreichung zur Prüfung, Texte für das App-Listing und die Compliance-Arbeit, die für die Freigabe nötig ist.",
+        "image": "/images/v2/shopify-development-capabilities-7-rectangle-34624320.webp"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Logistik",
+        "title": "Nova Poshta Connect",
+        "text": "Versand-App für ukrainische Shops, live im Shopify App Store.",
+        "tags": [
+          "Öffentliche App",
+          "Logistik"
+        ],
+        "link": "https://apps.shopify.com/nova-poshta-connect",
+        "linkLabel": "Im Shopify App Store ansehen",
+        "image": "/images/v2/shopify-apps-projects-2-image-5939.webp",
+        "caseLink": "/blog/nova-poshta-shopify-integration-connect-app/",
+        "caseLabel": "So haben wir sie entwickelt"
+      },
+      {
+        "category": "Geschenke",
+        "title": "Britische Geschenkmarke",
+        "text": "Geschenkkonfigurator als Custom App mit Produktionslogik umgesetzt.",
+        "tags": [
+          "Custom App",
+          "Automatisierung",
+          "Geschenke"
+        ],
+        "link": "/blog/custom-shopify-integrations-gifting-brand/",
+        "linkLabel": "Case Study zur britischen Geschenkmarke lesen",
+        "image": "/images/v2/shopify-integrations-projects-1-image-5953.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Shopify-App",
+        "title": "Mo: Story Slider Navigation",
+        "text": "Navigations-App im Story-Format für eine US-Partneragentur, mit 5,0 bewertet.",
+        "tags": [
+          "Öffentliche App",
+          "Storefront-UX"
+        ],
+        "link": "https://apps.shopify.com/mo-story-slider-navigation",
+        "linkLabel": "Im Shopify App Store ansehen",
+        "image": "/images/v2/shopify-apps-projects-4-image-5955.webp",
+        "imageFit": "contain"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Jemand in Ihrem Team ist",
+    "titleMuted": "die Schnittstelle.",
+    "items": [
+      {
+        "title": "Jemand überträgt Daten von Hand zwischen Systemen",
+        "description": "Wenn es jemandes Job ist, zwei Systeme manuell abzugleichen, sollte das eine App erledigen. Wir automatisieren die Routine und überlassen den Menschen die Ausnahmen."
+      },
+      {
+        "title": "Keine App kann, was Ihr Prozess braucht",
+        "description": "Der App Store deckt gängige Anforderungen ab, nicht Ihre Abläufe. Wir entwickeln eine Custom App für Ihren Shop, die genau das tut, was Ihr Prozess erfordert."
+      },
+      {
+        "title": "Sie wollen eine App verkaufen, nicht nur nutzen",
+        "description": "Sie haben eine Produktidee für andere Händler. Wir entwickeln öffentliche Apps und bringen sie durch die Shopify-Prüfung in den App Store – so wie unsere eigene."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "VT Advantec",
+        "context": "Shopify-Entwicklung",
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      },
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Vorgehen",
+    "title": "Vom Arbeitsablauf zur funktionierenden App.",
+    "steps": [
+      {
+        "title": "Ablauf verstehen",
+        "description": "Wir schauen uns an, wie die Arbeit heute erledigt wird, und legen fest, was eine App tun soll, bevor wir entscheiden, wie sie aussieht."
+      },
+      {
+        "title": "Entwicklung & Abnahme",
+        "description": "Wir entwickeln auf Basis der Shopify-APIs in prüfbaren Etappen, und Ihr Team nutzt die App bereits, während sie entsteht."
+      },
+      {
+        "title": "Test mit echten Daten",
+        "description": "Wir testen mit echten Bestellungen und echten Sonderfällen, denn Apps scheitern an den Daten, mit denen niemand gerechnet hat."
+      },
+      {
+        "title": "Launch & Wartung",
+        "description": "Wir übernehmen die Einreichung, wenn die App öffentlich wird, und halten sie über die API-Versionswechsel von Shopify hinweg funktionsfähig."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "60+",
+        "label": "Zufriedene Kunden"
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Können Sie eine öffentliche Shopify-App für den App Store entwickeln?",
+        "a": "Ja. Zwei Apps, die wir öffentlich nennen dürfen, sind dort live: Nova Poshta Connect, unsere eigene App, und Mo: Story Slider Navigation, entwickelt für eine Partneragentur. Der Großteil unserer Arbeit sind jedoch Custom Apps für einzelne Händler, die bewusst nie im App Store erscheinen."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen einer öffentlichen App und einer Custom App?",
+        "a": "Eine öffentliche App ist im App Store gelistet, und jeder Händler kann sie installieren. Eine Custom App gibt es nur für einen Shop, und sie tut genau das, was dieses Unternehmen braucht. Wenn der Ablauf spezifisch für Sie ist, ist eine Custom App meist günstiger und schneller, als eine öffentliche App passend zu biegen."
+      },
+      {
+        "q": "Können Sie automatisieren, was unser Team von Hand erledigt?",
+        "a": "Das ist der Großteil dessen, was wir entwickeln. Für eine britische Geschenkmarke haben wir einen Konfigurator als Custom App umgesetzt, dazu eine Produktions-Engine, die aus jeder Bestellung druckfertige Dateien erzeugt und an die Warteschlange weiterleitet. Was früher Handarbeit war, passiert jetzt mit jeder Bestellung automatisch."
+      },
+      {
+        "q": "Wie lange dauert die Entwicklung einer Shopify-App?",
+        "a": "Eine Custom App für einen einzelnen Zweck dauert Wochen. Mit Produktionslogik, externen Systemen oder einer App-Store-Prüfung dauert es länger. Das Projekt der Geschenkmarke mit drei Systemen dauerte vier bis sechs Monate. Wir klären den Umfang, bevor wir ein Angebot erstellen, damit Sie nicht raten müssen."
+      },
+      {
+        "q": "Wem gehören die App und der Code?",
+        "a": "Ihnen – bei allem, was wir für Sie entwickeln. Custom Apps und individueller Code gehören Ihnen, einschließlich des Repositorys. Bei einer öffentlichen App ist das eine eigene Frage, die man im Vertrag klären sollte, bevor sie gebaut wird, und nicht erst, wenn sie Nutzer hat."
+      },
+      {
+        "q": "Was passiert, wenn Shopify seine API ändert?",
+        "a": "Shopify kündigt API-Versionen nach festem Zeitplan ab, eine App ohne Pflege funktioniert also irgendwann nicht mehr. Wir halten die Apps, die wir entwickeln, über diese Änderungen hinweg funktionsfähig. Das ist Wartung unseres eigenen Codes – eine App, die wir nie gesehen haben, würden wir nicht als gewartet ausgeben."
+      },
+      {
+        "q": "Können Sie Checkout- oder Rabattlogik entwickeln?",
+        "a": "Ja, mit Shopify Functions und Checkout Extensions statt mit Workarounds. Für den Checkout selbst ist Shopify Plus nötig. Rabatt- und Versandlogik bieten in den Standardtarifen mehr Spielraum, und wir sagen Ihnen, welche Ihrer Regeln umsetzbar sind, bevor Sie sich festlegen."
+      },
+      {
+        "q": "Können Sie eine App übernehmen, die jemand anderes entwickelt hat?",
+        "a": "Manchmal – und wir prüfen sie, bevor wir zusagen. Wer eine Codebasis übernimmt, ohne zu wissen, was darin steckt, übernimmt die Probleme eines anderen. Wenn sie wartbar ist, sagen wir das. Wenn ein Neubau weniger kostet als das Entwirren, sagen wir Ihnen das."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Shopify-Integrationen",
+        "href": "/pages/service/custom-shopify-integrations/"
+      },
+      {
+        "name": "Shopify-Entwicklung",
+        "href": "/pages/shopify-development/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Arbeit, die eigentlich",
+      "eine App sein sollte?"
+    ],
+    "body": "Sagen Sie uns, was Ihr Team von Hand erledigt, und wir sagen Ihnen, was nötig ist, damit das aufhört.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}
