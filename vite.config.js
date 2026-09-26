@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { ViteEjsPlugin } from 'vite-plugin-ejs';
 import path from 'node:path';
 import { glob } from 'glob';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import liveReload from 'vite-plugin-live-reload';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import autoprefixer from 'autoprefixer';
@@ -20,6 +20,16 @@ const content = glob.sync('content/pages/*.json').reduce((acc, file) => {
   (acc[page] ||= {})[lang] = JSON.parse(readFileSync(file, 'utf8'));
   return acc;
 }, {});
+
+// Design-v2 templates keep visitors in their language: on /uk/ pages an internal EN link ('/pages/x/', '/#section-works')
+// points at its /uk/ twin when that page exists (uk/pages/x.html, uk/index.html); otherwise the EN link stays.
+// Other languages (en, de) are returned unchanged. Used by layout/v2/*.ejs and layout/pages/*-v2-body.ejs.
+function localHref(href, lang) {
+  if (lang !== 'uk' || typeof href !== 'string' || !href.startsWith('/') || href.startsWith('//') || /^\/uk(\/|$)/.test(href)) return href;
+  const [pathPart, hash] = href.split('#');
+  const file = pathPart === '/' ? 'uk/index.html' : `uk${pathPart.replace(/\/$/, '')}.html`;
+  return existsSync(file) ? `/uk${pathPart}${hash !== undefined ? `#${hash}` : ''}` : href;
+}
 
 function moveOutputPlugin() {
   return {
@@ -65,7 +75,7 @@ export default defineConfig({
   define: { __DEPLOY_ENV__: JSON.stringify(deployEnv) },
   plugins: [
     liveReload(['./layout/**/*.ejs', './index.html', './404.html', './pages/**/*.html', './uk/**/*.html', './de/**/*.html', './content/pages/*.json']),
-    ViteEjsPlugin({ ...jsonData, deployEnv, content }),
+    ViteEjsPlugin({ ...jsonData, deployEnv, content, localHref }),
     seoPlugin({ deployEnv }),
     moveOutputPlugin(),
     ViteImageOptimizer({

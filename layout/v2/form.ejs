@@ -2,7 +2,7 @@
     Field names and #task-form / #success-msg / .form-select are what src/main.js submits to ClickUp — keep them.
     Strings: content/pages/shell.<lang>.json (EN default). Option values stay English so every lead reads the same;
     the service is pre-selected from <main data-service> (src/v2.js). Budget has no default (optional); bands are in EUR (A3). %>
-<% const sh = content.shell[typeof lang !== 'undefined' && content.shell[lang] ? lang : 'en']; const f = sh.form;
+<% const L = typeof lang !== 'undefined' ? lang : 'en'; const sh = content.shell[L] || content.shell.en; const href = (u) => localHref(u, L); const f = sh.form;
    const complexPage = typeof cxPage !== 'undefined' && cxPage; // A3: no "Up to €5k" band on Complex pages %>
 <div class="v2-modal" role="dialog" aria-modal="true" aria-labelledby="v2-modal-title">
   <div class="v2-modal__overlay" data-form-close></div>
@@ -60,7 +60,7 @@
       </label>
       <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label"><%= f.submit %></span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
       <p class="v2-form__promise"><%= f.promise %></p>
-      <p class="v2-form__note"><%= f.note %> <a href="<%= f.privacyHref || '/pages/privacy-policy/' %>"><%= f.privacy %></a></p>
+      <p class="v2-form__note"><%= f.note %> <a href="<%= f.privacyHref || href('/pages/privacy-policy/') %>"><%= f.privacy %></a></p>
     </form>
   </div>
 </div>

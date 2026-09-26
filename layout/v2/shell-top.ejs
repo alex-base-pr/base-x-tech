@@ -1,5 +1,5 @@
 <%# Design v2 page shell, top half: body, header, mobile menu, contact modal. Pair with layout/v2/shell-bottom.ejs. %>
-<body class="v2 locale-en<%= typeof bodyClass !== 'undefined' ? ' ' + bodyClass : '' %>" lang="<%= typeof lang !== 'undefined' ? lang : 'en' %>">
+<body class="v2 locale-<%= typeof lang !== 'undefined' ? lang : 'en' %><%= typeof bodyClass !== 'undefined' ? ' ' + bodyClass : '' %>" lang="<%= typeof lang !== 'undefined' ? lang : 'en' %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
   <%- include('layout/v2/nav.ejs') %>

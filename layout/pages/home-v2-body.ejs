@@ -1,4 +1,4 @@
-<%# Design v2 home (Figma "Home Page" 693:1781, frames Home + Mobile). Copy: content/pages/home.en.json.
+<%# Design v2 home (Figma "Home Page" 693:1781, frames Home + Mobile). Copy: content/pages/home.<lang>.json (uk falls back to en in the wrapper).
     All text is in the HTML; hover/scroll only change emphasis. Legacy anchors kept for the site nav:
     #section-service (capabilities), #section-works (projects), #section-team (approach), #section-reviews (reviews). %>
 <%
@@ -9,7 +9,8 @@
     timer: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 2h4M12 2v3M5.6 8.4A8 8 0 1 0 12 5"/><path d="M12 13V9M5 5l2 2"/></svg>'
   };
 %>
-<body class="v2 v2-home locale-en" lang="<%= lang %>">
+<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); -%>
+<body class="v2 v2-home locale-<%= lang %>" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
   <%- include('layout/v2/nav.ejs') %>
@@ -27,7 +28,7 @@
       <% if (c.hero.sub) { %><p class="h-hero__sub"><%= c.hero.sub %></p><% } %>
       <figure class="h-hero__media"><img src="<%= c.hero.image %>" alt="<%= c.hero.imageAlt %>" width="229" height="160" fetchpriority="high"></figure>
       <div class="h-hero__foot">
-        <ol class="h-hero__focus" aria-label="What we focus on">
+        <ol class="h-hero__focus" aria-label="<%= ui.focusLabel %>">
           <% c.hero.focus.forEach((f, i) => { %><li><span class="h-hero__num" aria-hidden="true">/<%= String(i + 1).padStart(2, '0') %></span> <%= f %></li><% }) %>
         </ol>
         <%- include('layout/v2/button.ejs', { text: c.hero.button }) %>
@@ -44,9 +45,9 @@
         <% c.capabilities.items.forEach(item => { %>
           <li class="h-cap">
             <img class="h-cap__img" loading="lazy" src="<%= item.image %>" alt="">
-            <h3 class="h-cap__title"><a href="<%= item.link %>"><%= item.title %></a></h3>
-            <ul class="h-cap__services" aria-label="<%= item.title %> services">
-              <% item.services.forEach(s => { %><li><a href="<%= s.href %>"><%= s.name %></a></li><% }) %>
+            <h3 class="h-cap__title"><a href="<%= href(item.link) %>"><%= item.title %></a></h3>
+            <ul class="h-cap__services" aria-label="<%= item.title %> <%= ui.servicesOf %>">
+              <% item.services.forEach(s => { %><li><a href="<%= href(s.href) %>"><%= s.name %></a></li><% }) %>
             </ul>
             <span class="h-cap__plus" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="1.6"/></svg></span>
           </li>
@@ -88,7 +89,7 @@
               <h3 class="v2-project__title"><%= item.title %></h3>
               <p class="v2-project__text"><%= item.text %></p>
               <ul class="v2-project__tags"><% item.tags.forEach(t => { %><li><%= t %></li><% }) %></ul>
-              <% if (item.link) { %><a class="v2-round-link" href="<%= item.link %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel %>"><%- arrow %></a><% } %>
+              <% if (item.link) { %><a class="v2-round-link" href="<%= href(item.link) %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel %>"><%- arrow %></a><% } %>
             </div>
           </article>
         <% }) %>
@@ -141,10 +142,10 @@
         <% c.articles.items.forEach(a => { %>
           <article class="h-article">
             <div class="h-article__text">
-              <h3 class="h-article__title"><a href="<%= a.href %>"><%= a.title %></a></h3>
+              <h3 class="h-article__title"><a href="<%= href(a.href) %>"><%= a.title %></a></h3>
               <p class="h-article__excerpt"><%= a.excerpt %></p>
             </div>
-            <p class="h-article__meta">By <%= a.author %><span class="v2-dot" aria-hidden="true"></span><time datetime="<%= a.date %>"><%= a.dateLabel %></time></p>
+            <p class="h-article__meta"><%= ui.byAuthor %> <%= a.author %><span class="v2-dot" aria-hidden="true"></span><time datetime="<%= a.date %>"><%= a.dateLabel %></time></p>
             <span class="v2-round-link h-article__arrow" aria-hidden="true"><%- arrow %></span>
           </article>
         <% }) %>

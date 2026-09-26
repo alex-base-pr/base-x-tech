@@ -5,7 +5,8 @@
   const btn = (text) => include('layout/v2/button.ejs', { text });
   const pad2 = (i) => String(i + 1).padStart(2, '0');
 %>
-<body class="v2 cx-page locale-en" lang="<%= lang %>">
+<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); -%>
+<body class="v2 cx-page locale-<%= lang %>" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
   <%- include('layout/v2/nav.ejs') %>
@@ -295,7 +296,7 @@
     <nav class="v2-related cx-related" aria-label="<%= c.related.label %>">
       <p class="v2-related__label"><%= c.related.label %></p>
       <ul class="v2-related__list">
-        <% c.related.items.forEach(r => { %><li><a href="<%= r.href %>"><%= r.name %><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></li><% }) %>
+        <% c.related.items.forEach(r => { %><li><a href="<%= href(r.href) %>"><%= r.name %><svg width="10" height="10" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 12 12 2M4 2h8v8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a></li><% }) %>
       </ul>
     </nav>
     <% } %>

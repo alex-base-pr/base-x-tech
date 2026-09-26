@@ -231,5 +231,14 @@
       "note": "your contact in German"
     },
     "location": "Our team works across Kyiv, Lviv, Kraków and Spain, on CET hours."
+  },
+  "ui": {
+    "_note": "Small UI strings used inside the page bodies (layout/pages/*-v2-body.ejs). A shell.<lang>.json without `ui` falls back to these per key.",
+    "scrollHint": "[ Scroll to Explore ]",
+    "viewProject": "View",
+    "storeAlt": "Shopify store",
+    "focusLabel": "What we focus on",
+    "servicesOf": "services",
+    "byAuthor": "By"
   }
 }

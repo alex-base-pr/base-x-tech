@@ -1,23 +1,24 @@
 <%# Design v2 header (Figma "Service Page"): logo in the rail, pill navigation, language globe, CTA.
-    Strings: content/pages/shell.<lang>.json (pages pass `lang`; EN is the default). %>
-<% const sh = content.shell[typeof lang !== 'undefined' && content.shell[lang] ? lang : 'en'];
+    Strings: content/pages/shell.<lang>.json (pages pass `lang`: en | de | uk; a missing shell.<lang>.json falls back to EN).
+    Internal links go through localHref (vite.config.js): on /uk/ pages they point at the /uk/ twin where one exists. %>
+<% const L = typeof lang !== 'undefined' ? lang : 'en'; const sh = content.shell[L] || content.shell.en; const href = (u) => localHref(u, L);
    // Language globe: rendered hidden; src/language-switcher.js shows it when this page has another language version
    // (hreflang: EN | DE | UK, owner 2026-09-25). %>
 <header class="v2-header">
-  <a href="/" class="v2-header__logo" aria-label="<%= sh.homeLabel %>">
+  <a href="<%= href('/') %>" class="v2-header__logo" aria-label="<%= sh.homeLabel %>">
     <svg width="44" height="25" viewBox="0 0 112 64" aria-hidden="true"><path d="M79.9898 11.6328L91.6225 0H112V20.3709L100.367 32.0038L112 43.6367V64.0004H91.6226L79.9898 52.3675L68.3571 64.0004H48.0006V43.6298L59.6265 32.0038L48.0006 20.3777V0H68.3572L79.9898 11.6328Z" fill="currentColor"/><path d="M0 7.50943e-06H28.0016L47.9997 19.9983V42.0023L47.9979 42.0041V20.3596L36.3616 31.996L47.1837 42.8183L26.0019 64.0004H0V43.6238L11.6276 31.996L0 20.3683V7.50943e-06Z" fill="currentColor"/></svg>
   </a>
   <nav class="v2-header__nav" aria-label="<%= sh.nav.main %>">
     <div class="v2-nav-item v2-nav-item--services">
       <button type="button" class="v2-pill" aria-expanded="false" aria-controls="v2-services-menu" data-v2-services><%= sh.nav.services %></button>
       <div class="v2-services-menu" id="v2-services-menu" hidden>
-        <% sh.servicesMenu.forEach(s => { %><a href="<%= s.href %>"><%= s.name %></a>
+        <% sh.servicesMenu.forEach(s => { %><a href="<%= href(s.href) %>"><%= s.name %></a>
         <% }) %>
       </div>
     </div>
-    <a class="v2-pill" href="/#section-works"><%= sh.nav.portfolio %></a>
+    <a class="v2-pill" href="<%= href('/#section-works') %>"><%= sh.nav.portfolio %></a>
     <a class="v2-pill" href="/blog/"><%= sh.nav.insights %></a>
-    <a class="v2-pill" href="/#section-team"><%= sh.nav.about %></a>
+    <a class="v2-pill" href="<%= href('/#section-team') %>"><%= sh.nav.about %></a>
     <a class="v2-pill" href="#contact" data-form-trigger><%= sh.nav.contact %></a>
   </nav>
   <div class="v2-header__actions">
