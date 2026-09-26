@@ -201,3 +201,16 @@ I did not change these. Each one is a judgement call, a matter of brand voice, o
     - there is no `privacyHref`
     - which currency to show: $ or €, or UAH
     - whether to write team members' names in Cyrillic
+
+## Status of the human-review list (2026-09-26, second pass)
+
+1. «Креативний напрям» → **«Арт-дирекція»** (owner decision). Done.
+2. «Інтерим-продакт-оунер» — gone: the UK Complex partner block now names Вадим-Марко Груден (CBDO) and has no bio.
+3. «Hardware-стартап» → **«Стартап у сфері електроніки»**. Done.
+4. «Глибина замість латок» → **«Ґрунтовно, а не нашвидкуруч»**, description rewritten. Done.
+5. Jargon: replaced with plain Ukrainian; kept terms are justified in the glossary ("Plain wording" section). Done.
+6. «Оберіть» / «обрати» — unchanged, still the team's call.
+7. «події електронної торгівлі в GA4» — unchanged, still to confirm.
+8. NAYA / CES — facts verified (2023 and 2024 honoree); "honoree" wording on EN, DE and UK. Done.
+9. Integrations `hero.lead` — unchanged.
+10. Currency: euro only on UK (done). Names: Ukrainian team members in Cyrillic (done). UK hrefs and `privacyHref` were already solved by the v2 templates (localHref, `/uk/pages/privacy-policy/`).
