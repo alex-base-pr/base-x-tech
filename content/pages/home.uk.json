@@ -1,0 +1,254 @@
+{
+  "_source": "Figma 'Home Page' 693:1781, frame Home (desktop 1440) + Mobile — approved home copy. meta.* and stats.footnote are not in the frame (see comments in the keys).",
+  "meta": {
+    "title": "Агенція розробки на Shopify та вебдизайну | Base X Tech",
+    "description": "Base X Tech будує системи для сучасної е-комерції: кастомна розробка на Shopify, застосунки, інтеграції та автоматизація з ШІ — від ідеї до запуску."
+  },
+  "hero": {
+    "title": [
+      "Будуємо",
+      "системи"
+    ],
+    "titleMuted": [
+      "для сучасної",
+      "е-комерції"
+    ],
+    "sub": "Розробка на Shopify, кастомні застосунки та інтеграції для брендів, яким уже тісно в стандартних рішеннях.",
+    "focus": [
+      "Застосунки Shopify",
+      "Автоматизація з ШІ",
+      "Розробка на Shopify"
+    ],
+    "image": "/images/v2/home-hero-klott.webp",
+    "imageAlt": "Магазин одягу Klott на Shopify на екрані монітора",
+    "button": "Обговорити проєкт"
+  },
+  "capabilities": {
+    "label": "Що ми робимо",
+    "title": "Усе, що потрібно, щоб",
+    "titleMuted": "будувати, масштабувати й автоматизувати",
+    "titleEnd": "сучасну е-комерцію.",
+    "items": [
+      {
+        "title": "Дизайн і UX",
+        "image": "/images/v2/home-cap-design.webp",
+        "link": "/pages/service/custom-web-design-services/",
+        "services": [
+          {
+            "name": "Вебдизайн",
+            "href": "/pages/service/custom-web-design-services/"
+          },
+          {
+            "name": "Оптимізація конверсії",
+            "href": "/pages/service/conversion-rate-optimization/"
+          }
+        ]
+      },
+      {
+        "title": "Розробка на Shopify",
+        "image": "/images/v2/home-cap-shopify.webp",
+        "link": "/pages/shopify-development/",
+        "services": [
+          {
+            "name": "Розробка на Shopify",
+            "href": "/pages/shopify-development/"
+          },
+          {
+            "name": "Міграція на Shopify",
+            "href": "/pages/service/shopify-migration-service/"
+          }
+        ]
+      },
+      {
+        "title": "ШІ та автоматизація",
+        "image": "/images/v2/home-cap-ai.webp",
+        "link": "/pages/service/custom-shopify-integrations/",
+        "services": [
+          {
+            "name": "Інтеграції Shopify",
+            "href": "/pages/service/custom-shopify-integrations/"
+          },
+          {
+            "name": "Кастомні застосунки Shopify",
+            "href": "/pages/service/custom-shopify-app-development/"
+          }
+        ]
+      }
+    ]
+  },
+  "reviews": {
+    "label": "Що про нас кажуть:",
+    "items": [
+      {
+        "quote": "Base X went through each task in detail to ensure the final product aligned with our vision.",
+        "author": "Stealth Startup US"
+      },
+      {
+        "quote": "Having partnered with Base X Tech for several years, they have become a highly trusted extension of our team. They deliver top-tier expertise across web development and platform integration.",
+        "author": "VT Advantec"
+      },
+      {
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project.",
+        "author": "Lili Mager"
+      }
+    ]
+  },
+  "projects": {
+    "label": "Останні проєкти",
+    "button": "Обговорити проєкт",
+    "items": [
+      {
+        "category": "Hardware-стартап",
+        "title": "NAYA.TECH",
+        "text": "Створили кастомний магазин на Shopify для компанії з відзнакою CES Innovation Awards: індивідуальна вітрина й конфігуратор, спроєктований для дуже модульного пристрою.",
+        "tags": [
+          "кастомна розробка на Shopify",
+          "розробка кастомного конфігуратора"
+        ],
+        "badges": [
+          "Відзнака CES Innovation Awards",
+          "Залучено понад 3 млн $"
+        ],
+        "image": "/images/v2/home-project-naya.webp",
+        "imageAlt": "Модульна клавіатура й модулі трекбола Naya з магазину Naya на Shopify",
+        "link": "/blog/shopify-product-configurator-naya-tech/",
+        "linkLabel": "Читати кейс NAYA.TECH"
+      },
+      {
+        "category": "Автотовари",
+        "title": "Prime EVA",
+        "text": "Спроєктували й розробили один із найдосконаліших конфігураторів на Shopify — для автокилимків на замовлення, повністю інтегрований з ERP, щоб підтримувати мільйони можливих комбінацій товару.",
+        "tags": [
+          "кастомна розробка на Shopify",
+          "розробка кастомного конфігуратора",
+          "розробка та інтеграція ERP"
+        ],
+        "badges": [
+          "10 млн+ можливих конфігурацій"
+        ],
+        "image": "/images/v2/home-project-primeeva.webp",
+        "link": null,
+        "imageAlt": "Конфігуратор автокилимків Prime EVA на Shopify на екрані монітора"
+      },
+      {
+        "category": "Лайфстайл-бренд",
+        "title": "Gunia",
+        "text": "Розробили кастомну вітрину на Shopify, яка передає преміальний характер бренду й робить покупки зручними — від колекцій до редакційних матеріалів.",
+        "tags": [
+          "кастомна розробка на Shopify",
+          "Швидкодія"
+        ],
+        "badges": [],
+        "image": "/images/v2/home-project-gunia.webp",
+        "imageAlt": "Кампанія бренду Gunia: портрет із пелюстками квітів",
+        "link": "https://guniaproject.com/",
+        "linkLabel": "Перейти до магазину Gunia"
+      }
+    ]
+  },
+  "approach": {
+    "label": "Підхід",
+    "title": "Технології змінюються швидко. Наш підхід — ні.",
+    "lead": "Ми будуємо системи, які залишаються корисними, масштабованими й зручними в підтримці ще довго після запуску.",
+    "items": [
+      {
+        "title": "Глибина замість латок",
+        "description": "Будуємо з розрахунку на довгострокове масштабування, а не на швидкі виправлення. Складні задачі заслуговують на продумані рішення.",
+        "icon": "compass"
+      },
+      {
+        "title": "Прагматичні інновації",
+        "description": "Використовуємо нові інструменти (ШІ, автоматизацію, headless) там, де вони окупаються для вашого магазину, а не тому, що вони нові.",
+        "icon": "wand"
+      },
+      {
+        "title": "Думаємо на роки вперед",
+        "description": "Чистий код, документація й моніторинг з першого дня, щоб ваша команда чи наша могла розвивати проєкт роками.",
+        "icon": "timer"
+      }
+    ],
+    "trustedBy": "Нам довіряють"
+  },
+  "articles": {
+    "label": "Рекомендовані статті",
+    "more": "Більше статей",
+    "items": [
+      {
+        "title": "Що нового в Shopify 2026: огляд Spring Edition",
+        "excerpt": "Shopify Spring ’26 приніс понад 150 оновлень. Більшість із них може зачекати. Але кілька речей — відповідність правилам ЄС про відмову від покупки…",
+        "author": "Vadym-Marko Hruden",
+        "date": "2026-06-19",
+        "dateLabel": "19 червня 2026",
+        "href": "/blog/whats-new-shopify-2026-spring-edition/"
+      },
+      {
+        "title": "Інтеграція Нової пошти з Shopify: представляємо Nova Poshta Connect",
+        "excerpt": "Українським магазинам на Shopify завжди доводилося оформлювати ТТН Нової пошти вручну — поза Shopify, по одній…",
+        "author": "Oleksandr Rudenko",
+        "date": "2026-06-16",
+        "dateLabel": "16 червня 2026",
+        "href": "/blog/nova-poshta-shopify-integration-connect-app/"
+      }
+    ]
+  },
+  "stats": {
+    "title": "Наші результати в цифрах",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Оцінка на Upwork"
+      },
+      {
+        "value": "60+",
+        "label": "Задоволених клієнтів"
+      },
+      {
+        "value": "100+",
+        "label": "Реалізованих проєктів"
+      }
+    ],
+    "footnote": "* Середня оцінка клієнтів у профілі нашої агенції на Upwork.",
+    "closing": "Те, що відбувається після запуску, важить більше."
+  },
+  "roadmap": {
+    "label": "Дорожня карта",
+    "title": "Від ідеї до запуску",
+    "steps": [
+      {
+        "title": "Дослідження",
+        "description": "Розбираємося в бізнесі, визначаємо проблеми й можливості ще до початку будь-яких робіт."
+      },
+      {
+        "title": "Планування",
+        "description": "Узгоджуємо обсяг робіт, пріоритети, терміни й технічний напрям, щоб мати чітку дорожню карту."
+      },
+      {
+        "title": "Дизайн і розробка",
+        "description": "Проєктуємо, розробляємо й доопрацьовуємо рішення ітераціями, а комунікація весь час лишається прозорою."
+      },
+      {
+        "title": "Перевірка",
+        "description": "Тестуємо кожну функцію, усуваємо проблеми й переконуємося, що продукт готовий до релізу."
+      },
+      {
+        "title": "Запуск",
+        "description": "Розгортаємо проєкт, передаємо документацію й перевіряємо, що все працює."
+      },
+      {
+        "title": "Підтримка",
+        "description": "Супроводжуємо після запуску, збираємо зворотний зв’язок і допомагаємо продукту розвиватися."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Маєте складну задачу?",
+    "titleMuted": "Розв’яжімо її разом.",
+    "body": "Плануєте кастомну розробку на Shopify, внутрішній інструмент чи робочий процес на основі ШІ — допоможемо знайти правильне рішення.",
+    "button": "Поговорімо",
+    "images": [
+      "/images/v2/home-cta-klott.webp",
+      "/images/v2/home-project-naya.webp",
+      "/images/v2/home-cta-gunia.webp"
+    ]
+  }
+}
