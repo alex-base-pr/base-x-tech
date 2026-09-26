@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "title": "Shopify-Webdesign & UX/UI-Design | Base X Tech",
+    "description": "Shopify-Webdesign für Produkte, die man vergleicht und konfiguriert: UX/UI, Designsysteme, Prototypen und Art Direction – umgesetzt vom selben Team."
+  },
+  "hero": {
+    "tag": "Webdesign",
+    "title": [
+      "Shopify-Design",
+      "für Produkte, die mehr",
+      "als einen Klick brauchen"
+    ],
+    "lead": "Sie verkaufen Produkte, die Kunden vergleichen, konfigurieren und erneut ansehen. Wir gestalten die Storefront, die diese Entscheidung trägt – und setzen sie selbst um.",
+    "button": "Projekt besprechen",
+    "size": "l"
+  },
+  "capabilities": {
+    "label": "Unsere Leistungen",
+    "title": "Jede Fläche, mit der Käufer",
+    "titleMuted": "tatsächlich in Berührung kommen.",
+    "items": [
+      {
+        "title": "UX/UI-Design",
+        "description": "Oberflächen, die sich daran orientieren, wie Ihre Käufer tatsächlich handeln – nicht daran, was wir vermuten."
+      },
+      {
+        "title": "Website-Redesign",
+        "description": "Neuaufbau eines Shops, der über seine ursprüngliche Struktur hinausgewachsen ist."
+      },
+      {
+        "title": "Umsetzungsreifes Design",
+        "description": "Dateien gehen an die Entwickler, die auch den letzten Shop gebaut haben – dazwischen geht nichts verloren."
+      },
+      {
+        "title": "Designsysteme",
+        "description": "Komponenten und Regeln, die Ihr Team wiederverwenden kann, ohne dass der Shop uneinheitlich wird."
+      },
+      {
+        "title": "Prototyping",
+        "description": "Klickbare Prototypen und MVPs, die Entscheidungen testen, bevor die Entwicklung beginnt."
+      },
+      {
+        "title": "Art Direction",
+        "description": "Marken- und Bildsprache für Shops, bei denen das Produkt der Grund ist, warum Menschen kommen."
+      }
+    ],
+    "layout": "list"
+  },
+  "projects": {
+    "label": "Aktuelle Projekte",
+    "items": [
+      {
+        "category": "Schmuck",
+        "title": "Innan Jewellery",
+        "text": "Markengetriebene Shopify-Storefront für ein Schmucklabel, bei dem das Handwerk im Mittelpunkt steht.",
+        "tags": [
+          "Art Direction",
+          "Shopify",
+          "Schmuck"
+        ],
+        "link": "/blog/innan-jewellery-shopify-case-study/",
+        "linkLabel": "Case Study zu Innan Jewellery lesen",
+        "image": "/images/v2/shopify-development-projects-3-image-5925.webp",
+        "imageFit": "contain"
+      },
+      {
+        "category": "Kfz-Zubehör",
+        "title": "Prime EVA",
+        "text": "Design von Storefront und Produktseiten für einen Katalog, der ständig wächst.",
+        "tags": [
+          "UX/UI-Design",
+          "Shopify",
+          "Produktseiten"
+        ],
+        "link": null,
+        "image": "/images/v2/shopify-development-capabilities-5-chatgpt-image-9-2026-16-02-01-1.webp",
+        "badge": "10 Mio.+ mögliche Konfigurationen"
+      },
+      {
+        "category": "Wohnaccessoires",
+        "title": "Gunia",
+        "text": "Komplettes Redesign und Plattformwechsel für eine ukrainische Marke für Wohnaccessoires.",
+        "tags": [
+          "Website-Redesign",
+          "Designsysteme"
+        ],
+        "image": "/images/v2/shopify-development-projects-4-link-acronym-gmbh.webp"
+      }
+    ]
+  },
+  "help": {
+    "label": "Wann wir helfen können",
+    "title": "Ihr Produkt funktioniert.",
+    "titleMuted": "Das Einkaufserlebnis nicht.",
+    "items": [
+      {
+        "title": "Käufer können Ihre Optionen nicht unterscheiden",
+        "description": "Wenn Käufer den Unterschied zwischen Ihren Varianten oder Bundles nicht erkennen, zögern sie oder gehen. Wir gestalten Produktseiten, die jede Auswahl klar machen."
+      },
+      {
+        "title": "Ihr Shop ist über seine Struktur hinausgewachsen",
+        "description": "Navigation und Kollektionen, die für 50 Produkte gebaut wurden, funktionieren bei 500 nicht mehr. Wir überarbeiten die Struktur, damit Käufer finden, was sie suchen, und Ihr Team weiter Produkte ergänzen kann."
+      },
+      {
+        "title": "Das Design bricht bei der Umsetzung immer wieder",
+        "description": "Entwürfe, die in Figma stimmen, aber im Theme auseinanderfallen, kosten doppelt Zeit. Wir gestalten und entwickeln in einem Team – was freigegeben wird, geht auch so live."
+      }
+    ]
+  },
+  "stories": {
+    "label": "Kundenstimmen",
+    "title": "So ist die Zusammenarbeit<br> mit uns.",
+    "items": [
+      {
+        "client": "Stealth Startup US",
+        "context": "UX/UI-Design",
+        "quote": "Their team delivered a bug-free Shopify store that resulted in higher conversion rates."
+      },
+      {
+        "client": "Lili Mager",
+        "context": "Shop-Aufbau",
+        "quote": "We received positive feedback from customers about the new site, which was fully functional and met all of our expectations and unique needs. Base X’s detail-oriented team was very responsive and quickly implemented edits to the project."
+      },
+      {
+        "client": "Gunia",
+        "context": "Shop-Migration & Theme-Anpassung",
+        "quote": "Great attention to detail and a professional approach. I can recommend them both for store migration and for theme customization on Shopify."
+      }
+    ]
+  },
+  "process": {
+    "label": "Unser Designprozess",
+    "title": "Vom Verständnis des Problems zu einem Design, das bereit für die Umsetzung ist.",
+    "steps": [
+      {
+        "title": "Analyse & Recherche",
+        "description": "Wir beschäftigen uns mit Ihrem Geschäft, Ihren Käufern und Ihrem Wettbewerb und stimmen Designziele und Richtung ab, bevor etwas gezeichnet wird."
+      },
+      {
+        "title": "Wireframes & Planung",
+        "description": "Wir legen die Seitenstruktur fest und erstellen Wireframes für jede wichtige Seite, damit Sie die Customer Journey sehen, bevor das visuelle Design beginnt."
+      },
+      {
+        "title": "Design & Prototyping",
+        "description": "Daraus entstehen fertige Entwürfe und klickbare Prototypen – mit Ihrem Feedback in jeder Phase, nicht erst am Ende."
+      },
+      {
+        "title": "Übergabe & Begleitung",
+        "description": "Nach der Freigabe erhalten Sie alle Assets und den Styleguide, und wir begleiten die Umsetzung, weil wir sie selbst übernehmen."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Zahlen, die zählen",
+    "items": [
+      {
+        "value": "4,8*",
+        "label": "Upwork-Bewertung"
+      },
+      {
+        "value": "60+",
+        "label": "Zufriedene Kunden"
+      },
+      {
+        "value": "100+",
+        "label": "Abgeschlossene Projekte"
+      }
+    ],
+    "footnote": "* Durchschnittliche Kundenbewertung auf unserem Upwork-Agenturprofil.",
+    "closing": "Was nach dem Livegang passiert, zählt mehr."
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Fragen, die wir<br> oft hören",
+    "items": [
+      {
+        "q": "Gestalten und entwickeln Sie, oder nur Design?",
+        "a": "Beides, und zwar im selben Team. Ihr Design geht an die Entwickler, die auch den letzten Shop gebaut haben, sodass zwischen Datei und Shop nichts verloren geht. Wir übernehmen auch reine Designprojekte, und selbst dann ist das Design für die Umsetzung gemacht: echte Komponenten, echte Zustände und keine Entscheidungen, die im Code nicht halten."
+      },
+      {
+        "q": "Können Sie mit unserem bestehenden Shopify-Theme arbeiten?",
+        "a": "Ja. Die meisten unserer Designprojekte beginnen mit einem bestehenden Theme statt mit einer leeren Datei. Wir prüfen, was das Theme tragen kann, gestalten innerhalb dieser Grenzen, wo das sinnvoll ist, und sagen Ihnen, welche Änderungen Theme-Entwicklung erfordern statt einer Designanpassung."
+      },
+      {
+        "q": "Was erhalten wir am Ende?",
+        "a": "Figma-Dateien mit Komponenten und Zuständen, ein wiederverwendbares Designsystem, klickbare Prototypen für die wichtigen Abläufe und Spezifikationen, nach denen die Entwickler bauen. Wenn wir den Shop umsetzen, bekommen Sie auch den Shop. Setzt jemand anderes um, ist die Übergabe für dieses Team geschrieben, nicht für uns."
+      },
+      {
+        "q": "Gestalten Sie für Produkte, die man konfiguriert oder vergleicht?",
+        "a": "Das ist der Großteil unserer Arbeit. <a href='/pages/shopify-development/'>Konfiguratoren</a>, variantenreiche Kataloge, B2B-Bestellungen und mehrstufige Auswahlprozesse brauchen Designentscheidungen, die eine einzelne Produktseitenvorlage nicht abbilden kann. Wir setzen solche Lösungen auch um, deshalb berücksichtigt das Design, was auf Shopify tatsächlich möglich ist."
+      },
+      {
+        "q": "Entwickeln Sie Designsysteme oder nur einzelne Seiten?",
+        "a": "Beides, und das System ist meist die günstigere Wahl. Komponenten und Regeln, die Ihr Team wiederverwenden kann, kosten anfangs mehr als eine Handvoll Seiten, verhindern aber, dass der Shop mit jedem neuen Abschnitt uneinheitlicher wird. Bei einem wachsenden Katalog zahlt sich das schnell aus."
+      },
+      {
+        "q": "Können Sie für den deutschen Markt oder andere EU-Märkte gestalten?",
+        "a": "Ja. Wir betreiben selbst eine mehrsprachige Website und bauen Shopify-Setups für mehrere Märkte, deshalb berücksichtigt das Design, was sich zwischen Sprachen ändert: Deutscher Text ist länger als englischer und sprengt Layouts, die nur in einer Sprache getestet wurden. Deutsche Texte schreibt ein Muttersprachler, nicht wir als Übersetzer."
+      },
+      {
+        "q": "Wie lange dauert das Design eines Shopify-Shops?",
+        "a": "Ein Storefront-Design dauert meist 3 bis 8 Wochen – je nachdem, wie viele Seitentypen Sie brauchen und wie viele Feedbackrunden Sie wünschen. Wir klären den Umfang vor dem Start, damit der Zeitplan abgestimmt ist und nicht erst unterwegs sichtbar wird."
+      },
+      {
+        "q": "Was kostet das Design eines Shopify-Shops?",
+        "a": "Das hängt von der Anzahl der Seitentypen ab und davon, ob wir den Shop auch umsetzen oder nur gestalten. Wir klären den Umfang jedes Projekts, bevor wir ein Angebot erstellen, und sagen Ihnen, wenn Ihr Bedarf kleiner ist als die Projekte, die wir übernehmen."
+      }
+    ]
+  },
+  "related": {
+    "label": "Verwandte Leistungen",
+    "items": [
+      {
+        "name": "Shopify-Entwicklung",
+        "href": "/pages/shopify-development/"
+      },
+      {
+        "name": "Conversion-Optimierung (CRO)",
+        "href": "/pages/service/conversion-rate-optimization/"
+      }
+    ]
+  },
+  "cta": {
+    "title": [
+      "Ihr Produkt",
+      "verdient ein besseres",
+      "Einkaufserlebnis?"
+    ],
+    "body": "Sagen Sie uns, wo Ihre Käufer hängen bleiben, und wir sagen Ihnen, was wir ändern würden.",
+    "button": "Projekt besprechen",
+    "images": [
+      "/images/v2/shopify-development-cta-1-opera-2026-06-22-144736-ua-klottclothes-.webp",
+      "/images/v2/shopify-development-cta-2-2026-06-22-21-30-43-1.webp",
+      "/images/v2/shopify-development-cta-3-image-5914.webp"
+    ]
+  }
+}
