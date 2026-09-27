@@ -13,7 +13,8 @@
     "qa:e2e": "playwright test",
     "qa:links": "node qa/links.mjs",
     "qa:html": "html-validate \"dist/**/*.html\"",
-    "build:dev": "DEPLOY_ENV=dev npm run build"
+    "build:dev": "DEPLOY_ENV=dev npm run build",
+    "qa:clicks": "node qa/clicks.mjs"
   },
   "keywords": [],
   "author": "",

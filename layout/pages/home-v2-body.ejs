@@ -9,7 +9,7 @@
     timer: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 2h4M12 2v3M5.6 8.4A8 8 0 1 0 12 5"/><path d="M12 13V9M5 5l2 2"/></svg>'
   };
 %>
-<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); -%>
+<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); const localHtml = (h) => String(h ?? '').replace(/href=(['"])(\/[^'"]*)\1/g, (m, q, u) => 'href=' + q + localHref(u, lang) + q); -%>
 <body class="v2 v2-home locale-<%= lang %>" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
@@ -61,7 +61,7 @@
       <div class="h-reviews__viewport">
         <div class="h-reviews__track">
           <% [0, 1].forEach(copy => { %>
-          <ul class="h-reviews__list" <%- copy ? 'aria-hidden="true"' : '' %>>
+          <ul class="h-reviews__list" <%- localHtml(copy ? 'aria-hidden="true"' : '') %>>
             <% c.reviews.items.forEach(r => { %>
               <li><figure class="h-review">
                 <blockquote><p><%= r.quote %></p></blockquote>
@@ -89,7 +89,7 @@
               <h3 class="v2-project__title"><%= item.title %></h3>
               <p class="v2-project__text"><%= item.text %></p>
               <ul class="v2-project__tags"><% item.tags.forEach(t => { %><li><%= t %></li><% }) %></ul>
-              <% if (item.link) { %><a class="v2-round-link" href="<%= href(item.link) %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel %>"><%- arrow %></a><% } %>
+              <% if (item.link) { %><a class="v2-round-link" href="<%= href(item.link) %>" <%- localHtml(item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '') %> aria-label="<%= item.linkLabel %>"><%- arrow %></a><% } %>
             </div>
           </article>
         <% }) %>

@@ -1,6 +1,6 @@
 <%# Design v2 service page (Figma "Service Page" 637-238). Copy: content/pages/<page>.<lang>.json (Marko's slots).
     All text is in the HTML (hover only changes emphasis) so buyers on touch devices, Google and AI assistants get it. %>
-<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); -%>
+<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); const localHtml = (h) => String(h ?? '').replace(/href=(['"])(\/[^'"]*)\1/g, (m, q, u) => 'href=' + q + localHref(u, lang) + q); -%>
 <body class="v2 locale-<%= lang %>" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
@@ -67,7 +67,7 @@
               <h3 class="v2-project__title"><%= item.title %></h3>
               <p class="v2-project__text"><%= item.text %></p>
               <ul class="v2-project__tags"><% item.tags.forEach(t => { %><li><%= t %></li><% }) %></ul>
-              <% if (item.link) { %><a class="v2-round-link" href="<%= href(item.link) %>" <%- item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '' %> aria-label="<%= item.linkLabel || (ui.viewProject + ' ' + item.title) %>"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a><% } %>
+              <% if (item.link) { %><a class="v2-round-link" href="<%= href(item.link) %>" <%- localHtml(item.link.startsWith('http') ? 'target="_blank" rel="noopener"' : '') %> aria-label="<%= item.linkLabel || (ui.viewProject + ' ' + item.title) %>"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5 4h7v7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a><% } %>
               <% if (item.caseLink) { %><a class="v2-project__case" href="<%= href(item.caseLink) %>"><%= item.caseLabel %></a><% } %>
             </div>
           </article>
@@ -97,7 +97,7 @@
 
     <section class="v2-section v2-light v2-stories" data-v2-section>
       <p class="v2-tag v2-tag--light"><%= c.stories.label %></p>
-      <h2 class="v2-h-m v2-stories__title"><%- c.stories.title %></h2>
+      <h2 class="v2-h-m v2-stories__title"><%- localHtml(c.stories.title) %></h2>
       <div class="v2-stories__body" data-v2-tabs>
         <div class="v2-stories__tabs" role="tablist" aria-label="<%= c.stories.label %>">
           <% c.stories.items.forEach((s, i) => { %>
@@ -144,13 +144,13 @@
     <section class="v2-section v2-light v2-faq" data-v2-section>
       <div class="v2-faq__head">
         <p class="v2-tag v2-tag--light"><%= c.faq.label %></p>
-        <h2 class="v2-h-m"><%- c.faq.title %></h2>
+        <h2 class="v2-h-m"><%- localHtml(c.faq.title) %></h2>
       </div>
       <div class="v2-faq__list">
         <% c.faq.items.forEach((f, i) => { %>
           <details class="v2-faq__item" <%= i === 0 ? 'open' : '' %>>
             <summary><h3 data-faq-q><%= f.q %></h3><span class="v2-faq__toggle" aria-hidden="true"></span></summary>
-            <p data-faq-a><%- f.a %></p>
+            <p data-faq-a><%- localHtml(f.a) %></p>
           </details>
         <% }) %>
       </div>

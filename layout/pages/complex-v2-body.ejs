@@ -5,7 +5,7 @@
   const btn = (text) => include('layout/v2/button.ejs', { text });
   const pad2 = (i) => String(i + 1).padStart(2, '0');
 %>
-<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); -%>
+<% const ui = Object.assign({}, content.shell.en.ui, (content.shell[lang] || {}).ui); const href = (u) => localHref(u, lang); const localHtml = (h) => String(h ?? '').replace(/href=(['"])(\/[^'"]*)\1/g, (m, q, u) => 'href=' + q + localHref(u, lang) + q); -%>
 <body class="v2 cx-page locale-<%= lang %>" lang="<%= lang %>">
   <%- include('layout/noscript.ejs') %>
   <%- include('layout/v2/header.ejs') %>
@@ -20,10 +20,10 @@
     <section class="cx-hero" data-v2-section>
       <div class="cx-hero__body">
         <p class="cx-label cx-label--dark"><%= c.hero.eyebrow %></p>
-        <h1 class="cx-hero__title"><%- c.hero.title %></h1>
+        <h1 class="cx-hero__title"><%- localHtml(c.hero.title) %></h1>
         <% if (c.hero.sub) { %><p class="cx-hero__sub"><%= c.hero.sub %></p><% } %>
         <p class="cx-hero__lead"><%= c.hero.lead %></p>
-        <div class="cx-btn cx-btn--light"><%- btn(c.hero.button) %></div>
+        <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.hero.button)) %></div>
         <%- include('layout/v2/cta-note.ejs') %>
       </div>
       <div class="cx-strip">
@@ -62,7 +62,7 @@
     <section class="cx-section cx-caps" id="capabilities" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.capabilities.label %></p>
-        <h2 class="cx-h2"><%- c.capabilities.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.capabilities.title) %></h2>
       </header>
       <ul class="cx-caps__grid">
         <% c.capabilities.cards.forEach(card => { %>
@@ -78,12 +78,12 @@
     <section class="cx-section cx-text" id="behind-the-integration" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.reliable.label %></p>
-        <h2 class="cx-h2"><%- c.reliable.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.reliable.title) %></h2>
       </header>
       <div class="cx-text__body">
         <% c.reliable.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
       </div>
-      <div class="cx-btn cx-btn--dark"><%- btn(c.reliable.button) %></div>
+      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.reliable.button)) %></div>
     </section>
 
     <%# Architecture: text-based SVG (readable by screen readers, search engines and AI assistants) — REQ-013 %>
@@ -91,7 +91,7 @@
     <section class="cx-section cx-arch" id="system-architecture" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.architecture.label %></p>
-        <h2 class="cx-h2"><%- c.architecture.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.architecture.title) %></h2>
         <% c.architecture.paragraphs.forEach(p => { %><p class="cx-head__lead"><%= p %></p><% }) %>
       </header>
       <figure class="cx-diagram">
@@ -190,7 +190,7 @@
     <section class="cx-section cx-help" id="when-we-can-help" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.help.label %></p>
-        <h2 class="cx-h2"><%- c.help.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.help.title) %></h2>
       </header>
       <ul class="cx-help__grid">
         <% c.help.cards.forEach(card => { %>
@@ -200,7 +200,7 @@
           </li>
         <% }) %>
       </ul>
-      <div class="cx-btn cx-btn--dark"><%- btn(c.hero.button) %></div>
+      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
     </section>
 
     <%# Case (A49, 2026-09-25): Marko's case copy from Figma. End client named with permission (owner, 2026-09-25). %>
@@ -259,7 +259,7 @@
     <section class="cx-section cx-process" id="process" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.process.label %></p>
-        <h2 class="cx-h2"><%- c.process.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.process.title) %></h2>
       </header>
       <ol class="cx-process__grid">
         <% c.process.steps.forEach((step, i) => { %>
@@ -272,7 +272,7 @@
           </li>
         <% }) %>
       </ol>
-      <div class="cx-btn cx-btn--dark"><%- btn(c.process.button) %></div>
+      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.process.button)) %></div>
     </section>
 
     <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
@@ -281,7 +281,7 @@
     <section class="cx-section cx-faq" id="faq" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.faq.label %></p>
-        <h2 class="cx-h2"><%- c.faq.title %></h2>
+        <h2 class="cx-h2"><%- localHtml(c.faq.title) %></h2>
       </header>
       <div class="cx-faq__list">
         <% c.faq.items.forEach((f, i) => { %>
@@ -305,9 +305,9 @@
     <%# Closing CTA %>
     <section class="cx-cta" id="contact" data-v2-section>
       <p class="cx-label cx-label--dark"><%= c.cta.label %></p>
-      <h2 class="cx-h2"><%- c.cta.title %></h2>
+      <h2 class="cx-h2"><%- localHtml(c.cta.title) %></h2>
       <p class="cx-cta__body"><%= c.cta.body %></p>
-      <div class="cx-btn cx-btn--light"><%- btn(c.cta.button) %></div>
+      <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.cta.button)) %></div>
       <%- include('layout/v2/cta-note.ejs') %>
       <%- include('layout/v2/team.ejs', { teamDach: typeof teamDach === 'undefined' ? true : teamDach }) %>
     </section>

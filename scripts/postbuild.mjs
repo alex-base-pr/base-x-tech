@@ -117,5 +117,7 @@ if (env === 'dev') {
   fs.writeFileSync(path.join(dist, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
   // Cloudflare Pages headers; ignored by the Apache prod host.
   fs.writeFileSync(path.join(dist, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow\n');
+  // The blog lives only on prod (Cloudflare Worker route). On dev, send /blog/* there so article links don't 404.
+  fs.writeFileSync(path.join(dist, '_redirects'), '/blog/* https://base-xtech.com/blog/:splat 302\n/blog https://base-xtech.com/blog/ 302\n');
 }
-console.log(`postbuild (${env}): llms.txt (+${dePages.length} DE, +${ukPages.length} UK), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers' : ''}`);
+console.log(`postbuild (${env}): llms.txt (+${dePages.length} DE, +${ukPages.length} UK), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers + _redirects' : ''}`);
