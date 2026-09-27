@@ -6,7 +6,16 @@ import { chromium } from 'playwright';
 import fs from 'node:fs';
 const sm = JSON.parse(fs.readFileSync('json/site-map.json', 'utf8'));
 const pages = [...new Set((sm.pages || sm).filter((p) => p.role === 'index').map((p) => p.path))];
-const base = process.env.BASE || 'http://localhost:4180';
+// Without BASE, serve the local dist/ ourselves (the Apache-like qa/serve.mjs) so CI can run it in one step.
+import { spawn } from 'node:child_process';
+let server = null;
+let base = process.env.BASE;
+if (!base) {
+  const port = process.env.CLICKS_PORT || '4179';
+  server = spawn(process.execPath, ['qa/serve.mjs', 'dist'], { env: { ...process.env, PORT: port }, stdio: 'ignore' });
+  base = `http://localhost:${port}`;
+  for (let i = 0; i < 50; i++) { try { await fetch(base + '/'); break; } catch { await new Promise((r) => setTimeout(r, 200)); } }
+}
 const b = await chromium.launch(); const out = []; let checked = 0;
 for (const w of [1440, 390]) for (const path of pages) {
   const p = await b.newPage({ viewport: { width: w, height: 900 } });
@@ -29,5 +38,6 @@ for (const w of [1440, 390]) for (const path of pages) {
   await p.close();
 }
 await b.close();
+server?.kill();
 console.log('checked', checked); console.log(out.join('\n') || 'no problems');
 process.exitCode = out.length ? 1 : 0;

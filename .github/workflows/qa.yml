@@ -1,11 +1,14 @@
 name: QA
 
+# Tests live in qa/ and never reach the server: deploys copy only dist/ (the built site).
+
 on:
   pull_request:
   push:
     branches: [ main ]
 
 jobs:
+  # 1. The build in CI: same checks as `npm run qa` locally.
   qa:
     runs-on: ubuntu-latest
     steps:
@@ -15,13 +18,50 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
-      - run: npm run qa
+      - run: npx playwright install --with-deps chromium webkit
+      - run: npm run qa   # build, build checks, Playwright (chromium + webkit), links, real-click audit
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: qa-report
           path: |
             qa/report
-            qa/screens
+            qa/results
+          retention-days: 14
+
+  # 2. The deployed dev site: wait until Cloudflare Pages serves this commit, then test dev.base-xtech.com itself.
+  dev:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: qa
+    runs-on: ubuntu-latest
+    env:
+      DEV_URL: https://dev.base-xtech.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Wait for Cloudflare Pages to deploy ${{ github.sha }}
+        run: |
+          for i in $(seq 1 60); do
+            live=$(curl -fsS "$DEV_URL/version.txt?$(date +%s)" | tr -d '[:space:]' || true)
+            [ "$live" = "${{ github.sha }}" ] && echo "dev serves $live" && exit 0
+            echo "dev serves '${live:-?}', waiting…"; sleep 15
+          done
+          echo "dev did not pick up ${{ github.sha }} within 15 minutes (a newer push may have superseded it)"; exit 1
+      - run: npm run build   # tests read json/site-map.json and built files for expectations
+      - run: npx playwright test
+        env:
+          QA_BASE_URL: ${{ env.DEV_URL }}
+      - run: npm run qa:clicks
+        env:
+          BASE: ${{ env.DEV_URL }}
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-dev-report
+          path: qa/report
           retention-days: 14

@@ -9,10 +9,13 @@ for (const path of ['/', '/de/', '/uk/']) {
     const href = await card.locator('.h-article__title a').getAttribute('href');
     const arrow = card.locator('.h-article__arrow');
     await arrow.scrollIntoViewIfNeeded();
-    await arrow.hover();
     const box = await arrow.boundingBox();
+    await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2); // hover like a person (the arrow itself ignores pointer events)
+    await page.waitForTimeout(250); // hover transition
     const target = await page.evaluate(([x, y]) => document.elementFromPoint(x, y)?.closest('a')?.getAttribute('href'), [box.x + box.width / 2, box.y + box.height / 2]);
     expect(target).toBe(href);
+    const [nav] = await Promise.all([page.waitForURL((u) => u.pathname === href || u.pathname.endsWith(href), { timeout: 8000 }).then(() => true).catch(() => false), page.mouse.click(box.x + box.width / 2, box.y + box.height / 2)]);
+    expect(nav, 'real click on the arrow navigates to the article').toBe(true);
   });
 }
 

@@ -8,7 +8,7 @@
     "build": "vite build",
     "postbuild": "node generate-sitemap.js && node scripts/postbuild.mjs",
     "preview": "node qa/serve.mjs dist",
-    "qa": "npm run build && npm run qa:build && npm run qa:e2e && npm run qa:links",
+    "qa": "npm run build && npm run qa:build && npm run qa:e2e && npm run qa:links && npm run qa:clicks",
     "qa:build": "node qa/check-build.mjs",
     "qa:e2e": "playwright test",
     "qa:links": "node qa/links.mjs",

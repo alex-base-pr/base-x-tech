@@ -117,6 +117,9 @@ if (env === 'dev') {
   fs.writeFileSync(path.join(dist, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
   // Cloudflare Pages headers; ignored by the Apache prod host.
   fs.writeFileSync(path.join(dist, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow\n');
+  // Which commit this dev build is (CI waits for it before testing dev.base-xtech.com). Dev only — not shipped to prod.
+  const sha = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || '';
+  fs.writeFileSync(path.join(dist, 'version.txt'), sha + '\n');
   // The blog lives only on prod (Cloudflare Worker route). On dev, send /blog/* there so article links don't 404.
   fs.writeFileSync(path.join(dist, '_redirects'), '/blog/* https://base-xtech.com/blog/:splat 302\n/blog https://base-xtech.com/blog/ 302\n');
 }

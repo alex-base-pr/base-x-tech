@@ -21,6 +21,13 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    # Gate: nothing is copied to the server unless every check passes. Tests stay in qa/; only dist/ is deployed.
+    - name: Install test browsers
+      run: npx playwright install --with-deps chromium webkit
+
+    - name: QA (build, build checks, Playwright, links, real clicks)
+      run: npm run qa
+
     - name: Build project
       run: npm run build
 
