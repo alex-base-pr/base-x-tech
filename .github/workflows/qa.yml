@@ -31,7 +31,8 @@ jobs:
 
   # 2. The deployed dev site: wait until Cloudflare Pages serves this commit, then test dev.base-xtech.com itself.
   dev:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    # Only in the working repo that Cloudflare Pages (dev.base-xtech.com) builds from; skipped in base-xtech/base-xtech.
+    if: github.repository == 'alex-base-pr/base-x-tech' && github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: qa
     runs-on: ubuntu-latest
     env:
