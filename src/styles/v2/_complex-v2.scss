@@ -132,7 +132,7 @@ body.v2.cx-page .cx {
 
   // ---------- architecture diagram (DACH review 2026-09-30): generic HTML flow, store → middleware → systems.
   // ≥700px: fan-out to five boxes in a row; phones: the systems hang off a vertical bus on the left.
-  .cx-arch { @include desk { padding-top: 6rem; } }
+  .cx-arch { @include desk { padding-top: 6rem; padding-bottom: 3.5rem; } } // white → white into the case: less empty space
   .cx-diagram { margin: 0 auto; max-width: 1080px; padding: 16px 0; border-radius: 24px;
     background: radial-gradient(ellipse at center, #faf8f4 0%, rgba(250, 248, 244, 0) 70%);
   }
@@ -146,7 +146,7 @@ body.v2.cx-page .cx {
     @include tab { font-size: 20px; }
   }
   .cx-flow__node--store, .cx-flow__node--mid { width: 100%; max-width: 420px; padding: 20px 28px; font-size: 20px; @include tab { font-size: 24px; } }
-  .cx-flow__node--mid { max-width: 520px; background: var(--v2-bg); border-color: var(--v2-bg); color: #fff;
+  .cx-flow__node--mid { max-width: 600px; background: var(--v2-bg); border-color: var(--v2-bg); color: #fff;
     .cx-flow__icon { stroke: #fff; }
   }
   .cx-flow__node--any { border-style: dashed; background: transparent; color: var(--cx-text); font-size: 16px; @include tab { font-size: 16px; } }
@@ -192,6 +192,7 @@ body.v2.cx-page .cx {
 
   // ---------- case (Fresh Market)
   .cx-case { display: flex; flex-direction: column; align-items: center; gap: 30px; @include desk { gap: 30px; padding-bottom: 4.5rem; } }
+  .cx-arch + .cx-case { @include desk { padding-top: 4rem; } } // both white: the diagram flows straight into the case
   .cx-case__card {
     display: grid; gap: 12px; width: 100%; max-width: 1340px; padding: 20px; border-radius: 20px; background: var(--cx-grey-1);
     font-family: var(--cx-body); color: #000;
@@ -264,8 +265,8 @@ body.v2.cx-page .cx {
   // ---------- team (DACH review 2026-09-30): lead contact large, the rest of the team smaller, so it reads as a team.
   // Portraits: final studio photos (800×1000, same background and framing, owner 2026-09-30), full-bleed in their
   // cards (object-fit: cover, cropped from the top) — no grey box behind them.
-  .cx-team { @include desk { padding-top: 6rem; padding-bottom: 5rem; } }
-  .cx-team__grid { display: grid; gap: 16px; max-width: 1180px; margin: 0 auto;
+  .cx-team { background: var(--cx-grey-0); @include desk { padding-top: 6rem; padding-bottom: 5rem; } } // grey band: sets the team apart from the white process and FAQ
+  .cx-team__grid { display: grid; gap: 16px; max-width: 1316px; margin: 0 auto;
     @include desk { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
   }
   .cx-team__lead, .cx-team__member { overflow: hidden; border: 1px solid var(--cx-line); border-radius: 20px; background: #fff; }
@@ -301,7 +302,7 @@ body.v2.cx-page .cx {
   .cx-team__thumb { display: block; align-self: stretch; width: 100%; height: 100%; min-height: 140px; object-fit: cover; object-position: 50% 15%;
     @include desk { min-height: 160px; }
   }
-  .cx-team__location { max-width: 1180px; margin: 24px auto 0; text-align: center; font-family: var(--cx-body); font-size: 14px; line-height: 1.4; color: var(--cx-soft); }
+  .cx-team__location { max-width: 1316px; margin: 24px auto 0; text-align: center; font-family: var(--cx-body); font-size: 14px; line-height: 1.4; color: var(--cx-soft); }
 
   // ---------- FAQ (own DACH questions, FAQPage schema via data-faq-q/a)
   .cx-faq { @include desk { padding-top: 4.5rem; } }
