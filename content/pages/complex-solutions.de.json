@@ -6,8 +6,7 @@
   "hero": {
     "eyebrow": "Komplexe Lösungen",
     "title": "Komplexe Systeme,<br> so verbunden, wie<br> Ihr Unternehmen arbeitet.",
-    "sub": "Individuelle Shopify-Integrationen mit ERP, Kassensystem und den Systemen hinter Ihrem Betrieb.",
-    "lead": "Wir verbinden E-Commerce, ERP, POS, Lagerverwaltung und individuelle Systeme – mit den Integrationen, Apps und Automatisierungen, die Ihre Abläufe synchron halten.",
+    "lead": "Wir entwickeln individuelle Shopify-Integrationen mit Ihrem ERP, Ihrem Kassensystem und den weiteren Systemen hinter Ihrem Betrieb: Middleware, Apps und Automatisierungen, die Ihre Abläufe synchron halten.",
     "button": "Projekt besprechen"
   },
   "strip": {
@@ -32,45 +31,51 @@
       "Pipedrive"
     ]
   },
-  "partner": {
-    "label": "Persönlicher Ansprechpartner im DACH-Raum",
-    "paragraphs": [
-      "Alexander Karl ist Ihr Ansprechpartner für Projekte in Deutschland, Österreich und der Schweiz. Er kommuniziert mit Ihnen auf Deutsch und stimmt Ihre Anforderungen mit unserem Team ab, damit zwischen Ihrem Unternehmen und den Menschen, die das System entwickeln, nichts verloren geht."
-    ],
-    "inPerson": "Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.",
-    "bio": "Interim Product Owner und E-Commerce-Berater aus Berlin mit mehr als 40 abgeschlossenen Digitalprojekten, darunter Migrationen von Shopware zu Shopify mit ERP-Anbindung. Lehrbeauftragter für E-Commerce an der BHT Berlin.",
-    "name": "Alexander Karl",
-    "role": "DACH-Partner",
-    "photo": "/images/v2/alexander-karl.webp",
-    "photoAlt": "Alexander Karl, DACH-Partner von Base X Tech"
+  "useCases": {
+    "label": "Kommt Ihnen das bekannt vor?",
+    "title": "Typische Ausgangslagen, mit denen<br> <span class='accent'>Händler zu uns kommen</span>",
+    "cards": [
+      {
+        "title": "Shopify ist Ihr wichtigster Vertriebskanal",
+        "description": "Ihr Onlineshop läuft auf Shopify und trägt das Geschäft. Alles drumherum muss mithalten: Bestände, Preise, Bestellungen und Kundendaten."
+      },
+      {
+        "title": "Mehrere Systeme müssen zusammenarbeiten",
+        "description": "ERP, Kassensystem, PIM, Lager und CRM halten jeweils einen Teil der Daten. Bestellungen, Bestände und Kundendaten laufen auseinander – mit Verzögerungen und Handarbeit als Folge."
+      },
+      {
+        "title": "Keine Standardsoftware passt",
+        "description": "Die Art, wie Ihr Unternehmen arbeitet, ist zu speziell, als dass ein Standard-Konnektor oder eine Shopify-App sie sauber abbilden könnte."
+      },
+      {
+        "title": "Viel manueller Aufwand",
+        "description": "Ihr Team überträgt Daten, pflegt Bestände oder erledigt Routineabläufe von Hand, weil die Systeme hinter dem Geschäft nicht miteinander verbunden sind."
+      },
+      {
+        "title": "Eine über Jahre gewachsene Architektur",
+        "description": "Systeme, Plugins und Übergangslösungen sind nach und nach dazugekommen. Jede Änderung fühlt sich riskant an, und den Gesamtüberblick hat niemand mehr."
+      }
+    ]
   },
   "capabilities": {
     "label": "Unsere Leistungen",
-    "title": "Was wir verbinden,<br class='br-desk'> entwickeln und <span class='accent'>automatisieren.</span>",
+    "title": "Genau das Richtige,<br class='br-desk'> <span class='accent'>ohne Überflüssiges.</span>",
     "cards": [
       {
-        "title": "ERP-Integrationen",
-        "description": "Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP – ganz ohne Handarbeit."
+        "title": "Schnittstellen & Middleware",
+        "description": "Anbindungen zwischen Shopify und Ihrem ERP, POS, PIM oder CRM – auch für Systeme, für die es weder eine App noch eine Standardintegration gibt. Bestellungen, Bestände und Rechnungen fließen ohne Handarbeit."
       },
       {
-        "title": "CRM-Integrationen",
-        "description": "Kunden- und Bestelldaten landen so in Ihrem CRM, wie Ihr Vertrieb sie braucht."
+        "title": "Individuelle Shopify-Apps",
+        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann, im Shopify-Admin oder an der Kasse."
       },
       {
-        "title": "Individuelle APIs",
-        "description": "Anbindungen für Systeme, für die es weder eine App noch eine Standardintegration gibt."
+        "title": "Individuelle Geschäftslogik",
+        "description": "Regeln, die abbilden, wie Ihr Unternehmen tatsächlich arbeitet: Bestände, Barcodes, Dokumente, Benachrichtigungen. Arbeit, die sich von selbst erledigt statt von Hand."
       },
       {
-        "title": "Custom Apps",
-        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann."
-      },
-      {
-        "title": "Individuelle Automatisierung",
-        "description": "Arbeit, die sich von selbst erledigt: Bestellungen, Bestände, Dokumente, Benachrichtigungen."
-      },
-      {
-        "title": "Logistik & Fulfillment",
-        "description": "Versanddienstleister, Etiketten und Sendungsverfolgung direkt in den Bestellablauf eingebunden statt nachträglich aufgesetzt."
+        "title": "Migration ganzer Systemlandschaften",
+        "description": "Wir ziehen den Shop und die Systeme drumherum gemeinsam zu Shopify um, damit Integrationen, Daten und Abläufe nach dem Wechsel weiter funktionieren."
       }
     ]
   },
@@ -88,49 +93,20 @@
     "label": "Systemarchitektur",
     "title": "Wie Ihre Systeme <span class='accent'>zusammenarbeiten</span>",
     "paragraphs": [
-      "Shopify, ERP und POS haben jeweils ihre eigene Rolle. Wir entwickeln die Integrationsschicht dazwischen, damit Daten im gesamten Betrieb zuverlässig fließen."
+      "Ihr Shop und die Systeme drumherum haben jeweils ihre eigene Rolle. Wir entwickeln die Schicht dazwischen, damit Daten im gesamten Betrieb zuverlässig fließen."
     ],
     "diagram": {
-      "svgTitle": "So sind die Systeme verbunden",
-      "svgDesc": "Shopify (Commerce-Plattform, mit Shopify POS im Laden) ist in beide Richtungen mit der Middleware (Integrationsschicht) verbunden: Produkte und Barcodes in die eine, Bestellungen und Verkäufe in die andere Richtung. Die Middleware tauscht Produktdaten (XML) und Barcodes gewogener Artikel mit den Mettler-Toledo-Waagen aus und übermittelt jede Nacht die verkauften Mengen pro Filiale an das ERP (Xentral).",
-      "shopify": "Shopify",
-      "shopifyRole": "Commerce-Plattform",
-      "middleware": "Middleware",
-      "middlewareRole": "Integrationsschicht",
-      "erp": "ERP",
-      "erpRole": "Führendes System",
-      "pos": "POS",
-      "posRole": "Ladenbetrieb",
-      "scales": "Waagen",
-      "scalesRole": "Mettler Toledo",
-      "erpVendor": "Xentral",
-      "flowShopifyA": "Produkte, Barcodes",
-      "flowShopifyB": "Bestellungen, Verkäufe",
-      "flowScalesA": "Produktdaten (XML)",
-      "flowScalesB": "Barcodes gewogener Artikel",
-      "flowErp": [
-        "nächtlich: verkaufte",
-        "Mengen pro Filiale"
-      ]
+      "desc": "Ihr Shop auf Shopify ist mit der individuellen Middleware verbunden, die wir entwickeln. Die Middleware verbindet ERP, CMS, PIM, POS und jedes weitere System, das Sie nutzen.",
+      "store": "Ihr Shop auf Shopify",
+      "middleware": "Die individuelle Middleware, die wir entwickeln",
+      "systems": [
+        "ERP",
+        "CMS",
+        "PIM",
+        "POS"
+      ],
+      "any": "Jedes weitere System, das Sie nutzen"
     }
-  },
-  "help": {
-    "label": "Wann wir helfen können",
-    "title": "Wenn Standardlösungen<br class='br-desk'> nicht mehr <span class='accent'>ausreichen.</span>",
-    "cards": [
-      {
-        "title": "Ihre Systeme laufen auseinander",
-        "description": "Bestellungen, Bestände oder Kundendaten liegen in verschiedenen Systemen – mit Inkonsistenzen, Verzögerungen und Handarbeit als Folge."
-      },
-      {
-        "title": "Ihr Ablauf passt in keine fertige App",
-        "description": "Die Art, wie Ihr Unternehmen arbeitet, ist zu speziell, als dass ein Standard-Konnektor oder eine Shopify-App sie sauber abbilden könnte."
-      },
-      {
-        "title": "Handarbeit wird zum Teil des Systems",
-        "description": "Ihr Team überträgt Daten, pflegt Bestände oder erledigt Routineabläufe von Hand, weil die Systeme hinter dem Geschäft nicht miteinander verbunden sind."
-      }
-    ]
   },
   "case": {
     "label": "In der Praxis bewährt",
@@ -228,14 +204,39 @@
       }
     ]
   },
-  "offer": {
-    "_note": "Einstiegsangebot (Inhaber, 25.09.2026), siehe complex-solutions.en.json.",
-    "label": "Erster Schritt",
-    "title": "Starten Sie mit einem Festpreis-Audit",
-    "text": "Wir erfassen Ihre Systeme, Datenflüsse und Schwachstellen und empfehlen Konnektor oder Individualentwicklung – mit einem Festpreisangebot für die Umsetzung. Wird bei Beauftragung auf die Umsetzung angerechnet.",
-    "price": "Festpreis: 1.999 €",
-    "note": "Der Umfang wird nach einem kurzen Gespräch abgestimmt.",
-    "button": "Audit anfragen"
+  "team": {
+    "_note": "DACH review 2026-09-30: team block before the FAQ (replaces the partner block and the \"Who you'll talk to\" list in the closing CTA). lead = large card; members smaller. Oleksandr is listed, not a contact (owner 2026-09-30). Location line: shell.<lang>.json → team.location.",
+    "label": "Ihr Team",
+    "title": "Das Team hinter <span class='accent'>Ihrem Projekt</span>",
+    "lead": {
+      "name": "Alexander Karl",
+      "role": "Country Manager DACH",
+      "note": "Ihr Ansprechpartner für deutschsprachige Kunden",
+      "photo": "/images/v2/team/karl.webp",
+      "paragraphs": [
+        "Alexander Karl ist Ihr Ansprechpartner für Projekte in Deutschland, Österreich und der Schweiz. Er kommuniziert mit Ihnen auf Deutsch und stimmt Ihre Anforderungen mit unserem Team ab, damit zwischen Ihrem Unternehmen und den Menschen, die das System entwickeln, nichts verloren geht."
+      ],
+      "bio": "Interim Product Owner und E-Commerce-Berater aus Berlin mit mehr als 40 abgeschlossenen Digitalprojekten, darunter Migrationen von Shopware zu Shopify mit ERP-Anbindung. Lehrbeauftragter für E-Commerce an der BHT Berlin.",
+      "inPerson": "Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache."
+    },
+    "members": [
+      {
+        "name": "Sofiia Zabrodska",
+        "role": "Business Development Manager",
+        "note": "Erster Kontakt, Angebote",
+        "photo": "/images/v2/team/sofiia.webp"
+      },
+      {
+        "name": "Vadym-Marko Hruden",
+        "role": "CBDO",
+        "photo": "/images/v2/team/marko.webp"
+      },
+      {
+        "name": "Oleksandr Rudenko",
+        "role": "Gründer & CEO",
+        "photo": "/images/v2/team/alex.webp"
+      }
+    ]
   },
   "faq": {
     "label": "FAQ",
@@ -243,7 +244,7 @@
     "items": [
       {
         "q": "Mit wem werden wir sprechen?",
-        "a": "Alexander Karl, unser DACH-Partner, ist Ihr Ansprechpartner auf Deutsch. Unser Team entwickelt und betreut das System."
+        "a": "Den ersten Kontakt und die Angebote übernimmt Sofiia Zabrodska, unsere Business Development Managerin. Für deutschsprachige Kunden ist Alexander Karl, unser Country Manager DACH, Ihr Ansprechpartner auf Deutsch. Unser Team entwickelt und betreut das System."
       },
       {
         "q": "Können Sie Shopify an unser ERP anbinden?",

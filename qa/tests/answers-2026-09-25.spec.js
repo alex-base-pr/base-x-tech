@@ -43,11 +43,13 @@ test('A1: company line in the footer; controller named in the privacy policy', a
   expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
-test('A2: "Who you\'ll talk to" names the team; Alexander Karl first on Complex', async ({ request }) => {
+test('A2: "Who you\'ll talk to" names the team; on Complex the team block replaces it, Alexander Karl first', async ({ request }) => {
   const names = (html) => [...(html.match(/<aside class="v2-team"[\s\S]*?<\/aside>/) || [''])[0].matchAll(/<strong>([^<]+)<\/strong>/g)].map((m) => m[1]);
   expect(names((await rawHtml(request, '/pages/shopify-development/')).html)).toEqual(['Sofiia Zabrodska', 'Vadym-Marko Hruden']);
-  for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) {
-    expect(names((await rawHtml(request, p)).html)[0], p).toBe('Alexander Karl');
+  for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) { // DACH review 2026-09-30: team block (#team), no aside in the CTA
+    const { html } = await rawHtml(request, p);
+    expect(html, p).not.toContain('<aside class="v2-team"');
+    expect((html.match(/<section class="cx-section cx-team"[\s\S]*?<h3 class="cx-team__name">([^<]+)<\/h3>/) || [])[1], p).toBe('Alexander Karl');
   }
 });
 
@@ -71,13 +73,14 @@ for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) {
   });
 }
 
-test('Complex: partner block is text only, no quote; K1 one systems strip; A49 case', async ({ request }) => {
+test('Complex: team block has no quote/placeholder; K1 one systems strip; A49 case', async ({ request }) => {
   const en = (await rawHtml(request, '/pages/complex-solutions/')).html;
   const de = (await rawHtml(request, '/de/pages/complex-solutions/')).html;
-  const partner = (h) => (h.match(/<section class="cx-section cx-partner[\s\S]*?<\/section>/) || [''])[0];
+  const team = (h) => (h.match(/<section class="cx-section cx-team"[\s\S]*?<\/section>/) || [''])[0]; // replaced the partner block (DACH review 2026-09-30)
   for (const h of [en, de]) {
-    expect(partner(h)).not.toContain('<blockquote');
-    expect(partner(h)).not.toContain('cx-partner__placeholder');
+    expect(team(h)).toContain('Alexander Karl');
+    expect(team(h)).not.toContain('<blockquote');
+    expect(team(h)).not.toMatch(/placeholder|Platzhalter/i);
     expect(h).not.toMatch(/seamlessly|reibungslos zusammenarbeiten/);
     expect(h).not.toMatch(/no delivered project|kein abgeschlossenes Projekt/);
     expect(h).toContain('Mettler Toledo');
@@ -86,11 +89,11 @@ test('Complex: partner block is text only, no quote; K1 one systems strip; A49 c
   expect(en).toContain('Systems we connect');
   expect(de).toContain('Systeme, die wir anbinden');
   expect(de).not.toContain('Expertise vor Ort');
-  expect(de).toContain('Persönlicher Ansprechpartner im DACH-Raum');
+  expect(de).toContain('Das Team hinter <span class=\'accent\'>Ihrem Projekt</span>');
   expect(en).toContain('German specialty food retailer'); // descriptor under the client name (owner, 2026-09-25)
   expect(en).toContain('What’s included');
   expect(de).toContain('Leistungsumfang');
-  expect(en).toContain('Custom Shopify integrations with the ERP, POS and systems behind your operations.');
+  expect(en).toContain('We build custom Shopify integrations with your ERP, POS and the other systems behind your operations'); // hero: one paragraph (DACH review 2026-09-30)
 });
 
 test('Home: sub-line with Shopify under the H1', async ({ request }) => {

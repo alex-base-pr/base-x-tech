@@ -112,3 +112,16 @@ All meta descriptions are 160 characters or fewer. Migration is exactly 160.
 - **Blog titles and excerpts on Home** are translated, as on the Complex blog cards. The posts themselves are English. The truncated excerpts end in "…", as in EN.
 - **Web design FAQ.** The line "Copy in German is written by a native speaker, not translated by us" is kept in meaning. The DE copy on this site is itself Claude-written and not yet proofread. The claim only becomes true once Alexander (or another native speaker) has reviewed these pages.
 - **Related link hrefs** are unchanged from EN, per the rules. The DE Integrations page therefore links "Komplexe Systeme (DACH)" to `/pages/complex-solutions/` (EN), while shell.de.json links to `/de/pages/complex-solutions/`. Where the DE template renders these links, the href probably should be the `/de/` one. The DE templates own that decision.
+
+## Complex restructure (DACH review, 2026-09-30)
+
+| EN | DE | Note |
+|---|---|---|
+| Sound familiar? / Typical situations brands come to us with | Kommt Ihnen das bekannt vor? / Typische Ausgangslagen, mit denen Händler zu uns kommen | Wording from Alexander's review |
+| Exactly the right things, no fluff. | Genau das Richtige, ohne Überflüssiges. | Capabilities title |
+| Interfaces & middleware / Custom Shopify apps / Custom business logic / Migration of entire ecosystems | Schnittstellen & Middleware / Individuelle Shopify-Apps / Individuelle Geschäftslogik / Migration ganzer Systemlandschaften | "Individuelle Shopify-Apps" as in the nav |
+| Your store on Shopify / The custom middleware we build / Whatever system you have | Ihr Shop auf Shopify / Die individuelle Middleware, die wir entwickeln / Jedes weitere System, das Sie nutzen | Diagram labels |
+| Your team / The team behind your project | Ihr Team / Das Team hinter Ihrem Projekt | Team block (replaces "Persönlicher Ansprechpartner im DACH-Raum") |
+| Country Manager DACH | Country Manager DACH | Alexander Karl's title, English in every language (was "DACH-Partner") |
+| Founder & CEO | Gründer & CEO | Oleksandr Rudenko (owner 2026-09-30) |
+| first contact, proposals | Erster Kontakt, Angebote | Sofiia's note, as in shell.de.json |

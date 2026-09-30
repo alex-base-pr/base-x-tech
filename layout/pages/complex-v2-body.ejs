@@ -16,12 +16,12 @@
 
   <main id="complex-solutions" class="v2-main cx" data-service="Complex Solutions (ERP, POS, middleware)">
 
-    <%# Hero + systems strip (REQ-015; K1 2026-09-25: one strip, caption "Systems we connect", list from Marko's Figma comment) %>
+    <%# Hero + systems strip (REQ-015; K1 2026-09-25: one strip, caption "Systems we connect", list from Marko's Figma comment).
+        DACH review 2026-09-30: eyebrow, title, ONE paragraph, CTA, free-call note — nothing else before the CTA. %>
     <section class="cx-hero" data-v2-section>
       <div class="cx-hero__body">
         <p class="cx-label cx-label--dark"><%= c.hero.eyebrow %></p>
         <h1 class="cx-hero__title"><%- localHtml(c.hero.title) %></h1>
-        <% if (c.hero.sub) { %><p class="cx-hero__sub"><%= c.hero.sub %></p><% } %>
         <p class="cx-hero__lead"><%= c.hero.lead %></p>
         <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.hero.button)) %></div>
         <%- include('layout/v2/cta-note.ejs') %>
@@ -39,26 +39,25 @@
       </div>
     </section>
 
-    <%# Partner block (REQ-013/016/017/018; M1/M5/K2 2026-09-25): photo approved by the owner 2026-09-25
-        (public/images/v2/alexander-karl.webp) — no quote, no placeholder, no email/phone/calendar. Without c.partner.photo the block is text-only. LinkedIn only if c.partner.linkedin is set. %>
-    <section class="cx-section cx-partner<%= c.partner.photo ? '' : ' cx-partner--text' %>" id="local-expertise" data-v2-section>
-      <% if (c.partner.photo) { %>
-      <figure class="cx-partner__photo">
-        <img loading="lazy" src="<%= c.partner.photo %>" width="1335" height="1257" alt="<%= c.partner.photoAlt || (c.partner.name + ', ' + c.partner.role) %>">
-      </figure>
-      <% } %>
-      <div class="cx-partner__body">
-        <h2 class="cx-label"><%= c.partner.label %></h2>
-        <p class="cx-partner__person"><strong><%= c.partner.name %></strong><span><%= c.partner.role %></span><% if (c.partner.linkedin) { %><a href="<%= c.partner.linkedin %>" target="_blank" rel="noopener">LinkedIn</a><% } %></p>
-        <div class="cx-partner__text">
-          <% c.partner.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
-        </div>
-        <% if (c.partner.bio) { %><p class="cx-partner__bio"><%= c.partner.bio %></p><% } %>
-        <% if (c.partner.inPerson) { %><p class="cx-partner__inperson"><%= c.partner.inPerson %></p><% } %>
-      </div>
+    <%# Typical situations (DACH review 2026-09-30): second section, five text cards. Replaces "When we can help",
+        whose three cards live on here as (b)–(d). %>
+    <section class="cx-section cx-cases" id="typical-situations" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.useCases.label %></p>
+        <h2 class="cx-h2"><%- localHtml(c.useCases.title) %></h2>
+      </header>
+      <ul class="cx-cases__grid">
+        <% c.useCases.cards.forEach(card => { %>
+          <li class="cx-card">
+            <h3 class="cx-h3 cx-h3--s"><%= card.title %></h3>
+            <p><%= card.description %></p>
+          </li>
+        <% }) %>
+      </ul>
+      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
     </section>
 
-    <%# Capabilities (6) %>
+    <%# Capabilities: four solution types (DACH review 2026-09-30: "exactly the right things, no fluff") %>
     <section class="cx-section cx-caps" id="capabilities" data-v2-section>
       <header class="cx-head">
         <p class="cx-label"><%= c.capabilities.label %></p>
@@ -86,7 +85,9 @@
       <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.reliable.button)) %></div>
     </section>
 
-    <%# Architecture: text-based SVG (readable by screen readers, search engines and AI assistants) — REQ-013 %>
+    <%# Architecture (DACH review 2026-09-30): generic, not the case-specific diagram — store → our middleware → your systems.
+        Plain HTML (text for screen readers, search engines and AI assistants), no arrow labels. One markup: a fan-out
+        on wide screens, a vertical "bus" on phones (CSS only). The case section below describes the concrete project. %>
     <% const d = c.architecture.diagram; %>
     <section class="cx-section cx-arch" id="system-architecture" data-v2-section>
       <header class="cx-head">
@@ -94,113 +95,24 @@
         <h2 class="cx-h2"><%- localHtml(c.architecture.title) %></h2>
         <% c.architecture.paragraphs.forEach(p => { %><p class="cx-head__lead"><%= p %></p><% }) %>
       </header>
-      <figure class="cx-diagram">
-        <%# A51 (2026-09-25): Scales (Mettler Toledo) next to POS; data flows labelled on the connectors.
-            Two-way connectors carry both labels; which way each flow goes is spelled out in <desc>. %>
-        <svg class="cx-diagram__svg--wide" viewBox="0 0 1000 370" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
-          <title id="flow-title"><%= d.svgTitle %></title>
-          <desc id="flow-desc"><%= d.svgDesc %></desc>
-          <defs>
-            <marker id="cx-arrow-w" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="cx-diagram__arrow" d="M0 0 8 4 0 8z"/></marker>
-          </defs>
-          <g class="cx-diagram__links">
-            <path d="M232 90 H393" marker-start="url(#cx-arrow-w)" marker-end="url(#cx-arrow-w)"/>
-            <path d="M607 90 H768" marker-end="url(#cx-arrow-w)"/>
-            <path d="M500 160 V238" marker-start="url(#cx-arrow-w)" marker-end="url(#cx-arrow-w)"/>
-            <path d="M125 158 V240"/>
-            <circle cx="125" cy="158" r="4"/><circle cx="125" cy="240" r="4"/>
-          </g>
-          <rect class="cx-diagram__box" x="20" y="22" width="210" height="136" rx="14"/>
-          <rect class="cx-diagram__box cx-diagram__box--mid" x="395" y="22" width="210" height="136" rx="14"/>
-          <rect class="cx-diagram__box" x="770" y="22" width="210" height="136" rx="14"/>
-          <rect class="cx-diagram__box" x="20" y="240" width="210" height="110" rx="14"/>
-          <rect class="cx-diagram__box" x="395" y="240" width="210" height="110" rx="14"/>
-          <g class="cx-diagram__icon" aria-hidden="true">
-            <path transform="translate(0 -30)" d="M486 84 l14 -8 l14 8 l-14 8 z M486 94 l14 8 l14 -8 M486 104 l14 8 l14 -8"/>
-            <g transform="translate(123 -31)"><ellipse cx="752" cy="72" rx="12" ry="5"/><path d="M740 72 v24 c0 3 5 5 12 5 s12 -2 12 -5 v-24 M740 84 c0 3 5 5 12 5 s12 -2 12 -5"/></g>
-            <path transform="translate(-627 92)" d="M740 168 h24 l-2 -8 h-20 z M742 168 v18 h20 v-18 M749 186 v-9 h6 v9"/>
-            <path d="M486 260 h28 M500 260 v7 M489 267 h22 v12 h-22 z M495 271 h10 v4 h-10 z"/>
-          </g>
-          <g class="cx-diagram__text">
-            <text x="125" y="92" text-anchor="middle" class="cx-diagram__name"><%= d.shopify %></text>
-            <text x="125" y="118" text-anchor="middle" class="cx-diagram__role"><%= d.shopifyRole.toUpperCase() %></text>
-            <text x="500" y="112" text-anchor="middle" class="cx-diagram__name"><%= d.middleware %></text>
-            <text x="500" y="138" text-anchor="middle" class="cx-diagram__role"><%= d.middlewareRole.toUpperCase() %></text>
-            <text x="875" y="100" text-anchor="middle" class="cx-diagram__name cx-diagram__name--s"><%= d.erp %></text>
-            <text x="875" y="122" text-anchor="middle" class="cx-diagram__role"><%= d.erpRole.toUpperCase() %></text>
-            <text x="875" y="140" text-anchor="middle" class="cx-diagram__role"><%= d.erpVendor.toUpperCase() %></text>
-            <text x="125" y="304" text-anchor="middle" class="cx-diagram__name cx-diagram__name--s"><%= d.pos %></text>
-            <text x="125" y="328" text-anchor="middle" class="cx-diagram__role"><%= d.posRole.toUpperCase() %></text>
-            <text x="500" y="304" text-anchor="middle" class="cx-diagram__name cx-diagram__name--s"><%= d.scales %></text>
-            <text x="500" y="328" text-anchor="middle" class="cx-diagram__role"><%= d.scalesRole.toUpperCase() %></text>
-          </g>
-          <g class="cx-diagram__flows">
-            <text x="312" y="78" text-anchor="middle"><%= d.flowShopifyA %></text>
-            <text x="312" y="110" text-anchor="middle"><%= d.flowShopifyB %></text>
-            <text x="688" y="78" text-anchor="middle"><%= d.flowErp[0] %></text>
-            <text x="688" y="110" text-anchor="middle"><%= d.flowErp[1] %></text>
-            <text x="490" y="204" text-anchor="end"><%= d.flowScalesA %></text>
-            <text x="510" y="204"><%= d.flowScalesB %></text>
-          </g>
-        </svg>
-        <%# Phones: the same boxes in a narrow layout (only one of the two SVGs is displayed; both use the title/desc above). %>
-        <svg class="cx-diagram__svg--stack" viewBox="0 0 340 500" role="img" aria-labelledby="flow-title flow-desc" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <marker id="cx-arrow-s" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="cx-diagram__arrow" d="M0 0 8 4 0 8z"/></marker>
-          </defs>
-          <g class="cx-diagram__links">
-            <path d="M40 98 V194" marker-start="url(#cx-arrow-s)" marker-end="url(#cx-arrow-s)"/>
-            <path d="M40 298 V404" marker-start="url(#cx-arrow-s)" marker-end="url(#cx-arrow-s)"/>
-            <path d="M300 298 V404" marker-end="url(#cx-arrow-s)"/>
-          </g>
-          <rect class="cx-diagram__box" x="10" y="10" width="155" height="86" rx="12"/>
-          <rect class="cx-diagram__box" x="175" y="10" width="155" height="86" rx="12"/>
-          <rect class="cx-diagram__box cx-diagram__box--mid" x="10" y="196" width="320" height="100" rx="14"/>
-          <rect class="cx-diagram__box" x="10" y="406" width="155" height="86" rx="12"/>
-          <rect class="cx-diagram__box" x="175" y="406" width="155" height="86" rx="12"/>
-          <g class="cx-diagram__icon" aria-hidden="true">
-            <path transform="translate(-330 130)" d="M486 84 l14 -8 l14 8 l-14 8 z M486 94 l14 8 l14 -8 M486 104 l14 8 l14 -8"/>
-          </g>
-          <g class="cx-diagram__text">
-            <text x="87.5" y="52" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.shopify %></text>
-            <text x="87.5" y="74" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.shopifyRole.toUpperCase() %></text>
-            <text x="252.5" y="52" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.pos %></text>
-            <text x="252.5" y="74" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.posRole.toUpperCase() %></text>
-            <text x="170" y="266" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.middleware %></text>
-            <text x="170" y="286" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.middlewareRole.toUpperCase() %></text>
-            <text x="87.5" y="446" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.scales %></text>
-            <text x="87.5" y="470" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.scalesRole.toUpperCase() %></text>
-            <text x="252.5" y="440" text-anchor="middle" class="cx-diagram__name cx-diagram__name--m"><%= d.erp %></text>
-            <text x="252.5" y="461" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.erpRole.toUpperCase() %></text>
-            <text x="252.5" y="477" text-anchor="middle" class="cx-diagram__role cx-diagram__role--s"><%= d.erpVendor.toUpperCase() %></text>
-          </g>
-          <g class="cx-diagram__flows cx-diagram__flows--s">
-            <text x="50" y="140"><%= d.flowShopifyA %></text>
-            <text x="50" y="158"><%= d.flowShopifyB %></text>
-            <text x="50" y="326"><%= d.flowScalesA %></text>
-            <text x="50" y="342"><%= d.flowScalesB %></text>
-            <text x="290" y="370" text-anchor="end"><%= d.flowErp[0] %></text>
-            <text x="290" y="386" text-anchor="end"><%= d.flowErp[1] %></text>
-          </g>
-        </svg>
+      <figure class="cx-diagram" role="img" aria-labelledby="cx-flow-desc">
+        <p class="cx-sr" id="cx-flow-desc"><%= d.desc %></p>
+        <div class="cx-flow">
+          <div class="cx-flow__node cx-flow__node--store">
+            <svg class="cx-flow__icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M4 10h20l-2-6H6z M6 10v14h16V10 M11 24v-8h6v8"/></svg>
+            <span><%= d.store %></span>
+          </div>
+          <div class="cx-flow__link"></div>
+          <div class="cx-flow__node cx-flow__node--mid">
+            <svg class="cx-flow__icon" viewBox="0 0 28 28" aria-hidden="true"><path d="M3 9l11-6 11 6-11 6z M3 14l11 6 11-6 M3 19l11 6 11-6"/></svg>
+            <span><%= d.middleware %></span>
+          </div>
+          <ul class="cx-flow__systems">
+            <% d.systems.forEach(s => { %><li class="cx-flow__node"><span><%= s %></span></li><% }) %>
+            <li class="cx-flow__node cx-flow__node--any"><span><%= d.any %></span></li>
+          </ul>
+        </div>
       </figure>
-    </section>
-
-    <%# When we can help %>
-    <section class="cx-section cx-help" id="when-we-can-help" data-v2-section>
-      <header class="cx-head">
-        <p class="cx-label"><%= c.help.label %></p>
-        <h2 class="cx-h2"><%- localHtml(c.help.title) %></h2>
-      </header>
-      <ul class="cx-help__grid">
-        <% c.help.cards.forEach(card => { %>
-          <li class="cx-card">
-            <h3 class="cx-h3 cx-h3--s"><%= card.title %></h3>
-            <p><%= card.description %></p>
-          </li>
-        <% }) %>
-      </ul>
-      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
     </section>
 
     <%# Case (A49, 2026-09-25): Marko's case copy from Figma. End client named with permission (owner, 2026-09-25). %>
@@ -277,6 +189,45 @@
 
     <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
 
+    <%# Team (DACH review 2026-09-30; owner 2026-09-30): replaces the partner block and the "Who you'll talk to" list in the
+        closing CTA. Lead = large card (EN/DE Alexander Karl, UK Vadym-Marko), the others smaller, so it reads as a team.
+        First contact and proposals = Sofiia (her note). Oleksandr is listed, not a contact. No emails, phones or calendars.
+        Portraits: public/images/v2/team/*.webp, final studio photos (800×1000, same background and framing), full-bleed in the cards.
+        Copy: c.team; location line from shell.<lang>.json → team.location. %>
+    <% const tm = c.team; const teamShell = (content.shell[lang] || content.shell.en).team || {}; const alt = (p) => p.name + ', ' + p.role; %>
+    <section class="cx-section cx-team" id="team" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= tm.label %></p>
+        <h2 class="cx-h2"><%- localHtml(tm.title) %></h2>
+      </header>
+      <div class="cx-team__grid">
+        <article class="cx-team__lead">
+          <figure class="cx-team__photo"><img loading="lazy" src="<%= tm.lead.photo %>" width="800" height="1000" alt="<%= alt(tm.lead) %>"></figure>
+          <div class="cx-team__body">
+            <h3 class="cx-team__name"><%= tm.lead.name %></h3>
+            <p class="cx-team__role"><%= tm.lead.role %></p>
+            <% if (tm.lead.note) { %><p class="cx-team__note"><%= tm.lead.note %></p><% } %>
+            <div class="cx-team__text"><% tm.lead.paragraphs.forEach(p => { %><p><%= p %></p><% }) %></div>
+            <% if (tm.lead.bio) { %><p class="cx-team__bio"><%= tm.lead.bio %></p><% } %>
+            <% if (tm.lead.inPerson) { %><p class="cx-team__inperson"><%= tm.lead.inPerson %></p><% } %>
+          </div>
+        </article>
+        <ul class="cx-team__members">
+          <% tm.members.forEach(m => { %>
+            <li class="cx-team__member">
+              <img class="cx-team__thumb" loading="lazy" src="<%= m.photo %>" width="800" height="1000" alt="<%= alt(m) %>">
+              <div>
+                <h3 class="cx-team__name cx-team__name--s"><%= m.name %></h3>
+                <p class="cx-team__role"><%= m.role %></p>
+                <% if (m.note) { %><p class="cx-team__note"><%= m.note %></p><% } %>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <% if (teamShell.location) { %><p class="cx-team__location"><%= teamShell.location %></p><% } %>
+    </section>
+
     <%# FAQ — the page's own questions (M2); data-faq-q/a feed the FAQPage schema like on the service pages. %>
     <section class="cx-section cx-faq" id="faq" data-v2-section>
       <header class="cx-head">
@@ -309,7 +260,6 @@
       <p class="cx-cta__body"><%= c.cta.body %></p>
       <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.cta.button)) %></div>
       <%- include('layout/v2/cta-note.ejs') %>
-      <%- include('layout/v2/team.ejs', { teamDach: typeof teamDach === 'undefined' ? true : teamDach }) %>
     </section>
   </main>
 

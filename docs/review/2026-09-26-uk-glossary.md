@@ -169,3 +169,9 @@ I read the service pages of five Ukrainian digital / e-commerce agencies: Turum-
 - **фулфілмент, 3PL**: used by Ukrainian logistics operators themselves. «Виконання замовлень» is used in running text where it fits.
 - **клікабельні прототипи, дизайн-система**: standard in Ukrainian design studios (Brainlab, Turum-burum).
 - **Лайфстайл-бренд**: common in Ukrainian retail; «бренд стилю життя» sounds translated.
+
+## Complex restructure (DACH review, 2026-09-30)
+
+- The partner block is now a **team block** before the FAQ («Ваша команда» / «Команда, яка стоїть за вашим проєктом»). On UK Вадим-Марко Груден (CBDO) leads it, followed by Софія Забродська («Менеджерка з розвитку бізнесу», note «Перший контакт, комерційні пропозиції») and Олександр Руденко («Засновник і CEO»). Alexander Karl is not shown on UK; the «З ким ви говоритимете» list is no longer in the Complex CTA.
+- New strings: «Знайомо?» / «Типові ситуації, з якими бренди приходять до нас» (5 cards); capabilities «Саме те, що потрібно, і нічого зайвого»: «Інтеграції та middleware», «Кастомні застосунки Shopify», «Кастомна бізнес-логіка», «Міграція цілих екосистем»; diagram «Ваш магазин на Shopify» → «Кастомний middleware, який ми будуємо» → ERP, CMS, PIM, POS, «Будь-яка інша ваша система».
+- The German-retailer proof sentence is woven into the single hero paragraph.

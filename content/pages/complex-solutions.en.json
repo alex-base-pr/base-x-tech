@@ -6,8 +6,7 @@
   "hero": {
     "eyebrow": "Complex Solutions",
     "title": "Complex systems,<br> connected around how<br> your business works.",
-    "sub": "Custom Shopify integrations with the ERP, POS and systems behind your operations.",
-    "lead": "We connect e-commerce, ERP, POS, inventory and custom systems — building the integrations, apps and automation that keep your operations in sync.",
+    "lead": "We build custom Shopify integrations with your ERP, POS and the other systems behind your operations: the middleware, apps and automation that keep everything in sync.",
     "button": "Discuss your project"
   },
   "strip": {
@@ -32,45 +31,51 @@
       "Pipedrive"
     ]
   },
-  "partner": {
-    "label": "Your contact in the DACH region",
-    "paragraphs": [
-      "Alexander Karl is your point of contact for projects in Germany, Austria and Switzerland. He handles communication with you in German and coordinates your requirements with our team, so nothing gets lost between your business and the people building the system."
-    ],
-    "inPerson": "In person in Berlin on request, elsewhere by arrangement.",
-    "bio": "Berlin-based interim product owner and e-commerce consultant with 40+ completed digital projects, including Shopware to Shopify migrations with ERP integration. Lecturer in e-commerce at BHT Berlin.",
-    "name": "Alexander Karl",
-    "role": "DACH Partner",
-    "photo": "/images/v2/alexander-karl.webp",
-    "photoAlt": "Alexander Karl, DACH Partner at Base X Tech"
+  "useCases": {
+    "label": "Sound familiar?",
+    "title": "Typical situations brands<br> <span class='accent'>come to us with</span>",
+    "cards": [
+      {
+        "title": "Shopify is your main sales channel",
+        "description": "Your online store runs on Shopify and carries the business. Everything around it has to keep up: stock, prices, orders and customer data."
+      },
+      {
+        "title": "Several systems have to work together",
+        "description": "ERP, POS, PIM, warehouse and CRM each hold part of the data. Orders, stock and customer records drift apart, with delays and manual fixes as the result."
+      },
+      {
+        "title": "No standard software fits",
+        "description": "The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly."
+      },
+      {
+        "title": "A lot of manual work",
+        "description": "Your team moves data, updates stock or handles routine processes by hand, because the systems behind the business aren’t connected."
+      },
+      {
+        "title": "An architecture that has grown over years",
+        "description": "Systems, plugins and workarounds were added one at a time. Every change feels risky, and nobody has the full picture any more."
+      }
+    ]
   },
   "capabilities": {
     "label": "Our Capabilities",
-    "title": "What we integrate,<br class='br-desk'> build and <span class='accent'>automate.</span>",
+    "title": "Exactly the right things,<br class='br-desk'> <span class='accent'>no fluff.</span>",
     "cards": [
       {
-        "title": "ERP Integrations",
-        "description": "Orders, stock and invoices moving between Shopify and your ERP without hands."
+        "title": "Interfaces & middleware",
+        "description": "Connections between Shopify and your ERP, POS, PIM or CRM, including systems with no app and no standard integration. Orders, stock and invoices move without manual work."
       },
       {
-        "title": "CRM Integrations",
-        "description": "Customer and order data landing in your CRM the way your sales team needs it."
+        "title": "Custom Shopify apps",
+        "description": "Apps built for one merchant, doing the thing no public app does properly, in the Shopify admin or on the POS."
       },
       {
-        "title": "Custom APIs",
-        "description": "Connections built for systems with no app and no standard integration."
+        "title": "Custom business logic",
+        "description": "Rules that follow how your business actually works: stock, barcodes, documents, notifications. Work that happens by itself instead of by hand."
       },
       {
-        "title": "Custom Apps",
-        "description": "Apps for one merchant, doing the thing no public app does properly."
-      },
-      {
-        "title": "Custom Automations",
-        "description": "Work that happens by itself: orders, stock, documents, notifications."
-      },
-      {
-        "title": "Logistics & Fulfilment",
-        "description": "Carriers, labels and tracking wired into the order flow rather than bolted on."
+        "title": "Migration of entire ecosystems",
+        "description": "We move the store and the systems around it to Shopify together, so integrations, data and processes keep working after the switch."
       }
     ]
   },
@@ -88,49 +93,20 @@
     "label": "System architecture",
     "title": "How your systems <span class='accent'>work together</span>",
     "paragraphs": [
-      "Shopify, ERP and POS each have their own role. We build the integration layer between them so data moves reliably across the entire operation."
+      "Your store and the systems around it each have their own role. We build the layer between them, so data moves reliably across the entire operation."
     ],
     "diagram": {
-      "svgTitle": "How the systems connect",
-      "svgDesc": "Shopify (commerce platform, with Shopify POS in store) connects to the middleware (integration layer) in both directions: products and barcodes one way, orders and sales the other. The middleware exchanges product data (XML) and weighed item barcodes with the Mettler Toledo scales, and sends sold quantities per store to the ERP (Xentral) every night.",
-      "shopify": "Shopify",
-      "shopifyRole": "Commerce platform",
-      "middleware": "Middleware",
-      "middlewareRole": "Integration layer",
-      "erp": "ERP",
-      "erpRole": "System of record",
-      "pos": "POS",
-      "posRole": "In-store operations",
-      "scales": "Scales",
-      "scalesRole": "Mettler Toledo",
-      "erpVendor": "Xentral",
-      "flowShopifyA": "products, barcodes",
-      "flowShopifyB": "orders, sales",
-      "flowScalesA": "product data (XML)",
-      "flowScalesB": "weighed item barcodes",
-      "flowErp": [
-        "nightly sold quantities",
-        "per store"
-      ]
+      "desc": "Your store on Shopify connects to the custom middleware we build. The middleware connects to your ERP, CMS, PIM, POS and whatever other system you have.",
+      "store": "Your store on Shopify",
+      "middleware": "The custom middleware we build",
+      "systems": [
+        "ERP",
+        "CMS",
+        "PIM",
+        "POS"
+      ],
+      "any": "Whatever system you have"
     }
-  },
-  "help": {
-    "label": "When We Can Help",
-    "title": "When standard solutions<br class='br-desk'> stop being <span class='accent'>enough.</span>",
-    "cards": [
-      {
-        "title": "Your systems don’t stay in sync",
-        "description": "Orders, inventory or customer data live across different systems, creating inconsistencies, delays and manual work."
-      },
-      {
-        "title": "Your workflow doesn’t fit an existing app",
-        "description": "The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly."
-      },
-      {
-        "title": "Manual work is becoming part of the system",
-        "description": "Your team is moving data, updating stock or handling routine processes by hand because the systems behind the business aren’t connected."
-      }
-    ]
   },
   "case": {
     "label": "Proven in practice",
@@ -228,14 +204,39 @@
       }
     ]
   },
-  "offer": {
-    "_note": "Paid entry offer (owner, 2026-09-25): fixed price (updated: €1,999 / $1,999), scope confirmed after a call; no hourly rate on the site. Rendered before the FAQ by layout/v2/offer.ejs.",
-    "label": "First step",
-    "title": "Start with a fixed-price audit",
-    "text": "We map your systems, data flows and failure points, and recommend connector or custom build — with a fixed quote for the build. Credited against the build if you go ahead.",
-    "price": "Fixed price: €1,999",
-    "note": "Scope confirmed after a short call.",
-    "button": "Book the audit"
+  "team": {
+    "_note": "DACH review 2026-09-30: team block before the FAQ (replaces the partner block and the \"Who you'll talk to\" list in the closing CTA). lead = large card; members smaller. Oleksandr is listed, not a contact (owner 2026-09-30). Location line: shell.<lang>.json → team.location.",
+    "label": "Your team",
+    "title": "The team behind <span class='accent'>your project</span>",
+    "lead": {
+      "name": "Alexander Karl",
+      "role": "Country Manager DACH",
+      "note": "Your contact for German-speaking clients",
+      "photo": "/images/v2/team/karl.webp",
+      "paragraphs": [
+        "Alexander Karl is your point of contact for projects in Germany, Austria and Switzerland. He handles communication with you in German and coordinates your requirements with our team, so nothing gets lost between your business and the people building the system."
+      ],
+      "bio": "Berlin-based interim product owner and e-commerce consultant with 40+ completed digital projects, including Shopware to Shopify migrations with ERP integration. Lecturer in e-commerce at BHT Berlin.",
+      "inPerson": "In person in Berlin on request, elsewhere by arrangement."
+    },
+    "members": [
+      {
+        "name": "Sofiia Zabrodska",
+        "role": "Business Development Manager",
+        "note": "First contact, proposals",
+        "photo": "/images/v2/team/sofiia.webp"
+      },
+      {
+        "name": "Vadym-Marko Hruden",
+        "role": "CBDO",
+        "photo": "/images/v2/team/marko.webp"
+      },
+      {
+        "name": "Oleksandr Rudenko",
+        "role": "Founder & CEO",
+        "photo": "/images/v2/team/alex.webp"
+      }
+    ]
   },
   "faq": {
     "label": "FAQ",
@@ -243,7 +244,7 @@
     "items": [
       {
         "q": "Who will we be talking to?",
-        "a": "Alexander Karl, our DACH partner, is your contact in German. Our team builds and supports the system."
+        "a": "Sofiia Zabrodska, our Business Development Manager, handles the first contact and proposals. For German-speaking clients, Alexander Karl, our Country Manager DACH, is your contact in German. Our team builds and supports the system."
       },
       {
         "q": "Can you connect Shopify to our ERP?",

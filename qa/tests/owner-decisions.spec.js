@@ -77,31 +77,32 @@ test('Accent: selected budget chip is dark on accent', async ({ page }) => {
   expect(s).toEqual({ bg: ACCENT, color: ON_ACCENT });
 });
 
-test('Complex partner: in-person line, approved photo, Alexander named, no placeholder', async ({ request }) => {
+test('Complex team lead: in-person line, studio photo, Alexander named, no placeholder', async ({ request }) => {
+  // DACH review 2026-09-30: the partner block became the team block (#team); Alexander leads it on EN/DE.
   const cases = {
-    '/pages/complex-solutions/': ['In person in Berlin on request, elsewhere by arrangement.', 'Alexander Karl, DACH Partner at Base X Tech'],
-    '/de/pages/complex-solutions/': ['Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.', 'Alexander Karl, DACH-Partner von Base X Tech'],
+    '/pages/complex-solutions/': 'In person in Berlin on request, elsewhere by arrangement.',
+    '/de/pages/complex-solutions/': 'Auf Wunsch auch persönlich vor Ort – in Berlin, in anderen Ländern nach Absprache.',
   };
-  for (const [path, [line, alt]] of Object.entries(cases)) {
+  for (const [path, line] of Object.entries(cases)) {
     const { html } = await rawHtml(request, path);
-    const partner = (html.match(/<section class="cx-section cx-partner[\s\S]*?<\/section>/) || [''])[0];
-    expect(partner, path).toContain(`<p class="cx-partner__inperson">${line}</p>`);
-    expect(partner, path).toContain('<strong>Alexander Karl</strong>');
-    expect(partner, path).toMatch(new RegExp(`<img loading="lazy" src="/images/v2/alexander-karl\\.webp" width="1335" height="1257" alt="${alt}">`));
-    expect(partner, path).not.toMatch(/placeholder|Platzhalter/i);
+    const lead = (html.match(/<article class="cx-team__lead">[\s\S]*?<\/article>/) || [''])[0];
+    expect(lead, path).toContain(`<p class="cx-team__inperson">${line}</p>`);
+    expect(lead, path).toContain('<h3 class="cx-team__name">Alexander Karl</h3>');
+    expect(lead, path).toContain('<img loading="lazy" src="/images/v2/team/karl.webp" width="800" height="1000" alt="Alexander Karl, Country Manager DACH">');
+    expect(lead, path).not.toMatch(/placeholder|Platzhalter/i);
     expect(html, path).not.toMatch(/Expertise vor Ort|on-site/i);
   }
-  const img = await request.get('/images/v2/alexander-karl.webp');
-  expect(img.status()).toBe(200);
-  expect((await img.body()).length).toBeLessThan(200 * 1024);
+  for (const n of ['karl', 'alex', 'sofiia', 'marko']) {
+    const img = await request.get(`/images/v2/team/${n}.webp`);
+    expect(img.status(), n).toBe(200);
+    expect((await img.body()).length, n).toBeLessThan(200 * 1024);
+  }
 });
 
 test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with the service preselected', async ({ page, request }) => {
   const cases = [
     ['/pages/service/custom-shopify-integrations/', 'Fixed price: $1,999', 'We map your systems', 'Custom Shopify Integrations'],
     ['/pages/service/shopify-migration-service/', 'Fixed price: $1,999', 'Migration scoping:', 'Shopify Migration'],
-    ['/pages/complex-solutions/', 'Fixed price: €1,999', 'We map your systems', 'Complex Solutions (ERP, POS, middleware)'],
-    ['/de/pages/complex-solutions/', 'Festpreis: 1.999 €', 'Wir erfassen Ihre Systeme', 'Complex Solutions (ERP, POS, middleware)'],
   ];
   for (const [path, price, text, service] of cases) {
     const { html } = await rawHtml(request, path);
@@ -120,12 +121,13 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
     await expect(page.locator('.v2-modal')).toHaveClass(/active/);
     await expect(page.locator('.v2-modal select[name="service"]')).toHaveValue(service);
   }
-  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/']) {
+  // Complex: audit block removed after the DACH review (2026-09-30); see complex-dach-review.spec.js
+  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/', '/pages/complex-solutions/', '/de/pages/complex-solutions/', '/uk/pages/complex-solutions/']) {
     expect((await rawHtml(request, path)).html, `${path}: no offer`).not.toContain('v2-offer');
   }
 });
 
-test('Prices: the fixed-price offer is the only price on the site, no hourly rates', async ({ request }) => {
+test('Prices: the fixed-price offer (Integrations, Migration) is the only price on the site, no hourly rates', async ({ request }) => {
   for (const p of [...indexPages, ...dePages]) {
     const { html } = await rawHtml(request, p.path);
     const body = (html.match(/<body[\s\S]*<\/body>/) || [''])[0]
