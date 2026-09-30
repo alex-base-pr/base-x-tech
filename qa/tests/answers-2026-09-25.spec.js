@@ -90,7 +90,7 @@ test('Complex: partner block is text only, no quote; K1 one systems strip; A49 c
   expect(en).toContain('German specialty food retailer'); // descriptor under the client name (owner, 2026-09-25)
   expect(en).toContain('What’s included');
   expect(de).toContain('Leistungsumfang');
-  expect(en).toContain('Custom Shopify integrations with the ERP, POS and systems behind your operations.');
+  expect(en).toContain('We build custom Shopify integrations with your ERP, POS and the other systems behind your operations'); // hero: one paragraph (DACH review 2026-09-30)
 });
 
 test('Home: sub-line with Shopify under the H1', async ({ request }) => {

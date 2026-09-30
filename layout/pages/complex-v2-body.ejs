@@ -16,12 +16,12 @@
 
   <main id="complex-solutions" class="v2-main cx" data-service="Complex Solutions (ERP, POS, middleware)">
 
-    <%# Hero + systems strip (REQ-015; K1 2026-09-25: one strip, caption "Systems we connect", list from Marko's Figma comment) %>
+    <%# Hero + systems strip (REQ-015; K1 2026-09-25: one strip, caption "Systems we connect", list from Marko's Figma comment).
+        DACH review 2026-09-30: eyebrow, title, ONE paragraph, CTA, free-call note — nothing else before the CTA. %>
     <section class="cx-hero" data-v2-section>
       <div class="cx-hero__body">
         <p class="cx-label cx-label--dark"><%= c.hero.eyebrow %></p>
         <h1 class="cx-hero__title"><%- localHtml(c.hero.title) %></h1>
-        <% if (c.hero.sub) { %><p class="cx-hero__sub"><%= c.hero.sub %></p><% } %>
         <p class="cx-hero__lead"><%= c.hero.lead %></p>
         <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.hero.button)) %></div>
         <%- include('layout/v2/cta-note.ejs') %>
