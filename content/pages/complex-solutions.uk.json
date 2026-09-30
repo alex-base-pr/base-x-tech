@@ -146,7 +146,9 @@
       }
     ],
     "footer": "Система вже працює. Зараз оцінюємо нові модулі: інвентаризацію, облік застави за тару та друк етикеток.",
-    "imagePlaceholder": "Зображення проєкту (заглушка)"
+    "imagePlaceholder": "Зображення проєкту (заглушка)",
+    "image": "/images/v2/complex/vom-einfachen-das-gute-store.webp",
+    "imageAlt": "Магазин делікатесів Vom Einfachen das Gute"
   },
   "posts": {
     "label": "Детальніше",

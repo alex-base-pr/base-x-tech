@@ -146,7 +146,9 @@
       }
     ],
     "footer": "In production. New modules for inventory counting, deposit handling and label printing are being scoped.",
-    "imagePlaceholder": "Project image (placeholder)"
+    "imagePlaceholder": "Project image (placeholder)",
+    "image": "/images/v2/complex/vom-einfachen-das-gute-store.webp",
+    "imageAlt": "Vom Einfachen das Gute delicatessen store in Berlin"
   },
   "posts": {
     "label": "Go deeper",

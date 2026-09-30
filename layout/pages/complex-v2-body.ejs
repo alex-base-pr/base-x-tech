@@ -128,7 +128,7 @@
         </div>
         <figure class="cx-case__media">
           <% if (c.case.image) { %>
-            <img loading="lazy" src="<%= c.case.image %>" alt="<%= c.case.client %>">
+            <img loading="lazy" src="<%= c.case.image %>" width="1080" height="720" alt="<%= c.case.imageAlt || c.case.client %>">
           <% } else { %>
             <div class="cx-case__placeholder" role="img" aria-label="<%= c.case.imagePlaceholder %>">
               <svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="12" fill="currentColor" opacity=".12"/><circle cx="84" cy="44" r="9" fill="#fff"/><path d="M22 92 48 58l16 20 10-12 24 26z" fill="#fff"/></svg>

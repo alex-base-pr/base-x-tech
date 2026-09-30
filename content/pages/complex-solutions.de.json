@@ -146,7 +146,9 @@
       }
     ],
     "footer": "Im Produktivbetrieb. Neue Module für Inventur, Pfandabwicklung und Etikettendruck befinden sich in der Planung.",
-    "imagePlaceholder": "Projektbild (Platzhalter)"
+    "imagePlaceholder": "Projektbild (Platzhalter)",
+    "image": "/images/v2/complex/vom-einfachen-das-gute-store.webp",
+    "imageAlt": "Feinkostladen von Vom Einfachen das Gute in Berlin"
   },
   "posts": {
     "label": "Tiefer einsteigen",
