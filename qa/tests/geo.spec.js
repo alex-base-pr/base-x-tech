@@ -59,6 +59,18 @@ for (const page of [...indexPages, ...deIndexPages, ...ukIndexPages]) {
   });
 }
 
+test('T-044 llms.txt lists blog case studies and guides (from Ghost at build time, owner 2026-10-01)', async ({ request }) => {
+  const llms = await (await request.get('/llms.txt')).text();
+  const cases = (llms.split('## Case studies')[1] || '').split('\n## ')[0];
+  const guides = (llms.split('## Guides and articles')[1] || '').split('\n## ')[0];
+  const links = (part) => [...part.matchAll(/\]\((https:\/\/[^)\s]+)\)/g)].map((m) => m[1]);
+  expect(links(cases).length, 'case studies').toBeGreaterThanOrEqual(3);
+  expect(links(guides).length, 'guides').toBeGreaterThanOrEqual(5);
+  for (const u of [...links(cases), ...links(guides)]) {
+    expect(u, 'blog URL, canonical form').toMatch(/^https:\/\/base-xtech\.com\/blog\/[a-z0-9-]+\/$/);
+  }
+});
+
 test('T-043 llms.txt lists exactly the indexable pages; llms-full.txt has every H1', async ({ request }) => {
   const llms = await (await request.get('/llms.txt')).text();
   const urls = [...llms.matchAll(/\((https:\/\/base-xtech\.com[^)\s]*)\)/g)].map((m) => m[1]);

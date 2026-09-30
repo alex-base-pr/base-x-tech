@@ -72,6 +72,33 @@ const list = (ps) => ps.map((p) => `- [${p.name}](${p.url}): ${p.description}`).
 const deSection = list(dePages);
 const ukSection = list(ukPages);
 
+// Blog posts from Ghost (public Content API key, the same one the blog pages expose): case studies and guides get
+// their own llms.txt sections, since AI assistants cite concrete cases (owner 2026-10-01). Posts tagged #de / #uk
+// go to the language sections. If the API is unreachable, the build continues with the single blog link.
+const GHOST_API = 'https://base-xtech.com/blog/ghost/api/content';
+const GHOST_KEY = '66da9a01055343153f4aa9cb5b';
+let blogPosts = [];
+try {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), 15000);
+  const r = await fetch(`${GHOST_API}/posts/?key=${GHOST_KEY}&limit=all&include=tags&fields=title,url,custom_excerpt,excerpt,meta_description,published_at&filter=visibility:public`, { signal: ctrl.signal });
+  clearTimeout(timer);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  blogPosts = (await r.json()).posts || [];
+} catch (e) {
+  console.warn(`postbuild: blog posts not added to llms.txt (${e.message})`);
+}
+const oneLine = (t) => (t || '').replace(/\s+/g, ' ').trim();
+const shorten = (t, n = 200) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
+const blogEntry = (p) => `- [${oneLine(p.title)}](${p.url.replace(/\?.*$/, '')}): ${shorten(oneLine(p.meta_description || p.custom_excerpt || p.excerpt))}`;
+const hasTag = (p, name) => (p.tags || []).some((t) => t.name.toLowerCase() === name);
+const blogLang = (p) => (hasTag(p, '#de') ? 'de' : hasTag(p, '#uk') ? 'uk' : 'en');
+const isCase = (p) => hasTag(p, 'case study');
+const blogList = (lang, cases) => blogPosts.filter((p) => blogLang(p) === lang && isCase(p) === cases).map(blogEntry).join('\n');
+const enCases = blogList('en', true);
+const enGuides = blogList('en', false);
+const langBlog = (lang, title) => { const l = blogPosts.filter((p) => blogLang(p) === lang).map(blogEntry).join('\n'); return l ? `\n### ${title}\n\n${l}\n` : ''; };
+
 const section = (group) => built.filter((p) => p.group === group || p.group === group + '-extra').map((p) => `- [${p.name}](${p.url}): ${p.description}`).join('\n');
 const home = built.find((p) => p.group === 'home');
 
@@ -92,10 +119,11 @@ ${section('service')}
 - [Blog and case studies](${host}/blog/): articles on Shopify development, migration and integrations
 - Contact: the contact form on any page of ${host}/
 
+${enCases ? `\n## Case studies\n\n${enCases}\n` : ''}${enGuides ? `\n## Guides and articles\n\n${enGuides}\n` : ''}
 ## Legal
 
 ${section('legal')}
-${deSection ? `\n## Deutsch\n\n${deSection}\n` : ''}${ukSection ? `\n## Українською\n\n${ukSection}\n` : ''}`;
+${deSection ? `\n## Deutsch\n\n${deSection}\n${langBlog('de', 'Blog')}` : ''}${ukSection ? `\n## Українською\n\n${ukSection}\n${langBlog('uk', 'Блог')}` : ''}`;
 fs.writeFileSync(path.join(dist, 'llms.txt'), llms);
 
 const full = [`# Base X Tech — full site text\n\nSource: ${host}/ · generated at build · English pages only.`]
@@ -123,4 +151,4 @@ if (env === 'dev') {
   // The blog lives only on prod (Cloudflare Worker route). On dev, send /blog/* there so article links don't 404.
   fs.writeFileSync(path.join(dist, '_redirects'), '/blog/* https://base-xtech.com/blog/:splat 302\n/blog https://base-xtech.com/blog/ 302\n');
 }
-console.log(`postbuild (${env}): llms.txt (+${dePages.length} DE, +${ukPages.length} UK), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers + _redirects' : ''}`);
+console.log(`postbuild (${env}): llms.txt (+${dePages.length} DE, +${ukPages.length} UK, +${blogPosts.length} blog posts), llms-full.txt (${built.length} pages)${env === 'dev' ? ', dev robots + _headers + _redirects' : ''}`);
