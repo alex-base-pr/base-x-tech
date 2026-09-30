@@ -1,6 +1,6 @@
 // Owner decisions, round 3 (2026-09-25): legal entity, accent colour, Complex partner/case, paid audit, OG image, Mo link.
 import { test, expect } from '@playwright/test';
-import { rawHtml, indexPages, dePages, isDevTarget } from '../site-map.js';
+import { rawHtml, indexPages, dePages, ukIndexPages, isDevTarget } from '../site-map.js';
 
 test('Legal: footer stays simple — no address block; entity details live on the legal pages', async ({ request }) => {
   for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/pages/complex-solutions/']) {
@@ -99,39 +99,18 @@ test('Complex team lead: in-person line, studio photo, Alexander named, no place
   }
 });
 
-test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with the service preselected', async ({ page, request }) => {
-  const cases = [
-    ['/pages/service/custom-shopify-integrations/', 'Fixed price: $1,999', 'We map your systems', 'Custom Shopify Integrations'],
-    ['/pages/service/shopify-migration-service/', 'Fixed price: $1,999', 'Migration scoping:', 'Shopify Migration'],
-  ];
-  for (const [path, price, text, service] of cases) {
-    const { html } = await rawHtml(request, path);
-    const offer = html.indexOf('class="v2-section v2-dark v2-offer"');
-    const faq = html.search(/class="(v2-section v2-light v2-faq|cx-section cx-faq)"/);
-    expect(offer, `${path}: offer present`).toBeGreaterThan(0);
-    expect(offer, `${path}: offer before FAQ`).toBeLessThan(faq);
-    const block = html.slice(offer, faq);
-    expect(block).toContain(`<p class="v2-offer__amount">${price}</p>`);
-    expect(block).toContain(text);
-    expect(block).toMatch(/Scope confirmed after a short call\.|Der Umfang wird nach einem kurzen Gespräch abgestimmt\./);
-    expect(block).toContain('data-form-trigger');
-    expect(block, 'no hourly rate').not.toMatch(/\/\s?h(ou)?r|per hour|Stunde/i);
-    await page.goto(path);
-    await page.locator('.v2-offer [data-form-trigger]').click();
-    await expect(page.locator('.v2-modal')).toHaveClass(/active/);
-    await expect(page.locator('.v2-modal select[name="service"]')).toHaveValue(service);
-  }
-  // Complex: audit block removed after the DACH review (2026-09-30); see complex-dach-review.spec.js
-  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/', '/pages/complex-solutions/', '/de/pages/complex-solutions/', '/uk/pages/complex-solutions/']) {
-    expect((await rawHtml(request, path)).html, `${path}: no offer`).not.toContain('v2-offer');
+test('No fixed-price audit block anywhere (removed from Complex after the DACH review, then everywhere, owner 2026-09-30)', async ({ request }) => {
+  for (const p of [...indexPages, ...dePages, ...ukIndexPages]) {
+    const { html } = await rawHtml(request, p.path);
+    expect(html, `${p.path}: no offer`).not.toContain('v2-offer');
+    expect(html, p.path).not.toContain('id="fixed-price-audit"');
   }
 });
 
-test('Prices: the fixed-price offer (Integrations, Migration) is the only price on the site, no hourly rates', async ({ request }) => {
+test('Prices: no prices on the site, no hourly rates (owner 2026-09-30: the audit offer is gone too)', async ({ request }) => {
   for (const p of [...indexPages, ...dePages]) {
     const { html } = await rawHtml(request, p.path);
     const body = (html.match(/<body[\s\S]*<\/body>/) || [''])[0]
-      .replace(/<section class="v2-section v2-dark v2-offer"[\s\S]*?<\/section>/, ' ') // the offer itself
       .replace(/<(script|style|form|svg)[\s\S]*?<\/\1>/g, ' ') // form = budget bands, not prices
       .replace(/<[^>]+>/g, ' ');
     const prices = (body.match(/(\$|€) ?\d[\d,.]*(?![\d,.]*\s?[MB]\+?)|\d[\d.,]* ?€|per hour|hourly|Stundensatz/gi) || []);

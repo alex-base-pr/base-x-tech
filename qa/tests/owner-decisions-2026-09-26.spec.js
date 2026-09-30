@@ -50,9 +50,6 @@ test('UK pages: euro only (no "$"), Ukrainian team names in Cyrillic', async ({ 
     expect(body, p.path).not.toContain('$');
     for (const latin of ['Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko']) expect(body, `${p.path}: ${latin}`).not.toContain(latin);
   }
-  for (const p of ['/uk/pages/service/custom-shopify-integrations/', '/uk/pages/service/shopify-migration-service/']) { // no audit on Complex since the DACH review (2026-09-30)
-    expect(decode((await rawHtml(request, p)).html), p).toContain('<p class="v2-offer__amount">Фіксована ціна: 1 999 €</p>');
-  }
 });
 
 test('UK: CTA buttons read «Обговорити проєкт», header pill «Зв’язатися»', async ({ request }) => {
