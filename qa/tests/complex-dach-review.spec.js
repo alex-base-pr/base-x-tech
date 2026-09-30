@@ -59,3 +59,17 @@ for (const [lang, path] of Object.entries(PAGES)) {
     for (let i = 1; i < 4; i++) expect(narrow[i].top).toBeGreaterThan(narrow[i - 1].top);
   });
 }
+
+test('no fixed-price audit block on Complex (EN/DE/UK); still on Integrations and Migration in every language', async ({ request }) => {
+  for (const path of Object.values(PAGES)) {
+    const { html } = await rawHtml(request, path);
+    expect(html, path).not.toContain('v2-offer');
+    expect(html, path).not.toContain('id="fixed-price-audit"');
+  }
+  for (const pre of ['', '/de', '/uk']) {
+    for (const p of ['/pages/service/custom-shopify-integrations/', '/pages/service/shopify-migration-service/']) {
+      const { html } = await rawHtml(request, pre + p);
+      expect(html, pre + p).toContain('<section class="v2-section v2-dark v2-offer" id="fixed-price-audit"');
+    }
+  }
+});

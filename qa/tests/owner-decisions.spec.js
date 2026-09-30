@@ -100,8 +100,6 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
   const cases = [
     ['/pages/service/custom-shopify-integrations/', 'Fixed price: $1,999', 'We map your systems', 'Custom Shopify Integrations'],
     ['/pages/service/shopify-migration-service/', 'Fixed price: $1,999', 'Migration scoping:', 'Shopify Migration'],
-    ['/pages/complex-solutions/', 'Fixed price: €1,999', 'We map your systems', 'Complex Solutions (ERP, POS, middleware)'],
-    ['/de/pages/complex-solutions/', 'Festpreis: 1.999 €', 'Wir erfassen Ihre Systeme', 'Complex Solutions (ERP, POS, middleware)'],
   ];
   for (const [path, price, text, service] of cases) {
     const { html } = await rawHtml(request, path);
@@ -120,12 +118,13 @@ test('Paid entry offer: before the FAQ, fixed price, CTA opens the modal with th
     await expect(page.locator('.v2-modal')).toHaveClass(/active/);
     await expect(page.locator('.v2-modal select[name="service"]')).toHaveValue(service);
   }
-  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/']) {
+  // Complex: audit block removed after the DACH review (2026-09-30); see complex-dach-review.spec.js
+  for (const path of ['/pages/shopify-development/', '/pages/service/custom-web-design-services/', '/pages/complex-solutions/', '/de/pages/complex-solutions/', '/uk/pages/complex-solutions/']) {
     expect((await rawHtml(request, path)).html, `${path}: no offer`).not.toContain('v2-offer');
   }
 });
 
-test('Prices: the fixed-price offer is the only price on the site, no hourly rates', async ({ request }) => {
+test('Prices: the fixed-price offer (Integrations, Migration) is the only price on the site, no hourly rates', async ({ request }) => {
   for (const p of [...indexPages, ...dePages]) {
     const { html } = await rawHtml(request, p.path);
     const body = (html.match(/<body[\s\S]*<\/body>/) || [''])[0]
