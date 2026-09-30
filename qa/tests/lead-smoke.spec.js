@@ -27,7 +27,10 @@ test('Lead smoke: modal on Integrations sends a test lead to ClickUp', async ({ 
   test.setTimeout(60_000);
 
   await page.goto('/pages/service/custom-shopify-integrations/');
-  await page.locator('.v2-header [data-form-trigger]').click();
+  // prod only: the CookieYes banner can cover the modal's submit button; decline non-essential cookies first
+  // (it shows up with a delay, so wait a few seconds for it)
+  await page.locator('.cky-consent-bar .cky-btn-reject:visible').first().click({ timeout: 8000 }).catch(() => {});
+  await page.locator('.v2-header [data-form-trigger]:visible').first().click();
   const modal = page.locator('.v2-modal');
   await expect(modal).toHaveClass(/active/);
 
