@@ -105,30 +105,19 @@
     "label": "Systemarchitektur",
     "title": "Wie Ihre Systeme <span class='accent'>zusammenarbeiten</span>",
     "paragraphs": [
-      "Shopify, ERP und POS haben jeweils ihre eigene Rolle. Wir entwickeln die Integrationsschicht dazwischen, damit Daten im gesamten Betrieb zuverlässig fließen."
+      "Ihr Shop und die Systeme drumherum haben jeweils ihre eigene Rolle. Wir entwickeln die Schicht dazwischen, damit Daten im gesamten Betrieb zuverlässig fließen."
     ],
     "diagram": {
-      "svgTitle": "So sind die Systeme verbunden",
-      "svgDesc": "Shopify (Commerce-Plattform, mit Shopify POS im Laden) ist in beide Richtungen mit der Middleware (Integrationsschicht) verbunden: Produkte und Barcodes in die eine, Bestellungen und Verkäufe in die andere Richtung. Die Middleware tauscht Produktdaten (XML) und Barcodes gewogener Artikel mit den Mettler-Toledo-Waagen aus und übermittelt jede Nacht die verkauften Mengen pro Filiale an das ERP (Xentral).",
-      "shopify": "Shopify",
-      "shopifyRole": "Commerce-Plattform",
-      "middleware": "Middleware",
-      "middlewareRole": "Integrationsschicht",
-      "erp": "ERP",
-      "erpRole": "Führendes System",
-      "pos": "POS",
-      "posRole": "Ladenbetrieb",
-      "scales": "Waagen",
-      "scalesRole": "Mettler Toledo",
-      "erpVendor": "Xentral",
-      "flowShopifyA": "Produkte, Barcodes",
-      "flowShopifyB": "Bestellungen, Verkäufe",
-      "flowScalesA": "Produktdaten (XML)",
-      "flowScalesB": "Barcodes gewogener Artikel",
-      "flowErp": [
-        "nächtlich: verkaufte",
-        "Mengen pro Filiale"
-      ]
+      "desc": "Ihr Shop auf Shopify ist mit der individuellen Middleware verbunden, die wir entwickeln. Die Middleware verbindet ERP, CMS, PIM, POS und jedes weitere System, das Sie nutzen.",
+      "store": "Ihr Shop auf Shopify",
+      "middleware": "Die individuelle Middleware, die wir entwickeln",
+      "systems": [
+        "ERP",
+        "CMS",
+        "PIM",
+        "POS"
+      ],
+      "any": "Jedes weitere System, das Sie nutzen"
     }
   },
   "case": {

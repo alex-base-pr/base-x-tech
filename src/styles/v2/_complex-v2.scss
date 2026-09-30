@@ -160,30 +160,52 @@ body.v2.cx-page .cx {
   .cx-text__body { display: grid; gap: 30px; max-width: 515px; margin: 0 auto 3rem; text-align: center; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; color: var(--cx-text); }
   .cx-text { @include desk { padding-bottom: 3.5rem; } }
 
-  // ---------- architecture diagram (text-based SVG)
+  // ---------- architecture diagram (DACH review 2026-09-30): generic HTML flow, store → middleware → systems.
+  // ≥700px: fan-out to five boxes in a row; phones: the systems hang off a vertical bus on the left.
   .cx-arch { @include desk { padding-top: 6rem; } }
-  .cx-diagram { margin: 0 auto; max-width: 1080px; padding: 16px; border-radius: 24px;
+  .cx-diagram { margin: 0 auto; max-width: 1080px; padding: 16px 0; border-radius: 24px;
     background: radial-gradient(ellipse at center, #faf8f4 0%, rgba(250, 248, 244, 0) 70%);
-    svg { display: block; width: 100%; height: auto; overflow: visible; }
-    // Wide diagram from 700px up; below that a stacked version of the same boxes (same title/desc).
-    .cx-diagram__svg--stack { max-width: 360px; margin: 0 auto; }
-    .cx-diagram__svg--wide { display: none; }
+  }
+  .cx-flow { --line: #d3c8b9; --gap: 16px; --drop: 28px;
+    display: flex; flex-direction: column; align-items: center;
+    @include tab { --gap: 14px; --drop: 32px; }
+  }
+  .cx-flow__node { position: relative; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 64px; padding: 16px 20px;
+    border: 1px solid #e8e2d9; border-radius: 14px; background: #fbfaf8; text-align: center;
+    font-family: var(--cx-head); font-size: 18px; line-height: 1.15; letter-spacing: -.02em; color: var(--cx-ink);
+    @include tab { font-size: 20px; }
+  }
+  .cx-flow__node--store, .cx-flow__node--mid { width: 100%; max-width: 420px; padding: 20px 28px; font-size: 20px; @include tab { font-size: 24px; } }
+  .cx-flow__node--mid { max-width: 520px; background: var(--v2-bg); border-color: var(--v2-bg); color: #fff;
+    .cx-flow__icon { stroke: #fff; }
+  }
+  .cx-flow__node--any { border-style: dashed; background: transparent; color: var(--cx-text); font-size: 16px; @include tab { font-size: 16px; } }
+  .cx-flow__icon { flex: 0 0 26px; width: 26px; height: 26px; fill: none; stroke: var(--cx-ink); stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+
+  // two-way connector store ↔ middleware
+  .cx-flow__link { position: relative; width: 2px; height: 56px; background: var(--line);
+    &::before, &::after { content: ''; position: absolute; left: 50%; border: 6px solid transparent; transform: translateX(-50%); }
+    &::before { top: -1px; border-top: 0; border-bottom: 8px solid var(--line); }
+    &::after { bottom: -1px; border-bottom: 0; border-top: 8px solid var(--line); }
+  }
+
+  .cx-flow__systems { position: relative; display: grid; gap: var(--gap); width: 100%; margin: 0; padding: var(--drop) 0 0 36px; list-style: none;
+    // phones: vertical bus from the middleware box, a stub to every system
+    &::before { content: ''; position: absolute; left: 14px; top: 0; bottom: 32px; width: 2px; background: var(--line); }
+    > li::before { content: ''; position: absolute; left: -22px; top: 50%; width: 14px; height: 2px; background: var(--line); }
+    > li::after { content: ''; position: absolute; left: -9px; top: 50%; border: 6px solid transparent; border-right: 0; border-left: 8px solid var(--line); transform: translateY(-50%); }
+    > li { justify-content: flex-start; text-align: left; }
+
     @include tab {
-      .cx-diagram__svg--wide { display: block; }
-      .cx-diagram__svg--stack { display: none; }
+      grid-template-columns: repeat(5, minmax(0, 1fr)); padding: calc(var(--drop) * 2) 0 0;
+      > li { justify-content: center; text-align: center; }
+      // horizontal rail between the centres of the first and last box + the drop from the middleware box
+      &::before { left: calc((100% - 4 * var(--gap)) / 10); right: calc((100% - 4 * var(--gap)) / 10); top: var(--drop); bottom: auto; width: auto; height: 2px; }
+      &::after { content: ''; position: absolute; left: 50%; top: 0; width: 2px; height: var(--drop); background: var(--line); transform: translateX(-50%); }
+      > li::before { left: 50%; top: calc(var(--drop) * -1); width: 2px; height: calc(var(--drop) - 8px); transform: translateX(-50%); }
+      > li::after { left: 50%; top: -9px; border: 6px solid transparent; border-bottom: 0; border-top: 8px solid var(--line); transform: translateX(-50%); }
     }
   }
-  .cx-diagram__links { fill: #d9cfc2; stroke: #d9cfc2; stroke-width: 1.5; path { fill: none; } }
-  .cx-diagram__box { fill: #fbfaf8; stroke: #efebe5; stroke-width: 1; }
-  .cx-diagram__box--mid { fill: #f3efe9; }
-  .cx-diagram__group { fill: #f7f5f1; stroke: #efebe5; stroke-width: 1; }
-  .cx-diagram__icon { fill: none; stroke: var(--cx-ink); stroke-width: 1.6; stroke-linejoin: round; }
-  .cx-diagram__text { fill: var(--cx-ink); }
-  .cx-diagram__name { font-family: var(--cx-head); font-size: 30px; letter-spacing: -.02em; &--s { font-size: 22px; } &--m { font-size: 26px; } }
-  .cx-diagram__role { font-family: var(--cx-head); font-size: 11.5px; letter-spacing: .14em; fill: #6b6b6b; &--s { font-size: 9.5px; letter-spacing: .08em; } }
-  // A51: data-flow labels on the connectors
-  .cx-diagram__flows { font-family: var(--cx-body); font-size: 12.5px; fill: #5a5a5a; &--s { font-size: 11px; } }
-  .cx-diagram__arrow { fill: #cbbfae; }
 
   // ---------- typical situations (DACH review 2026-09-30): 5 cards = 3 + 2 on desktop, 2 + 2 + 1 on tablets
   .cx-cases { @include desk { padding-top: 6.5rem; padding-bottom: 6.5rem; } }

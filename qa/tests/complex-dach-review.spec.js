@@ -33,3 +33,14 @@ for (const [lang, path] of Object.entries(PAGES)) {
     expect(html, 'old "When we can help" section is gone').not.toContain('id="when-we-can-help"');
   });
 }
+
+for (const [lang, path] of Object.entries(PAGES)) {
+  test(`${lang}: generic system diagram (store → our middleware → ERP, CMS, PIM, POS, any system), no flow labels`, async ({ request }) => {
+    const { html } = await rawHtml(request, path);
+    const fig = decode((html.match(/<figure class="cx-diagram"[\s\S]*?<\/figure>/) || [''])[0]);
+    const d = copy(lang).architecture.diagram;
+    for (const t of [d.store, d.middleware, ...d.systems, d.any, d.desc]) expect(fig).toContain(t);
+    expect(fig).toMatch(/role="img" aria-labelledby="cx-flow-desc"/);
+    expect(fig, 'no case-specific labels').not.toMatch(/Mettler|Xentral|XML/);
+  });
+}

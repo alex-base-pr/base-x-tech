@@ -105,30 +105,19 @@
     "label": "System architecture",
     "title": "How your systems <span class='accent'>work together</span>",
     "paragraphs": [
-      "Shopify, ERP and POS each have their own role. We build the integration layer between them so data moves reliably across the entire operation."
+      "Your store and the systems around it each have their own role. We build the layer between them, so data moves reliably across the entire operation."
     ],
     "diagram": {
-      "svgTitle": "How the systems connect",
-      "svgDesc": "Shopify (commerce platform, with Shopify POS in store) connects to the middleware (integration layer) in both directions: products and barcodes one way, orders and sales the other. The middleware exchanges product data (XML) and weighed item barcodes with the Mettler Toledo scales, and sends sold quantities per store to the ERP (Xentral) every night.",
-      "shopify": "Shopify",
-      "shopifyRole": "Commerce platform",
-      "middleware": "Middleware",
-      "middlewareRole": "Integration layer",
-      "erp": "ERP",
-      "erpRole": "System of record",
-      "pos": "POS",
-      "posRole": "In-store operations",
-      "scales": "Scales",
-      "scalesRole": "Mettler Toledo",
-      "erpVendor": "Xentral",
-      "flowShopifyA": "products, barcodes",
-      "flowShopifyB": "orders, sales",
-      "flowScalesA": "product data (XML)",
-      "flowScalesB": "weighed item barcodes",
-      "flowErp": [
-        "nightly sold quantities",
-        "per store"
-      ]
+      "desc": "Your store on Shopify connects to the custom middleware we build. The middleware connects to your ERP, CMS, PIM, POS and whatever other system you have.",
+      "store": "Your store on Shopify",
+      "middleware": "The custom middleware we build",
+      "systems": [
+        "ERP",
+        "CMS",
+        "PIM",
+        "POS"
+      ],
+      "any": "Whatever system you have"
     }
   },
   "case": {
