@@ -71,31 +71,23 @@
   },
   "capabilities": {
     "label": "Unsere Leistungen",
-    "title": "Was wir verbinden,<br class='br-desk'> entwickeln und <span class='accent'>automatisieren.</span>",
+    "title": "Genau das Richtige,<br class='br-desk'> <span class='accent'>ohne Überflüssiges.</span>",
     "cards": [
       {
-        "title": "ERP-Integrationen",
-        "description": "Bestellungen, Bestände und Rechnungen fließen zwischen Shopify und Ihrem ERP – ganz ohne Handarbeit."
+        "title": "Schnittstellen & Middleware",
+        "description": "Anbindungen zwischen Shopify und Ihrem ERP, POS, PIM oder CRM – auch für Systeme, für die es weder eine App noch eine Standardintegration gibt. Bestellungen, Bestände und Rechnungen fließen ohne Handarbeit."
       },
       {
-        "title": "CRM-Integrationen",
-        "description": "Kunden- und Bestelldaten landen so in Ihrem CRM, wie Ihr Vertrieb sie braucht."
+        "title": "Individuelle Shopify-Apps",
+        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann, im Shopify-Admin oder an der Kasse."
       },
       {
-        "title": "Individuelle APIs",
-        "description": "Anbindungen für Systeme, für die es weder eine App noch eine Standardintegration gibt."
+        "title": "Individuelle Geschäftslogik",
+        "description": "Regeln, die abbilden, wie Ihr Unternehmen tatsächlich arbeitet: Bestände, Barcodes, Dokumente, Benachrichtigungen. Arbeit, die sich von selbst erledigt statt von Hand."
       },
       {
-        "title": "Custom Apps",
-        "description": "Apps für einen einzelnen Händler – für das, was keine öffentliche App richtig kann."
-      },
-      {
-        "title": "Individuelle Automatisierung",
-        "description": "Arbeit, die sich von selbst erledigt: Bestellungen, Bestände, Dokumente, Benachrichtigungen."
-      },
-      {
-        "title": "Logistik & Fulfillment",
-        "description": "Versanddienstleister, Etiketten und Sendungsverfolgung direkt in den Bestellablauf eingebunden statt nachträglich aufgesetzt."
+        "title": "Migration ganzer Systemlandschaften",
+        "description": "Wir ziehen den Shop und die Systeme drumherum gemeinsam zu Shopify um, damit Integrationen, Daten und Abläufe nach dem Wechsel weiter funktionieren."
       }
     ]
   },

@@ -142,16 +142,17 @@ body.v2.cx-page .cx {
   .cx-partner__bio { max-width: 640px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; color: #4a4a4a; }
   .cx-partner__inperson { max-width: 640px; font-family: var(--cx-body); font-size: 16px; line-height: 1.4; font-weight: 500; color: var(--cx-ink); }
 
-  // ---------- capabilities (3 × 2 text grid on the grey band)
+  // ---------- capabilities (four solution types, one row on wide screens, on the grey band)
   .cx-caps { background: var(--cx-grey-0); }
   .cx-caps__grid {
     display: grid; gap: 2.5rem 2rem; max-width: 1316px; margin: 0 auto;
-    @include tab { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    @include desk { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 128px; row-gap: 65px; }
+    @include tab { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; }
+    @media (min-width: 1200px) { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 56px; }
   }
-  .cx-caps__item { display: grid; gap: 20px; align-content: start; max-width: 353px;
-    @include desk { gap: 30px; }
-    p { font-size: 16px; line-height: 1.3; letter-spacing: -.02em; }
+  .cx-caps__item { display: grid; gap: 20px; align-content: start; padding-top: 24px; border-top: 1px solid #cfcfcf;
+    @include desk { gap: 24px; }
+    .cx-h3 { font-size: clamp(1.5rem, 1.8vw, 1.75rem); }
+    p { font-size: 16px; line-height: 1.35; letter-spacing: -.02em; color: var(--cx-text); }
   }
 
   // ---------- behind the integration

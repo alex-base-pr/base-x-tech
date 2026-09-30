@@ -71,31 +71,23 @@
   },
   "capabilities": {
     "label": "Our Capabilities",
-    "title": "What we integrate,<br class='br-desk'> build and <span class='accent'>automate.</span>",
+    "title": "Exactly the right things,<br class='br-desk'> <span class='accent'>no fluff.</span>",
     "cards": [
       {
-        "title": "ERP Integrations",
-        "description": "Orders, stock and invoices moving between Shopify and your ERP without hands."
+        "title": "Interfaces & middleware",
+        "description": "Connections between Shopify and your ERP, POS, PIM or CRM, including systems with no app and no standard integration. Orders, stock and invoices move without manual work."
       },
       {
-        "title": "CRM Integrations",
-        "description": "Customer and order data landing in your CRM the way your sales team needs it."
+        "title": "Custom Shopify apps",
+        "description": "Apps built for one merchant, doing the thing no public app does properly, in the Shopify admin or on the POS."
       },
       {
-        "title": "Custom APIs",
-        "description": "Connections built for systems with no app and no standard integration."
+        "title": "Custom business logic",
+        "description": "Rules that follow how your business actually works: stock, barcodes, documents, notifications. Work that happens by itself instead of by hand."
       },
       {
-        "title": "Custom Apps",
-        "description": "Apps for one merchant, doing the thing no public app does properly."
-      },
-      {
-        "title": "Custom Automations",
-        "description": "Work that happens by itself: orders, stock, documents, notifications."
-      },
-      {
-        "title": "Logistics & Fulfilment",
-        "description": "Carriers, labels and tracking wired into the order flow rather than bolted on."
+        "title": "Migration of entire ecosystems",
+        "description": "We move the store and the systems around it to Shopify together, so integrations, data and processes keep working after the switch."
       }
     ]
   },
