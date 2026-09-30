@@ -57,15 +57,6 @@
       }
     ]
   },
-  "partner": {
-    "_note": "UK only (owner, 2026-09-26): the Ukrainian-language contact is Vadym-Marko Hruden, CBDO. Text-only block (no photo), no in-person line. EN/DE keep Alexander Karl.",
-    "label": "Ваша контактна особа",
-    "paragraphs": [
-      "Вадим-Марко — ваша контактна особа для складних проєктів. Він обговорює з вами задачу українською, збирає вимоги й координує команду, яка будує систему, щоб між вашим бізнесом і розробниками нічого не загубилося."
-    ],
-    "name": "Вадим-Марко Груден",
-    "role": "CBDO, Base X Tech"
-  },
   "capabilities": {
     "label": "Що ми робимо",
     "title": "Саме те, що потрібно,<br class='br-desk'> <span class='accent'>і нічого зайвого.</span>",
@@ -210,6 +201,32 @@
       {
         "title": "Запуск і моніторинг",
         "description": "Запускаємо в реальних умовах і далі стежимо за критичними потоками, бо інтеграції мають працювати й після запуску."
+      }
+    ]
+  },
+  "team": {
+    "_note": "DACH review 2026-09-30: team block before the FAQ (replaces the partner block and the \"Who you'll talk to\" list in the closing CTA). lead = large card; members smaller. Oleksandr is listed, not a contact (owner 2026-09-30). Location line: shell.<lang>.json → team.location. UK: Vadym-Marko leads, Alexander Karl is not shown (owner 2026-09-26).",
+    "label": "Ваша команда",
+    "title": "Команда, яка стоїть<br> <span class='accent'>за вашим проєктом</span>",
+    "lead": {
+      "name": "Вадим-Марко Груден",
+      "role": "CBDO",
+      "photo": "/images/v2/team/marko.webp",
+      "paragraphs": [
+        "Вадим-Марко — ваша контактна особа для складних проєктів. Він обговорює з вами задачу українською, збирає вимоги й координує команду, яка будує систему, щоб між вашим бізнесом і розробниками нічого не загубилося."
+      ]
+    },
+    "members": [
+      {
+        "name": "Софія Забродська",
+        "role": "Менеджерка з розвитку бізнесу",
+        "note": "Перший контакт, комерційні пропозиції",
+        "photo": "/images/v2/team/sofiia.webp"
+      },
+      {
+        "name": "Олександр Руденко",
+        "role": "Засновник і CEO",
+        "photo": "/images/v2/team/alex.webp"
       }
     ]
   },

@@ -25,23 +25,21 @@ for (const [p, lang] of [
   });
 }
 
-test('UK Complex: Vadym-Marko Hruden is the contact, no Alexander Karl partner block', async ({ request }) => {
+test('UK Complex: Vadym-Marko Hruden is the contact, no Alexander Karl', async ({ request }) => {
+  // DACH review 2026-09-30: the partner block became the team block (#team); on UK Vadym-Marko leads it.
   const { html } = await rawHtml(request, '/uk/pages/complex-solutions/');
-  const partner = (html.match(/<section class="cx-section cx-partner[^"]*" id="local-expertise"[\s\S]*?<\/section>/) || [''])[0];
-  expect(partner).toContain('<strong>Вадим-Марко Груден</strong>');
-  expect(partner).toContain('CBDO, Base X Tech');
-  expect(partner).not.toContain('Alexander Karl');
-  expect(partner, 'text-only: no photo').not.toContain('<img');
-  expect(partner, 'no in-person line').not.toContain('cx-partner__inperson');
+  const lead = (html.match(/<article class="cx-team__lead">[\s\S]*?<\/article>/) || [''])[0];
+  expect(lead).toContain('<h3 class="cx-team__name">Вадим-Марко Груден</h3>');
+  expect(lead).toContain('<p class="cx-team__role">CBDO</p>');
+  expect(lead, 'no in-person line').not.toContain('cx-team__inperson');
   expect(html).not.toContain('Берлін');
-  const team = (html.match(/<aside class="v2-team"[\s\S]*?<\/aside>/) || [''])[0];
-  expect([...team.matchAll(/<strong>([^<]+)<\/strong>/g)].map((m) => m[1])).toEqual(['Софія Забродська', 'Вадим-Марко Груден']);
+  expect(html).not.toContain('<aside class="v2-team"');
   expect(html).not.toContain('Alexander Karl');
 });
 
 test('EN and DE Complex keep Alexander Karl', async ({ request }) => {
   for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) {
-    expect((await rawHtml(request, p)).html, p).toContain('<strong>Alexander Karl</strong>');
+    expect((await rawHtml(request, p)).html, p).toContain('<h3 class="cx-team__name">Alexander Karl</h3>');
   }
 });
 

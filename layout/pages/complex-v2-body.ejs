@@ -57,25 +57,6 @@
       <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
     </section>
 
-    <%# Partner block (REQ-013/016/017/018; M1/M5/K2 2026-09-25): photo approved by the owner 2026-09-25
-        (public/images/v2/alexander-karl.webp) — no quote, no placeholder, no email/phone/calendar. Without c.partner.photo the block is text-only. LinkedIn only if c.partner.linkedin is set. %>
-    <section class="cx-section cx-partner<%= c.partner.photo ? '' : ' cx-partner--text' %>" id="local-expertise" data-v2-section>
-      <% if (c.partner.photo) { %>
-      <figure class="cx-partner__photo">
-        <img loading="lazy" src="<%= c.partner.photo %>" width="1335" height="1257" alt="<%= c.partner.photoAlt || (c.partner.name + ', ' + c.partner.role) %>">
-      </figure>
-      <% } %>
-      <div class="cx-partner__body">
-        <h2 class="cx-label"><%= c.partner.label %></h2>
-        <p class="cx-partner__person"><strong><%= c.partner.name %></strong><span><%= c.partner.role %></span><% if (c.partner.linkedin) { %><a href="<%= c.partner.linkedin %>" target="_blank" rel="noopener">LinkedIn</a><% } %></p>
-        <div class="cx-partner__text">
-          <% c.partner.paragraphs.forEach(p => { %><p><%= p %></p><% }) %>
-        </div>
-        <% if (c.partner.bio) { %><p class="cx-partner__bio"><%= c.partner.bio %></p><% } %>
-        <% if (c.partner.inPerson) { %><p class="cx-partner__inperson"><%= c.partner.inPerson %></p><% } %>
-      </div>
-    </section>
-
     <%# Capabilities: four solution types (DACH review 2026-09-30: "exactly the right things, no fluff") %>
     <section class="cx-section cx-caps" id="capabilities" data-v2-section>
       <header class="cx-head">
@@ -208,6 +189,45 @@
 
     <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
 
+    <%# Team (DACH review 2026-09-30; owner 2026-09-30): replaces the partner block and the "Who you'll talk to" list in the
+        closing CTA. Lead = large card (EN/DE Alexander Karl, UK Vadym-Marko), the others smaller, so it reads as a team.
+        First contact and proposals = Sofiia (her note). Oleksandr is listed, not a contact. No emails, phones or calendars.
+        Portraits: public/images/v2/team/*.webp, final studio photos (800×1000, same background and framing), full-bleed in the cards.
+        Copy: c.team; location line from shell.<lang>.json → team.location. %>
+    <% const tm = c.team; const teamShell = (content.shell[lang] || content.shell.en).team || {}; const alt = (p) => p.name + ', ' + p.role; %>
+    <section class="cx-section cx-team" id="team" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= tm.label %></p>
+        <h2 class="cx-h2"><%- localHtml(tm.title) %></h2>
+      </header>
+      <div class="cx-team__grid">
+        <article class="cx-team__lead">
+          <figure class="cx-team__photo"><img loading="lazy" src="<%= tm.lead.photo %>" width="800" height="1000" alt="<%= alt(tm.lead) %>"></figure>
+          <div class="cx-team__body">
+            <h3 class="cx-team__name"><%= tm.lead.name %></h3>
+            <p class="cx-team__role"><%= tm.lead.role %></p>
+            <% if (tm.lead.note) { %><p class="cx-team__note"><%= tm.lead.note %></p><% } %>
+            <div class="cx-team__text"><% tm.lead.paragraphs.forEach(p => { %><p><%= p %></p><% }) %></div>
+            <% if (tm.lead.bio) { %><p class="cx-team__bio"><%= tm.lead.bio %></p><% } %>
+            <% if (tm.lead.inPerson) { %><p class="cx-team__inperson"><%= tm.lead.inPerson %></p><% } %>
+          </div>
+        </article>
+        <ul class="cx-team__members">
+          <% tm.members.forEach(m => { %>
+            <li class="cx-team__member">
+              <img class="cx-team__thumb" loading="lazy" src="<%= m.photo %>" width="800" height="1000" alt="<%= alt(m) %>">
+              <div>
+                <h3 class="cx-team__name cx-team__name--s"><%= m.name %></h3>
+                <p class="cx-team__role"><%= m.role %></p>
+                <% if (m.note) { %><p class="cx-team__note"><%= m.note %></p><% } %>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <% if (teamShell.location) { %><p class="cx-team__location"><%= teamShell.location %></p><% } %>
+    </section>
+
     <%# FAQ — the page's own questions (M2); data-faq-q/a feed the FAQPage schema like on the service pages. %>
     <section class="cx-section cx-faq" id="faq" data-v2-section>
       <header class="cx-head">
@@ -240,7 +260,6 @@
       <p class="cx-cta__body"><%= c.cta.body %></p>
       <div class="cx-btn cx-btn--light"><%- localHtml(btn(c.cta.button)) %></div>
       <%- include('layout/v2/cta-note.ejs') %>
-      <%- include('layout/v2/team.ejs', { teamDach: typeof teamDach === 'undefined' ? true : teamDach }) %>
     </section>
   </main>
 

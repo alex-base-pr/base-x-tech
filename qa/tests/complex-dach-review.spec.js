@@ -73,3 +73,40 @@ test('no fixed-price audit block on Complex (EN/DE/UK); still on Integrations an
     }
   }
 });
+
+// Team block (DACH review + owner 2026-09-30): before the FAQ, lead large + the others smaller, studio photos, no contacts.
+const TEAM = {
+  en: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development Manager', 'CBDO', 'Founder & CEO'], title: 'The team behind' },
+  de: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development Manager', 'CBDO', 'Gründer & CEO'], title: 'Das Team hinter' },
+  uk: { people: ['Вадим-Марко Груден', 'Софія Забродська', 'Олександр Руденко'], roles: ['CBDO', 'Менеджерка з розвитку бізнесу', 'Засновник і CEO'], title: 'Команда, яка стоїть' },
+};
+for (const [lang, path] of Object.entries(PAGES)) {
+  test(`${lang}: team block before the FAQ, ${TEAM[lang].people.length} people, ${TEAM[lang].people[0]} leads`, async ({ request }) => {
+    const { html } = await rawHtml(request, path);
+    const m = main(html);
+    const section = decode((m.match(/<section class="cx-section cx-team" id="team"[\s\S]*?<\/section>/) || [''])[0]);
+    expect(section, 'team section').not.toBe('');
+    expect(section).toContain(TEAM[lang].title);
+    expect(m.indexOf('id="team"')).toBeLessThan(m.indexOf('id="faq"'));
+    expect(m.indexOf('id="team"')).toBeGreaterThan(m.indexOf('id="process"'));
+    const people = [...section.matchAll(/<h3 class="cx-team__name[^"]*">([^<]+)<\/h3>\s*<p class="cx-team__role">([^<]+)<\/p>/g)].map((x) => [x[1], x[2]]);
+    expect(people.map((p) => p[0])).toEqual(TEAM[lang].people);
+    expect(people.map((p) => p[1])).toEqual(TEAM[lang].roles);
+    expect(section.match(/<article class="cx-team__lead">[\s\S]*?<\/article>/)[0]).toContain(TEAM[lang].people[0]);
+    const alts = [...section.matchAll(/<img[^>]+src="\/images\/v2\/team\/[a-z]+\.webp" width="800" height="1000" alt="([^"]+)"/g)].map((x) => x[1]);
+    expect(alts).toEqual(TEAM[lang].people.map((p, i) => `${p}, ${TEAM[lang].roles[i]}`)); // alt = "<Name>, <role>"
+    expect(section, 'Sofiia = first contact, proposals').toMatch(/First contact, proposals|Erster Kontakt, Angebote|Перший контакт, комерційні пропозиції/);
+    expect(section, 'no contact details').not.toMatch(/mailto:|tel:|calendly|@base-xtech/i);
+    expect(section, 'location line').toMatch(/Kyiv|Kyjiw|Києва/);
+    if (lang === 'uk') expect(html).not.toContain('Alexander Karl');
+    const cta = (m.match(/<section class="cx-cta"[\s\S]*?<\/section>/) || [''])[0];
+    expect(cta, 'no "Who you\'ll talk to" list in the closing CTA').not.toContain('v2-team');
+  });
+}
+
+test('FAQ "who will we talk to": Country Manager DACH on EN/DE, Vadym-Marko on UK', async ({ request }) => {
+  const faq = async (p) => decode(((await rawHtml(request, p)).html.match(/<p data-faq-a>([^<]*)<\/p>/) || [])[1]);
+  expect(await faq(PAGES.en)).toContain('Alexander Karl, our Country Manager DACH');
+  expect(await faq(PAGES.de)).toContain('Alexander Karl, unser Country Manager DACH');
+  expect(await faq(PAGES.uk)).toContain('Вадим-Марко Груден');
+});
