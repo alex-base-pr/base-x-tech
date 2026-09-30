@@ -241,5 +241,37 @@
       "note": "спілкування німецькою мовою"
     },
     "location": "Наша команда працює з Києва, Львова, Кракова та Іспанії, за центральноєвропейським часом (CET)."
+  },
+  "teamBlock": {
+    "_note": "Owner 2026-09-30: team block (layout/v2/team-block.ejs) on home and the six service pages, same cards as Complex; lead = Vadym Hula, Head of Delivery (Complex keeps its own c.team with Alexander Karl / UK Vadym-Marko). Location line: team.location.",
+    "label": "Ваша команда",
+    "title": "Команда, яка стоїть<br> <span class='accent'>за вашим проєктом</span>",
+    "lead": {
+      "name": "Вадим Гула",
+      "role": "Head of Delivery",
+      "note": "Веде ваш проєкт",
+      "photo": "/images/v2/team/vadym.webp",
+      "paragraphs": [
+        "Вадим веде ваш проєкт від старту робіт: планує його разом з вами, стежить, щоб команда трималася графіка, і є вашим щоденним контактом під час розробки. Перший контакт і комерційні пропозиції — Софія."
+      ]
+    },
+    "members": [
+      {
+        "name": "Софія Забродська",
+        "role": "Менеджерка з розвитку бізнесу та продажів",
+        "note": "Перший контакт, комерційні пропозиції",
+        "photo": "/images/v2/team/sofiia.webp"
+      },
+      {
+        "name": "Вадим-Марко Груден",
+        "role": "CBDO",
+        "photo": "/images/v2/team/marko.webp"
+      },
+      {
+        "name": "Олександр Руденко",
+        "role": "Засновник і CEO",
+        "photo": "/images/v2/team/alex.webp"
+      }
+    ]
   }
 }

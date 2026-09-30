@@ -242,5 +242,37 @@
     "focusLabel": "What we focus on",
     "servicesOf": "services",
     "byAuthor": "By"
+  },
+  "teamBlock": {
+    "_note": "Owner 2026-09-30: team block (layout/v2/team-block.ejs) on home and the six service pages, same cards as Complex; lead = Vadym Hula, Head of Delivery (Complex keeps its own c.team with Alexander Karl / UK Vadym-Marko). Location line: team.location.",
+    "label": "Your team",
+    "title": "The team behind <span class='accent'>your project</span>",
+    "lead": {
+      "name": "Vadym Hula",
+      "role": "Head of Delivery",
+      "note": "Runs your project",
+      "photo": "/images/v2/team/vadym.webp",
+      "paragraphs": [
+        "Vadym runs your project once work starts: he plans it with you, keeps the team on schedule and is your day-to-day contact during development. First contact and proposals: Sofiia."
+      ]
+    },
+    "members": [
+      {
+        "name": "Sofiia Zabrodska",
+        "role": "Business Development & Sales Manager",
+        "note": "First contact, proposals",
+        "photo": "/images/v2/team/sofiia.webp"
+      },
+      {
+        "name": "Vadym-Marko Hruden",
+        "role": "CBDO",
+        "photo": "/images/v2/team/marko.webp"
+      },
+      {
+        "name": "Oleksandr Rudenko",
+        "role": "Founder & CEO",
+        "photo": "/images/v2/team/alex.webp"
+      }
+    ]
   }
 }

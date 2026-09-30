@@ -1,0 +1,35 @@
+<%# Team block (owner 2026-09-30) for home and the service pages: the same cards as the Complex team (lead large,
+    the rest smaller), lead = Vadym Hula, Head of Delivery. Replaces the text-only "Who you'll talk to" list in the CTA.
+    Copy: content/pages/shell.<lang>.json → teamBlock; location line → team.location. Styles: src/styles/v2/_team-block.scss. %>
+<% const L = typeof lang !== 'undefined' ? lang : 'en'; const sh = content.shell[L] || content.shell.en; const tm = sh.teamBlock;
+   const alt = (p) => p.name + ', ' + p.role; %>
+<section class="v2-section v2-light cx-team v2-teamsec" id="team" data-v2-section aria-labelledby="v2-teamsec-title">
+  <div class="v2-faq__head">
+    <p class="v2-tag v2-tag--light"><%= tm.label %></p>
+    <h2 class="v2-h-m" id="v2-teamsec-title"><%- tm.title %></h2>
+  </div>
+  <div class="cx-team__grid">
+    <article class="cx-team__lead">
+      <figure class="cx-team__photo"><img loading="lazy" src="<%= tm.lead.photo %>" width="800" height="1000" alt="<%= alt(tm.lead) %>"></figure>
+      <div class="cx-team__body">
+        <h3 class="cx-team__name"><%= tm.lead.name %></h3>
+        <p class="cx-team__role"><%= tm.lead.role %></p>
+        <% if (tm.lead.note) { %><p class="cx-team__note"><%= tm.lead.note %></p><% } %>
+        <div class="cx-team__text"><% tm.lead.paragraphs.forEach(p => { %><p><%= p %></p><% }) %></div>
+      </div>
+    </article>
+    <ul class="cx-team__members">
+      <% tm.members.forEach(m => { %>
+        <li class="cx-team__member">
+          <img class="cx-team__thumb" loading="lazy" src="<%= m.photo %>" width="800" height="1000" alt="<%= alt(m) %>">
+          <div>
+            <h3 class="cx-team__name cx-team__name--s"><%= m.name %></h3>
+            <p class="cx-team__role"><%= m.role %></p>
+            <% if (m.note) { %><p class="cx-team__note"><%= m.note %></p><% } %>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+  <% if (sh.team && sh.team.location) { %><p class="cx-team__location"><%= sh.team.location %></p><% } %>
+</section>

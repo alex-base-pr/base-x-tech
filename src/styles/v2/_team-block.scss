@@ -1,0 +1,63 @@
+// Team cards (lead large, the rest smaller): Complex (body.cx-page, own section) and layout/v2/team-block.ejs on home and
+// the service pages (owner 2026-09-30). Moved from _complex-v2.scss; the --cx-* tokens are set here so the cards look
+// the same outside Complex.
+
+$bp: 1024px;
+@mixin desk { @media (min-width: $bp) { @content; } }
+@mixin tab { @media (min-width: 700px) { @content; } }
+
+body.v2 .cx-team {
+  --cx-ink: #2a2a2c;
+  --cx-soft: #5e5e5e;
+  --cx-grey-1: #f0f0f0;
+  --cx-line: #dcdcdc;
+  --cx-head: 'Onest', 'TWKEverettV2', system-ui, sans-serif;
+  --cx-body: 'TWKEverettV2', system-ui, sans-serif;
+
+  .cx-team__grid { display: grid; gap: 16px; max-width: 1316px; margin: 0 auto;
+    @include desk { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  }
+  .cx-team__lead, .cx-team__member { overflow: hidden; border: 1px solid var(--cx-line); border-radius: 20px; background: #fff; }
+  .cx-team__lead { display: grid; align-content: start;
+    @include tab { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-content: stretch; }
+  }
+  .cx-team__photo { margin: 0; min-height: 0;
+    img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 5; max-height: 420px; object-fit: cover; object-position: 50% 15%;
+      @include tab { max-height: none; min-height: 375px; }
+    }
+  }
+  .cx-team__body { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 24px 20px 28px;
+    @include tab { padding: 32px 32px 32px 36px; }
+  }
+  .cx-team__name { font-family: var(--cx-head); font-size: 28px; line-height: 1.1; letter-spacing: -.02em; color: var(--cx-ink);
+    &--s { font-size: 20px; }
+  }
+  .cx-team__role { font-family: var(--cx-body); font-size: 15px; line-height: 1.3; color: var(--cx-soft); }
+  .cx-team__note { display: inline-block; margin-top: 2px; padding: 4px 10px; border-radius: 999px; background: var(--cx-grey-1); font-family: var(--cx-body); font-size: 13px; line-height: 1.3; color: var(--cx-ink); }
+  .cx-team__text { margin-top: 10px; display: grid; gap: 1em;
+    p { font-size: 18px; line-height: 1.35; letter-spacing: -.02em; color: var(--cx-ink); }
+  }
+  .cx-team__bio { font-family: var(--cx-body); font-size: 15px; line-height: 1.45; color: #4a4a4a; }
+  .cx-team__inperson { font-family: var(--cx-body); font-size: 15px; line-height: 1.45; font-weight: 500; color: var(--cx-ink); }
+
+  .cx-team__members { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none;
+    @include desk { gap: 20px; grid-auto-rows: 1fr; }
+  }
+  .cx-team__member { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: center;
+    @include desk { grid-template-columns: 128px minmax(0, 1fr); }
+    > div { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; padding: 16px 20px; }
+  }
+  .cx-team__thumb { display: block; align-self: stretch; width: 100%; height: 100%; min-height: 140px; object-fit: cover; object-position: 50% 15%;
+    @include desk { min-height: 160px; }
+  }
+  .cx-team__location { max-width: 1316px; margin: 24px auto 0; text-align: center; font-family: var(--cx-body); font-size: 14px; line-height: 1.4; color: var(--cx-soft); }
+}
+
+// home / service pages: v2 section with the FAQ-style head (tag + title), heading above the cards.
+body.v2 .v2-teamsec {
+  display: grid; gap: 2rem; border-top: 1px solid var(--v2-line-dark);
+  @include desk { padding-top: 3rem; gap: 3rem; }
+  .v2-faq__head .v2-h-m { margin-top: 1.25rem; }
+  .cx-team__grid, .cx-team__location { width: 100%; }
+  .cx-team__location { margin-top: 0; }
+}

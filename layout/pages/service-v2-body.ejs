@@ -141,6 +141,8 @@
 
     <% if (c.offer) { %><%- include('layout/v2/offer.ejs', { offer: c.offer }) %><% } %>
 
+    <%- include('layout/v2/team-block.ejs') %>
+
     <section class="v2-section v2-light v2-faq" data-v2-section>
       <div class="v2-faq__head">
         <p class="v2-tag v2-tag--light"><%= c.faq.label %></p>
@@ -173,7 +175,6 @@
         <%- include('layout/v2/button.ejs', { text: c.cta.button }) %>
         <%- include('layout/v2/cta-note.ejs') %>
       </div>
-      <%- include('layout/v2/team.ejs') %>
     </section>
   </main>
 

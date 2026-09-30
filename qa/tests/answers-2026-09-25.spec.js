@@ -43,9 +43,15 @@ test('A1: company line in the footer; controller named in the privacy policy', a
   expect((await rawHtml(request, '/pages/privacy-policy/')).html).toContain('Registered in England and Wales, company number 16134538'); // controller block (legal entity, 2026-09-25)
 });
 
-test('A2: "Who you\'ll talk to" names the team; on Complex the team block replaces it, Alexander Karl first', async ({ request }) => {
-  const names = (html) => [...(html.match(/<aside class="v2-team"[\s\S]*?<\/aside>/) || [''])[0].matchAll(/<strong>([^<]+)<\/strong>/g)].map((m) => m[1]);
-  expect(names((await rawHtml(request, '/pages/shopify-development/')).html)).toEqual(['Sofiia Zabrodska', 'Vadym-Marko Hruden']);
+test('A2: team block with photos; Vadym Hula leads on home and services, Alexander Karl on Complex', async ({ request }) => {
+  // Owner 2026-09-30: the team block (layout/v2/team-block.ejs) replaces the text-only list in the closing CTA.
+  const lead = (html) => (html.match(/<section class="v2-section v2-light cx-team v2-teamsec"[\s\S]*?<h3 class="cx-team__name">([^<]+)<\/h3>/) || [])[1];
+  for (const [p, name] of [['/', 'Vadym Hula'], ['/pages/shopify-development/', 'Vadym Hula'], ['/de/pages/service/custom-shopify-integrations/', 'Vadym Hula'], ['/uk/pages/service/shopify-migration-service/', 'Вадим Гула']]) {
+    const { html } = await rawHtml(request, p);
+    expect(lead(html), p).toBe(name);
+    expect(html, p).toContain('/images/v2/team/vadym.webp');
+    expect(html, p).not.toContain('<aside class="v2-team"');
+  }
   for (const p of ['/pages/complex-solutions/', '/de/pages/complex-solutions/']) { // DACH review 2026-09-30: team block (#team), no aside in the CTA
     const { html } = await rawHtml(request, p);
     expect(html, p).not.toContain('<aside class="v2-team"');
