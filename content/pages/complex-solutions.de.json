@@ -31,6 +31,32 @@
       "Pipedrive"
     ]
   },
+  "useCases": {
+    "label": "Kommt Ihnen das bekannt vor?",
+    "title": "Typische Ausgangslagen, mit denen<br> <span class='accent'>Händler zu uns kommen</span>",
+    "cards": [
+      {
+        "title": "Shopify ist Ihr wichtigster Vertriebskanal",
+        "description": "Ihr Onlineshop läuft auf Shopify und trägt das Geschäft. Alles drumherum muss mithalten: Bestände, Preise, Bestellungen und Kundendaten."
+      },
+      {
+        "title": "Mehrere Systeme müssen zusammenarbeiten",
+        "description": "ERP, Kassensystem, PIM, Lager und CRM halten jeweils einen Teil der Daten. Bestellungen, Bestände und Kundendaten laufen auseinander – mit Verzögerungen und Handarbeit als Folge."
+      },
+      {
+        "title": "Keine Standardsoftware passt",
+        "description": "Die Art, wie Ihr Unternehmen arbeitet, ist zu speziell, als dass ein Standard-Konnektor oder eine Shopify-App sie sauber abbilden könnte."
+      },
+      {
+        "title": "Viel manueller Aufwand",
+        "description": "Ihr Team überträgt Daten, pflegt Bestände oder erledigt Routineabläufe von Hand, weil die Systeme hinter dem Geschäft nicht miteinander verbunden sind."
+      },
+      {
+        "title": "Eine über Jahre gewachsene Architektur",
+        "description": "Systeme, Plugins und Übergangslösungen sind nach und nach dazugekommen. Jede Änderung fühlt sich riskant an, und den Gesamtüberblick hat niemand mehr."
+      }
+    ]
+  },
   "partner": {
     "label": "Persönlicher Ansprechpartner im DACH-Raum",
     "paragraphs": [
@@ -112,24 +138,6 @@
         "Mengen pro Filiale"
       ]
     }
-  },
-  "help": {
-    "label": "Wann wir helfen können",
-    "title": "Wenn Standardlösungen<br class='br-desk'> nicht mehr <span class='accent'>ausreichen.</span>",
-    "cards": [
-      {
-        "title": "Ihre Systeme laufen auseinander",
-        "description": "Bestellungen, Bestände oder Kundendaten liegen in verschiedenen Systemen – mit Inkonsistenzen, Verzögerungen und Handarbeit als Folge."
-      },
-      {
-        "title": "Ihr Ablauf passt in keine fertige App",
-        "description": "Die Art, wie Ihr Unternehmen arbeitet, ist zu speziell, als dass ein Standard-Konnektor oder eine Shopify-App sie sauber abbilden könnte."
-      },
-      {
-        "title": "Handarbeit wird zum Teil des Systems",
-        "description": "Ihr Team überträgt Daten, pflegt Bestände oder erledigt Routineabläufe von Hand, weil die Systeme hinter dem Geschäft nicht miteinander verbunden sind."
-      }
-    ]
   },
   "case": {
     "label": "In der Praxis bewährt",

@@ -20,3 +20,16 @@ for (const [lang, path] of Object.entries(PAGES)) {
     expect(body.split('class="cx-btn')[1] || '').toContain('class="v2-cta-note"');
   });
 }
+
+for (const [lang, path] of Object.entries(PAGES)) {
+  test(`${lang}: "typical situations" with 5 cards is the 2nd section`, async ({ request }) => {
+    const { html } = await rawHtml(request, path);
+    const ids = [...main(html).matchAll(/<section class="[^"]*"(?: id="([^"]*)")?/g)].map((m) => m[1] || '(hero)');
+    expect(ids.slice(0, 2)).toEqual(['(hero)', 'typical-situations']);
+    const section = (html.match(/<section[^>]+id="typical-situations"[\s\S]*?<\/section>/) || [''])[0];
+    const cards = [...section.matchAll(/<li class="cx-card">\s*<h3[^>]*>([^<]+)<\/h3>\s*<p>[^<]{20,}<\/p>/g)].map((m) => decode(m[1]));
+    expect(cards).toEqual(copy(lang).useCases.cards.map((c) => c.title));
+    expect(cards).toHaveLength(5);
+    expect(html, 'old "When we can help" section is gone').not.toContain('id="when-we-can-help"');
+  });
+}

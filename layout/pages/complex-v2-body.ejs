@@ -39,6 +39,24 @@
       </div>
     </section>
 
+    <%# Typical situations (DACH review 2026-09-30): second section, five text cards. Replaces "When we can help",
+        whose three cards live on here as (b)–(d). %>
+    <section class="cx-section cx-cases" id="typical-situations" data-v2-section>
+      <header class="cx-head">
+        <p class="cx-label"><%= c.useCases.label %></p>
+        <h2 class="cx-h2"><%- localHtml(c.useCases.title) %></h2>
+      </header>
+      <ul class="cx-cases__grid">
+        <% c.useCases.cards.forEach(card => { %>
+          <li class="cx-card">
+            <h3 class="cx-h3 cx-h3--s"><%= card.title %></h3>
+            <p><%= card.description %></p>
+          </li>
+        <% }) %>
+      </ul>
+      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
+    </section>
+
     <%# Partner block (REQ-013/016/017/018; M1/M5/K2 2026-09-25): photo approved by the owner 2026-09-25
         (public/images/v2/alexander-karl.webp) — no quote, no placeholder, no email/phone/calendar. Without c.partner.photo the block is text-only. LinkedIn only if c.partner.linkedin is set. %>
     <section class="cx-section cx-partner<%= c.partner.photo ? '' : ' cx-partner--text' %>" id="local-expertise" data-v2-section>
@@ -184,23 +202,6 @@
           </g>
         </svg>
       </figure>
-    </section>
-
-    <%# When we can help %>
-    <section class="cx-section cx-help" id="when-we-can-help" data-v2-section>
-      <header class="cx-head">
-        <p class="cx-label"><%= c.help.label %></p>
-        <h2 class="cx-h2"><%- localHtml(c.help.title) %></h2>
-      </header>
-      <ul class="cx-help__grid">
-        <% c.help.cards.forEach(card => { %>
-          <li class="cx-card">
-            <h3 class="cx-h3 cx-h3--s"><%= card.title %></h3>
-            <p><%= card.description %></p>
-          </li>
-        <% }) %>
-      </ul>
-      <div class="cx-btn cx-btn--dark"><%- localHtml(btn(c.hero.button)) %></div>
     </section>
 
     <%# Case (A49, 2026-09-25): Marko's case copy from Figma. End client named with permission (owner, 2026-09-25). %>

@@ -31,6 +31,32 @@
       "Pipedrive"
     ]
   },
+  "useCases": {
+    "label": "Sound familiar?",
+    "title": "Typical situations brands<br> <span class='accent'>come to us with</span>",
+    "cards": [
+      {
+        "title": "Shopify is your main sales channel",
+        "description": "Your online store runs on Shopify and carries the business. Everything around it has to keep up: stock, prices, orders and customer data."
+      },
+      {
+        "title": "Several systems have to work together",
+        "description": "ERP, POS, PIM, warehouse and CRM each hold part of the data. Orders, stock and customer records drift apart, with delays and manual fixes as the result."
+      },
+      {
+        "title": "No standard software fits",
+        "description": "The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly."
+      },
+      {
+        "title": "A lot of manual work",
+        "description": "Your team moves data, updates stock or handles routine processes by hand, because the systems behind the business aren’t connected."
+      },
+      {
+        "title": "An architecture that has grown over years",
+        "description": "Systems, plugins and workarounds were added one at a time. Every change feels risky, and nobody has the full picture any more."
+      }
+    ]
+  },
   "partner": {
     "label": "Your contact in the DACH region",
     "paragraphs": [
@@ -112,24 +138,6 @@
         "per store"
       ]
     }
-  },
-  "help": {
-    "label": "When We Can Help",
-    "title": "When standard solutions<br class='br-desk'> stop being <span class='accent'>enough.</span>",
-    "cards": [
-      {
-        "title": "Your systems don’t stay in sync",
-        "description": "Orders, inventory or customer data live across different systems, creating inconsistencies, delays and manual work."
-      },
-      {
-        "title": "Your workflow doesn’t fit an existing app",
-        "description": "The way your business operates is too specific for an off-the-shelf connector or Shopify app to handle properly."
-      },
-      {
-        "title": "Manual work is becoming part of the system",
-        "description": "Your team is moving data, updating stock or handling routine processes by hand because the systems behind the business aren’t connected."
-      }
-    ]
   },
   "case": {
     "label": "Proven in practice",
