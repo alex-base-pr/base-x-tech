@@ -19,9 +19,15 @@ RewriteRule ^(?:.+/)?index/?$ /%1 [L,R=301]
 
 # /404/ is only the error document, never a page of its own: answer 404 (serves /404.html via ErrorDocument)
 RewriteCond %{ENV:REDIRECT_STATUS} !^[45][0-9][0-9]$
-RewriteRule ^404(?:\.html|/)?$ - [R=404]
+RewriteRule ^(?:(?:uk|de)/)?404(?:\.html|/)?$ - [R=404]
 
-# /path/file.html → /path/file
+# /path/file.html → /path/file/ in one hop (Search Console 2026-09-30: .html URLs went .html → no .html → slash)
+RewriteCond %{ENV:REDIRECT_STATUS} !^[45][0-9][0-9]$
+RewriteCond %{THE_REQUEST} !\s/+blog(/|[\s?]) [NC]
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1/ [L,R=301]
+
+# blog (Ghost, proxied) keeps its own URLs: /blog/x.html → /blog/x
 RewriteCond %{ENV:REDIRECT_STATUS} !^[45][0-9][0-9]$
 RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [L,R=301]
