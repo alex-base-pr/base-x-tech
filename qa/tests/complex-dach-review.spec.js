@@ -76,9 +76,9 @@ test('no fixed-price audit block on Complex (EN/DE/UK); still on Integrations an
 
 // Team block (DACH review + owner 2026-09-30): before the FAQ, lead large + the others smaller, studio photos, no contacts.
 const TEAM = {
-  en: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development Manager', 'CBDO', 'Founder & CEO'], title: 'The team behind' },
-  de: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development Manager', 'CBDO', 'Gründer & CEO'], title: 'Das Team hinter' },
-  uk: { people: ['Вадим-Марко Груден', 'Софія Забродська', 'Олександр Руденко'], roles: ['CBDO', 'Менеджерка з розвитку бізнесу', 'Засновник і CEO'], title: 'Команда, яка стоїть' },
+  en: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development & Sales Manager', 'CBDO', 'Founder & CEO'], title: 'The team behind' },
+  de: { people: ['Alexander Karl', 'Sofiia Zabrodska', 'Vadym-Marko Hruden', 'Oleksandr Rudenko'], roles: ['Country Manager DACH', 'Business Development & Sales Manager', 'CBDO', 'Gründer & CEO'], title: 'Das Team hinter' },
+  uk: { people: ['Вадим-Марко Груден', 'Софія Забродська', 'Олександр Руденко'], roles: ['CBDO', 'Менеджерка з розвитку бізнесу та продажів', 'Засновник і CEO'], title: 'Команда, яка стоїть' },
 };
 for (const [lang, path] of Object.entries(PAGES)) {
   test(`${lang}: team block before the FAQ, ${TEAM[lang].people.length} people, ${TEAM[lang].people[0]} leads`, async ({ request }) => {
@@ -109,4 +109,7 @@ test('FAQ "who will we talk to": Country Manager DACH on EN/DE, Vadym-Marko on U
   expect(await faq(PAGES.en)).toContain('Alexander Karl, our Country Manager DACH');
   expect(await faq(PAGES.de)).toContain('Alexander Karl, unser Country Manager DACH');
   expect(await faq(PAGES.uk)).toContain('Вадим-Марко Груден');
+  // First contact is Sofiia everywhere; Vadym-Marko joins complex projects (owner 2026-09-30)
+  expect(await faq(PAGES.en)).toContain('Sofiia Zabrodska');
+  expect(await faq(PAGES.uk)).toMatch(/^Перший контакт і комерційні пропозиції — Софія Забродська/);
 });
