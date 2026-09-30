@@ -120,6 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.v2-header [data-form-trigger]')?.click();
       try { history.replaceState(null, '', location.pathname + location.search); } catch (err) { /* ignore */ }
     }
+    // GA4 funnel (contact-form review 2026-09-30): form_open → form_start (src/main.js) → generate_lead.
+    // Sent when the modal becomes active (main.js opens it; the click handlers run in either order).
+    let wasOpen = false;
+    new MutationObserver(() => {
+      const isOpen = modal.classList.contains('active');
+      if (isOpen && !wasOpen && typeof gtag === 'function') gtag('event', 'form_open', { page_path: location.pathname, trigger: ((lastTrigger && lastTrigger.textContent) || '').trim().slice(0, 40) });
+      wasOpen = isOpen;
+    }).observe(modal, { attributes: true, attributeFilter: ['class'] });
     new MutationObserver(() => {
       if (!modal.classList.contains('active') && lastTrigger && modal.contains(document.activeElement)) { lastTrigger.focus(); lastTrigger = null; }
     }).observe(modal, { attributes: true, attributeFilter: ['class'] });

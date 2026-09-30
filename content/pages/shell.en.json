@@ -97,7 +97,7 @@
     "title": "Let’s talk",
     "titleMuted": "about your project",
     "successTitle": "Thank you — your project details are with us.",
-    "successBefore": "We reply within 1 working day. If it’s urgent, write to",
+    "successBefore": "Sofiia will reply within 1 working day with times for a free 30-minute call. If it’s urgent, write to",
     "closeButton": "Close",
     "errorTitle": "Sorry, the form didn’t send.",
     "errorBefore": "Please try again, or email your project details to",
@@ -108,8 +108,8 @@
     "emailPlaceholder": "name@company.com*",
     "phoneLabel": "Phone (optional)",
     "phonePlaceholder": "Phone (optional)",
-    "companyLabel": "Company or store URL (optional)",
-    "companyPlaceholder": "Company or store URL",
+    "companyLabel": "Website or store URL (optional)",
+    "companyPlaceholder": "Website or store URL",
     "serviceLabel": "What do you need help with?",
     "services": [
       {
@@ -145,8 +145,7 @@
         "label": "Not sure yet"
       }
     ],
-    "sourceLabel": "How did you find us?",
-    "sourcePlaceholder": "Select (optional)",
+    "sourceLabel": "One quick question: how did you find us?",
     "sources": [
       {
         "value": "Google",
@@ -207,11 +206,14 @@
       }
     ],
     "messageLabel": "Tell us about the project",
-    "messagePlaceholder": "What are you building, changing, or trying to solve?",
+    "messagePlaceholder": "Your platform, the systems involved and any deadline, e.g. Shopware → Shopify with Xentral, live by March.",
     "submit": "Send project details",
     "promise": "We reply within 1 working day.",
     "note": "We use your details only to reply to this request.",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+    "sourceOptional": "(optional)",
+    "sourceThanks": "Thank you!",
+    "_review": "Contact-form review 2026-09-30: company field = website/store URL (name stays `company`); source question moved to the success state (#source-form)."
   },
   "team": {
     "_note": "A2 (proposal): text-only 'Who you'll talk to' block (layout/v2/team.ejs). `dach` is listed first on Complex pages only.",

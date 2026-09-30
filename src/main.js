@@ -301,12 +301,33 @@ const TRACKED_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content
 function readFirstTouch() {
   try { return JSON.parse(sessionStorage.getItem(FIRST_TOUCH_KEY) || 'null'); } catch (e) { return null; }
 }
+// Campaign history (localStorage, 90 days, last 10): every visit that arrives with a campaign (utm_source, gclid or
+// fbclid) is appended, so a lead that comes back days later, from another tab or another campaign, still carries
+// every campaign that brought them (owner 2026-09-30: UTMs must always reach the lead, keep the history).
+// The same campaign again (same utm_source/medium/campaign/content/term and click id) only refreshes its date.
+const CAMPAIGN_KEY = 'bxt_campaigns';
+const CAMPAIGN_TTL = 90 * 24 * 3600 * 1000;
+const CAMPAIGN_MAX = 10;
+function readCampaigns() {
+  try {
+    const list = JSON.parse(localStorage.getItem(CAMPAIGN_KEY) || '[]');
+    return Array.isArray(list) ? list.filter((c) => c && c.utm && Date.now() - c.at < CAMPAIGN_TTL) : [];
+  } catch (e) { return []; }
+}
 (function captureFirstTouch() {
+  const params = new URLSearchParams(window.location.search);
+  const utm = {};
+  TRACKED_PARAMS.forEach((p) => { if (params.has(p)) utm[p] = params.get(p); });
+  try {
+    if (utm.utm_source || utm.gclid || utm.fbclid) { // utm_content alone on an internal link is not a campaign
+      const key = JSON.stringify(utm);
+      const list = readCampaigns().filter((c) => JSON.stringify(c.utm) !== key);
+      list.push({ utm, landing: window.location.pathname + window.location.search, referrer: document.referrer || '', at: Date.now() });
+      localStorage.setItem(CAMPAIGN_KEY, JSON.stringify(list.slice(-CAMPAIGN_MAX)));
+    }
+  } catch (e) { /* storage blocked */ }
   try {
     if (sessionStorage.getItem(FIRST_TOUCH_KEY)) return;
-    const params = new URLSearchParams(window.location.search);
-    const utm = {};
-    TRACKED_PARAMS.forEach((p) => { if (params.has(p)) utm[p] = params.get(p); });
     sessionStorage.setItem(FIRST_TOUCH_KEY, JSON.stringify({
       landing: window.location.pathname + window.location.search,
       referrer: document.referrer || '',
@@ -319,7 +340,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('task-form');
   const successMsg = document.getElementById('success-msg');
   const errorMsg = document.getElementById('error-msg'); // design-v2 modal only
+  const sourceForm = document.getElementById('source-form'); // design-v2 success state: "How did you find us?"
   if (!form) return;
+  let lastLead = null; // for the follow-up source task
+
+  // GA4: first interaction with the form (form_open is sent from src/v2.js).
+  let started = false;
+  form.addEventListener('focusin', () => {
+      if (started) return;
+      started = true;
+      if (typeof gtag === 'function') gtag('event', 'form_start', { page_path: window.location.pathname });
+  });
+
+  // Owner 2026-09-30: the source question is a second, separate ClickUp task sent after the lead
+  // ("Source: … - <email>"), matched to the lead by email and time. Later: write it into the lead itself.
+  sourceForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const value = e.submitter?.value;
+      if (!value) return;
+      sourceForm.querySelectorAll('button').forEach((b) => { b.disabled = true; b.classList.toggle('is-picked', b === e.submitter); });
+      const thanks = sourceForm.querySelector('.v2-source__thanks');
+      if (thanks) thanks.hidden = false;
+      if (typeof gtag === 'function') gtag('event', 'lead_source', { source: value });
+      const lead = lastLead || {};
+      const taskData = {
+          name: `${getCurrentDateTime()} - ${lead.email || 'No Email'} - Source: ${value}`,
+          description: [
+              `Source (answer after the lead): ${value}`,
+              formatToDescription('Lead email', lead.email),
+              formatToDescription('Lead name', lead.name),
+              formatToDescription('Lead sent', lead.time),
+              formatToDescription('Lead UTM', lead.utm),
+              formatToDescription('Page', window.location.pathname),
+          ].filter(Boolean).join('\n'),
+      };
+      if (__DEPLOY_ENV__ === 'dev') { console.info('[dev] source answer not sent', taskData); return; }
+      try {
+          await fetch('https://clickup.base-xtech.com', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(taskData) });
+      } catch (err) { console.error('Source answer not sent:', err); }
+  });
 
   document.querySelector('[data-form-retry]')?.addEventListener('click', () => {
       errorMsg.classList.remove('error');
@@ -357,6 +416,26 @@ document.addEventListener('DOMContentLoaded', () => {
       return '\n\nURL Parameters:\n' + entries.map(([key, value]) => `${key}: ${value}`).join('\n');
   }
 
+  // Approximate location for the lead (contact-form review 2026-09-30): country from Cloudflare's /cdn-cgi/trace
+  // (same origin on prod and dev, derived from the IP address, no browser prompt) plus the browser time zone.
+  // Never blocks the send: 1.5 s timeout, empty on localhost or any error.
+  async function getApproxLocation() {
+      let tz = '';
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) { /* old browser */ }
+      let country = '';
+      try {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 1500);
+          const res = await fetch('/cdn-cgi/trace', { signal: ctrl.signal, cache: 'no-store' });
+          clearTimeout(timer);
+          const code = res.ok ? ((await res.text()).match(/^loc=([A-Z]{2})$/m) || [])[1] : '';
+          if (code && code !== 'XX' && code !== 'T1') {
+              try { country = new Intl.DisplayNames(['en'], { type: 'region' }).of(code) || code; } catch (e) { country = code; }
+          }
+      } catch (e) { /* not behind Cloudflare (localhost) or blocked */ }
+      return { country, tz };
+  }
+
   function getCurrentDateTime() {
       const now = new Date();
       const year = now.getFullYear();
@@ -385,28 +464,48 @@ document.addEventListener('DOMContentLoaded', () => {
       const tellUsMore = formData.get('tell_us_more') || '';
       const firstTouch = readFirstTouch();
       const firstUtm = firstTouch && firstTouch.utm ? Object.entries(firstTouch.utm).map(([k, v]) => `${k}=${v}`).join(', ') : '';
+      const utmText = (u) => Object.entries(u).map(([k, v]) => `${k}=${v}`).join(', ');
+      const campaigns = readCampaigns();
+      const campaign = campaigns[campaigns.length - 1] || null; // the latest campaign
+      const campaignUtm = campaign ? utmText(campaign.utm) : '';
+      const campaignHistory = campaigns.length > 1 || (campaign && campaignUtm !== firstUtm)
+          ? 'Campaign history (oldest first):\n' + campaigns.map((c) => `- ${new Date(c.at).toISOString().slice(0, 16).replace('T', ' ')} UTC · ${utmText(c.utm)} · landed ${c.landing}${c.referrer ? ' · from ' + c.referrer : ''}`).join('\n')
+          : '';
       let sent = false;
 
       const currentDateTime = getCurrentDateTime();
-      const taskName = `${currentDateTime} - ${email || 'No Email'} - ${name || 'No Name'}`;
+      const siteLang = (document.documentElement.lang || document.body.lang || 'en').slice(0, 2).toUpperCase();
+      const loc = await getApproxLocation();
+      const locationText = [loc.country, loc.tz].filter(Boolean).join(', ');
+      // One-line summary for sales triage, also appended to the task name: DE · service · budget · website · country
+      const anyUtm = { ...(campaign ? campaign.utm : {}), ...getUrlParams(), ...(firstTouch && firstTouch.utm ? firstTouch.utm : {}) };
+      const utmTag = anyUtm.utm_source ? `utm: ${anyUtm.utm_source}${anyUtm.utm_campaign ? '/' + anyUtm.utm_campaign : ''}` : (anyUtm.gclid ? 'utm: google ads (gclid)' : '');
+      const summary = [siteLang, service, budget, company, loc.country, utmTag].filter(Boolean).join(' · ');
+      const taskName = `${currentDateTime} - ${email || 'No Email'} - ${name || 'No Name'}` + (summary ? ` · ${summary}` : '');
 
       const browserLanguage = navigator.language || navigator.languages[0] || 'unknown';
 
       const descriptionParts = [
+          summary,
+          '',
           formatToDescription('Name', name),
           formatToDescription('Email', email),
           formatToDescription('Phone', phone),
-          formatToDescription('Company', company),
+          formatToDescription(sourceForm ? 'Website / company' : 'Company', company),
           formatToDescription('Service required', service),
           formatToDescription('Budget', budget),
           formatToDescription('Source', source),
-          formatToDescription('lang', browserLanguage),
+          formatToDescription('Site language', siteLang),
+          formatToDescription('Location (approx.)', locationText),
+          formatToDescription('Browser language', browserLanguage),
           formatToDescription('Page', window.location.pathname),
           firstTouch ? formatToDescription('First landing page', firstTouch.landing) : '',
           firstTouch ? formatToDescription('First referrer', firstTouch.referrer || '(direct)') : '',
           formatToDescription('First-touch UTM', firstUtm),
+          campaign && campaignUtm !== firstUtm ? formatToDescription('Last campaign UTM', campaignUtm) : '',
+          campaignHistory,
           tellUsMore ? `Tell us more:\n${tellUsMore}` : ''
-      ].filter(Boolean);
+      ].filter((part, i) => part || (i === 1 && summary));
 
       let description = descriptionParts.join('\n');
 
@@ -420,6 +519,8 @@ document.addEventListener('DOMContentLoaded', () => {
           name: taskName,
           description: description
       };
+
+      lastLead = { email, name, time: currentDateTime, utm: firstUtm || campaignUtm };
 
       if (!email || !name) {
           console.error('Error: Email and Name are required');

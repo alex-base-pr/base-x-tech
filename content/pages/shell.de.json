@@ -99,7 +99,7 @@
     "title": "Lassen Sie uns",
     "titleMuted": "über Ihr Projekt sprechen",
     "successTitle": "Vielen Dank – Ihre Projektdetails sind bei uns.",
-    "successBefore": "Wir antworten innerhalb eines Werktages. In dringenden Fällen schreiben Sie uns an",
+    "successBefore": "Sofiia meldet sich innerhalb eines Werktages mit Terminvorschlägen für ein kostenloses 30-minütiges Gespräch. In dringenden Fällen schreiben Sie uns an",
     "closeButton": "Schließen",
     "errorTitle": "Das Formular konnte leider nicht gesendet werden.",
     "errorBefore": "Bitte versuchen Sie es erneut oder senden Sie Ihre Projektangaben per E-Mail an",
@@ -110,8 +110,8 @@
     "emailPlaceholder": "name@firma.de*",
     "phoneLabel": "Telefon (optional)",
     "phonePlaceholder": "Telefon (optional)",
-    "companyLabel": "Firma oder Shop-URL (optional)",
-    "companyPlaceholder": "Firma oder Shop-URL",
+    "companyLabel": "Website oder Shop-URL (optional)",
+    "companyPlaceholder": "Website oder Shop-URL",
     "serviceLabel": "Wobei können wir Sie unterstützen?",
     "services": [
       {
@@ -147,8 +147,7 @@
         "label": "Noch unklar"
       }
     ],
-    "sourceLabel": "Wie sind Sie auf uns aufmerksam geworden?",
-    "sourcePlaceholder": "Bitte wählen (optional)",
+    "sourceLabel": "Eine kurze Frage: Wie sind Sie auf uns aufmerksam geworden?",
     "sources": [
       {
         "value": "Google",
@@ -187,20 +186,20 @@
     "budgets": [
       {
         "value": "Up to €5k",
-        "label": "Bis 5.000 €",
+        "label": "bis 5 Tsd. €",
         "hideOnComplex": true
       },
       {
         "value": "€5–15k",
-        "label": "5.000–15.000 €"
+        "label": "5–15 Tsd. €"
       },
       {
         "value": "€15–40k",
-        "label": "15.000–40.000 €"
+        "label": "15–40 Tsd. €"
       },
       {
         "value": "€40k+",
-        "label": "Über 40.000 €"
+        "label": "über 40 Tsd. €"
       },
       {
         "value": "Not sure yet",
@@ -208,12 +207,15 @@
       }
     ],
     "messageLabel": "Erzählen Sie uns von Ihrem Projekt",
-    "messagePlaceholder": "Was möchten Sie aufbauen, verändern oder lösen?",
+    "messagePlaceholder": "Ihre Plattform, die beteiligten Systeme und ein Termin, z. B. Shopware → Shopify mit Xentral, live bis März.",
     "submit": "Projektangaben senden",
     "promise": "Wir antworten innerhalb eines Werktages.",
     "note": "Wir verwenden Ihre Angaben ausschließlich, um auf diese Anfrage zu antworten.",
     "privacy": "Datenschutzerklärung",
-    "privacyHref": "/de/datenschutz/"
+    "privacyHref": "/de/datenschutz/",
+    "sourceOptional": "(optional)",
+    "sourceThanks": "Vielen Dank!",
+    "_review": "Contact-form review 2026-09-30: company field = website/store URL (name stays `company`); source question moved to the success state (#source-form)."
   },
   "team": {
     "label": "Ihre Ansprechpartner",

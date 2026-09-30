@@ -14,14 +14,22 @@ body.v2 .v2-modal {
   .v2-modal__overlay { position: absolute; inset: 0; background: rgba(30, 32, 34, .7); opacity: 0; transition: opacity .3s; }
   &.active .v2-modal__overlay { opacity: 1; }
 
+  // Figma 825:33: 550 px sheet, 40 px sides, content centred vertically (auto margins = centred when it fits,
+  // top-aligned and scrollable when it doesn't). Figma 825:122 (mobile): a card 12 px from the edges, 24 px sides.
   .v2-modal__panel {
     position: absolute; top: 0; right: 0; bottom: 0;
-    width: min(550px, 100%); overflow-y: auto; overscroll-behavior: contain;
+    width: min(550px, 100%); box-sizing: border-box; overflow-y: auto; overscroll-behavior: contain;
     display: flex; flex-direction: column; gap: 40px;
     padding: 32px 40px; background: #040507; color: #fff;
     transform: translateX(100%); transition: transform .3s ease;
-    @media (max-width: $bp - 1) { padding: 24px 16px; gap: 28px; }
+    > * { flex-shrink: 0; }
+    > :first-child + * { margin-top: auto; } // the title (the close button is first)
+    > :last-child, > .v2-modal__state { margin-bottom: auto; }
+    @media (max-width: $bp - 1) { top: 12px; right: 12px; bottom: 12px; left: 12px; width: auto; padding: 40px 24px 32px; gap: 32px;
+      transform: translateY(24px); opacity: 0; transition: transform .3s ease, opacity .3s ease;
+    }
   }
+  @media (max-width: $bp - 1) { &.active .v2-modal__panel { opacity: 1; } }
   &.active .v2-modal__panel { transform: none; }
 
   .v2-modal__close {
@@ -37,10 +45,27 @@ body.v2 .v2-modal {
   }
 
   // result panels: hidden until main.js adds .success / .error
-  .v2-modal__state { display: none; flex-direction: column; gap: 16px; font-size: 16px; line-height: 1.29; color: #d1d1d1;
+  .v2-modal__state { display: none; height: auto; justify-content: flex-start; flex-direction: column; gap: 16px; // override legacy #success-msg (height 90%, space-between) font-size: 16px; line-height: 1.29; color: #d1d1d1;
     a { color: #fff; }
   }
   #success-msg.success, #error-msg.error { display: flex; }
+  #success-msg.v2-modal__state { height: auto; justify-content: flex-start; } // legacy #success-msg (height 90%, space-between) wins on specificity otherwise
+
+  // "How did you find us?" after sending (owner 2026-09-30): one click sends it as a second ClickUp task.
+  .v2-source { margin-top: 16px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, .14);
+    fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+    legend { padding: 0; margin-bottom: 16px; font-size: 16px; font-weight: 300; color: #fff; span { color: #a8a8a8; } }
+  }
+  .v2-source__chips { display: flex; flex-wrap: wrap; gap: 4px;
+    button { height: 36px; padding: 0 12px; border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; background: transparent; color: #fff;
+      font: 400 14px/1 'TWKEverettV2', sans-serif; cursor: pointer;
+      &:hover:not(:disabled), &:focus-visible { border-color: #fff; }
+      &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 2px; }
+      &:disabled { cursor: default; opacity: .45; }
+      &.is-picked { opacity: 1; background: var(--v2-accent); border-color: var(--v2-accent); color: var(--v2-on-accent); font-weight: 500; }
+    }
+  }
+  .v2-source__thanks { margin-top: 12px; color: #fff; }
   .v2-modal__state-title { color: #fff; font-size: 24px; font-weight: 500; line-height: 1.2; }
   .v2-modal__secondary {
     align-self: flex-start; margin-top: 8px; height: 42px; padding: 0 16px; border-radius: 4px; border: 0;
@@ -54,10 +79,10 @@ body.v2 .v2-form {
   &.unactive { opacity: .5; pointer-events: none; }
 
   .v2-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-    @media (max-width: 479px) { grid-template-columns: 1fr; }
+    @media (max-width: 479px) { grid-template-columns: 1fr; & + .v2-form__row { margin-top: -12px; } } // Figma mobile: 4 stacked inputs, 8 px apart
   }
   input[type=text], input[type=email], input[type=tel], select, textarea {
-    width: 100%; box-sizing: border-box; min-height: 44px; padding: 12px 20px;
+    width: 100%; box-sizing: border-box; min-height: 44px; margin: 0; padding: 12px 20px;
     border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px;
     background: transparent; color: #fff;
     font: 300 14px/1.29 'TWKEverettV2', sans-serif;
@@ -65,31 +90,34 @@ body.v2 .v2-form {
     &:focus { outline: none; border-color: #fff; }
     &:focus-visible { outline: 2px solid var(--v2-accent); outline-offset: 2px; box-shadow: 0 0 0 2px var(--v2-on-accent); }
   }
+  input[type=text], input[type=email], input[type=tel], select { height: 44px; }
   select {
-    appearance: none; cursor: pointer; padding-right: 44px;
+    appearance: none; cursor: pointer; padding-top: 0; padding-bottom: 0; padding-right: 44px; line-height: 42px;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5'%3E%3Cpath d='M0 0h8L4 5z' fill='%23fff'/%3E%3C/svg%3E") no-repeat right 20px center;
     option { color: #040507; }
   }
-  textarea { min-height: 90px; resize: vertical; }
+  textarea { height: 90px; min-height: 90px; resize: vertical; }
 
   .v2-form__field { display: flex; flex-direction: column; gap: 16px; border: 0; margin: 0; padding: 0; min-width: 0;
     > span, legend { font-size: 16px; font-weight: 300; color: #fff; padding: 0; }
     legend { margin-bottom: 16px; }
   }
-  .v2-form__budget div { display: flex; flex-wrap: wrap; gap: 4px; }
+  .v2-form__budget div { display: flex; flex-wrap: wrap; gap: 4px;
+    @media (max-width: 479px) { display: grid; grid-template-columns: 1fr 1fr; label:last-child:nth-child(odd) { grid-column: 1 / -1; } } // Figma mobile: 2 × 2
+  }
   .v2-form__budget label { position: relative; flex: 1 1 auto; }
   .v2-form__budget input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
   .v2-form__budget span {
-    display: flex; align-items: center; justify-content: center; height: 42px; padding: 0 16px;
-    border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; font-size: 14px; color: #d1d1d1; white-space: nowrap;
+    display: flex; align-items: center; justify-content: center; height: 42px; padding: 0 12px; box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, .3); border-radius: 4px; font-size: 14px; font-weight: 400; color: #fff; white-space: nowrap; cursor: pointer;
   }
   .v2-form__budget input:checked + span { background: var(--v2-accent); border-color: var(--v2-accent); color: var(--v2-on-accent); font-weight: 500; }
   .v2-form__budget input:focus-visible + span { outline: 2px solid #fff; outline-offset: 2px; }
 
   .v2-btn--wide { display: flex; width: 100%; border: 0; padding: 0; background: none; cursor: pointer; gap: 4px; margin-top: 12px; font: inherit;
-    .v2-btn__label { flex: 1; justify-content: center; }
+    .v2-btn__label { flex: 1; justify-content: flex-start; padding: 0 16px; font-size: 16px; font-weight: 500; } // Figma: label left, 500
   }
-  .v2-form__promise { margin: -8px 0 -10px; font-size: 14px; line-height: 1.4; color: #d1d1d1; text-align: center; } // A4
+  .v2-form__promise { margin: -8px 0 -12px; font-size: 13px; line-height: 1.4; color: #bdbdbd; } // A4
   .v2-form__note { font-size: 12px; line-height: 1.4; color: #a8a8a8; a { color: #fff; } }
 }
 

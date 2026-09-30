@@ -40,30 +40,71 @@ test('form: home keeps the first service option', async ({ page }) => {
   await expect(page.locator('#task-form select[name="service"]')).toHaveValue('Shopify Development');
 });
 
-test('form: the lead records page, first touch, UTM and source', async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 900 });
-  // Stub the ClickUp endpoint so a prod build can be submitted safely; a dev build logs the task instead.
-  let body = null;
+// Stub the ClickUp endpoint so a prod build can be submitted safely (never a real lead); a dev build sends nothing.
+async function stubClickUp(page) {
+  const bodies = [];
   await page.route(/clickup\.base-xtech\.com/, async (route) => {
-    body = JSON.parse(route.request().postData() || '{}');
+    bodies.push(JSON.parse(route.request().postData() || '{}'));
     await route.fulfill({ status: 200, contentType: 'application/json', body: '{"success":true}' });
   });
-  await page.goto('/?utm_source=newsletter&utm_campaign=autumn');
-  await page.goto('/pages/service/shopify-migration-service/');
+  return bodies;
+}
+
+test('form: the lead records page, first touch, UTM, summary; source is a second task after sending', async ({ page }) => {
+  test.skip(isDevTarget, 'dev build: the form never sends');
+  await page.setViewportSize({ width: 1440, height: 900 });
+  const bodies = await stubClickUp(page);
+  await page.goto('/?utm_source=newsletter&utm_campaign=autumn&gclid=abc123');
+  await page.goto('/de/pages/service/shopify-migration-service/');
   await openModal(page);
   await page.fill('#task-form input[name="name"]', 'QA Test');
   await page.fill('#task-form input[name="email"]', 'qa@example.com');
-  await page.selectOption('#task-form select[name="source"]', 'Clutch');
+  await page.fill('#task-form input[name="company"]', 'acme.de');
+  await expect(page.locator('#task-form select[name="source"]'), 'source question is not in the form').toHaveCount(0);
   await page.locator('#task-form button[type="submit"]').click();
   await expect(page.locator('#success-msg')).toHaveClass(/success/);
-  const description = body ? body.description : await page.evaluate(() => window.__lastLead || '');
-  if (!body) test.skip(!description, 'dev build: no request is sent');
-  expect(description).toContain('Service required: Shopify Migration');
-  expect(description).toContain('Source: Clutch');
-  expect(description).toContain('Page: /pages/service/shopify-migration-service/');
-  expect(description).toContain('First landing page: /?utm_source=newsletter&utm_campaign=autumn');
-  expect(description).toContain('First-touch UTM: utm_source=newsletter, utm_campaign=autumn');
-  expect(description).not.toContain('Budget:');
+  await expect.poll(() => bodies.length).toBe(1);
+  const lead = bodies[0];
+  expect(lead.name).toMatch(/ - qa@example\.com - QA Test · DE · Shopify Migration · acme\.de · .*utm: newsletter\/autumn$/);
+  expect(lead.description.split('\n')[0]).toMatch(/^DE · Shopify Migration · acme\.de/);
+  for (const line of ['Service required: Shopify Migration', 'Website / company: acme.de', 'Site language: DE', 'Location (approx.): ',
+    'Page: /de/pages/service/shopify-migration-service/', 'First landing page: /?utm_source=newsletter&utm_campaign=autumn&gclid=abc123',
+    'First-touch UTM: utm_source=newsletter, utm_campaign=autumn, gclid=abc123']) expect(lead.description).toContain(line);
+  expect(lead.description).not.toContain('Budget:');
+  expect(lead.description).not.toContain('Source:');
+  // the follow-up: one click in the success state sends a second task tied to the lead by email and time
+  await page.locator('#source-form button[value="Clutch"]').click();
+  await expect(page.locator('.v2-source__thanks')).toBeVisible();
+  await expect.poll(() => bodies.length).toBe(2);
+  expect(bodies[1].name).toMatch(/ - qa@example\.com - Source: Clutch$/);
+  expect(bodies[1].description).toContain('Lead UTM: utm_source=newsletter, utm_campaign=autumn, gclid=abc123');
+  await expect(page.locator('#source-form button[value="Google"]')).toBeDisabled();
+});
+
+test('form: campaign history — UTMs survive new tabs, a later campaign is the latest, both are in the lead', async ({ browser, baseURL }) => {
+  test.skip(isDevTarget, 'dev build: the form never sends');
+  const context = await browser.newContext({ baseURL, viewport: { width: 1440, height: 900 } });
+  for (const url of [
+    '/pages/service/custom-shopify-integrations/?utm_source=google&utm_medium=cpc&utm_campaign=xentral',
+    '/pages/service/shopify-migration-service/?utm_source=linkedin&utm_medium=social&utm_campaign=shopware', // comes back later from another campaign
+    '/pages/service/custom-shopify-integrations/?utm_content=nav', // internal utm_content only: not a campaign
+  ]) { const tab = await context.newPage(); await tab.goto(url); await tab.close(); }
+  const page = await context.newPage(); // new tab: sessionStorage is empty, the campaigns come from localStorage
+  const bodies = await stubClickUp(page);
+  await page.goto('/pages/complex-solutions/?utm_content=hero');
+  await openModal(page);
+  await page.fill('#task-form input[name="name"]', 'QA Test');
+  await page.fill('#task-form input[name="email"]', 'qa@example.com');
+  await page.locator('#task-form button[type="submit"]').click();
+  await expect.poll(() => bodies.length).toBe(1);
+  const d = bodies[0].description;
+  expect(d).toContain('First-touch UTM: utm_content=hero');
+  expect(d).toContain('Last campaign UTM: utm_source=linkedin, utm_medium=social, utm_campaign=shopware');
+  expect(d).toMatch(/Campaign history \(oldest first\):\n- \d{4}-\d{2}-\d{2} \d{2}:\d{2} UTC · utm_source=google, utm_medium=cpc, utm_campaign=xentral · landed \/pages\/service\/custom-shopify-integrations\/\?utm_source=google[^\n]*\n- [^\n]*utm_source=linkedin, utm_medium=social, utm_campaign=shopware · landed \/pages\/service\/shopify-migration-service\//);
+  expect(d).not.toMatch(/Campaign history[\s\S]*utm_content=nav/);
+  expect(d).toContain('URL Parameters:\nutm_content: hero');
+  expect(bodies[0].name).toContain('utm: linkedin/shopware');
+  await context.close();
 });
 
 for (const path of ['/', '/pages/service/custom-shopify-integrations/', '/de/pages/complex-solutions/', '/uk/']) {

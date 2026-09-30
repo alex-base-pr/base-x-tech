@@ -63,8 +63,8 @@ test('DE terms: no German terms page; English terms stay the only terms (no dupl
   expect(alternates(html).de, 'EN terms has no DE alternate').toBeUndefined();
 });
 
-test('DE form: EUR bands in German, "Bis 5.000 €" on service pages but not on Complex', async ({ request }) => {
-  const band = '<input type="radio" name="budget" value="Up to €5k"><span>Bis 5.000 €</span>';
+test('DE form: EUR bands in German, "bis 5 Tsd. €" on service pages but not on Complex', async ({ request }) => {
+  const band = '<input type="radio" name="budget" value="Up to €5k"><span>bis 5 Tsd. €</span>';
   for (const p of deV2.filter((x) => x.group === 'service' || x.group === 'home')) {
     const html = decode((await rawHtml(request, p.path)).html);
     expect(html, p.path).toContain(band);
@@ -72,7 +72,7 @@ test('DE form: EUR bands in German, "Bis 5.000 €" on service pages but not on 
     expect(html, p.path).toContain(shellDe.form.submit);
     expect(html, `${p.path}: no USD`).not.toMatch(/value="[^"]*\$/);
   }
-  expect(decode((await rawHtml(request, '/de/pages/complex-solutions/')).html)).not.toContain('Bis 5.000 €');
+  expect(decode((await rawHtml(request, '/de/pages/complex-solutions/')).html)).not.toContain('bis 5 Tsd. €');
 });
 
 test('DE form preselects the page service (lead value stays English)', async ({ page }) => {

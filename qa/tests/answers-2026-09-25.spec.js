@@ -21,7 +21,7 @@ test('A3: EUR budget bands on service pages; values stay English @cross', async 
 
 for (const [p, labels] of [
   ['/pages/complex-solutions/', ['€5–15k', '€15–40k', '€40k+', 'Not sure yet']],
-  ['/de/pages/complex-solutions/', ['5.000–15.000 €', '15.000–40.000 €', 'Über 40.000 €', 'Noch unklar']],
+  ['/de/pages/complex-solutions/', ['5–15 Tsd. €', '15–40 Tsd. €', 'über 40 Tsd. €', 'Noch unklar']], // short labels: one row (contact-form review 2026-09-30)
 ]) {
   test(`A3: no "Up to €5k" band on ${p} @cross`, async ({ page }) => {
     await page.goto(p);

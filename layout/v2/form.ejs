@@ -1,7 +1,9 @@
 <%# Design v2 contact modal (Figma "Modal-form" 825:33 / "Modal-mobile" 825:122).
     Field names and #task-form / #success-msg / .form-select are what src/main.js submits to ClickUp — keep them.
     Strings: content/pages/shell.<lang>.json (EN default). Option values stay English so every lead reads the same;
-    the service is pre-selected from <main data-service> (src/v2.js). Budget has no default (optional); bands are in EUR (A3). %>
+    the service is pre-selected from <main data-service> (src/v2.js). Budget has no default (optional); bands are in EUR (A3).
+    Contact-form review 2026-09-30 (docs/review/2026-09-30-contact-form.md): layout back to Figma sizes, company → website,
+    "How did you find us?" moved out of the form into #source-form in the success state (sent as a second ClickUp task). %>
 <% const L = typeof lang !== 'undefined' ? lang : 'en'; const sh = content.shell[L] || content.shell.en; const href = (u) => localHref(u, L); const f = sh.form;
    const complexPage = typeof cxPage !== 'undefined' && cxPage; // A3: no "Up to €5k" band on Complex pages %>
 <div class="v2-modal" role="dialog" aria-modal="true" aria-labelledby="v2-modal-title">
@@ -15,6 +17,16 @@
     <div id="success-msg" class="v2-modal__state" role="status">
       <p class="v2-modal__state-title"><%= f.successTitle %></p>
       <p><%= f.successBefore %> <a href="mailto:hello@base-xtech.com">hello@base-xtech.com</a>.</p>
+      <form id="source-form" class="v2-source">
+        <fieldset>
+          <legend><%= f.sourceLabel %> <span><%= f.sourceOptional %></span></legend>
+          <div class="v2-source__chips">
+            <% f.sources.forEach(o => { %><button type="submit" name="source" value="<%= o.value %>"><%= o.label %></button>
+            <% }) %>
+          </div>
+        </fieldset>
+        <p class="v2-source__thanks" role="status" hidden><%= f.sourceThanks %></p>
+      </form>
       <button type="button" class="v2-modal__secondary" data-form-close><%= f.closeButton %></button>
     </div>
     <div id="error-msg" class="v2-modal__state" role="alert">
@@ -30,7 +42,7 @@
       </div>
       <div class="v2-form__row">
         <label><span class="v2-sr"><%= f.phoneLabel %></span><input name="phone" type="tel" autocomplete="tel" placeholder="<%= f.phonePlaceholder %>"></label>
-        <label><span class="v2-sr"><%= f.companyLabel %></span><input name="company" type="text" autocomplete="organization" placeholder="<%= f.companyPlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.companyLabel %></span><input name="company" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="<%= f.companyPlaceholder %>"></label>
       </div>
       <label class="v2-form__field">
         <span><%= f.serviceLabel %></span>
@@ -48,15 +60,7 @@
       </fieldset>
       <label class="v2-form__field">
         <span><%= f.messageLabel %></span>
-        <textarea name="tell_us_more" rows="4" placeholder="<%= f.messagePlaceholder %>"></textarea>
-      </label>
-      <label class="v2-form__field">
-        <span><%= f.sourceLabel %></span>
-        <select name="source" class="v2-form__source">
-          <option value=""><%= f.sourcePlaceholder %></option>
-          <% f.sources.forEach(o => { %><option value="<%= o.value %>"><%= o.label %></option>
-          <% }) %>
-        </select>
+        <textarea name="tell_us_more" rows="3" placeholder="<%= f.messagePlaceholder %>"></textarea>
       </label>
       <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label"><%= f.submit %></span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
       <p class="v2-form__promise"><%= sh.ctaNote || f.promise %></p>
