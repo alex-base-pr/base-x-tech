@@ -44,3 +44,18 @@ for (const [lang, path] of Object.entries(PAGES)) {
     expect(fig, 'no case-specific labels').not.toMatch(/Mettler|Xentral|XML/);
   });
 }
+
+for (const [lang, path] of Object.entries(PAGES)) {
+  test(`${lang}: process steps sit in one row at 1440 (same top, left → right) and stack at 375`, async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto(path);
+    const boxes = async () => page.locator('.cx-process__card').evaluateAll((els) => els.map((el) => { const r = el.getBoundingClientRect(); return { top: Math.round(r.top), left: Math.round(r.left) }; }));
+    const wide = await boxes();
+    expect(wide).toHaveLength(4);
+    expect(new Set(wide.map((b) => b.top)).size, 'same top offset').toBe(1);
+    for (let i = 1; i < 4; i++) expect(wide[i].left).toBeGreaterThan(wide[i - 1].left);
+    await page.setViewportSize({ width: 375, height: 800 });
+    const narrow = await boxes();
+    for (let i = 1; i < 4; i++) expect(narrow[i].top).toBeGreaterThan(narrow[i - 1].top);
+  });
+}
