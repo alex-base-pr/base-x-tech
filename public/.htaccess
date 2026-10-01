@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Text files (llms.txt, llms-full.txt, robots.txt, sitemap.xml) are UTF-8: without a charset Safari shows them as Latin-1
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .txt .xml .html .json .webmanifest
+
 # Unknown URLs answer 404 with the 404 page. The REDIRECT_STATUS (4xx/5xx) conditions below keep the rewrite rules
 # away from Apache's internal ErrorDocument request, which otherwise got 301'd to /404/ and answered 200.
 ErrorDocument 404 /404.html

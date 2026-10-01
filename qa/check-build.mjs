@@ -40,6 +40,10 @@ for (const file of walk(dist)) {
   if (env === 'prod' && /data-env="dev"/.test(html)) fail(`prod: ${rel} was built with dev flags`);
 }
 
+// Text files are served as UTF-8 (llms.txt / robots.txt showed as Latin-1 in Safari without it, 2026-10-01)
+const htaccess = fs.existsSync(path.join(dist, '.htaccess')) ? fs.readFileSync(path.join(dist, '.htaccess'), 'utf8') : '';
+if (!/^AddDefaultCharset UTF-8\s*$/m.test(htaccess)) fail('.htaccess: AddDefaultCharset UTF-8 missing');
+
 if (failures.length) {
   console.error(`check-build (${env}): ${failures.length} problem(s)\n - ` + failures.join('\n - '));
   process.exit(1);
