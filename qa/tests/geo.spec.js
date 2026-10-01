@@ -97,11 +97,12 @@ test('T-045 agent discovery: /.well-known/ai-catalog.json and the WebMCP contact
   const res = await request.get('/.well-known/ai-catalog.json');
   expect(res.status()).toBe(200);
   const cat = await res.json();
-  expect(cat.specVersion).toBeTruthy();
-  expect(cat.host.url).toBe(host + '/');
+  expect(cat.specVersion).toBe('1.0');
+  expect(cat.host.displayName).toBe('Base X Tech');
   expect(cat.entries.length).toBeGreaterThanOrEqual(4);
   for (const e of cat.entries) {
-    expect(e.id).toMatch(/^urn:air:base-xtech\.com:[a-z-]+:[a-z-]+$/);
+    expect(e.identifier, 'ARD field is "identifier"').toMatch(/^urn:air:base-xtech\.com:[a-z-]+:[a-z-]+$/);
+    expect(e.id).toBeUndefined();
     expect(e.displayName && e.type && e.url).toBeTruthy();
     expect(e.representativeQueries.length).toBeGreaterThanOrEqual(2);
   }

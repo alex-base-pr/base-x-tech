@@ -130,22 +130,24 @@ fs.writeFileSync(path.join(dist, 'llms.txt'), llms);
 // the full text, the sitemap and the contact form (the WebMCP tool "open_project_inquiry" lives on every page).
 const domain = new URL(host).hostname;
 const aiCatalog = {
-  specVersion: '0.1',
-  host: { name: 'Base X Tech', url: `${host}/`, description: home.description, contact: `${host}/#contact` },
+  specVersion: '1.0',
+  host: { displayName: 'Base X Tech', identifier: `${host}/`, documentationUrl: `${host}/llms.txt` },
   entries: [
-    { id: `urn:air:${domain}:site:llms`, displayName: 'Base X Tech — site summary for AI (llms.txt)', type: 'text/plain', url: `${host}/llms.txt`,
+    { identifier: `urn:air:${domain}:site:llms`, displayName: 'Base X Tech — site summary for AI (llms.txt)', type: 'text/plain', url: `${host}/llms.txt`,
       description: 'Services, case studies and guides with one-line descriptions, in English, German and Ukrainian.',
       representativeQueries: ['Shopify agency for ERP integration', 'Shopify migration from Magento or Shopware', 'custom Shopify app developer', 'Shopify development agency Europe'] },
-    { id: `urn:air:${domain}:site:llms-full`, displayName: 'Base X Tech — full text of the main pages', type: 'text/plain', url: `${host}/llms-full.txt`,
+    { identifier: `urn:air:${domain}:site:llms-full`, displayName: 'Base X Tech — full text of the main pages', type: 'text/plain', url: `${host}/llms-full.txt`,
       description: 'Full text of the service pages for citation.',
       representativeQueries: ['what does Base X Tech do', 'Base X Tech Shopify services and process'] },
-    { id: `urn:air:${domain}:site:sitemap`, displayName: 'Sitemap (EN, DE, UK)', type: 'application/xml', url: `${host}/sitemap.xml`,
+    { identifier: `urn:air:${domain}:site:sitemap`, displayName: 'Sitemap (EN, DE, UK)', type: 'application/xml', url: `${host}/sitemap.xml`,
       representativeQueries: ['Base X Tech pages', 'Base X Tech German pages'] },
-    { id: `urn:air:${domain}:blog:sitemap`, displayName: 'Blog sitemap: case studies and guides', type: 'application/xml', url: `${host}/blog/sitemap.xml`,
+    { identifier: `urn:air:${domain}:blog:sitemap`, displayName: 'Blog sitemap: case studies and guides', type: 'application/xml', url: `${host}/blog/sitemap.xml`,
       representativeQueries: ['Shopify case study ERP integration', 'Magento to Shopify migration guide'] },
-    { id: `urn:air:${domain}:action:project-inquiry`, displayName: 'Project inquiry (contact form, WebMCP tool open_project_inquiry)', type: 'text/html', url: `${host}/#contact`,
+    { identifier: `urn:air:${domain}:action:project-inquiry`, displayName: 'Project inquiry (contact form, WebMCP tool open_project_inquiry)', type: 'text/html', url: `${host}/#contact`,
       description: 'Opens the contact form on any page. Browser agents can pre-fill it via the WebMCP tool open_project_inquiry; the visitor presses Send. Reply within 1 working day.',
-      representativeQueries: ['contact a Shopify agency', 'get a quote for a Shopify integration', 'hire Shopify developers'] },
+      representativeQueries: ['contact a Shopify agency', 'get a quote for a Shopify integration', 'hire Shopify developers'],
+      tags: ['shopify', 'agency', 'contact'],
+      metadata: { schemaOrgType: 'ProfessionalService', legalName: 'BASE X TECH LTD', address: '27 Old Gloucester Street, London WC1N 3AX, GB', email: 'hello@base-xtech.com', areaServed: 'Europe; DACH; UK; Ukraine' } },
   ],
 };
 fs.mkdirSync(path.join(dist, '.well-known'), { recursive: true });
