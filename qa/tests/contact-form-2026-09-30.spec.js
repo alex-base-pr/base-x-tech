@@ -39,7 +39,7 @@ test('fields: website instead of company, guiding placeholder, no source select 
   ]) {
     const { html } = await rawHtml(request, p);
     const form = (html.match(/<form id="task-form"[\s\S]*?<\/form>/) || [''])[0];
-    expect(form, p).toContain(`name="company" type="text" inputmode="url" autocomplete="url"`);
+    expect(form, p).toMatch(/name="company"[^>]* type="text" inputmode="url" autocomplete="url"/);
     expect(form, p).toContain(`placeholder="${website}"`);
     expect(form, p).toContain(hint);
     expect(form, p).not.toContain('name="source"');

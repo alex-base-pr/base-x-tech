@@ -134,5 +134,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.classList.contains('active')) modal.querySelector('.v2-modal__close').click();
     });
+
+    // WebMCP (2026-10-01): lets a browser AI agent open the contact form already filled in for its user. The agent never
+    // sends it: the visitor reviews and presses Send. The form also carries declarative toolname/toolparam attributes.
+    const mc = document.modelContext || navigator.modelContext;
+    const form = modal.querySelector('#task-form');
+    if (mc && typeof mc.registerTool === 'function' && form) {
+      const services = [...form.querySelectorAll('select[name="service"] option')].map((o) => o.value);
+      const budgets = [...form.querySelectorAll('input[name="budget"]')].map((i) => i.value);
+      try {
+        mc.registerTool({
+          name: 'open_project_inquiry',
+          description: 'Open the Base X Tech contact form pre-filled with a project inquiry (Shopify development, integrations, migrations, apps, design, CRO, ERP/POS systems). The visitor reviews it and presses Send; a person replies within 1 working day.',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              name: { type: 'string', description: 'Full name' },
+              email: { type: 'string', format: 'email', description: 'Work email for the reply' },
+              website: { type: 'string', description: 'Website or Shopify store URL (optional)' },
+              service: { type: 'string', enum: services, description: 'Service the project needs' },
+              budget: { type: 'string', enum: budgets, description: 'Budget in EUR (optional)' },
+              message: { type: 'string', description: 'Project details: platform, systems, goal, deadline' },
+            },
+            required: ['name', 'email', 'message'],
+          },
+          async execute(input = {}) {
+            const set = (sel, v) => { const el = form.querySelector(sel); if (el && v) el.value = v; };
+            set('input[name="name"]', input.name);
+            set('input[name="email"]', input.email);
+            set('input[name="company"]', input.website);
+            set('textarea[name="tell_us_more"]', input.message);
+            if (input.service && services.includes(input.service)) form.querySelector('select[name="service"]').value = input.service;
+            if (input.budget) { const r = [...form.querySelectorAll('input[name="budget"]')].find((i) => i.value === input.budget); if (r) r.checked = true; }
+            if (!modal.classList.contains('active')) document.querySelector('[data-form-trigger]')?.click();
+            return { content: [{ type: 'text', text: 'The Base X Tech contact form is open and filled in. Ask the user to review it and press "Send project details".' }] };
+          },
+        });
+      } catch (err) { /* WebMCP not available or tool already registered */ }
+    }
   }
 });

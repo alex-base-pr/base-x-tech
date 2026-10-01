@@ -35,18 +35,18 @@
       <button type="button" class="v2-modal__secondary" data-form-retry><%= f.retry %></button>
     </div>
 
-    <form id="task-form" class="v2-form">
+    <form id="task-form" class="v2-form" toolname="request_project_quote" tooldescription="Send a project inquiry to Base X Tech (Shopify development, integrations, migrations, custom apps, web design, CRO, ERP/POS systems). A person replies within 1 working day; the first call is free.">
       <div class="v2-form__row">
-        <label><span class="v2-sr"><%= f.nameLabel %></span><input required name="name" type="text" autocomplete="name" placeholder="<%= f.namePlaceholder %>"></label>
-        <label><span class="v2-sr"><%= f.emailLabel %></span><input required name="email" type="email" autocomplete="email" placeholder="<%= f.emailPlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.nameLabel %></span><input required name="name" toolparamdescription="Full name of the person asking" type="text" autocomplete="name" placeholder="<%= f.namePlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.emailLabel %></span><input required name="email" toolparamdescription="Work email for the reply" type="email" autocomplete="email" placeholder="<%= f.emailPlaceholder %>"></label>
       </div>
       <div class="v2-form__row">
-        <label><span class="v2-sr"><%= f.phoneLabel %></span><input name="phone" type="tel" autocomplete="tel" placeholder="<%= f.phonePlaceholder %>"></label>
-        <label><span class="v2-sr"><%= f.companyLabel %></span><input name="company" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="<%= f.companyPlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.phoneLabel %></span><input name="phone" toolparamdescription="Phone number, optional" type="tel" autocomplete="tel" placeholder="<%= f.phonePlaceholder %>"></label>
+        <label><span class="v2-sr"><%= f.companyLabel %></span><input name="company" toolparamdescription="Website or Shopify store URL, optional" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="<%= f.companyPlaceholder %>"></label>
       </div>
       <label class="v2-form__field">
         <span><%= f.serviceLabel %></span>
-        <select name="service" class="form-select">
+        <select name="service" class="form-select" toolparamdescription="Which service the project needs">
           <% f.services.forEach(o => { %><option value="<%= o.value %>" data-lead="<%= o.value %>"><%= o.label %></option>
           <% }) %>
         </select>
@@ -54,13 +54,13 @@
       <fieldset class="v2-form__field v2-form__budget">
         <legend><%= f.budgetLegend %></legend>
         <div>
-          <% f.budgets.filter(b => !(complexPage && b.hideOnComplex)).forEach(b => { %><label><input type="radio" name="budget" value="<%= b.value %>"><span><%= b.label %></span></label>
+          <% f.budgets.filter(b => !(complexPage && b.hideOnComplex)).forEach(b => { %><label><input type="radio" name="budget" toolparamdescription="Project budget in EUR, optional" value="<%= b.value %>"><span><%= b.label %></span></label>
           <% }) %>
         </div>
       </fieldset>
       <label class="v2-form__field">
         <span><%= f.messageLabel %></span>
-        <textarea name="tell_us_more" rows="3" placeholder="<%= f.messagePlaceholder %>"></textarea>
+        <textarea name="tell_us_more" toolparamdescription="Project details: platform, systems involved, goal and deadline" rows="3" placeholder="<%= f.messagePlaceholder %>"></textarea>
       </label>
       <button type="submit" class="v2-btn v2-btn--wide"><span class="v2-btn__label"><%= f.submit %></span><span class="v2-btn__arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 2l10 10M12 4v8H4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span></button>
       <p class="v2-form__promise"><%= sh.ctaNote || f.promise %></p>

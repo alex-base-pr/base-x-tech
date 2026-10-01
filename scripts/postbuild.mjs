@@ -126,6 +126,31 @@ ${section('legal')}
 ${deSection ? `\n## Deutsch\n\n${deSection}\n${langBlog('de', 'Blog')}` : ''}${ukSection ? `\n## Українською\n\n${ukSection}\n${langBlog('uk', 'Блог')}` : ''}`;
 fs.writeFileSync(path.join(dist, 'llms.txt'), llms);
 
+// ARD (Agentic Resource Discovery) manifest, /.well-known/ai-catalog.json (2026-10-01): points agents at llms.txt,
+// the full text, the sitemap and the contact form (the WebMCP tool "open_project_inquiry" lives on every page).
+const domain = new URL(host).hostname;
+const aiCatalog = {
+  specVersion: '0.1',
+  host: { name: 'Base X Tech', url: `${host}/`, description: home.description, contact: `${host}/#contact` },
+  entries: [
+    { id: `urn:air:${domain}:site:llms`, displayName: 'Base X Tech — site summary for AI (llms.txt)', type: 'text/plain', url: `${host}/llms.txt`,
+      description: 'Services, case studies and guides with one-line descriptions, in English, German and Ukrainian.',
+      representativeQueries: ['Shopify agency for ERP integration', 'Shopify migration from Magento or Shopware', 'custom Shopify app developer', 'Shopify development agency Europe'] },
+    { id: `urn:air:${domain}:site:llms-full`, displayName: 'Base X Tech — full text of the main pages', type: 'text/plain', url: `${host}/llms-full.txt`,
+      description: 'Full text of the service pages for citation.',
+      representativeQueries: ['what does Base X Tech do', 'Base X Tech Shopify services and process'] },
+    { id: `urn:air:${domain}:site:sitemap`, displayName: 'Sitemap (EN, DE, UK)', type: 'application/xml', url: `${host}/sitemap.xml`,
+      representativeQueries: ['Base X Tech pages', 'Base X Tech German pages'] },
+    { id: `urn:air:${domain}:blog:sitemap`, displayName: 'Blog sitemap: case studies and guides', type: 'application/xml', url: `${host}/blog/sitemap.xml`,
+      representativeQueries: ['Shopify case study ERP integration', 'Magento to Shopify migration guide'] },
+    { id: `urn:air:${domain}:action:project-inquiry`, displayName: 'Project inquiry (contact form, WebMCP tool open_project_inquiry)', type: 'text/html', url: `${host}/#contact`,
+      description: 'Opens the contact form on any page. Browser agents can pre-fill it via the WebMCP tool open_project_inquiry; the visitor presses Send. Reply within 1 working day.',
+      representativeQueries: ['contact a Shopify agency', 'get a quote for a Shopify integration', 'hire Shopify developers'] },
+  ],
+};
+fs.mkdirSync(path.join(dist, '.well-known'), { recursive: true });
+fs.writeFileSync(path.join(dist, '.well-known', 'ai-catalog.json'), JSON.stringify(aiCatalog, null, 2) + '\n');
+
 const full = [`# Base X Tech — full site text\n\nSource: ${host}/ · generated at build · English pages only.`]
   .concat(built.map((p) => `\n---\n\n# ${p.name}\n\nURL: ${p.url}\n\n${p.text}`)).join('\n');
 fs.writeFileSync(path.join(dist, 'llms-full.txt'), full + '\n');

@@ -64,10 +64,10 @@ test('DE terms: no German terms page; English terms stay the only terms (no dupl
 });
 
 test('DE form: EUR bands in German, "bis 5 Tsd. €" on service pages but not on Complex', async ({ request }) => {
-  const band = '<input type="radio" name="budget" value="Up to €5k"><span>bis 5 Tsd. €</span>';
+  const band = /<input type="radio" name="budget"[^>]* value="Up to €5k"><span>bis 5 Tsd\. €<\/span>/;
   for (const p of deV2.filter((x) => x.group === 'service' || x.group === 'home')) {
     const html = decode((await rawHtml(request, p.path)).html);
-    expect(html, p.path).toContain(band);
+    expect(html, p.path).toMatch(band);
     expect(html, p.path).toContain(`<legend>${shellDe.form.budgetLegend}</legend>`);
     expect(html, p.path).toContain(shellDe.form.submit);
     expect(html, `${p.path}: no USD`).not.toMatch(/value="[^"]*\$/);

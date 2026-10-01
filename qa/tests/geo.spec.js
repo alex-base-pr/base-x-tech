@@ -92,3 +92,27 @@ test('T-043 llms.txt lists exactly the indexable pages; llms-full.txt has every 
   const text = await full.text();
   for (const p of indexPages) expect(text, `llms-full contains ${p.path}`).toContain(host + p.path);
 });
+
+test('T-045 agent discovery: /.well-known/ai-catalog.json and the WebMCP contact form (2026-10-01)', async ({ request, page }) => {
+  const res = await request.get('/.well-known/ai-catalog.json');
+  expect(res.status()).toBe(200);
+  const cat = await res.json();
+  expect(cat.specVersion).toBeTruthy();
+  expect(cat.host.url).toBe(host + '/');
+  expect(cat.entries.length).toBeGreaterThanOrEqual(4);
+  for (const e of cat.entries) {
+    expect(e.id).toMatch(/^urn:air:base-xtech\.com:[a-z-]+:[a-z-]+$/);
+    expect(e.displayName && e.type && e.url).toBeTruthy();
+    expect(e.representativeQueries.length).toBeGreaterThanOrEqual(2);
+  }
+  const { html } = await rawHtml(request, '/');
+  expect(html).toContain('<form id="task-form" class="v2-form" toolname="request_project_quote"');
+  expect((html.match(/toolparamdescription=/g) || []).length).toBeGreaterThanOrEqual(6);
+  // imperative WebMCP: registerTool is called when the browser exposes modelContext; the tool fills, never sends
+  await page.addInitScript(() => { window.__tools = []; navigator.modelContext = { registerTool: (t) => { window.__tools.push(t); return Promise.resolve(); } }; });
+  await page.goto('/');
+  await page.waitForFunction(() => window.__tools.length > 0);
+  const out = await page.evaluate(async () => { const t = window.__tools[0]; const r = await t.execute({ name: 'QA', email: 'qa@example.com', message: 'hello', service: 'Shopify Migration' });
+    return { name: t.name, text: r.content[0].text, filled: document.querySelector('#task-form input[name="name"]').value, open: document.querySelector('.v2-modal').classList.contains('active'), service: document.querySelector('#task-form select[name="service"]').value }; });
+  expect(out).toMatchObject({ name: 'open_project_inquiry', filled: 'QA', open: true, service: 'Shopify Migration' });
+});
