@@ -4,3 +4,11 @@
 import '../drawers.js';
 import '../lead-form.js';
 import '../v2.js';
+
+// Links inside posts that point to #contact or to our mailto open the contact form instead (Marko 2026-10-01, Q13).
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('.gh-content a[href="#contact"], .gh-content a[href^="mailto:hello@base-xtech.com"]');
+  if (!a) return;
+  e.preventDefault();
+  document.querySelector('[data-form-trigger]')?.click();
+});
