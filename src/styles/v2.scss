@@ -425,3 +425,11 @@ body.v2 .cx-cta .v2-team { max-width: 560px; margin: 2.5rem auto 0; text-align: 
 
 // Figma line breaks are desktop line breaks; on phones the H1 flows.
 body.v2 .v2-hero .v2-h-l span, body.v2 .v2-hero .v2-h-2xl span { display: inline; @include desk { display: block; } }
+
+// QA 2026-10-02 #4: "About" lands on the team heading below the sticky header
+body.v2 #team { scroll-margin-top: 80px; }
+// QA 2026-10-02 #5: CookieYes floating "revisit consent" button covered body copy on phones; the footer link
+// "Cookie settings" (.cky-banner-element) opens the same preference centre.
+body .cky-btn-revisit-wrapper { display: none !important; }
+body.v2 .v2-footer__cookies { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-decoration: none;
+  &:hover, &:focus-visible { color: #fff; text-decoration: underline; } }

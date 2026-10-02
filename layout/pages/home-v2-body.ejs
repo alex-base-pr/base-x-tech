@@ -122,13 +122,24 @@
       </div>
       <div class="h-trust">
         <p class="h-trust__label"><span class="v2-dot"></span><%= c.approach.trustedBy %></p>
-        <ul class="h-trust__list">
-          <li><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener"><img loading="lazy" src="/images/sections/reviews/badge-upwork.png" alt="Upwork Top Rated" width="32" height="32"></a></li>
-          <li><a href="https://clutch.co/profile/base-x-tech" target="_blank" rel="noopener"><img loading="lazy" src="/images/sections/reviews/badge-clutch.png" alt="Clutch Global" width="37" height="32"></a></li>
-          <li><img loading="lazy" src="/images/sections/reviews/badge-design-rush.png" alt="DesignRush top eCommerce development company" width="30" height="32"></li>
+        <%# QA 2026-10-02 #9: scrolls like the reviews (same h-marquee, second copy aria-hidden). Badge width/height are the
+            files' natural sizes, so the host's PageSpeed does not shrink them to 30×32; CSS sets the display height. %>
+        <%# Script widgets (GoodFirms iframe, Sortlist) stay static: their scripts fill one placeholder, so a duplicated copy would break the loop. %>
+        <ul class="h-trust__widgets">
           <li class="h-trust__widget"><div class="goodfirm-widget" data-widget-type="goodfirms-widget-t6" data-widget-pattern="star-no-review" data-height="100" data-company-id="171088"></div></li>
           <li class="h-trust__widget"><div class="sortlist-badge"></div></li>
         </ul>
+        <div class="h-trust__viewport">
+          <div class="h-trust__track">
+            <% [0, 1].forEach(copy => { %>
+            <ul class="h-trust__list" <%- copy ? 'aria-hidden="true" inert' : '' %>>
+              <li><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener"<%- copy ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-upwork.png" alt="<%= copy ? '' : 'Upwork Top Rated' %>" width="152" height="153"></a></li>
+              <li><a href="https://clutch.co/profile/base-x-tech" target="_blank" rel="noopener"<%- copy ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-clutch.png" alt="<%= copy ? '' : 'Clutch Global' %>" width="168" height="144"></a></li>
+              <li><img loading="lazy" src="/images/sections/reviews/badge-design-rush.png" alt="<%= copy ? '' : 'DesignRush top eCommerce development company' %>" width="135" height="144"></li>
+            </ul>
+            <% }) %>
+          </div>
+        </div>
       </div>
     </section>
 

@@ -1,5 +1,5 @@
-<%# Team block (owner 2026-09-30) for home and the service pages: the same cards as the Complex team (lead large,
-    the rest smaller), lead = Vadym Hula, Head of Delivery. Replaces the text-only "Who you'll talk to" list in the CTA.
+<%# Team block (owner 2026-09-30) for home and the service pages: four equal 4:5 cards (QA 2026-10-02), Vadym Hula,
+    Head of Delivery, first. Replaces the text-only "Who you'll talk to" list in the CTA.
     Copy: content/pages/shell.<lang>.json → teamBlock; location line → team.location. Styles: src/styles/v2/_team-block.scss. %>
 <% const L = typeof lang !== 'undefined' ? lang : 'en'; const sh = content.shell[L] || content.shell.en; const tm = sh.teamBlock;
    const alt = (p) => p.name + ', ' + p.role; %>
@@ -8,28 +8,19 @@
     <p class="v2-tag v2-tag--light"><%= tm.label %></p>
     <h2 class="v2-h-m" id="v2-teamsec-title"><%- tm.title %></h2>
   </div>
-  <div class="cx-team__grid">
-    <article class="cx-team__lead">
-      <figure class="cx-team__photo"><img loading="lazy" src="<%= tm.lead.photo %>" width="800" height="1000" alt="<%= alt(tm.lead) %>"></figure>
-      <div class="cx-team__body">
-        <h3 class="cx-team__name"><%= tm.lead.name %></h3>
-        <p class="cx-team__role"><%= tm.lead.role %></p>
-        <% if (tm.lead.note) { %><p class="cx-team__note"><%= tm.lead.note %></p><% } %>
-        <div class="cx-team__text"><% tm.lead.paragraphs.forEach(p => { %><p><%= p %></p><% }) %></div>
-      </div>
-    </article>
-    <ul class="cx-team__members">
-      <% tm.members.forEach(m => { %>
-        <li class="cx-team__member">
-          <img class="cx-team__thumb" loading="lazy" src="<%= m.photo %>" width="800" height="1000" alt="<%= alt(m) %>">
-          <div>
-            <h3 class="cx-team__name cx-team__name--s"><%= m.name %></h3>
-            <p class="cx-team__role"><%= m.role %></p>
-            <% if (m.note) { %><p class="cx-team__note"><%= m.note %></p><% } %>
-          </div>
-        </li>
-      <% }) %>
-    </ul>
-  </div>
+  <%# QA 2026-10-02 #2 (Marko): no featured card here — all four people as equal 4:5 cards; the large lead card stays on
+      Complex/DACH pages only (Alexander Karl). Vadym Hula first, with his "runs your project" note. %>
+  <ul class="cx-team__members cx-team__members--all">
+    <% [tm.lead, ...tm.members].forEach(m => { %>
+      <li class="cx-team__member">
+        <img class="cx-team__thumb" loading="lazy" src="<%= m.photo %>" width="800" height="1000" alt="<%= alt(m) %>">
+        <div>
+          <h3 class="cx-team__name cx-team__name--s"><%= m.name %></h3>
+          <p class="cx-team__role"><%= m.role %></p>
+          <% if (m.note) { %><p class="cx-team__note"><%= m.note %></p><% } %>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
   <% if (sh.team && sh.team.location) { %><p class="cx-team__location"><%= sh.team.location %></p><% } %>
 </section>

@@ -66,6 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach((s) => io.observe(s));
+    // QA 2026-10-02 #1: on pages with fewer/taller sections (blog, short pages) the last section never reaches the
+    // middle band, so the end of the page must light the last dot (and the very top the first one).
+    const ends = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      if (max > 0 && scrollY >= max - 4) dots.forEach((d, i) => d.classList.toggle('is-active', i === dots.length - 1));
+      else if (scrollY <= 4) dots.forEach((d, i) => d.classList.toggle('is-active', i === 0));
+    };
+    addEventListener('scroll', ends, { passive: true });
   }
   // Mobile menu (layout/v2/nav.ejs): main.js toggles body.nav-active; here only ARIA state and the Services level.
   const burger = document.querySelector('.v2-header__burger');

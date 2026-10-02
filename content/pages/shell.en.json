@@ -90,7 +90,8 @@
     "navigation": "Navigation",
     "connect": "Connect",
     "terms": "Terms & Conditions",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+    "cookies": "Cookie settings"
   },
   "form": {
     "close": "Close the form",

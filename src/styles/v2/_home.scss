@@ -109,6 +109,9 @@ body.v2.v2-home .h-review {
   body.v2.v2-home .h-reviews__track { animation: none; width: auto; }
   body.v2.v2-home .h-reviews__viewport { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   body.v2.v2-home .h-reviews__list[aria-hidden="true"] { display: none; }
+  body.v2.v2-home .h-trust__track { animation: none; width: auto; }
+  body.v2.v2-home .h-trust__list[aria-hidden="true"] { display: none; }
+  body.v2.v2-home .h-trust__list { flex-wrap: wrap; }
 }
 
 // ---- recent projects (extends .v2-project from the service template)
@@ -160,14 +163,21 @@ body.v2.v2-home .h-principle {
 }
 body.v2.v2-home .h-trust {
   display: flex; flex-direction: column; gap: 1rem; margin: 0 -12px; padding: 16px 12px 24px; border-top: 1px solid rgba(0, 0, 0, .3);
-  @include desk { flex-direction: row; align-items: center; justify-content: space-between; margin: 0 -30px 0 -24px; padding: 14px 30px 14px 877px; }
+  @include desk { flex-direction: row; align-items: center; justify-content: space-between; gap: 32px; margin: 0 -30px 0 -24px; padding: 14px 30px 14px 24px; }
   .h-trust__label { font-size: 15px; font-weight: 300; color: #4a4949; white-space: nowrap; }
-  .h-trust__list { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; @include desk { gap: 12px; }
-    img { display: block; height: 32px; width: auto; }
+  // QA 2026-10-02 #9: marquee like the reviews; badges 48 px tall, widgets not clipped
+  .h-trust__viewport { min-width: 0; flex: 1; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .h-trust__track { display: flex; width: max-content; animation: h-marquee 30s linear infinite;
+    &:hover, &:focus-within { animation-play-state: paused; } }
+  .h-trust__list { display: flex; flex-wrap: nowrap; align-items: center; gap: 32px; padding-right: 32px;
+    img { display: block; height: 48px; width: auto; }
     a { display: block; }
   }
-  .h-trust__widget { min-height: 30px; max-height: 48px; display: flex; align-items: center; max-width: 120px; overflow: hidden;
-    iframe { max-height: 48px; } }
+  .h-trust__widgets { order: 3; display: flex; align-items: center; gap: 16px; flex: none; &:empty { display: none; } }
+  .h-trust__widget { min-height: 48px; display: flex; align-items: center; flex: none; &:has(.sortlist-badge:empty) { display: none; }
+    iframe { max-height: 64px; } }
 }
 
 // ---- highlighted articles
@@ -270,3 +280,19 @@ body.v2.v2-home .h-cta__collage {
   }
 }
 @keyframes h-float { to { translate: 0 -14px; } }
+
+// Figma #114/#115: letter stagger on roadmap titles (letters built by src/v2-home.js)
+body.v2.v2-home .h-step__title .h-ltrs { display: inline-block; white-space: nowrap; }
+body.v2.v2-home .h-step__title .h-ltr { display: inline-block; overflow: hidden; height: 1.2em; line-height: 1.2; vertical-align: top;
+  > span { display: block; transition: transform .45s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--i) * 14ms);
+    &::after { content: attr(data-c); display: block; color: var(--v2-accent); } }
+}
+// inner span = the letter + its accent copy (two 1.2em lines): -50% shows the copy
+body.v2.v2-home .h-step:hover .h-ltr > span, body.v2.v2-home .h-step:focus-visible .h-ltr > span { transform: translateY(-50%); }
+@media (max-width: 1023px) { body.v2.v2-home .h-step__title .h-ltrs { white-space: normal; } }
+
+// Figma #116: stats spread/blur/reveal — transforms are driven by src/v2-home.js; this only smooths and hints the browser
+body.v2.v2-home .h-stats.is-motion {
+  .h-stats__title, .h-stats__closing, .h-stats__list { will-change: transform, filter, opacity; transition: transform .08s linear, filter .08s linear, opacity .08s linear; }
+  .h-stats__list { position: relative; z-index: 1; }
+}

@@ -45,7 +45,8 @@ test('A1: company line in the footer; controller named in the privacy policy', a
 
 test('A2: team block with photos; Vadym Hula leads on home and services, Alexander Karl on Complex', async ({ request }) => {
   // Owner 2026-09-30: the team block (layout/v2/team-block.ejs) replaces the text-only list in the closing CTA.
-  const lead = (html) => (html.match(/<section class="v2-section v2-light cx-team v2-teamsec"[\s\S]*?<h3 class="cx-team__name">([^<]+)<\/h3>/) || [])[1];
+  const lead = (html) => (html.match(/<section class="v2-section v2-light cx-team v2-teamsec"[\s\S]*?<h3 class="cx-team__name[^"]*">([^<]+)<\/h3>/) || [])[1];
+  // QA 2026-10-02 #2: on home/services all four people are equal 4:5 cards (no featured card); Vadym Hula first.
   for (const [p, name] of [['/', 'Vadym Hula'], ['/pages/shopify-development/', 'Vadym Hula'], ['/de/pages/service/custom-shopify-integrations/', 'Vadym Hula'], ['/uk/pages/service/shopify-migration-service/', 'Вадим Гула']]) {
     const { html } = await rawHtml(request, p);
     expect(lead(html), p).toBe(name);
@@ -118,4 +119,16 @@ test('A49: no "Fresh Market" anywhere in dist', () => {
   };
   walk('dist');
   expect(hits).toEqual([]);
+});
+
+test('QA 2026-10-02: About → #team, equal team cards, cookie settings link, trust marquee', async ({ request }) => {
+  const { html } = await rawHtml(request, '/');
+  expect(html).not.toContain('#section-team');
+  expect(html).toContain('href="/#team"');
+  expect(html).toMatch(/<section class="v2-section v2-light cx-team v2-teamsec" id="team"/);
+  const team = html.match(/<section class="v2-section v2-light cx-team v2-teamsec"[\s\S]*?<\/section>/)[0];
+  expect(team).not.toContain('cx-team__lead');
+  expect((team.match(/class="cx-team__thumb"/g) || []).length).toBe(4);
+  expect(html).toContain('class="v2-footer__cookies cky-banner-element"');
+  expect((html.match(/class="h-trust__list"/g) || []).length).toBe(2);
 });

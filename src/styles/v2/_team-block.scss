@@ -19,11 +19,12 @@ body.v2 .cx-team {
   }
   .cx-team__lead, .cx-team__member { overflow: hidden; border: 1px solid var(--cx-line); border-radius: 20px; background: #fff; }
   .cx-team__lead { display: grid; align-content: start;
-    @include tab { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-content: stretch; }
+    @include tab { grid-template-columns: minmax(0, 320px) minmax(0, 1fr); align-content: stretch; }
   }
-  .cx-team__photo { margin: 0; min-height: 0;
-    img { display: block; width: 100%; height: 100%; aspect-ratio: 4 / 5; max-height: 420px; object-fit: cover; object-position: 50% 15%;
-      @include tab { max-height: none; min-height: 375px; }
+  // QA 2026-10-02 #2: the photo keeps the source 4:5 ratio at every size (was stretched to ~300×524 and zoomed in)
+  .cx-team__photo { margin: 0; min-height: 0; align-self: start;
+    img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 420px; object-fit: cover; object-position: 50% 15%;
+      @include tab { max-height: none; }
     }
   }
   .cx-team__body { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 24px 20px 28px;
@@ -47,9 +48,8 @@ body.v2 .cx-team {
     @include desk { grid-template-columns: 128px minmax(0, 1fr); }
     > div { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; padding: 16px 20px; }
   }
-  .cx-team__thumb { display: block; align-self: stretch; width: 100%; height: 100%; min-height: 140px; object-fit: cover; object-position: 50% 15%;
-    @include desk { min-height: 160px; }
-  }
+  // always 4:5 (112×140 phone, 128×160 desktop) — never stretched to the card height
+  .cx-team__thumb { display: block; align-self: center; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; }
   .cx-team__location { max-width: 1316px; margin: 24px auto 0; text-align: center; font-family: var(--cx-body); font-size: 14px; line-height: 1.4; color: var(--cx-soft); }
 }
 
@@ -60,4 +60,9 @@ body.v2 .v2-teamsec {
   .v2-faq__head .v2-h-m { margin-top: 1.25rem; }
   .cx-team__grid, .cx-team__location { width: 100%; }
   .cx-team__location { margin-top: 0; }
+}
+
+// home/services: four equal cards, 2 × 2 on desktop, thumbs 128×160 (4:5)
+body.v2 .cx-team__members--all { max-width: 1316px; margin: 0 auto; width: 100%;
+  @media (min-width: 1024px) { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
 }

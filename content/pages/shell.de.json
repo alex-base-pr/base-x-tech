@@ -92,7 +92,8 @@
     "impressum": "Impressum",
     "impressumHref": "/de/impressum/",
     "privacy": "Datenschutz",
-    "privacyHref": "/de/datenschutz/"
+    "privacyHref": "/de/datenschutz/",
+    "cookies": "Cookie-Einstellungen"
   },
   "form": {
     "close": "Formular schließen",

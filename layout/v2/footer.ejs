@@ -15,7 +15,7 @@
       <a href="<%= href('/pages/shopify-development/') %>"><%= sh.nav.services %></a>
       <a href="<%= href('/#section-works') %>"><%= sh.nav.portfolio %></a>
       <a href="/blog/"><%= sh.nav.insights %></a>
-      <a href="<%= href('/#section-team') %>"><%= sh.nav.about %></a>
+      <a href="<%= href('/#team') %>"><%= sh.nav.about %></a>
       <a href="#contact" data-form-trigger><%= sh.nav.contact %></a>
     </nav>
     <div class="v2-footer__col">
@@ -30,5 +30,7 @@
     <% if (sh.footer.impressumHref) { %><a href="<%= sh.footer.impressumHref %>"><%= sh.footer.impressum %></a><% } %>
     <a href="<%= sh.footer.privacyHref || href('/pages/privacy-policy/') %>"><%= sh.footer.privacy %></a>
     <a href="<%= sh.footer.termsHref || href('/pages/terms-and-conditions/') %>"><%= sh.footer.terms %></a>
+    <%# CookieYes opens its preference centre on any .cky-banner-element; replaces the floating bottom-left button (QA 2026-10-02 #5) %>
+    <button type="button" class="v2-footer__cookies cky-banner-element"><%= sh.footer.cookies %></button>
   </div>
 </footer>
