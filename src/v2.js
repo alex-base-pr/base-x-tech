@@ -58,21 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const dots = [...document.querySelectorAll('.v2-rail span')];
   const sections = [...document.querySelectorAll('[data-v2-section]')];
   if (dots.length && sections.length && 'IntersectionObserver' in window) {
+    // QA 2026-10-02 #1: on pages with fewer/taller sections (blog, short pages) the last section never reaches the
+    // middle band, so the end of the page lights the last dot and the very top the first one. The observer fires after
+    // the scroll event, so it applies the same override instead of repainting a middle dot.
+    const paint = (idx) => dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    const edge = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      if (max > 0 && scrollY >= max - 4) return dots.length - 1;
+      if (scrollY <= 4) return 0;
+      return -1;
+    };
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        const idx = Math.min(dots.length - 1, Math.floor(sections.indexOf(entry.target) * dots.length / sections.length));
-        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+        const e = edge();
+        paint(e >= 0 ? e : Math.min(dots.length - 1, Math.floor(sections.indexOf(entry.target) * dots.length / sections.length)));
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach((s) => io.observe(s));
-    // QA 2026-10-02 #1: on pages with fewer/taller sections (blog, short pages) the last section never reaches the
-    // middle band, so the end of the page must light the last dot (and the very top the first one).
-    const ends = () => {
-      const max = document.documentElement.scrollHeight - innerHeight;
-      if (max > 0 && scrollY >= max - 4) dots.forEach((d, i) => d.classList.toggle('is-active', i === dots.length - 1));
-      else if (scrollY <= 4) dots.forEach((d, i) => d.classList.toggle('is-active', i === 0));
-    };
+    const ends = () => { const e = edge(); if (e >= 0) paint(e); };
     addEventListener('scroll', ends, { passive: true });
   }
   // Mobile menu (layout/v2/nav.ejs): main.js toggles body.nav-active; here only ARIA state and the Services level.
