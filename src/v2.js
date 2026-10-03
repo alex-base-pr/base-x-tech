@@ -182,3 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Footer brand mark (QA 2026-10-02 #3): when the footer comes into view the two halves of the mark slide together
+// and the X turns a quarter (the X is symmetric, so it lands on itself); hover replays the turn.
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.v2-footer__logo');
+  if (!logo || !('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  logo.classList.add('is-armed');
+  const io = new IntersectionObserver((es) => {
+    if (es.some((e) => e.isIntersecting)) { logo.classList.add('is-in'); io.disconnect(); }
+  }, { threshold: 0.6 });
+  io.observe(logo);
+});

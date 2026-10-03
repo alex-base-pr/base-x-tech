@@ -131,4 +131,5 @@ test('QA 2026-10-02: About → #team, equal team cards, cookie settings link, tr
   expect((team.match(/class="cx-team__thumb"/g) || []).length).toBe(4);
   expect(html).toContain('class="v2-footer__cookies cky-banner-element"');
   expect((html.match(/class="h-trust__list"/g) || []).length).toBe(2);
+  expect((html.match(/alt="Upwork Top Rated"/g) || []).length, 'one exposed Upwork badge').toBe(1);
 });

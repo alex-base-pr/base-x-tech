@@ -20,9 +20,12 @@ const b = await chromium.launch(); const out = []; let checked = 0;
 for (const w of [1440, 390]) for (const path of pages) {
   const p = await b.newPage({ viewport: { width: w, height: 900 } });
   await p.goto(base + path); await p.waitForTimeout(300);
+  // Marquees (trust badges, reviews) never stand still for Playwright's stability check: freeze them for the test.
+  // Their duplicated copies are inert/aria-hidden on purpose, so they are not clickable targets.
+  await p.addStyleTag({ content: '.h-trust__track, .h-reviews__track { animation: none !important; }' });
   const n = await p.evaluate(() => {
     document.addEventListener('click', (e) => { window.__last = e.target; e.preventDefault(); e.stopImmediatePropagation(); }, true);
-    const els = [...document.querySelectorAll('a[href], button, summary, [role="tab"]')].filter((el) => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 3 && r.height > 3 && cs.visibility !== 'hidden' && cs.display !== 'none' && !el.closest('[hidden], .v2-modal, .v2-mnav, .v2-services-menu, .v2-lang__menu, noscript, details:not([open]) > :not(summary)'); });
+    const els = [...document.querySelectorAll('a[href], button, summary, [role="tab"]')].filter((el) => { const r = el.getBoundingClientRect(); const cs = getComputedStyle(el); return r.width > 3 && r.height > 3 && cs.visibility !== 'hidden' && cs.display !== 'none' && !el.closest('[hidden], [inert], [aria-hidden="true"], .v2-modal, .v2-mnav, .v2-services-menu, .v2-lang__menu, noscript, details:not([open]) > :not(summary)'); });
     els.forEach((el, i) => el.setAttribute('data-qa-i', i)); return els.length;
   });
   for (let i = 0; i < n; i++) {

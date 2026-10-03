@@ -433,3 +433,14 @@ body.v2 #team { scroll-margin-top: 80px; }
 body .cky-btn-revisit-wrapper { display: none !important; }
 body.v2 .v2-footer__cookies { padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; text-decoration: none;
   &:hover, &:focus-visible { color: #fff; text-decoration: underline; } }
+
+// QA 2026-10-02 #3: footer mark entrance + hover (classes set by src/v2.js; static without JS / with reduced motion)
+.v2-footer__logo.is-armed {
+  svg { overflow: visible; }
+  path { transition: transform .9s cubic-bezier(.2, .8, .2, 1), opacity .6s ease; }
+  path:first-child { transform-box: fill-box; transform-origin: 50% 50%; transform: translateX(28px) rotate(-90deg); opacity: 0; }
+  path:last-child { transform: translateX(-28px); opacity: 0; }
+  &.is-in path { transform: none; opacity: 1; }
+  &.is-in path:first-child { transition-delay: .12s; }
+  &.is-in:hover path:first-child, &.is-in:focus-visible path:first-child { transform: rotate(90deg); transition-duration: .6s; transition-delay: 0s; }
+}

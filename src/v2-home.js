@@ -63,3 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
   addEventListener('resize', onScroll);
   update();
 });
+
+// Approach cards (QA 2026-10-02, #97 pattern): on desktop pointing at a card opens it (the <details name> group keeps one
+// open, and the last one stays open, no flicker on mouse-out); click and keyboard work as before, touch stays click-to-open.
+document.addEventListener('DOMContentLoaded', () => {
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  document.querySelectorAll('.h-principle__details').forEach((d) => {
+    let t;
+    d.addEventListener('mouseenter', () => { t = setTimeout(() => { d.open = true; }, 120); });
+    d.addEventListener('mouseleave', () => clearTimeout(t));
+  });
+});

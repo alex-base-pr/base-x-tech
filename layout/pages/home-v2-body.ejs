@@ -132,10 +132,14 @@
         <div class="h-trust__viewport">
           <div class="h-trust__track">
             <% [0, 1].forEach(copy => { %>
+            <%# 3 badges are narrower than the row: each copy repeats the set 5× so the strip is always full; only the very first set is
+                exposed to assistive tech and keyboard, every repeat is aria-hidden with unfocusable links. %>
             <ul class="h-trust__list" <%- copy ? 'aria-hidden="true" inert' : '' %>>
-              <li><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener"<%- copy ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-upwork.png" alt="<%= copy ? '' : 'Upwork Top Rated' %>" width="152" height="153"></a></li>
-              <li><a href="https://clutch.co/profile/base-x-tech" target="_blank" rel="noopener"<%- copy ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-clutch.png" alt="<%= copy ? '' : 'Clutch Global' %>" width="168" height="144"></a></li>
-              <li><img loading="lazy" src="/images/sections/reviews/badge-design-rush.png" alt="<%= copy ? '' : 'DesignRush top eCommerce development company' %>" width="135" height="144"></li>
+              <% for (let r = 0; r < 5; r++) { const dup = copy || r > 0; %>
+              <li<%- dup && !copy ? ' aria-hidden="true"' : '' %>><a href="https://www.upwork.com/agencies/base/" target="_blank" rel="noopener"<%- dup ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-upwork.png" alt="<%= dup ? '' : 'Upwork Top Rated' %>" width="152" height="153"></a></li>
+              <li<%- dup && !copy ? ' aria-hidden="true"' : '' %>><a href="https://clutch.co/profile/base-x-tech" target="_blank" rel="noopener"<%- dup ? ' tabindex="-1"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-clutch.png" alt="<%= dup ? '' : 'Clutch Global' %>" width="168" height="144"></a></li>
+              <li<%- dup && !copy ? ' aria-hidden="true"' : '' %>><img loading="lazy" src="/images/sections/reviews/badge-design-rush.png" alt="<%= dup ? '' : 'DesignRush top eCommerce development company' %>" width="135" height="144"></li>
+              <% } %>
             </ul>
             <% }) %>
           </div>
